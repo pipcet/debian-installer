@@ -10,21 +10,21 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-11-22 22:34+0000\n"
-"PO-Revision-Date: 2014-01-08 11:31:26 GMT+0100\n"
-"Last-Translator: Judit Gyimesi <judit.gyimesi.x@gmail.com>\n"
+"PO-Revision-Date: 2017-11-26 20:32+0000\n"
+"Last-Translator: Dr. Nagy Elemér Károly <eknagy@omikk.bme.hu>\n"
 "Language-Team: Hungarian <debian-l10n-hungarian@lists.d.o>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: UTF-8\n"
-"Plural-Forms: nplurals=2; plural=n != 1\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.18-dev\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Loco-Source-Locale: ru_RU\n"
 "X-Poedit-Country: HUNGARY\n"
 "X-Poedit-Language: Hungarian\n"
 "X-Loco-Parser: loco_parse_po\n"
 "X-Loco-Target-Locale: hu_HU\n"
-"X-Generator: Loco - https://localise.biz/\n"
 
 # Type: error
 # Description
@@ -1039,7 +1039,7 @@ msgstr "Nem találtam particionálható adathordozót."
 #. :sl2:
 #: ../disk-detect.templates:4001
 msgid "Please check that a hard disk is attached to this machine."
-msgstr "Kérem ellenőrizze, hogy valóban csatlakozik merevlemez ehhez a géphez!"
+msgstr "Kérlek ellenőrizd, hogy van-e merevlemez csatlakoztatva a géphez."
 
 # Type: multiselect
 # Description
@@ -4476,10 +4476,8 @@ msgstr "FAT32 fájlrendszer"
 #. Description
 #. :sl2:
 #: ../partman-basicfilesystems.templates:36001
-#, fuzzy
-#| msgid "JFS journaling file system"
 msgid "NTFS journaling file system"
-msgstr "JFS naplózó fájlrendszer"
+msgstr "NTFS naplózó fájlrendszer"
 
 # Type: text
 # Description
@@ -4965,7 +4963,7 @@ msgstr "btrfs naplózó fájlrendszer"
 #. :sl2:
 #: ../partman-btrfs.templates:4001
 msgid "btrfs root file system not supported without separate /boot"
-msgstr ""
+msgstr "A btrfs fájlrendszer gyökérként nem támogatott külön /boot nélkül"
 
 # Type: boolean
 # Description
@@ -4974,16 +4972,12 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../partman-btrfs.templates:4001
-#, fuzzy
-#| msgid ""
-#| "Your root file system is a JFS file system. This can cause problems with "
-#| "the boot loader used by default by this installer."
 msgid ""
 "Your root file system is a btrfs file system. This is not supported by the "
 "boot loader used by default by this installer."
 msgstr ""
-"Gyökér fájlrendszere JFS fájlrendszer. Ez gondot okozhat a telepítő által "
-"alapértelmezetten használt boot betöltővel."
+"A gyökér fájlrendszered btrfs fájlrendszer. Ez nem támogatott a telepítő "
+"által alapértelmezetten használt rendszerindítóval."
 
 # Type: boolean
 # Description
@@ -4992,15 +4986,11 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../partman-btrfs.templates:4001
-#, fuzzy
-#| msgid ""
-#| "You should use a small /boot partition with another file system, such as "
-#| "ext3."
 msgid ""
 "You should use a small /boot partition with another file system, such as "
 "ext4."
 msgstr ""
-"Inkább más fájlrendszerrel hozzon létre egy kis /boot partíciót, pl.: ext3"
+"Inkább más fájlrendszerrel (pl: ext4) hozz létre egy kis /boot partíciót."
 
 # Type: error
 # Description
@@ -5009,10 +4999,8 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../partman-btrfs.templates:5001
-#, fuzzy
-#| msgid "No file system mounted on /target"
 msgid "btrfs file system not supported for /boot"
-msgstr "Nincs a /target-be csatolt fájlrendszer"
+msgstr "A btrfs fájlrendszer nem támogatott a /boot-on"
 
 # Type: boolean
 # Description
@@ -5021,16 +5009,12 @@ msgstr "Nincs a /target-be csatolt fájlrendszer"
 #. Description
 #. :sl2:
 #: ../partman-btrfs.templates:5001
-#, fuzzy
-#| msgid ""
-#| "You have mounted a JFS file system as /boot. This is likely to cause "
-#| "problems with the boot loader used by default by this installer."
 msgid ""
 "You have mounted a btrfs file system as /boot. This is not supported by the "
 "boot loader used by default by this installer."
 msgstr ""
-"JFS fájlrendszer lett csatolva /boot-ként. Ez valószínűleg gondot fog okozni "
-"a telepítő által használt boot betöltő számára."
+"Egy btrfs fájlrendszert csatoltál fel /boot-ként. Ezt nem támogatja a "
+"telepítő alapértelmezetten használt rendszerindítója."
 
 # Type: boolean
 # Description
@@ -5039,13 +5023,10 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../partman-btrfs.templates:5001
-#, fuzzy
-#| msgid ""
-#| "You should use another file system, such as ext3, for the /boot partition."
 msgid ""
 "You should use another file system, such as ext4, for the /boot partition."
 msgstr ""
-"E helyett más fájlrendszert, például ext3-at használjon a /boot partícióhoz."
+"Inkább másik fájlrendszert, például ext4-et használj a /boot partícióhoz."
 
 # Type: text
 # Description
@@ -5067,7 +5048,7 @@ msgstr "JFS naplózó fájlrendszer"
 #. :sl2:
 #: ../partman-jfs.templates:4001
 msgid "Use unrecommended JFS root file system?"
-msgstr "JFS gyökér fájlrendszert akar? (nem ajánlott)"
+msgstr "JFS gyökér fájlrendszert (nem ajánlott) használsz?"
 
 # Type: boolean
 # Description
@@ -5094,7 +5075,7 @@ msgid ""
 "You should use a small /boot partition with another file system, such as "
 "ext3."
 msgstr ""
-"Inkább más fájlrendszerrel hozzon létre egy kis /boot partíciót, pl.: ext3"
+"Inkább másik fájlrendszerrel (pl.: ext3) hozz létre egy kis /boot partíciót."
 
 # Type: boolean
 # Description
@@ -5104,7 +5085,7 @@ msgstr ""
 #. :sl2:
 #: ../partman-jfs.templates:5001
 msgid "Use unrecommended JFS /boot file system?"
-msgstr "JFS /boot fájlrendszert akar? (nem ajánlott)"
+msgstr "JFS /boot fájlrendszert (nem ajánlott) használsz?"
 
 # Type: boolean
 # Description
@@ -5232,7 +5213,7 @@ msgstr "Nincs gyökér-fájlrendszer"
 #. :sl2:
 #: ../partman-target.templates:6001
 msgid "No root file system is defined."
-msgstr "Nincs gyökér-fájlrendszer megadva"
+msgstr "Nincs gyökér-fájlrendszer megadva."
 
 # Type: error
 # Description
@@ -5799,7 +5780,7 @@ msgstr "Sikertelen telepítés: ${PACKAGE}"
 msgid ""
 "An error was returned while trying to install the ${PACKAGE} package onto "
 "the target system."
-msgstr "Az alábbi csomag célrendszerre telepítése hibát adott:${PACKAGE}"
+msgstr "A(z) ${PACKAGE} csomag telepítése közben hiba történt."
 
 # Type: error
 # Description
@@ -6751,7 +6732,7 @@ msgstr "Ez egy végzetes hiba."
 #. :sl2:
 #: ../grub-installer.templates:15001
 msgid "Executing 'update-grub' failed."
-msgstr "Az 'update-grub' futtatása meghiúsult"
+msgstr "Az 'update-grub' futtatása meghiúsult."
 
 # Type: text
 # Description
@@ -6771,7 +6752,7 @@ msgstr "A GRUB boot betöltő újratelepítése"
 #. :sl2:
 #: ../grub-installer.templates:33001
 msgid "Force GRUB installation to the EFI removable media path"
-msgstr ""
+msgstr "Kényszerítsd ki a GRUB telepítését az EFI \"removable media path\"-ra"
 
 # Type: error
 # Description
@@ -7137,7 +7118,7 @@ msgid ""
 msgstr ""
 "Általában jó ötlet felcsatolni, mert ez lehetőséget ad olyan műveletekre, "
 "mint pl. a rendszerbetöltő újratelepítése. Ha viszont a ${FILESYSTEM}-on "
-"lévő fájlrendszer sérült, akkor valószínűleg jobb nem fölcsatolni. "
+"lévő fájlrendszer sérült, akkor valószínűleg jobb nem felcsatolni."
 
 # Type: select
 # Choices

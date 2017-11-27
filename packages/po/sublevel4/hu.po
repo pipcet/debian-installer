@@ -10,14 +10,15 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-05 14:47+0000\n"
-"PO-Revision-Date: 2013-06-11 19:04+0200\n"
+"PO-Revision-Date: 2017-11-26 20:32+0000\n"
 "Last-Translator: Dr. Nagy Elemér Károly <eknagy@omikk.bme.hu>\n"
 "Language-Team: Hungarian <debian-l10n-hungarian@lists.d.o>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: UTF-8\n"
-"Plural-Forms: ???\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.18-dev\n"
 "X-Poedit-Country: HUNGARY\n"
 "X-Poedit-Language: Hungarian\n"
 
@@ -121,7 +122,7 @@ msgstr "Üres elem kiválasztása"
 #: ../cdebconf-text-udeb.templates:7001
 #, no-c-format
 msgid "Other choices are available with '%c' and '%c'"
-msgstr ""
+msgstr "Egyéb lehetőségek elérhetőek: '%c' és '%c'"
 
 #. Type: text
 #. Description
@@ -129,7 +130,7 @@ msgstr ""
 #: ../cdebconf-text-udeb.templates:8001
 #, no-c-format
 msgid "Previous choices are available with '%c'"
-msgstr ""
+msgstr "Az előző lehetőségek elérhetőek: '%c'"
 
 #. Type: text
 #. Description
@@ -137,7 +138,7 @@ msgstr ""
 #: ../cdebconf-text-udeb.templates:9001
 #, no-c-format
 msgid "Next choices are available with '%c'"
-msgstr ""
+msgstr "További lehetőségek elérhetőek: '%c'"
 
 #. Type: text
 #. Description
@@ -214,7 +215,7 @@ msgstr "Szöveg"
 #. :sl4:
 #: ../cdebconf.templates:3001
 msgid "'Text' is a traditional plain text interface."
-msgstr "A 'Szöveg' a hagyományos sima szöveg felület"
+msgstr "A 'Szöveg' a hagyományos szöveges felület."
 
 #. Type: string
 #. Description
@@ -228,7 +229,7 @@ msgstr "Newt"
 #. :sl4:
 #: ../cdebconf.templates:4001
 msgid "'Newt' is a full-screen, character based interface."
-msgstr "A 'Newt' egy teljes képernyős karakter alapú felület"
+msgstr "A 'Newt' egy teljes képernyős karakter alapú felület."
 
 #. Type: string
 #. Description
@@ -244,7 +245,7 @@ msgstr "GTK"
 msgid ""
 "'GTK' is a graphical interface that may be used in any graphical environment."
 msgstr ""
-"A 'GTK' egy grafikus felület, mely bármely grafikus környezetben használható"
+"A 'GTK' egy grafikus felület, mely bármely grafikus környezetben használható."
 
 #. Type: error
 #. Description
@@ -527,14 +528,14 @@ msgstr "PowerPC PReP boot partíció"
 #. :sl4:
 #: ../partman-prep.templates:3001
 msgid "No PowerPC PReP boot partition is found."
-msgstr "Nincs PowerPC PReP boot partíció"
+msgstr "Nem találtam PowerPC PReP boot partíciót."
 
 #. Type: boolean
 #. Description
 #. :sl4:
 #: ../partman-prep.templates:4001
 msgid "The PowerPC PReP boot partition must be in the first 8MB."
-msgstr "A PowerPC PReP boot partíció az első 8MB-ban kell legyen"
+msgstr "A PowerPC PReP boot partíció az első 8MB-ban kell legyen."
 
 #. Type: text
 #. Description
@@ -995,14 +996,14 @@ msgstr "Sikeresen telepített PReP"
 #. :sl4:
 #: ../prep-installer.templates:8001
 msgid "The kernel was properly copied to the PReP boot partition."
-msgstr "A rendszermag sikeresen a PReP boot partícióra került"
+msgstr "A rendszermagot sikeresen a PReP boot partícióra másoltam."
 
 #. Type: note
 #. Description
 #. :sl4:
 #: ../prep-installer.templates:8001
 msgid "The new system is now ready to boot."
-msgstr "Az új rendszer kész az indulásra"
+msgstr "Az új rendszer készen áll az indulásra."
 
 #. Type: text
 #. Description
@@ -1057,7 +1058,9 @@ msgstr ""
 msgid ""
 "The boot loader only supports this configuration for pools in Mirror or "
 "Striped modes, but not RAID-Z mode."
-msgstr "A boot betöltő"
+msgstr ""
+"A rendszerindító ezt a konfigurációt csak tükrözött ill. szeletelt módú "
+"köteteken támogatja, RAID-Z módú köteteken nem."
 
 #. Type: error
 #. Description
@@ -1087,7 +1090,7 @@ msgid ""
 "volume."
 msgstr ""
 "A ${MNT} partíciód egy olyan ZFS tárolón van, amely egynél több fizikai "
-"kötetet tartalmaz. "
+"kötetet tartalmaz."
 
 #. Type: error
 #. Description
@@ -1860,7 +1863,7 @@ msgstr ""
 #. :sl4:
 #: ../partman-nbd.templates:4001
 msgid "Name for NBD export"
-msgstr ""
+msgstr "Az NBD export neve"
 
 #. Type: string
 #. Description
@@ -1870,6 +1873,8 @@ msgid ""
 "Please enter the NBD export name needed to access nbd-server. The name "
 "entered here should match an existing export on the server."
 msgstr ""
+"Kérlek add meg az NBD export nevet az nbd-kiszolgálóhoz. A megadott névnek "
+"egyeznie kell egy létező export-tal a kiszolgálón."
 
 #. Type: select
 #. Description
@@ -1897,21 +1902,14 @@ msgstr "Az NBD kiszolgálóhoz csatlakozás sikertelen"
 #. Description
 #. :sl4:
 #: ../partman-nbd.templates:6001
-#, fuzzy
-#| msgid ""
-#| "Connecting to the nbd-server failed. Please ensure that the host and the "
-#| "port or the name which you entered are correct, that the nbd-server "
-#| "process is running on that host and port (or using that name), that the "
-#| "network is configured correctly, and retry."
 msgid ""
 "Connecting to the nbd-server failed. Please ensure that the host and the "
 "export name which you entered are correct, that the nbd-server process is "
 "running on that host, that the network is configured correctly, and retry."
 msgstr ""
-"Az nbd-kiszolgálóhoz való csatlakozás sikertelen. Ellenőrizd, hogy a "
-"megadott gép és port helyes-e, az nbd-kiszolgáló folyamat fut-e azon a gépen "
-"és porton (vagy azon a néven-e) illetve jó-e a hálózat beállítása és próbáld "
-"újra."
+"Az nbd-kiszolgálóhoz való csatlakozás sikertelen. Kérlek ellenőrizd, hogy a "
+"megadott gép és export név helyes-e, hogy az nbd-kiszolgáló folyamat fut a "
+"megadott gépen és hogy a hálózat jól van-e beállítva. Aztán próbáld újra."
 
 #. Type: error
 #. Description
