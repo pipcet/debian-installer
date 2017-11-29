@@ -16,8 +16,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: \n"
-"PO-Revision-Date: 2017-11-16 20:50+0000\n"
+"POT-Creation-Date: 2016-06-05 14:47+0000\n"
+"PO-Revision-Date: 2017-11-27 16:57+0000\n"
 "Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
 "Language-Team: Swedish <debian-l10n-swedish@lists.debian.org>\n"
 "Language: sv\n"
@@ -128,7 +128,7 @@ msgstr "Välj en tom post"
 #: ../cdebconf-text-udeb.templates:7001
 #, no-c-format
 msgid "Other choices are available with '%c' and '%c'"
-msgstr "Andra alternativ finns tillgängliga med '%c'"
+msgstr "Andra alternativ finns tillgängliga med '%c' och '%c'"
 
 #. Type: text
 #. Description
@@ -193,7 +193,7 @@ msgid ""
 "You can select the type of user interface they use."
 msgstr ""
 "Paket som använder debconf för konfigurering delar ett gemensamt utseende. "
-"Du kan välja vilken sorts användargränssnitt de skall använda."
+"Du kan välja vilken sorts användargränssnitt de ska använda."
 
 #. Type: string
 #. Description
@@ -235,7 +235,7 @@ msgstr "Newt"
 #. :sl4:
 #: ../cdebconf.templates:4001
 msgid "'Newt' is a full-screen, character based interface."
-msgstr "'Newt' är ett fullskärms-gränssnitt baserat på tecken."
+msgstr "'Newt' är ett helskärmsgränssnitt baserat på tecken."
 
 #. Type: string
 #. Description
@@ -258,6 +258,7 @@ msgstr ""
 #. Description
 #. :sl4:
 #: ../nobootloader.templates:2001 ../grub-installer.templates:32001
+#: ../quik-installer.templates:17001 ../yaboot-installer.templates:14001
 msgid "Failed to mount /target/proc"
 msgstr "Misslyckades med att montera /target/proc"
 
@@ -265,30 +266,62 @@ msgstr "Misslyckades med att montera /target/proc"
 #. Description
 #. :sl4:
 #: ../nobootloader.templates:2001 ../grub-installer.templates:32001
+#: ../quik-installer.templates:17001 ../yaboot-installer.templates:14001
 msgid "Mounting the proc file system on /target/proc failed."
 msgstr "Monteringen av proc-filsystemet i /target/proc misslyckades."
 
+#. #-#-#-#-#  templates.pot (PACKAGE VERSION)  #-#-#-#-#
+#. Type: error
+#. Description
+#. :sl4:
+#. #-#-#-#-#  templates.pot (grub-installer)  #-#-#-#-#
+#. Type: error
+#. Description
+#. :sl4:
+#. #-#-#-#-#  templates.pot (PACKAGE VERSION)  #-#-#-#-#
+#. Type: error
+#. Description
+#. :sl4:
+#. Type: error
+#. Description
+#. :sl4:
+#. #-#-#-#-#  templates.pot (PACKAGE VERSION)  #-#-#-#-#
+#. Type: error
+#. Description
+#. :sl4:
+#. Type: error
+#. Description
+#. :sl4:
 #. Type: error
 #. Description
 #. :sl4:
 #: ../nobootloader.templates:2001 ../grub-installer.templates:32001
+#: ../quik-installer.templates:11001 ../quik-installer.templates:17001
+#: ../yaboot-installer.templates:11001 ../yaboot-installer.templates:13001
+#: ../yaboot-installer.templates:14001
 msgid "Warning: Your system may be unbootable!"
 msgstr "Varning: Ditt system kan vara omöjligt att starta!"
 
+#. #-#-#-#-#  templates.pot (PACKAGE VERSION)  #-#-#-#-#
 #. Type: note
 #. Description
 #. :sl4:
+#. Type: note
+#. Description
+#. :sl4:
+#. #-#-#-#-#  templates.pot (PACKAGE VERSION)  #-#-#-#-#
 #. Type: note
 #. Description
 #. :sl4:
 #: ../nobootloader.templates:3001 ../nobootloader.templates:4001
+#: ../yaboot-installer.templates:15001
 msgid "Setting firmware variables for automatic boot"
-msgstr "Konfigurera fasta programmets variabler för automatisk start"
+msgstr "Konfigurera fasta programvarans variabler för automatisk start"
 
 #. Type: note
 #. Description
 #. :sl4:
-#: ../nobootloader.templates:3001
+#: ../nobootloader.templates:3001 ../yaboot-installer.templates:15001
 msgid ""
 "Some variables need to be set in the Genesi firmware in order for your "
 "system to boot automatically.  At the end of the installation, the system "
@@ -308,9 +341,14 @@ msgstr ""
 #. Type: note
 #. Description
 #. :sl4:
+#. #-#-#-#-#  templates.pot (PACKAGE VERSION)  #-#-#-#-#
+#. Type: note
+#. Description
+#. :sl4:
 #. Translators, the 4th string of this description has been dropped from
 #. PO files. It contains firmware commands and should not be translated.
-#: ../nobootloader.templates:3001 ../arcboot-installer.templates:5001
+#: ../nobootloader.templates:3001 ../yaboot-installer.templates:15001
+#: ../arcboot-installer.templates:5001
 msgid ""
 "You will only need to do this once.  Afterwards, enter the \"boot\" command "
 "or reboot the system to proceed to your newly installed system."
@@ -322,7 +360,7 @@ msgstr ""
 #. Type: note
 #. Description
 #. :sl4:
-#: ../nobootloader.templates:3001
+#: ../nobootloader.templates:3001 ../yaboot-installer.templates:15001
 msgid ""
 "Alternatively, you will be able to boot the kernel manually by entering, at "
 "the firmware prompt:"
@@ -515,6 +553,480 @@ msgstr ""
 #. Type: text
 #. Description
 #. :sl4:
+#: ../quik-installer.templates:1001
+msgid "Installing quik"
+msgstr "Installerar quik"
+
+#. Type: text
+#. Description
+#. :sl4:
+#: ../quik-installer.templates:2001
+msgid "Installing quik boot loader"
+msgstr "Installerar starthanteraren quik"
+
+#. Type: boolean
+#. Description
+#. :sl4:
+#: ../quik-installer.templates:3001
+msgid "quik installation failed. Continue anyway?"
+msgstr "Installationen av quik misslyckades. Fortsätt ändå?"
+
+#. Type: boolean
+#. Description
+#. :sl4:
+#: ../quik-installer.templates:3001
+msgid ""
+"The quik package failed to install into /target/.  Installing quik as a boot "
+"loader is a required step.  The install problem might however be unrelated "
+"to quik, so continuing the installation may be possible."
+msgstr ""
+"Misslyckades med att installera paketet quik i /target/. Att installera quik "
+"som starthanterare är ett obligatoriskt steg. Installationsproblemet behöver "
+"inte vara relaterat till quik så det kan ändå vara möjligt att fortsätta."
+
+#. Type: text
+#. Description
+#. :sl4:
+#: ../quik-installer.templates:4001
+msgid "Checking partitions"
+msgstr "Kontrollerar partitioner"
+
+#. Type: error
+#. Description
+#. :sl4:
+#: ../quik-installer.templates:5001 ../yaboot-installer.templates:7001
+#: ../prep-installer.templates:6001
+msgid "No root partition found"
+msgstr "Hittade ingen rotpartition"
+
+#. Type: error
+#. Description
+#. :sl4:
+#: ../quik-installer.templates:5001 ../yaboot-installer.templates:7001
+#: ../prep-installer.templates:6001
+msgid ""
+"No partition is mounted as your new root partition. You must mount a root "
+"partition first."
+msgstr ""
+"Ingen partition är monterad som din nya rotpartition. Du måste montera en "
+"rotpartition först."
+
+#. Type: error
+#. Description
+#. :sl4:
+#: ../quik-installer.templates:6001
+msgid "Boot partition not on first disk"
+msgstr "Uppstartspartitionen finns inte på första disken"
+
+#. Type: error
+#. Description
+#. :sl4:
+#: ../quik-installer.templates:6001
+msgid ""
+"The quik boot loader requires partition that holds /boot to be on the first "
+"disk. Please return to the partitioning step."
+msgstr ""
+"Starthanteraren quik kräver att partitionen som innehåller /boot finns på "
+"första disken. Gå tillbaka till partitioneringssteget."
+
+#. Type: error
+#. Description
+#. :sl4:
+#: ../quik-installer.templates:7001
+msgid "Boot partition must be on ext2"
+msgstr "Uppstartspartitionen måste vara ext2"
+
+#. Type: error
+#. Description
+#. :sl4:
+#: ../quik-installer.templates:7001
+msgid ""
+"The quik boot loader requires the partition that holds /boot to be formatted "
+"using the ext2 file system. Please return to the partitioning step."
+msgstr ""
+"Starthanteraren quik kräver att partitionen som innehåller /boot formateras "
+"med ext2-filsystemet. Gå tillbaka till partitioneringssteget."
+
+#. Type: boolean
+#. Description
+#. :sl4:
+#. Type: boolean
+#. Description
+#. :sl4:
+#: ../quik-installer.templates:8001 ../quik-installer.templates:9001
+msgid "Do you really want to install the quik boot loader?"
+msgstr "Vill du verkligen installera starthanteraren quik?"
+
+#. Type: boolean
+#. Description
+#. :sl4:
+#: ../quik-installer.templates:8001
+msgid ""
+"You have chosen to install the quik boot loader. You will not be able to "
+"boot any other operating system from this disk. Furthermore, your machine "
+"may not be bootable in any manner after this process completes. If you are "
+"left with a blank screen, you may need to try a cold boot and hold down "
+"Command-Option-P-R."
+msgstr ""
+"Du har valt att installera starthanteraren quik. Du kommer inte att kunna "
+"starta något annat operativsystem från den här disken. Vidare är det inte "
+"säkert att din maskin är startbar på något sätt efter att den här processen "
+"är klar. Om det slutar med en blank skärm kan du behöva göra en kallstart "
+"och hålla nere Command-Option-P-R."
+
+#. Type: boolean
+#. Description
+#. :sl4:
+#. Type: boolean
+#. Description
+#. :sl4:
+#: ../quik-installer.templates:8001 ../quik-installer.templates:9001
+msgid "Be aware that this code has not been thoroughly tested."
+msgstr "Tänk på att den här koden inte har testats genomgående."
+
+#. Type: boolean
+#. Description
+#. :sl4:
+#: ../quik-installer.templates:9001
+msgid ""
+"You have chosen to install the quik boot loader. You will not be able to "
+"boot any other operating system from this disk. Furthermore, your machine "
+"may not be bootable in any manner after this process completes."
+msgstr ""
+"Du har valt att installera starthanteraren quik. Du kommer inte att kunna "
+"starta något annat operativsystem från den här disken. Vidare är det inte "
+"säkert att din maskin är startbar på något sätt efter att den här processen "
+"är klar."
+
+#. Type: text
+#. Description
+#. :sl4:
+#: ../quik-installer.templates:10001
+msgid "Creating quik configuration"
+msgstr "Skapar quik-konfiguration"
+
+#. Type: error
+#. Description
+#. :sl4:
+#: ../quik-installer.templates:11001
+msgid "Failed to create quik configuration"
+msgstr "Misslyckades med att skapa quik-konfiguration"
+
+#. Type: error
+#. Description
+#. :sl4:
+#: ../quik-installer.templates:11001
+msgid "The creation of the main quik configuration file failed."
+msgstr "Skapandet av huvudkonfigurationsfilen för quik misslyckades."
+
+#. Type: text
+#. Description
+#. :sl4:
+#: ../quik-installer.templates:12001
+msgid "Installing quik into bootstrap partition"
+msgstr "Installerar quik på bootstrap-partitionen"
+
+#. Type: error
+#. Description
+#. :sl4:
+#: ../quik-installer.templates:13001 ../yaboot-installer.templates:13001
+msgid "Failed to install boot loader"
+msgstr "Misslyckades med att installera starthanteraren"
+
+#. Type: error
+#. Description
+#. :sl4:
+#: ../quik-installer.templates:13001
+msgid "The installation of the quik boot loader failed."
+msgstr "Installationen av starthanteraren quik misslyckades."
+
+#. Type: error
+#. Description
+#. :sl4:
+#: ../quik-installer.templates:13001
+msgid "Warning: your system may be unbootable!"
+msgstr "Varning: Ditt system kan vara omöjligt att starta!"
+
+#. Type: text
+#. Description
+#. :sl4:
+#: ../quik-installer.templates:14001
+msgid "Setting up OpenFirmware"
+msgstr "Ställer in OpenFirmware"
+
+#. Type: error
+#. Description
+#. :sl4:
+#: ../quik-installer.templates:15001
+msgid "Unable to configure OpenFirmware"
+msgstr "Kunde inte konfigurera OpenFirmware"
+
+#. Type: error
+#. Description
+#. :sl4:
+#: ../quik-installer.templates:15001
+msgid ""
+"Setting the OpenFirmware boot-device variable failed. You will have to "
+"configure OpenFirmware yourself to boot."
+msgstr ""
+"Inställning av OpenFirmware-variabeln boot-device misslyckades. Du kommer "
+"behöva konfigurera OpenFirmware själv för att kunna starta systemet."
+
+#. Type: error
+#. Description
+#. :sl4:
+#. This error may not be fatal, depending on the exact type of Mac.
+#: ../quik-installer.templates:16001
+msgid "Problem configuring OpenFirmware"
+msgstr "Problem vid konfigurering av OpenFirmware"
+
+#. Type: error
+#. Description
+#. :sl4:
+#. This error may not be fatal, depending on the exact type of Mac.
+#: ../quik-installer.templates:16001
+msgid ""
+"Setting the OpenFirmware boot-command variable failed. You may have "
+"intermittent boot failures."
+msgstr ""
+"Misslyckades med att ställa in boot-command för OpenFirmware. Du kan få "
+"oregelbundna fel vid start av systemet."
+
+#. Type: text
+#. Description
+#. Main menu item
+#. :sl4:
+#: ../quik-installer.templates:18001
+msgid "Install quik on a hard disk"
+msgstr "Installera quik på en hårddisk"
+
+#. Type: text
+#. Description
+#. :sl4:
+#: ../yaboot-installer.templates:1001
+msgid "Installing Yaboot"
+msgstr "Installerar Yaboot"
+
+#. Type: text
+#. Description
+#. :sl4:
+#: ../yaboot-installer.templates:2001
+msgid "Installing Yaboot boot loader"
+msgstr "Installerar starthanteraren Yaboot"
+
+#. Type: boolean
+#. Description
+#. :sl4:
+#: ../yaboot-installer.templates:3001
+msgid "Yaboot installation failed.  Continue anyway?"
+msgstr "Installationen av Yaboot misslyckades. Fortsätt ändå?"
+
+#. Type: boolean
+#. Description
+#. :sl4:
+#: ../yaboot-installer.templates:3001
+msgid ""
+"The yaboot package failed to install into /target/.  Installing Yaboot as a "
+"boot loader is a required step.  The install problem might however be "
+"unrelated to Yaboot, so continuing the installation may be possible."
+msgstr ""
+"Misslyckades med att installera paketet yaboot i /target/. Att installera "
+"Yaboot som starthanterare är ett obligatoriskt steg. Installationsproblemet "
+"behöver inte vara relaterat till Yaboot så det kan ändå vara möjligt att "
+"fortsätta."
+
+#. Type: text
+#. Description
+#. :sl4:
+#: ../yaboot-installer.templates:4001
+msgid "Looking for bootstrap partitions"
+msgstr "Söker efter bootstrap-partitioner"
+
+#. Type: error
+#. Description
+#. :sl4:
+#: ../yaboot-installer.templates:5001
+msgid "No bootstrap partition found"
+msgstr "Hittade inga bootstrap-partitioner"
+
+#. Type: error
+#. Description
+#. :sl4:
+#: ../yaboot-installer.templates:5001
+msgid ""
+"No hard disks were found which have an \"Apple_Bootstrap\" partition.  You "
+"must create an 819200-byte partition with type \"Apple_Bootstrap\"."
+msgstr ""
+"Hittade inga hårddiskar med en \"Apple_Bootstrap\"-partition. Du måste skapa "
+"en 819200 byte stor partition av typen \"Apple_Bootstrap\"."
+
+#. Type: text
+#. Description
+#. :sl4:
+#: ../yaboot-installer.templates:6001
+msgid "Looking for root partition"
+msgstr "Söker efter rotpartition"
+
+#. Type: text
+#. Description
+#. :sl4:
+#: ../yaboot-installer.templates:8001
+msgid "Looking for other operating systems"
+msgstr "Söker efter andra operativsystem"
+
+#. Type: select
+#. Description
+#. :sl4:
+#: ../yaboot-installer.templates:9001
+msgid ""
+"Yaboot (the Linux boot loader) needs to be installed on a hard disk "
+"partition in order for your system to be bootable.  Please choose the "
+"destination partition from among these partitions that have the bootable "
+"flag set."
+msgstr ""
+"Yaboot (starthanteraren för Linux) måste installeras på en hårddiskpartition "
+"för att ditt system ska vara startbart. Välj målpartitionen bland de "
+"partitioner som har startbar-flaggan satt."
+
+#. Type: select
+#. Description
+#. :sl4:
+#: ../yaboot-installer.templates:9001
+msgid "Warning: this will erase all data on the selected partition!"
+msgstr "Varning: Det här kommer att ta bort all data på den valda partitionen!"
+
+#. Type: text
+#. Description
+#. :sl4:
+#: ../yaboot-installer.templates:10001
+msgid "Creating yaboot configuration"
+msgstr "Skapar konfiguration för yaboot"
+
+#. Type: error
+#. Description
+#. :sl4:
+#: ../yaboot-installer.templates:11001
+msgid "Failed to create yaboot configuration"
+msgstr "Misslyckades med att skapa konfiguration för yaboot"
+
+#. Type: error
+#. Description
+#. :sl4:
+#: ../yaboot-installer.templates:11001
+msgid "The creation of the main yaboot configuration file failed."
+msgstr "Skapandet av huvudkonfigurationsfilen för yaboot misslyckades."
+
+#. Type: text
+#. Description
+#. :sl4:
+#: ../yaboot-installer.templates:12001
+msgid "Installing yaboot into bootstrap partition"
+msgstr "Installerar yaboot på bootstrap-partitionen"
+
+#. Type: error
+#. Description
+#. :sl4:
+#: ../yaboot-installer.templates:13001
+msgid "The installation of the yaboot boot loader failed."
+msgstr "Installationen av starthanteraren yaboot misslyckades."
+
+#. Type: text
+#. Description
+#. Main menu item
+#. :sl4:
+#: ../yaboot-installer.templates:16001
+msgid "Install yaboot on a hard disk"
+msgstr "Installera yaboot på en hårddisk"
+
+#. Type: text
+#. Description
+#. Rescue menu item
+#. :sl4:
+#: ../yaboot-installer.templates:17001
+msgid "Reinstall yaboot boot loader"
+msgstr "Installera om starthanteraren yaboot"
+
+#. Type: text
+#. Description
+#. :sl4:
+#. Main menu item
+#. Keep translations below 55 ccolumns (1 character=1 column
+#. except for wide character languages such as Chinese/Japanese/Korean)
+#. A bit of context for translators :
+#. PReP stands for PowerPC Reference Platform, is an acronym, and should not be
+#. translated. The PReP boot partition is a partition of type 0x41, which is
+#. used by PReP boxes and IBM CHRP boxes to boot yaboot or the kernel from.
+#: ../prep-installer.templates:1001
+msgid "Install the kernel on a PReP boot partition"
+msgstr "Installerar kärnan på en PReP-startpartition"
+
+#. Type: text
+#. Description
+#. :sl4:
+#. Type: text
+#. Description
+#. :sl4:
+#: ../prep-installer.templates:2001 ../prep-installer.templates:7001
+msgid "Copying the kernel to the PReP boot partition"
+msgstr "Kopierar kärnan till PReP-startpartitionen"
+
+#. Type: text
+#. Description
+#. :sl4:
+#: ../prep-installer.templates:3001
+msgid "Looking for PReP boot partitions"
+msgstr "Söker efter uppstartspartitioner för PReP"
+
+#. Type: error
+#. Description
+#. :sl4:
+#: ../prep-installer.templates:4001
+msgid "No PReP boot partitions"
+msgstr "Inga uppstartspartitioner för PReP"
+
+#. Type: error
+#. Description
+#. :sl4:
+#: ../prep-installer.templates:4001
+msgid ""
+"No PReP boot partitions were found. You must create a PReP boot partition "
+"within the first 8MB of your hard disk."
+msgstr ""
+"Ingen uppstartspartition för PReP hittades. Du måste skapa en "
+"uppstartspartition för PReP inom de första 8MB av din hårddisk."
+
+#. Type: text
+#. Description
+#. :sl4:
+#: ../prep-installer.templates:5001
+msgid "Looking for the root partition"
+msgstr "Söker efter rotpartitionen"
+
+#. Type: note
+#. Description
+#. :sl4:
+#: ../prep-installer.templates:8001
+msgid "Successfully installed PReP"
+msgstr "Installationen av PReP lyckades"
+
+#. Type: note
+#. Description
+#. :sl4:
+#: ../prep-installer.templates:8001
+msgid "The kernel was properly copied to the PReP boot partition."
+msgstr "Kärnan har kopierats till PReP-startpartitionen."
+
+#. Type: note
+#. Description
+#. :sl4:
+#: ../prep-installer.templates:8001
+msgid "The new system is now ready to boot."
+msgstr ""
+"Systemet är nu redo för att starta upp det nya Debian GNU/Linux-systemet."
+
+#. Type: text
+#. Description
+#. :sl4:
 #. File system name (untranslatable in many languages)
 #. Type: text
 #. Description
@@ -577,7 +1089,7 @@ msgid ""
 "pool configuration, or a different file system such as UFS."
 msgstr ""
 "Säkerställ att /boot och /lib finns på en partition som använder ZFS-pool-"
-"inställnngar som stöds eller på ett annats filsystem, exempelvis UFS."
+"inställningar som stöds eller på ett annat filsystem, exempelvis UFS."
 
 #. Type: error
 #. Description
@@ -604,8 +1116,8 @@ msgid ""
 "Make sure ${MNT} is on a partition using a supported ZFS pool configuration, "
 "or a different file system such as UFS."
 msgstr ""
-"Säkerställ att ${MNT}  finns på en partition som använder ZFS-pool-"
-"inställnngar som stöds eller på ett annats filsystem, exempelvis UFS."
+"Säkerställ att ${MNT} finns på en partition som använder ZFS-pool-"
+"inställningar som stöds eller på ett annat filsystem, exempelvis UFS."
 
 #. Type: boolean
 #. Description
@@ -631,8 +1143,8 @@ msgid ""
 "hardware supports this), or go back to the partitioning menu and configure "
 "the partitions to use another file system."
 msgstr ""
-"Du ska använda antingen 64-bitarsversionen (amd64) av detta installeraren "
-"(om din maskinvara har stöd för den) eller gå tillbaka till "
+"Du borde använda antingen 64-bitarsversionen (amd64) av denna installerare ("
+"om din maskinvara har stöd för den) eller gå tillbaka till "
 "partitioneringsmenyn och konfigurera partitionerna till att använda ett "
 "annat filsystem."
 
@@ -717,7 +1229,7 @@ msgid ""
 "Before ZFS can be configured, the current partitioning scheme has to be "
 "written to disk. These changes cannot be undone."
 msgstr ""
-"Innan ZFS kan ställas in måste det aktuella partioneringsschemat skrivas "
+"Innan ZFS kan ställas in måste det aktuella partitioneringsschemat skrivas "
 "till disk. Dessa ändringar kan inte ångras."
 
 #. Type: boolean
@@ -1240,7 +1752,7 @@ msgid ""
 "disklabel. Usually the volume header of /dev/sda is used. Please give the "
 "device name of the disk on which to put arcboot."
 msgstr ""
-"Arcboot måste installeras i volymhuvudet på en hårdisk med SGI-disketikett. "
+"Arcboot måste installeras i volymhuvudet på en hårddisk med SGI-disketikett. "
 "Vanligtvis används volymhuvudet på /dev/sda. Ange enhetsnamnet på disken som "
 "arcboot ska placeras på."
 
@@ -1249,7 +1761,7 @@ msgstr ""
 #. :sl4:
 #: ../arcboot-installer.templates:3001
 msgid "Arcboot configured to use a serial console"
-msgstr "Arcboot är konfigurerad till att använda en seriekonsoll"
+msgstr "Arcboot är konfigurerad till att använda en seriekonsol"
 
 #. Type: note
 #. Description
@@ -1375,8 +1887,8 @@ msgid ""
 "Please enter the NBD export name needed to access nbd-server. The name "
 "entered here should match an existing export on the server."
 msgstr ""
-"Ange namnet för NBD-exportering som behöver för att komma åt nbd-servern. "
-"Namnet som anges måste stämma överrens med en redan existerande exportering "
+"Ange namnet för NBD-exportering som behövs för att komma åt nbd-servern. "
+"Namnet som anges måste stämma överens med en redan existerande exportering "
 "på servern."
 
 #. Type: select

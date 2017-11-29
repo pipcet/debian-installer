@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-29 05:17+0000\n"
-"PO-Revision-Date: 2017-11-20 23:49+0000\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2017-11-29 09:45+0000\n"
 "Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
 "Language-Team: Swedish <debian-l10n-swedish@lists.debian.org>\n"
 "Language: sv\n"
@@ -459,6 +459,11 @@ msgid ""
 "please try your installation again without using UNetbootin before reporting "
 "issues."
 msgstr ""
+"Det verkar som att ditt installationsmedia genererades med UNetbootin. "
+"UNetbootin har vid upprepade tillfällen förknippats med svåra eller ej "
+"reproducerbara felrapporter från användare. Om du har problem med att "
+"använda detta installationsmedia, försök att installera igen utan att "
+"använda UNetbootin innan du rapporterar några fel."
 
 #. Type: note
 #. Description
@@ -468,6 +473,8 @@ msgid ""
 "The installation guide contains more information on how to create a USB "
 "installation medium directly without UNetbootin."
 msgstr ""
+"Installationsguiden innehåller mer information om hur ett USB-"
+"installationsmedia kan skapas direkt utan UNetbootin."
 
 #. Type: boolean
 #. Description
@@ -1398,9 +1405,8 @@ msgstr "Choibalsan"
 #. Choices
 #. :sl3:
 #: ../common.templates.in:22001
-#, fuzzy
 msgid "North-West"
-msgstr "North Dakota"
+msgstr "Nordväst"
 
 #. Type: select
 #. Choices
@@ -1413,9 +1419,8 @@ msgstr "Sonora"
 #. Choices
 #. :sl3:
 #: ../common.templates.in:22001
-#, fuzzy
 msgid "South-East"
-msgstr "South Dakota"
+msgstr "Sydost"
 
 #. Type: select
 #. Choices
@@ -1826,7 +1831,7 @@ msgstr "Ett fel inträffade när GRUB konfigurerades för multipath-enheten."
 #. #-#-#-#-#  templates.pot (grub-installer)  #-#-#-#-#
 #. Type: select
 #. Choices
-#. #-#-#-#-#  templates.pot (iso-scan)  #-#-#-#-#
+#. #-#-#-#-#  templates.pot (PACKAGE VERSION)  #-#-#-#-#
 #. Type: select
 #. Choices
 #. :sl3:
@@ -2177,8 +2182,8 @@ msgstr ""
 "Installationsprogrammet kunde inte hitta några partitioner så du kommer inte "
 "kunna montera ett rotfilsystem. Det kan bero på att kärnan misslyckas med "
 "att hitta din hårddisk eller misslyckas med att läsa partitionstabellen, "
-"eller disken kan vara opartitionerad. Om du vill kan du undersöka detta från "
-"ett skal i installationsmiljön."
+"eller så kan disken vara opartitionerad. Om du vill kan du undersöka detta "
+"från ett skal i installationsmiljön."
 
 #. Type: error
 #. Description
@@ -2489,44 +2494,8 @@ msgid ""
 "If multiple ISO files exist on the same installer drive, you may select "
 "which one you want to use."
 msgstr ""
-"Om flera ISO-filer finns på samma installationsehet så kan du välja vilken "
+"Om flera ISO-filer finns på samma installationsenhet så kan du välja vilken "
 "som du vill använda."
-
-#. Type: boolean
-#. Description
-#. :sl3:
-#: ../iso-scan.templates:18001
-msgid "Copy the ISO image into RAM before mounting it?"
-msgstr ""
-
-#. Type: boolean
-#. Description
-#. :sl3:
-#: ../iso-scan.templates:18001
-msgid ""
-"There is enough available memory to be able to copy the ISO image into RAM."
-msgstr ""
-
-#. Type: boolean
-#. Description
-#. :sl3:
-#: ../iso-scan.templates:18001
-msgid ""
-"Choosing this option allows reusing the disk hosting the ISO image. If you "
-"don't do it, the disk will be actively used to access the ISO image and it "
-"can't be partitioned by the installer."
-msgstr ""
-
-#. Type: boolean
-#. Description
-#. :sl3:
-#: ../iso-scan.templates:18001
-msgid ""
-"Note however that if you overwrite the disk containing the ISO image, you "
-"should not reboot before the end of the installation as you will not be able "
-"to restart the installer since the ISO image will be gone from the hard disk "
-"and memory."
-msgstr ""
 
 #. Type: note
 #. Description
@@ -2663,7 +2632,7 @@ msgstr ""
 #. :sl3:
 #: ../cdrom-checker.templates:6001
 msgid "Integrity test successful"
-msgstr "Lyckat integritetstestet"
+msgstr "Integritetstestet lyckades"
 
 #. Type: note
 #. Description
@@ -2771,7 +2740,7 @@ msgstr "Starta ett skal"
 #. :sl3:
 #: ../network-console.templates:2002
 msgid "Network console option:"
-msgstr "Flaggor för nätverkskonsollen:"
+msgstr "Flaggor för nätverkskonsolen:"
 
 #. Type: select
 #. Description
@@ -2781,7 +2750,7 @@ msgid ""
 "This is the network console for the Debian installer. From here, you may "
 "start the Debian installer, or execute an interactive shell."
 msgstr ""
-"Det här är nätverkskonsollen för Debians installationsprogram. Här kan du "
+"Det här är nätverkskonsolen för Debians installationsprogram. Här kan du "
 "starta installationsprogrammet eller starta ett interaktivt skal."
 
 #. Type: select
@@ -2817,7 +2786,7 @@ msgid ""
 "that could be easily associated with you, like your middle name."
 msgstr ""
 "Du måste ange ett lösenord för fjärråtkomst till Debians "
-"installationsprogram. Om en illvilig eller okunnig användare får åtkomst "
+"installationsprogram. Om en illvillig eller okunnig användare får åtkomst "
 "till installationsprogrammet kan det ge katastrofala följder, så du bör se "
 "till att välja ett lösenord som är svårt att gissa sig till. Det bör vara "
 "ett ord som inte finns i ordboken och som inte är lätt att associera med dig "
@@ -2912,7 +2881,7 @@ msgstr "Kunde inte hämta SSH-nyckeln"
 #: ../network-console.templates:10001
 msgid "An error occurred while fetching SSH authorized keys from ${LOCATION}."
 msgstr ""
-"Ett fel inträffade när nyceklfilen för SSH skulle hämtas från ${LOCATION}."
+"Ett fel inträffade när nyckelfilen för SSH skulle hämtas från ${LOCATION}."
 
 #. Type: text
 #. Description
@@ -3104,10 +3073,8 @@ msgstr "Slutför"
 #. Description
 #. :sl3:
 #: ../partman-iscsi.templates:2002
-#, fuzzy
-#| msgid "ZFS configuration action:"
 msgid "iSCSI configuration actions"
-msgstr "Åtgärd på ZFS-konfiguration:"
+msgstr "iSCSI-konfigurationsåtgärder"
 
 #. Type: select
 #. Description
@@ -3121,7 +3088,7 @@ msgstr "Denna meny låter dig konfigurera iSCSI-volymer."
 #. :sl3:
 #: ../partman-iscsi.templates:3001
 msgid "iSCSI target portal address:"
-msgstr ""
+msgstr "Portaladress för iSCSI-mål:"
 
 #. Type: string
 #. Description
@@ -3131,6 +3098,9 @@ msgid ""
 "Enter an IP address to scan for iSCSI targets. To use a port other than the "
 "default of 3260, use \"IP:port\" notation, for example \"1.2.3.4:3261\"."
 msgstr ""
+"Ange en IP-adress i vilken iSCSI-mål ska sökas. För att använda en annan "
+"port än standardvärdet 3260, använd notationen \"IP:port\", till exempel \""
+"1.2.3.4:3261\"."
 
 #. Type: string
 #. Description
@@ -3138,7 +3108,7 @@ msgstr ""
 #. Translators : do NOT translate the variable name (PORTAL)
 #: ../partman-iscsi.templates:4001
 msgid "iSCSI initiator username for ${PORTAL}:"
-msgstr ""
+msgstr "Användarnamn för iSCSI-initierare för ${PORTAL}:"
 
 #. Type: string
 #. Description
@@ -3150,6 +3120,9 @@ msgid ""
 "username and password. If that is the case for this target, enter the "
 "username here. Otherwise, leave this blank."
 msgstr ""
+"Några iSCSI-mål kräver att initieraren (klienten) autentiserar sig med "
+"användarnamn och lösenord. Ange användarnamnet här om så är fallet för detta "
+"mål. Lämna annars detta tomt."
 
 #. Type: password
 #. Description
@@ -3157,7 +3130,7 @@ msgstr ""
 #. Translators : do NOT translate the variable name (PORTAL)
 #: ../partman-iscsi.templates:5001
 msgid "iSCSI initiator password for ${PORTAL}:"
-msgstr ""
+msgstr "Lösenord för iSCSI-initierare för ${PORTAL}:"
 
 #. Type: password
 #. Description
@@ -3167,6 +3140,7 @@ msgstr ""
 msgid ""
 "Enter the initiator password needed to authenticate to this iSCSI target."
 msgstr ""
+"Ange det initierarlösenord som krävs för att autentisera mot detta iSCSI-mål."
 
 #. Type: string
 #. Description
@@ -3174,7 +3148,7 @@ msgstr ""
 #. Translators : do NOT translate the variable name (PORTAL)
 #: ../partman-iscsi.templates:6001
 msgid "iSCSI target username for ${PORTAL}:"
-msgstr ""
+msgstr "Användarnamn för iSCSI-mål för ${PORTAL}:"
 
 #. Type: string
 #. Description
@@ -3187,6 +3161,9 @@ msgid ""
 "the incoming username which the target is expected to supply. Otherwise, "
 "leave this blank."
 msgstr ""
+"I några miljöer behöver iSCSI-målet autentisera sig mot initieraren såväl "
+"som den andra vägen. Om så är fallet här, ange inkommande användarnamnet som "
+"målet förväntas tillhandahålla. Lämna annars detta tomt."
 
 #. Type: password
 #. Description
@@ -3194,7 +3171,7 @@ msgstr ""
 #. Translators : do NOT translate the variable name (PORTAL)
 #: ../partman-iscsi.templates:7001
 msgid "iSCSI target password for ${PORTAL}:"
-msgstr ""
+msgstr "Lösenord för iSCSI-mål för ${PORTAL}:"
 
 #. Type: password
 #. Description
@@ -3203,14 +3180,14 @@ msgstr ""
 #: ../partman-iscsi.templates:7001
 msgid ""
 "Enter the incoming password which the iSCSI target is expected to supply."
-msgstr ""
+msgstr "Ange det inkommande lösenord som iSCSI-målet förväntas tillhandahålla."
 
 #. Type: error
 #. Description
 #. :sl3:
 #: ../partman-iscsi.templates:9001
 msgid "No iSCSI targets discovered"
-msgstr ""
+msgstr "Inga iSCSI-mål upptäcktes"
 
 #. Type: error
 #. Description
@@ -3218,7 +3195,7 @@ msgstr ""
 #. Translators : do NOT translate the variable name (PORTAL)
 #: ../partman-iscsi.templates:9001
 msgid "No iSCSI targets were discovered on ${PORTAL}."
-msgstr ""
+msgstr "Inga iSCSI-mål upptäcktes på ${PORTAL}."
 
 #. Type: multiselect
 #. Description
@@ -3226,17 +3203,15 @@ msgstr ""
 #. Translators : do NOT translate the variable name (PORTAL)
 #: ../partman-iscsi.templates:11001
 msgid "iSCSI targets on ${PORTAL}:"
-msgstr ""
+msgstr "iSCSI-mål på ${PORTAL}:"
 
 #. Type: multiselect
 #. Description
 #. :sl3:
 #. Translators : do NOT translate the variable name (PORTAL)
 #: ../partman-iscsi.templates:11001
-#, fuzzy
-#| msgid "Please select the ZFS pool you wish to delete."
 msgid "Select the iSCSI targets you wish to use."
-msgstr "Välj den ZFS-pool som du vill ta bort."
+msgstr "Välj de iSCSI-mål som du vill använda."
 
 #. Type: error
 #. Description
@@ -3251,7 +3226,7 @@ msgstr "iSCSI-inloggningen misslyckades"
 #. Translators : do NOT translate the variable names (PORTAL and TARGET)
 #: ../partman-iscsi.templates:12001
 msgid "Logging into the iSCSI target ${TARGET} on ${PORTAL} failed."
-msgstr ""
+msgstr "Att logga in på iSCSI-målet ${TARGET} på ${PORTAL} misslyckades."
 
 #. #-#-#-#-#  templates.pot (partman-zfs)  #-#-#-#-#
 #. Type: text
@@ -3637,7 +3612,7 @@ msgstr "Den logiska volymen (${LV}) på ${VG} kunde inte tas bort."
 #: ../partman-zfs.templates:46001 ../lvmcfg-utils.templates:38001
 #: ../partman-lvm.templates:58001
 msgid "No usable physical volumes found"
-msgstr "Hittade inga användbara fysisk volymer"
+msgstr "Hittade inga användbara fysiska volymer"
 
 #. #-#-#-#-#  templates.pot (partman-zfs)  #-#-#-#-#
 #. Type: error
@@ -4574,7 +4549,7 @@ msgid ""
 "The physical volume ${PARTITION} could not be removed from the selected "
 "volume group."
 msgstr ""
-"Den fysiska volymen ${PARTITION} kunde inte läggas till i den valda "
+"Den fysiska volymen ${PARTITION} kunde inte tas bort från den valda "
 "volymgruppen."
 
 #. Type: error
@@ -5311,10 +5286,8 @@ msgstr ""
 #. Description
 #. :sl3:
 #: ../partman-lvm.templates:32001
-#, fuzzy
-#| msgid "Error while deleting volume group"
 msgid "Error while creating volume group"
-msgstr "Fel inträffade när volymgruppen togs bort"
+msgstr "Fel inträffade när volymgruppen skapades"
 
 #. Type: error
 #. Description
@@ -5389,8 +5362,8 @@ msgstr ""
 "Namn på logiska volymer eller volymgrupper får endast innehålla "
 "alfanumeriska tecken, bindestreck, plus, punkt och understreck. De får vara "
 "128 tecken eller mindre och får inte börja med ett bindestreck. Namnen \".\" "
-"och \"..\" tillåts inte. Dessutom får det logiska volymnamn inte börja med "
-"\"snapshot\"."
+"och \"..\" tillåts inte. Dessutom får logiska volymnamn inte börja med \""
+"snapshot\"."
 
 #. Type: boolean
 #. Description
@@ -5854,8 +5827,8 @@ msgid ""
 msgstr ""
 "Krypteringsnyckeln erhålls från lösenfrasen genom att köra en "
 "envägshashfunktion på den. Normalt sett finns det ingen anledning att ändra "
-"detta från det rekommenderade valet, förutom om det gäller kompatibilitet "
-"med äldre system."
+"detta från det rekommenderade valet och att göra detta på fel sätt kan "
+"försämra krypteringens styrka."
 
 #. Type: text
 #. Description
@@ -5887,18 +5860,13 @@ msgstr "Verkligen radera data på ${DEVICE}?"
 #. Description
 #. :sl3:
 #: ../partman-crypto.templates:22001
-#, fuzzy
-#| msgid ""
-#| "The data on ${DEVICE} will be overwritten with random data. It can no "
-#| "longer be recovered after this step has completed. This is the last "
-#| "opportunity to abort the erase."
 msgid ""
 "The data on ${DEVICE} will be overwritten with zeroes. It can no longer be "
 "recovered after this step has completed. This is the last opportunity to "
 "abort the erase."
 msgstr ""
-"Data på ${DEVICE} kommer att skrivas över med slumpmässig data. Det kan inte "
-"längre återskapas efter att detta steg har färdigställts. Detta är den sista "
+"Data på ${DEVICE} kommer att skrivas över med nollor. Det kan inte längre "
+"återskapas efter att detta steg har färdigställts. Detta är den sista "
 "chansen att avbryta raderingen."
 
 #. Type: text
@@ -5919,6 +5887,9 @@ msgid ""
 "The installer is now overwriting ${DEVICE} with zeroes to delete its "
 "previous contents. This step may be skipped by cancelling this action."
 msgstr ""
+"Installationsprogrammet skriver nu över ${DEVICE} med nollor för att ta bort "
+"dess tidigare innehåll. Detta steg kan hoppas över genom att avbryta denna "
+"åtgärd."
 
 #. Type: error
 #. Description
@@ -5964,6 +5935,10 @@ msgid ""
 "cancelling this action, albeit at the expense of a slight reduction of the "
 "quality of the encryption."
 msgstr ""
+"Installationsprogrammet skriver nu över ${DEVICE} med slumpmässig data för "
+"att förhindra att metainformation läcker från den krypterade volymen. Detta "
+"steg kan hoppas över genom att avbryta denna åtgärd, men detta kommer med "
+"nackdelen att krypteringens kvalitet reduceras något."
 
 #. Type: error
 #. Description
@@ -5974,6 +5949,9 @@ msgid ""
 "Recovery of the device's previous contents is possible and meta-information "
 "of its new contents may be leaked."
 msgstr ""
+"Ett fel uppstod vid försök att skriva över ${DEVICE} med slumpmässig data. "
+"Återhämtning av enhetens tidigare innehåll är möjlig och metainformation om "
+"dess nya innehåll kan läckas ut."
 
 #. Type: text
 #. Description
@@ -6018,7 +5996,7 @@ msgid ""
 "This build of debian-installer does not include one or more programs that "
 "are required for partman-crypto to function correctly."
 msgstr ""
-"Det här bygget av Debian-Installer inkluderar inte ett eller flera program "
+"Det här bygget av Debian-installer inkluderar inte ett eller flera program "
 "som är nödvändiga för att partman-crypto ska fungera korrekt."
 
 #. Type: error
@@ -6103,7 +6081,7 @@ msgid ""
 "Before encrypted volumes can be configured, the current partitioning scheme "
 "has to be written to disk.  These changes cannot be undone."
 msgstr ""
-"Innan den krypterade volymen kan konfigureras måste den nuvarande "
+"Innan krypterade volymer kan konfigureras måste den nuvarande "
 "partitioneringsplanen skrivas till disk. De här ändringarna kan man inte "
 "ångra."
 
