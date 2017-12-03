@@ -114,15 +114,19 @@ fi
 
 log "- processing $p_dir ($version)"
 echo "$package ($version)" >>packages.log
-# Assume tags with an epoch are committed without it ("bar" instead of "foo:bar"):
-version=$(echo $version|sed 's/^[0-9]\+://')
+# Former assumption, no longer true as of 2017-11: tags with an epoch
+# are committed without it ("bar" instead of "foo:bar"):
+no_epoch_version=$(echo $version|sed 's/^[0-9]\+://')
+tweaked_epoch_version=$(echo $version|sed 's/:/%/')
 if [ ! -d $package/$version/po ]; then
 	mkdir -p $package/$version
 	pushd $package/$version >/dev/null
 	if [ ! -f "../../$package.workaround" ]; then
 		git clone $GITREPO/$package
 		pushd $package >/dev/null
-		git checkout -b tag $version || {
+		# XXX: This is ugly.
+		# First try with the direct version, fallback with no epoch, fallback with a tweaked epoch, then fail:
+		git checkout -b tag $version || git checkout -b tag $no_epoch_version || git checkout -b tag $tweaked_epoch_version || {
 			echo "Unable to find $version in $package; you might try:";
 			echo "  touch $package.workaround";
 			echo "  rm -rf $package/$version/$package";
