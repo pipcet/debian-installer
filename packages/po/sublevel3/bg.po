@@ -5,14 +5,14 @@
 #
 # Ognyan Kulev <ogi@fmi.uni-sofia.bg>, 2004, 2005, 2006.
 # Nikola Antonov <nikola@linux-bg.org>, 2004.
-# Damyan Ivanov <dmn@debian.org>, 2006, 2007, 2008, 2009, 2010, 2011, 2013, 2014, 2015.
+# Damyan Ivanov <dmn@debian.org>, 2006, 2007, 2008, 2009, 2010, 2011, 2013, 2014, 2015, 2017.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: bg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2015-11-21 18:11+0200\n"
+"PO-Revision-Date: 2017-12-06 22:55+0200\n"
 "Last-Translator: Damyan Ivanov <dmn@debian.org>\n"
 "Language-Team: Български <dict@fsa-bg.org>\n"
 "Language: bg\n"
@@ -1832,10 +1832,8 @@ msgstr ""
 msgid "An error occurred while setting up GRUB for the multipath device."
 msgstr "Грешка при инсталиране на GRUB на устройство от тип multipath."
 
-#. #-#-#-#-#  templates.pot (grub-installer)  #-#-#-#-#
 #. Type: select
 #. Choices
-#. #-#-#-#-#  templates.pot (iso-scan)  #-#-#-#-#
 #. Type: select
 #. Choices
 #. :sl3:
@@ -2514,7 +2512,7 @@ msgstr ""
 #. :sl3:
 #: ../iso-scan.templates:18001
 msgid "Copy the ISO image into RAM before mounting it?"
-msgstr ""
+msgstr "Копиране на образа ISO в оперативната памет преди монтирането му?"
 
 #. Type: boolean
 #. Description
@@ -2522,7 +2520,7 @@ msgstr ""
 #: ../iso-scan.templates:18001
 msgid ""
 "There is enough available memory to be able to copy the ISO image into RAM."
-msgstr ""
+msgstr "Налице е достатъчно оперативна памет за да събере копие на образа ISO."
 
 #. Type: boolean
 #. Description
@@ -2533,6 +2531,9 @@ msgid ""
 "don't do it, the disk will be actively used to access the ISO image and it "
 "can't be partitioned by the installer."
 msgstr ""
+"Избирането на тази възможност позволява използването на диска, съдържащ "
+"образа ISO. В противен случай инсталаторът ще изключи диска от фазата за "
+"разделяне и форматиране на дискове."
 
 #. Type: boolean
 #. Description
@@ -2544,6 +2545,10 @@ msgid ""
 "to restart the installer since the ISO image will be gone from the hard disk "
 "and memory."
 msgstr ""
+"Обърнете внимание, че ако форматирате диска, съдържащ образа ISO не трябва "
+"да рестартирате системата преди инсталацията да завърши, защото няма да "
+"имате възможност да рестартирате инсталацията, тъй като образът ще е изтрит "
+"от диска и оперативната памет."
 
 #. Type: note
 #. Description
@@ -2975,40 +2980,34 @@ msgstr "Рестартирайте с правилното ядро (${DI_KERNEL
 msgid "Configure iSCSI volumes"
 msgstr "Настройване на томове iSCSI"
 
-#. #-#-#-#-#  templates.pot (partman-iscsi)  #-#-#-#-#
 #. Type: select
 #. Choices
 #. Note to translators : Please keep your translations of the choices
 #. below a 65 columns limit (which means 65 characters
 #. in single-byte languages)
-#. #-#-#-#-#  templates.pot (PACKAGE VERSION)  #-#-#-#-#
-#. Type: select
-#. Choices
-#. Note to translators : Please keep your translations of the choices
-#. below a 65 columns limit (which means 65 characters
-#. in single-byte languages)
-#. :sl3:
-#. #-#-#-#-#  templates.pot (PACKAGE VERSION)  #-#-#-#-#
 #. Type: select
 #. Choices
 #. Note to translators : Please keep your translations of the choices
 #. below a 65 columns limit (which means 65 characters
 #. in single-byte languages)
 #. :sl3:
-#. #-#-#-#-#  templates.pot (partman-lvm)  #-#-#-#-#
+#. Type: select
+#. Choices
+#. Note to translators : Please keep your translations of the choices
+#. below a 65 columns limit (which means 65 characters
+#. in single-byte languages)
+#. :sl3:
 #. Type: text
 #. Description
 #. :sl3:
 #. Menu entry
 #. Use infinitive form
-#. #-#-#-#-#  templates.pot (partman-crypto)  #-#-#-#-#
 #. Type: select
 #. Choices
 #. Note to translators : Please keep your translations of the choices
 #. below a 65 columns limit (which means 65 characters
 #. in single-byte languages)
 #. :sl3:
-#. #-#-#-#-#  templates.pot (s390-dasd)  #-#-#-#-#
 #. Type: select
 #. Choices
 #. :sl5:
@@ -3761,14 +3760,6 @@ msgstr "Устройства за нова група от томове:"
 msgid "Please select the devices for the new volume group."
 msgstr "Изберете устройствата за новата група от томове."
 
-#. #-#-#-#-#  templates.pot (PACKAGE VERSION)  #-#-#-#-#
-#. Type: multiselect
-#. Description
-#. :sl3:
-#. Type: multiselect
-#. Description
-#. :sl3:
-#. #-#-#-#-#  templates.pot (partman-lvm)  #-#-#-#-#
 #. Type: multiselect
 #. Description
 #. :sl3:
@@ -3778,7 +3769,12 @@ msgstr "Изберете устройствата за новата група �
 #. Type: multiselect
 #. Description
 #. :sl3:
-#. #-#-#-#-#  templates.pot (partman-crypto)  #-#-#-#-#
+#. Type: multiselect
+#. Description
+#. :sl3:
+#. Type: multiselect
+#. Description
+#. :sl3:
 #. Type: multiselect
 #. Description
 #. :sl3:
@@ -3802,14 +3798,12 @@ msgstr "Име на група от томове:"
 msgid "Please enter the name you would like to use for the new volume group."
 msgstr "Въведете името, което искате да използвате за новата група от томове."
 
-#. #-#-#-#-#  templates.pot (PACKAGE VERSION)  #-#-#-#-#
 #. Type: error
 #. Description
 #. :sl3:
 #. Type: error
 #. Description
 #. :sl3:
-#. #-#-#-#-#  templates.pot (partman-lvm)  #-#-#-#-#
 #. Type: error
 #. Description
 #. :sl3:
@@ -3858,11 +3852,9 @@ msgstr "Не е въведено име за група от томове. Мо�
 msgid "Volume group name already in use"
 msgstr "Името, избрано за група от томове, вече се използва"
 
-#. #-#-#-#-#  templates.pot (PACKAGE VERSION)  #-#-#-#-#
 #. Type: error
 #. Description
 #. :sl3:
-#. #-#-#-#-#  templates.pot (PACKAGE VERSION)  #-#-#-#-#
 #. Type: string
 #. Description
 #. :sl3:
@@ -3904,7 +3896,6 @@ msgstr "Група от томове за изтриване:"
 msgid "Please select the volume group you wish to delete."
 msgstr "Изберете група от томове, която искате да изтриете."
 
-#. #-#-#-#-#  templates.pot (PACKAGE VERSION)  #-#-#-#-#
 #. Type: error
 #. Description
 #. :sl3:
@@ -3923,7 +3914,6 @@ msgstr "Изберете група от томове, която искате �
 #. Type: error
 #. Description
 #. :sl3:
-#. #-#-#-#-#  templates.pot (partman-lvm)  #-#-#-#-#
 #. Type: error
 #. Description
 #. :sl3:
@@ -4098,14 +4088,12 @@ msgid "Please select the device you wish to remove from the volume group."
 msgstr ""
 "Изберете устройството, което искате да премахнете от тази група от томове."
 
-#. #-#-#-#-#  templates.pot (PACKAGE VERSION)  #-#-#-#-#
 #. Type: error
 #. Description
 #. :sl3:
 #. Type: error
 #. Description
 #. :sl3:
-#. #-#-#-#-#  templates.pot (partman-lvm)  #-#-#-#-#
 #. Type: error
 #. Description
 #. :sl3:
@@ -4174,14 +4162,12 @@ msgstr "Име на логически том:"
 msgid "Please enter the name you would like to use for the new logical volume."
 msgstr "Въведете името, което искате да използвате за новия логически том."
 
-#. #-#-#-#-#  templates.pot (PACKAGE VERSION)  #-#-#-#-#
 #. Type: select
 #. Description
 #. :sl3:
 #. Type: select
 #. Description
 #. :sl3:
-#. #-#-#-#-#  templates.pot (partman-lvm)  #-#-#-#-#
 #. Type: select
 #. Description
 #. :sl3:
