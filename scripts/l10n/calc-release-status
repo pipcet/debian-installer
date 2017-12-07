@@ -193,21 +193,21 @@ compute_lang() {
 		if [ $t_untrans -gt 0 ]; then
 			if [ $(($t_trans * 100 / $total)) -gt 90 ]; then
 				log "- $lang is mostly translated at $level: $t_trans/$total"
-				echo "$lang: $level M" >>translation-status
+				echo "$lang: $level M" >>translation-status.tmp
 			elif [ $(($t_trans * 100 / $total)) -gt 50 ]; then
 				log "- $lang is partially translated at $level: $t_trans/$total"
-				echo "$lang: $level P" >>translation-status
+				echo "$lang: $level P" >>translation-status.tmp
 			elif [ $(($t_trans * 100 / $total)) -gt 0 ]; then
 				log "- $lang is limited translated at $level: $t_trans/$total"
-				echo "$lang: $level L" >>translation-status
+				echo "$lang: $level L" >>translation-status.tmp
 			else
 				log "- $lang is untranslated at $level"
-				echo "$lang: $level U" >>translation-status
+				echo "$lang: $level U" >>translation-status.tmp
 			fi
 			break
 		elif [ $level -eq $NUMLEVELS ]; then
 			log "- $lang is fully translated"
-			echo "$lang: $level F" >>translation-status
+			echo "$lang: $level F" >>translation-status.tmp
 		fi
 	done
 }
@@ -217,3 +217,6 @@ for lang in $languages; do
 	compute_lang $lang &
 done
 wait
+
+# Sort and merge the results:
+sort translation-status.tmp >> translation-status && rm -f translation-status.tmp
