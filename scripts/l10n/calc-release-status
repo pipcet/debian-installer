@@ -164,7 +164,9 @@ echo "# Generated on: $(date -uR)" >> translation-status
 echo "#" >> translation-status
 
 languages="$(cat stats/languages | grep -v "^en$" | sort)"
-for lang in $languages; do
+
+compute_lang() {
+	lang=$1
 	for level in $(seq 1 $NUMLEVELS); do
 		# Sublevels 1 and 2 are taken together
 		if [ $level -ne 2 ]; then
@@ -208,4 +210,10 @@ for lang in $languages; do
 			echo "$lang: $level F" >>translation-status
 		fi
 	done
+}
+
+# Do all computations at once:
+for lang in $languages; do
+	compute_lang $lang &
 done
+wait
