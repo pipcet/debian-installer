@@ -151,7 +151,8 @@ log "Gathering the data using parallelism..."
 
 > stats/languages
 p_dirs=$(real_contents packages_list | sort)
-parallel --jobs 100% ./calc-release-status-helper ::: "$p_dirs"
+procs=$(grep -c ^processor /proc/cpuinfo)
+echo $p_dirs | xargs -n 1 -P $procs ./calc-release-status-helper
 
 log "Calculating statistics..."
 
