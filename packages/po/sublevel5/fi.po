@@ -13,15 +13,15 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2012-03-21 08:59+0200\n"
-"Last-Translator: Timo Jyrinki <timo.jyrinki@iki.fi>\n"
+"PO-Revision-Date: 2018-01-04 06:20+0000\n"
+"Last-Translator: Joonas Karkkainen <joonas.karkkainen@msn.com>\n"
 "Language-Team: Finnish <debian-l10n-finnish@lists.debian.org>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.0\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.19-dev\n"
 
 #. Type: text
 #. Description
@@ -69,37 +69,27 @@ msgstr "biosgrub"
 #. Description
 #. :sl5:
 #: ../partman-basicfilesystems.templates:60001
-#, fuzzy
-#| msgid ""
-#| "Your boot partition has not been configured with the ext2 or ext3 file "
-#| "system. This is needed by your machine in order to boot. Please go back "
-#| "and use either the ext2 or ext3 file system."
 msgid ""
 "Your boot partition has not been configured with the ext2 file system. This "
 "is needed by your machine in order to boot. Please go back and use the ext2 "
 "file system."
 msgstr ""
-"Käynnistysosion tiedostojärjestelmä ei ole ext2 tai ext3. Järjestelmää ei "
-"voida käynnistää, jos se ei ole toinen näistä. Palaa takaisin ja käytä ext2- "
-"tai ext3-tiedostojärjestelmää."
+"Käynnistysosion tiedostojärjestelmä ei ole ext2. Järjestelmää ei voida "
+"käynnistää, jos se ei ole tämä. Palaa takaisin ja käytä ext2 "
+"tiedostojärjestelmää käynnistysosiossa."
 
 #. Type: boolean
 #. Description
 #. :sl5:
 #: ../partman-basicfilesystems.templates:61001
-#, fuzzy
-#| msgid ""
-#| "Your boot partition is not located on the first primary partition of your "
-#| "hard disk. This is needed by your machine in order to boot.  Please go "
-#| "back and use your first primary partition as a boot partition."
 msgid ""
 "Your boot partition is not located on the first partition of your hard disk. "
 "This is needed by your machine in order to boot.  Please go back and use "
 "your first partition as a boot partition."
 msgstr ""
-"Käynnistysosio ei ole kiintolevyn ensimmäisellä ensisijaisella levyosiolla. "
-"Tämä tarvitaan koneellasi jotta käynnistys onnistuu. Palaa takaisin ja käytä "
-"ensimmäistä ensisijaista osiota käynnistysosiona. "
+"Käynnistysosio ei ole kiintolevyn ensimmäisellä levyosiolla. Tämä tarvitaan "
+"koneellasi jotta käynnistys onnistuu. Palaa takaisin ja käytä ensimmäistä "
+"levyosiota käynnistysosiona."
 
 #. Type: select
 #. Choices
@@ -253,13 +243,6 @@ msgstr "Valitse OSA-Express QDIO / HiperSockets -laite."
 #. Description
 #. :sl5:
 #: ../s390-netdevice.templates:8001
-#, fuzzy
-#| msgid ""
-#| "The configured parameters are:\n"
-#| " channels = ${device0}, ${device1}, ${device2}\n"
-#| " port     = ${port}\n"
-#| " portname = ${portname}\n"
-#| " layer2   = ${layer2}"
 msgid ""
 "The configured parameters are:\n"
 " channels = ${device0}, ${device1}, ${device2}\n"
@@ -269,7 +252,6 @@ msgstr ""
 "Tehdyt asetukset ovat:\n"
 " kanavat    = ${device0}, ${device1}, ${device2}\n"
 " portti     = ${port}\n"
-" portin nimi = ${portname}\n"
 " layer2     = ${layer2}"
 
 #. Type: error
@@ -450,40 +432,38 @@ msgstr "Alustetaanko laite?"
 #. Description
 #. :sl5:
 #: ../s390-dasd.templates:4001
+#, fuzzy
 msgid "The DASD ${device} is already low-level formatted."
-msgstr ""
+msgstr "DASD ${device} on low-level formatted."
 
 #. Type: boolean
 #. Description
 #. :sl5:
 #: ../s390-dasd.templates:4001
+#, fuzzy
 msgid ""
 "Please choose whether you want to format again and remove any data on the "
 "DASD. Note that formatting a DASD might take a long time."
 msgstr ""
+"Haluatko formatoida uudelleen, ja poistaa kaiken datan DASD:sta. Huomaathan, "
+"että formatointi saattaa kestää huomattavan kauan."
 
 #. Type: boolean
 #. Description
 #. :sl5:
 #: ../s390-dasd.templates:5001
-#, fuzzy
-#| msgid ""
-#| "The installer is unable to detect if the device ${device} has already "
-#| "been formatted or not. Devices need to be formatted before you can create "
-#| "partitions."
 msgid ""
 "The DASD ${device} is not low-level formatted. DASD devices must be "
 "formatted before you can create partitions."
 msgstr ""
-"Asennin ei pysty selvittämään onko laite ${device} jo alustettu. Levyt on "
-"alustettava ennen kuin levyosioita voidaan tehdä."
+"DASD ${device} ei ole alustettu. Levyt on alustettava ennen kuin levyosioita "
+"voidaan luoda."
 
 #. Type: error
 #. Description
 #. :sl5:
 #: ../s390-dasd.templates:6001
 #, fuzzy
-#| msgid "Device in use"
 msgid "The DASD ${device} is in use"
 msgstr "Laite on käytössä"
 
@@ -491,11 +471,14 @@ msgstr "Laite on käytössä"
 #. Description
 #. :sl5:
 #: ../s390-dasd.templates:6001
+#, fuzzy
 msgid ""
 "Could not low-level format the DASD ${device} because the DASD is in use.  "
 "For example, the DASD could be a member of a mapped device in an LVM volume "
 "group."
 msgstr ""
+"Alustusta ei voida suorittaa, koska DASD ${device} on käytössä. Esimerkiksi, "
+"DASD ei voi olla a member of a mapped device in an LVM volume group."
 
 #. Type: text
 #. Description
