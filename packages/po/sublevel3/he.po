@@ -9,21 +9,23 @@
 # Meital Bourvine <meitalbourvine@gmail.com>, 2007.
 # Omer Zak <w1@zak.co.il>, 2008, 2010, 2012.
 # Lior Kaplan <kaplan@debian.org>, 2004-2007, 2008,2010, 2010, 2012, 2017.
+# Yaron Shahrabani <sh.yaron@gmail.com>, 2018.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: debian-installer_packages_po_sublevel3_he\n"
+"Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-12-15 06:51+0000\n"
-"PO-Revision-Date: 2017-09-02 21:07+0300\n"
-"Last-Translator: Lior Kaplan <kaplan@debian.org>\n"
-"Language-Team: Hebrew <debian-hebrew-common@lists.alioth.debian.org>\n"
+"PO-Revision-Date: 2018-02-06 08:37+0000\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Language-Team: Hebrew (https://www.transifex.com/yaron/teams/79473/he/)\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Gtranslator 2.91.7\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
+"n % 10 == 0) ? 2 : 3));\n"
+"X-Generator: Weblate 2.19-dev\n"
 
 #. Type: text
 #. Description
@@ -449,6 +451,10 @@ msgid ""
 "please try your installation again without using UNetbootin before reporting "
 "issues."
 msgstr ""
+"נראה כי המדיה המשמשת אותך לצורך התקנה נוצרה באמצעות UNetbootin. הגישה של "
+"UNetbootin מקושרת לרוב עם דיווחי תקלות מורכבות או בלתי ניתנות לשחזור "
+"ממשתמשים. אם נתקלת בבעיות עם התקנה באמצות המדיה הזאת, נא לנסות להתקין מחדש "
+"ללא UNetbootin בטרם דיווח על תקלות."
 
 #. Type: note
 #. Description
@@ -458,6 +464,8 @@ msgid ""
 "The installation guide contains more information on how to create a USB "
 "installation medium directly without UNetbootin."
 msgstr ""
+"מדריך ההתקנה מכיל מידע נוסף על אופן יצירת מדיה להתקנה באמצעות USB ישירות ללא "
+"UNetbootin."
 
 #. Type: boolean
 #. Description
@@ -616,7 +624,7 @@ msgstr ""
 #: ../partman-base.templates:51001
 #, no-c-format
 msgid "MMC/SD card #%s (%s)"
-msgstr "MMC/SD card #%s (%s)"
+msgstr "כרטיס MMC‏/SD מס׳ %s‏ (%s)"
 
 #. Type: text
 #. Description
@@ -633,7 +641,7 @@ msgstr "MMC/SD card #%s, מחיצה #%s (%s)"
 #: ../partman-base.templates:53001
 #, no-c-format
 msgid "RAID%s device #%s"
-msgstr "RAID%s device #%s"
+msgstr "התקן RAID%s מס׳ %s"
 
 #. Type: text
 #. Description
@@ -657,7 +665,7 @@ msgstr "Serial ATA RAID %s (%s)"
 #. For example: Serial ATA RAID isw_dhiiedgihc_Volume01 (partition #1)
 #. :sl3:
 #: ../partman-base.templates:56001
-#, no-c-format
+#, fuzzy, no-c-format
 msgid "Serial ATA RAID %s (partition #%s)"
 msgstr "Serial ATA RAID %s (partition #%s)"
 
@@ -1219,7 +1227,7 @@ msgstr "מדריד"
 #. :sl3:
 #: ../common.templates.in:15001
 msgid "Ceuta"
-msgstr "Ceuta"
+msgstr "סאוטה"
 
 #. Type: select
 #. Choices
@@ -1275,7 +1283,7 @@ msgstr "Danmarkshavn"
 #. :sl3:
 #: ../common.templates.in:17001
 msgid "Scoresbysund"
-msgstr "Scoresbysund"
+msgstr "קנגרטיטיווק"
 
 #. Type: select
 #. Choices
@@ -1533,10 +1541,8 @@ msgstr "Magadan"
 #. Choices
 #. :sl3:
 #: ../common.templates.in:26001
-#, fuzzy
-#| msgid "Moscow+01 - Samara"
 msgid "Moscow+09 - Kamchatka"
-msgstr "סמרה"
+msgstr "קמצ׳טקה"
 
 #. Type: select
 #. Choices
@@ -1600,7 +1606,7 @@ msgstr "סמואה"
 #. :sl3:
 #: ../common.templates.in:29001
 msgid "Port Moresby"
-msgstr ""
+msgstr "פורט מורסבי"
 
 #. Type: select
 #. Choices
@@ -1608,7 +1614,7 @@ msgstr ""
 #. :sl3:
 #: ../common.templates.in:29001
 msgid "Bougainville"
-msgstr ""
+msgstr "בוגנוויל"
 
 #. Type: error
 #. Description
@@ -1680,7 +1686,7 @@ msgstr ""
 #. :sl3:
 #: ../apt-setup-udeb.templates:12001
 msgid "Enable source repositories in APT?"
-msgstr ""
+msgstr "להפעיל מאגרי מקור ב־APT?"
 
 #. Type: boolean
 #. Description
@@ -1692,6 +1698,10 @@ msgid ""
 "you don't need this feature, you can disable those entries and save some "
 "bandwidth during \"apt-get update\" operations."
 msgstr ""
+"כבררת מחדל מאגרי מקור מופיעים תחת ‎/etc/apt/sources.list (עם שורות „deb-src” "
+"תואמות) כדי שהפקודה „apt-get source” תעבוד כראוי. עם זאת, אם אין לך צורך "
+"בתכונה זו, ניתן להשבית את הרשומות האלו ולחסוך בתעבורה במהלך פעולות „apt-get "
+"update”."
 
 #. Type: note
 #. Description
@@ -2572,7 +2582,7 @@ msgstr "נא הכנס אחד מהתקליטורים הרשמיים של דביא
 #. :sl3:
 #: ../cdrom-checker.templates:3001
 msgid "Failed to mount CD-ROM"
-msgstr "כישלון בעגינת תקליטור"
+msgstr "עגינת התקליטור נכשלה"
 
 #. Type: error
 #. Description
@@ -2582,8 +2592,8 @@ msgid ""
 "The CD-ROM ${CDROM} could not be mounted correctly. Please check the media "
 "and cables, and try it again."
 msgstr ""
-"לא ניתן לעגון את התקליטור ${CDROM} באופן תקין. נא בדוק את המדיה ואת הכבלים "
-"ונסה שוב."
+"לא ניתן לעגן את התקליטור ${CDROM} באופן תקין. נא לבדוק את המדיה ואת הכבלים "
+"ולנסות שוב."
 
 #. Type: error
 #. Description
@@ -2599,7 +2609,7 @@ msgstr "אין תקליטור תקני של דביאן"
 msgid ""
 "The CD-ROM you have inserted is not a valid Debian CD-ROM. Please change the "
 "disk."
-msgstr "התקליטור שהכנסת אינו תקליטור תקני של דביאן. החלף אותו."
+msgstr "התקליטור שהכנסת אינו תקליטור תקני של דביאן. נא להחליף אותו."
 
 #. Type: error
 #. Description
@@ -2663,7 +2673,7 @@ msgstr "לבדוק תקינות של תקליטור נוסף?"
 #. :sl3:
 #: ../cdrom-checker.templates:9001
 msgid "Insert Debian boot CD-ROM"
-msgstr "הכנס תקליטור אתחול של דביאן"
+msgstr "נא להכניס תקליטור אתחול של דביאן"
 
 #. Type: note
 #. Description
@@ -2672,28 +2682,28 @@ msgstr "הכנס תקליטור אתחול של דביאן"
 msgid ""
 "Please make sure you have inserted the Debian boot CD-ROM  to continue with "
 "the installation."
-msgstr "אנא בדוק כי הכנסת את תקליטור האתחול של דביאן לפני שתמשיך בהתקנה."
+msgstr "נא לוודא כי הכנסת את תקליטור האתחול של דביאן לפני המשך ההתקנה."
 
 #. Type: text
 #. Description
 #. :sl3:
 #: ../cdrom-checker.templates:10001
 msgid "Checking CD-ROM integrity"
-msgstr "בודק את תקינות התקליטור"
+msgstr "תקינות התקליטור נבדקת"
 
 #. Type: text
 #. Description
 #. :sl3:
 #: ../cdrom-checker.templates:11001
 msgid "Checking file: ${FILE}"
-msgstr "בודק את הקובץ: ${FILE}"
+msgstr "קובץ בבדיקה: ${FILE}"
 
 #. Type: text
 #. Description
 #. :sl3:
 #: ../network-console.templates:1001
 msgid "Continue installation remotely using SSH"
-msgstr "המשך את ההתקנה מרחוק עם SSH"
+msgstr "להמשיך את ההתקנה מרחוק דרך SSH"
 
 #. Type: select
 #. Choices
@@ -2703,7 +2713,7 @@ msgstr "המשך את ההתקנה מרחוק עם SSH"
 #. :sl3:
 #: ../network-console.templates:2001
 msgid "Start installer"
-msgstr "הפעלת תוכנית ההתקנה"
+msgstr "הפעלת תכנית ההתקנה"
 
 #. Type: select
 #. Choices
@@ -2713,7 +2723,7 @@ msgstr "הפעלת תוכנית ההתקנה"
 #. :sl3:
 #: ../network-console.templates:2001
 msgid "Start installer (expert mode)"
-msgstr "הפעלת תוכנית ההתקנה (מצב מומחה)"
+msgstr "הפעלת תכנית ההתקנה (מצב מומחה)"
 
 #. Type: select
 #. Choices
@@ -2730,7 +2740,7 @@ msgstr "הפעלת מעטפת"
 #. :sl3:
 #: ../network-console.templates:2002
 msgid "Network console option:"
-msgstr "אפשרות קונסול רשת:"
+msgstr "אפשרות מסוף רשת:"
 
 #. Type: select
 #. Description
@@ -2740,22 +2750,22 @@ msgid ""
 "This is the network console for the Debian installer. From here, you may "
 "start the Debian installer, or execute an interactive shell."
 msgstr ""
-"זהו קונסול הרשת עבור תוכנית ההתקנה של דביאן. מכאן תוכל להפעיל את התפריט "
-"הראשי של תוכנית ההתקנה או להריץ מעטפת אינטראקטיבית."
+"זהו מסוף הרשת עבור תכנית ההתקנה של דביאן. מכאן ניתן להפעיל את התפריט הראשי "
+"של תכנית ההתקנה או להריץ מעטפת אינטראקטיבית."
 
 #. Type: select
 #. Description
 #. :sl3:
 #: ../network-console.templates:2002
 msgid "To return to this menu, you will need to log in again."
-msgstr "כדי לחזור לתפריט זה, תצטרך להיכנס שוב למערכת."
+msgstr "כדי לחזור לתפריט זה, יש להיכנס למערכת מחדש."
 
 #. Type: text
 #. Description
 #. :sl3:
 #: ../network-console.templates:3001
 msgid "Generating SSH host key"
-msgstr "יוצר מפתח SSH למחשב"
+msgstr "נוצר מפתח SSH למחשב"
 
 #. Type: password
 #. Description
@@ -2972,7 +2982,7 @@ msgstr "תפריט זה מאפשר לך להגדיר נפחי iSCSI."
 #. :sl3:
 #: ../partman-iscsi.templates:3001
 msgid "iSCSI target portal address:"
-msgstr ""
+msgstr "כתובת שער יעד iSCSI:"
 
 #. Type: string
 #. Description
@@ -2982,6 +2992,8 @@ msgid ""
 "Enter an IP address to scan for iSCSI targets. To use a port other than the "
 "default of 3260, use \"IP:port\" notation, for example \"1.2.3.4:3261\"."
 msgstr ""
+"נא להזין כתובת IP לסריקת התקני iSCSI. כדי להשתמש בפתחה שונה מבררת המחדל של "
+"3260, יש להשתמש בצורת הכתיבה „IP:port” לדוגמה: „1.2.3.4:3261”."
 
 #. Type: string
 #. Description
@@ -3025,7 +3037,7 @@ msgstr ""
 #. Translators : do NOT translate the variable name (PORTAL)
 #: ../partman-iscsi.templates:6001
 msgid "iSCSI target username for ${PORTAL}:"
-msgstr ""
+msgstr "שם משתמש ליעד iSCSI עבור ${PORTAL}:"
 
 #. Type: string
 #. Description
@@ -3045,7 +3057,7 @@ msgstr ""
 #. Translators : do NOT translate the variable name (PORTAL)
 #: ../partman-iscsi.templates:7001
 msgid "iSCSI target password for ${PORTAL}:"
-msgstr ""
+msgstr "ססמת יעד iSCSI עבור ${PORTAL}:"
 
 #. Type: password
 #. Description
@@ -3069,7 +3081,7 @@ msgstr "לא זוהו מטרות iSCSI"
 #. Translators : do NOT translate the variable name (PORTAL)
 #: ../partman-iscsi.templates:9001
 msgid "No iSCSI targets were discovered on ${PORTAL}."
-msgstr ""
+msgstr "לא התגלו יעדי iSCSI על גבי ${PORTAL}."
 
 #. Type: multiselect
 #. Description
@@ -3077,7 +3089,7 @@ msgstr ""
 #. Translators : do NOT translate the variable name (PORTAL)
 #: ../partman-iscsi.templates:11001
 msgid "iSCSI targets on ${PORTAL}:"
-msgstr ""
+msgstr "יעדי iSCSI על גבי ${PORTAL}:"
 
 #. Type: multiselect
 #. Description
@@ -3085,14 +3097,14 @@ msgstr ""
 #. Translators : do NOT translate the variable name (PORTAL)
 #: ../partman-iscsi.templates:11001
 msgid "Select the iSCSI targets you wish to use."
-msgstr ""
+msgstr "נא לבחור את יעדי ה־iSCSI בהם ברצונך להשתמש."
 
 #. Type: error
 #. Description
 #. :sl3:
 #: ../partman-iscsi.templates:12001
 msgid "iSCSI login failed"
-msgstr ""
+msgstr "כניסה ל־iSCSI נכשלה"
 
 #. Type: error
 #. Description
@@ -3100,7 +3112,7 @@ msgstr ""
 #. Translators : do NOT translate the variable names (PORTAL and TARGET)
 #: ../partman-iscsi.templates:12001
 msgid "Logging into the iSCSI target ${TARGET} on ${PORTAL} failed."
-msgstr ""
+msgstr "כניסה ליעד ה־iSCSI‏ ${TARGET} תחת ${PORTAL} נכשלה."
 
 #. Type: error
 #. Description
@@ -5502,6 +5514,8 @@ msgid ""
 "The installer is now overwriting ${DEVICE} with zeroes to delete its "
 "previous contents. This step may be skipped by cancelling this action."
 msgstr ""
+"תכנית ההתקנה משכתבת כעת את ${DEVICE} באפסים כדי למחוק את התוכן הקודם שעליו. "
+"ניתן לדלג על צעד זה על ידי ביטול הפעולה הזו."
 
 #. Type: error
 #. Description
@@ -5545,6 +5559,9 @@ msgid ""
 "cancelling this action, albeit at the expense of a slight reduction of the "
 "quality of the encryption."
 msgstr ""
+"תכנית ההתקנה משכתבת כעת את ${DEVICE} במידע אקראי כדי למנוע דליפות נתוני על "
+"מהכרך המוצפן. ניתן לדלג על צעד זה על ידי ביטול הפעולה הזו, במחיר של הפחתה "
+"מועטה באיכות ההצפנה."
 
 #. Type: error
 #. Description
@@ -5555,6 +5572,8 @@ msgid ""
 "Recovery of the device's previous contents is possible and meta-information "
 "of its new contents may be leaked."
 msgstr ""
+"אירעה שגיאה בעת ניסיון לשכתוב ${DEVICE} במידע אקראי. שחזור התכנים הקודמים של "
+"ההתקן אפשריים ונתוני העל של התכנים החדשים שלו עשויים לדלוף."
 
 #. Type: text
 #. Description
