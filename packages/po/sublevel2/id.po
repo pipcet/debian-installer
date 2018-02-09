@@ -11,24 +11,25 @@
 # * I Gede Wijaya S (gwijayas@yahoo.com), 2004.
 # * Arief S F (arief@gurame.fisika.ui.ac.id), 2004-2007.
 # * Setyo Nugroho (setyo@gmx.net), 2004.
-# Arief S Fitrianto <arief@gurame.fisika.ui.ac.id>, 2008.
-# Mahyuddin Susanto <udienz@ubuntu.com>, 2012.
+# * Arief S Fitrianto <arief@gurame.fisika.ui.ac.id>, 2008.
+# * Mahyuddin Susanto <udienz@ubuntu.com>, 2012.
+# * Al Qalit <qal.smith@gmail.com>, 2018.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer (level1)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2012-02-20 17:09+0700\n"
-"Last-Translator: Mahyuddin Susanto <udienz@ubuntu.com>\n"
+"PO-Revision-Date: 2018-01-26 13:37+0000\n"
+"Last-Translator: Al Qalit <qal.smith@gmail.com>\n"
 "Language-Team: Bahasa Indonesia <debian-l10n-id@gurame.fisika.ui.ac.id>\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 2.19-dev\n"
 "X-Poedit-Country: INDONESIA\n"
-"X-Generator: KBabel 1.11.4\n"
-"Plural-Forms: nplurals=1; plural=0\n"
 
 #. Type: error
 #. Description
@@ -3153,10 +3154,8 @@ msgstr "sistem berkas FAT32"
 #. Description
 #. :sl2:
 #: ../partman-basicfilesystems.templates:36001
-#, fuzzy
-#| msgid "JFS journaling file system"
 msgid "NTFS journaling file system"
-msgstr "Sistem berkas berjurnal JFS"
+msgstr "Sistem berkas berjurnal NTFS"
 
 #. Type: text
 #. Description
@@ -3313,7 +3312,7 @@ msgstr "notail - mematikan pengepakan berkas pada pohon sistem berkas"
 #. a 65 columns limit (which means 65 characters in single-byte languages)
 #: ../partman-basicfilesystems.templates:57001
 msgid "discard - trim freed blocks from underlying block device"
-msgstr ""
+msgstr "discard - blok dilepaskan dari blok perangkat dasar"
 
 #. #-#-#-#-#  templates.pot (partman-basicfilesystems)  #-#-#-#-#
 #. Type: boolean
@@ -3497,16 +3496,12 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../partman-btrfs.templates:4001
-#, fuzzy
-#| msgid ""
-#| "You should use a small /boot partition with another file system, such as "
-#| "ext3."
 msgid ""
 "You should use a small /boot partition with another file system, such as "
 "ext4."
 msgstr ""
 "Anda harus menggunakan partisi /boot yang kecil dengan memakai sistem berkas "
-"lain, misalnya ext3."
+"lain, misalnya ext4."
 
 #. Type: error
 #. Description
@@ -3530,13 +3525,10 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../partman-btrfs.templates:5001
-#, fuzzy
-#| msgid ""
-#| "You should use another file system, such as ext3, for the /boot partition."
 msgid ""
 "You should use another file system, such as ext4, for the /boot partition."
 msgstr ""
-"Anda harus menggunakan sistem berkas lain untuk partisi /boot, misalnya ext3."
+"Anda harus menggunakan sistem berkas lain untuk partisi /boot, misalnya ext4."
 
 #. Type: text
 #. Description
@@ -4198,10 +4190,8 @@ msgstr "Memindai repositori pembaruan..."
 #. Description
 #. :sl2:
 #: ../apt-setup-udeb.templates:7001
-#, fuzzy
-#| msgid "Scanning the release updates repository..."
 msgid "Scanning the backports repository..."
-msgstr "Memindai repositori pembaruan..."
+msgstr "Memindai repositori backports..."
 
 #. Type: select
 #. Choices
@@ -4803,8 +4793,9 @@ msgstr "Memasang kembali boot loader GRUB"
 #. Rescue menu item
 #. :sl2:
 #: ../grub-installer.templates:33001
+#, fuzzy
 msgid "Force GRUB installation to the EFI removable media path"
-msgstr ""
+msgstr "Paksa pemasangan GRUB ke jalur media EFI removable"
 
 #. Type: error
 #. Description
@@ -5060,26 +5051,28 @@ msgstr ""
 #, fuzzy
 #| msgid "Separate /home partition"
 msgid "Mount separate ${FILESYSTEM} partition?"
-msgstr "Partisi /home yang terpisah"
+msgstr "Susun partisi ${FILESYSTEM} terpisah?"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../rescue-mode.templates:21001
+msgid "The installed system appears to use a separate ${FILESYSTEM} partition."
+msgstr "Sistem terpasang mungkin memakai partisi ${FILESYSTEM} secara terpisah."
 
 #. Type: boolean
 #. Description
 #. :sl2:
 #: ../rescue-mode.templates:21001
 #, fuzzy
-#| msgid "Install the kernel on a PReP boot partition"
-msgid "The installed system appears to use a separate ${FILESYSTEM} partition."
-msgstr "Memasang kernel pada partisi boot PReP"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:21001
 msgid ""
 "It is normally a good idea to mount it as it will allow operations such as "
 "reinstalling the boot loader. However, if the file system on ${FILESYSTEM} "
 "is corrupt then you may want to avoid mounting it."
 msgstr ""
+"Biasanya ide bagus untuk memasangnya karena akan memungkinkan operasi "
+"seperti menginstal ulang boot loader. Namun, jika sistem file pada "
+"${FILESYSTEM} rusak maka Anda mungkin ingin menghindari pemasangannya."
 
 #. Type: select
 #. Choices
