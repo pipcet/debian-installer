@@ -15,8 +15,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: \n"
-"PO-Revision-Date: 2018-03-19 21:38+0000\n"
+"POT-Creation-Date: 2017-12-15 06:51+0000\n"
+"PO-Revision-Date: 2018-03-21 17:01+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew (https://www.transifex.com/yaron/teams/79473/he/)\n"
 "Language: he\n"
@@ -81,25 +81,7 @@ msgstr "# כתיב קירילי - שפות לא סלאביות"
 #. Choices
 #. :sl3:
 #: ../console-setup.templates:5001
-#, fuzzy
-#| msgid "# Cyrillic - non-Slavic languages"
-msgid ". Cyrillic - non-Slavic languages (for blind users)"
-msgstr "# כתיב קירילי - שפות לא סלאביות"
-
-#. Type: select
-#. Choices
-#. :sl3:
-#: ../console-setup.templates:5001
 msgid "# Cyrillic - Slavic languages (also Bosnian and Serbian Latin)"
-msgstr "# כתיב קירילי - שפות סלאביות (גם בוסנית וסרבית בכתיב לטיני)"
-
-#. Type: select
-#. Choices
-#. :sl3:
-#: ../console-setup.templates:5001
-#, fuzzy
-#| msgid "# Cyrillic - Slavic languages (also Bosnian and Serbian Latin)"
-msgid ". Cyrillic - Slavic languages (for blind users)"
 msgstr "# כתיב קירילי - שפות סלאביות (גם בוסנית וסרבית בכתיב לטיני)"
 
 #. Type: select
@@ -122,13 +104,6 @@ msgstr "# גיאורגית"
 #: ../console-setup.templates:5001
 msgid "# Greek"
 msgstr "# יוונית"
-
-#. Type: select
-#. Choices
-#. :sl3:
-#: ../console-setup.templates:5001
-msgid ". Greek (for blind users)"
-msgstr ""
 
 #. Type: select
 #. Choices
@@ -717,9 +692,9 @@ msgstr "Multipath %s (WWID %s)"
 #. Description
 #. :sl3:
 #: ../partman-base.templates:58001
-#, no-c-format
+#, fuzzy, no-c-format
 msgid "Multipath %s (partition #%s)"
-msgstr "Serial ATA RAID %s (partition #%s)"
+msgstr "Multipath %s (partition #%s)"
 
 #. Type: text
 #. Description
@@ -798,7 +773,7 @@ msgstr "אנטארקטיקה/מק-מרדו"
 #. :sl3:
 #: ../common.templates.in:8001
 msgid "Rothera"
-msgstr "אנטארקטיקה/רותרה"
+msgstr "אנטארקטיקה/רות׳רה"
 
 #. Type: select
 #. Choices
@@ -1750,13 +1725,12 @@ msgstr ""
 #. Description
 #. :sl3:
 #: ../nobootloader.templates:5001
-#, fuzzy
 msgid ""
 "You will need to boot manually with the ${KERNEL} kernel on partition "
 "${BOOT} and ${ROOT} passed as a kernel argument."
 msgstr ""
-"אתה צריך לאתחל ידנית עם הליבה ${KERNEL} על המחיצה ${BOOT} כאשר הפרמטר "
-"${ROOT} מועבר לליבה."
+"עליך לאתחל ידנית עם הליבה ${KERNEL} על המחיצה ${BOOT} עם העברת המשתנה ${ROOT}"
+" לליבה."
 
 #. Type: boolean
 #. Description
@@ -1770,7 +1744,7 @@ msgstr "להתקין את מנהל האתחול GRUB על כונן מסוג ATA 
 #. :sl3:
 #: ../grub-installer.templates:3001
 msgid "Installation of GRUB on Serial ATA RAID is experimental."
-msgstr "התקנה של GRUB על Serial ATA RAID הינה ניסיונית."
+msgstr "התקנה של GRUB על ATA RAID טורי הנה ניסיונית."
 
 #. Type: boolean
 #. Description
@@ -1781,8 +1755,8 @@ msgid ""
 "RAID disk. It is also assumed that disk is listed as the first hard disk in "
 "the boot order defined in the system's BIOS setup."
 msgstr ""
-"GRUB תמיד מותקן ל-MBR של דיסק  ה-Serial ATA RAID. בנוסף ההנחה היא שהדיסק הוא "
-"הדיסק הקשיח הראשון בסדר האתחול שמוגדר ב-BIOS של המערכת."
+"GRUB תמיד מותקן ל־MBR של כונן  ה־ATA RAID הטורי. בנוסף ההנחה היא שהכונן הוא "
+"הכונן הקשיח הראשון בסדר האתחול שמוגדר ב־BIOS של המערכת."
 
 #. Type: boolean
 #. Description
@@ -1799,7 +1773,7 @@ msgstr "התקן השורש של GRUB הוא: ${GRUBROOT}."
 #. :sl3:
 #: ../grub-installer.templates:4001
 msgid "An error occurred while setting up GRUB for your Serial ATA RAID disk."
-msgstr "שגיאה קרתה בזמן הגדרת GRUB לדיסק ה-Serial ATA RAID שלך."
+msgstr "אירעה שגיאה במהלך הגדרת GRUB לכונן ה־ATA RAID הטורי שלך."
 
 #. Type: error
 #. Description
@@ -5137,8 +5111,8 @@ msgid ""
 "volume group at any time, and logical volumes can be resized up to the "
 "amount of unallocated space in the volume group."
 msgstr ""
-"מנהל מחיצות לוגיות (LVM) מאפשר צירוף דיסקים או התקנים ברי-חלוקה למחיצות "
-"(\"נפחים פיזיים\") לבניית ,דיסק וירטואלי, (\"קבוצת נפחים\"), שניתן לאחר מכן "
+"מנהל מחיצות לוגיות (LVM) מאפשר צירוף דיסקים או התקנים ברי-חלוקה למחיצות (\""
+"נפחים פיזיים\") לבניית ,דיסק וירטואלי, (\"קבוצת נפחים\"), שניתן לאחר מכן "
 "לחלוקה למחיצות וירטואליות (\"נפחים לוגיים\"). דיסקים וירטואליים ונפחים "
 "לוגיים יכולים להתפרש על פני דיסקים פיזיים רבים. ניתן לצרף נפחים פיזיים לדיסק "
 "וירטואלי בכל זמן, וניתן לשנות נפחים של נפחים לוגיים עד לנפח של המרחב הפנוי "
@@ -6057,9 +6031,9 @@ msgid ""
 "load the kernel and initrd. Continuing now would result in an installation "
 "that cannot be used."
 msgstr ""
-"בחרת כי מערכת הקבצים /boot תאוחסן במחיצה מוצפנת. אפשרות זאת אינה אפשרית, "
-"מאחר ומנהל האתחול לא יוכל לטעון את הליבה ואת ה-initrd. המשך בכיוון זה יבנה "
-"התקנה שאינה ניתנת לשימוש."
+"בחרת לאחסן את מערכת הקבצים ‎/boot על מחיצה מוצפנת. מצב זה אינו אפשרי כיוון "
+"שמערכת האתחול אמורה לטעון את הליבה ואת ה־initrd. המשך בתהליך עשוי להוביל "
+"למערכת בלתי שמישה."
 
 #. Type: error
 #. Description
@@ -6068,14 +6042,14 @@ msgstr ""
 msgid ""
 "You should go back and choose a non-encrypted partition for the /boot file "
 "system."
-msgstr "עליך לחזור אחורה, ולבחור במחיצה לא מוצפת עבור מערכת הקבצים /boot."
+msgstr "עליך לחזור אחורה ולבחור במחיצה בלתי מוצפת עבור מערכת הקבצים ‎/boot."
 
 #. Type: boolean
 #. Description
 #. :sl3:
 #: ../partman-crypto.templates:56001
 msgid "Are you sure you want to use a random key?"
-msgstr "האם אתה בטוח שברצונך להשתמש במפתח אקראי?"
+msgstr "להשתמש במפתח אקראי?"
 
 #. Type: boolean
 #. Description
@@ -6104,21 +6078,21 @@ msgstr ""
 #. :sl3:
 #: ../partman-crypto.templates:57001
 msgid "Failed to download crypto components"
-msgstr "כישלון בהורדה של רכיבי הצפנה"
+msgstr "הורדת רכיבי ההצפנה נכשלה"
 
 #. Type: error
 #. Description
 #. :sl3:
 #: ../partman-crypto.templates:57001
 msgid "An error occurred trying to download additional crypto components."
-msgstr "שגיאה קרתה בזמן הורדה של רכיבי הצפנה נוספים."
+msgstr "אירעה שגיאה במהלך הניסיון להורדת רכיבי הצפנה נוספים."
 
 #. Type: boolean
 #. Description
 #. :sl3:
 #: ../partman-crypto.templates:58001
 msgid "Proceed to install crypto components despite insufficient memory?"
-msgstr "להמשיך להתקנת רכיבי הצפנה למרות זיכרון לא מספיק?"
+msgstr "להמשיך בהתקנת רכיבי ההצפנה למרות שאין מספיק זיכרון?"
 
 #. Type: boolean
 #. Description
@@ -6129,8 +6103,8 @@ msgid ""
 "crypto components. If you choose to go ahead and continue anyway, the "
 "installation process could fail."
 msgstr ""
-"נראה שאין מספיק מקום פנוי בזיכרון כדי להתקין רכיבי הצפנה נוספים. אם תבחר "
-"להמשיך בכל זאת, תהליך ההתקנה עלול להיכשל."
+"נראה שאין מספיק מקום פנוי בזיכרון כדי להתקין רכיבי הצפנה נוספים. בחירה "
+"להמשיך בתהליך בכל זאת עשויה להוביל להכשלת ההתקנה."
 
 #. Type: select
 #. Choices
@@ -6168,7 +6142,7 @@ msgstr "התקנים להצפנה:"
 #. :sl3:
 #: ../partman-crypto.templates:60001
 msgid "Please select the devices to be encrypted."
-msgstr "בחר התקנים להצפנה."
+msgstr "נא לבחור התקנים להצפנה."
 
 #. Type: error
 #. Description
@@ -6190,7 +6164,7 @@ msgstr "לא נבחרו התקנים להצפנה."
 #. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
 #: ../partman-auto-crypto.templates:1001
 msgid "Guided - use entire disk and set up encrypted LVM"
-msgstr "חלוקה מודרכת - השתמש בכל שטח הדיסק והגדר LVM מוצפן"
+msgstr "חלוקה מודרכת - ניצול כל שטח הכונן והגדרת LVM מוצפן"
 
 #. Type: text
 #. Description
@@ -6198,7 +6172,7 @@ msgstr "חלוקה מודרכת - השתמש בכל שטח הדיסק והגדר
 #: ../cdebconf-newt-entropy.templates:1001
 #: ../cdebconf-text-entropy.templates:1001
 msgid "Enter random characters"
-msgstr "הכנס תווים אקראיים"
+msgstr "נא להקליד תווים אקראיים"
 
 #. Type: text
 #. Description
@@ -6210,15 +6184,15 @@ msgid ""
 "keyboard, or just wait until enough key data has been collected (which can "
 "take a long time)."
 msgstr ""
-"הינך יכול להאיץ את התהליך על ידי הכנסת תווים אקראיים על המקלדת, או פשוט "
-"לחכות עד שמספיק נתוני הקלדה נאספו (עלול לגזול זמן ארוך)."
+"ניתן לסייע בהאצת התהליך על ידי הקלדת תווים אקראיים במקלדת או פשוט להמתין עד "
+"לאיסוף של מספיק נתוני מפתח (פעולה שעשויה לארוך זמן מה)."
 
 #. Type: text
 #. Description
 #. :sl3:
 #: ../cdebconf-gtk-entropy.templates:1001
 msgid "Enter random characters or make random movements with the mouse"
-msgstr "הכנס תווים אקראיים או הזז את העכבר באקראיות"
+msgstr "נא להקליד תווים אקראיים או להזיז את העכבר באופן אקראי"
 
 #. Type: text
 #. Description
@@ -6228,5 +6202,5 @@ msgid ""
 "You can help speed up the process by entering random characters on the "
 "keyboard or by making random movements with the mouse."
 msgstr ""
-"הינך יכול להאיץ את התהליך על ידי הכנסת תווים אקראיים על המקלדת או על ידי "
-"הזזת העכבר באקראיות."
+"ניתן לסייע בהאצת התהליך על ידי הקלדת תווים אקראיים במקלדת או על ידי הזזת "
+"העכבר באופן אקראי."
