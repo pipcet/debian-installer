@@ -1,5 +1,5 @@
 # Italian messages for debian-installer.
-# Copyright (C) 2003-2013, 2014, 2017 Software in the Public Interest, Inc.
+# Copyright (C) 2003-2013, 2014, 2017, 2018 Software in the Public Interest, Inc.
 # This file is distributed under the same license as debian-installer.
 # The translation team (for all four levels):
 # Cristian Rigamonti <cri@linux.it>
@@ -14,14 +14,14 @@
 # Samuele Giovanni Tonon <samu@linuxasylum.net>
 # Stefano Canepa <sc@linux.it>
 # Stefano Melchior <stefano.melchior@openlabs.it>
-# Milo Casagrande <milo@ubuntu.com>, 2008-2013, 2014, 2017.
+# Milo Casagrande <milo@milo.name>, 2008-2013, 2014, 2017, 2018.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2017-02-14 11:23+0100\n"
+"PO-Revision-Date: 2018-04-03 09:25+0200\n"
 "Last-Translator: Milo Casagrande <milo@milo.name>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
 "Language: it\n"
@@ -29,7 +29,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 2.0beta2\n"
+"X-Generator: Poedit 1.8.11\n"
 
 #. Type: text
 #. Description
@@ -85,10 +85,8 @@ msgstr "# Cirillico - lingue non slave"
 #. Choices
 #. :sl3:
 #: ../console-setup.templates:5001
-#, fuzzy
-#| msgid "# Cyrillic - non-Slavic languages"
 msgid ". Cyrillic - non-Slavic languages (for blind users)"
-msgstr "# Cirillico - lingue non slave"
+msgstr ". Cirillico - lingue non slave (per non vedenti)"
 
 #. Type: select
 #. Choices
@@ -101,10 +99,8 @@ msgstr "# Cirillico - lingue slave (inclusi latino bosniaco e serbo)"
 #. Choices
 #. :sl3:
 #: ../console-setup.templates:5001
-#, fuzzy
-#| msgid "# Cyrillic - Slavic languages (also Bosnian and Serbian Latin)"
 msgid ". Cyrillic - Slavic languages (for blind users)"
-msgstr "# Cirillico - lingue slave (inclusi latino bosniaco e serbo)"
+msgstr ". Cirillico - lingue slave (per non vedenti)"
 
 #. Type: select
 #. Choices
@@ -132,7 +128,7 @@ msgstr "# Greco"
 #. :sl3:
 #: ../console-setup.templates:5001
 msgid ". Greek (for blind users)"
-msgstr ""
+msgstr ". Greco (per non vedenti)"
 
 #. Type: select
 #. Choices
@@ -1594,10 +1590,8 @@ msgstr "Mosca+08 - Magadan"
 #. Choices
 #. :sl3:
 #: ../common.templates.in:26001
-#, fuzzy
-#| msgid "Moscow+01 - Samara"
 msgid "Moscow+09 - Kamchatka"
-msgstr "Mosca+01 - Samara"
+msgstr "Mosca+09 - Kamčatka"
 
 #. Type: select
 #. Choices
@@ -1883,10 +1877,8 @@ msgid "An error occurred while setting up GRUB for the multipath device."
 msgstr ""
 "Si è verificato un errore nel configurare GRUB per il device multi-percorso."
 
-#. #-#-#-#-#  templates.pot (grub-installer)  #-#-#-#-#
 #. Type: select
 #. Choices
-#. #-#-#-#-#  templates.pot (iso-scan)  #-#-#-#-#
 #. Type: select
 #. Choices
 #. :sl3:
@@ -2569,7 +2561,7 @@ msgstr ""
 #. :sl3:
 #: ../iso-scan.templates:18001
 msgid "Copy the ISO image into RAM before mounting it?"
-msgstr ""
+msgstr "Copiare l'immagine ISO nella memoria RAM prima di montarla?"
 
 #. Type: boolean
 #. Description
@@ -2578,6 +2570,7 @@ msgstr ""
 msgid ""
 "There is enough available memory to be able to copy the ISO image into RAM."
 msgstr ""
+"La memoria RAM disponibile è sufficiente per potervi copiare l'immagine ISO."
 
 #. Type: boolean
 #. Description
@@ -2588,6 +2581,10 @@ msgid ""
 "don't do it, the disk will be actively used to access the ISO image and it "
 "can't be partitioned by the installer."
 msgstr ""
+"Selezionando questa opzione è possibile riutilizzare il disco su cui è "
+"presente l'immagine ISO. In caso contrario, il disco viene utilizzato per "
+"leggere l'immagine ISO e non può essere modificato dal sistema "
+"d'installazione."
 
 #. Type: boolean
 #. Description
@@ -2599,6 +2596,9 @@ msgid ""
 "to restart the installer since the ISO image will be gone from the hard disk "
 "and memory."
 msgstr ""
+"Notare che se il disco che contiene l'immagine ISO viene sovrascritto, il "
+"computer non può essere riavviato prima del termine dell'installazione "
+"altrimenti non sarà possibile riprendere il processo d'installazione."
 
 #. Type: note
 #. Description
@@ -3033,40 +3033,34 @@ msgstr "Riavviare utilizzando il kernel corretto (${DI_KERNEL})."
 msgid "Configure iSCSI volumes"
 msgstr "Configurare volumi iSCSI"
 
-#. #-#-#-#-#  templates.pot (partman-iscsi)  #-#-#-#-#
 #. Type: select
 #. Choices
 #. Note to translators : Please keep your translations of the choices
 #. below a 65 columns limit (which means 65 characters
 #. in single-byte languages)
-#. #-#-#-#-#  templates.pot (PACKAGE VERSION)  #-#-#-#-#
-#. Type: select
-#. Choices
-#. Note to translators : Please keep your translations of the choices
-#. below a 65 columns limit (which means 65 characters
-#. in single-byte languages)
-#. :sl3:
-#. #-#-#-#-#  templates.pot (PACKAGE VERSION)  #-#-#-#-#
 #. Type: select
 #. Choices
 #. Note to translators : Please keep your translations of the choices
 #. below a 65 columns limit (which means 65 characters
 #. in single-byte languages)
 #. :sl3:
-#. #-#-#-#-#  templates.pot (partman-lvm)  #-#-#-#-#
+#. Type: select
+#. Choices
+#. Note to translators : Please keep your translations of the choices
+#. below a 65 columns limit (which means 65 characters
+#. in single-byte languages)
+#. :sl3:
 #. Type: text
 #. Description
 #. :sl3:
 #. Menu entry
 #. Use infinitive form
-#. #-#-#-#-#  templates.pot (partman-crypto)  #-#-#-#-#
 #. Type: select
 #. Choices
 #. Note to translators : Please keep your translations of the choices
 #. below a 65 columns limit (which means 65 characters
 #. in single-byte languages)
 #. :sl3:
-#. #-#-#-#-#  templates.pot (s390-dasd)  #-#-#-#-#
 #. Type: select
 #. Choices
 #. :sl5:
@@ -3818,14 +3812,6 @@ msgstr "Device per il nuovo gruppo di volumi:"
 msgid "Please select the devices for the new volume group."
 msgstr "Selezionare i device per il nuovo gruppo di volumi."
 
-#. #-#-#-#-#  templates.pot (PACKAGE VERSION)  #-#-#-#-#
-#. Type: multiselect
-#. Description
-#. :sl3:
-#. Type: multiselect
-#. Description
-#. :sl3:
-#. #-#-#-#-#  templates.pot (partman-lvm)  #-#-#-#-#
 #. Type: multiselect
 #. Description
 #. :sl3:
@@ -3835,7 +3821,12 @@ msgstr "Selezionare i device per il nuovo gruppo di volumi."
 #. Type: multiselect
 #. Description
 #. :sl3:
-#. #-#-#-#-#  templates.pot (partman-crypto)  #-#-#-#-#
+#. Type: multiselect
+#. Description
+#. :sl3:
+#. Type: multiselect
+#. Description
+#. :sl3:
 #. Type: multiselect
 #. Description
 #. :sl3:
@@ -3859,14 +3850,12 @@ msgstr "Nome del gruppo di volumi:"
 msgid "Please enter the name you would like to use for the new volume group."
 msgstr "Inserire il nome da usare per il nuovo gruppo di volumi."
 
-#. #-#-#-#-#  templates.pot (PACKAGE VERSION)  #-#-#-#-#
 #. Type: error
 #. Description
 #. :sl3:
 #. Type: error
 #. Description
 #. :sl3:
-#. #-#-#-#-#  templates.pot (partman-lvm)  #-#-#-#-#
 #. Type: error
 #. Description
 #. :sl3:
@@ -3916,11 +3905,9 @@ msgstr ""
 msgid "Volume group name already in use"
 msgstr "Nome del gruppo di volumi già in uso"
 
-#. #-#-#-#-#  templates.pot (PACKAGE VERSION)  #-#-#-#-#
 #. Type: error
 #. Description
 #. :sl3:
-#. #-#-#-#-#  templates.pot (PACKAGE VERSION)  #-#-#-#-#
 #. Type: string
 #. Description
 #. :sl3:
@@ -3961,7 +3948,6 @@ msgstr "Gruppo di volumi da eliminare:"
 msgid "Please select the volume group you wish to delete."
 msgstr "Selezionare il gruppo di volumi da eliminare."
 
-#. #-#-#-#-#  templates.pot (PACKAGE VERSION)  #-#-#-#-#
 #. Type: error
 #. Description
 #. :sl3:
@@ -3980,7 +3966,6 @@ msgstr "Selezionare il gruppo di volumi da eliminare."
 #. Type: error
 #. Description
 #. :sl3:
-#. #-#-#-#-#  templates.pot (partman-lvm)  #-#-#-#-#
 #. Type: error
 #. Description
 #. :sl3:
@@ -4153,14 +4138,12 @@ msgstr "Device da rimuovere dal gruppo di volumi:"
 msgid "Please select the device you wish to remove from the volume group."
 msgstr "Selezionare il device da rimuovere dal gruppo di volumi."
 
-#. #-#-#-#-#  templates.pot (PACKAGE VERSION)  #-#-#-#-#
 #. Type: error
 #. Description
 #. :sl3:
 #. Type: error
 #. Description
 #. :sl3:
-#. #-#-#-#-#  templates.pot (partman-lvm)  #-#-#-#-#
 #. Type: error
 #. Description
 #. :sl3:
@@ -4230,14 +4213,12 @@ msgstr "Nome del volume logico:"
 msgid "Please enter the name you would like to use for the new logical volume."
 msgstr "Indicare il nome da usare per il nuovo volume logico."
 
-#. #-#-#-#-#  templates.pot (PACKAGE VERSION)  #-#-#-#-#
 #. Type: select
 #. Description
 #. :sl3:
 #. Type: select
 #. Description
 #. :sl3:
-#. #-#-#-#-#  templates.pot (partman-lvm)  #-#-#-#-#
 #. Type: select
 #. Description
 #. :sl3:
