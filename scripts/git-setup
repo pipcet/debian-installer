@@ -8,25 +8,34 @@ runshow () {
 
 config_git_anon () {
 	# rewrite urls to use git://
-	runshow git config --global 'url.https://anonscm.debian.org/git/d-i/.insteadOf' 'git+ssh://git.debian.org/git/d-i/'
+	runshow git config --global 'url.https://salsa.debian.org/installer-team/.insteadOf' 'git@salsa.debian.org:installer-team/'
 }
 
 config_git_auth () {
 	config_git_anon # speeds up checkouts
 	# use ssh for pushes
-	runshow git config --global 'url.git+ssh://git.debian.org/git/d-i/.pushInsteadOf' 'git+ssh://git.debian.org/git/d-i/'
+	runshow git config --global 'url.git@salsa.debian.org:installer-team/.pushInsteadOf' 'git@salsa.debian.org:installer-team/'
 }
 
-URL=$(LANG=C svn info| grep '^URL' | awk '{print $2}')
+if [ -d .svn ]; then
+    URL=$(LANG=C svn info| grep '^URL' | awk '{print $2}')
+elif [ -d .git ]; then
+    URL=$(LANG=C git remote -v | awk '/salsa/ {if (NR==1) {print $2}}')
+else
+    echo "Can't work out what VCS you're using. Abort." >&2
+    exit 1
+fi
 case "$URL" in
-	svn+ssh*)
+	*ssh*|git@salsa*)
+		echo "Your working copy is using $URL, so setting up git with auth"
 		config_git_auth
 	;;
 	svn*|http*)
+		echo "Your working copy is using $URL, so setting up git anon"
 		config_git_anon
 	;;
 	*)
-		echo "unknown svn url: $URL" >&2
+		echo "unknown VCS url: $URL" >&2
 		exit 1
 	;;
 esac
