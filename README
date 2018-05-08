@@ -8,23 +8,23 @@ It is coordinated on the debian-boot mailing list, debian-boot@lists.debian.org
 How to get started?
 ===================
 
-  To check out d-i, you will need both Subversion and Git, as well as the `mr`
+  To check out d-i, you will need Git, as well as the `mr`
   command. `mr` is in the `mr` package, or see
   <http://joeyh.name/code/mr/>
 
-  First, check out the svn repository. If you have an account on alioth,
-  use ssh:
+  First, check out the base d-i repository. If you have an account on
+  salsa, use ssh:
 
-     svn co svn+ssh://<username>@svn.debian.org/svn/d-i/trunk
+     git clone git@salsa.debian.org:installer-team/d-i.git
 
   Or for an anonymous checkout:
 
-     svn co svn://anonscm.debian.org/svn/d-i/trunk d-i
+     git clone https://salsa.debian.org/installer-team/d-i.git
 
   Now run these commands to check out the rest of the installer, from git:
 
      cd d-i
-     scripts/git-setup
+     ./scripts/git-setup
      mr -p checkout
 
   Then see the docs in d-i/installer/doc. If you just want to build
@@ -47,8 +47,6 @@ More information
   http://www.debian.org/devel/debian-installer/ -- Project page at w.d.o
 
   http://wiki.debian.org/DebianInstaller  -- Project page in wiki.debian.org
-
-  https://alioth.debian.org/projects/d-i/ -- Alioth Project Page
 
   Up-to-date information on how to checkout the repository might
   be found at http://wiki.debian.org/DebianInstaller/CheckOut
