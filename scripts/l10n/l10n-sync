@@ -533,7 +533,7 @@ sed -i 's/charset=UTF-8/charset=CHARSET/g' $pot_master
 log ""
 
 # Update PO files for sublevels:
-# 3a) Synchronize with D-I SVN
+# 3a) Synchronize with D-I GIT
 # 3b) Merge the sublevel PO files into a master PO file
 # 3c) Update the master PO file from the master POT file as it will be used
 #     to update package PO files
@@ -646,7 +646,7 @@ for po in sublevel1/*.po ; do
 done
 
 if [ "$COMMIT" = "Y" ] ; then
-	log_cmd -p "Commit all general PO/POT files to SVN..." \
+	log_cmd -p "Commit all general PO/POT files to GIT..." \
 		$git add *.po
 		$git commit -m \"$COMMIT_MARKER Updated packages/po/* against package templates\" || gitpoerr
 		$git push
