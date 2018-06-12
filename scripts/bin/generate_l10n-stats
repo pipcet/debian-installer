@@ -2,7 +2,7 @@
 ROOT=$HOME/l10n
 umask 002
 cd $ROOT/config
-svn -q up
+git pull
 cd ..
 for i in `seq 1 3` ; do
   $ROOT/gen-stats $i $ROOT/config/gen-stats.conf fetch
