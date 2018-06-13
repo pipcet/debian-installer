@@ -42,9 +42,7 @@ export LC_ALL=C
 
 export NUMLEVELS=5
 export SUITE=testing
-export REPO=svn://svn.debian.org/svn/d-i
-export GITREPO=${GITREPO:-git+ssh://git.debian.org/git/d-i}
-export PTAGS=$REPO/tags/packages
+export GITREPO=${GITREPO:-https://salsa.debian.org/installer-team}
 
 log() {
 	echo "$*" >&2
@@ -139,7 +137,8 @@ split_levels() {
 	done
 }
 
-svn export $REPO/trunk/packages/po/packages_list >/dev/null
+# FIXME: no real need for a local copy, no more “svn export” since the conversion to git
+cp ../../packages/po/packages_list .
 
 version=$(get_version localechooser)
 
