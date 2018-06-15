@@ -339,9 +339,9 @@ for i in msgcat msgmerge msgattrib `echo ${debconfupdatepo} | awk '{print $1};'`
 done
 
 # Do not accept working on an unclean copy
-if $($git status -s -uno $DI_COPY/packages/po) ; then
+if ! $($git status -s -uno $DI_COPY/packages/po) ; then
 	error "$DI_COPY seems to contain some GIT conflict files"
-	error "in packages/po."
+	error "in packages/po (check 1)."
 	error "Please fix this before launching the script again"
 	exit 1
 fi
@@ -399,9 +399,9 @@ fi
 #fi
 
 # Let's check the thing again....ceinture et bretelles as we say in French
-if $($git status -s -uno $DI_COPY/packages/po) ; then
+if ! $($git status -s -uno $DI_COPY/packages/po) ; then
 	error "$DI_COPY seems to contain some GIT conflict files"
-	error "in packages/po."
+	error "in packages/po (check 2)."
 	error "Please fix this before lauching the script again"
 	exit 1
 fi
