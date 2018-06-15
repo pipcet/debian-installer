@@ -14,7 +14,7 @@ config_git_anon () {
 config_git_auth () {
 	config_git_anon # speeds up checkouts
 	# use ssh for pushes
-	runshow git config --global 'url.git@salsa.debian.org:installer-team/.pushInsteadOf' 'git@salsa.debian.org:installer-team/'
+	runshow git config --global 'url.git@salsa.debian.org:installer-team/.pushInsteadOf' 'https://salsa.debian.org/installer-team/'
 }
 
 if [ -d .svn ]; then
