@@ -29,7 +29,6 @@ NUMLEVELS=5
 UPDATEPO=Y
 SYNCPKGS=Y
 QUIET=N
-git=git
 debconfupdatepo=debconf-updatepo
 
 if [ "$DI_L10NSYNC_LOGDIR" ] ; then
@@ -354,7 +353,7 @@ log "Starting l10n-sync run - $(date -u)"
 cd $DI_COPY/packages/po
 if [ "$ONLINE" = "Y" ] ; then
 	log_cmd -p "Synchronize $DI_COPY/packages..." \
-		$git pull || gitpoerr
+		git pull || gitpoerr
 fi
 
 # Check the packages/po/run-l10n-sync file
@@ -429,10 +428,10 @@ if [ "$UPDATEPO" = "Y" ]; then
 		log_cmd -p "  - Run debconf-updatepo..." \
 			$debconfupdatepo
 		if [ "$COMMIT" = "Y" ] ; then
-#			if ! $git status >/dev/null 2>&1; then
-				$git add po/templates.pot
-				$git commit -uno -m "$COMMIT_MARKER Update templates.pot (from l10n-sync run at dillon)"
-				$git push
+#			if ! git status >/dev/null 2>&1; then
+				git add po/templates.pot
+				git commit -uno -m "$COMMIT_MARKER Update templates.pot (from l10n-sync run at dillon)"
+				git push
 #			fi
 		fi
 	done
@@ -647,9 +646,9 @@ done
 
 if [ "$COMMIT" = "Y" ] ; then
 	log_cmd -p "Commit all general PO/POT files to GIT..." \
-		$git add $DI_COPY/*/*.po
-		$git commit -uno -m "$COMMIT_MARKER Updated packages/po/* against package templates (from l10n-sync run at dillon)"
-		$git push
+		git add $DI_COPY/*/*.po
+		git commit -uno -m "$COMMIT_MARKER Updated packages/po/* against package templates (from l10n-sync run at dillon)"
+		git push
 fi
 log ""
 
@@ -665,7 +664,7 @@ if [ "$SYNCPKGS" = "Y" ]; then
 		cd $DI_COPY/packages/$package/debian/po
 		if [ "$ONLINE" = "Y" ] ; then
 			log_cmd -p "  - synchronize with D-I repository..." \
-				$git pull || gitpoerr
+				git pull || gitpoerr
 		fi
 		log "  - rebuild language files"
 		# For each language listed in packages/po, update PO files
@@ -719,10 +718,10 @@ EOF
 		done
 		log ""
 		if [ "$COMMIT" = "Y" ] ; then
-#			if ! $git status >/dev/null 2>&1; then
-				$git add *.po
-				$git commit -uno -m "$COMMIT_MARKER Commit changed/added files (from l10n-sync run at dillon)"
-				$git push
+#			if ! git status >/dev/null 2>&1; then
+				git add *.po
+				git commit -uno -m "$COMMIT_MARKER Commit changed/added files (from l10n-sync run at dillon)"
+				git push
 #			fi
 		fi
 	done
