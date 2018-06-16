@@ -720,7 +720,7 @@ EOF
 		log ""
 		if [ "$COMMIT" = "Y" ] ; then
 #			if ! $git status >/dev/null 2>&1; then
-				$git add $DI_COPY/*/*.po
+				$git add *.po
 				$git commit -uno -m "$COMMIT_MARKER Commit changed/added files (from l10n-sync run at dillon)"
 				$git push
 #			fi
