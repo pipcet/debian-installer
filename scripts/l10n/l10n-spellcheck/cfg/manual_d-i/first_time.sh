@@ -1,5 +1,8 @@
-svn co svn://anonymous@svn.debian.org/svn/d-i/trunk/installer/doc/manual/po $HOME/di_manual
-
+# Is a full repo clone needed here?
+#git clone git@salsa.debian.org:installer-team/d-i.git
+#cd d-i
+#./scripts/git-setup
+#mr checkout
 
 mkdir $HOME/public_html/spellcheck/manual_d-i
 cd $HOME/public_html/spellcheck/manual_d-i
