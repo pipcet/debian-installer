@@ -114,7 +114,7 @@ if [ -f $logdir/tr-stats ] ; then
 
     # Statistics for XML-based translations
     for lang in $(egrep -v "^en" $logdir/tr-stats | cut -f 1) ; do
-        # XML-based if language dir has been committed to SVN
+        # XML-based if language dir has been committed to GIT
         if [ -d "$source/$lang/" ] ; then
             langname=$(egrep "^$lang[[:space:]]" $ROOT/bin/langlist | cut -f 7)
             echo "  <tr>" >>$pagefile

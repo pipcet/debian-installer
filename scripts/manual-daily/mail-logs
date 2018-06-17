@@ -15,22 +15,22 @@ if ! tmpdir=$(mktemp -td mail-logs.XXXXXX); then
 	exit 1
 fi
 
-add-svnlog () {
+add-gitlog () {
     echo "" >>$mainlog
     echo "" >>$mainlog
     echo "=============== svn up ===============" >>$mainlog
-    cat $logdir/svn_up.log >>$mainlog
+    cat $logdir/git_pull.log >>$mainlog
     echo "" >>$mainlog
     echo "=============== svn ci ===============" >>$mainlog
-    cat $logdir/svn_ci.log >>$mainlog
+    cat $logdir/git_push.log >>$mainlog
 }
 
 if [ -f $ROOT/do_not_build ] ; then
     echo "" >>$mainlog
     echo "Build or upload failed; no mails sent!" >>$mainlog
-    add-svnlog
+    add-gitlog
 
-    mutt -s "D-I Manual build failed ($builddate)" $MAIL_FROM <$mainlog
+    mutt -s "D-I installation-guide build failed ($builddate)" $MAIL_FROM <$mainlog
     exit 0
 fi
 
@@ -52,9 +52,9 @@ if [ "$DI_LOCAL_BUILD" != 1 ]; then
         echo "To: $mailaddress" >>$tmpdir/header
         echo "Reply-To: $NAME_FROM <$MAIL_FROM>" >>$tmpdir/header
         if [ "$BUILD_ERRORS" = "0" ]; then
-            echo "Subject: [D-I Manual] Build log for $lang ($builddate)" >>$tmpdir/header
+            echo "Subject: [D-I installation-guide] Build log for $lang ($builddate)" >>$tmpdir/header
         else
-            echo "Subject: [D-I Manual] Build log for $lang ($builddate) - ERRORS DURING BUILD" >>$tmpdir/header
+            echo "Subject: [D-I installation-guide] Build log for $lang ($builddate) - ERRORS DURING BUILD" >>$tmpdir/header
         fi
 
         # Create message file
@@ -90,9 +90,9 @@ if [ "$DI_LOCAL_BUILD" != 1 ]; then
     echo "Build successful; logmails have been sent!" >>$mainlog
 fi
 
-add-svnlog
+add-gitlog
 
-mutt -s "D-I Manual build success ($builddate)" $MAIL_FROM <$mainlog
+mutt -s "D-I installation-guide build success ($builddate)" $MAIL_FROM <$mainlog
 
 rm -rf $tmpdir
 exit 0
