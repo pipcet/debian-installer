@@ -1,13 +1,15 @@
 rm -rf debconf
-git clone -q git://git.debian.org/git/debconf/debconf.git
+git clone -q git@salsa.debian.org:pkg-debconf/debconf.git
 cd debconf/po
 make debconf.pot > /dev/null 2>&1
 cd ../..
 
 rm -rf newt
-apt-get $APT_OPT -t unstable source newt >/dev/null
-rm -f *.tar.gz *.dsc *.diff.gz
-if [ ! -d "newt" ] ; then mv newt* newt ; fi
+git clone -q git@salsa.debian.org:mckinstry/newt.git
+#
+#apt-get $APT_OPT -t unstable source newt >/dev/null
+#rm -f *.tar.gz *.dsc *.diff.gz
+#if [ ! -d "newt" ] ; then mv newt* newt ; fi
 #cd newt
 #tar xfz *.tar.gz
 #mv `find . -type d -name newt\-\*` newt
@@ -16,7 +18,7 @@ if [ ! -d "newt" ] ; then mv newt* newt ; fi
 #cd ../..
 
 rm -rf win32-loader
-git clone -q git://git.debian.org/git/d-i/win32-loader
+git clone -q git@salsa.debian.org:installer-team/win32-loader.git
 
 cd ../
 

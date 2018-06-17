@@ -2,11 +2,11 @@ touch $HOME/.cvspass
 
 #echo -n "tasksel "
 rm -rf tasksel
-git clone -q git+ssh://git.debian.org/git/tasksel/tasksel.git
+git clone -q git@salsa.debian.org:installer-team/tasksel.git
 
 #echo -n "iso-codes "
 rm -rf iso-codes
-git clone -q git+ssh://git.debian.org/git/iso-codes/iso-codes.git
+git clone -q git@salsa.debian.org:debian/iso-codes.git
 
 #echo -n "console-data "
 #rm -rf console-data
@@ -16,18 +16,19 @@ git clone -q git+ssh://git.debian.org/git/iso-codes/iso-codes.git
 #echo -n "popularity-contest "
 rm -rf popularity-contest
 mkdir popularity-contest
-svn -q co svn://anonscm.debian.org/popcon/trunk/popularity-contest/debian popularity-contest/debian
+git clone git@salsa.debian.org:popularity-contest-team/popularity-contest.git
 
 #echo -n "grub2 "
 rm -rf grub2
 rm -rf grub
-bzr co -q bzr+ssh://bzr.debian.org/bzr/pkg-grub/trunk/grub/ 
+git clone git@salsa.debian.org:grub-team/grub-legacy.git
 
 # echo -n "eject "
+# Where does eject live now?
 rm -rf eject
 git clone -q git+ssh://git.debian.org/git/collab-maint/eject
 
 # echo -n "espeakup "
 rm -rf espeakup
-git clone -q git://git.debian.org/git/pkg-a11y/espeakup
+git clone -q git@salsa.debian.org:a11y-team/espeakup.git
 
