@@ -10,7 +10,7 @@ SAVE_UMASK=`umask`
 umask 007
 
 cat > kgb-client.conf.new <<EOF
-# Generated file. See {svn}/scripts/hooksetup.sh
+# Generated file. See {git-repo}/scripts/hooksetup.sh
 #
 repo-id: debian-boot
 timeout: 7
