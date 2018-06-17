@@ -13,15 +13,15 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2012-03-20 16:35+0200\n"
-"Last-Translator: Timo Jyrinki <timo.jyrinki@iki.fi>\n"
+"PO-Revision-Date: 2018-05-19 04:36+0000\n"
+"Last-Translator: \n"
 "Language-Team: Finnish <debian-l10n-finnish@lists.debian.org>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.0\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.0-dev\n"
 
 #. Type: text
 #. Description
@@ -77,10 +77,8 @@ msgstr "# Kyrillinen - ei-slaavilaiset kielet"
 #. Choices
 #. :sl3:
 #: ../console-setup.templates:5001
-#, fuzzy
-#| msgid "# Cyrillic - non-Slavic languages"
 msgid ". Cyrillic - non-Slavic languages (for blind users)"
-msgstr "# Kyrillinen - ei-slaavilaiset kielet"
+msgstr ". Kyrillinen - ei-slaavilaiset kielet (sokeille käyttäjille)"
 
 #. Type: select
 #. Choices
@@ -93,10 +91,8 @@ msgstr "# Kyrillinen - slaavilaiset kielet (myös Bosnian ja Serbian Latin)"
 #. Choices
 #. :sl3:
 #: ../console-setup.templates:5001
-#, fuzzy
-#| msgid "# Cyrillic - Slavic languages (also Bosnian and Serbian Latin)"
 msgid ". Cyrillic - Slavic languages (for blind users)"
-msgstr "# Kyrillinen - slaavilaiset kielet (myös Bosnian ja Serbian Latin)"
+msgstr ".  Kyrillinen - slaavilaiset kielet (sokeille käyttäjille)"
 
 #. Type: select
 #. Choices
@@ -124,7 +120,7 @@ msgstr "# Kreikkalainen"
 #. :sl3:
 #: ../console-setup.templates:5001
 msgid ". Greek (for blind users)"
-msgstr ""
+msgstr ". Kreikka (sokeille käyttäjille)"
 
 #. Type: select
 #. Choices
@@ -468,10 +464,8 @@ msgstr ""
 #. Description
 #. :sl3:
 #: ../cdrom-detect.templates:13001
-#, fuzzy
-#| msgid "No network interfaces detected"
 msgid "UNetbootin media detected"
-msgstr "Verkkoliitäntöjä ei löydetty"
+msgstr "UNetbootin-media havaittu"
 
 #. Type: note
 #. Description
@@ -484,6 +478,11 @@ msgid ""
 "please try your installation again without using UNetbootin before reporting "
 "issues."
 msgstr ""
+"Vaikuttaa siltä, että asennusmedia on luotu käyttäen UNetbootinia. "
+"UNetbootin on toistuvasti yhdistetty vaikeisiin ja ei-toistettaviin "
+"käyttäjien ongelmaraportteihin; jos sinulla on ongelmia tämän asennusmedian "
+"kanssa, yritä asennusta uudelleen ilman UNetbootinia, ennen kuin ilmoitat "
+"ongelmista."
 
 #. Type: note
 #. Description
@@ -493,6 +492,8 @@ msgid ""
 "The installation guide contains more information on how to create a USB "
 "installation medium directly without UNetbootin."
 msgstr ""
+"Asennusohje sisältää lisätietoja, kuinka luoda USB-asennusmedia suoraan "
+"ilman UNetbootinin käyttöä."
 
 #. Type: boolean
 #. Description
@@ -1423,15 +1424,16 @@ msgstr "Choibalsan"
 #. Choices
 #. :sl3:
 #: ../common.templates.in:22001
+#, fuzzy
 msgid "North-West"
-msgstr ""
+msgstr "luode"
 
 #. Type: select
 #. Choices
 #. :sl3:
 #: ../common.templates.in:22001
 msgid "Sonora"
-msgstr ""
+msgstr "Sonora"
 
 #. Type: select
 #. Choices
@@ -1719,19 +1721,26 @@ msgstr ""
 #. Description
 #. :sl3:
 #: ../apt-setup-udeb.templates:12001
+#, fuzzy
 msgid "Enable source repositories in APT?"
-msgstr ""
+msgstr "Otetaanko lähdekoodivarastot käyttöön aptissa?"
 
 #. Type: boolean
 #. Description
 #. :sl3:
 #: ../apt-setup-udeb.templates:12001
+#, fuzzy
 msgid ""
 "By default source repositories are listed in /etc/apt/sources.list (with "
 "appropriate \"deb-src\" lines) so that \"apt-get source\" works. However, if "
 "you don't need this feature, you can disable those entries and save some "
 "bandwidth during \"apt-get update\" operations."
 msgstr ""
+"Lähdekoodivarastot ovat oletuksena listattuna /etc/apt/sources.list "
+"tiedostoon (asianmukaisten \"deb-src\" rivien kera), jotta \"apt-get source\""
+" toimii. Kuitenkin, jos et tarvitse tätä ominaisuutta, voit poistaa nämä "
+"rivit käytöstä ja säästää jonkin verran kaistaa \"apt-get update\" "
+"operaatiossa."
 
 #. Type: note
 #. Description
@@ -2524,7 +2533,7 @@ msgstr ""
 #. :sl3:
 #: ../iso-scan.templates:18001
 msgid "Copy the ISO image into RAM before mounting it?"
-msgstr ""
+msgstr "Kopioidaanko ISO-levykuva keskusmuistiin ennen sen liittämistä?"
 
 #. Type: boolean
 #. Description
@@ -2533,6 +2542,7 @@ msgstr ""
 msgid ""
 "There is enough available memory to be able to copy the ISO image into RAM."
 msgstr ""
+"Keskusmuistia on riittävästi ISO-levykuvan kopioimiseksi keskusmuistiin."
 
 #. Type: boolean
 #. Description
@@ -2543,17 +2553,25 @@ msgid ""
 "don't do it, the disk will be actively used to access the ISO image and it "
 "can't be partitioned by the installer."
 msgstr ""
+"Tämä valinta mahdollistaa ISO-levykuvan sisältävän levyn uudelleenkäytön. "
+"Jos et kopioi levykuvaa muistiin, levyä käytetään aktiivisesti ISO-levykuvaa "
+"käyttäessä, eikä kyseistä levyä voida osioida asennusohjelman toimesta."
 
 #. Type: boolean
 #. Description
 #. :sl3:
 #: ../iso-scan.templates:18001
+#, fuzzy
 msgid ""
 "Note however that if you overwrite the disk containing the ISO image, you "
 "should not reboot before the end of the installation as you will not be able "
 "to restart the installer since the ISO image will be gone from the hard disk "
 "and memory."
 msgstr ""
+"Huomaa kuitenkin, että jos ylikirjoitat levyn, jolla ISO levykuva sijaitsee, "
+"sinun ei tule käynnistää konetta uudelleen ennenkuin asennus on valmis, "
+"sillä et voi käynnistää asennusta enää uudelleen, koska se on poistunut "
+"kovalevyltä ja keskusmuistista."
 
 #. Type: note
 #. Description
@@ -2894,16 +2912,12 @@ msgstr "Käynnistä SSH"
 #. Description
 #. :sl3:
 #: ../network-console.templates:8001
-#, fuzzy
-#| msgid ""
-#| "To continue the installation, please use an SSH client to connect to the "
-#| "IP address ${ip} and log in as the \"installer\" user. For example:"
 msgid ""
 "To continue the installation, please use an SSH client to connect to the IP "
 "address ${ips} and log in as the \"installer\" user. For example:"
 msgstr ""
-"Jatka asennusta ottamalla SSH-asiakasohjelmalla yhteys osoitteeseen ${ip} ja "
-"kirjautumalla sisään käyttäjänä ”installer”. Esimerkiksi:"
+"Jatka asennusta ottamalla SSH-asiakasohjelmalla yhteys osoitteeseen ${ips} "
+"ja kirjautumalla sisään käyttäjänä ”installer”. Esimerkiksi:"
 
 #. Type: note
 #. Description
@@ -2979,10 +2993,8 @@ msgstr "Käynnistä järjestelmä uudelleen käyttäen oikeaa ydintä (${DI_KERN
 #. Description
 #. :sl3:
 #: ../partman-iscsi.templates:1001
-#, fuzzy
-#| msgid "Configure encrypted volumes"
 msgid "Configure iSCSI volumes"
-msgstr "Tee salattujen taltioiden asetukset"
+msgstr "Tee iSCSI-taltioiden asetukset"
 
 #. #-#-#-#-#  templates.pot (partman-iscsi)  #-#-#-#-#
 #. Type: select
@@ -3033,19 +3045,15 @@ msgstr "Lopeta"
 #. Description
 #. :sl3:
 #: ../partman-iscsi.templates:2002
-#, fuzzy
-#| msgid "ZFS configuration action:"
 msgid "iSCSI configuration actions"
-msgstr "ZFS:n asetustoiminto:"
+msgstr "iSCSI-asetustoiminnot"
 
 #. Type: select
 #. Description
 #. :sl3:
 #: ../partman-iscsi.templates:2002
-#, fuzzy
-#| msgid "This menu allows you to configure encrypted volumes."
 msgid "This menu allows you to configure iSCSI volumes."
-msgstr "Tämän valikon kautta voit tehdä salattujen taltioiden asetukset."
+msgstr "Tämän valikon kautta voit tehdä iSCSI-taltioiden asetukset."
 
 #. Type: string
 #. Description
@@ -3058,10 +3066,13 @@ msgstr ""
 #. Description
 #. :sl3:
 #: ../partman-iscsi.templates:3001
+#, fuzzy
 msgid ""
 "Enter an IP address to scan for iSCSI targets. To use a port other than the "
 "default of 3260, use \"IP:port\" notation, for example \"1.2.3.4:3261\"."
 msgstr ""
+"Syötä IP-osoite etsiäksesi iSCSI kohteita. Käyttääksesi muuta, kuin "
+"oletusporttia 3260, käytä muotoa \"IP: portti\", esim. \"1.2.3.4:3261\""
 
 #. Type: string
 #. Description
@@ -3140,8 +3151,9 @@ msgstr ""
 #. Description
 #. :sl3:
 #: ../partman-iscsi.templates:9001
+#, fuzzy
 msgid "No iSCSI targets discovered"
-msgstr ""
+msgstr "iSCSI kohteita ei löytynyt"
 
 #. Type: error
 #. Description
@@ -3173,10 +3185,8 @@ msgstr "Valitse poistettava ZFS-varanto."
 #. Description
 #. :sl3:
 #: ../partman-iscsi.templates:12001
-#, fuzzy
-#| msgid "SILO installation failed"
 msgid "iSCSI login failed"
-msgstr "SILOn asennus epäonnistui"
+msgstr "iSCSI-kirjautuminen epäonnistui"
 
 #. Type: error
 #. Description
@@ -4989,10 +4999,8 @@ msgstr ""
 #. Description
 #. :sl3:
 #: ../partman-lvm.templates:32001
-#, fuzzy
-#| msgid "Error while deleting volume group"
 msgid "Error while creating volume group"
-msgstr "Virhe poistettaessa taltioryhmää"
+msgstr "Virhe luotaessa taltioryhmää"
 
 #. Type: error
 #. Description
@@ -5621,19 +5629,14 @@ msgstr "Varmista haluavasi pyyhkiä tiedot laitteelta ${DEVICE}?"
 #. Description
 #. :sl3:
 #: ../partman-crypto.templates:22001
-#, fuzzy
-#| msgid ""
-#| "The data on ${DEVICE} will be overwritten with random data. It can no "
-#| "longer be recovered after this step has completed. This is the last "
-#| "opportunity to abort the erase."
 msgid ""
 "The data on ${DEVICE} will be overwritten with zeroes. It can no longer be "
 "recovered after this step has completed. This is the last opportunity to "
 "abort the erase."
 msgstr ""
-"Laitteella ${DEVICE} olevien tietojen päälle kirjoitetaan satunnaismössöllä. "
-"Tietoja ei voi palauttaa kun tämä on tehty. Tämä on viimeinen mahdollisuus "
-"keskeyttää tietojen pyyhkiminen."
+"Laitteella ${DEVICE} olevien tietojen päälle kirjoitetaan nollia käyttäen. "
+"Levyllä olevia tietoja ei voi palauttaa, kun tämä toimenpide on tehty. Tämä "
+"on viimeinen mahdollisuus keskeyttää tietojen pyyhkiminen."
 
 #. Type: text
 #. Description
@@ -5653,6 +5656,9 @@ msgid ""
 "The installer is now overwriting ${DEVICE} with zeroes to delete its "
 "previous contents. This step may be skipped by cancelling this action."
 msgstr ""
+"Asennusohjelma kirjoittaa nyt levyn ${DEVICE} täyteen nollia ja poistaa "
+"aiemman sisällön. Tämä vaihe on mahdollista ohittaa perumalla tämän "
+"toimenpiteen."
 
 #. Type: error
 #. Description
@@ -5668,16 +5674,12 @@ msgstr "Tietojen pyyhkiminen laitteelta ${DEVICE} epäonnistui"
 #. Description
 #. :sl3:
 #: ../partman-crypto.templates:25001
-#, fuzzy
-#| msgid ""
-#| "An error occurred trying to erase the data on ${DEVICE}. The data has not "
-#| "been erased."
 msgid ""
 "An error occurred while trying to overwrite the data on ${DEVICE} with "
 "zeroes. The data has not been erased."
 msgstr ""
-"Pyyhittäessä tietoja laitteelta ${DEVICE} tapahtui virhe. Tietoja ei ole "
-"pyyhitty."
+"Laitteen ${DEVICE} tietojen päälle nollia kirjoittaessa tapahtui virhe. "
+"Tietoja ei ole pyyhitty."
 
 #. Type: boolean
 #. Description
@@ -5702,6 +5704,10 @@ msgid ""
 "cancelling this action, albeit at the expense of a slight reduction of the "
 "quality of the encryption."
 msgstr ""
+"Asennusohjelma ylikirjoittaa laitteen ${DEVICE} satunnaistiedoilla, jotta "
+"metatietojen vuotaminen salatulta taltiolta estetään. Tämä vaihe on "
+"mahdollista ohittaa perumalla tämä toimenpide, mutta sen seurauksena "
+"salauksen laatutaso laskee."
 
 #. Type: error
 #. Description
@@ -5712,6 +5718,9 @@ msgid ""
 "Recovery of the device's previous contents is possible and meta-information "
 "of its new contents may be leaked."
 msgstr ""
+"Laitteen ${DEVICE} tietoja satunnaistiedoin ylikirjoittaessa tapahtui virhe. "
+"Laitteen aiemman sisällön palauttaminen on mahdollista, ja uuden sisällön "
+"metatietojen vuotaminen on mahdollista."
 
 #. Type: text
 #. Description
