@@ -28,9 +28,9 @@ if [ ! -d $DI_COPY ] ; then
   exit 1
 fi
 
-if [ ! -d $DI_COPY/.svn ] ; then
-  echo No $DI_COPY/.svn directory found
-  echo $DI_COPY may not be a copy of Debian Installer SVN repository
+if [ ! -d $DI_COPY/.git ] ; then
+  echo No $DI_COPY/.git directory found
+  echo $DI_COPY may not be a copy of Debian Installer GIT repository
   exit 1
 fi
 
@@ -48,7 +48,7 @@ if [ ! -x $DI_COPY/scripts/l10n/gettext-helper ] ; then
 fi
 
 echo Synchronising repository
-svn up
+git pull
 
 if [ ! -f $DI_COPY/packages/po/$LANG.po ] ; then
   echo Running gettext-helper:
@@ -77,8 +77,8 @@ cat po/$LANG.po | sed "s/Language-Team:.*/Language-Team: $TEAM\\\\n\"/g" >po/$LA
 mv po/$LANG.po.new po/$LANG.po
 
 echo Committing new file
-svn add po/$LANG.po
-svn commit -m"[switch-language] Added master file for $LANG" po/$LANG.po
+git add po/$LANG.po
+git commit -m"[switch-language] Added master file for $LANG" po/$LANG.po
 
 echo Launching l10n-sync with the keep-revision switch
 $DI_COPY/scripts/l10n/l10n-sync --keep-revision=$LANG --commit $DI_COPY
