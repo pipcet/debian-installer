@@ -160,7 +160,7 @@ create_dir $COPY_TO_DIR
 create_dir $RUN_DIR
 create_dir $GRAPHS_DIR/data
 
-PROSPECTIVE="$WD/material/packages.cvs1/debian-installer/packages/po/PROSPECTIVE"
+PROSPECTIVE="$WD/material/packages.cvs1/packages/po/PROSPECTIVE"
 if [ ! -f $PROSPECTIVE ] ; then
   echo No PROSPECTIVE file found
   echo Please run $0 at least once for level 1 with \"fetch\"
@@ -189,7 +189,7 @@ fi
 
 # Do not accept working on a locked copy
 if [ "$LEVEL" = "1" ] ; then
-	LOCKFILE=$WD/material/packages.cvs$LEVEL/debian-installer/.l10n.lock
+	LOCKFILE=$WD/material/packages.cvs$LEVEL/.l10n.lock
 	if [ -f $LOCKFILE ] ; then
 		echo $LOCKFILE file detected.
 		echo $DI_COPY seems to be locked by another l10n process
@@ -219,13 +219,15 @@ echo "-------------- Level $LEVEL --------------"
 ## grep -v "^#" $PROSPECTIVE
 
 rm -rf $TARGET_DIR/*
-if [ "$FETCH" ]; then
-	for dist in testing unstable cvs ; do
-		for I in `find $WD/material/packages.$dist$LEVEL/ -name "*.po"`; do 
-			rm $I
-		done
-	done
-fi
+
+### Don't remove po files this way. This would remove all po files from the d-i git repo.
+#if [ "$FETCH" ]; then
+#	for dist in testing unstable cvs ; do
+#		for I in `find $WD/material/packages.$dist$LEVEL/ -name "*.po"`; do 
+#			rm $I
+#		done
+#	done
+#fi
 
 fancy_output
 
@@ -241,7 +243,7 @@ if [ "$FETCH" ]; then
 	cd $TEMPDIR
 
 	apt-get $APT_OPT update >/dev/null
-	for dist in testing unstable cvs ; do
+	for dist in testing unstable cvs ; do #####  removed cvs here. There is no need to apt-get sources for cvs here. That is done by the l10n/config/packages.cvs.commandsX scripts.
 		date -u >> $TARGET_DIR/packages-list-$dist
 #		echo -n "  $dist:	"
 		echo -n " $dist..."
@@ -252,25 +254,27 @@ if [ "$FETCH" ]; then
 	  		apt-get $APT_OPT -t $dist source $pkg >/dev/null  || echo "FAILED to fetch $pkg from $dist!" >> $TARGET_DIR/packages-list-$dist
 	  		rm -f *.tar.bz2 *.tar.xz *.tar.gz *.dsc *.diff.gz
 			
-#			create_dir $WD/material/packages.$dist$LEVEL/$pkg
+			create_dir $WD/material/packages.$dist$LEVEL/$pkg
   			mv ${pkg}* $WD/material/packages.$dist$LEVEL/$pkg
 			if [ "$pkg" = "debconf" ]; then
-				cd $WD/material/packages.$dist$LEVEL/$pkg/po
+				cd $WD/material/packages.$dist$LEVEL/$pkg/*/po
 				rm debconf.pot >/dev/null 2>&1 || true
 				make debconf.pot >/dev/null
 				chmod a+r debconf.pot
 			fi
-			head -n 1 $WD/material/packages.$dist$LEVEL/$pkg/debian/changelog >> $TARGET_DIR/packages-list-$dist
+			head -n 1 $WD/material/packages.$dist$LEVEL/$pkg/*/debian/changelog >> $TARGET_DIR/packages-list-$dist
 		done
-		if [ -f $WD/config/packages.$dist.commands$LEVEL ] ; then
-			cd $WD/material/packages.$dist$LEVEL/
-			sh $WD/config/packages.$dist.commands$LEVEL
-			cat $WD/config/packages.cvs$LEVEL >> $TARGET_DIR/packages-list-$dist
-		fi
-#		echo ""
 	done
 	cd $WD
-	echo ""
+
+# Updating git / getting sources for cvs packages
+echo "Getting sources for cvs packages"
+		if [ -f $WD/config/packages.cvs.commands$LEVEL ] ; then
+			cd $WD/material/packages.cvs$LEVEL/
+			sh $WD/config/packages.cvs.commands$LEVEL
+		fi
+#		echo ""
+
 else
 	echo "no download... (use 'fetch' to force)"
 
@@ -278,11 +282,24 @@ else
 		date -u > $TARGET_DIR/packages-list-$dist
 		echo "From $dist:" >> $TARGET_DIR/packages-list-$dist
 		for pkg in `cat $WD/config/packages.$dist$LEVEL`; do
-			head -n 1 $WD/material/packages.$dist$LEVEL/$pkg/debian/changelog >> $TARGET_DIR/packages-list-$dist
+			head -n 1 $WD/material/packages.$dist$LEVEL/$pkg/*/debian/changelog >> $TARGET_DIR/packages-list-$dist
 		done
 	done
 	echo ""
 fi
+
+# parse changelogs for cvs:
+      if [ "$LEVEL" = "1" ]; then
+#echo "Parsing changelogs for cvs level $LEVEL"
+           for pkg in `cat $WD/config/packages.cvs$LEVEL`; do
+                head -n 1 $WD/material/packages.cvs$LEVEL/packages/$pkg/debian/changelog >> $TARGET_DIR/packages-list-cvs
+           done
+      else
+#echo "Parsing changelogs for cvs level $LEVEL" # level 2+3 have different directory structure, so handled separately
+           for pkg in `cat $WD/config/packages.cvs$LEVEL`; do
+                head -n 1 $WD/material/packages.cvs$LEVEL/$pkg/debian/changelog >> $TARGET_DIR/packages-list-cvs
+           done
+      fi
 
 fancy_output
 
@@ -365,7 +382,7 @@ for dist in testing unstable cvs ; do
 		TU=0
 		TT=0
 		TF=0
-		for path in `cat config/paths.$dist$LEVEL`; do #for every package
+		for path in `cat $WD/config/paths.$dist$LEVEL`; do #for every package
 			if [ -e $WD/material/packages.$dist$LEVEL/$path/$lang.po ]; then #if the file does exist
 				LASTT=`translator $WD/material/packages.$dist$LEVEL/$path/$lang.po`
 				$GETTEXT/msgmerge -U $WD/material/packages.$dist$LEVEL/$path/$lang.po $WD/material/packages.$dist$LEVEL/$path/*.pot > /dev/null 2>&1

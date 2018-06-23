@@ -8,25 +8,21 @@ git clone -q git@salsa.debian.org:installer-team/tasksel.git
 rm -rf iso-codes
 git clone -q git@salsa.debian.org:debian/iso-codes.git
 
-#echo -n "console-data "
-#rm -rf console-data
-#mkdir console-data
-#svn -q co svn://svn.debian.org/console-data/trunk/debian console-data/debian
-
 #echo -n "popularity-contest "
 rm -rf popularity-contest
 mkdir popularity-contest
-git clone git@salsa.debian.org:popularity-contest-team/popularity-contest.git
+git clone -q git@salsa.debian.org:popularity-contest-team/popularity-contest.git
 
 #echo -n "grub2 "
 rm -rf grub2
 rm -rf grub
-git clone git@salsa.debian.org:grub-team/grub-legacy.git
+rm -rf grub-legacy
+git clone -q git@salsa.debian.org:grub-team/grub-legacy.git
 
 # echo -n "eject "
 # Where does eject live now?
-rm -rf eject
-git clone -q git+ssh://git.debian.org/git/collab-maint/eject
+#rm -rf eject
+#git clone -q git+ssh://git.debian.org/git/collab-maint/eject
 
 # echo -n "espeakup "
 rm -rf espeakup

@@ -1,15 +1,7 @@
 #d-i
-# the checkout directory *must* exist before, with at least a RO copy of D-I
-# We could of course check it out now but, most often, this copy will
-# be shared with the RW one used by l10n-sync
-mkdir -p debian-installer
-cd debian-installer/packages/po
-#for I in `find ./ -name "*.pot"`; do
-#	rm -f $I 
-#done
-# svn cleanup
-git pull
+# The checkout directory l10n/material/packages.cvs1 *must* exist before,
+# containing a complete checkout of d-i git repository.
+cd packages/
+mr up
 rm header.pot
-
-cd ../../..
-
+cd ..
