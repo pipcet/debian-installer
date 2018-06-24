@@ -1,22 +1,28 @@
 #!/bin/bash
 # Copyright (c) 2004-2006 Dennis Stampfer <seppy@debian.org>
 # Copyright (c) 2006 Christian Perrier <bubulle@debian.org>
+# Copyright (c) 2018 Holger Wansing <linux@wansing-online.de>
 # Licensed under the GNU General Public License
 #
 # Fetches sources for the installer packages and generates
 # some translation-related statistics.
 #
+# The script is running on dillon to generate the statistics webpages under
+# https://d-i.debian.org/l10n-stats/translation-status.html
+# 
 # Files:
-#   o packages-list
+#   o config/packages.$dist$LEVEL
 #     Names of the packages to download
-#   o languages 
-#     what languages to be checked?
-#   o paths
-#     where are the po-files located in this package?
+#   o config/packages.cvs.commands$LEVEL
+#     Commands to update the sources for packages from CVS
+#   o config/paths.$dist$LEVEL
+#     where are the po-files located?
 #     (sometimes more than one, like shadow)
+#   o config/languages 
+#     what languages to be checked?
 #
-#   o packages (folder)
-#     The packages get downloaded into $TEMPFILE, cleaned up
+#   o material/packages.$dist$LEVEL (folder)
+#     The packages get downloaded into $TEMPDIR, cleaned up
 #     and moved to packages/.
 # 
 #
@@ -152,9 +158,9 @@ fi
 
 # Create all the needed directories (safely)
 create_dir $WD
-create_dir $TARGET_DIR
 create_dir $CONFIG_DIR
 create_dir $RESULTS_DIR
+create_dir $TARGET_DIR
 create_dir $TARGET_DIR/POT
 create_dir $COPY_TO_DIR
 create_dir $RUN_DIR
@@ -268,7 +274,7 @@ if [ "$FETCH" ]; then
 	cd $WD
 
 # Updating git / getting sources for cvs packages
-echo "Getting sources for cvs packages"
+echo " cvs..."
 		if [ -f $WD/config/packages.cvs.commands$LEVEL ] ; then
 			cd $WD/material/packages.cvs$LEVEL/
 			sh $WD/config/packages.cvs.commands$LEVEL
