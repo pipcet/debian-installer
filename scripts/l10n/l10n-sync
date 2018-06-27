@@ -647,6 +647,7 @@ done
 if [ "$COMMIT" = "Y" ] ; then
 	log_cmd -p "Commit all general PO/POT files to GIT..." \
 		git add $DI_COPY/*/*.po
+		git add $DI_COPY/*/*.pot
 		git commit -uno -m "$COMMIT_MARKER Updated packages/po/* against package templates (from l10n-sync run at dillon)"
 		git push
 fi
