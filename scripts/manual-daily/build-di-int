@@ -2,6 +2,7 @@
 
 ROOT=$HOME/trunk/installer/doc/i18n/
 mainlog=$ROOT/build/logs/main.log
+www_destination=/srv/d-i.debian.org/www/d-i-internals
 
 echo "Build process for d-i internals" >$mainlog
 
@@ -69,6 +70,9 @@ update_from_git
 cd $ROOT/build
 echo "Building D-I Internals - en html" >>$mainlog
 ./buildone.sh en html
+
+# Move to www dir
+mv ./build.out/html/* $www_destination
 
 echo >>$mainlog
 echo "Done -- $(date -u)" >>$mainlog
