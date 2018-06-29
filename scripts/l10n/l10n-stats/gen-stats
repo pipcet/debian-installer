@@ -294,18 +294,20 @@ else
 	echo ""
 fi
 
+# When we only use the sublevelX master po|pot files for statistics, there
+# are no changelogs, which could be parsed.
 # parse changelogs for cvs:
-      if [ "$LEVEL" = "1" ]; then
+#      if [ "$LEVEL" = "1" ]; then
 #echo "Parsing changelogs for cvs level $LEVEL"
-           for pkg in `cat $WD/config/packages.cvs$LEVEL`; do
-                head -n 1 $WD/material/packages.cvs$LEVEL/packages/$pkg/debian/changelog >> $TARGET_DIR/packages-list-cvs
-           done
-      else
+#           for pkg in `cat $WD/config/packages.cvs$LEVEL`; do
+#                head -n 1 $WD/material/packages.cvs$LEVEL/packages/$pkg/debian/changelog >> $TARGET_DIR/packages-list-cvs
+#           done
+#      else
 #echo "Parsing changelogs for cvs level $LEVEL" # level 2+3 have different directory structure, so handled separately
-           for pkg in `cat $WD/config/packages.cvs$LEVEL`; do
-                head -n 1 $WD/material/packages.cvs$LEVEL/$pkg/debian/changelog >> $TARGET_DIR/packages-list-cvs
-           done
-      fi
+#           for pkg in `cat $WD/config/packages.cvs$LEVEL`; do
+#                head -n 1 $WD/material/packages.cvs$LEVEL/$pkg/debian/changelog >> $TARGET_DIR/packages-list-cvs
+#           done
+#      fi
 
 fancy_output
 
