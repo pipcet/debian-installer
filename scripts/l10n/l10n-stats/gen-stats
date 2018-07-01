@@ -393,7 +393,8 @@ for dist in testing unstable cvs ; do
 		for path in `cat $WD/config/paths.$dist$LEVEL`; do #for every package
 			if [ -e $WD/material/packages.$dist$LEVEL/$path/$lang.po ]; then #if the file does exist
 				LASTT=`translator $WD/material/packages.$dist$LEVEL/$path/$lang.po`
-				$GETTEXT/msgmerge -U $WD/material/packages.$dist$LEVEL/$path/$lang.po $WD/material/packages.$dist$LEVEL/$path/*.pot > /dev/null 2>&1
+#  Do not msgmerge here. Instead, let l10n-sync script do this job. holgerw
+#				$GETTEXT/msgmerge -U $WD/material/packages.$dist$LEVEL/$path/$lang.po $WD/material/packages.$dist$LEVEL/$path/*.pot > /dev/null 2>&1
       				SIGNS="  "	
 				#now check if a file has been modified by debconf-updatepo and output a *
 				#for lang in `cat $WD/languages`; do
