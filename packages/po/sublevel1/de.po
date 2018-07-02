@@ -2,13 +2,6 @@
 # Copyright (C) 2003 Software in the Public Interest, Inc.
 # #
 # This file is distributed under the same license as debian-installer.
-# Holger Wansing <linux@wansing-online.de>, 2008 - 2017.
-# Jens Seidel <jensseidel@users.sf.net>, 2005, 2006, 2007, 2008.
-# Dennis Stampfer <seppy@debian.org>, 2003, 2004, 2005.
-# Alwin Meschede <ameschede@gmx.de>, 2003, 2004.
-# Bastian Blank <waldi@debian.org>, 2003.
-# Jan Luebbe <jluebbe@lasnet.de>, 2003.
-# Thorsten Sauter <tsauter@gmx.net>, 2003.
 # #
 # Console-setup strings translations:
 # (identified by "./console-setup.templates")
@@ -18,6 +11,14 @@
 # Copyright (C) 2008-2011 Holger Wansing
 # #
 # Translations from iso-codes:
+# Translations taken from ICU SVN on 2007-09-09
+# Holger Wansing <linux@wansing-online.de>, 2008 - 2017, 2018.
+# Jens Seidel <jensseidel@users.sf.net>, 2005, 2006, 2007, 2008.
+# Dennis Stampfer <seppy@debian.org>, 2003, 2004, 2005.
+# Alwin Meschede <ameschede@gmx.de>, 2003, 2004.
+# Bastian Blank <waldi@debian.org>, 2003.
+# Jan Luebbe <jluebbe@lasnet.de>, 2003.
+# Thorsten Sauter <tsauter@gmx.net>, 2003.
 # Alastair McKinstry <mckinstry@computer.org>, 2001.
 # Björn Ganslandt <bganslan@gmx.net>, 2000, 2001.
 # Bruno Haible <bruno@clisp.org>, 2004, 2007.
@@ -27,14 +28,13 @@
 # Simon Hürlimann <simon.huerlimann@access.unizh.ch>, 2004.
 # Stefan Siegel <siegel@mandrakesoft.com>, 2001.
 # Tobias Quathamer <toddy@debian.org>, 2006, 2007, 2008, 2009, 2010.
-# Translations taken from ICU SVN on 2007-09-09
 # Wolfgang Rohdewald <wolfgang@rohdewald.de>, 2005.
 msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-27 14:00+0200\n"
-"PO-Revision-Date: 2018-06-16 16:03+0200\n"
+"PO-Revision-Date: 2018-07-02 20:08+0100\n"
 "Last-Translator: Holger Wansing <linux@wansing-online.de>\n"
 "Language-Team: German <debian-l10n-german@lists.debian.org>\n"
 "Language: de\n"
@@ -929,7 +929,6 @@ msgstr ""
 #. Type: select
 #. Description
 #: ../pkgsel.templates:9002
-#, fuzzy
 #| msgid ""
 #| "By default, security updates are automatically installed by the "
 #| "unattended-upgrades package. Alternatively, you can opt-out from this "
@@ -939,9 +938,10 @@ msgid ""
 "advisories should be reviewed before manual installation of the updates "
 "using standard package management tools."
 msgstr ""
-"Standardmäßig werden Sicherheits-Updates durch das unattended-upgrades-Paket "
-"automatisch installiert. Alternativ dazu können Sie dies abwählen und "
-"Updates mit den üblichen Paketmanagement-Werkzeugen händisch installieren."
+"Standardmäßig werden Sicherheits-Updates nicht automatisch installiert, da"
+" vor der händischen "
+"Installation der Updates mit den normalen Paketmanagement-Werkzeugen die "
+"Sicherheitsankündigungen gelesen werden sollten."
 
 #. Type: select
 #. Description
@@ -954,6 +954,15 @@ msgid ""
 "fully backward-compatible, or where the security advisory requires the "
 "administrator to perform some other manual operation."
 msgstr ""
+"Alternativ kann das unattended-upgrades-Paket installiert werden, das dann "
+"Sicherheits-Updates automatisch installiert. Sie sollten aber beachten, dass "
+"die automatische Installation solcher Updates gelegentlich dazu führen kann, "
+"dass Dienste, die von dieser Maschine bereitgestellt werden, nicht verfügbar"
+" sind. "
+"Das kann passieren, wenn die Updates nicht vollständig abwärts kompatibel"
+" sind "
+"oder wenn gemäß der Sicherheitsankündigungen weitere händische Maßnahmen "
+"durch den Systemadministrator nötig sind."
 
 #. Type: text
 #. Description
