@@ -52,9 +52,9 @@ is_updated() {
     local lang=$1
 
     if uses_po "$lang"; then
-        grepexp="^[UA].[[:space:]]*po/${lang}/.*\.po$"
+        grepexp="^[[:space:]]po/${lang}/"
     else
-        grepexp="^[UA].[[:space:]]*${lang}/"
+        grepexp="^[[:space:]]${lang}/"
     fi
 
     if egrep -q $grepexp $logdir/git_pull.log; then
@@ -134,14 +134,15 @@ commit_to_git() {
         echo "Committing changed po files:" >>$logdir/git_push.log
            git add */*.po
            git commit -m "[SILENT_COMMIT] Update of POT and PO files for the installation-guide" >>$logdir/git_push.log 2>&1
+           git push
 
 ###        checkfatal "$?" "committing POT/PO files to SVN"
 
 ###        checkfatal "checking for conflicts in manual/po after 'git push'"
-        fi
-    else
-        echo "  No updates to commit" >>$mainlog
-    fi
+#        fi
+#    else
+#        echo "  No updates to commit" >>$mainlog
+#    fi
 }
 
 build_lang() {
@@ -243,8 +244,8 @@ build_lang() {
         [ $BUILDRESULT = 0 ] && echo >>$mainlog
 
 ###        if [ "$DI_LOCAL_BUILD" != 1 ]; then
-###            # Upload logfile to alioth
-### FIXME            scp $logdir/$lang.log alioth.debian.org:$ALIOTH_MAN_PATH/logs/
+###            # Upload logfiles
+###            NO NEED TO UPLOAD LOGFILES TO SOMEWHERE
 ###            if [ $? = 0 ]; then
 ###                echo "  Upload of $lang.log success" >>$mainlog
 ###            else
@@ -316,9 +317,8 @@ architectures=$(egrep -v "^[[:space:]]*(|#.*)$" $ROOT/bin/archlist | cut -f 1)
 ## Clean old files
 rm -R $destination/* &>/dev/null
 
-export manual_release="stretch"
-### FIXME    fix 'for_alioth'
-export manual_target="for_alioth"
+export manual_release="buster"
+export manual_target="for_dillon"
 
 if [ "$DI_BUILDING_FROM_MAIN" ] && [ "$DI_BUILD_MANUAL" = 0 ]; then
     echo "Not building D-I installation-guide (as per configuration settings)" >$mainlog
@@ -374,9 +374,12 @@ fi
 
 # Calculate statistics for xml-based languages here, instead of the old behaviour
 # (in create-index), to avoid xml statistics for po-based languages. holgerw
-echo "- calculating translation statistics for XML-based translations..." >>$mainlog
-$ROOT/bin/translation-stats | sort -k 2,2nr >$logdir/tr-stats
-echo >>$mainlog
+#
+# Update: since moving to git, we cannot calculate statistics for xml-based
+# translations anymore (svn commit revision numbers are missing for this).
+#echo "- calculating translation statistics for XML-based translations..." >>$mainlog
+#$ROOT/bin/translation-stats | sort -k 2,2nr >$logdir/tr-stats
+#echo >>$mainlog
 
 # Prepare for the build of translations
 echo "Updating POT and PO files..." >>$mainlog
@@ -419,36 +422,36 @@ done
             echo "Info: updating PO files for nn" >$logdir/nn.log
             update_po nn >>$logdir/nn.log 2>&1
             checkfatal "$?" "updating po for nn"
-   scp $logdir/nn.log alioth.debian.org:$ALIOTH_MAN_PATH/logs/
-            if [ $? = 0 ]; then
-                echo "  Upload of nn.log success" >>$mainlog
-            else
-                echo "  Upload of nn.log failed" >>$mainlog
-            fi
+#   scp $logdir/nn.log alioth.debian.org:$ALIOTH_MAN_PATH/logs/
+#            if [ $? = 0 ]; then
+#                echo "  Upload of nn.log success" >>$mainlog
+#            else
+#                echo "  Upload of nn.log failed" >>$mainlog
+#            fi
    fi
 
    if is_updated en; then
             echo "Info: updating PO files for ro" >$logdir/ro.log
             update_po ro >>$logdir/ro.log 2>&1
             checkfatal "$?" "updating po for ro"
-   scp $logdir/ro.log alioth.debian.org:$ALIOTH_MAN_PATH/logs/
-            if [ $? = 0 ]; then
-                echo "  Upload of ro.log success" >>$mainlog
-            else
-                echo "  Upload of ro.log failed" >>$mainlog
-            fi
+#   scp $logdir/ro.log alioth.debian.org:$ALIOTH_MAN_PATH/logs/
+#            if [ $? = 0 ]; then
+#                echo "  Upload of ro.log success" >>$mainlog
+#            else
+#                echo "  Upload of ro.log failed" >>$mainlog
+#            fi
    fi
 
    if is_updated en; then
             echo "Info: updating PO files for tl" >$logdir/tl.log
             update_po tl >>$logdir/tl.log 2>&1
             checkfatal "$?" "updating po for tl"
-   scp $logdir/tl.log alioth.debian.org:$ALIOTH_MAN_PATH/logs/
-            if [ $? = 0 ]; then
-                echo "  Upload of tl.log success" >>$mainlog
-            else
-                echo "  Upload of tl.log failed" >>$mainlog
-            fi
+#   scp $logdir/tl.log alioth.debian.org:$ALIOTH_MAN_PATH/logs/
+#            if [ $? = 0 ]; then
+#                echo "  Upload of tl.log success" >>$mainlog
+#            else
+#                echo "  Upload of tl.log failed" >>$mainlog
+#            fi
    fi
 
 echo >>$mainlog
@@ -478,15 +481,11 @@ if [ $NR_BUILDS -gt 0 ]; then
     cd $destination
 
     if [ "$DI_LOCAL_BUILD" = 1 ]; then
-        echo "Local build! No changes have been uploaded." >>$mainlog
+        echo "Local build! No changes have been permanently saved." >>$mainlog
     else
-### FIXME        echo "rsyncing files to alioth..." >>$mainlog
-###        rsync -qz --perms * alioth.debian.org\:$ALIOTH_MAN_PATH/ >>$mainlog 2>&1
-        # rsync subdirectories individually so we can also delete obsolete files
-###        for i in $(find . -type d | grep -v "^\.$"); do
-###            rsync -qzr --perms --delete "$i" alioth.debian.org\:$ALIOTH_MAN_PATH/ >>$mainlog 2>&1
-###            checkfatal "$?" "rsync of '$i'"
-        done
+### FIXME        Copying files to www dir on dillon
+###
+    echo
     fi
 else
     echo "No languages built." >>$mainlog
@@ -498,7 +497,7 @@ if [ "$DI_LOCAL_BUILD" = 1 ]; then
 	# Needed to avoid conflicts with next git pull
         echo "Reverting changes in PO files..." >>$mainlog
         cd $source/po
-	git checkout -- * >>$mainlog 2>&1
+	git checkout -- */*.po >>$mainlog 2>&1
 fi
 
 echo >>$mainlog
