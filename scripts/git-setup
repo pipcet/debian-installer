@@ -3,6 +3,7 @@ set -e
 
 ANON_BASE_URL=https://salsa.debian.org/installer-team/
 AUTH_BASE_URL=git@salsa.debian.org:installer-team/
+COMMON_URL_REGEXP='salsa\.debian\.org.installer-team\/'
 
 runshow () {
 	echo "$@"
@@ -24,7 +25,7 @@ config_git_auth () {
 if [ -d .svn ]; then
     URL=$(LANG=C svn info| grep '^URL' | awk '{print $2}')
 elif [ -d .git ]; then
-    URL=$(LANG=C git remote -v | awk '/salsa/ {if (NR==1) {print $2}}')
+    URL=$({ git config --local --get-regexp '^remote\..*\.pushUrl$' || true; git config --local --get-regexp '^remote\..*\.url$'; } | awk '/'"$COMMON_URL_REGEXP"'/ { print $2; exit }')
 else
     echo "Can't work out what VCS you're using. Abort." >&2
     exit 1
