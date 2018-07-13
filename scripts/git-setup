@@ -10,13 +10,14 @@ runshow () {
 }
 
 config_git_anon () {
-	# rewrite urls to use git://
+	# never use ssh
 	runshow git config --global "url.$ANON_BASE_URL.insteadOf" "$AUTH_BASE_URL"
+	runshow git config --global --unset "url.$AUTH_BASE_URL.pushInsteadOf"
 }
 
 config_git_auth () {
-	config_git_anon # speeds up checkouts
 	# use ssh for pushes
+	runshow git config --global "url.$ANON_BASE_URL.insteadOf" "$AUTH_BASE_URL"
 	runshow git config --global "url.$AUTH_BASE_URL.pushInsteadOf" "$ANON_BASE_URL"
 }
 
