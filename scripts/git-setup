@@ -1,6 +1,9 @@
 #!/bin/sh
 set -e
 
+ANON_BASE_URL=https://salsa.debian.org/installer-team/
+AUTH_BASE_URL=git@salsa.debian.org:installer-team/
+
 runshow () {
 	echo "$@"
 	eval "$@"
@@ -8,13 +11,13 @@ runshow () {
 
 config_git_anon () {
 	# rewrite urls to use git://
-	runshow git config --global 'url.https://salsa.debian.org/installer-team/.insteadOf' 'git@salsa.debian.org:installer-team/'
+	runshow git config --global "url.$ANON_BASE_URL.insteadOf" "$AUTH_BASE_URL"
 }
 
 config_git_auth () {
 	config_git_anon # speeds up checkouts
 	# use ssh for pushes
-	runshow git config --global 'url.git@salsa.debian.org:installer-team/.pushInsteadOf' 'https://salsa.debian.org/installer-team/'
+	runshow git config --global "url.$AUTH_BASE_URL.pushInsteadOf" "$ANON_BASE_URL"
 }
 
 if [ -d .svn ]; then
