@@ -5,8 +5,7 @@
 
 mainlog=$logdir/main.log
 
-### FIXME  fix ALIOTH_MAN_PATH
-#ALIOTH_MAN_PATH=/srv/alioth.debian.org/chroot/home/groups/d-i/htdocs/manual
+DILLON_MANUAL_PATH=/srv/d-i.debian.org/www/manual
 
 # Remove xml-containing directories for po-based languages, since they will
 # confuse translation statistics for xml-based languages.
@@ -469,7 +468,7 @@ for lang in $translations; do
 done
 
 echo >>$mainlog
-# Copy the created files (if any) to alioth.debian.org
+# Copy the created files (if any) to www dir
 if [ $NR_BUILDS -gt 0 ]; then
     echo "$NR_BUILDS languages have been (partially) built." >>$mainlog
 
@@ -483,9 +482,9 @@ if [ $NR_BUILDS -gt 0 ]; then
     if [ "$DI_LOCAL_BUILD" = 1 ]; then
         echo "Local build! No changes have been permanently saved." >>$mainlog
     else
-### FIXME        Copying files to www dir on dillon
-###
-    echo
+       # Move to www dir
+       rm -rf $DILLON_MANUAL_PATH/*
+       mv $destination/* $DILLON_MANUAL_PATH
     fi
 else
     echo "No languages built." >>$mainlog
