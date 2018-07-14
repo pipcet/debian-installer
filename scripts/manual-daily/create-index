@@ -87,14 +87,14 @@ build_link_table
 
 cat $ROOT/bin/index.single >>$pagefile
 
-# Next, we build the table for the languages that have only i386 built
+# Next, we build the table for the languages that have only amd64 built
 
 # Order of languages is alphabetic by name.
 languages=$(egrep -v "^[[:space:]]*(|#.*)$" $ROOT/bin/langlist | sort -k 7,7 |
 	    cut -f 1,2 | egrep "S$" | cut -f 1)
 
 # Order of architectures is alphabetic by name.
-architectures="i386"
+architectures="amd64"
 
 build_link_table
 
