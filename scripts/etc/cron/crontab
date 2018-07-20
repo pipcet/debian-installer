@@ -26,6 +26,7 @@ DAILY_LOGS_DIR=/home/d-i/daily-build-logs.git
 #0 22 * * * cd $DI; mr -q up ; nice -n 19 $DI/scripts/l10n/l10n-sync --levels=5 --online --commit $DI
 
 #0 23 * * * cd $DI/installation-guide && git pull ; cd build && destination=$WWW/manual ./build.sh >/dev/null ; ~/bin/push-www
+#0 23 * * * cd $DI_MANUAL_DAILY/ ; nice -n 19 bin/build-manual ; ~/bin/push-www
 
 #55 2 * * * cd $MANUAL-DAILY; && ./build-di-int >/dev/null ; ~/bin/push-www
 
