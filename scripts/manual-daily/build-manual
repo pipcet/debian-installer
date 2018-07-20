@@ -471,6 +471,7 @@ echo >>$mainlog
 # Copy the created files (if any) to www dir
 if [ $NR_BUILDS -gt 0 ]; then
     echo "$NR_BUILDS languages have been (partially) built." >>$mainlog
+    cat $mainlog
 
     echo >>$mainlog
     echo "Create index page:" >>$mainlog
@@ -482,9 +483,9 @@ if [ $NR_BUILDS -gt 0 ]; then
     if [ "$DI_LOCAL_BUILD" = 1 ]; then
         echo "Local build! No changes have been permanently saved." >>$mainlog
     else
-       # Move to www dir
-       rm -rf $DILLON_MANUAL_PATH/*
-       mv $destination/* $DILLON_MANUAL_PATH
+       # Copy to www dir
+       cp -Ru $destination/* $DILLON_MANUAL_PATH
+       rm -rf $destination/*
     fi
 else
     echo "No languages built." >>$mainlog
