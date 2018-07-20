@@ -13,8 +13,8 @@
 # Files:
 #   o config/packages.$dist$LEVEL
 #     Names of the packages to download
-#   o config/packages.cvs.commands$LEVEL
-#     Commands to update the sources for packages from CVS
+#   o config/packages.vcs.commands$LEVEL
+#     Commands to update the sources for packages from VCS
 #   o config/paths.$dist$LEVEL
 #     where are the po-files located?
 #     (sometimes more than one, like shadow)
@@ -166,7 +166,7 @@ create_dir $COPY_TO_DIR
 create_dir $RUN_DIR
 create_dir $GRAPHS_DIR/data
 
-PROSPECTIVE="$WD/material/packages.cvs1/packages/po/PROSPECTIVE"
+PROSPECTIVE="$WD/material/packages.vcs1/packages/po/PROSPECTIVE"
 if [ ! -f $PROSPECTIVE ] ; then
   echo No PROSPECTIVE file found
   echo Please run $0 at least once for level 1 with \"fetch\"
@@ -195,7 +195,7 @@ fi
 
 # Do not accept working on a locked copy
 if [ "$LEVEL" = "1" ] ; then
-	LOCKFILE=$WD/material/packages.cvs$LEVEL/.l10n.lock
+	LOCKFILE=$WD/material/packages.vcs$LEVEL/.l10n.lock
 	if [ -f $LOCKFILE ] ; then
 		echo $LOCKFILE file detected.
 		echo $DI_COPY seems to be locked by another l10n process
@@ -211,7 +211,7 @@ cd $WD
 touch "${RUN_DIR}/$LEVEL.lock"
 
 # Create the directories for the material
-for dist in testing unstable cvs ; do 
+for dist in testing unstable vcs ; do 
 	create_dir $WD/material/packages.$dist$LEVEL
 done
 
@@ -228,7 +228,7 @@ rm -rf $TARGET_DIR/*
 
 ### Don't remove po files this way. This would remove all po files from the d-i git repo.
 #if [ "$FETCH" ]; then
-#	for dist in testing unstable cvs ; do
+#	for dist in testing unstable vcs ; do
 #		for I in `find $WD/material/packages.$dist$LEVEL/ -name "*.po"`; do 
 #			rm $I
 #		done
@@ -249,7 +249,7 @@ if [ "$FETCH" ]; then
 	cd $TEMPDIR
 
 	apt-get $APT_OPT update >/dev/null
-	for dist in testing unstable ; do #####  removed cvs here. There is no need to apt-get sources for cvs here. That is done by the l10n/config/packages.cvs.commandsX scripts.
+	for dist in testing unstable ; do #####  removed cvs here. There is no need to apt-get sources for vcs sources here. That is done by the l10n/config/packages.vcs.commandsX scripts.
 		date -u >> $TARGET_DIR/packages-list-$dist
 #		echo -n "  $dist:	"
 		echo -n " $dist..."
@@ -273,11 +273,11 @@ if [ "$FETCH" ]; then
 	done
 	cd $WD
 
-# Updating git / getting sources for cvs packages
-echo " cvs..."
-		if [ -f $WD/config/packages.cvs.commands$LEVEL ] ; then
-			cd $WD/material/packages.cvs$LEVEL/
-			sh $WD/config/packages.cvs.commands$LEVEL
+# Updating git / getting sources for vcs packages
+echo " vcs..."
+		if [ -f $WD/config/packages.vcs.commands$LEVEL ] ; then
+			cd $WD/material/packages.vcs$LEVEL/
+			sh $WD/config/packages.vcs.commands$LEVEL
 		fi
 #		echo ""
 
@@ -294,26 +294,12 @@ else
 	echo ""
 fi
 
-# When we only use the sublevelX master po|pot files for statistics, there
-# are no changelogs, which could be parsed.
-# parse changelogs for cvs:
-#      if [ "$LEVEL" = "1" ]; then
-#echo "Parsing changelogs for cvs level $LEVEL"
-#           for pkg in `cat $WD/config/packages.cvs$LEVEL`; do
-#                head -n 1 $WD/material/packages.cvs$LEVEL/packages/$pkg/debian/changelog >> $TARGET_DIR/packages-list-cvs
-#           done
-#      else
-#echo "Parsing changelogs for cvs level $LEVEL" # level 2+3 have different directory structure, so handled separately
-#           for pkg in `cat $WD/config/packages.cvs$LEVEL`; do
-#                head -n 1 $WD/material/packages.cvs$LEVEL/$pkg/debian/changelog >> $TARGET_DIR/packages-list-cvs
-#           done
-#      fi
 
 fancy_output
 
 echo "Number of strings:"
 
-for dist in testing unstable cvs ; do
+for dist in testing unstable vcs ; do
 	echo -n "  In $dist... "
 	#check how many strings at all
 	eval "TOTAL_$dist=0"
@@ -326,8 +312,8 @@ for dist in testing unstable cvs ; do
 		# If the POT file is invalid, return 0
 		if [ -z "$U" ] ; then U=0 ; fi
 		
-		# Copy files only for cvs repos
-		if [ "$dist" = "cvs" ] ; then
+		# Copy files only for vcs repos
+		if [ "$dist" = "vcs" ] ; then
 			cp $WD/material/packages.$dist$LEVEL/$path/*.pot $TARGET_DIR/POT/${path//\//_}.pot
 		fi
 		
@@ -363,11 +349,11 @@ rm -rf $TEMPDIR
 
 
 echo "Statistics:"
-for dist in testing unstable cvs ; do
+for dist in testing unstable vcs ; do
 #	echo "Statistics for $dist:"
 	echo "  $dist..."
 #	echo -n "  "
-	if [ "$dist" = "cvs" ] ; then
+	if [ "$dist" = "vcs" ] ; then
 		ext=""
 	else
 		ext=".$dist"
@@ -537,9 +523,9 @@ echo -n "Final steps: "
 
 echo -n "Ranking... "
 # Generate ranking
-for dist in testing unstable cvs; do
+for dist in testing unstable vcs; do
 #	echo -n " $dist..."
-	if [ "$dist" = "cvs" ] ; then
+	if [ "$dist" = "vcs" ] ; then
 		ext=""
 	else
 		ext=".$dist"
@@ -559,8 +545,8 @@ if [ $LEVEL = 1 ]; then
 	echo -n "Moving master sublevel files... "
         for level in `seq 1 $SUBLEVELS`; do
 		mkdir $TARGET_DIR/master/sublevel${level}
-		cp $WD/material/packages.cvs1/debian-installer/packages/po/sublevel${level}/*po $TARGET_DIR/master/sublevel${level}
-		cp $WD/material/packages.cvs1/debian-installer/packages/po/sublevel${level}/*pot $TARGET_DIR/master/sublevel${level}
+		cp $WD/material/packages.vcs1/debian-installer/packages/po/sublevel${level}/*po $TARGET_DIR/master/sublevel${level}
+		cp $WD/material/packages.vcs1/debian-installer/packages/po/sublevel${level}/*pot $TARGET_DIR/master/sublevel${level}
 	done
 fi
 
