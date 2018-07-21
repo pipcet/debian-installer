@@ -1,8 +1,12 @@
 #!/bin/bash
 
+# Build the D-I Internals and the webpage with the list of translators for d-i
+# and publish to www dir
+
 ROOT=$HOME/trunk/installer/doc/i18n/
 mainlog=$ROOT/build/logs/main.log
 www_destination=/srv/d-i.debian.org/www/d-i-internals
+www_destination_languages_html=/srv/d-i.debian.org/www/
 
 echo "Build process for d-i internals" >$mainlog
 
@@ -71,6 +75,11 @@ echo "Building D-I Internals - en html" >>$mainlog
 
 # Move to www dir
 mv ./build.out/html/* $www_destination
+
+# Generate webpage with the list of translators
+cd $ROOT
+xsltproc languages.xml >languages.html
+mv languages.html $www_destination_languages_html
 
 echo >>$mainlog
 echo "Done -- $(date -u)" >>$mainlog
