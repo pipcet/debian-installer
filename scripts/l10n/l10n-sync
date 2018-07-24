@@ -348,6 +348,10 @@ fi
 ### From here we start the real work
 log "Starting l10n-sync run - $(date -u)"
 
+COMMITLOGFILE=$DI_COPY/l10n-sync_commit.log
+echo "Starting l10n-sync run - $(date -u)" >$COMMITLOGFILE
+echo "" >>$COMMITLOGFILE
+
 # First, update the packages/po directory
 # to get the run-l10n-sync file
 cd $DI_COPY/packages/po
@@ -430,6 +434,9 @@ if [ "$UPDATEPO" = "Y" ]; then
 		if [ "$COMMIT" = "Y" ] ; then
 #			if ! git status >/dev/null 2>&1; then
 				git add po/templates.pot
+				echo "Commit changed templates.pot to GIT" >>$COMMITLOGFILE
+				git status >>$COMMITLOGFILE
+				echo "" >>$COMMITLOGFILE
 				git commit -uno -m "$COMMIT_MARKER Update templates.pot (from l10n-sync run at dillon)"
 				git push
 #			fi
@@ -648,6 +655,9 @@ if [ "$COMMIT" = "Y" ] ; then
 	log_cmd -p "Commit all general PO/POT files to GIT..." \
 		git add $DI_COPY/*/*.po
 		git add $DI_COPY/*/*.pot
+		echo "Commit general PO/POT files to GIT:" >>$COMMITLOGFILE
+		git status >>$COMMITLOGFILE
+		echo "" >>$COMMITLOGFILE
 		git commit -uno -m "$COMMIT_MARKER Updated packages/po/* against package templates (from l10n-sync run at dillon)"
 		git push
 fi
@@ -721,6 +731,9 @@ EOF
 		if [ "$COMMIT" = "Y" ] ; then
 #			if ! git status >/dev/null 2>&1; then
 				git add *.po
+				echo "Commit changed/added po files to GIT - $package:" >>$COMMITLOGFILE
+				git status >>$COMMITLOGFILE
+				echo "" >>$COMMITLOGFILE
 				git commit -uno -m "$COMMIT_MARKER Commit changed/added po files (from l10n-sync run at dillon)"
 				git push
 #			fi
