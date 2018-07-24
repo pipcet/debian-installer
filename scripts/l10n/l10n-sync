@@ -434,7 +434,7 @@ if [ "$UPDATEPO" = "Y" ]; then
 		if [ "$COMMIT" = "Y" ] ; then
 #			if ! git status >/dev/null 2>&1; then
 				git add po/templates.pot
-				echo "Commit changed templates.pot to GIT" >>$COMMITLOGFILE
+				echo "Commit changed templates.pot to GIT - $i" >>$COMMITLOGFILE
 				git status >>$COMMITLOGFILE
 				echo "" >>$COMMITLOGFILE
 				git commit -uno -m "$COMMIT_MARKER Update templates.pot (from l10n-sync run at dillon)"
