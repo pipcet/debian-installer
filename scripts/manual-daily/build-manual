@@ -149,7 +149,7 @@ build_lang() {
 
     BUILDRESULT=0
     cd $source/build
-    if is_updated "$lang" || do_extra "$lang"; then
+    if is_updated "$lang" || do_extra "$lang" || [ "$EN_UPDATED" ]; then
         case "$(egrep "^$lang[[:space:]]" $ROOT/bin/langlist | cut -f 2)" in
             Y)
                 formats=$(get_formats $lang)
@@ -386,7 +386,7 @@ for lang in $translations; do
     langlog=$logdir/$lang.log
     : >$langlog
 
-    if is_updated "$lang" || do_extra "$lang"; then
+    if is_updated "$lang" || do_extra "$lang" || [ "$EN_UPDATED" ]; then
         echo "Preparing build for language $lang - $(date -u)" >>$langlog
     fi
 
@@ -400,7 +400,7 @@ for lang in $translations; do
         fi
     fi
 
-    if is_updated "$lang" || do_extra "$lang"; then
+    if is_updated "$lang" || do_extra "$lang" || [ "$EN_UPDATED" ]; then
         if uses_po "$lang"; then
             echo "Info: building installation-guide from PO files" >>$langlog
             generate_xml $lang >>$langlog 2>&1
