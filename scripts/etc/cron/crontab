@@ -7,7 +7,7 @@ MAILTO=kibi,holgerw
 DI=/home/d-i/trunk
 
 WWW=/srv/d-i.debian.org/www
-MANUAL-DAILY=$DI/scripts/manual-daily
+DI_MANUAL_DAILY=/home/d-i/d-i_manual.daily/
 DAILY_IMAGES_DIR=/srv/d-i.debian.org/www/daily-images
 DAILY_LOGS_DIR=/home/d-i/daily-build-logs.git
 
@@ -26,9 +26,9 @@ DAILY_LOGS_DIR=/home/d-i/daily-build-logs.git
 #0 22 * * * cd $DI; mr -q up ; nice -n 19 $DI/scripts/l10n/l10n-sync --levels=5 --online --commit $DI
 
 #0 23 * * * cd $DI/installation-guide && git pull ; cd build && destination=$WWW/manual ./build.sh >/dev/null ; ~/bin/push-www
-#0 23 * * * cd $DI_MANUAL_DAILY/ ; nice -n 19 bin/build-manual ; ~/bin/push-www
+0 23 * * * cd $DI_MANUAL_DAILY ; nice -n 19 bin/build-manual ; ~/bin/push-www
 
-#55 2 * * * cd $MANUAL-DAILY; && ./build-di-int >/dev/null ; ~/bin/push-www
+55 2 * * * cd $DI_MANUAL_DAILY ; && ./build-di-int >/dev/null ; ~/bin/push-www
 
 # Let the last */4 entry call push-www:
 10 */4 * * * cd $DI; mr -q up; cd scripts; ./git-summary > $WWW/git-summary.html
