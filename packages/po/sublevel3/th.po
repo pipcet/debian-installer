@@ -5230,7 +5230,7 @@ msgstr "กรุณาตรวจสอบสูตรการแบ่งพ
 #. :sl3:
 #: ../partman-auto-lvm.templates:11001
 msgid "Amount of volume group to use for guided partitioning:"
-msgstr ""
+msgstr "ขนาดของกลุ่มโวลุ่มที่จะใช้กับการพาร์ทิชันแบบชี้แนะ:"
 
 #. Type: string
 #. Description
@@ -5242,45 +5242,54 @@ msgid ""
 "able to grow logical volumes later using the LVM tools, so using a smaller "
 "part of the volume group at installation time may offer more flexibility."
 msgstr ""
+"คุณอาจจะใช้กลุ่มโวลุ่มทั้งหมดหรือแค่บางส่วนสำหรับการพาร์ทิชันแบบชี้แนะ "
+"ถ้าคุณใช้บางส่วนหรือเพิ่มดิสก์ขึ้นที่หลังคุณสามารถที่จะขยายขนาดของมันขึ้นโดยใช้เครื่องมือ LVM "
+"ดังนั้นใช้แค่ส่วนน้อยของกลุ่มโวลุ่มตอนติดตั้งอาจทำให้ปรับเปลี่ยนภายหลังไดง่าย"
 
 #. Type: string
 #. Description
 #. :sl3:
 #: ../partman-auto-lvm.templates:11001
-#, fuzzy
-#| msgid ""
-#| "The minimum size for this partition is ${MINSIZE} (or ${PERCENT}) and its "
-#| "maximum size is ${MAXSIZE}."
 msgid ""
 "The minimum size of the selected partitioning recipe is ${MINSIZE} (or "
 "${PERCENT}); please note that the packages you choose to install may require "
 "more space than this. The maximum available size is ${MAXSIZE}."
 msgstr ""
-"ขนาดที่เล็กที่สุดสำหรับพาร์ทิชันนี้คือ ${MINSIZE} หรือ ${PERCENT} และขนาดที่ใหญ่ที่สุดคือ "
-"${MAXSIZE}"
+"ขนาดอย่างน้อยของสูตรพาร์ทิชันที่เลือกคือ ${MINSIZE} (หรือ ${PERCENT}); "
+"ควรจำไว้ว่าแพคเกจที่คุณเลือกอาจจะต้องการพื้นที่มากกว่านี้ ขนาดใหญ่ที่สุดที่ใช้ได้คือ ${MAXSIZE}."
+
+#. Type: string
+#. Description
+#. :sl3:
+#: ../partman-auto-lvm.templates:11001
+#, no-c-format
+msgid ""
+"Hint: \"max\" can be used as a shortcut to specify the maximum size, or "
+"enter a percentage (e.g. \"20%\") to use that percentage of the maximum size."
+msgstr ""
+"คำแนะนำ: คุณสามารถใช้ \"max\" เป็นคำตอบถ้าต้องการใช้ขนาดที่ใหญ่ที่สุด "
+"หรือจะป้อนเป็นเปอร์เซ็นต์ (เช่น \"20%\") เพื่อกำหนดขนาดเป็นเปอร์เซ็นต์ของขนาดที่ใหญ่ที่สุดก็ได้"
 
 #. Type: error
 #. Description
 #. :sl3:
 #: ../partman-auto-lvm.templates:12001
-#, fuzzy
-#| msgid "Invalid size"
 msgid "Invalid input"
-msgstr "ขนาดไม่ถูกต้อง"
+msgstr "ข้อมูลที่ป้อนมาไม่ถูกต้อง"
 
 #. Type: error
 #. Description
 #. :sl3:
 #: ../partman-auto-lvm.templates:12001
 msgid "You entered \"${INPUT}\", which was not recognized as a valid size."
-msgstr ""
+msgstr "ข้อมูลที่คุณให้ \"${INPUT}\" ไม่ใช่ขนาดที่ใช้ได้"
 
 #. Type: error
 #. Description
 #. :sl3:
 #: ../partman-auto-lvm.templates:13001
 msgid "${SIZE} is too big"
-msgstr ""
+msgstr "${SIZE} ใหญ่เกินไป"
 
 #. Type: error
 #. Description
@@ -5290,15 +5299,14 @@ msgid ""
 "You asked for ${SIZE} to be used for guided partitioning, but the available "
 "space is only ${MAXSIZE}."
 msgstr ""
+"คุณกำหนดขนาด ${SIZE} เพื่อที่จะใช้ในการพาร์ทิชันแบบชี้แนะ แต่มีพื้นที่เหลือเพียง ${MAXSIZE}"
 
 #. Type: error
 #. Description
 #. :sl3:
 #: ../partman-auto-lvm.templates:14001
-#, fuzzy
-#| msgid "EFI partition too small"
 msgid "${SIZE} is too small"
-msgstr "พาร์ทิชัน EFI เล็กเกินไป"
+msgstr "${SIZE} เล็กเกินไป"
 
 #. Type: error
 #. Description
@@ -5308,6 +5316,8 @@ msgid ""
 "You asked for ${SIZE} to be used for guided partitioning, but the selected "
 "partitioning recipe requires at least ${MINSIZE}."
 msgstr ""
+"คุณกำหนดขนาด ${SIZE} เพื่อที่จะใช้ในการพาร์ทิชันแบบชี้แนะ "
+"แต่สูตรของพาร์ทิชันที่เลือกไว้ต้องการอย่างน้อย ${MINSIZE}"
 
 #. Type: error
 #. Description

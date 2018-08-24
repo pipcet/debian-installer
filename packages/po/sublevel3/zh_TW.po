@@ -5253,7 +5253,7 @@ msgstr "請檢查自動磁碟分割的內容是否合宜。"
 #. :sl3:
 #: ../partman-auto-lvm.templates:11001
 msgid "Amount of volume group to use for guided partitioning:"
-msgstr ""
+msgstr "使用於導引式分割的卷冊群組數量："
 
 #. Type: string
 #. Description
@@ -5265,44 +5265,54 @@ msgid ""
 "able to grow logical volumes later using the LVM tools, so using a smaller "
 "part of the volume group at installation time may offer more flexibility."
 msgstr ""
+"您可以使用整個卷冊群組來進行導引式分割，或者只使用其中的部份。如您只使用了部"
+"份，或是在系統安裝完成之後加入其他硬碟，您仍然可以以 LVM 工具程式將邏輯卷冊增"
+"大，因此在安裝時只使用卷冊群組的一小部份，可以讓整件事更有彈性。"
 
 #. Type: string
 #. Description
 #. :sl3:
 #: ../partman-auto-lvm.templates:11001
-#, fuzzy
-#| msgid ""
-#| "The minimum size for this partition is ${MINSIZE} (or ${PERCENT}) and its "
-#| "maximum size is ${MAXSIZE}."
 msgid ""
 "The minimum size of the selected partitioning recipe is ${MINSIZE} (or "
 "${PERCENT}); please note that the packages you choose to install may require "
 "more space than this. The maximum available size is ${MAXSIZE}."
 msgstr ""
-"這個分割區的容量最小為 ${MINSIZE} (或 ${PERCENT})﹔而最大為 ${MAXSIZE}。"
+"已選擇的分割方案最小大小為 ${MINSIZE} (或 ${PERCENT})；請留意您所選擇安裝的套"
+"件可能會需要比這個更大的空間。最大的可用空間為 ${MAXSIZE}。"
+
+#. Type: string
+#. Description
+#. :sl3:
+#: ../partman-auto-lvm.templates:11001
+#, no-c-format
+msgid ""
+"Hint: \"max\" can be used as a shortcut to specify the maximum size, or "
+"enter a percentage (e.g. \"20%\") to use that percentage of the maximum size."
+msgstr ""
+"提示：可以使用 \"max\" 來直接表示使用最大容量；或輸入一個百分比（像是 \"20%"
+"\"）來表示使用最大容量的百分之多少。"
 
 #. Type: error
 #. Description
 #. :sl3:
 #: ../partman-auto-lvm.templates:12001
-#, fuzzy
-#| msgid "Invalid size"
 msgid "Invalid input"
-msgstr "不正確的容量"
+msgstr "無效的輸入"
 
 #. Type: error
 #. Description
 #. :sl3:
 #: ../partman-auto-lvm.templates:12001
 msgid "You entered \"${INPUT}\", which was not recognized as a valid size."
-msgstr ""
+msgstr "您輸入未能辨認為有效大小的 \"${INPUT}\"。"
 
 #. Type: error
 #. Description
 #. :sl3:
 #: ../partman-auto-lvm.templates:13001
 msgid "${SIZE} is too big"
-msgstr ""
+msgstr "${SIZE} 太大"
 
 #. Type: error
 #. Description
@@ -5311,16 +5321,14 @@ msgstr ""
 msgid ""
 "You asked for ${SIZE} to be used for guided partitioning, but the available "
 "space is only ${MAXSIZE}."
-msgstr ""
+msgstr "導引式分割需要您有 ${SIZE}，但可用空間只有 ${MAXSIZE}。"
 
 #. Type: error
 #. Description
 #. :sl3:
 #: ../partman-auto-lvm.templates:14001
-#, fuzzy
-#| msgid "EFI partition too small"
 msgid "${SIZE} is too small"
-msgstr "EFI 分割太小"
+msgstr "${SIZE} 太小"
 
 #. Type: error
 #. Description
@@ -5329,7 +5337,7 @@ msgstr "EFI 分割太小"
 msgid ""
 "You asked for ${SIZE} to be used for guided partitioning, but the selected "
 "partitioning recipe requires at least ${MINSIZE}."
-msgstr ""
+msgstr "導引式分割需要您有 ${SIZE}，但選擇的分割方案需要最少 ${MINSIZE}。"
 
 #. Type: error
 #. Description

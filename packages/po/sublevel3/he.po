@@ -5298,7 +5298,7 @@ msgstr "נא לבדוק את מרשם החלוקה האוטומטית למחיצ
 #. :sl3:
 #: ../partman-auto-lvm.templates:11001
 msgid "Amount of volume group to use for guided partitioning:"
-msgstr ""
+msgstr "כמות קבוצה רבה שתהיה בשימוש יצירת המחיצות המודרכת:"
 
 #. Type: string
 #. Description
@@ -5310,45 +5310,56 @@ msgid ""
 "able to grow logical volumes later using the LVM tools, so using a smaller "
 "part of the volume group at installation time may offer more flexibility."
 msgstr ""
+"תוכל להשתמש בכל הגודל עבור הגדרת המחיצות המודרכת, אם חלק ממנו. אם תבחר רק "
+"חלק ממנו, או אם תוסיף עוד דיסקים אח\"כ, תוכל להגדיל את הגודל בצורה לוגית "
+"יותר מאוחר בעזרת כלי LVM, כך ששימוש בחלק קטן יותר של הגודל בזמן ההתקנה יציע "
+"גמישות יתר."
 
 #. Type: string
 #. Description
 #. :sl3:
 #: ../partman-auto-lvm.templates:11001
-#, fuzzy
-#| msgid ""
-#| "The minimum size for this partition is ${MINSIZE} (or ${PERCENT}) and its "
-#| "maximum size is ${MAXSIZE}."
 msgid ""
 "The minimum size of the selected partitioning recipe is ${MINSIZE} (or "
 "${PERCENT}); please note that the packages you choose to install may require "
 "more space than this. The maximum available size is ${MAXSIZE}."
 msgstr ""
-"הגודל המינימלי למחיצה הוא ${MINSIZE} או ${PERCENT} והגודל המירבי הוא "
-"${MAXSIZE}."
+"הגודל המינימלי של הגדרת המחיצה שנבחרה הוא ${MINSIZE} (או ${PERCENT}); אנא "
+"שים לב שיתכן שהחבילות שתבחר להתקין ידרשו יותר מקום מזה. הגדול הזמין המקסימלי "
+"הוא ${MAXSIZE}."
+
+#. Type: string
+#. Description
+#. :sl3:
+#: ../partman-auto-lvm.templates:11001
+#, no-c-format
+msgid ""
+"Hint: \"max\" can be used as a shortcut to specify the maximum size, or "
+"enter a percentage (e.g. \"20%\") to use that percentage of the maximum size."
+msgstr ""
+"עצה: ניתן להשתמש ב־\"max\" כדי לציין את גודל ההקצאה המרבי או להשתמש באחוזים "
+"(לדוגמה \"20%\") כדי לציין את האחוז מתוך הערך המרבי."
 
 #. Type: error
 #. Description
 #. :sl3:
 #: ../partman-auto-lvm.templates:12001
-#, fuzzy
-#| msgid "Invalid size"
 msgid "Invalid input"
-msgstr "גודל לא חוקי"
+msgstr "קלט בלתי חוקי"
 
 #. Type: error
 #. Description
 #. :sl3:
 #: ../partman-auto-lvm.templates:12001
 msgid "You entered \"${INPUT}\", which was not recognized as a valid size."
-msgstr ""
+msgstr "הכנסת \"${INPUT}\", אשר אינו מזוהה כגדול חוקי."
 
 #. Type: error
 #. Description
 #. :sl3:
 #: ../partman-auto-lvm.templates:13001
 msgid "${SIZE} is too big"
-msgstr ""
+msgstr "${SIZE} גדול מידי"
 
 #. Type: error
 #. Description
@@ -5358,15 +5369,15 @@ msgid ""
 "You asked for ${SIZE} to be used for guided partitioning, but the available "
 "space is only ${MAXSIZE}."
 msgstr ""
+"בחרת ב-${SIZE} כגודל שיהיה בשימוש בחלוקת המחיצות המודרכת, אך הגודל הזמין הוא "
+"רק ${MAXSIZE}."
 
 #. Type: error
 #. Description
 #. :sl3:
 #: ../partman-auto-lvm.templates:14001
-#, fuzzy
-#| msgid "EFI partition too small"
 msgid "${SIZE} is too small"
-msgstr "מחיצת EFI קטנה מידי"
+msgstr "${SIZE} קטן מידי"
 
 #. Type: error
 #. Description
@@ -5376,6 +5387,8 @@ msgid ""
 "You asked for ${SIZE} to be used for guided partitioning, but the selected "
 "partitioning recipe requires at least ${MINSIZE}."
 msgstr ""
+"בחרת ב-${SIZE} כגודל שיהיה בשימוש בחלוקת המחיצות המודרכת, אך הגדרת חלוקת "
+"המחיצות שבחרת דורשת לפחות ${MINSIZE}."
 
 #. Type: error
 #. Description

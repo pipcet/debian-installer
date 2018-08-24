@@ -5412,7 +5412,7 @@ msgstr "Preverite prosim predlog samodejnega razdeljevanja."
 #. :sl3:
 #: ../partman-auto-lvm.templates:11001
 msgid "Amount of volume group to use for guided partitioning:"
-msgstr ""
+msgstr "Delež skupine nosilcev, ki naj se uporabi za vodeno razdelitev:"
 
 #. Type: string
 #. Description
@@ -5424,45 +5424,56 @@ msgid ""
 "able to grow logical volumes later using the LVM tools, so using a smaller "
 "part of the volume group at installation time may offer more flexibility."
 msgstr ""
+"Za vodeno razdelitev lahko uporabite celotno skupino nosilcev ali pa njen "
+"del. Če uporabite samo njen del ali pa  kasneje dodate več diskov, lahko za "
+"povečanje logičnih nosilcev uporabite orodja LVM. Pri namestitvi lahko "
+"uporaba manjšega dela skupine nosilcev ponuja večjo prilagodljivost."
 
 #. Type: string
 #. Description
 #. :sl3:
 #: ../partman-auto-lvm.templates:11001
-#, fuzzy
-#| msgid ""
-#| "The minimum size for this partition is ${MINSIZE} (or ${PERCENT}) and its "
-#| "maximum size is ${MAXSIZE}."
 msgid ""
 "The minimum size of the selected partitioning recipe is ${MINSIZE} (or "
 "${PERCENT}); please note that the packages you choose to install may require "
 "more space than this. The maximum available size is ${MAXSIZE}."
 msgstr ""
-"Najmanjša velikost za ta razdelek je ${MINSIZE} (ali ${PERCENT}), največja "
-"pa ${MAXSIZE}."
+"Najmanjša velikost izbranega recepta za razdelitev je ${MINSIZE} (oziroma "
+"${PERCENT}); upoštevajte, da izbrani paketi morda zahtevajo večjo količino "
+"prostora. Največja možna velikost je ${MAXSIZE}."
+
+#. Type: string
+#. Description
+#. :sl3:
+#: ../partman-auto-lvm.templates:11001
+#, no-c-format
+msgid ""
+"Hint: \"max\" can be used as a shortcut to specify the maximum size, or "
+"enter a percentage (e.g. \"20%\") to use that percentage of the maximum size."
+msgstr ""
+"Namig:\"max\" je mogoče uporabiti kot bljižnico za največjo mogočo velikost. "
+"Lahko pa vnesete tudi odstotek največje velikosti (na primer 20 )"
 
 #. Type: error
 #. Description
 #. :sl3:
 #: ../partman-auto-lvm.templates:12001
-#, fuzzy
-#| msgid "Invalid size"
 msgid "Invalid input"
-msgstr "Napačna velikost"
+msgstr "Neveljaven vnos"
 
 #. Type: error
 #. Description
 #. :sl3:
 #: ../partman-auto-lvm.templates:12001
 msgid "You entered \"${INPUT}\", which was not recognized as a valid size."
-msgstr ""
+msgstr "Vnesli ste \"${INPUT}\", kar ni bilo prepoznano kot veljavna velikost."
 
 #. Type: error
 #. Description
 #. :sl3:
 #: ../partman-auto-lvm.templates:13001
 msgid "${SIZE} is too big"
-msgstr ""
+msgstr "${SIZE} je preveč"
 
 #. Type: error
 #. Description
@@ -5472,15 +5483,15 @@ msgid ""
 "You asked for ${SIZE} to be used for guided partitioning, but the available "
 "space is only ${MAXSIZE}."
 msgstr ""
+"Zahtevali ste, da se za vodeno razdelitev uporabi ${SIZE}, vendar je na "
+"voljo le ${MAXSIZE} prostora."
 
 #. Type: error
 #. Description
 #. :sl3:
 #: ../partman-auto-lvm.templates:14001
-#, fuzzy
-#| msgid "EFI partition too small"
 msgid "${SIZE} is too small"
-msgstr "Razdelek EFI je premajhen"
+msgstr "${SIZE} je premalo"
 
 #. Type: error
 #. Description
@@ -5490,6 +5501,8 @@ msgid ""
 "You asked for ${SIZE} to be used for guided partitioning, but the selected "
 "partitioning recipe requires at least ${MINSIZE}."
 msgstr ""
+"Zahtevali ste, da se za vodeno razdelitev uporabi ${SIZE}, vendar izbran "
+"recept za razdelitev zahteva vsaj ${MINSIZE} prostora."
 
 #. Type: error
 #. Description

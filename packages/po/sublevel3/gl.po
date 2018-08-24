@@ -5425,7 +5425,7 @@ msgstr "Comprobe a receita de particionamento automático."
 #. :sl3:
 #: ../partman-auto-lvm.templates:11001
 msgid "Amount of volume group to use for guided partitioning:"
-msgstr ""
+msgstr "Cantidade do grupo de volume a empregar para a partición guiada:"
 
 #. Type: string
 #. Description
@@ -5437,45 +5437,58 @@ msgid ""
 "able to grow logical volumes later using the LVM tools, so using a smaller "
 "part of the volume group at installation time may offer more flexibility."
 msgstr ""
+"Pode empregar o grupo de volume completo para a partición guiada ou parte "
+"del. Se só emprega parte, ou se engaden máis discos despois pode facer que "
+"aumenten os volumes lóxicos máis adiante coas ferramentas de LVM, polo que "
+"empregar unha parte máis pequena do grupo de volume no momento da "
+"instalación pode fornecer máis flexibilidade."
 
 #. Type: string
 #. Description
 #. :sl3:
 #: ../partman-auto-lvm.templates:11001
-#, fuzzy
-#| msgid ""
-#| "The minimum size for this partition is ${MINSIZE} (or ${PERCENT}) and its "
-#| "maximum size is ${MAXSIZE}."
 msgid ""
 "The minimum size of the selected partitioning recipe is ${MINSIZE} (or "
 "${PERCENT}); please note that the packages you choose to install may require "
 "more space than this. The maximum available size is ${MAXSIZE}."
 msgstr ""
-"O tamaño mínimo para esta partición é ${MINSIZE} (ou ${PERCENT}) e o seu "
-"tamaño máximo é ${MAXSIZE}."
+"O tamaño mínimo da receita de partición seleccionada é ${MINSIZE} (ou "
+"${PERCENT}); teña en conta que os paquetes que escolla para instalar poden "
+"requirir máis espazo que este. O tamaño máximo disponíbel é ${MAXSIZE}."
+
+#. Type: string
+#. Description
+#. :sl3:
+#: ../partman-auto-lvm.templates:11001
+#, no-c-format
+msgid ""
+"Hint: \"max\" can be used as a shortcut to specify the maximum size, or "
+"enter a percentage (e.g. \"20%\") to use that percentage of the maximum size."
+msgstr ""
+"Consello: pódese introducir «max» para indicar o tamaño máximo, ou "
+"introducir unha porcentaxe (por ex. «20%») para empregar esa porcentaxe do "
+"tamaño máximo."
 
 #. Type: error
 #. Description
 #. :sl3:
 #: ../partman-auto-lvm.templates:12001
-#, fuzzy
-#| msgid "Invalid size"
 msgid "Invalid input"
-msgstr "Tamaño non válido"
+msgstr "O que se escribiu non é válido"
 
 #. Type: error
 #. Description
 #. :sl3:
 #: ../partman-auto-lvm.templates:12001
 msgid "You entered \"${INPUT}\", which was not recognized as a valid size."
-msgstr ""
+msgstr "Escribiu «${INPUT}», que non se recoñece como tamaño válido."
 
 #. Type: error
 #. Description
 #. :sl3:
 #: ../partman-auto-lvm.templates:13001
 msgid "${SIZE} is too big"
-msgstr ""
+msgstr "${SIZE} é demasiado grande"
 
 #. Type: error
 #. Description
@@ -5485,15 +5498,15 @@ msgid ""
 "You asked for ${SIZE} to be used for guided partitioning, but the available "
 "space is only ${MAXSIZE}."
 msgstr ""
+"Pediu que se empregasen ${SIZE} para a partición guiada, mais o espazo "
+"disponíbel é de só ${MAXSIZE}."
 
 #. Type: error
 #. Description
 #. :sl3:
 #: ../partman-auto-lvm.templates:14001
-#, fuzzy
-#| msgid "EFI partition too small"
 msgid "${SIZE} is too small"
-msgstr "A partición EFI é demasiado pequena"
+msgstr "${SIZE} é demasiado pouco"
 
 #. Type: error
 #. Description
@@ -5503,6 +5516,8 @@ msgid ""
 "You asked for ${SIZE} to be used for guided partitioning, but the selected "
 "partitioning recipe requires at least ${MINSIZE}."
 msgstr ""
+"Pediu que se empregasen ${SIZE} para a partición guiada, mais a receita de "
+"partición seleccionada require cando menos ${MINSIZE}."
 
 #. Type: error
 #. Description

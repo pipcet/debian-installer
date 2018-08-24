@@ -5378,7 +5378,7 @@ msgstr "Palun kontrolli automaatse partitsioneerimise plaani."
 #. :sl3:
 #: ../partman-auto-lvm.templates:11001
 msgid "Amount of volume group to use for guided partitioning:"
-msgstr ""
+msgstr "Köitegrupi maht, mida kasutatakse juhitud partitsioneerimise jaoks:"
 
 #. Type: string
 #. Description
@@ -5390,45 +5390,56 @@ msgid ""
 "able to grow logical volumes later using the LVM tools, so using a smaller "
 "part of the volume group at installation time may offer more flexibility."
 msgstr ""
+"Juhitud partitsioneerimise jaoks võid kasutada kogu köitegruppi või selle "
+"osa. Kui kasutad ainult osa, või kui lisad hiljem kettaid, saad loogilisi "
+"köiteid LVM-tööriistadega hiljem kasvatada, seega annab paigaldamisel "
+"väiksema köitegrupi kasutamine suurema paindlikkuse."
 
 #. Type: string
 #. Description
 #. :sl3:
 #: ../partman-auto-lvm.templates:11001
-#, fuzzy
-#| msgid ""
-#| "The minimum size for this partition is ${MINSIZE} (or ${PERCENT}) and its "
-#| "maximum size is ${MAXSIZE}."
 msgid ""
 "The minimum size of the selected partitioning recipe is ${MINSIZE} (or "
 "${PERCENT}); please note that the packages you choose to install may require "
 "more space than this. The maximum available size is ${MAXSIZE}."
 msgstr ""
-"Selle partitsiooni vähim võimalik suurus on ${MINSIZE} (või ${PERCENT}) ning "
-"maksimaalne on ${MAXSIZE}."
+"Valitud partitsiooniskeemi vähim suurus on ${MINSIZE} (või ${PERCENT}); pane "
+"tähele, et kui sa tahad rohkem pakke paigaldada, läheb selle jaoks rohkem "
+"ruumi vaja. Suurim saadaolev ruum on ${MAXSIZE}."
+
+#. Type: string
+#. Description
+#. :sl3:
+#: ../partman-auto-lvm.templates:11001
+#, no-c-format
+msgid ""
+"Hint: \"max\" can be used as a shortcut to specify the maximum size, or "
+"enter a percentage (e.g. \"20%\") to use that percentage of the maximum size."
+msgstr ""
+"Vihje: \"max\" on otsetee suurimale võimalikule suurusele, võib sisestada ka "
+"protsendi (nt \"20%\") et kasutada osa suurimast võimalikust suurusest."
 
 #. Type: error
 #. Description
 #. :sl3:
 #: ../partman-auto-lvm.templates:12001
-#, fuzzy
-#| msgid "Invalid size"
 msgid "Invalid input"
-msgstr "Sobimatu suurus"
+msgstr "Vigane sisend"
 
 #. Type: error
 #. Description
 #. :sl3:
 #: ../partman-auto-lvm.templates:12001
 msgid "You entered \"${INPUT}\", which was not recognized as a valid size."
-msgstr ""
+msgstr "Sisestasid \"${INPUT}\", mis ei ole sobiv suurus."
 
 #. Type: error
 #. Description
 #. :sl3:
 #: ../partman-auto-lvm.templates:13001
 msgid "${SIZE} is too big"
-msgstr ""
+msgstr "${SIZE} on liiga suur"
 
 #. Type: error
 #. Description
@@ -5438,15 +5449,15 @@ msgid ""
 "You asked for ${SIZE} to be used for guided partitioning, but the available "
 "space is only ${MAXSIZE}."
 msgstr ""
+"Valisid juhitud partitsioneerimise jaoks ${SIZE}, kuid saadaval on ainult "
+"${MAXSIZE}."
 
 #. Type: error
 #. Description
 #. :sl3:
 #: ../partman-auto-lvm.templates:14001
-#, fuzzy
-#| msgid "EFI partition too small"
 msgid "${SIZE} is too small"
-msgstr "EFI partitsioon on liiga väike"
+msgstr "${SIZE} on liiga väike"
 
 #. Type: error
 #. Description
@@ -5456,6 +5467,8 @@ msgid ""
 "You asked for ${SIZE} to be used for guided partitioning, but the selected "
 "partitioning recipe requires at least ${MINSIZE}."
 msgstr ""
+"Valisid juhitud partitsioneerimise jaoks ${SIZE}, kuid valitud "
+"partitsiooniskeem vajab vähemalt ${MINSIZE}."
 
 #. Type: error
 #. Description

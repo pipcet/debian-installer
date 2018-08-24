@@ -5382,7 +5382,7 @@ msgstr "Athugaðu sjálfvirka uppsetningu disksneiðaskiptingar."
 #. :sl3:
 #: ../partman-auto-lvm.templates:11001
 msgid "Amount of volume group to use for guided partitioning:"
-msgstr ""
+msgstr "Hluti sýndardisks sem á að nota fyrir leiðbeinda disksneiðingu:"
 
 #. Type: string
 #. Description
@@ -5394,45 +5394,57 @@ msgid ""
 "able to grow logical volumes later using the LVM tools, so using a smaller "
 "part of the volume group at installation time may offer more flexibility."
 msgstr ""
+"Þú getur notað allan sýndardiskinn undir skiptingu eða hluta hans. Þú getur "
+"búið til rökeiningar með LVM tólunum seinna ef þú notar aðeins hluta hans "
+"eða ef þú bætir fleiri diskum við. Þetta þýðir að það getur verið "
+"frjálslegra að nota smærri hluta sýndardisksins við uppsetningu."
 
 #. Type: string
 #. Description
 #. :sl3:
 #: ../partman-auto-lvm.templates:11001
-#, fuzzy
-#| msgid ""
-#| "The minimum size for this partition is ${MINSIZE} (or ${PERCENT}) and its "
-#| "maximum size is ${MAXSIZE}."
 msgid ""
 "The minimum size of the selected partitioning recipe is ${MINSIZE} (or "
 "${PERCENT}); please note that the packages you choose to install may require "
 "more space than this. The maximum available size is ${MAXSIZE}."
 msgstr ""
-"Minnsta stærð sem þú getur notað fyrir þessa disksneið er ${MINSIZE} eða "
-"${PERCENT} og hámarksstærð er ${MAXSIZE}."
+"Minnsta stærðin fyrir valda disksneiðaskiptingu er ${MINSIZE} (þ.e.a.s. "
+"${PERCENT}); hafðu í huga að pakkarnir sem þú setur upp geti tekið meira "
+"pláss en þetta. Mesta stærðin sem þér býðst er ${MAXSIZE}."
+
+#. Type: string
+#. Description
+#. :sl3:
+#: ../partman-auto-lvm.templates:11001
+#, no-c-format
+msgid ""
+"Hint: \"max\" can be used as a shortcut to specify the maximum size, or "
+"enter a percentage (e.g. \"20%\") to use that percentage of the maximum size."
+msgstr ""
+"Hjálp: Hægt er að nota „max“ sem flýtivísun til að tilgreina stærstu "
+"mögulegu stærðina, og einnig er hægt að pikka inn hundraðshluti (til dæmis "
+"„20%“) til að nota þann hluta af stærstu mögulegu stærðinni."
 
 #. Type: error
 #. Description
 #. :sl3:
 #: ../partman-auto-lvm.templates:12001
-#, fuzzy
-#| msgid "Invalid size"
 msgid "Invalid input"
-msgstr "Ógild stærð"
+msgstr "Ógilt ílag"
 
 #. Type: error
 #. Description
 #. :sl3:
 #: ../partman-auto-lvm.templates:12001
 msgid "You entered \"${INPUT}\", which was not recognized as a valid size."
-msgstr ""
+msgstr "Þú skrifaðir „${INPUT}“ sem er ekki gild stærð."
 
 #. Type: error
 #. Description
 #. :sl3:
 #: ../partman-auto-lvm.templates:13001
 msgid "${SIZE} is too big"
-msgstr ""
+msgstr "${SIZE} er of stórt"
 
 #. Type: error
 #. Description
@@ -5442,15 +5454,14 @@ msgid ""
 "You asked for ${SIZE} to be used for guided partitioning, but the available "
 "space is only ${MAXSIZE}."
 msgstr ""
+"Þú vildir nota ${SIZE} í disksneiðaskiptinguna, en aðeins er ${MAXSIZE}."
 
 #. Type: error
 #. Description
 #. :sl3:
 #: ../partman-auto-lvm.templates:14001
-#, fuzzy
-#| msgid "EFI partition too small"
 msgid "${SIZE} is too small"
-msgstr "EFI disksneið of lítil"
+msgstr "${SIZE} er of lítið"
 
 #. Type: error
 #. Description
@@ -5460,6 +5471,8 @@ msgid ""
 "You asked for ${SIZE} to be used for guided partitioning, but the selected "
 "partitioning recipe requires at least ${MINSIZE}."
 msgstr ""
+"Þú vildir nota ${SIZE} í disksneiðaskiptingu en skiptingin sem þú valdir "
+"þarfnast að minnsta kosti ${MINSIZE}."
 
 #. Type: error
 #. Description

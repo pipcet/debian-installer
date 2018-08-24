@@ -5385,7 +5385,7 @@ msgstr "Lūdzu pārbaudiet automātiskās dalīšanas recepti."
 #. :sl3:
 #: ../partman-auto-lvm.templates:11001
 msgid "Amount of volume group to use for guided partitioning:"
-msgstr ""
+msgstr "Sējumu grupu apjoms, ko izmantot vadītajai dalīšanai:"
 
 #. Type: string
 #. Description
@@ -5397,45 +5397,57 @@ msgid ""
 "able to grow logical volumes later using the LVM tools, so using a smaller "
 "part of the volume group at installation time may offer more flexibility."
 msgstr ""
+"Jūs varat izmantot veselu sējumu grupu vadītajai dalīšanai, vai tās daļu. Ja "
+"izmantojat tikai tās daļu, vai arī vēlāk pievienojat papildus diskus, jūs "
+"varēsiet palielināt loģiskos sējumus vēlāk, izmantojot LVM rīkus. Izmantojot "
+"mazāku daļu sējumu grupas instalācijas laikā dod lielāku elastību."
 
 #. Type: string
 #. Description
 #. :sl3:
 #: ../partman-auto-lvm.templates:11001
-#, fuzzy
-#| msgid ""
-#| "The minimum size for this partition is ${MINSIZE} (or ${PERCENT}) and its "
-#| "maximum size is ${MAXSIZE}."
 msgid ""
 "The minimum size of the selected partitioning recipe is ${MINSIZE} (or "
 "${PERCENT}); please note that the packages you choose to install may require "
 "more space than this. The maximum available size is ${MAXSIZE}."
 msgstr ""
-"Minimālais izmērs šim nodalījumam ir ${MINSIZE} (jeb ${PERCENT}) un "
-"maksimālais ir ${MAXSIZE}."
+"Mazākais izmērs izvēlētajai dalīšanas receptei ir ${MINSIZE} (vai "
+"${PERCENT}); ņemiet vērā, ka pakotnes, kuras jūs izvēlēsities instalēt, var "
+"aizņemt vairāk vietas. Lielākais pieejamais izmērs ir ${MAXSIZE}."
+
+#. Type: string
+#. Description
+#. :sl3:
+#: ../partman-auto-lvm.templates:11001
+#, no-c-format
+msgid ""
+"Hint: \"max\" can be used as a shortcut to specify the maximum size, or "
+"enter a percentage (e.g. \"20%\") to use that percentage of the maximum size."
+msgstr ""
+"Piezīme: Maksimālā izmēra norādīšanai vai ierakstīt vārdu \"max\", bet lai "
+"norādītu izmēru kā daļu no maksimālā var izmantot procenta zīmi, piemēram, "
+"\"20%\"."
 
 #. Type: error
 #. Description
 #. :sl3:
 #: ../partman-auto-lvm.templates:12001
-#, fuzzy
-#| msgid "Invalid size"
 msgid "Invalid input"
-msgstr "Nederīgs izmērs"
+msgstr "Nederīga ievade"
 
 #. Type: error
 #. Description
 #. :sl3:
 #: ../partman-auto-lvm.templates:12001
 msgid "You entered \"${INPUT}\", which was not recognized as a valid size."
-msgstr ""
+msgstr "Jūs ievadījāt \"${INPUT}\", kas netika atpazīts kā derīgs izmērs."
 
 #. Type: error
 #. Description
 #. :sl3:
 #: ../partman-auto-lvm.templates:13001
 msgid "${SIZE} is too big"
-msgstr ""
+msgstr "${SIZE} ir pārāk daudz"
 
 #. Type: error
 #. Description
@@ -5445,15 +5457,15 @@ msgid ""
 "You asked for ${SIZE} to be used for guided partitioning, but the available "
 "space is only ${MAXSIZE}."
 msgstr ""
+"Jūs prasījāt, lai ${SIZE} tiktu izmantoti vadītajai dalīšanai, bet ir "
+"pieejami tikai ${MAXSIZE}."
 
 #. Type: error
 #. Description
 #. :sl3:
 #: ../partman-auto-lvm.templates:14001
-#, fuzzy
-#| msgid "EFI partition too small"
 msgid "${SIZE} is too small"
-msgstr "EFI nodalījums ir pārāk mazs\t"
+msgstr "${SIZE} ir pārāk maz"
 
 #. Type: error
 #. Description
@@ -5463,6 +5475,8 @@ msgid ""
 "You asked for ${SIZE} to be used for guided partitioning, but the selected "
 "partitioning recipe requires at least ${MINSIZE}."
 msgstr ""
+"Jūs prasījāt, lai ${SIZE} tiktu izmantoti vadītajai dalīšanai, bet izvēlētā "
+"dalīšanas receptei ir vajadzīgi vismaz ${MINSIZE}."
 
 #. Type: error
 #. Description

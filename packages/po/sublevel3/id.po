@@ -5428,7 +5428,7 @@ msgstr "Mohon periksa kembali pola pemartisi otomatis."
 #. :sl3:
 #: ../partman-auto-lvm.templates:11001
 msgid "Amount of volume group to use for guided partitioning:"
-msgstr ""
+msgstr "Jumlah volume grup digunakan untuk partisi terpandu:"
 
 #. Type: string
 #. Description
@@ -5440,31 +5440,45 @@ msgid ""
 "able to grow logical volumes later using the LVM tools, so using a smaller "
 "part of the volume group at installation time may offer more flexibility."
 msgstr ""
+"Anda dapat menggunakan seluruh kelompok volume untuk partisi terpandu, atau "
+"sebagiannya. Jika anda menggunakan hanya sebagiannya, atau jika anda "
+"menambah disk, kemudian anda akan bisa untuk menambah volume logik dengan "
+"menggunakan perangkat LVM, jadi gunakan bagian yang lebih kecil dari "
+"kelompok volume pada waktu instalasi memberikan fleksibilitas lebih."
 
 #. Type: string
 #. Description
 #. :sl3:
 #: ../partman-auto-lvm.templates:11001
-#, fuzzy
-#| msgid ""
-#| "The minimum size for this partition is ${MINSIZE} (or ${PERCENT}) and its "
-#| "maximum size is ${MAXSIZE}."
 msgid ""
 "The minimum size of the selected partitioning recipe is ${MINSIZE} (or "
 "${PERCENT}); please note that the packages you choose to install may require "
 "more space than this. The maximum available size is ${MAXSIZE}."
 msgstr ""
-"Ukuran minimal untuk partisi ini adalah ${MINSIZE} (atau ${PERCENT}) dan "
-"maksimalnya adalah ${MAXSIZE}."
+"Ukuran minimum pada partisi yang dipilih adalah ${MINSIZE} (atau "
+"${PERCENT}); harap diingat bahwa paket-paket yang Anda pilih untuk "
+"menginstal mungkin memerlukan lebih banyak daripada ini. Ukuran maksimum "
+"yang tersedia adalah $ (MAXSIZE)."
+
+#. Type: string
+#. Description
+#. :sl3:
+#: ../partman-auto-lvm.templates:11001
+#, no-c-format
+msgid ""
+"Hint: \"max\" can be used as a shortcut to specify the maximum size, or "
+"enter a percentage (e.g. \"20%\") to use that percentage of the maximum size."
+msgstr ""
+"Petunjuk: \"max\" dapat digunakan sebagai jalan pintas untuk menentukan "
+"ukuran maksimum, atau masukkan sebuah persentasi (mis. \"20%\") untuk "
+"menyatakan persentasi ukuran maksimum."
 
 #. Type: error
 #. Description
 #. :sl3:
 #: ../partman-auto-lvm.templates:12001
-#, fuzzy
-#| msgid "Invalid size"
 msgid "Invalid input"
-msgstr "Ukuran tidak sah"
+msgstr "Masukan yang salah"
 
 #. Type: error
 #. Description
@@ -5472,13 +5486,14 @@ msgstr "Ukuran tidak sah"
 #: ../partman-auto-lvm.templates:12001
 msgid "You entered \"${INPUT}\", which was not recognized as a valid size."
 msgstr ""
+"Anda memasukkan \"${INPUT}\", yang tidak dikenali sebagai ukuran yang valid."
 
 #. Type: error
 #. Description
 #. :sl3:
 #: ../partman-auto-lvm.templates:13001
 msgid "${SIZE} is too big"
-msgstr ""
+msgstr "${SIZE} terlalu besar"
 
 #. Type: error
 #. Description
@@ -5488,15 +5503,15 @@ msgid ""
 "You asked for ${SIZE} to be used for guided partitioning, but the available "
 "space is only ${MAXSIZE}."
 msgstr ""
+"Anda diminta ${SIZE} untuk digunakan pada partisi terpandu, tetapi ruang "
+"yang tersedia hanya ${MAXSIZE}"
 
 #. Type: error
 #. Description
 #. :sl3:
 #: ../partman-auto-lvm.templates:14001
-#, fuzzy
-#| msgid "EFI partition too small"
 msgid "${SIZE} is too small"
-msgstr "Partisi EFI terlalu kecil"
+msgstr "${SIZE} terlalu kecil"
 
 #. Type: error
 #. Description
@@ -5506,6 +5521,8 @@ msgid ""
 "You asked for ${SIZE} to be used for guided partitioning, but the selected "
 "partitioning recipe requires at least ${MINSIZE}."
 msgstr ""
+"Anda diminta menyedikan ${SIZE} untuk digunakan pada partisi terpandu, "
+"tetapi partisi yang dipilih membutuhkan paling tidak ${MINSIZE}"
 
 #. Type: error
 #. Description

@@ -5324,7 +5324,7 @@ msgstr "자동 파티션 조합을 확인하십시오."
 #. :sl3:
 #: ../partman-auto-lvm.templates:11001
 msgid "Amount of volume group to use for guided partitioning:"
-msgstr ""
+msgstr "자동 파티션으로 사용할 볼륨 그룹의 크기:"
 
 #. Type: string
 #. Description
@@ -5336,45 +5336,57 @@ msgid ""
 "able to grow logical volumes later using the LVM tools, so using a smaller "
 "part of the volume group at installation time may offer more flexibility."
 msgstr ""
+"자동 분할을 위해 볼륨 그룹 전체 또는 일부분을 사용하게 할 겁니다.  만약 일부"
+"분만 사용하거나, 나중에 디스크를 추가한다면, LVM 도구들을 이용해서 논리 볼륨"
+"을 확장할 수 있으므로, 설치 시점에서는 불륨 그룹의 작은 부분만 사용하는 것이 "
+"더 유연성이 좋을 겁니다."
 
 #. Type: string
 #. Description
 #. :sl3:
 #: ../partman-auto-lvm.templates:11001
-#, fuzzy
-#| msgid ""
-#| "The minimum size for this partition is ${MINSIZE} (or ${PERCENT}) and its "
-#| "maximum size is ${MAXSIZE}."
 msgid ""
 "The minimum size of the selected partitioning recipe is ${MINSIZE} (or "
 "${PERCENT}); please note that the packages you choose to install may require "
 "more space than this. The maximum available size is ${MAXSIZE}."
 msgstr ""
-"이 파티션의 최소 크기는 ${MINSIZE}이고 (혹은 ${PERCENT}) 최대 크기는 "
-"${MAXSIZE}입니다."
+"선택한 분할의 최소 크기는 ${MINSIZE} (또는 ${PERCENT}) 입니다;  설치하도록 선"
+"택한 패키지들을 위해 이 보다 더 많은 공간이 필요할 수도 있다는 것에 주의하시"
+"기 바랍니다.  최대 쓸 수 있는 크기는 ${MAXSIZE} 입니다."
+
+#. Type: string
+#. Description
+#. :sl3:
+#: ../partman-auto-lvm.templates:11001
+#, no-c-format
+msgid ""
+"Hint: \"max\" can be used as a shortcut to specify the maximum size, or "
+"enter a percentage (e.g. \"20%\") to use that percentage of the maximum size."
+msgstr ""
+"힌트: \"max\" 최대 크기를 지정할 때 \"max\"를 사용할 수 있습니다. 아니면 퍼센"
+"트를 입력하면 (예를 들어 \"20%\") 최대 크기의 그 퍼센트만큼의 크기를 사용합니"
+"다."
 
 #. Type: error
 #. Description
 #. :sl3:
 #: ../partman-auto-lvm.templates:12001
-#, fuzzy
-#| msgid "Invalid size"
 msgid "Invalid input"
-msgstr "크기가 잘못되었습니다"
+msgstr "잘못된 입력"
 
 #. Type: error
 #. Description
 #. :sl3:
 #: ../partman-auto-lvm.templates:12001
 msgid "You entered \"${INPUT}\", which was not recognized as a valid size."
-msgstr ""
+msgstr "\"${INPUT}\"은 올바른 크기가 아닙니다."
 
 #. Type: error
 #. Description
 #. :sl3:
 #: ../partman-auto-lvm.templates:13001
 msgid "${SIZE} is too big"
-msgstr ""
+msgstr "${SIZE}이 너무 큼"
 
 #. Type: error
 #. Description
@@ -5384,15 +5396,15 @@ msgid ""
 "You asked for ${SIZE} to be used for guided partitioning, but the available "
 "space is only ${MAXSIZE}."
 msgstr ""
+"${SIZE}를 자동 분할에 사용하도록 했지만, 쓸 수 있는 공간은 ${MAXSIZE} 뿐 입니"
+"다."
 
 #. Type: error
 #. Description
 #. :sl3:
 #: ../partman-auto-lvm.templates:14001
-#, fuzzy
-#| msgid "EFI partition too small"
 msgid "${SIZE} is too small"
-msgstr "EFI 파티션이 너무 작습니다"
+msgstr "${SIZE}이 너무 작음"
 
 #. Type: error
 #. Description
@@ -5402,6 +5414,8 @@ msgid ""
 "You asked for ${SIZE} to be used for guided partitioning, but the selected "
 "partitioning recipe requires at least ${MINSIZE}."
 msgstr ""
+"${SIZE}를 자동 분할에 사용하도록 했지만, 선택한 분할 방법은 최소 ${MINSIZE} "
+"이상이 필요합니다."
 
 #. Type: error
 #. Description

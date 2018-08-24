@@ -5495,7 +5495,7 @@ msgstr "Verificați rețeta de partiționare automată."
 #. :sl3:
 #: ../partman-auto-lvm.templates:11001
 msgid "Amount of volume group to use for guided partitioning:"
-msgstr ""
+msgstr "Dimensiunea din grupul de volum folosit pentru partiționarea ghidată:"
 
 #. Type: string
 #. Description
@@ -5507,31 +5507,44 @@ msgid ""
 "able to grow logical volumes later using the LVM tools, so using a smaller "
 "part of the volume group at installation time may offer more flexibility."
 msgstr ""
+"Puteți folosit întreg grupul de volum pentru partiționarea ghidată, sau doar "
+"o parte din el. În cazul în care folosiți doar o parte, sau dacă ulterior "
+"adăugați mai multe discuri, veți putea să extendeți volumul logic folosind "
+"uneltele LVM. De aceea instalarea folosind o parte mai mică din grupul de "
+"volume oferă o flexibilitate mai mare."
 
 #. Type: string
 #. Description
 #. :sl3:
 #: ../partman-auto-lvm.templates:11001
-#, fuzzy
-#| msgid ""
-#| "The minimum size for this partition is ${MINSIZE} (or ${PERCENT}) and its "
-#| "maximum size is ${MAXSIZE}."
 msgid ""
 "The minimum size of the selected partitioning recipe is ${MINSIZE} (or "
 "${PERCENT}); please note that the packages you choose to install may require "
 "more space than this. The maximum available size is ${MAXSIZE}."
 msgstr ""
-"Dimensiunea minimă pentru această partiție este ${MINSIZE} (sau ${PERCENT}) "
-"iar cea maximă este ${MAXSIZE}."
+"Dimensiunea minimă pentru schema de partiționare aleasă este de ${MINSIZE} "
+"(sau ${PERCENT}); s-ar putea ca pachetele pe care doriți să le instalați să "
+"necesită mai mult. Dimensiunea maximă disponibilă este ${MAXSIZE}."
+
+#. Type: string
+#. Description
+#. :sl3:
+#: ../partman-auto-lvm.templates:11001
+#, no-c-format
+msgid ""
+"Hint: \"max\" can be used as a shortcut to specify the maximum size, or "
+"enter a percentage (e.g. \"20%\") to use that percentage of the maximum size."
+msgstr ""
+"Pont: „max” poate fi folosit ca o metodă simplă de a preciza dimensiunea "
+"maximă sau introduceți un procentaj (ex.: „20%”) pentru a folosi acel "
+"procent din dimensiunea maximă."
 
 #. Type: error
 #. Description
 #. :sl3:
 #: ../partman-auto-lvm.templates:12001
-#, fuzzy
-#| msgid "Invalid size"
 msgid "Invalid input"
-msgstr "Dimensiune invalidă"
+msgstr "Intrare nevalidă"
 
 #. Type: error
 #. Description
@@ -5539,13 +5552,14 @@ msgstr "Dimensiune invalidă"
 #: ../partman-auto-lvm.templates:12001
 msgid "You entered \"${INPUT}\", which was not recognized as a valid size."
 msgstr ""
+"Ați introdus „${INPUT}”, care nu este recunoscută ca o dimensiune validă."
 
 #. Type: error
 #. Description
 #. :sl3:
 #: ../partman-auto-lvm.templates:13001
 msgid "${SIZE} is too big"
-msgstr ""
+msgstr "${SIZE} este prea mare"
 
 #. Type: error
 #. Description
@@ -5555,15 +5569,15 @@ msgid ""
 "You asked for ${SIZE} to be used for guided partitioning, but the available "
 "space is only ${MAXSIZE}."
 msgstr ""
+"Ați cerut să fie folosit ${SIZE} pentru partiționarea ghidată, dar spațiul "
+"disponibil este de doar ${MAXSIZE}."
 
 #. Type: error
 #. Description
 #. :sl3:
 #: ../partman-auto-lvm.templates:14001
-#, fuzzy
-#| msgid "EFI partition too small"
 msgid "${SIZE} is too small"
-msgstr "Partiție EFI prea mică"
+msgstr "${SIZE} este prea mică"
 
 #. Type: error
 #. Description
@@ -5573,6 +5587,8 @@ msgid ""
 "You asked for ${SIZE} to be used for guided partitioning, but the selected "
 "partitioning recipe requires at least ${MINSIZE}."
 msgstr ""
+"Ați cerut să fie folosit ${SIZE} pentru partiționarea ghidată, dar "
+"partiționarea aleasă necesită cel puțin ${MINSIZE}."
 
 #. Type: error
 #. Description

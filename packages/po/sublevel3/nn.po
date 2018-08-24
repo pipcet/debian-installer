@@ -5492,7 +5492,7 @@ msgstr "Sjekk oppskrifta for automatisk partisjonering."
 #. :sl3:
 #: ../partman-auto-lvm.templates:11001
 msgid "Amount of volume group to use for guided partitioning:"
-msgstr ""
+msgstr "Antal volumgrupper som skal brukast for veileda partisjonering:"
 
 #. Type: string
 #. Description
@@ -5504,31 +5504,45 @@ msgid ""
 "able to grow logical volumes later using the LVM tools, so using a smaller "
 "part of the volume group at installation time may offer more flexibility."
 msgstr ""
+"Du kan bruke heile eller delar av volumgruppa til rettleia partisjonering. "
+"Dersom du berre brukar ein del av den eller legg til fleire diskar seinare, "
+"fil du ha moglegheit til å utvide logiske volum i ettertid med LVM-verktøya. "
+"Dermed kan det å bruke ein mindre del av volumgruppa ved installasjon gi "
+"meir fleksibilitet."
 
 #. Type: string
 #. Description
 #. :sl3:
 #: ../partman-auto-lvm.templates:11001
-#, fuzzy
-#| msgid ""
-#| "The minimum size for this partition is ${MINSIZE} (or ${PERCENT}) and its "
-#| "maximum size is ${MAXSIZE}."
 msgid ""
 "The minimum size of the selected partitioning recipe is ${MINSIZE} (or "
 "${PERCENT}); please note that the packages you choose to install may require "
 "more space than this. The maximum available size is ${MAXSIZE}."
 msgstr ""
-"Den minste storleiken for denne partisjonen er ${MINSIZE} (eller ${PERCENT}) "
-"og den største storleiken er ${MAXSIZE}."
+"Minstestorleiken til den valde partisjonsoppskrifta er ${MINSIZE} (eller "
+"${PERCENT}); Ver vennleg å legge merke til at pakkar du vel å installera kan "
+"krevje meir plass enn dette. Den største storleiken tilgjengeleg er "
+"${MAXSIZE}."
+
+#. Type: string
+#. Description
+#. :sl3:
+#: ../partman-auto-lvm.templates:11001
+#, no-c-format
+msgid ""
+"Hint: \"max\" can be used as a shortcut to specify the maximum size, or "
+"enter a percentage (e.g. \"20%\") to use that percentage of the maximum size."
+msgstr ""
+"Tips: «max» kan brukast som ein snarveg for å spesifisere maksimum storleik, "
+"eller skrive inn ein prosent (t.d. «20%») for å bruke prosent av maksimum "
+"storleik."
 
 #. Type: error
 #. Description
 #. :sl3:
 #: ../partman-auto-lvm.templates:12001
-#, fuzzy
-#| msgid "Invalid size"
 msgid "Invalid input"
-msgstr "Ugyldig storleik"
+msgstr "Ugyldig inndata"
 
 #. Type: error
 #. Description
@@ -5536,13 +5550,15 @@ msgstr "Ugyldig storleik"
 #: ../partman-auto-lvm.templates:12001
 msgid "You entered \"${INPUT}\", which was not recognized as a valid size."
 msgstr ""
+"Du skreiv inn \"${INPUT}\", men det vart ikkje gjenkjent som ein gyldig "
+"storleik."
 
 #. Type: error
 #. Description
 #. :sl3:
 #: ../partman-auto-lvm.templates:13001
 msgid "${SIZE} is too big"
-msgstr ""
+msgstr "${SIZE} er for stor"
 
 #. Type: error
 #. Description
@@ -5552,15 +5568,15 @@ msgid ""
 "You asked for ${SIZE} to be used for guided partitioning, but the available "
 "space is only ${MAXSIZE}."
 msgstr ""
+"Du ynskja å bruke ${SIZE} til veileda partisjonering, men du har berre "
+"${MAXSIZE} tilgjengeleg."
 
 #. Type: error
 #. Description
 #. :sl3:
 #: ../partman-auto-lvm.templates:14001
-#, fuzzy
-#| msgid "Partition name:"
 msgid "${SIZE} is too small"
-msgstr "EFI-partisjonen er for liten"
+msgstr "${SIZE} er  for lite"
 
 #. Type: error
 #. Description
@@ -5570,6 +5586,8 @@ msgid ""
 "You asked for ${SIZE} to be used for guided partitioning, but the selected "
 "partitioning recipe requires at least ${MINSIZE}."
 msgstr ""
+"Du ynskja å bruka ${SIZE} til rettleia partisjonering, men den ynskja "
+"partisjoneringsoppskrifta krev minst ${MINSIZE}."
 
 #. Type: error
 #. Description

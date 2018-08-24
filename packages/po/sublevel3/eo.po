@@ -5421,7 +5421,7 @@ msgstr "Bonvolu kontroli la aŭtomatan diskpartigan recepton."
 #. :sl3:
 #: ../partman-auto-lvm.templates:11001
 msgid "Amount of volume group to use for guided partitioning:"
-msgstr ""
+msgstr "Kiomo de datumportila grupo por uzi dum gvidata dispartigo:"
 
 #. Type: string
 #. Description
@@ -5433,45 +5433,58 @@ msgid ""
 "able to grow logical volumes later using the LVM tools, so using a smaller "
 "part of the volume group at installation time may offer more flexibility."
 msgstr ""
+"Vi rajtas uzi la tutan datumportilan grupon por gvidata dispartigo, aŭ "
+"parton de ĝi. Se vi volas uzi nur parton de ĝi, aŭ se vi poste aldonos pli "
+"da diskoj, tiam vi povos kreskigi logikajn datumportilojn poste uzante la "
+"LVM-ilaron. Tiel uzante malpli grandan parton de la datumportila grupo dum "
+"instalo eble ofertas pli da flekseblo."
 
 #. Type: string
 #. Description
 #. :sl3:
 #: ../partman-auto-lvm.templates:11001
-#, fuzzy
-#| msgid ""
-#| "The minimum size for this partition is ${MINSIZE} (or ${PERCENT}) and its "
-#| "maximum size is ${MAXSIZE}."
 msgid ""
 "The minimum size of the selected partitioning recipe is ${MINSIZE} (or "
 "${PERCENT}); please note that the packages you choose to install may require "
 "more space than this. The maximum available size is ${MAXSIZE}."
 msgstr ""
-"La minimuma amplekso por ĉi tiu diskparto estas ${MINSIZE} (aŭ ${PERCENT}) "
-"kaj ĝia maksimuma amplekso estas ${MAXSIZE}."
+"La minimuma grando de la elektita dispartiga skemo estas ${MINSIZE} (aŭ "
+"${PERCENT}); bonvolu noti ke la pakaĵoj kiujn vi elektas por instali povas "
+"postuli pli da loko ol tiom ĉi. La maksimume havebla grando estas ${MAXSIZE}."
+
+#. Type: string
+#. Description
+#. :sl3:
+#: ../partman-auto-lvm.templates:11001
+#, no-c-format
+msgid ""
+"Hint: \"max\" can be used as a shortcut to specify the maximum size, or "
+"enter a percentage (e.g. \"20%\") to use that percentage of the maximum size."
+msgstr ""
+"Vi povas elekti la vorteton \"max\" kiel formulo por indiki la maksimuman "
+"amplekson, aŭ enmeti elcentaĵon (ekz. \"20%\") por uzi tiun elcenton el la "
+"maksimuma amplekso."
 
 #. Type: error
 #. Description
 #. :sl3:
 #: ../partman-auto-lvm.templates:12001
-#, fuzzy
-#| msgid "Invalid size"
 msgid "Invalid input"
-msgstr "Malvalida amplekso"
+msgstr "Nevalida enmetaĵo"
 
 #. Type: error
 #. Description
 #. :sl3:
 #: ../partman-auto-lvm.templates:12001
 msgid "You entered \"${INPUT}\", which was not recognized as a valid size."
-msgstr ""
+msgstr "Vi enmetis \"${INPUT}\", kio ne estas rekonita kiel valida dimensio."
 
 #. Type: error
 #. Description
 #. :sl3:
 #: ../partman-auto-lvm.templates:13001
 msgid "${SIZE} is too big"
-msgstr ""
+msgstr "${SIZE} estas tro granda"
 
 #. Type: error
 #. Description
@@ -5481,13 +5494,15 @@ msgid ""
 "You asked for ${SIZE} to be used for guided partitioning, but the available "
 "space is only ${MAXSIZE}."
 msgstr ""
+"Vi postulis ke ${SIZE} estu uzata por gvidata dispartigo, sed la havebla "
+"loko estas nur ${MAXSIZE}."
 
 #. Type: error
 #. Description
 #. :sl3:
 #: ../partman-auto-lvm.templates:14001
 msgid "${SIZE} is too small"
-msgstr ""
+msgstr "${SIZE} estas tro malgranda"
 
 #. Type: error
 #. Description
@@ -5497,6 +5512,8 @@ msgid ""
 "You asked for ${SIZE} to be used for guided partitioning, but the selected "
 "partitioning recipe requires at least ${MINSIZE}."
 msgstr ""
+"Vi postulis ke ${SIZE} estu uzata por gvidata dispartigo, sed la elektita "
+"dispartiga skemo postulas almenaŭ ${MINSIZE}."
 
 #. Type: error
 #. Description

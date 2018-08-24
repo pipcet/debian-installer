@@ -5394,7 +5394,7 @@ msgstr "Tarkista automaattinen osiointisuunnitelma."
 #. :sl3:
 #: ../partman-auto-lvm.templates:11001
 msgid "Amount of volume group to use for guided partitioning:"
-msgstr ""
+msgstr "Ohjattuun osiointiin käytettävä osuus taltioryhmästä:"
 
 #. Type: string
 #. Description
@@ -5406,45 +5406,56 @@ msgid ""
 "able to grow logical volumes later using the LVM tools, so using a smaller "
 "part of the volume group at installation time may offer more flexibility."
 msgstr ""
+"Voit käyttää koko taltioryhmää ohjattuun osiointiin, tai vain osaa siitä. "
+"Jos käytät vain osaa siitä, tai jos lisääty levyjä myöhemmin, voit kasvattaa "
+"loogisten taltioiden kokoja LVM-työkaluilla. Tästä johtuen pienemmän osan "
+"käyttäminen asennettaessa voi tarjota lisäjoustavuutta."
 
 #. Type: string
 #. Description
 #. :sl3:
 #: ../partman-auto-lvm.templates:11001
-#, fuzzy
-#| msgid ""
-#| "The minimum size for this partition is ${MINSIZE} (or ${PERCENT}) and its "
-#| "maximum size is ${MAXSIZE}."
 msgid ""
 "The minimum size of the selected partitioning recipe is ${MINSIZE} (or "
 "${PERCENT}); please note that the packages you choose to install may require "
 "more space than this. The maximum available size is ${MAXSIZE}."
 msgstr ""
-"Osion pienin mahdollinen koko on ${MINSIZE} (tai ${PERCENT}) ja suurin "
-"mahdollinen koko on ${MAXSIZE}."
+"Pienin valitun osiointireseptin koko on ${MINSIZE} (tai ${PERCENT}). Huomaa, "
+"että asennettavaksi valittavat paketit voivat vaatia tätä enemmän tilaa. "
+"Suurin saatavilla oleva koko on ${MAXSIZE}."
+
+#. Type: string
+#. Description
+#. :sl3:
+#: ../partman-auto-lvm.templates:11001
+#, no-c-format
+msgid ""
+"Hint: \"max\" can be used as a shortcut to specify the maximum size, or "
+"enter a percentage (e.g. \"20%\") to use that percentage of the maximum size."
+msgstr ""
+"Vihje: Syöte ”max” määrittää suurimman mahdollisimman koon ja prosenttiosuus "
+"(esim. ”20%”) määrittää osuuden suurimmasta mahdollisesta koosta."
 
 #. Type: error
 #. Description
 #. :sl3:
 #: ../partman-auto-lvm.templates:12001
-#, fuzzy
-#| msgid "Invalid size"
 msgid "Invalid input"
-msgstr "Virheellinen koko"
+msgstr "Virheellinen syöte"
 
 #. Type: error
 #. Description
 #. :sl3:
 #: ../partman-auto-lvm.templates:12001
 msgid "You entered \"${INPUT}\", which was not recognized as a valid size."
-msgstr ""
+msgstr "Syötit arvon ”${INPUT}”, jota ei tunnistettu kelvolliseksi kooksi."
 
 #. Type: error
 #. Description
 #. :sl3:
 #: ../partman-auto-lvm.templates:13001
 msgid "${SIZE} is too big"
-msgstr ""
+msgstr "${SIZE} on liian suuri"
 
 #. Type: error
 #. Description
@@ -5454,15 +5465,15 @@ msgid ""
 "You asked for ${SIZE} to be used for guided partitioning, but the available "
 "space is only ${MAXSIZE}."
 msgstr ""
+"Pyysit kokoa ${SIZE} käytettäväksi ohjatussa osioinnissa, mutta tilaa "
+"vapaana on ainoastaan ${MAXSIZE}."
 
 #. Type: error
 #. Description
 #. :sl3:
 #: ../partman-auto-lvm.templates:14001
-#, fuzzy
-#| msgid "EFI partition too small"
 msgid "${SIZE} is too small"
-msgstr "EFI-osio liian pieni"
+msgstr "${SIZE} on liian pieni"
 
 #. Type: error
 #. Description
@@ -5472,6 +5483,8 @@ msgid ""
 "You asked for ${SIZE} to be used for guided partitioning, but the selected "
 "partitioning recipe requires at least ${MINSIZE}."
 msgstr ""
+"Pyysit kokoa ${SIZE} käytettäväksi ohjatussa osioinnissa, mutta valittu "
+"osiointiresepti vaatii vähintään ${MINSIZE}."
 
 #. Type: error
 #. Description

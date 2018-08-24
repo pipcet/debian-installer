@@ -5416,7 +5416,7 @@ msgstr "ئۆزلۈكىدىن رايونغا ئايرىش لايىھىسىنى ت
 #. :sl3:
 #: ../partman-auto-lvm.templates:11001
 msgid "Amount of volume group to use for guided partitioning:"
-msgstr ""
+msgstr "يېتەكچى رايونغا بۆلۈشتە ئىشلىتەلەيدىغان دىسكا گۇرۇپپا سانى:"
 
 #. Type: string
 #. Description
@@ -5428,45 +5428,58 @@ msgid ""
 "able to grow logical volumes later using the LVM tools, so using a smaller "
 "part of the volume group at installation time may offer more flexibility."
 msgstr ""
+"سىز رايونغا بۆلگەندە پۈتكۈل ياكى قىسمەن دىسكا گۇرۇپپىسىنى ئىشلەتسىڭىز "
+"بولىدۇ. ئەگەر بىر قىسمىنى ئىشلەتكەن بولسىڭىز كېيىن تېخىمۇ كۆپ دىسكا قوشقاندا "
+"لوگىكىلىق دىسكا باشقۇرغۇچ قورالى LVM نى ئىشلىتىپ لوگىكىلىق دىسكا سىغىمىنى "
+"ئاشۇرالايسىز، شۇڭلاشقا ئورناتقاندا ئازراق دىسكا گۇرۇپپىسى ئىشلىتىلسە "
+"جانلىقلىقنى ئۆستۈرگىلى بولىدۇ."
 
 #. Type: string
 #. Description
 #. :sl3:
 #: ../partman-auto-lvm.templates:11001
-#, fuzzy
-#| msgid ""
-#| "The minimum size for this partition is ${MINSIZE} (or ${PERCENT}) and its "
-#| "maximum size is ${MAXSIZE}."
 msgid ""
 "The minimum size of the selected partitioning recipe is ${MINSIZE} (or "
 "${PERCENT}); please note that the packages you choose to install may require "
 "more space than this. The maximum available size is ${MAXSIZE}."
 msgstr ""
-"بۇ رايوننىڭ ئەڭ كىچىك قىممىتى ${MINSIZE} ياكى )${PERCENT}(، ئەڭ چوڭ قىممىتى "
-"${MAXSIZE}."
+"تاللىغان رايوننىڭ ئەڭ كىچىك بوشلۇقى ${MINSIZE} ياكى ${PERCENT}؛ دىققەت سىز "
+"تاللىغان ئورنىتىش بوغچىسى تېخىمۇ كۆپ دىسكا بوشلۇقىغا ئېھتىياجلىق. ئەڭ چوڭ "
+"ئىشلىتىلىشچان بوشلۇق ${MAXSIZE}"
+
+#. Type: string
+#. Description
+#. :sl3:
+#: ../partman-auto-lvm.templates:11001
+#, no-c-format
+msgid ""
+"Hint: \"max\" can be used as a shortcut to specify the maximum size, or "
+"enter a percentage (e.g. \"20%\") to use that percentage of the maximum size."
+msgstr ""
+"ئەسكەرتىش: \"max\"ئەڭ چوڭ چوڭلۇقتىكى تېزلەتمە شەكلىنى بەلگىلەشكە "
+"ئىشلىتىلىدۇ، ياكى پىرسەنت (مەسىلەن،\"20%\") كىرگۈزۈپ  مۇناسىپ پىرسەنت "
+"چوڭلۇقىدا ئىشلىتىدۇ."
 
 #. Type: error
 #. Description
 #. :sl3:
 #: ../partman-auto-lvm.templates:12001
-#, fuzzy
-#| msgid "Invalid size"
 msgid "Invalid input"
-msgstr "چوڭلۇقى ئىناۋەتسىز"
+msgstr "كىرگۈزۈش ئىناۋەتسىز"
 
 #. Type: error
 #. Description
 #. :sl3:
 #: ../partman-auto-lvm.templates:12001
 msgid "You entered \"${INPUT}\", which was not recognized as a valid size."
-msgstr ""
+msgstr "\"${INPUT}\" كىرگۈزگىنىڭىز ئىناۋەتسىز چوڭلۇق."
 
 #. Type: error
 #. Description
 #. :sl3:
 #: ../partman-auto-lvm.templates:13001
 msgid "${SIZE} is too big"
-msgstr ""
+msgstr "${SIZE} بەك چوڭ"
 
 #. Type: error
 #. Description
@@ -5476,15 +5489,15 @@ msgid ""
 "You asked for ${SIZE} to be used for guided partitioning, but the available "
 "space is only ${MAXSIZE}."
 msgstr ""
+"سىز ${SIZE} ئىشلىتىپ يېتەكچى ئارقىلىق رايونغا ئايرىيالايسىز، ئەمما "
+"ئىشلىتىلىشچان بوشلۇق ${MAXSIZE}"
 
 #. Type: error
 #. Description
 #. :sl3:
 #: ../partman-auto-lvm.templates:14001
-#, fuzzy
-#| msgid "EFI partition too small"
 msgid "${SIZE} is too small"
-msgstr "بۇ EFI رايون بەك كىچىك"
+msgstr "${SIZE} بەك كىچىك"
 
 #. Type: error
 #. Description
@@ -5494,6 +5507,8 @@ msgid ""
 "You asked for ${SIZE} to be used for guided partitioning, but the selected "
 "partitioning recipe requires at least ${MINSIZE}."
 msgstr ""
+"سىز ${SIZE} ئىشلىتىپ يېتەكچى ئارقىلىق رايونغا ئايرىيالايسىز، ئەمما تاللىغان "
+"رايوندىكى ئىشلىتىلىشچان بوشلۇق ${MINSIZE}"
 
 #. Type: error
 #. Description

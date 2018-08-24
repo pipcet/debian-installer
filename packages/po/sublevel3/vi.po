@@ -5396,7 +5396,7 @@ msgstr "Hãy kiểm tra công thức tự động phân vùng."
 #. :sl3:
 #: ../partman-auto-lvm.templates:11001
 msgid "Amount of volume group to use for guided partitioning:"
-msgstr ""
+msgstr "Dung lượng nhóm phân vùng cho việc hỗ trợ phân vùng"
 
 #. Type: string
 #. Description
@@ -5408,45 +5408,58 @@ msgid ""
 "able to grow logical volumes later using the LVM tools, so using a smaller "
 "part of the volume group at installation time may offer more flexibility."
 msgstr ""
+"Bạn có thể dùng toàn bộ dung lượng nhóm phân vùng, hoặc một phần, cho quy "
+"trình hỗ trợ phân vùng. Nếu bạn chỉ dùng một phần, hoặc nếu bạn bổ sung thêm "
+"ổ cứng sau này, bạn sẽ có khả năng làm tăng dung lượng nhóm phân vùng nhờ "
+"các công cụ LVM. Vì thế, dùng một phần của toàn bộ dung lượng nhóm phân vùng "
+"khi cài đặt sẽ là biện pháp mềm dẻo hơn."
 
 #. Type: string
 #. Description
 #. :sl3:
 #: ../partman-auto-lvm.templates:11001
-#, fuzzy
-#| msgid ""
-#| "The minimum size for this partition is ${MINSIZE} (or ${PERCENT}) and its "
-#| "maximum size is ${MAXSIZE}."
 msgid ""
 "The minimum size of the selected partitioning recipe is ${MINSIZE} (or "
 "${PERCENT}); please note that the packages you choose to install may require "
 "more space than this. The maximum available size is ${MAXSIZE}."
 msgstr ""
-"Kích cỡ tối thiểu cho phân vùng này là ${MINSIZE} hoặc ${PERCENT} và kích cỡ "
-"tối đa là ${MAXSIZE}."
+"Dung lượng tối thiểu cho giải pháp phân vùng đã chọn là ${MINSIZE} (hoặc "
+"${PERCENT}); bạn cũng nên lứu ý rằng các gói phần mềm bạn định cài đặt có "
+"thể cần nhiều không gian hơn dung lượng đã chọn. Dung lượng tối đa có thể "
+"chọn là ${MAXSIZE}."
+
+#. Type: string
+#. Description
+#. :sl3:
+#: ../partman-auto-lvm.templates:11001
+#, no-c-format
+msgid ""
+"Hint: \"max\" can be used as a shortcut to specify the maximum size, or "
+"enter a percentage (e.g. \"20%\") to use that percentage of the maximum size."
+msgstr ""
+"Góp ý: « max » (đại) có thể được dùng làm lối tắt để ghi rõ kích cỡ tối đa, "
+"hoặc nhập phần trăm (v.d. « 20% ») để dùng phần trăm kích cỡ tối đa đó."
 
 #. Type: error
 #. Description
 #. :sl3:
 #: ../partman-auto-lvm.templates:12001
-#, fuzzy
-#| msgid "Invalid size"
 msgid "Invalid input"
-msgstr "Cỡ không hợp lệ"
+msgstr "Nội dung nhập không hợp lệ"
 
 #. Type: error
 #. Description
 #. :sl3:
 #: ../partman-auto-lvm.templates:12001
 msgid "You entered \"${INPUT}\", which was not recognized as a valid size."
-msgstr ""
+msgstr "Thông tin bạn nhập vào \"${INPUT}\" không phải dung lượng hợp lệ."
 
 #. Type: error
 #. Description
 #. :sl3:
 #: ../partman-auto-lvm.templates:13001
 msgid "${SIZE} is too big"
-msgstr ""
+msgstr "${SIZE} quá lớn"
 
 #. Type: error
 #. Description
@@ -5456,15 +5469,15 @@ msgid ""
 "You asked for ${SIZE} to be used for guided partitioning, but the available "
 "space is only ${MAXSIZE}."
 msgstr ""
+"Bạn đã yêu cầu dùng ${SIZE} cho quy trình hỗ trợ phân vùng, tuy nhiên dung "
+"lượng còn trống chỉ còn ${MAXSIZE}."
 
 #. Type: error
 #. Description
 #. :sl3:
 #: ../partman-auto-lvm.templates:14001
-#, fuzzy
-#| msgid "EFI partition too small"
 msgid "${SIZE} is too small"
-msgstr "Phân vùng EFI quá nhỏ"
+msgstr "${SIZE} quá nhỏ"
 
 #. Type: error
 #. Description
@@ -5474,6 +5487,8 @@ msgid ""
 "You asked for ${SIZE} to be used for guided partitioning, but the selected "
 "partitioning recipe requires at least ${MINSIZE}."
 msgstr ""
+"Bạn đã yêu cầu dùng ${SIZE} cho quy trình hỗ trợ phân vùng, tuy nhiên giải "
+"pháp phân vùng đã được chọn yêu cầu tối thiểu phải có ${MINSIZE}."
 
 #. Type: error
 #. Description
