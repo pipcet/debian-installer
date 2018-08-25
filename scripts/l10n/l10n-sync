@@ -744,5 +744,11 @@ else
 fi
 
 log "Run successfully completed - $(date -u)"
+
+# Clean-up some left-over files
+rm $DI_COPY/packages/po/template.pot   # the overall template.pot file from 2)
+rm $DI_COPY/packages/po/*.po           # the master PO files from 3b)
+rm $DI_COPY/packages/po/messages.mo
+
 # Remove the lock file
 rm -f $LOCKFILE || true
