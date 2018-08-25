@@ -675,7 +675,7 @@ if [ "$SYNCPKGS" = "Y" ]; then
 		cd $DI_COPY/packages/$package/debian/po
 		if [ "$ONLINE" = "Y" ] ; then
 			log_cmd -p "  - synchronize with D-I repository..." \
-				git pull || gitpoerr
+				git pull || giterr
 		fi
 		log "  - rebuild language files"
 		# For each language listed in packages/po, update PO files
