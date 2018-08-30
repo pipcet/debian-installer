@@ -5,7 +5,7 @@
 
 ROOT=$HOME/trunk/installer/doc/i18n/
 mainlog=$ROOT/build/logs/main.log
-www_destination=/srv/d-i.debian.org/www/d-i-internals
+www_destination=/srv/d-i.debian.org/www/doc/d-i-internals
 www_destination_languages_html=/srv/d-i.debian.org/www/
 
 echo "Build process for d-i internals" >$mainlog
@@ -34,6 +34,7 @@ checkfatal() {
 update_from_git() {
     echo >>$mainlog
     echo "Performing GIT update..." >>$mainlog
+    cd $ROOT/
     git pull >$ROOT/build/logs/git_pull.log 2>&1
     RESULT=$?
     if [ ! $RESULT = 0 ]; then
