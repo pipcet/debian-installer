@@ -62,6 +62,13 @@ is_updated() {
     return 1
 }
 
+global_build_options_changed() {
+    if egrep -q "^[[:space:]]build/" $logdir/git_pull.log; then
+        return 0
+    fi
+    return 1
+}
+
 do_extra() {
     local lang
     for lang in $EXTRA_LANGS; do
@@ -340,7 +347,7 @@ NR_BUILDS=0
 
 # Build the installation-guide for English
 EN_UPDATED=""
-if is_updated en; then
+if is_updated en || global_build_options_changed; then
     EN_UPDATED=1
     langlog=$logdir/en.log
     : >$langlog
@@ -355,7 +362,7 @@ fi
 
 # Do we need to merge the XML and update the POT files?
 cd $source
-if is_updated en || [ ! -d "$source/integrated/en" ]; then
+if is_updated en || [ ! -d "$source/integrated/en" ] || global_build_options_changed; then
     update_templates >>$mainlog 2>&1
     checkfatal "$?" "updating templates"
     echo >>$mainlog
@@ -416,7 +423,7 @@ done
 # Here we refresh po files for languages, that are outcommented in langlist 
 # and are therefore ignored by the whole process.
 # I want to keep that po files up-to-date (english-wise) nevertheless.
-   if is_updated en; then
+   if is_updated en || global_build_options_changed; then
             echo "Info: updating PO files for disabled languages (nn, ro, tl)" >>$mainlog
             echo "Info: updating PO files for nn" >$logdir/nn.log
             update_po nn >>$logdir/nn.log 2>&1
@@ -429,7 +436,7 @@ done
 #            fi
    fi
 
-   if is_updated en; then
+   if is_updated en || global_build_options_changed; then
             echo "Info: updating PO files for ro" >$logdir/ro.log
             update_po ro >>$logdir/ro.log 2>&1
             checkfatal "$?" "updating po for ro"
@@ -441,7 +448,7 @@ done
 #            fi
    fi
 
-   if is_updated en; then
+   if is_updated en || global_build_options_changed; then
             echo "Info: updating PO files for tl" >$logdir/tl.log
             update_po tl >>$logdir/tl.log 2>&1
             checkfatal "$?" "updating po for tl"
