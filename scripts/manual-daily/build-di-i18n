@@ -1,14 +1,14 @@
 #!/bin/bash
 
-# Build the D-I Internals and the webpage with the list of translators for d-i
+# Build the D-I i18n-guide and the webpage with the list of translators for d-i
 # and publish to www dir
 
 ROOT=$HOME/trunk/installer/doc/i18n/
 mainlog=$ROOT/build/logs/main.log
-www_destination=/srv/d-i.debian.org/www/doc/internals
+www_destination=/srv/d-i.debian.org/www/doc/i18n-guide
 www_destination_languages_html=/srv/d-i.debian.org/www/doc
 
-echo "Build process for d-i internals" >$mainlog
+echo "Build process for d-i i18n-guide" >$mainlog
 
 
 usage() {
@@ -49,7 +49,7 @@ update_from_git() {
     fi
 }
 
-# We want the d-i internals files group writable
+# We want the d-i i18n-guide files group writable
 umask 0002
 
 RETRY=""
@@ -69,9 +69,9 @@ done
 
 update_from_git
 
-# Build the d-i internals manual
+# Build the d-i i18n-guide
 cd $ROOT/build
-echo "Building D-I Internals - en html" >>$mainlog
+echo "Building D-I i18n-guide - en html" >>$mainlog
 ./buildone.sh en html
 
 # Move to www dir
