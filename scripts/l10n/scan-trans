@@ -1,7 +1,7 @@
 #!/bin/sh
 # Scan a whole tree for translations.
 set -e
-for dir in $(find $1 -type d | grep /debian\$ | grep -v svn | sort); do
+for dir in $(find $1 -type d | grep /debian\$ | grep -v git | sort); do
 	if [ -e "$dir/control" ] &&
 	   ( [ -e "$dir/po" ] || [ -e "$dir/../po" ] || [ -n "$(ls $dir/../*/po -d 2>/dev/null)" ] )
    	then
