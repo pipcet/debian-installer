@@ -250,8 +250,7 @@ esac
 # Arch dependent udebs, which may not build cleanly elsewhere.
 case $ARCH in
     amd64)
-	do_subdir packages/grub-installer \
-	    packages/lilo-installer
+	do_subdir packages/grub-installer
 	;;
     alpha)
 	do_subdir packages/aboot-installer \
@@ -264,13 +263,11 @@ case $ARCH in
 	do_subdir packages/grub-installer
 	;;
     i386)
-	do_subdir packages/grub-installer \
-	    packages/lilo-installer \
-	    packages/elilo-installer
+	do_subdir packages/grub-installer
 	;;
     ia64)
-	do_subdir packages/efi-reader \
-	    packages/elilo-installer
+	do_subdir packages/grub-installer \
+	    packages/efi-reader
 	;;
     mips)
 	do_subdir packages/arcboot-installer
