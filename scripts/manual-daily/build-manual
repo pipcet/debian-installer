@@ -420,26 +420,13 @@ for lang in $translations; do
     fi
 done
 
-# Here we refresh po files for languages, that are outcommented in langlist 
-# and are therefore ignored by the whole process.
+# Here we refresh po files for languages, that are currently not actively maintained.
 # I want to keep that po files up-to-date (english-wise) nevertheless.
    if is_updated en || global_build_options_changed; then
-            echo "Info: updating PO files for disabled languages (eu, nn, pt_BR, ro, tl)" >>$mainlog
-            echo "Info: updating PO files for eu" >$logdir/eu.log
-            update_po eu >>$logdir/eu.log 2>&1
-            checkfatal "$?" "updating po for eu"
-   fi
-
-   if is_updated en || global_build_options_changed; then
+            echo "Info: updating PO files for unmaintained languages (nn, ro, tl)" >>$mainlog
             echo "Info: updating PO files for nn" >$logdir/nn.log
             update_po nn >>$logdir/nn.log 2>&1
             checkfatal "$?" "updating po for nn"
-   fi
-
-   if is_updated en || global_build_options_changed; then
-            echo "Info: updating PO files for pt_BR" >$logdir/pt_BR.log
-            update_po pt_BR >>$logdir/pt_BR.log 2>&1
-            checkfatal "$?" "updating po for pt_BR"
    fi
 
    if is_updated en || global_build_options_changed; then
