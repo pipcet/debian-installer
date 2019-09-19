@@ -26,7 +26,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-28 21:20+0000\n"
+"POT-Creation-Date: 2019-09-19 16:20+0000\n"
 "PO-Revision-Date: 2018-07-24 14:27+0000\n"
 "Last-Translator: Kristjan Räts <kristjanrats@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -632,13 +632,6 @@ msgstr "sisesta info käsitsi"
 msgid "Download installer components"
 msgstr "Paigaldaja komponentide allalaadimine"
 
-#. Type: text
-#. Description
-#. Main menu item
-#: ../load-cdrom.templates:1001
-msgid "Load installer components from CD"
-msgstr "Laserkettalt paigaldaja komponentide laadimine"
-
 #. Type: boolean
 #. Description
 #: ../load-media.templates:1001
@@ -747,13 +740,6 @@ msgstr ""
 "Nimekirjas on kõik saadaval olevad tööriistad. Kui sa pole kindel, peaksid "
 "valima vaikeväärtuse. Kui süsteem ei suuda laaduda, peaksid proovima "
 "paigaldamist mõne teise valikuga."
-
-#. Type: text
-#. Description
-#. Release is a filename which should not be translated
-#: ../bootstrap-base.templates:42001
-msgid "Checking Release signature"
-msgstr "Release allkirja kontrollimine"
 
 #. Type: select
 #. Description
@@ -1611,15 +1597,19 @@ msgstr "Mitte kõik loetletud klahvid ei ole saadaval kõigil klaviatuuridel."
 #. Description
 #. :sl1:
 #: ../cdrom-detect.templates:2001
-msgid "Detecting hardware to find CD-ROM drives"
-msgstr "Riistvara tuvastamine leidmaks CD-ROM ajameid"
+#, fuzzy
+#| msgid "Detecting hardware to find hard drives"
+msgid "Detecting hardware to find installation media"
+msgstr "Riistvara tuvastamine, leidmaks kõvakettaid"
 
 #. Type: text
 #. Description
 #. :sl1:
 #: ../cdrom-detect.templates:10001
-msgid "Scanning CD-ROM"
-msgstr "Laserketta skannimine"
+#, fuzzy
+#| msgid "SILO installation failed"
+msgid "Scanning installation media"
+msgstr "SILO paigaldamine nurjus"
 
 #. Type: text
 #. Description
@@ -1633,8 +1623,8 @@ msgstr "${DIR} skannimine..."
 #. finish-install progress bar item
 #. :sl1:
 #: ../cdrom-detect.templates:19001
-msgid "Unmounting and ejecting CD-ROM..."
-msgstr "Laserketta lahtihaakimine ja väljastamine..."
+msgid "Unmounting/ejecting installation media..."
+msgstr ""
 
 #. Type: text
 #. Description
@@ -2355,6 +2345,16 @@ msgstr ""
 #: ../mdcfg-utils.templates:6001 ../mdcfg-utils.templates:13001
 msgid "Cancel"
 msgstr "Loobu"
+
+#. Type: text
+#. Description
+#. Main menu item
+#. :sl1:
+#: ../load-cdrom.templates:1001
+#, fuzzy
+#| msgid "Load installer components from an installer ISO"
+msgid "Load installer components from installation media"
+msgstr "Paigaldaja komponentide paigaldaja ISO'lt laadimine"
 
 #. Type: text
 #. Description
@@ -3204,7 +3204,7 @@ msgstr "Alussüsteemi paigaldamiseks valmistumine..."
 msgid "Installing the base system"
 msgstr "Alussüsteemi paigaldamine"
 
-#. #-#-#-#-#  templates.pot (PACKAGE VERSION)  #-#-#-#-#
+#. #-#-#-#-#  templates.pot (base-installer)  #-#-#-#-#
 #. Type: text
 #. Description
 #. :sl1:
@@ -3418,6 +3418,14 @@ msgstr "${SUBST0} lahtipakkimine..."
 #: ../bootstrap-base.templates:41001
 msgid "Configuring ${SUBST0}..."
 msgstr "${SUBST0} seadistamine..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Release is a filename which should not be translated
+#: ../bootstrap-base.templates:42001
+msgid "Checking Release signature"
+msgstr "Release allkirja kontrollimine"
 
 #. Type: text
 #. Description
@@ -3674,8 +3682,27 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:1001
-msgid "Scanning the CD-ROM..."
-msgstr "Laserplaadi skannimine..."
+#, fuzzy
+#| msgid "Finishing the installation"
+msgid "Scanning the installation media..."
+msgstr "Paigaldamise lõpetamine"
+
+#. Type: error
+#. Description
+#. :sl2:
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:2001 ../apt-cdrom-setup.templates:6001
+#, fuzzy
+#| msgid ""
+#| "An attempt to configure apt to install additional packages from the CD "
+#| "failed."
+msgid ""
+"An attempt to configure apt to install additional packages from the media "
+"failed."
+msgstr ""
+"Katse seadistada apt'i laserkettalt lisapakettide paigaldamiseks nurjus."
 
 #. Type: boolean
 #. Description
@@ -3691,25 +3718,33 @@ msgstr "Laserplaadi skannimine..."
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001 ../apt-cdrom-setup.templates:4001
 #: ../apt-cdrom-setup.templates:5001 ../apt-cdrom-setup.templates:6001
-msgid "Scan another CD or DVD?"
-msgstr "Kas skaneerida teist laserplaati?"
+#, fuzzy
+#| msgid "SILO installation failed"
+msgid "Scan extra installation media?"
+msgstr "SILO paigaldamine nurjus"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001
-msgid "Your installation CD or DVD has been scanned; its label is:"
-msgstr "Sinu paigaldusplaati skanniti, selle nimi on:"
+msgid "Scanning your installation media finds the label:"
+msgstr ""
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001
+#, fuzzy
+#| msgid ""
+#| "You now have the option to scan additional CDs or DVDs for use by the "
+#| "package manager (apt). Normally these should be from the same set as the "
+#| "installation CD/DVD. If you do not have any additional CDs or DVDs "
+#| "available, this step can just be skipped."
 msgid ""
-"You now have the option to scan additional CDs or DVDs for use by the "
-"package manager (apt). Normally these should be from the same set as the "
-"installation CD/DVD. If you do not have any additional CDs or DVDs "
-"available, this step can just be skipped."
+"You now have the option of scanning additional media for use by the package "
+"manager (apt). Normally these should be from the same set as the one you "
+"booted from. If you do not have any additional media, this step can just be "
+"skipped."
 msgstr ""
 "Nüüd võid skaneerida lisaplaate, mida paketihaldur (apt) võib kasutada. "
 "Tavaliselt on see paigaldusplaatide komplekt. Kui sul ei ole teisi plaate, "
@@ -3722,51 +3757,50 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001 ../apt-cdrom-setup.templates:4001
-msgid "If you wish to scan another CD or DVD, please insert it now."
+#, fuzzy
+#| msgid "If you wish to scan another CD or DVD, please insert it now."
+msgid "If you wish to scan more media, please insert another one now."
 msgstr "Kui tahad veel mõnda plaati skaneerida, sisesta see praegu."
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:4001
-msgid "The CD or DVD with the following label has been scanned:"
+#, fuzzy
+#| msgid "The CD or DVD with the following label has been scanned:"
+msgid "The image with the following label has been scanned:"
 msgstr "Järgmise nimetusega plaati skanniti:"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:5001
-msgid "The CD or DVD with the following label has already been scanned:"
+#, fuzzy
+#| msgid "The CD or DVD with the following label has already been scanned:"
+msgid "The image with the following label has already been scanned:"
 msgstr "Järgmise nimega plaadid on juba skannitud:"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:5001
-msgid "Please replace it now if you wish to scan another CD or DVD."
+#, fuzzy
+#| msgid "Please replace it now if you wish to scan another CD or DVD."
+msgid "Please replace it now, if you wish to scan another."
 msgstr "Kui sa tahad skaneerida veel mõnd plaati, sisesta see praegu."
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:6001
-msgid ""
-"An attempt to configure apt to install additional packages from the CD/DVD "
-"failed."
-msgstr "Katse seadistada apt'i, et plaadilt lisapakke paigaldada, nurjus."
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:6001
-msgid "Please check that the CD/DVD has been inserted correctly."
+#, fuzzy
+#| msgid "Please check that the CD/DVD has been inserted correctly."
+msgid "Please check that the media has been inserted correctly."
 msgstr "Palun veendu, et oled CD/DVD-plaadi korrektselt sisestanud."
 
 #. Type: text
 #. Description
 #. :sl1:
-#. This template uses the same text as used in the package apt for apt-cdrom
-#. Do not translate "/cdrom/" (the mount point)
 #: ../apt-cdrom-setup.templates:7001
 msgid "Media change"
 msgstr "Meediumi vahetus"
@@ -3774,12 +3808,12 @@ msgstr "Meediumi vahetus"
 #. Type: text
 #. Description
 #. :sl1:
-#. This template uses the same text as used in the package apt for apt-cdrom
-#. Do not translate "/cdrom/" (the mount point)
 #: ../apt-cdrom-setup.templates:7001
-msgid ""
-"/cdrom/: Please insert the disc labeled '${LABEL}' in the drive '/cdrom/' "
-"and press enter."
+#, fuzzy
+#| msgid ""
+#| "/cdrom/: Please insert the disc labeled '${LABEL}' in the drive '/cdrom/' "
+#| "and press enter."
+msgid "Please insert the media labeled '${LABEL}' and press enter."
 msgstr ""
 "/cdrom/: Palun sisesta plaat nimega '${LABEL}' ajamisse '/cdrom/' ja vajuta "
 "enter klahvi."
@@ -3799,9 +3833,13 @@ msgstr "Netipaigalduse plaadi keelamine failis sources.list..."
 #. Description
 #. :sl2:
 #: ../apt-cdrom-setup.templates:9001 ../apt-mirror-setup.templates:6001
+#, fuzzy
+#| msgid ""
+#| "If you are installing from a netinst CD and choose not to use a mirror, "
+#| "you will end up with only a very minimal base system."
 msgid ""
-"If you are installing from a netinst CD and choose not to use a mirror, you "
-"will end up with only a very minimal base system."
+"If you are installing from a netinst CD image and choose not to use a "
+"mirror, you will end up with only a very minimal base system."
 msgstr ""
 "Kui sa paigaldad netipaigalduse plaadilt ja peeglit kasutusele ei võta, jääb "
 "sinu süsteem väga minimaalse alussüsteemi tasemele."
@@ -3810,8 +3848,13 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:10001
+#, fuzzy
+#| msgid ""
+#| "You are installing from a netinst CD, which by itself only allows "
+#| "installation of a very minimal base system. Use a mirror to install a "
+#| "more complete system."
 msgid ""
-"You are installing from a netinst CD, which by itself only allows "
+"You are installing from a netinst CD image, which by itself only allows "
 "installation of a very minimal base system. Use a mirror to install a more "
 "complete system."
 msgstr ""
@@ -3822,8 +3865,13 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:11001
+#, fuzzy
+#| msgid ""
+#| "You are installing from a CD, which contains a limited selection of "
+#| "packages."
 msgid ""
-"You are installing from a CD, which contains a limited selection of packages."
+"You are installing from an image which contains a limited selection of "
+"packages."
 msgstr "Sa paigaldad CD-plaadilt, millel on väga piiratud paketivalik."
 
 #. Type: text
@@ -3831,9 +3879,13 @@ msgstr "Sa paigaldad CD-plaadilt, millel on väga piiratud paketivalik."
 #. :sl1:
 #. The value of %i can be 2 or 3
 #: ../apt-cdrom-setup.templates:12001
-#, no-c-format
+#, fuzzy, no-c-format
+#| msgid ""
+#| "You have scanned %i CDs. Even though these contain a fair selection of "
+#| "packages, some may be missing (notably some packages needed to support "
+#| "languages other than English)."
 msgid ""
-"You have scanned %i CDs. Even though these contain a fair selection of "
+"You have scanned %i images. Even though these contain a fair selection of "
 "packages, some may be missing (notably some packages needed to support "
 "languages other than English)."
 msgstr ""
@@ -3845,9 +3897,12 @@ msgstr ""
 #. :sl1:
 #. The value of %i can be from 4 to 8
 #: ../apt-cdrom-setup.templates:13001
-#, no-c-format
+#, fuzzy, no-c-format
+#| msgid ""
+#| "You have scanned %i CDs. Even though these contain a large selection of "
+#| "packages, some may be missing."
 msgid ""
-"You have scanned %i CDs. Even though these contain a large selection of "
+"You have scanned %i images. Even though these contain a large selection of "
 "packages, some may be missing."
 msgstr ""
 "Sa oled skanninud %i CD-plaati. Kuigi need sisaldavad suurt hulka pakette, "
@@ -3868,8 +3923,12 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:15001
+#, fuzzy
+#| msgid ""
+#| "You are installing from a DVD. Even though the DVD contains a large "
+#| "selection of packages, some may be missing."
 msgid ""
-"You are installing from a DVD. Even though the DVD contains a large "
+"You are installing from a DVD image. Even though it contains a large "
 "selection of packages, some may be missing."
 msgstr ""
 "Sa paigaldad DVD-plaadilt. Kuigi DVD-l on lai paketivalik, võib midagi jääda "
@@ -3998,9 +4057,14 @@ msgstr "Kas kasutada võrgupeeglit?"
 #. Description
 #. :sl1:
 #: ../apt-mirror-setup.templates:5001
+#, fuzzy
+#| msgid ""
+#| "A network mirror can be used to supplement the software that is included "
+#| "on the CD-ROM. This may also make newer versions of software available."
 msgid ""
 "A network mirror can be used to supplement the software that is included on "
-"the CD-ROM. This may also make newer versions of software available."
+"the installation media. This may also make newer versions of software "
+"available."
 msgstr ""
 "Lisaks laserplaadil olevale tarkvarale on võimalik kasutusele võtta ka "
 "võrgupeeglis leiduv tarkvara. Võrgus võivad saadaval olla programmide uuemad "
@@ -4633,6 +4697,65 @@ msgstr "Virtuaalse kettaruumi seadistamine (LVM)"
 #: ../partman-auto-lvm.templates:1001
 msgid "Guided - use entire disk and set up LVM"
 msgstr "Juhitud - tervest kettast luuakse LVM"
+
+#~ msgid "Load installer components from CD"
+#~ msgstr "Laserkettalt paigaldaja komponentide laadimine"
+
+#~ msgid "Detecting hardware to find CD-ROM drives"
+#~ msgstr "Riistvara tuvastamine leidmaks CD-ROM ajameid"
+
+#~ msgid "Scanning CD-ROM"
+#~ msgstr "Laserketta skannimine"
+
+#~ msgid "Unmounting and ejecting CD-ROM..."
+#~ msgstr "Laserketta lahtihaakimine ja väljastamine..."
+
+#~ msgid "Scanning the CD-ROM..."
+#~ msgstr "Laserplaadi skannimine..."
+
+#~ msgid "Scan another CD or DVD?"
+#~ msgstr "Kas skaneerida teist laserplaati?"
+
+#~ msgid "Your installation CD or DVD has been scanned; its label is:"
+#~ msgstr "Sinu paigaldusplaati skanniti, selle nimi on:"
+
+#~ msgid ""
+#~ "An attempt to configure apt to install additional packages from the CD/"
+#~ "DVD failed."
+#~ msgstr "Katse seadistada apt'i, et plaadilt lisapakke paigaldada, nurjus."
+
+#~ msgid "Load CD-ROM drivers from removable media?"
+#~ msgstr "Kas laadida CD-ROM'i draiverid väliselt andmekandjalt?"
+
+#~ msgid "Retry mounting the CD-ROM?"
+#~ msgstr "Kas proovida uuesti laserketta haakimist?"
+
+#~ msgid "CD-ROM detected"
+#~ msgstr "CD-ROM tuvastatud"
+
+#~ msgid "Incorrect CD-ROM detected"
+#~ msgstr "Tuvastati sobimatu CD-ROM"
+
+#~ msgid "Detect and mount CD-ROM"
+#~ msgstr "CD-ROM'i tuvastamine ja haakimine"
+
+#~ msgid "Check the CD-ROM(s) integrity"
+#~ msgstr "Laserketta (ketaste) terviklikkuse kontrollimine"
+
+#~ msgid "Check CD-ROM integrity?"
+#~ msgstr "Kas kontrollida CD-plaadi terviklikkust?"
+
+#~ msgid "Insert a Debian CD-ROM"
+#~ msgstr "Sisesta Debian'i laserketas"
+
+#~ msgid "Failed to mount CD-ROM"
+#~ msgstr "Laserketast ei õnnestunud haakida"
+
+#~ msgid "No valid Debian CD-ROM"
+#~ msgstr "Pole sobivat Debian'i laserketast"
+
+#~ msgid "Checking CD-ROM integrity"
+#~ msgstr "Laserketta terviklikkuse kontroll"
 
 #~ msgid "No DHCP client was found. This package requires pump or dhcp-client."
 #~ msgstr ""
@@ -5566,9 +5689,6 @@ msgstr "Juhitud - tervest kettast luuakse LVM"
 #~ "Since the partitions have already been mounted, you cannot do any changes."
 #~ msgstr "Kuna partitsioonid on juba külge haagitud, ei saa neid enam muuta."
 
-#~ msgid "Failed to unmount partitions"
-#~ msgstr "Partitsioonide lahtihaakimine nurjus"
-
 #~ msgid "An unexpected error occurred while unmounting the partitions."
 #~ msgstr "Partitsioonide lahtihaakimisel esines ootamatu viga"
 
@@ -5744,9 +5864,6 @@ msgstr "Juhitud - tervest kettast luuakse LVM"
 #~ "Paketi 'silo' /target/ peale paigaldamine nurjus. Alglaaduri SILO "
 #~ "paigaldamine on küll vajalik samm, kuid ilmnenud probleem ei pruugi üldse "
 #~ "SILO'ga seotud olla, mistõttu võib osutuda võimalikuks jätkata."
-
-#~ msgid "SILO installation failed"
-#~ msgstr "SILO paigaldamine nurjus"
 
 #~ msgid "Running \"/sbin/silo\" failed with error code \"${ERRCODE}\"."
 #~ msgstr "\"/sbin/silo\" käivitamine nurjus veakoodiga \"${ERRCODE}\"."

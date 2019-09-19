@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fr\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-15 19:16+0000\n"
+"POT-Creation-Date: 2019-09-19 16:20+0000\n"
 "PO-Revision-Date: 2019-09-12 15:44+0100\n"
 "Last-Translator: Baptiste Jammet <baptiste@mailoo.org>\n"
 "Language-Team: French <debian-l10n-french@lists.debian.org>\n"
@@ -509,30 +509,33 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:1001
-msgid "Load CD-ROM drivers from removable media?"
-msgstr ""
-"Faut-il charger les pilotes de lecteurs de CD-ROM depuis un support "
-"amovible ?"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../cdrom-detect.templates:1001 ../cdrom-detect.templates:3001
-msgid "No common CD-ROM drive was detected."
-msgstr "Aucun lecteur de CD-ROM usuel n'a été détecté."
+#, fuzzy
+#| msgid "Load drivers from removable media"
+msgid "Load drivers from removable media?"
+msgstr "Charger des pilotes depuis un support amovible"
 
 #. Type: boolean
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:1001
+msgid "No device for installation media was detected."
+msgstr ""
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../cdrom-detect.templates:1001
+#, fuzzy
+#| msgid ""
+#| "You may need to load additional CD-ROM drivers from removable media, such "
+#| "as a driver floppy. If you have such media available now, insert it, and "
+#| "continue. Otherwise, you will be given the option to manually select CD-"
+#| "ROM modules."
 msgid ""
-"You may need to load additional CD-ROM drivers from removable media, such as "
-"a driver floppy. If you have such media available now, insert it, and "
-"continue. Otherwise, you will be given the option to manually select CD-ROM "
-"modules."
+"You may need to load additional drivers from removable media, such as a "
+"driver floppy or a USB stick. If you have these available now, insert the "
+"media, and continue. Otherwise, you will be given the option to manually "
+"select some modules."
 msgstr ""
 "Il peut être nécessaire de charger des pilotes additionnels de lecteurs de "
 "CD-ROM depuis un support amovible, par exemple une disquette de pilotes. Si "
@@ -544,7 +547,9 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:3001
-msgid "Manually select a CD-ROM module and device?"
+#, fuzzy
+#| msgid "Manually select a CD-ROM module and device?"
+msgid "Manually select a module and device for installation media?"
 msgstr ""
 "Voulez-vous choisir le module et le périphérique du lecteur de CD-ROM ?"
 
@@ -552,11 +557,27 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:3001
+#, fuzzy
+#| msgid "No common CD-ROM drive was detected."
+msgid "No device for installation media (like a CD-ROM device) was detected."
+msgstr "Aucun lecteur de CD-ROM usuel n'a été détecté."
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../cdrom-detect.templates:3001
+#, fuzzy
+#| msgid ""
+#| "Your CD-ROM drive may be an old Mitsumi or another non-IDE, non-SCSI CD-"
+#| "ROM drive. In that case you should choose which module to load and the "
+#| "device to use. If you don't know which module and device are needed, look "
+#| "for some documentation or try a network installation instead of a CD-ROM "
+#| "installation."
 msgid ""
-"Your CD-ROM drive may be an old Mitsumi or another non-IDE, non-SCSI CD-ROM "
-"drive. In that case you should choose which module to load and the device to "
-"use. If you don't know which module and device are needed, look for some "
-"documentation or try a network installation instead of a CD-ROM installation."
+"If your CD-ROM drive is an old Mitsumi or another non-IDE, non-SCSI CD-ROM "
+"drive, you should choose which module to load and the device to use. If you "
+"don't know which module and device are needed, look for some documentation "
+"or try a network installation."
 msgstr ""
 "Le lecteur de CD-ROM est peut-être un ancien lecteur Mitsumi ou un lecteur "
 "qui n'est ni un IDE, ni un SCSI. Si vous êtes dans cette situation, vous "
@@ -569,16 +590,23 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:4001
-msgid "Retry mounting the CD-ROM?"
-msgstr "Faut-il réessayer de monter le CD ?"
+#, fuzzy
+#| msgid "Remote installation password:"
+msgid "Retry mounting installation media?"
+msgstr "Mot de passe d'installation à distance :"
 
 #. Type: boolean
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:4001
+#, fuzzy
+#| msgid ""
+#| "Your installation CD-ROM couldn't be mounted. This probably means that "
+#| "the CD-ROM was not in the drive. If so you can insert it and try again."
 msgid ""
-"Your installation CD-ROM couldn't be mounted. This probably means that the "
-"CD-ROM was not in the drive. If so you can insert it and try again."
+"Your installation media couldn't be mounted. When installing from CD-ROM, "
+"this probably means that the disk was not in the drive. If so you can insert "
+"it and try again."
 msgstr ""
 "Le CD d'installation ne peut être monté. Cela signifie probablement que le "
 "CD ne se trouve pas dans le lecteur. Si c'est le cas, vous pouvez l'insérer "
@@ -588,17 +616,24 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:5001
-msgid "Module needed for accessing the CD-ROM:"
+#, fuzzy
+#| msgid "Module needed for accessing the CD-ROM:"
+msgid "Module needed for accessing the installation media:"
 msgstr "Module pour le lecteur de CD-ROM :"
 
 #. Type: select
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:5001
+#, fuzzy
+#| msgid ""
+#| "The automatic detection didn't find a CD-ROM drive. You can try to load a "
+#| "specific module if you have an unusual CD-ROM drive (that is neither IDE "
+#| "nor SCSI)."
 msgid ""
-"The automatic detection didn't find a CD-ROM drive. You can try to load a "
-"specific module if you have an unusual CD-ROM drive (that is neither IDE nor "
-"SCSI)."
+"The automatic detection didn't find a drive for installation media. When "
+"installing from CD-ROM and you have an unusual CD-ROM drive (that is neither "
+"IDE nor SCSI), you can try to load a specific module."
 msgstr ""
 "La détection automatique n'a pas trouvé de lecteur de CD-ROM. Vous pouvez "
 "essayer de charger un module particulier si vous possédez un lecteur de CD-"
@@ -608,17 +643,24 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:6001
-msgid "Device file for accessing the CD-ROM:"
+#, fuzzy
+#| msgid "Device file for accessing the CD-ROM:"
+msgid "Device file for accessing the installation media:"
 msgstr "Fichier de périphérique pour le lecteur de CD-ROM :"
 
 #. Type: string
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:6001
+#, fuzzy
+#| msgid ""
+#| "In order to access your CD-ROM drive, please enter the device file that "
+#| "should be used. Non-standard CD-ROM drives use non-standard device files "
+#| "(such as /dev/mcdx)."
 msgid ""
-"In order to access your CD-ROM drive, please enter the device file that "
-"should be used. Non-standard CD-ROM drives use non-standard device files "
-"(such as /dev/mcdx)."
+"In order to access your installation media (like your CD-ROM), please enter "
+"the device file that should be used. Non-standard CD-ROM drives use non-"
+"standard device files (such as /dev/mcdx)."
 msgstr ""
 "Afin de pouvoir accéder au lecteur de CD-ROM, veuillez indiquer le fichier "
 "de périphérique utilisé. En effet, les lecteurs non standards utilisent des "
@@ -641,16 +683,23 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:12001
-msgid "CD-ROM detected"
-msgstr "Un CD a été détecté"
+#, fuzzy
+#| msgid "UNetbootin media detected"
+msgid "Installation media detected"
+msgstr "Support d'installation UNetbootin détecté"
 
 #. Type: note
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:12001
+#, fuzzy
+#| msgid ""
+#| "The CD-ROM autodetection was successful. A CD-ROM drive has been found "
+#| "and it currently contains the CD ${cdname}. The installation will now "
+#| "continue."
 msgid ""
-"The CD-ROM autodetection was successful. A CD-ROM drive has been found and "
-"it currently contains the CD ${cdname}. The installation will now continue."
+"Autodetection of the installation media was successful. A drive has been "
+"found that contains '${cdname}'. The installation will now continue."
 msgstr ""
 "La détection automatique du CD s'est bien déroulée. Un lecteur de CD-ROM a "
 "été identifié et ce lecteur contient le CD : ${cdname}. Vous pouvez "
@@ -660,14 +709,19 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:14001
-msgid "Incorrect CD-ROM detected"
-msgstr "Un CD non valable a été détecté"
+#, fuzzy
+#| msgid "UNetbootin media detected"
+msgid "Incorrect installation media detected"
+msgstr "Support d'installation UNetbootin détecté"
 
 #. Type: error
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:14001
-msgid "The CD-ROM drive contains a CD which cannot be used for installation."
+#, fuzzy
+#| msgid ""
+#| "The CD-ROM drive contains a CD which cannot be used for installation."
+msgid "The detected media cannot be used for installation."
 msgstr ""
 "Le CD présent dans le lecteur ne peut pas être utilisé pour l'installation."
 
@@ -675,7 +729,9 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:14001
-msgid "Please insert a suitable CD to continue with the installation."
+#, fuzzy
+#| msgid "Please insert a suitable CD to continue with the installation."
+msgid "Please provide suitable media to continue with the installation."
 msgstr "Veuillez insérer un CD valable pour continuer l'installation."
 
 #. Type: error
@@ -691,9 +747,13 @@ msgstr "Erreur de lecture du fichier « Release »"
 #. Translators: DO NOT TRANSLATE "Release". This is the name of a file.
 #. :sl2:
 #: ../cdrom-detect.templates:15001
+#, fuzzy
+#| msgid ""
+#| "The CD-ROM does not seem to contain a valid 'Release' file, or that file "
+#| "could not be read correctly."
 msgid ""
-"The CD-ROM does not seem to contain a valid 'Release' file, or that file "
-"could not be read correctly."
+"The installation media do not seem to contain a valid 'Release' file, or "
+"that file could not be read correctly."
 msgstr ""
 "Le CD ne semble pas contenir de fichier « Release ». Il est également "
 "possible que ce fichier soit présent mais ne puisse pas être lu correctement."
@@ -703,8 +763,12 @@ msgstr ""
 #. Translators: DO NOT TRANSLATE "Release". This is the name of a file.
 #. :sl2:
 #: ../cdrom-detect.templates:15001
+#, fuzzy
+#| msgid ""
+#| "You may try to repeat CD-ROM detection but, even if it does succeed the "
+#| "second time, you may experience problems later in the installation."
 msgid ""
-"You may try to repeat CD-ROM detection but, even if it does succeed the "
+"You may try to repeat the media detection, but even if it does succeed the "
 "second time, you may experience problems later in the installation."
 msgstr ""
 "Vous pouvez tenter à nouveau la détection du CD. Cependant, même si elle "
@@ -716,8 +780,12 @@ msgstr ""
 #. Item in the main menu to select this package
 #. :sl2:
 #: ../cdrom-detect.templates:20001
-msgid "Detect and mount CD-ROM"
-msgstr "Détecter et monter le CD"
+#, fuzzy
+#| msgid "Use the \"exit\" command to return to the installation menu."
+msgid "Detect and mount installation media"
+msgstr ""
+"Vous pouvez utiliser la commande « exit » pour revenir au menu "
+"d'installation."
 
 #. Type: select
 #. Choices
@@ -1426,12 +1494,19 @@ msgstr "Faut-il continuer sans route par défaut ?"
 #. Description
 #. :sl2:
 #: ../netcfg-dhcp.templates:8001
+#, fuzzy
+#| msgid ""
+#| "The network autoconfiguration was successful. However, no default route "
+#| "was set: the system does not know how to communicate with hosts on the "
+#| "Internet. This will make it impossible to continue with the installation "
+#| "unless you have the first installation CD-ROM, a 'Netinst' CD-ROM, or "
+#| "packages available on the local network."
 msgid ""
 "The network autoconfiguration was successful. However, no default route was "
 "set: the system does not know how to communicate with hosts on the Internet. "
 "This will make it impossible to continue with the installation unless you "
-"have the first installation CD-ROM, a 'Netinst' CD-ROM, or packages "
-"available on the local network."
+"have the first image from a set of installation media, a 'Netinst' image, or "
+"packages available on the local network."
 msgstr ""
 "La configuration automatique du réseau a réussi. Cependant aucune route par "
 "défaut n'a été déclarée : le système ne sait pas comment communiquer avec "
@@ -1828,17 +1903,24 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../cdrom-retriever.templates:1001
-msgid "Failed to copy file from CD-ROM. Retry?"
+#, fuzzy
+#| msgid "Failed to copy file from CD-ROM. Retry?"
+msgid "Failed to copy file from installation media. Retry?"
 msgstr "La copie d'un fichier du CD a échoué. Faut-il réessayer ?"
 
 #. Type: boolean
 #. Description
 #. :sl2:
 #: ../cdrom-retriever.templates:1001
+#, fuzzy
+#| msgid ""
+#| "There was a problem reading data from the CD-ROM. Please make sure it is "
+#| "in the drive. If retrying does not work, you should check the integrity "
+#| "of your CD-ROM."
 msgid ""
-"There was a problem reading data from the CD-ROM. Please make sure it is in "
-"the drive. If retrying does not work, you should check the integrity of your "
-"CD-ROM."
+"There was a problem reading data. Please make sure you have inserted the "
+"installation media correctly. If retrying does not work, you should check "
+"the integrity of your installation media."
 msgstr ""
 "Une erreur s'est produite lors de la lecture des données du CD. Veuillez "
 "vérifier que le CD est bien présent dans le lecteur. Si  l'opération échoue "
@@ -2235,7 +2317,7 @@ msgstr ""
 #. Type: boolean
 #. Description
 #. :sl2:
-#. #-#-#-#-#  templates.pot (PACKAGE VERSION)  #-#-#-#-#
+#. #-#-#-#-#  templates.pot (base-installer)  #-#-#-#-#
 #. Type: error
 #. Description
 #. :sl2:
@@ -3991,9 +4073,13 @@ msgstr "Impossible d'installer le système de base"
 #. See http://www.debian.org/doc/debian-policy/ch-binary.html#s3.7
 #. :sl2:
 #: ../bootstrap-base.templates:2001
+#, fuzzy
+#| msgid ""
+#| "The installer cannot figure out how to install the base system. No "
+#| "installable CD-ROM was found and no valid mirror was configured."
 msgid ""
-"The installer cannot figure out how to install the base system. No "
-"installable CD-ROM was found and no valid mirror was configured."
+"The installer cannot figure out how to install the base system. It found no "
+"installable image, and no valid mirror was configured."
 msgstr ""
 "L'outil d'installation n'a pas trouvé de méthode pour installer le système "
 "de base. Aucun CD d'installation n'a été trouvé et aucun miroir valable n'a "
@@ -4250,9 +4336,13 @@ msgstr "Fichier « Release » invalide : pas d'entrée pour ${SUBST0}."
 #. SUBST0 is a filename or package name
 #. Debootstrap is a program name: should not be translated
 #: ../bootstrap-base.templates:22001
+#, fuzzy
+#| msgid ""
+#| "Couldn't retrieve ${SUBST0}. This may be due to a network problem or a "
+#| "bad CD, depending on your installation method."
 msgid ""
-"Couldn't retrieve ${SUBST0}. This may be due to a network problem or a bad "
-"CD, depending on your installation method."
+"Couldn't retrieve ${SUBST0}. This may be due to a network problem or bad "
+"media, depending on your installation method."
 msgstr ""
 "Impossible de récupérer ${SUBST0}. Ceci peut être dû à un problème de réseau "
 "ou un CD défectueux, selon votre méthode d'installation."
@@ -4368,17 +4458,6 @@ msgstr ""
 #: ../apt-cdrom-setup.templates:2001
 msgid "apt configuration problem"
 msgstr "Échec de la configuration de l'outil de gestion des paquets (APT)"
-
-#. Type: error
-#. Description
-#. :sl2:
-#: ../apt-cdrom-setup.templates:2001
-msgid ""
-"An attempt to configure apt to install additional packages from the CD "
-"failed."
-msgstr ""
-"Une tentative de configuration d'APT pour installer de nouveaux paquets "
-"depuis le CD a échoué."
 
 #. Type: boolean
 #. Description
@@ -5353,5 +5432,7 @@ msgstr ""
 #. Translators: keep it under 65 columns
 #. :sl2:
 #: ../cdrom-checker.templates:12001
-msgid "Check the CD-ROM(s) integrity"
-msgstr "Contrôler l'intégrité du(des) CD"
+#, fuzzy
+#| msgid "Check the integrity of another CD-ROM?"
+msgid "Check the integrity of installation media"
+msgstr "Contrôler l'intégrité d'un autre CD ?"

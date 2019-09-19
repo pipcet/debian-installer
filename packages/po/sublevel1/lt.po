@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-28 21:20+0000\n"
+"POT-Creation-Date: 2019-09-19 16:20+0000\n"
 "PO-Revision-Date: 2018-10-11 18:52+0300\n"
 "Last-Translator: Rimas Kudelis <rq@akl.lt>\n"
 "Language-Team: Lithuanian <komp_lt@konferencijos.lt>\n"
@@ -625,13 +625,6 @@ msgstr "įveskite informaciją rankiniu būdu"
 msgid "Download installer components"
 msgstr "Parsiųsti įdiegyklės komponentus per tinklą"
 
-#. Type: text
-#. Description
-#. Main menu item
-#: ../load-cdrom.templates:1001
-msgid "Load installer components from CD"
-msgstr "Įkelti įdiegyklės komponentus iš kompaktinio disko"
-
 #. Type: boolean
 #. Description
 #: ../load-media.templates:1001
@@ -743,13 +736,6 @@ msgstr ""
 "Sąraše parodyti prieinami įrankiai. Jei abejojate kurį pasirinkti, naudokite "
 "numatytąjį parinkimą. Jei sistema nepasileis, bandykite pakartoti įdiegimą, "
 "pasirinkdami kitą parametrą."
-
-#. Type: text
-#. Description
-#. Release is a filename which should not be translated
-#: ../bootstrap-base.templates:42001
-msgid "Checking Release signature"
-msgstr "Tikrinamas „Release“ failo autentiškumas"
 
 #. Type: select
 #. Description
@@ -1614,15 +1600,19 @@ msgstr "Ne visus išvardytus klavišus galima rasti visose klaviatūrose."
 #. Description
 #. :sl1:
 #: ../cdrom-detect.templates:2001
-msgid "Detecting hardware to find CD-ROM drives"
-msgstr "Apžvelgiama aparatūra ieškant CD įrenginio"
+#, fuzzy
+#| msgid "Detecting hardware to find hard drives"
+msgid "Detecting hardware to find installation media"
+msgstr "Apžvelgiama aparatūra ieškant kietųjų diskų"
 
 #. Type: text
 #. Description
 #. :sl1:
 #: ../cdrom-detect.templates:10001
-msgid "Scanning CD-ROM"
-msgstr "Apžvelgiamas CD diskas"
+#, fuzzy
+#| msgid "SILO installation failed"
+msgid "Scanning installation media"
+msgstr "„SILO“ įdiegti nepavyko"
 
 #. Type: text
 #. Description
@@ -1636,8 +1626,8 @@ msgstr "Apžvelgiamas aplankas ${DIR}..."
 #. finish-install progress bar item
 #. :sl1:
 #: ../cdrom-detect.templates:19001
-msgid "Unmounting and ejecting CD-ROM..."
-msgstr "Atjungiama ir išstumiama CD laikmena..."
+msgid "Unmounting/ejecting installation media..."
+msgstr ""
 
 #. Type: text
 #. Description
@@ -2363,6 +2353,16 @@ msgstr ""
 #: ../mdcfg-utils.templates:6001 ../mdcfg-utils.templates:13001
 msgid "Cancel"
 msgstr "Atsisakyti"
+
+#. Type: text
+#. Description
+#. Main menu item
+#. :sl1:
+#: ../load-cdrom.templates:1001
+#, fuzzy
+#| msgid "Load installer components from an installer ISO"
+msgid "Load installer components from installation media"
+msgstr "Įdiegiklio komponentų įkėlimas iš įdiegiklio ISO atvaizdžio"
 
 #. Type: text
 #. Description
@@ -3223,7 +3223,7 @@ msgstr "Pasiruošiama diegti bazinę sistemos dalį..."
 msgid "Installing the base system"
 msgstr "Bazinės sistemos dalies diegimas"
 
-#. #-#-#-#-#  templates.pot (PACKAGE VERSION)  #-#-#-#-#
+#. #-#-#-#-#  templates.pot (base-installer)  #-#-#-#-#
 #. Type: text
 #. Description
 #. :sl1:
@@ -3438,6 +3438,14 @@ msgstr "Išpakuojamas ${SUBST0}..."
 #: ../bootstrap-base.templates:41001
 msgid "Configuring ${SUBST0}..."
 msgstr "Konfigūruojamas ${SUBST0}..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Release is a filename which should not be translated
+#: ../bootstrap-base.templates:42001
+msgid "Checking Release signature"
+msgstr "Tikrinamas „Release“ failo autentiškumas"
 
 #. Type: text
 #. Description
@@ -3694,8 +3702,26 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:1001
-msgid "Scanning the CD-ROM..."
-msgstr "Apžvelgiamas CD..."
+#, fuzzy
+#| msgid "Finishing the installation"
+msgid "Scanning the installation media..."
+msgstr "Diegimo pabaigimas"
+
+#. Type: error
+#. Description
+#. :sl2:
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:2001 ../apt-cdrom-setup.templates:6001
+#, fuzzy
+#| msgid ""
+#| "An attempt to configure apt to install additional packages from the CD "
+#| "failed."
+msgid ""
+"An attempt to configure apt to install additional packages from the media "
+"failed."
+msgstr "Bandymas sukonfigūruoti apt papildomų paketų įdiegimui iš CD nepavyko."
 
 #. Type: boolean
 #. Description
@@ -3711,25 +3737,33 @@ msgstr "Apžvelgiamas CD..."
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001 ../apt-cdrom-setup.templates:4001
 #: ../apt-cdrom-setup.templates:5001 ../apt-cdrom-setup.templates:6001
-msgid "Scan another CD or DVD?"
-msgstr "Ar apžvelgti kita CD arba DVD?"
+#, fuzzy
+#| msgid "SILO installation failed"
+msgid "Scan extra installation media?"
+msgstr "„SILO“ įdiegti nepavyko"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001
-msgid "Your installation CD or DVD has been scanned; its label is:"
-msgstr "Jūsų įdiegimo CD arba DCD apžvelgtas: jo žymuo yra:"
+msgid "Scanning your installation media finds the label:"
+msgstr ""
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001
+#, fuzzy
+#| msgid ""
+#| "You now have the option to scan additional CDs or DVDs for use by the "
+#| "package manager (apt). Normally these should be from the same set as the "
+#| "installation CD/DVD. If you do not have any additional CDs or DVDs "
+#| "available, this step can just be skipped."
 msgid ""
-"You now have the option to scan additional CDs or DVDs for use by the "
-"package manager (apt). Normally these should be from the same set as the "
-"installation CD/DVD. If you do not have any additional CDs or DVDs "
-"available, this step can just be skipped."
+"You now have the option of scanning additional media for use by the package "
+"manager (apt). Normally these should be from the same set as the one you "
+"booted from. If you do not have any additional media, this step can just be "
+"skipped."
 msgstr ""
 "Dabar Jūs galite atlikti papildomų CD arba DVD diskų apžvalgą, kad paketų "
 "tvarkyklė (apt) galėtų juos naudoti. Paprastai, jie turėtų būti iš to pačio "
@@ -3743,52 +3777,50 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001 ../apt-cdrom-setup.templates:4001
-msgid "If you wish to scan another CD or DVD, please insert it now."
+#, fuzzy
+#| msgid "If you wish to scan another CD or DVD, please insert it now."
+msgid "If you wish to scan more media, please insert another one now."
 msgstr "Jei Jūs pageidaujate apžvelgti kitą CD arba DVD, įdėkite jį dabar."
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:4001
-msgid "The CD or DVD with the following label has been scanned:"
+#, fuzzy
+#| msgid "The CD or DVD with the following label has been scanned:"
+msgid "The image with the following label has been scanned:"
 msgstr "Apžvelgtas CD arba DVD, kurio žymuo yra:"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:5001
-msgid "The CD or DVD with the following label has already been scanned:"
+#, fuzzy
+#| msgid "The CD or DVD with the following label has already been scanned:"
+msgid "The image with the following label has already been scanned:"
 msgstr "Taip pat apžvelgtas CD arba DVD, kurio žymuo yra:"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:5001
-msgid "Please replace it now if you wish to scan another CD or DVD."
+#, fuzzy
+#| msgid "Please replace it now if you wish to scan another CD or DVD."
+msgid "Please replace it now, if you wish to scan another."
 msgstr "Pakeiskite diską dabar, jei norite apžvelgti kitą CD arba DVD."
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:6001
-msgid ""
-"An attempt to configure apt to install additional packages from the CD/DVD "
-"failed."
-msgstr ""
-"Bandymas sukonfigūruoti apt papildomų paketų įdiegimui iš CD/DVD nepavyko."
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:6001
-msgid "Please check that the CD/DVD has been inserted correctly."
+#, fuzzy
+#| msgid "Please check that the CD/DVD has been inserted correctly."
+msgid "Please check that the media has been inserted correctly."
 msgstr "Patikrinkite ar CD/DVD įdėtas teisingai."
 
 #. Type: text
 #. Description
 #. :sl1:
-#. This template uses the same text as used in the package apt for apt-cdrom
-#. Do not translate "/cdrom/" (the mount point)
 #: ../apt-cdrom-setup.templates:7001
 msgid "Media change"
 msgstr "Laikmenos keitimas"
@@ -3796,12 +3828,12 @@ msgstr "Laikmenos keitimas"
 #. Type: text
 #. Description
 #. :sl1:
-#. This template uses the same text as used in the package apt for apt-cdrom
-#. Do not translate "/cdrom/" (the mount point)
 #: ../apt-cdrom-setup.templates:7001
-msgid ""
-"/cdrom/: Please insert the disc labeled '${LABEL}' in the drive '/cdrom/' "
-"and press enter."
+#, fuzzy
+#| msgid ""
+#| "/cdrom/: Please insert the disc labeled '${LABEL}' in the drive '/cdrom/' "
+#| "and press enter."
+msgid "Please insert the media labeled '${LABEL}' and press enter."
 msgstr ""
 "/cdrom/: Įdėkite diską su žyme „${LABEL}“ į įrenginį „/cdrom/“ ir "
 "nuspauskite klavišą <Įvesti>."
@@ -3821,9 +3853,13 @@ msgstr "Pašalinamas „netinst CD“ iš sources.list..."
 #. Description
 #. :sl2:
 #: ../apt-cdrom-setup.templates:9001 ../apt-mirror-setup.templates:6001
+#, fuzzy
+#| msgid ""
+#| "If you are installing from a netinst CD and choose not to use a mirror, "
+#| "you will end up with only a very minimal base system."
 msgid ""
-"If you are installing from a netinst CD and choose not to use a mirror, you "
-"will end up with only a very minimal base system."
+"If you are installing from a netinst CD image and choose not to use a "
+"mirror, you will end up with only a very minimal base system."
 msgstr ""
 "Jei diegiate iš „netinst“ disko ir pasirinksite nenaudoti paketų archyvo "
 "serverio, bus įdiegta tik labai minimali bazinė sistema."
@@ -3832,8 +3868,13 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:10001
+#, fuzzy
+#| msgid ""
+#| "You are installing from a netinst CD, which by itself only allows "
+#| "installation of a very minimal base system. Use a mirror to install a "
+#| "more complete system."
 msgid ""
-"You are installing from a netinst CD, which by itself only allows "
+"You are installing from a netinst CD image, which by itself only allows "
 "installation of a very minimal base system. Use a mirror to install a more "
 "complete system."
 msgstr ""
@@ -3845,8 +3886,13 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:11001
+#, fuzzy
+#| msgid ""
+#| "You are installing from a CD, which contains a limited selection of "
+#| "packages."
 msgid ""
-"You are installing from a CD, which contains a limited selection of packages."
+"You are installing from an image which contains a limited selection of "
+"packages."
 msgstr "Jūs diegiate iš CD, kuris turi ribotą paketų pasirinkimą."
 
 #. Type: text
@@ -3854,9 +3900,13 @@ msgstr "Jūs diegiate iš CD, kuris turi ribotą paketų pasirinkimą."
 #. :sl1:
 #. The value of %i can be 2 or 3
 #: ../apt-cdrom-setup.templates:12001
-#, no-c-format
+#, fuzzy, no-c-format
+#| msgid ""
+#| "You have scanned %i CDs. Even though these contain a fair selection of "
+#| "packages, some may be missing (notably some packages needed to support "
+#| "languages other than English)."
 msgid ""
-"You have scanned %i CDs. Even though these contain a fair selection of "
+"You have scanned %i images. Even though these contain a fair selection of "
 "packages, some may be missing (notably some packages needed to support "
 "languages other than English)."
 msgstr ""
@@ -3869,9 +3919,12 @@ msgstr ""
 #. :sl1:
 #. The value of %i can be from 4 to 8
 #: ../apt-cdrom-setup.templates:13001
-#, no-c-format
+#, fuzzy, no-c-format
+#| msgid ""
+#| "You have scanned %i CDs. Even though these contain a large selection of "
+#| "packages, some may be missing."
 msgid ""
-"You have scanned %i CDs. Even though these contain a large selection of "
+"You have scanned %i images. Even though these contain a large selection of "
 "packages, some may be missing."
 msgstr ""
 "Jūs atlikote %i CD apžvalgą. Nors tai sudaro nemažą kiekį paketų, vis dėlto "
@@ -3892,8 +3945,12 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:15001
+#, fuzzy
+#| msgid ""
+#| "You are installing from a DVD. Even though the DVD contains a large "
+#| "selection of packages, some may be missing."
 msgid ""
-"You are installing from a DVD. Even though the DVD contains a large "
+"You are installing from a DVD image. Even though it contains a large "
 "selection of packages, some may be missing."
 msgstr ""
 "Jūs diegiate iš DVD disko. Nors DVD talpina didelį kiekį paketų, vis dėlto "
@@ -4025,9 +4082,14 @@ msgstr "Ar naudoti paketų archyvo serverį iš tinklo?"
 #. Description
 #. :sl1:
 #: ../apt-mirror-setup.templates:5001
+#, fuzzy
+#| msgid ""
+#| "A network mirror can be used to supplement the software that is included "
+#| "on the CD-ROM. This may also make newer versions of software available."
 msgid ""
 "A network mirror can be used to supplement the software that is included on "
-"the CD-ROM. This may also make newer versions of software available."
+"the installation media. This may also make newer versions of software "
+"available."
 msgstr ""
 "Paketų archyvo serveris iš tinklo gali būti naudojamas kaip programinės "
 "įrangos, pateikiamos įdiegimo diske, papildymas. Taip pat jame gali būti "
@@ -4667,6 +4729,66 @@ msgstr "Loginių tomų tvarkyklės (LVM) konfigūracija"
 #: ../partman-auto-lvm.templates:1001
 msgid "Guided - use entire disk and set up LVM"
 msgstr "Auto – naudoti visą diską ir nustatyti LVM"
+
+#~ msgid "Load installer components from CD"
+#~ msgstr "Įkelti įdiegyklės komponentus iš kompaktinio disko"
+
+#~ msgid "Detecting hardware to find CD-ROM drives"
+#~ msgstr "Apžvelgiama aparatūra ieškant CD įrenginio"
+
+#~ msgid "Scanning CD-ROM"
+#~ msgstr "Apžvelgiamas CD diskas"
+
+#~ msgid "Unmounting and ejecting CD-ROM..."
+#~ msgstr "Atjungiama ir išstumiama CD laikmena..."
+
+#~ msgid "Scanning the CD-ROM..."
+#~ msgstr "Apžvelgiamas CD..."
+
+#~ msgid "Scan another CD or DVD?"
+#~ msgstr "Ar apžvelgti kita CD arba DVD?"
+
+#~ msgid "Your installation CD or DVD has been scanned; its label is:"
+#~ msgstr "Jūsų įdiegimo CD arba DCD apžvelgtas: jo žymuo yra:"
+
+#~ msgid ""
+#~ "An attempt to configure apt to install additional packages from the CD/"
+#~ "DVD failed."
+#~ msgstr ""
+#~ "Bandymas sukonfigūruoti apt papildomų paketų įdiegimui iš CD/DVD nepavyko."
+
+#~ msgid "Load CD-ROM drivers from removable media?"
+#~ msgstr "Ar įkelti CD-ROM tvarkykles iš keičiamosios laikmenos?"
+
+#~ msgid "Retry mounting the CD-ROM?"
+#~ msgstr "Ar dar kartą bandyti prijungti CD-ROM įrenginį?"
+
+#~ msgid "CD-ROM detected"
+#~ msgstr "Kompaktinių diskų įrenginys (CD-ROM) aptiktas"
+
+#~ msgid "Incorrect CD-ROM detected"
+#~ msgstr "Aptiktas neteisingas CD-ROM įrenginys"
+
+#~ msgid "Detect and mount CD-ROM"
+#~ msgstr "CD-ROM įrenginio aptikimas ir CD prijungimas"
+
+#~ msgid "Check the CD-ROM(s) integrity"
+#~ msgstr "Kompaktinio disko(ų) tikrinimas"
+
+#~ msgid "Check CD-ROM integrity?"
+#~ msgstr "Ar tikrinti kompaktinio disko vientisumą?"
+
+#~ msgid "Insert a Debian CD-ROM"
+#~ msgstr "Įdėkite „Debian“ kompaktinį diską"
+
+#~ msgid "Failed to mount CD-ROM"
+#~ msgstr "Nepavyko prijungti kompaktinio disko"
+
+#~ msgid "No valid Debian CD-ROM"
+#~ msgstr "Tai ne „Debian“ kompaktinis diskas"
+
+#~ msgid "Checking CD-ROM integrity"
+#~ msgstr "Kompaktinio disko vientisumo tikrinimas"
 
 #~ msgid "No DHCP client was found. This package requires pump or dhcp-client."
 #~ msgstr ""
@@ -5612,9 +5734,6 @@ msgstr "Auto – naudoti visą diską ir nustatyti LVM"
 #~ "Kadangi disko skirsniai jau yra prijungti, negalite daryti jokių "
 #~ "pakeitimų."
 
-#~ msgid "Failed to unmount partitions"
-#~ msgstr "Nepavyko atjungti skirsnių"
-
 #~ msgid "An unexpected error occurred while unmounting the partitions."
 #~ msgstr "Įvyko nenumatyta klaida atliekant disko skirsnių atjungimą."
 
@@ -5785,9 +5904,6 @@ msgstr "Auto – naudoti visą diską ir nustatyti LVM"
 #~ "Nepavyko įdiegti „silo“ paketo į „/target/“. Paleidyklę „SILO“ yra būtina "
 #~ "įdiegti. Vis dėlto, ši problema gali būti ir nesusijusi su „SILO“, tad "
 #~ "įdiegimą galbūt galima tęsti."
-
-#~ msgid "SILO installation failed"
-#~ msgstr "„SILO“ įdiegti nepavyko"
 
 #~ msgid "Running \"/sbin/silo\" failed with error code \"${ERRCODE}\"."
 #~ msgstr "Įvykdyti „/sbin/silo“ nepavyko. Gauta klaida „${ERRCODE}“."

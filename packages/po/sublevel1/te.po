@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: te\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-28 21:20+0000\n"
+"POT-Creation-Date: 2019-09-19 16:20+0000\n"
 "PO-Revision-Date: 2019-08-28 13:24+0000\n"
 "Last-Translator: leela <53352@protonmail.com>\n"
 "Language-Team: d-i <kde-i18n-doc@kde.org>\n"
@@ -619,13 +619,6 @@ msgstr "సమాచారాన్ని  మీరు  స్వయంగా �
 msgid "Download installer components"
 msgstr "స్థాపక వ్యవస్థ అంశాల డౌన్ లోడ్"
 
-#. Type: text
-#. Description
-#. Main menu item
-#: ../load-cdrom.templates:1001
-msgid "Load installer components from CD"
-msgstr "CD నుండి స్థాపక వ్యవస్థ  అంశాల ఎక్కింపు"
-
 #. Type: boolean
 #. Description
 #: ../load-media.templates:1001
@@ -731,13 +724,6 @@ msgid ""
 msgstr ""
 "ఈ జాబితాఅందుబాటులోగల పరికరాలను చూపుతున్నది. మీరు ఏది ఎంచుకోవాలో  తెలియకపోతే,  ఎంపిక ఇవ్వనపుడు "
 "తీసుకొనేదానికోసంENTER నొక్కండి. మీ వ్యవస్థబూట్ కాకపోతే, మిగతా స్థాపన   ఎంపికలతో ప్రయత్నించవచ్చు."
-
-#. Type: text
-#. Description
-#. Release is a filename which should not be translated
-#: ../bootstrap-base.templates:42001
-msgid "Checking Release signature"
-msgstr "విడుదల సంతకము తనిఖీ జరుగుచున్నది"
 
 #. Type: select
 #. Description
@@ -1564,15 +1550,19 @@ msgstr "జాబితా లోని కీలన్నీ అన్ని �
 #. Description
 #. :sl1:
 #: ../cdrom-detect.templates:2001
-msgid "Detecting hardware to find CD-ROM drives"
-msgstr "CD-ROM డ్రైవ్లు  కోసం  హార్డ్వేర్ ని కనుగొంటున్నాము"
+#, fuzzy
+#| msgid "Detecting hardware to find hard drives"
+msgid "Detecting hardware to find installation media"
+msgstr "హార్డ్ డ్రైవ్లను కనుగొనుటకు హార్డ్వేర్   పరిశీలన"
 
 #. Type: text
 #. Description
 #. :sl1:
 #: ../cdrom-detect.templates:10001
-msgid "Scanning CD-ROM"
-msgstr "CD-ROM ని పరిశీలన చేస్తున్నాము"
+#, fuzzy
+#| msgid "SILO installation failed"
+msgid "Scanning installation media"
+msgstr "SILO స్థాపన విఫలమైంది."
 
 #. Type: text
 #. Description
@@ -1586,8 +1576,8 @@ msgstr "${DIR} పరిశీలన చేస్తున్నాము..."
 #. finish-install progress bar item
 #. :sl1:
 #: ../cdrom-detect.templates:19001
-msgid "Unmounting and ejecting CD-ROM..."
-msgstr "CD-ROM అనుసంధానాన్ని తొలగించి, త్రోసివేస్తున్నాము"
+msgid "Unmounting/ejecting installation media..."
+msgstr ""
 
 #. Type: text
 #. Description
@@ -2293,6 +2283,16 @@ msgstr ""
 #: ../mdcfg-utils.templates:6001 ../mdcfg-utils.templates:13001
 msgid "Cancel"
 msgstr "రద్దు"
+
+#. Type: text
+#. Description
+#. Main menu item
+#. :sl1:
+#: ../load-cdrom.templates:1001
+#, fuzzy
+#| msgid "Load installer components from an installer ISO"
+msgid "Load installer components from installation media"
+msgstr "స్థాపక వ్యవస్థ భాగాలను స్థాపక వ్యవస్థ ISOనుండి ఎక్కించు"
 
 #. Type: text
 #. Description
@@ -3124,7 +3124,7 @@ msgstr "బేస్ సిస్టమ్ ని స్థాపనకి త�
 msgid "Installing the base system"
 msgstr "బేస్ సిస్టమ్  స్థాపన చేయుట..."
 
-#. #-#-#-#-#  templates.pot (PACKAGE VERSION)  #-#-#-#-#
+#. #-#-#-#-#  templates.pot (base-installer)  #-#-#-#-#
 #. Type: text
 #. Description
 #. :sl1:
@@ -3338,6 +3338,14 @@ msgstr "${SUBST0} విడగొట్టు..."
 #: ../bootstrap-base.templates:41001
 msgid "Configuring ${SUBST0}..."
 msgstr "${SUBST0} అమరికచేయు..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Release is a filename which should not be translated
+#: ../bootstrap-base.templates:42001
+msgid "Checking Release signature"
+msgstr "విడుదల సంతకము తనిఖీ జరుగుచున్నది"
 
 #. Type: text
 #. Description
@@ -3593,8 +3601,26 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:1001
-msgid "Scanning the CD-ROM..."
-msgstr "CD-ROM పరిశీలించు..."
+#, fuzzy
+#| msgid "Finishing the installation"
+msgid "Scanning the installation media..."
+msgstr "స్థాపన ముగుస్తోంది"
+
+#. Type: error
+#. Description
+#. :sl2:
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:2001 ../apt-cdrom-setup.templates:6001
+#, fuzzy
+#| msgid ""
+#| "An attempt to configure apt to install additional packages from the CD "
+#| "failed."
+msgid ""
+"An attempt to configure apt to install additional packages from the media "
+"failed."
+msgstr "అమరిక చేసి, అదనపు  పాకేజీలను   CD నుండి  స్థాపన చేయు ప్రయత్నము విఫలమైంది."
 
 #. Type: boolean
 #. Description
@@ -3610,25 +3636,33 @@ msgstr "CD-ROM పరిశీలించు..."
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001 ../apt-cdrom-setup.templates:4001
 #: ../apt-cdrom-setup.templates:5001 ../apt-cdrom-setup.templates:6001
-msgid "Scan another CD or DVD?"
-msgstr "ఇంకొక సిడి లేక డివిడి పరిశీలించాలా?"
+#, fuzzy
+#| msgid "SILO installation failed"
+msgid "Scan extra installation media?"
+msgstr "SILO స్థాపన విఫలమైంది."
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001
-msgid "Your installation CD or DVD has been scanned; its label is:"
-msgstr "మీ స్థాపన సిడి లేక డివిడి  పరిశీలన పూర్తయినది. దాని లేబెల్:"
+msgid "Scanning your installation media finds the label:"
+msgstr ""
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001
+#, fuzzy
+#| msgid ""
+#| "You now have the option to scan additional CDs or DVDs for use by the "
+#| "package manager (apt). Normally these should be from the same set as the "
+#| "installation CD/DVD. If you do not have any additional CDs or DVDs "
+#| "available, this step can just be skipped."
 msgid ""
-"You now have the option to scan additional CDs or DVDs for use by the "
-"package manager (apt). Normally these should be from the same set as the "
-"installation CD/DVD. If you do not have any additional CDs or DVDs "
-"available, this step can just be skipped."
+"You now have the option of scanning additional media for use by the package "
+"manager (apt). Normally these should be from the same set as the one you "
+"booted from. If you do not have any additional media, this step can just be "
+"skipped."
 msgstr ""
 "పాకేజి మేనేజర్  (apt) కోసం  అదనపు  CDలు లేక  DVDలు   పరిశీలించే  అవకాశం కలదు.  సాధారణంగా  ఇవి "
 "స్థాపన CD/DVD సమూహములోనివి అయువుంటాయి.  అదనపు  CDలు లేక  DVDలు లేకపోతే, ఈ అంకం  "
@@ -3641,51 +3675,50 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001 ../apt-cdrom-setup.templates:4001
-msgid "If you wish to scan another CD or DVD, please insert it now."
+#, fuzzy
+#| msgid "If you wish to scan another CD or DVD, please insert it now."
+msgid "If you wish to scan more media, please insert another one now."
 msgstr "ఇంకొక CD లేక  DVD  పరిశీలించదలచినచో  దానిని ప్రవేశపెట్టండి."
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:4001
-msgid "The CD or DVD with the following label has been scanned:"
+#, fuzzy
+#| msgid "The CD or DVD with the following label has been scanned:"
+msgid "The image with the following label has been scanned:"
 msgstr "తరువాత ఇవ్వబడిన లేబెల్ గల CD లేక  DVD  పరిశీలించబడింది:"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:5001
-msgid "The CD or DVD with the following label has already been scanned:"
+#, fuzzy
+#| msgid "The CD or DVD with the following label has already been scanned:"
+msgid "The image with the following label has already been scanned:"
 msgstr "తరువాత ఇవ్వబడిన లేబెల్ గల CD లేక  DVD  ఇప్పటికే  పరిశీలించబడింది:"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:5001
-msgid "Please replace it now if you wish to scan another CD or DVD."
+#, fuzzy
+#| msgid "Please replace it now if you wish to scan another CD or DVD."
+msgid "Please replace it now, if you wish to scan another."
 msgstr "ఇంకొక CD లేక  DVD  పరిశీలించదలచినచో  ఇప్పడున్న దానిని తీసి కొత్తదానిని  ప్రవేశపెట్టండి."
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:6001
-msgid ""
-"An attempt to configure apt to install additional packages from the CD/DVD "
-"failed."
-msgstr "CD/DVD నుండి  అదనపు పాకేజీలు స్థాపన కొరకు వీలుగా  apt అమరికచేయు ప్రయత్నం లో విఫలమైంది."
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:6001
-msgid "Please check that the CD/DVD has been inserted correctly."
+#, fuzzy
+#| msgid "Please check that the CD/DVD has been inserted correctly."
+msgid "Please check that the media has been inserted correctly."
 msgstr "CD/DVD  ప్రవేశపెట్టటం  సరిగా వున్నదీ లేనిది పరిశీలించండి."
 
 #. Type: text
 #. Description
 #. :sl1:
-#. This template uses the same text as used in the package apt for apt-cdrom
-#. Do not translate "/cdrom/" (the mount point)
 #: ../apt-cdrom-setup.templates:7001
 msgid "Media change"
 msgstr "మాధ్యమం మార్పు"
@@ -3693,12 +3726,12 @@ msgstr "మాధ్యమం మార్పు"
 #. Type: text
 #. Description
 #. :sl1:
-#. This template uses the same text as used in the package apt for apt-cdrom
-#. Do not translate "/cdrom/" (the mount point)
 #: ../apt-cdrom-setup.templates:7001
-msgid ""
-"/cdrom/: Please insert the disc labeled '${LABEL}' in the drive '/cdrom/' "
-"and press enter."
+#, fuzzy
+#| msgid ""
+#| "/cdrom/: Please insert the disc labeled '${LABEL}' in the drive '/cdrom/' "
+#| "and press enter."
+msgid "Please insert the media labeled '${LABEL}' and press enter."
 msgstr ""
 "/cdrom/: '${LABEL}'  '/cdrom/' డ్రైవ్ లో   లేబెల్: '${LABEL}' గల  డిస్క్  పెట్టి  enter "
 "నొక్కండి."
@@ -3718,9 +3751,13 @@ msgstr "sources.list లో netinst CD అచేతనంచేయు ..."
 #. Description
 #. :sl2:
 #: ../apt-cdrom-setup.templates:9001 ../apt-mirror-setup.templates:6001
+#, fuzzy
+#| msgid ""
+#| "If you are installing from a netinst CD and choose not to use a mirror, "
+#| "you will end up with only a very minimal base system."
 msgid ""
-"If you are installing from a netinst CD and choose not to use a mirror, you "
-"will end up with only a very minimal base system."
+"If you are installing from a netinst CD image and choose not to use a "
+"mirror, you will end up with only a very minimal base system."
 msgstr ""
 "మిర్రర్ వాడక netinst CD నుండి స్థాపన చేస్తున్నట్లయితే, మీరు కనిష్ట బేస్ సిస్టమ్  మాత్రమే వుంటుంది."
 
@@ -3728,8 +3765,13 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:10001
+#, fuzzy
+#| msgid ""
+#| "You are installing from a netinst CD, which by itself only allows "
+#| "installation of a very minimal base system. Use a mirror to install a "
+#| "more complete system."
 msgid ""
-"You are installing from a netinst CD, which by itself only allows "
+"You are installing from a netinst CD image, which by itself only allows "
 "installation of a very minimal base system. Use a mirror to install a more "
 "complete system."
 msgstr ""
@@ -3740,8 +3782,13 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:11001
+#, fuzzy
+#| msgid ""
+#| "You are installing from a CD, which contains a limited selection of "
+#| "packages."
 msgid ""
-"You are installing from a CD, which contains a limited selection of packages."
+"You are installing from an image which contains a limited selection of "
+"packages."
 msgstr "తక్కువ  ఎంపికైన పాకేజీలు గల CD నుండి మీరు స్థాపన చేయుచున్నారు."
 
 #. Type: text
@@ -3749,9 +3796,13 @@ msgstr "తక్కువ  ఎంపికైన పాకేజీలు గ�
 #. :sl1:
 #. The value of %i can be 2 or 3
 #: ../apt-cdrom-setup.templates:12001
-#, no-c-format
+#, fuzzy, no-c-format
+#| msgid ""
+#| "You have scanned %i CDs. Even though these contain a fair selection of "
+#| "packages, some may be missing (notably some packages needed to support "
+#| "languages other than English)."
 msgid ""
-"You have scanned %i CDs. Even though these contain a fair selection of "
+"You have scanned %i images. Even though these contain a fair selection of "
 "packages, some may be missing (notably some packages needed to support "
 "languages other than English)."
 msgstr ""
@@ -3763,9 +3814,12 @@ msgstr ""
 #. :sl1:
 #. The value of %i can be from 4 to 8
 #: ../apt-cdrom-setup.templates:13001
-#, no-c-format
+#, fuzzy, no-c-format
+#| msgid ""
+#| "You have scanned %i CDs. Even though these contain a large selection of "
+#| "packages, some may be missing."
 msgid ""
-"You have scanned %i CDs. Even though these contain a large selection of "
+"You have scanned %i images. Even though these contain a large selection of "
 "packages, some may be missing."
 msgstr ""
 "%i CDలు పరిశీలించారు. వీటిలో   ఎంపికైన పాకేజీలు వున్నా అత్యధికంగా వున్నా  కొన్ని  వుండకపోవచ్చు ."
@@ -3783,8 +3837,12 @@ msgstr "స్థాపన తరువాతి అంకంలో మిర్
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:15001
+#, fuzzy
+#| msgid ""
+#| "You are installing from a DVD. Even though the DVD contains a large "
+#| "selection of packages, some may be missing."
 msgid ""
-"You are installing from a DVD. Even though the DVD contains a large "
+"You are installing from a DVD image. Even though it contains a large "
 "selection of packages, some may be missing."
 msgstr ""
 "DVD నుండి  స్థాపన  చేయుచున్నారు. DVD లో చాలావరకు ఎంపికైన పాకేజీలు వున్నా కూడా, కొన్ని  లేకపోవచ్చు "
@@ -3909,9 +3967,14 @@ msgstr "నెట్వర్క్ మిర్రర్ వాడవలెన�
 #. Description
 #. :sl1:
 #: ../apt-mirror-setup.templates:5001
+#, fuzzy
+#| msgid ""
+#| "A network mirror can be used to supplement the software that is included "
+#| "on the CD-ROM. This may also make newer versions of software available."
 msgid ""
 "A network mirror can be used to supplement the software that is included on "
-"the CD-ROM. This may also make newer versions of software available."
+"the installation media. This may also make newer versions of software "
+"available."
 msgstr ""
 "CD-ROM లో వున్న సాఫ్ట్వేర్ కు అదనంగా కావలసివాటికోసం నెట్వర్క్ మిర్రర్ వాడవచ్చు. కొత్త విడుదలలు దీని ద్వారా "
 "అందవచ్చు."
@@ -4530,6 +4593,66 @@ msgstr "Logical Volume Manager ని అమరికచేయు"
 #: ../partman-auto-lvm.templates:1001
 msgid "Guided - use entire disk and set up LVM"
 msgstr "మార్గదర్శక - మొత్తము డిస్క్ వాడి  LVM సిద్దం చేయి"
+
+#~ msgid "Load installer components from CD"
+#~ msgstr "CD నుండి స్థాపక వ్యవస్థ  అంశాల ఎక్కింపు"
+
+#~ msgid "Detecting hardware to find CD-ROM drives"
+#~ msgstr "CD-ROM డ్రైవ్లు  కోసం  హార్డ్వేర్ ని కనుగొంటున్నాము"
+
+#~ msgid "Scanning CD-ROM"
+#~ msgstr "CD-ROM ని పరిశీలన చేస్తున్నాము"
+
+#~ msgid "Unmounting and ejecting CD-ROM..."
+#~ msgstr "CD-ROM అనుసంధానాన్ని తొలగించి, త్రోసివేస్తున్నాము"
+
+#~ msgid "Scanning the CD-ROM..."
+#~ msgstr "CD-ROM పరిశీలించు..."
+
+#~ msgid "Scan another CD or DVD?"
+#~ msgstr "ఇంకొక సిడి లేక డివిడి పరిశీలించాలా?"
+
+#~ msgid "Your installation CD or DVD has been scanned; its label is:"
+#~ msgstr "మీ స్థాపన సిడి లేక డివిడి  పరిశీలన పూర్తయినది. దాని లేబెల్:"
+
+#~ msgid ""
+#~ "An attempt to configure apt to install additional packages from the CD/"
+#~ "DVD failed."
+#~ msgstr ""
+#~ "CD/DVD నుండి  అదనపు పాకేజీలు స్థాపన కొరకు వీలుగా  apt అమరికచేయు ప్రయత్నం లో విఫలమైంది."
+
+#~ msgid "Load CD-ROM drivers from removable media?"
+#~ msgstr "CD-ROM డ్రైవరులను, వేరుచేయగల మాధ్యమాలనుండి ఎక్కించవలెనా?"
+
+#~ msgid "Retry mounting the CD-ROM?"
+#~ msgstr "సీడీ-రామ్ ని మరలా మౌంట్ చెయ్యడానికి ప్రయత్నించాలా ?"
+
+#~ msgid "CD-ROM detected"
+#~ msgstr "సీడీ-రామ్ కనుగొనబడింది"
+
+#~ msgid "Incorrect CD-ROM detected"
+#~ msgstr "తప్పు సీడీ-రామ్ కనుగొనబడింది"
+
+#~ msgid "Detect and mount CD-ROM"
+#~ msgstr "సీడీ-రామ్ ని కనుగొని మౌంట్ చెయ్యి"
+
+#~ msgid "Check the CD-ROM(s) integrity"
+#~ msgstr "CD-ROM(లు) సమగ్రతని పరిశీలించు"
+
+#~ msgid "Check CD-ROM integrity?"
+#~ msgstr "CD-ROM నిబద్దత  పరిశీలన?"
+
+#~ msgid "Insert a Debian CD-ROM"
+#~ msgstr "డెబియన్  CD-ROM ప్రవేశ పెట్టు"
+
+#~ msgid "Failed to mount CD-ROM"
+#~ msgstr "CD-ROM అనుసంధానం  విఫలం"
+
+#~ msgid "No valid Debian CD-ROM"
+#~ msgstr "సరిపోయిన  డెబియన్ CD-ROM లేదు  "
+
+#~ msgid "Checking CD-ROM integrity"
+#~ msgstr "CD-ROM నిబద్దత పరిశీలన"
 
 #~ msgid "No DHCP client was found. This package requires pump or dhcp-client."
 #~ msgstr "DHCP క్లయింటు కనుగొనబడలేదు. ఈ ప్యాకేజీకి పంప్ లేదా dhcp-clientఅవసరం."
@@ -5403,9 +5526,6 @@ msgstr "మార్గదర్శక - మొత్తము డిస్క�
 #~ "Since the partitions have already been mounted, you cannot do any changes."
 #~ msgstr "విభజనల అనుసంధానమైనవి కనుక  మార్పులు చేయటం వీలు కాదు."
 
-#~ msgid "Failed to unmount partitions"
-#~ msgstr "విభజన అనుసంధానం తొలగించటంలో విఫలం"
-
 #~ msgid "An unexpected error occurred while unmounting the partitions."
 #~ msgstr "విభజనల అనుసంధానం తొలగించేటప్పుడు అనుకోని దోషం ఎదురైంది"
 
@@ -5560,9 +5680,6 @@ msgstr "మార్గదర్శక - మొత్తము డిస్క�
 #~ msgstr ""
 #~ "SILO పాకేజి  /target/ పై స్థాపన విఫలమైంది.   SILO ని బూట్ లోడర్ గా స్థాపన చేయటం అవసరమైన "
 #~ "అంశం.  స్థాపన సమస్య  SILO కి సంబంధించినది కాకపోవచ్చు.స్థాపన కొనసాగించటం వీలవవచ్చు."
-
-#~ msgid "SILO installation failed"
-#~ msgstr "SILO స్థాపన విఫలమైంది."
 
 #~ msgid "Running \"/sbin/silo\" failed with error code \"${ERRCODE}\"."
 #~ msgstr "\"/sbin/silo\"నడుపుట విఫలమైంది. దోష కోడ్  \"${ERRCODE}\"."

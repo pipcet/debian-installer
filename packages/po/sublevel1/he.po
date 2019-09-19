@@ -22,7 +22,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-28 21:20+0000\n"
+"POT-Creation-Date: 2019-09-19 16:20+0000\n"
 "PO-Revision-Date: 2019-07-04 17:01+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew (https://www.transifex.com/yaron/teams/79473/he/)\n"
@@ -662,13 +662,6 @@ msgstr "הכנסת מידע ידנית"
 msgid "Download installer components"
 msgstr "הורדת רכיבי תכנית ההתקנה"
 
-#. Type: text
-#. Description
-#. Main menu item
-#: ../load-cdrom.templates:1001
-msgid "Load installer components from CD"
-msgstr "טעינת רכיבי תכנית ההתקנה מתקליטור"
-
 #. Type: boolean
 #. Description
 #: ../load-media.templates:1001
@@ -775,13 +768,6 @@ msgstr ""
 "הרשימה מציגה את הכלים הזמינים. אם לא ברור לך באיזה מהם לבחור, עדיף לבחור את "
 "בררת המחדל. אם המערכת שלך אינה עוברת אתחול, ניתן לנסות להפעיל את ההתקנה מחדש "
 "עם אפשרות אחרת."
-
-#. Type: text
-#. Description
-#. Release is a filename which should not be translated
-#: ../bootstrap-base.templates:42001
-msgid "Checking Release signature"
-msgstr "החתימה של קובץ ה־Release נבדקת"
 
 #. Type: select
 #. Description
@@ -1639,15 +1625,19 @@ msgstr "לא כל המקשים המופיעים נמצאים בכל המקלדו
 #. Description
 #. :sl1:
 #: ../cdrom-detect.templates:2001
-msgid "Detecting hardware to find CD-ROM drives"
-msgstr "החומרה נבדקת במטרה לאתר כונני תקליטורים"
+#, fuzzy
+#| msgid "Detecting hardware to find hard drives"
+msgid "Detecting hardware to find installation media"
+msgstr "החומרה נבדקת לטובת איתור כוננים קשיחים"
 
 #. Type: text
 #. Description
 #. :sl1:
 #: ../cdrom-detect.templates:10001
-msgid "Scanning CD-ROM"
-msgstr "התקליטור נסרק"
+#, fuzzy
+#| msgid "SILO installation failed"
+msgid "Scanning installation media"
+msgstr "התקנת SILO נכשלה"
 
 #. Type: text
 #. Description
@@ -1661,8 +1651,8 @@ msgstr "התיקייה ${DIR} נסרקת…"
 #. finish-install progress bar item
 #. :sl1:
 #: ../cdrom-detect.templates:19001
-msgid "Unmounting and ejecting CD-ROM..."
-msgstr "עיגון התקליטור מנותק והתקליטור נשלף החוצה…"
+msgid "Unmounting/ejecting installation media..."
+msgstr ""
 
 #. Type: text
 #. Description
@@ -2375,6 +2365,16 @@ msgstr ""
 #: ../mdcfg-utils.templates:6001 ../mdcfg-utils.templates:13001
 msgid "Cancel"
 msgstr "ביטול"
+
+#. Type: text
+#. Description
+#. Main menu item
+#. :sl1:
+#: ../load-cdrom.templates:1001
+#, fuzzy
+#| msgid "Load installer components from an installer ISO"
+msgid "Load installer components from installation media"
+msgstr "טעינת רכיבי תכנית ההתקנה מתוך קובץ ה־ISO של תכנית ההתקנה"
 
 #. Type: text
 #. Description
@@ -3212,7 +3212,7 @@ msgstr "בהכנות להתקנת מערכת הבסיס…"
 msgid "Installing the base system"
 msgstr "מערכת הבסיס מותקנת"
 
-#. #-#-#-#-#  templates.pot (PACKAGE VERSION)  #-#-#-#-#
+#. #-#-#-#-#  templates.pot (base-installer)  #-#-#-#-#
 #. Type: text
 #. Description
 #. :sl1:
@@ -3426,6 +3426,14 @@ msgstr "מתבצעת פריסה של ${SUBST0}…"
 #: ../bootstrap-base.templates:41001
 msgid "Configuring ${SUBST0}..."
 msgstr "מתבצעת הגדרה של ${SUBST0}…"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Release is a filename which should not be translated
+#: ../bootstrap-base.templates:42001
+msgid "Checking Release signature"
+msgstr "החתימה של קובץ ה־Release נבדקת"
 
 #. Type: text
 #. Description
@@ -3679,8 +3687,26 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:1001
-msgid "Scanning the CD-ROM..."
-msgstr "התקליטור נסרק…"
+#, fuzzy
+#| msgid "Finishing the installation"
+msgid "Scanning the installation media..."
+msgstr "ההתקנה מסתיימת"
+
+#. Type: error
+#. Description
+#. :sl2:
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:2001 ../apt-cdrom-setup.templates:6001
+#, fuzzy
+#| msgid ""
+#| "An attempt to configure apt to install additional packages from the CD "
+#| "failed."
+msgid ""
+"An attempt to configure apt to install additional packages from the media "
+"failed."
+msgstr "נכשל הניסיון להגדיר את apt כך שיתקין חבילות נוספות מהתקליטור."
 
 #. Type: boolean
 #. Description
@@ -3696,25 +3722,33 @@ msgstr "התקליטור נסרק…"
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001 ../apt-cdrom-setup.templates:4001
 #: ../apt-cdrom-setup.templates:5001 ../apt-cdrom-setup.templates:6001
-msgid "Scan another CD or DVD?"
-msgstr "לסרוק CD או DVD נוסף?"
+#, fuzzy
+#| msgid "SILO installation failed"
+msgid "Scan extra installation media?"
+msgstr "התקנת SILO נכשלה"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001
-msgid "Your installation CD or DVD has been scanned; its label is:"
-msgstr "ה־CD או ה־DVD ההתקנה נסרק. התווית שלו היא:"
+msgid "Scanning your installation media finds the label:"
+msgstr ""
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001
+#, fuzzy
+#| msgid ""
+#| "You now have the option to scan additional CDs or DVDs for use by the "
+#| "package manager (apt). Normally these should be from the same set as the "
+#| "installation CD/DVD. If you do not have any additional CDs or DVDs "
+#| "available, this step can just be skipped."
 msgid ""
-"You now have the option to scan additional CDs or DVDs for use by the "
-"package manager (apt). Normally these should be from the same set as the "
-"installation CD/DVD. If you do not have any additional CDs or DVDs "
-"available, this step can just be skipped."
+"You now have the option of scanning additional media for use by the package "
+"manager (apt). Normally these should be from the same set as the one you "
+"booted from. If you do not have any additional media, this step can just be "
+"skipped."
 msgstr ""
 "ניתן כעת לסרוק תקליטורי CD ו־DVD נוספים לשימוש מנהל החבילות (apt). בדרך כלל "
 "אלו אמורים להיות חלק מערכת התקליטורים שממנה מגיע תקליטור התקנה זה. אם אין "
@@ -3727,51 +3761,50 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001 ../apt-cdrom-setup.templates:4001
-msgid "If you wish to scan another CD or DVD, please insert it now."
+#, fuzzy
+#| msgid "If you wish to scan another CD or DVD, please insert it now."
+msgid "If you wish to scan more media, please insert another one now."
 msgstr "כדי לסרוק CD או DVD נוסף, נא להכניס אותו כעת."
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:4001
-msgid "The CD or DVD with the following label has been scanned:"
+#, fuzzy
+#| msgid "The CD or DVD with the following label has been scanned:"
+msgid "The image with the following label has been scanned:"
 msgstr "ה־CD או ה־DVD עם התווית הבאה נסרק:"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:5001
-msgid "The CD or DVD with the following label has already been scanned:"
+#, fuzzy
+#| msgid "The CD or DVD with the following label has already been scanned:"
+msgid "The image with the following label has already been scanned:"
 msgstr "ה־CD או ה־DVD עם התווית הבאה כבר נסרק:"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:5001
-msgid "Please replace it now if you wish to scan another CD or DVD."
+#, fuzzy
+#| msgid "Please replace it now if you wish to scan another CD or DVD."
+msgid "Please replace it now, if you wish to scan another."
 msgstr "נא להחליף אותו כעת אם ברצונך לסרוק עוד CD או DVD."
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:6001
-msgid ""
-"An attempt to configure apt to install additional packages from the CD/DVD "
-"failed."
-msgstr "הניסיון להגדיר את apt לטובת התקנה של חבילות נוספות מה־CD/DVD נכשל."
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:6001
-msgid "Please check that the CD/DVD has been inserted correctly."
+#, fuzzy
+#| msgid "Please check that the CD/DVD has been inserted correctly."
+msgid "Please check that the media has been inserted correctly."
 msgstr "נא לבדוק שה־CD/DVD הוכנס בצורה תקינה."
 
 #. Type: text
 #. Description
 #. :sl1:
-#. This template uses the same text as used in the package apt for apt-cdrom
-#. Do not translate "/cdrom/" (the mount point)
 #: ../apt-cdrom-setup.templates:7001
 msgid "Media change"
 msgstr "החלפת מדיה"
@@ -3779,12 +3812,12 @@ msgstr "החלפת מדיה"
 #. Type: text
 #. Description
 #. :sl1:
-#. This template uses the same text as used in the package apt for apt-cdrom
-#. Do not translate "/cdrom/" (the mount point)
 #: ../apt-cdrom-setup.templates:7001
-msgid ""
-"/cdrom/: Please insert the disc labeled '${LABEL}' in the drive '/cdrom/' "
-"and press enter."
+#, fuzzy
+#| msgid ""
+#| "/cdrom/: Please insert the disc labeled '${LABEL}' in the drive '/cdrom/' "
+#| "and press enter."
+msgid "Please insert the media labeled '${LABEL}' and press enter."
 msgstr ""
 "/cdrom/: נא להכניס את התקליטור עם התווית ‚${LABEL}’ לכונן ‚/cdrom/’ וללחוץ "
 "על enter."
@@ -3804,9 +3837,13 @@ msgstr "תקליטור ההתקנה מהרשת מושבת ברשימת המקו�
 #. Description
 #. :sl2:
 #: ../apt-cdrom-setup.templates:9001 ../apt-mirror-setup.templates:6001
+#, fuzzy
+#| msgid ""
+#| "If you are installing from a netinst CD and choose not to use a mirror, "
+#| "you will end up with only a very minimal base system."
 msgid ""
-"If you are installing from a netinst CD and choose not to use a mirror, you "
-"will end up with only a very minimal base system."
+"If you are installing from a netinst CD image and choose not to use a "
+"mirror, you will end up with only a very minimal base system."
 msgstr ""
 "אם ההתקנה מתבצעת מתקליטור התקנה מהרשת (netinst CD) ובחירתך היא שלא להשתמש "
 "באתר מראה, המערכת שתתקבל בסיום ההתקנה תהיה מערכת בסיסית מזערית מאוד."
@@ -3815,8 +3852,13 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:10001
+#, fuzzy
+#| msgid ""
+#| "You are installing from a netinst CD, which by itself only allows "
+#| "installation of a very minimal base system. Use a mirror to install a "
+#| "more complete system."
 msgid ""
-"You are installing from a netinst CD, which by itself only allows "
+"You are installing from a netinst CD image, which by itself only allows "
 "installation of a very minimal base system. Use a mirror to install a more "
 "complete system."
 msgstr ""
@@ -3828,8 +3870,13 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:11001
+#, fuzzy
+#| msgid ""
+#| "You are installing from a CD, which contains a limited selection of "
+#| "packages."
 msgid ""
-"You are installing from a CD, which contains a limited selection of packages."
+"You are installing from an image which contains a limited selection of "
+"packages."
 msgstr "התקנה זו מתבצעת מתקליטור שמכיל מבחר מצומצם של חבילות."
 
 #. Type: text
@@ -3837,9 +3884,13 @@ msgstr "התקנה זו מתבצעת מתקליטור שמכיל מבחר מצו
 #. :sl1:
 #. The value of %i can be 2 or 3
 #: ../apt-cdrom-setup.templates:12001
-#, no-c-format
+#, fuzzy, no-c-format
+#| msgid ""
+#| "You have scanned %i CDs. Even though these contain a fair selection of "
+#| "packages, some may be missing (notably some packages needed to support "
+#| "languages other than English)."
 msgid ""
-"You have scanned %i CDs. Even though these contain a fair selection of "
+"You have scanned %i images. Even though these contain a fair selection of "
 "packages, some may be missing (notably some packages needed to support "
 "languages other than English)."
 msgstr ""
@@ -3851,9 +3902,12 @@ msgstr ""
 #. :sl1:
 #. The value of %i can be from 4 to 8
 #: ../apt-cdrom-setup.templates:13001
-#, no-c-format
+#, fuzzy, no-c-format
+#| msgid ""
+#| "You have scanned %i CDs. Even though these contain a large selection of "
+#| "packages, some may be missing."
 msgid ""
-"You have scanned %i CDs. Even though these contain a large selection of "
+"You have scanned %i images. Even though these contain a large selection of "
 "packages, some may be missing."
 msgstr ""
 "%i תקליטורים נסרקו. על אף שהם מכילים כמות נרחבת של חבילות, יתכן שחלק מהן "
@@ -3874,8 +3928,12 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:15001
+#, fuzzy
+#| msgid ""
+#| "You are installing from a DVD. Even though the DVD contains a large "
+#| "selection of packages, some may be missing."
 msgid ""
-"You are installing from a DVD. Even though the DVD contains a large "
+"You are installing from a DVD image. Even though it contains a large "
 "selection of packages, some may be missing."
 msgstr ""
 "התקנה זו מתבצעת מ־DVD. על אף שה־DVD מכיל מבחר רחב של חבילות, יתכן שחלק מהן "
@@ -4016,9 +4074,14 @@ msgstr "להשתמש באתר מראה מקוון?"
 #. Description
 #. :sl1:
 #: ../apt-mirror-setup.templates:5001
+#, fuzzy
+#| msgid ""
+#| "A network mirror can be used to supplement the software that is included "
+#| "on the CD-ROM. This may also make newer versions of software available."
 msgid ""
 "A network mirror can be used to supplement the software that is included on "
-"the CD-ROM. This may also make newer versions of software available."
+"the installation media. This may also make newer versions of software "
+"available."
 msgstr ""
 "ניתן להשתמש באתר מראה כדי להשלים מעבר לתכניות שכלולות בתקליטור. הגדרה זאת "
 "תנגיש לך גרסאות חדשות יותר של תכניות."
@@ -4644,6 +4707,65 @@ msgstr "הגדרת מנהל הכרכים הלוגיים (LVM)"
 #: ../partman-auto-lvm.templates:1001
 msgid "Guided - use entire disk and set up LVM"
 msgstr "חלוקה מודרכת - שימוש בכל שטח הכונן והגדרת LVM"
+
+#~ msgid "Load installer components from CD"
+#~ msgstr "טעינת רכיבי תכנית ההתקנה מתקליטור"
+
+#~ msgid "Detecting hardware to find CD-ROM drives"
+#~ msgstr "החומרה נבדקת במטרה לאתר כונני תקליטורים"
+
+#~ msgid "Scanning CD-ROM"
+#~ msgstr "התקליטור נסרק"
+
+#~ msgid "Unmounting and ejecting CD-ROM..."
+#~ msgstr "עיגון התקליטור מנותק והתקליטור נשלף החוצה…"
+
+#~ msgid "Scanning the CD-ROM..."
+#~ msgstr "התקליטור נסרק…"
+
+#~ msgid "Scan another CD or DVD?"
+#~ msgstr "לסרוק CD או DVD נוסף?"
+
+#~ msgid "Your installation CD or DVD has been scanned; its label is:"
+#~ msgstr "ה־CD או ה־DVD ההתקנה נסרק. התווית שלו היא:"
+
+#~ msgid ""
+#~ "An attempt to configure apt to install additional packages from the CD/"
+#~ "DVD failed."
+#~ msgstr "הניסיון להגדיר את apt לטובת התקנה של חבילות נוספות מה־CD/DVD נכשל."
+
+#~ msgid "Load CD-ROM drivers from removable media?"
+#~ msgstr "לטעון מנהלי התקנים של כונני תקליטורים ממדיה נתיקה?"
+
+#~ msgid "Retry mounting the CD-ROM?"
+#~ msgstr "לנסות לעגן את התקליטור שוב?"
+
+#~ msgid "CD-ROM detected"
+#~ msgstr "זוהה תקליטור"
+
+#~ msgid "Incorrect CD-ROM detected"
+#~ msgstr "זוהה תקליטור לא תקין"
+
+#~ msgid "Detect and mount CD-ROM"
+#~ msgstr "זיהוי ועגינה של כונן תקליטורים"
+
+#~ msgid "Check the CD-ROM(s) integrity"
+#~ msgstr "בדיקת תקינות תקליטור אחד או יותר"
+
+#~ msgid "Check CD-ROM integrity?"
+#~ msgstr "לבדוק את תקינות התקליטור?"
+
+#~ msgid "Insert a Debian CD-ROM"
+#~ msgstr "הכנס תקליטור של דביאן"
+
+#~ msgid "Failed to mount CD-ROM"
+#~ msgstr "עגינת התקליטור נכשלה"
+
+#~ msgid "No valid Debian CD-ROM"
+#~ msgstr "אין תקליטור תקני של דביאן"
+
+#~ msgid "Checking CD-ROM integrity"
+#~ msgstr "תקינות התקליטור נבדקת"
 
 #~ msgid "No DHCP client was found. This package requires pump or dhcp-client."
 #~ msgstr "לא נמצא לקוח DHCP. החבילה הנוכחית דורשת pump או dhcp-client."
@@ -5520,9 +5642,6 @@ msgstr "חלוקה מודרכת - שימוש בכל שטח הכונן והגדר
 #~ "Since the partitions have already been mounted, you cannot do any changes."
 #~ msgstr "מאחר והמחיצות כבר עוגנו, אינך יכול לבצע שינויים."
 
-#~ msgid "Failed to unmount partitions"
-#~ msgstr "כישלון בביטול עגינת המחיצות."
-
 #~ msgid "An unexpected error occurred while unmounting the partitions."
 #~ msgstr "שגיאה לא צפויה התרחשה בזמן הסרת עיגון של המחיצות."
 
@@ -5692,9 +5811,6 @@ msgstr "חלוקה מודרכת - שימוש בכל שטח הכונן והגדר
 #~ "החבילה silo כשלה בהתקנה לתוך /target/. התקנת SILO כמנהל אתחול הוא שלב "
 #~ "הכרחי. למרות זאת, בעיית ההתקנה יכולה להיות ללא קשר ל-SILO, כך שאולי ניתן "
 #~ "להמשיך בהתקנה."
-
-#~ msgid "SILO installation failed"
-#~ msgstr "התקנת SILO נכשלה"
 
 #~ msgid "Running \"/sbin/silo\" failed with error code \"${ERRCODE}\"."
 #~ msgstr "הרצה של \"/sbin/silo\" נכשלה עם קוד שגיאה \"${ERRCODE}\"."

@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer sublevel1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-28 21:20+0000\n"
+"POT-Creation-Date: 2019-09-19 16:20+0000\n"
 "PO-Revision-Date: 2019-02-27 14:30+0700\n"
 "Last-Translator: Trần Ngọc Quân <vnwildman@gmail.com>\n"
 "Language-Team: Vietnamese <debian-l10n-vietnamese@lists.debian.org>\n"
@@ -620,13 +620,6 @@ msgstr "nhập thông tin bằng tay"
 msgid "Download installer components"
 msgstr "Tải về thành phần cài đặt"
 
-#. Type: text
-#. Description
-#. Main menu item
-#: ../load-cdrom.templates:1001
-msgid "Load installer components from CD"
-msgstr "Tải các thành phần cài đặt từ đĩa CD"
-
 #. Type: boolean
 #. Description
 #: ../load-media.templates:1001
@@ -739,13 +732,6 @@ msgstr ""
 "Danh sách này hiển thị các công cụ có sẵn. Nếu bạn chưa chắc cần chọn gì, "
 "bạn nên chọn cái mặc định. Nếu hệ thống bạn không khởi động được, bạn có thể "
 "thử cài đặt dùng những tùy chọn khác."
-
-#. Type: text
-#. Description
-#. Release is a filename which should not be translated
-#: ../bootstrap-base.templates:42001
-msgid "Checking Release signature"
-msgstr "Đang kiểm tra chữ ký Release"
 
 #. Type: select
 #. Description
@@ -1611,15 +1597,19 @@ msgstr "Không phải tất cả các phím được liệt kê nằm trên mọ
 #. Description
 #. :sl1:
 #: ../cdrom-detect.templates:2001
-msgid "Detecting hardware to find CD-ROM drives"
-msgstr "Đang dò tìm phần cứng để tìm ổ CD-ROM"
+#, fuzzy
+#| msgid "Detecting hardware to find hard drives"
+msgid "Detecting hardware to find installation media"
+msgstr "Đang phát hiện phần cứng để tìm đĩa cứng"
 
 #. Type: text
 #. Description
 #. :sl1:
 #: ../cdrom-detect.templates:10001
-msgid "Scanning CD-ROM"
-msgstr "Đang quét đĩa CD-ROM"
+#, fuzzy
+#| msgid "SILO installation failed"
+msgid "Scanning installation media"
+msgstr "Việc cài đặt SILO bị lỗi"
 
 #. Type: text
 #. Description
@@ -1633,8 +1623,8 @@ msgstr "Đang quét thư mục ${DIR}…"
 #. finish-install progress bar item
 #. :sl1:
 #: ../cdrom-detect.templates:19001
-msgid "Unmounting and ejecting CD-ROM..."
-msgstr "Đang tháo lắp và đẩy ra đĩa CD-ROM…"
+msgid "Unmounting/ejecting installation media..."
+msgstr ""
 
 #. Type: text
 #. Description
@@ -2365,6 +2355,16 @@ msgstr ""
 #: ../mdcfg-utils.templates:6001 ../mdcfg-utils.templates:13001
 msgid "Cancel"
 msgstr "Thôi"
+
+#. Type: text
+#. Description
+#. Main menu item
+#. :sl1:
+#: ../load-cdrom.templates:1001
+#, fuzzy
+#| msgid "Load installer components from an installer ISO"
+msgid "Load installer components from installation media"
+msgstr "Tải các thành phần cài đặt từ ảnh ISO cài đặt"
 
 #. Type: text
 #. Description
@@ -3217,7 +3217,7 @@ msgstr "Đang chuẩn bị cài đặt hệ thống cơ bản…"
 msgid "Installing the base system"
 msgstr "Đang cài đặt hệ thống cơ bản"
 
-#. #-#-#-#-#  templates.pot (PACKAGE VERSION)  #-#-#-#-#
+#. #-#-#-#-#  templates.pot (base-installer)  #-#-#-#-#
 #. Type: text
 #. Description
 #. :sl1:
@@ -3432,6 +3432,14 @@ msgstr "Đang mở gói ${SUBST0}…"
 #: ../bootstrap-base.templates:41001
 msgid "Configuring ${SUBST0}..."
 msgstr "Đang cấu hình ${SUBST0}…"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Release is a filename which should not be translated
+#: ../bootstrap-base.templates:42001
+msgid "Checking Release signature"
+msgstr "Đang kiểm tra chữ ký Release"
 
 #. Type: text
 #. Description
@@ -3686,8 +3694,27 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:1001
-msgid "Scanning the CD-ROM..."
-msgstr "Đang quét đĩa CD-ROM…"
+#, fuzzy
+#| msgid "Finishing the installation"
+msgid "Scanning the installation media..."
+msgstr "Đang hoàn tất cài đặt"
+
+#. Type: error
+#. Description
+#. :sl2:
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:2001 ../apt-cdrom-setup.templates:6001
+#, fuzzy
+#| msgid ""
+#| "An attempt to configure apt to install additional packages from the CD "
+#| "failed."
+msgid ""
+"An attempt to configure apt to install additional packages from the media "
+"failed."
+msgstr ""
+"Việc thử cấu hình trình apt để cài đặt các gói thêm từ đĩa CD đã bị lỗi."
 
 #. Type: boolean
 #. Description
@@ -3703,25 +3730,33 @@ msgstr "Đang quét đĩa CD-ROM…"
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001 ../apt-cdrom-setup.templates:4001
 #: ../apt-cdrom-setup.templates:5001 ../apt-cdrom-setup.templates:6001
-msgid "Scan another CD or DVD?"
-msgstr "Quét đĩa CD/DVD khác không?"
+#, fuzzy
+#| msgid "SILO installation failed"
+msgid "Scan extra installation media?"
+msgstr "Việc cài đặt SILO bị lỗi"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001
-msgid "Your installation CD or DVD has been scanned; its label is:"
-msgstr "Đĩa CD/DVD cài đặt của bạn đã được quét; nó có nhãn:"
+msgid "Scanning your installation media finds the label:"
+msgstr ""
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001
+#, fuzzy
+#| msgid ""
+#| "You now have the option to scan additional CDs or DVDs for use by the "
+#| "package manager (apt). Normally these should be from the same set as the "
+#| "installation CD/DVD. If you do not have any additional CDs or DVDs "
+#| "available, this step can just be skipped."
 msgid ""
-"You now have the option to scan additional CDs or DVDs for use by the "
-"package manager (apt). Normally these should be from the same set as the "
-"installation CD/DVD. If you do not have any additional CDs or DVDs "
-"available, this step can just be skipped."
+"You now have the option of scanning additional media for use by the package "
+"manager (apt). Normally these should be from the same set as the one you "
+"booted from. If you do not have any additional media, this step can just be "
+"skipped."
 msgstr ""
 "Lúc này bạn có tùy chọn quét các đĩa CD/DVD thêm cho trình quản lý gói (APT) "
 "sử dụng. Bình thường, các đĩa này nên thuộc về cùng một tập hợp với đĩa CD/"
@@ -3734,52 +3769,50 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001 ../apt-cdrom-setup.templates:4001
-msgid "If you wish to scan another CD or DVD, please insert it now."
+#, fuzzy
+#| msgid "If you wish to scan another CD or DVD, please insert it now."
+msgid "If you wish to scan more media, please insert another one now."
 msgstr "Muốn quét đĩa CD/DVD khác thì nạp vào ngay."
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:4001
-msgid "The CD or DVD with the following label has been scanned:"
+#, fuzzy
+#| msgid "The CD or DVD with the following label has been scanned:"
+msgid "The image with the following label has been scanned:"
 msgstr "Mới quét đĩa CD/DVD có nhãn sau đây:"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:5001
-msgid "The CD or DVD with the following label has already been scanned:"
+#, fuzzy
+#| msgid "The CD or DVD with the following label has already been scanned:"
+msgid "The image with the following label has already been scanned:"
 msgstr "Đã quét đĩa CD/DVD có nhãn sau đây:"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:5001
-msgid "Please replace it now if you wish to scan another CD or DVD."
+#, fuzzy
+#| msgid "Please replace it now if you wish to scan another CD or DVD."
+msgid "Please replace it now, if you wish to scan another."
 msgstr "Muốn quét đĩa CD/DVD khác thì thay thế nó ngay."
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:6001
-msgid ""
-"An attempt to configure apt to install additional packages from the CD/DVD "
-"failed."
-msgstr ""
-"Việc thử cấu hình trình apt để cài đặt các gói thêm từ đĩa CD/DVD đã bị lỗi."
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:6001
-msgid "Please check that the CD/DVD has been inserted correctly."
+#, fuzzy
+#| msgid "Please check that the CD/DVD has been inserted correctly."
+msgid "Please check that the media has been inserted correctly."
 msgstr "Hãy kiểm tra xem bạn đã nạp đúng đĩa CD/DVD."
 
 #. Type: text
 #. Description
 #. :sl1:
-#. This template uses the same text as used in the package apt for apt-cdrom
-#. Do not translate "/cdrom/" (the mount point)
 #: ../apt-cdrom-setup.templates:7001
 msgid "Media change"
 msgstr "Chuyển đổi đĩa"
@@ -3787,12 +3820,12 @@ msgstr "Chuyển đổi đĩa"
 #. Type: text
 #. Description
 #. :sl1:
-#. This template uses the same text as used in the package apt for apt-cdrom
-#. Do not translate "/cdrom/" (the mount point)
 #: ../apt-cdrom-setup.templates:7001
-msgid ""
-"/cdrom/: Please insert the disc labeled '${LABEL}' in the drive '/cdrom/' "
-"and press enter."
+#, fuzzy
+#| msgid ""
+#| "/cdrom/: Please insert the disc labeled '${LABEL}' in the drive '/cdrom/' "
+#| "and press enter."
+msgid "Please insert the media labeled '${LABEL}' and press enter."
 msgstr ""
 "/cdrom/: Vui lòng nạp đĩa có nhãn “${LABEL}” vào ổ đĩa “/cdrom/” rồi bấm "
 "phím Enter."
@@ -3812,9 +3845,13 @@ msgstr "Đang tắt đĩa CD cài đặt qua mạng trong danh sách nguồn (so
 #. Description
 #. :sl2:
 #: ../apt-cdrom-setup.templates:9001 ../apt-mirror-setup.templates:6001
+#, fuzzy
+#| msgid ""
+#| "If you are installing from a netinst CD and choose not to use a mirror, "
+#| "you will end up with only a very minimal base system."
 msgid ""
-"If you are installing from a netinst CD and choose not to use a mirror, you "
-"will end up with only a very minimal base system."
+"If you are installing from a netinst CD image and choose not to use a "
+"mirror, you will end up with only a very minimal base system."
 msgstr ""
 "Nếu bạn đang cài đặt từ đĩa CD kiểu cài đặt qua mạng (netinst) và chọn không "
 "dùng máy bản sao, kết quả là hệ thống cơ bản rất tối thiểu."
@@ -3823,8 +3860,13 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:10001
+#, fuzzy
+#| msgid ""
+#| "You are installing from a netinst CD, which by itself only allows "
+#| "installation of a very minimal base system. Use a mirror to install a "
+#| "more complete system."
 msgid ""
-"You are installing from a netinst CD, which by itself only allows "
+"You are installing from a netinst CD image, which by itself only allows "
 "installation of a very minimal base system. Use a mirror to install a more "
 "complete system."
 msgstr ""
@@ -3836,8 +3878,13 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:11001
+#, fuzzy
+#| msgid ""
+#| "You are installing from a CD, which contains a limited selection of "
+#| "packages."
 msgid ""
-"You are installing from a CD, which contains a limited selection of packages."
+"You are installing from an image which contains a limited selection of "
+"packages."
 msgstr ""
 "Bạn đang cài đặt từ một đĩa CD không có đủ sức chứa cho mọi gói phần mềm."
 
@@ -3846,9 +3893,13 @@ msgstr ""
 #. :sl1:
 #. The value of %i can be 2 or 3
 #: ../apt-cdrom-setup.templates:12001
-#, no-c-format
+#, fuzzy, no-c-format
+#| msgid ""
+#| "You have scanned %i CDs. Even though these contain a fair selection of "
+#| "packages, some may be missing (notably some packages needed to support "
+#| "languages other than English)."
 msgid ""
-"You have scanned %i CDs. Even though these contain a fair selection of "
+"You have scanned %i images. Even though these contain a fair selection of "
 "packages, some may be missing (notably some packages needed to support "
 "languages other than English)."
 msgstr ""
@@ -3861,9 +3912,12 @@ msgstr ""
 #. :sl1:
 #. The value of %i can be from 4 to 8
 #: ../apt-cdrom-setup.templates:13001
-#, no-c-format
+#, fuzzy, no-c-format
+#| msgid ""
+#| "You have scanned %i CDs. Even though these contain a large selection of "
+#| "packages, some may be missing."
 msgid ""
-"You have scanned %i CDs. Even though these contain a large selection of "
+"You have scanned %i images. Even though these contain a large selection of "
 "packages, some may be missing."
 msgstr ""
 "Bạn đã quét %i đĩa CD. Mặc dù chúng chứa rất nhiều gói phần mềm khác nhau, "
@@ -3884,8 +3938,12 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:15001
+#, fuzzy
+#| msgid ""
+#| "You are installing from a DVD. Even though the DVD contains a large "
+#| "selection of packages, some may be missing."
 msgid ""
-"You are installing from a DVD. Even though the DVD contains a large "
+"You are installing from a DVD image. Even though it contains a large "
 "selection of packages, some may be missing."
 msgstr ""
 "Bạn đã quét %i đĩa DVD. Mặc dù chúng chứa rất nhiều gói phần mềm khác nhau, "
@@ -4015,9 +4073,14 @@ msgstr "Dùng máy bản sao mạng không?"
 #. Description
 #. :sl1:
 #: ../apt-mirror-setup.templates:5001
+#, fuzzy
+#| msgid ""
+#| "A network mirror can be used to supplement the software that is included "
+#| "on the CD-ROM. This may also make newer versions of software available."
 msgid ""
 "A network mirror can be used to supplement the software that is included on "
-"the CD-ROM. This may also make newer versions of software available."
+"the installation media. This may also make newer versions of software "
+"available."
 msgstr ""
 "Một máy bản sao mạng có thể được dùng để lấy phần mềm thêm vào nội dung của "
 "đĩa CD-ROM. Cũng có thể chứa phiên bản mới hơn của phần mềm đã có."
@@ -4648,6 +4711,68 @@ msgstr "Cấu hình bộ quản lý khối tin lôgíc (LVM)"
 #: ../partman-auto-lvm.templates:1001
 msgid "Guided - use entire disk and set up LVM"
 msgstr "Hướng dẫn — dùng toàn bộ đĩa và cài đặt LVM"
+
+#~ msgid "Load installer components from CD"
+#~ msgstr "Tải các thành phần cài đặt từ đĩa CD"
+
+#~ msgid "Detecting hardware to find CD-ROM drives"
+#~ msgstr "Đang dò tìm phần cứng để tìm ổ CD-ROM"
+
+#~ msgid "Scanning CD-ROM"
+#~ msgstr "Đang quét đĩa CD-ROM"
+
+#~ msgid "Unmounting and ejecting CD-ROM..."
+#~ msgstr "Đang tháo lắp và đẩy ra đĩa CD-ROM…"
+
+#~ msgid "Scanning the CD-ROM..."
+#~ msgstr "Đang quét đĩa CD-ROM…"
+
+#~ msgid "Scan another CD or DVD?"
+#~ msgstr "Quét đĩa CD/DVD khác không?"
+
+#~ msgid "Your installation CD or DVD has been scanned; its label is:"
+#~ msgstr "Đĩa CD/DVD cài đặt của bạn đã được quét; nó có nhãn:"
+
+#~ msgid ""
+#~ "An attempt to configure apt to install additional packages from the CD/"
+#~ "DVD failed."
+#~ msgstr ""
+#~ "Việc thử cấu hình trình apt để cài đặt các gói thêm từ đĩa CD/DVD đã bị "
+#~ "lỗi."
+
+#~ msgid "Load CD-ROM drivers from removable media?"
+#~ msgstr ""
+#~ "Tải các trình điều khiển CD-ROM từ đĩa di động đa phương tiện không?"
+
+#~ msgid "Retry mounting the CD-ROM?"
+#~ msgstr "Thử lại gắn đĩa CD-ROM không?"
+
+#~ msgid "CD-ROM detected"
+#~ msgstr "Đĩa CD-ROM được tìm ra"
+
+#~ msgid "Incorrect CD-ROM detected"
+#~ msgstr "Đĩa CD-ROM không đúng được tìm ra"
+
+#~ msgid "Detect and mount CD-ROM"
+#~ msgstr "Dò tìm và gắn đĩa CD-ROM"
+
+#~ msgid "Check the CD-ROM(s) integrity"
+#~ msgstr "Kiểm tra tính toàn vẹn của các đĩa CD-ROM"
+
+#~ msgid "Check CD-ROM integrity?"
+#~ msgstr "Kiểm tra tính toàn vẹn của đĩa CD-ROM không?"
+
+#~ msgid "Insert a Debian CD-ROM"
+#~ msgstr "Hãy nạp một đĩa CD-ROM Debian"
+
+#~ msgid "Failed to mount CD-ROM"
+#~ msgstr "Gặp lỗi khi gắn đĩa CD-ROM"
+
+#~ msgid "No valid Debian CD-ROM"
+#~ msgstr "Không có đĩa CD-ROM Debian hợp lệ"
+
+#~ msgid "Checking CD-ROM integrity"
+#~ msgstr "Đang kiểm tra tính toàn vẹn của đĩa CD-ROM"
 
 #~ msgid "No DHCP client was found. This package requires pump or dhcp-client."
 #~ msgstr ""
@@ -5594,9 +5719,6 @@ msgstr "Hướng dẫn — dùng toàn bộ đĩa và cài đặt LVM"
 #~ "Since the partitions have already been mounted, you cannot do any changes."
 #~ msgstr "Bạn không thể thay đổi gì, vì những phân vùng này đã được lắp."
 
-#~ msgid "Failed to unmount partitions"
-#~ msgstr "Lỗi tháo lắp phân vùng"
-
 #~ msgid "An unexpected error occurred while unmounting the partitions."
 #~ msgstr "Gặp lỗi bất thường khi bỏ lắp phân vùng."
 
@@ -5766,9 +5888,6 @@ msgstr "Hướng dẫn — dùng toàn bộ đĩa và cài đặt LVM"
 #~ "Gói “silo” không cài đặt được vào “/target/”. Việc cài đặt SILO như là bộ "
 #~ "nạp khởi động là bước bắt buộc phải làm. Tuy nhiên, vấn đề cài đặt có thể "
 #~ "không liên quan đến SILO, vậy có thể thử tiếp tục lại cài đặt."
-
-#~ msgid "SILO installation failed"
-#~ msgstr "Việc cài đặt SILO bị lỗi"
 
 #~ msgid "Running \"/sbin/silo\" failed with error code \"${ERRCODE}\"."
 #~ msgstr "Việc chạy “/sbin/silo” bị lỗi với mã lỗi  “${ERRCODE}”."

@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ta\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-28 21:20+0000\n"
+"POT-Creation-Date: 2019-09-19 16:20+0000\n"
 "PO-Revision-Date: 2019-08-28 18:09+0000\n"
 "Last-Translator: leela <53352@protonmail.com>\n"
 "Language-Team: Tamil <<gnome-tamil-translation@googlegroups.com>>\n"
@@ -658,13 +658,6 @@ msgstr "தகவலை தாங்களே உள்ளீடு செய்
 msgid "Download installer components"
 msgstr "நிறுவி பாகங்களை தரவிறக்கு"
 
-#. Type: text
-#. Description
-#. Main menu item
-#: ../load-cdrom.templates:1001
-msgid "Load installer components from CD"
-msgstr "நிறுவி பாகங்களை குறுந் தட்டிலிருந்து ஏற்று"
-
 #. Type: boolean
 #. Description
 #: ../load-media.templates:1001
@@ -770,13 +763,6 @@ msgstr ""
 "இந்த பட்டியல் கிடைக்கப் பெறும் கருவிகளை காட்டுகிறது. எதை தேர்வு செய்வது என குழப்பம் "
 "இருப்பின் முன்னிருப்பை பயன் படுத்துக. கணினி துவங்கவில்லை எனில் மற்ற தேர்வுகளை கொண்டு "
 "மீண்டும் நிறுவலை செய்யலாம்."
-
-#. Type: text
-#. Description
-#. Release is a filename which should not be translated
-#: ../bootstrap-base.templates:42001
-msgid "Checking Release signature"
-msgstr "வெளியீட்டு கோப்பின் கையெழுத்தை சரி பார்க்கிறது."
 
 #. Type: select
 #. Description
@@ -1621,15 +1607,19 @@ msgstr "பட்டியலிட்ட அனைத்து விசைக�
 #. Description
 #. :sl1:
 #: ../cdrom-detect.templates:2001
-msgid "Detecting hardware to find CD-ROM drives"
-msgstr "குறுந்தட்டு படிநினைவகம் இயக்கிகளை தேட வன்பொருட்கள் கண்டறியப்படுகின்றன"
+#, fuzzy
+#| msgid "Detecting hardware to find hard drives"
+msgid "Detecting hardware to find installation media"
+msgstr "வன் தட்டுக்களை கண்டறிய வன் பொருட்களை கண்டறிகிறது."
 
 #. Type: text
 #. Description
 #. :sl1:
 #: ../cdrom-detect.templates:10001
-msgid "Scanning CD-ROM"
-msgstr "குறுந்தட்டு படிநினைவகம் ஆராயப்படுகிறது"
+#, fuzzy
+#| msgid "SILO installation failed"
+msgid "Scanning installation media"
+msgstr "ஸைலோ நிறுவல் தோல்வியடைந்தது."
 
 #. Type: text
 #. Description
@@ -1643,8 +1633,8 @@ msgstr "${DIR} ஆராயப்படுகிறது..."
 #. finish-install progress bar item
 #. :sl1:
 #: ../cdrom-detect.templates:19001
-msgid "Unmounting and ejecting CD-ROM..."
-msgstr "குறுந்தட்டு படிநினைவகம் வெளித்தள்ளப்படுகிறது..."
+msgid "Unmounting/ejecting installation media..."
+msgstr ""
 
 #. Type: text
 #. Description
@@ -2362,6 +2352,16 @@ msgstr ""
 #: ../mdcfg-utils.templates:6001 ../mdcfg-utils.templates:13001
 msgid "Cancel"
 msgstr "கைவிடுக"
+
+#. Type: text
+#. Description
+#. Main menu item
+#. :sl1:
+#: ../load-cdrom.templates:1001
+#, fuzzy
+#| msgid "Load installer components from an installer ISO"
+msgid "Load installer components from installation media"
+msgstr "ஒரு நிறுவி ஐஎஸ்ஓ பிம்பத்திலிருந்து நிறுவி பாகங்களை ஏற்றுக."
 
 #. Type: text
 #. Description
@@ -3206,7 +3206,7 @@ msgstr "அடிப்படை அமைப்பை நிறுவ தயா
 msgid "Installing the base system"
 msgstr "அடிப்படை கணினி அமைப்பை நிறுவுகிறது."
 
-#. #-#-#-#-#  templates.pot (PACKAGE VERSION)  #-#-#-#-#
+#. #-#-#-#-#  templates.pot (base-installer)  #-#-#-#-#
 #. Type: text
 #. Description
 #. :sl1:
@@ -3420,6 +3420,14 @@ msgstr "${SUBST0} ஐ பிரிக்கிறது...."
 #: ../bootstrap-base.templates:41001
 msgid "Configuring ${SUBST0}..."
 msgstr "${SUBST0} ஐ வடிவமைக்கிறது...."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Release is a filename which should not be translated
+#: ../bootstrap-base.templates:42001
+msgid "Checking Release signature"
+msgstr "வெளியீட்டு கோப்பின் கையெழுத்தை சரி பார்க்கிறது."
 
 #. Type: text
 #. Description
@@ -3674,8 +3682,28 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:1001
-msgid "Scanning the CD-ROM..."
-msgstr "குறுந்தட்டு படிநினைவகம் ஆராயப்படுகிறது..."
+#, fuzzy
+#| msgid "Finishing the installation"
+msgid "Scanning the installation media..."
+msgstr "நிறுவல் முடிக்கப்படுகிறது"
+
+#. Type: error
+#. Description
+#. :sl2:
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:2001 ../apt-cdrom-setup.templates:6001
+#, fuzzy
+#| msgid ""
+#| "An attempt to configure apt to install additional packages from the CD "
+#| "failed."
+msgid ""
+"An attempt to configure apt to install additional packages from the media "
+"failed."
+msgstr ""
+"ஆப்ட் ஐ குறுந் தட்டிலிருந்து கூடுதல் தொகுப்புகளை நிறுவ வடிவமைக்கும் முயற்சி "
+"தோல்வியுற்றது."
 
 #. Type: boolean
 #. Description
@@ -3691,25 +3719,33 @@ msgstr "குறுந்தட்டு படிநினைவகம் ஆ�
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001 ../apt-cdrom-setup.templates:4001
 #: ../apt-cdrom-setup.templates:5001 ../apt-cdrom-setup.templates:6001
-msgid "Scan another CD or DVD?"
-msgstr "இன்னொரு குறுந்தட்டு (சிடி அல்லது டிவிடி) ஐ ஆராய வேண்டுமா?"
+#, fuzzy
+#| msgid "SILO installation failed"
+msgid "Scan extra installation media?"
+msgstr "ஸைலோ நிறுவல் தோல்வியடைந்தது."
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001
-msgid "Your installation CD or DVD has been scanned; its label is:"
-msgstr "உங்கள் நிறுவல் குறுந்தட்டு (சிடி அல்லது டிவிடி) ஆராயப்பட்டது. அதன் அடையாளம்:"
+msgid "Scanning your installation media finds the label:"
+msgstr ""
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001
+#, fuzzy
+#| msgid ""
+#| "You now have the option to scan additional CDs or DVDs for use by the "
+#| "package manager (apt). Normally these should be from the same set as the "
+#| "installation CD/DVD. If you do not have any additional CDs or DVDs "
+#| "available, this step can just be skipped."
 msgid ""
-"You now have the option to scan additional CDs or DVDs for use by the "
-"package manager (apt). Normally these should be from the same set as the "
-"installation CD/DVD. If you do not have any additional CDs or DVDs "
-"available, this step can just be skipped."
+"You now have the option of scanning additional media for use by the package "
+"manager (apt). Normally these should be from the same set as the one you "
+"booted from. If you do not have any additional media, this step can just be "
+"skipped."
 msgstr ""
 "இப்போது உங்களுக்கு பொதி மேலாண்மை நிரல் (ஆப்ட்) பயன்படுத்த கூடுதல் குறுந்தட்டு (சிடி "
 "அல்லது டிவிடி) ஐ ஆராய தேர்வு உள்ளது. சாதாரணமாக இவை நிறுவல் குறுந்தட்டு (சிடி அல்லது "
@@ -3723,7 +3759,9 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001 ../apt-cdrom-setup.templates:4001
-msgid "If you wish to scan another CD or DVD, please insert it now."
+#, fuzzy
+#| msgid "If you wish to scan another CD or DVD, please insert it now."
+msgid "If you wish to scan more media, please insert another one now."
 msgstr ""
 "இன்னொரு குறுந்தட்டு (சிடி அல்லது டிவிடி) ஐ ஆராய வேண்டும் எனில் அதை இப்போது உள்ளிடவும்."
 
@@ -3731,14 +3769,18 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:4001
-msgid "The CD or DVD with the following label has been scanned:"
+#, fuzzy
+#| msgid "The CD or DVD with the following label has been scanned:"
+msgid "The image with the following label has been scanned:"
 msgstr "பின் வரும் அடையாளம் கொண்ட குறுந்தட்டு (சிடி அல்லது டிவிடி) ஆராயப்பட்டது:"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:5001
-msgid "The CD or DVD with the following label has already been scanned:"
+#, fuzzy
+#| msgid "The CD or DVD with the following label has already been scanned:"
+msgid "The image with the following label has already been scanned:"
 msgstr ""
 "பின் வரும் அடையாளம் கொண்ட குறுந்தட்டு (சிடி அல்லது டிவிடி) ஏற்கெனவே ஆராயப்பட்டுவிட்டது:"
 
@@ -3746,7 +3788,9 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:5001
-msgid "Please replace it now if you wish to scan another CD or DVD."
+#, fuzzy
+#| msgid "Please replace it now if you wish to scan another CD or DVD."
+msgid "Please replace it now, if you wish to scan another."
 msgstr ""
 "நீங்கள் மற்றொரு குறுந்தட்டை (சிடி அல்லது டிவிடி) வருட விரும்பினால் அதை இப்போது "
 "மாற்றுங்கள்."
@@ -3755,25 +3799,14 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:6001
-msgid ""
-"An attempt to configure apt to install additional packages from the CD/DVD "
-"failed."
-msgstr ""
-"ஆப்ட் ஐ குறுந் தட்டிலிருந்து (சிடி/ டிவிடி) கூடுதல் தொகுப்புகளை நிறுவ வடிவமைக்கும் "
-"முயற்சி தோல்வியுற்றது."
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:6001
-msgid "Please check that the CD/DVD has been inserted correctly."
+#, fuzzy
+#| msgid "Please check that the CD/DVD has been inserted correctly."
+msgid "Please check that the media has been inserted correctly."
 msgstr "சிடி அல்லது டிவிடி ஐ சரியாக அமைத்திருக்கிறீர்களா என்பதை உறுதி செய்துகொள்ளவும்."
 
 #. Type: text
 #. Description
 #. :sl1:
-#. This template uses the same text as used in the package apt for apt-cdrom
-#. Do not translate "/cdrom/" (the mount point)
 #: ../apt-cdrom-setup.templates:7001
 msgid "Media change"
 msgstr "ஊடக மாற்றம்"
@@ -3781,12 +3814,12 @@ msgstr "ஊடக மாற்றம்"
 #. Type: text
 #. Description
 #. :sl1:
-#. This template uses the same text as used in the package apt for apt-cdrom
-#. Do not translate "/cdrom/" (the mount point)
 #: ../apt-cdrom-setup.templates:7001
-msgid ""
-"/cdrom/: Please insert the disc labeled '${LABEL}' in the drive '/cdrom/' "
-"and press enter."
+#, fuzzy
+#| msgid ""
+#| "/cdrom/: Please insert the disc labeled '${LABEL}' in the drive '/cdrom/' "
+#| "and press enter."
+msgid "Please insert the media labeled '${LABEL}' and press enter."
 msgstr ""
 "/cdrom/: '${LABEL}'  என அடையாளமிடப்பட்ட வட்டை '/cdrom/'  இயக்கியில் இடவும். பின் "
 "என்டர் விசையை அழுத்தவும்."
@@ -3806,9 +3839,13 @@ msgstr "வலை நிறுவல் குறுந்தட்டை மூ
 #. Description
 #. :sl2:
 #: ../apt-cdrom-setup.templates:9001 ../apt-mirror-setup.templates:6001
+#, fuzzy
+#| msgid ""
+#| "If you are installing from a netinst CD and choose not to use a mirror, "
+#| "you will end up with only a very minimal base system."
 msgid ""
-"If you are installing from a netinst CD and choose not to use a mirror, you "
-"will end up with only a very minimal base system."
+"If you are installing from a netinst CD image and choose not to use a "
+"mirror, you will end up with only a very minimal base system."
 msgstr ""
 "நீங்கள் வலைநிறுவி குறுந் தட்டிலிருந்து (netinst CD) நிறுவி இணைப்பதிப்பை பயன் "
 "படுத்தவில்லை எனில் மிகக் குறைந்த அடிப்படை அமைப்பு மட்டுமே உங்களுக்கு கிடைக்கும்."
@@ -3817,8 +3854,13 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:10001
+#, fuzzy
+#| msgid ""
+#| "You are installing from a netinst CD, which by itself only allows "
+#| "installation of a very minimal base system. Use a mirror to install a "
+#| "more complete system."
 msgid ""
-"You are installing from a netinst CD, which by itself only allows "
+"You are installing from a netinst CD image, which by itself only allows "
 "installation of a very minimal base system. Use a mirror to install a more "
 "complete system."
 msgstr ""
@@ -3829,8 +3871,13 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:11001
+#, fuzzy
+#| msgid ""
+#| "You are installing from a CD, which contains a limited selection of "
+#| "packages."
 msgid ""
-"You are installing from a CD, which contains a limited selection of packages."
+"You are installing from an image which contains a limited selection of "
+"packages."
 msgstr "நீங்கள் மட்டுப்படுத்தப்பட்ட தொகுப்புகள் உள்ள குறுந்தட்டிலிருந்து நிறுவுகிறீர்கள்."
 
 #. Type: text
@@ -3838,9 +3885,13 @@ msgstr "நீங்கள் மட்டுப்படுத்தப்ப�
 #. :sl1:
 #. The value of %i can be 2 or 3
 #: ../apt-cdrom-setup.templates:12001
-#, no-c-format
+#, fuzzy, no-c-format
+#| msgid ""
+#| "You have scanned %i CDs. Even though these contain a fair selection of "
+#| "packages, some may be missing (notably some packages needed to support "
+#| "languages other than English)."
 msgid ""
-"You have scanned %i CDs. Even though these contain a fair selection of "
+"You have scanned %i images. Even though these contain a fair selection of "
 "packages, some may be missing (notably some packages needed to support "
 "languages other than English)."
 msgstr ""
@@ -3853,9 +3904,12 @@ msgstr ""
 #. :sl1:
 #. The value of %i can be from 4 to 8
 #: ../apt-cdrom-setup.templates:13001
-#, no-c-format
+#, fuzzy, no-c-format
+#| msgid ""
+#| "You have scanned %i CDs. Even though these contain a large selection of "
+#| "packages, some may be missing."
 msgid ""
-"You have scanned %i CDs. Even though these contain a large selection of "
+"You have scanned %i images. Even though these contain a large selection of "
 "packages, some may be missing."
 msgstr ""
 "நீங்கள் %i  குறுந்தட்டுகளை வருடிப்பார்துள்ளீர்கள். இவை மிகப் பெரிய தொகுப்பு தேர்வை "
@@ -3876,8 +3930,12 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:15001
+#, fuzzy
+#| msgid ""
+#| "You are installing from a DVD. Even though the DVD contains a large "
+#| "selection of packages, some may be missing."
 msgid ""
-"You are installing from a DVD. Even though the DVD contains a large "
+"You are installing from a DVD image. Even though it contains a large "
 "selection of packages, some may be missing."
 msgstr ""
 "நீங்கள் ஒரு டிவிடி (DVD) இல் இருந்து நிறுவுகிறீர்கள். இதில் பெரும் பொதித்தேர்வு "
@@ -4005,9 +4063,14 @@ msgstr "வலைப்பின்னல் இணைப்பதிப்ப�
 #. Description
 #. :sl1:
 #: ../apt-mirror-setup.templates:5001
+#, fuzzy
+#| msgid ""
+#| "A network mirror can be used to supplement the software that is included "
+#| "on the CD-ROM. This may also make newer versions of software available."
 msgid ""
 "A network mirror can be used to supplement the software that is included on "
-"the CD-ROM. This may also make newer versions of software available."
+"the installation media. This may also make newer versions of software "
+"available."
 msgstr ""
 "குறுந்தட்டு படிநினைவகத்தில் உள்ள மென் பொருட்களுடன் கூடிதலாக வலைப்பின்னல் இணைப்பதிப்பை "
 "பயன்படுத்தலாம். இதனால் மென் பொருட்களின் புதிய பதிப்புகள் கிடைக்கப் பெறலாம்."
@@ -4642,6 +4705,69 @@ msgstr "தர்க்க ரீதியான தொகுதி மேலா
 #: ../partman-auto-lvm.templates:1001
 msgid "Guided - use entire disk and set up LVM"
 msgstr "வழிநடத்தப்பட்ட - முழு வட்டையும் உபயோகித்து LVM அமை"
+
+#~ msgid "Load installer components from CD"
+#~ msgstr "நிறுவி பாகங்களை குறுந் தட்டிலிருந்து ஏற்று"
+
+#~ msgid "Detecting hardware to find CD-ROM drives"
+#~ msgstr "குறுந்தட்டு படிநினைவகம் இயக்கிகளை தேட வன்பொருட்கள் கண்டறியப்படுகின்றன"
+
+#~ msgid "Scanning CD-ROM"
+#~ msgstr "குறுந்தட்டு படிநினைவகம் ஆராயப்படுகிறது"
+
+#~ msgid "Unmounting and ejecting CD-ROM..."
+#~ msgstr "குறுந்தட்டு படிநினைவகம் வெளித்தள்ளப்படுகிறது..."
+
+#~ msgid "Scanning the CD-ROM..."
+#~ msgstr "குறுந்தட்டு படிநினைவகம் ஆராயப்படுகிறது..."
+
+#~ msgid "Scan another CD or DVD?"
+#~ msgstr "இன்னொரு குறுந்தட்டு (சிடி அல்லது டிவிடி) ஐ ஆராய வேண்டுமா?"
+
+#~ msgid "Your installation CD or DVD has been scanned; its label is:"
+#~ msgstr "உங்கள் நிறுவல் குறுந்தட்டு (சிடி அல்லது டிவிடி) ஆராயப்பட்டது. அதன் அடையாளம்:"
+
+#~ msgid ""
+#~ "An attempt to configure apt to install additional packages from the CD/"
+#~ "DVD failed."
+#~ msgstr ""
+#~ "ஆப்ட் ஐ குறுந் தட்டிலிருந்து (சிடி/ டிவிடி) கூடுதல் தொகுப்புகளை நிறுவ வடிவமைக்கும் "
+#~ "முயற்சி தோல்வியுற்றது."
+
+#~ msgid "Load CD-ROM drivers from removable media?"
+#~ msgstr ""
+#~ "குறுந்தட்டு படிநினைவகத்துக்கான (CD-ROM) இயக்கு நிரல்களை நீக்கக்கூடிய ஊடகத்திலிருந்து "
+#~ "ஏற்றவா?"
+
+#~ msgid "Retry mounting the CD-ROM?"
+#~ msgstr "குறுந்தட்டு படிநினைவகம் (CD-ROM) ஏற்ற மீண்டும் முயற்சி செய்யவா?"
+
+#~ msgid "CD-ROM detected"
+#~ msgstr "குறுந்தட்டு படிநினைவகம் கண்டறியப் பட்டது"
+
+#~ msgid "Incorrect CD-ROM detected"
+#~ msgstr "தவறான குறுந்தட்டு கண்டறியப் பட்டுள்ளது"
+
+#~ msgid "Detect and mount CD-ROM"
+#~ msgstr "குறுந்தட்டை கண்டறிந்து ஏற்றவும்"
+
+#~ msgid "Check the CD-ROM(s) integrity"
+#~ msgstr "குறுந்தட்டின் (தட்டுகளின்) நேர்த்தியை சோதிக்க."
+
+#~ msgid "Check CD-ROM integrity?"
+#~ msgstr "குறுந்தட்டின் நேர்த்தியை சோதிக்கவா?"
+
+#~ msgid "Insert a Debian CD-ROM"
+#~ msgstr "ஓர் டிபியன் குறுந் தட்டை சொருகவும்"
+
+#~ msgid "Failed to mount CD-ROM"
+#~ msgstr "குறுந் தட்டை ஏற்றுதல் தோல்வியுற்றது"
+
+#~ msgid "No valid Debian CD-ROM"
+#~ msgstr "செல்லுபடியாகும் டிபியன் குறுந் தட்டு ஏதும் இல்லை"
+
+#~ msgid "Checking CD-ROM integrity"
+#~ msgstr "குறுந்தட்டின் நேர்த்தியை சோதிக்கிறது."
 
 #~ msgid "No DHCP client was found. This package requires pump or dhcp-client."
 #~ msgstr ""
@@ -5564,9 +5690,6 @@ msgstr "வழிநடத்தப்பட்ட - முழு வட்ட�
 #~ "Since the partitions have already been mounted, you cannot do any changes."
 #~ msgstr "பகிர்வுகள் ஏற்கெனவே ஏற்றப்பட்டு இருப்பதால் நீங்கள் மாறுதல்களை செய்ய இயலாது."
 
-#~ msgid "Failed to unmount partitions"
-#~ msgstr "பகிர்வுகளை இறக்குவது தோல்வியுற்றது"
-
 #~ msgid "An unexpected error occurred while unmounting the partitions."
 #~ msgstr "பகிர்வுகளை கீழிறக்கும் போது அமைக்கும்போது எதிர்பாராத பிழை ஏற்பட்டது."
 
@@ -5741,9 +5864,6 @@ msgstr "வழிநடத்தப்பட்ட - முழு வட்ட�
 #~ "/target/ இல் ஸைலோ தொகுப்பு நிறுவப் படவில்லை.ஸைலோ ஐ நிறுவுதல் அவசியமான படி. "
 #~ "நிறுவல் பிரச்சினை ஸைலோ க்கு சம்பந்தம் இல்லாததாக இருக்கலாம். ஆகவே நிறுவலை தொடர்தல் கை "
 #~ "கூடலாம்."
-
-#~ msgid "SILO installation failed"
-#~ msgstr "ஸைலோ நிறுவல் தோல்வியடைந்தது."
 
 #~ msgid "Running \"/sbin/silo\" failed with error code \"${ERRCODE}\"."
 #~ msgstr ""

@@ -34,7 +34,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-28 21:20+0000\n"
+"POT-Creation-Date: 2019-09-19 16:20+0000\n"
 "PO-Revision-Date: 2018-08-27 10:27+0200\n"
 "Last-Translator: Milo Casagrande <milo@milo.name>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
@@ -639,13 +639,6 @@ msgstr "inserire le informazioni manualmente"
 msgid "Download installer components"
 msgstr "Scaricare i componenti del programma d'installazione"
 
-#. Type: text
-#. Description
-#. Main menu item
-#: ../load-cdrom.templates:1001
-msgid "Load installer components from CD"
-msgstr "Caricare i componenti del programma d'installazione dal CD"
-
 #. Type: boolean
 #. Description
 #: ../load-media.templates:1001
@@ -757,13 +750,6 @@ msgstr ""
 "L'elenco mostra gli strumenti a disposizione. Nel dubbio, selezionare quello "
 "predefinito. Se il proprio sistema non si avvia è possibile riprovare "
 "l'installazione usando le altre opzioni."
-
-#. Type: text
-#. Description
-#. Release is a filename which should not be translated
-#: ../bootstrap-base.templates:42001
-msgid "Checking Release signature"
-msgstr "Controllo della firma del file Release"
 
 #. Type: select
 #. Description
@@ -1638,15 +1624,19 @@ msgstr "Non tutti i tasti elencati sono presenti in tutte le tastiere."
 #. Description
 #. :sl1:
 #: ../cdrom-detect.templates:2001
-msgid "Detecting hardware to find CD-ROM drives"
-msgstr "Rilevamento hardware alla ricerca di unità CD-ROM"
+#, fuzzy
+#| msgid "Detecting hardware to find hard drives"
+msgid "Detecting hardware to find installation media"
+msgstr "Ricerca dei dischi fissi nel sistema"
 
 #. Type: text
 #. Description
 #. :sl1:
 #: ../cdrom-detect.templates:10001
-msgid "Scanning CD-ROM"
-msgstr "Analisi del CD-ROM"
+#, fuzzy
+#| msgid "SILO installation failed"
+msgid "Scanning installation media"
+msgstr "Installazione di Silo non riuscita"
 
 #. Type: text
 #. Description
@@ -1660,8 +1650,8 @@ msgstr "Analisi di ${DIR}..."
 #. finish-install progress bar item
 #. :sl1:
 #: ../cdrom-detect.templates:19001
-msgid "Unmounting and ejecting CD-ROM..."
-msgstr "Smontaggio ed espulsione del CD-ROM..."
+msgid "Unmounting/ejecting installation media..."
+msgstr ""
 
 #. Type: text
 #. Description
@@ -2389,6 +2379,16 @@ msgstr ""
 #: ../mdcfg-utils.templates:6001 ../mdcfg-utils.templates:13001
 msgid "Cancel"
 msgstr "Annulla"
+
+#. Type: text
+#. Description
+#. Main menu item
+#. :sl1:
+#: ../load-cdrom.templates:1001
+#, fuzzy
+#| msgid "Load installer components from an installer ISO"
+msgid "Load installer components from installation media"
+msgstr "Caricare i componenti del programma d'installazione da un'immagine ISO"
 
 #. Type: text
 #. Description
@@ -3246,7 +3246,7 @@ msgstr "Preparazione installazione del sistema base..."
 msgid "Installing the base system"
 msgstr "Installazione del sistema base"
 
-#. #-#-#-#-#  templates.pot (PACKAGE VERSION)  #-#-#-#-#
+#. #-#-#-#-#  templates.pot (base-installer)  #-#-#-#-#
 #. Type: text
 #. Description
 #. :sl1:
@@ -3462,6 +3462,14 @@ msgstr "Scompattazione di ${SUBST0}..."
 #: ../bootstrap-base.templates:41001
 msgid "Configuring ${SUBST0}..."
 msgstr "Configurazione di ${SUBST0}..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Release is a filename which should not be translated
+#: ../bootstrap-base.templates:42001
+msgid "Checking Release signature"
+msgstr "Controllo della firma del file Release"
 
 #. Type: text
 #. Description
@@ -3718,8 +3726,28 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:1001
-msgid "Scanning the CD-ROM..."
-msgstr "Analisi del CD-ROM..."
+#, fuzzy
+#| msgid "Finishing the installation"
+msgid "Scanning the installation media..."
+msgstr "Completamento dell'installazione"
+
+#. Type: error
+#. Description
+#. :sl2:
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:2001 ../apt-cdrom-setup.templates:6001
+#, fuzzy
+#| msgid ""
+#| "An attempt to configure apt to install additional packages from the CD "
+#| "failed."
+msgid ""
+"An attempt to configure apt to install additional packages from the media "
+"failed."
+msgstr ""
+"Il tentativo di configurare APT per installare ulteriori pacchetti dal CD-"
+"ROM non è riuscito."
 
 #. Type: boolean
 #. Description
@@ -3735,25 +3763,33 @@ msgstr "Analisi del CD-ROM..."
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001 ../apt-cdrom-setup.templates:4001
 #: ../apt-cdrom-setup.templates:5001 ../apt-cdrom-setup.templates:6001
-msgid "Scan another CD or DVD?"
-msgstr "Analizzare un altro CD o DVD?"
+#, fuzzy
+#| msgid "SILO installation failed"
+msgid "Scan extra installation media?"
+msgstr "Installazione di Silo non riuscita"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001
-msgid "Your installation CD or DVD has been scanned; its label is:"
-msgstr "Il CD o DVD d'installazione è stato analizzato; la sua etichetta è:"
+msgid "Scanning your installation media finds the label:"
+msgstr ""
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001
+#, fuzzy
+#| msgid ""
+#| "You now have the option to scan additional CDs or DVDs for use by the "
+#| "package manager (apt). Normally these should be from the same set as the "
+#| "installation CD/DVD. If you do not have any additional CDs or DVDs "
+#| "available, this step can just be skipped."
 msgid ""
-"You now have the option to scan additional CDs or DVDs for use by the "
-"package manager (apt). Normally these should be from the same set as the "
-"installation CD/DVD. If you do not have any additional CDs or DVDs "
-"available, this step can just be skipped."
+"You now have the option of scanning additional media for use by the package "
+"manager (apt). Normally these should be from the same set as the one you "
+"booted from. If you do not have any additional media, this step can just be "
+"skipped."
 msgstr ""
 "È ora possibile analizzare altri CD o DVD per farli usare al gestore dei "
 "pacchetti (apt). Normalmente questo andrebbe fatto usando CD/DVD "
@@ -3767,53 +3803,50 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001 ../apt-cdrom-setup.templates:4001
-msgid "If you wish to scan another CD or DVD, please insert it now."
+#, fuzzy
+#| msgid "If you wish to scan another CD or DVD, please insert it now."
+msgid "If you wish to scan more media, please insert another one now."
 msgstr "Per analizzare un altro CD o DVD inserirlo ora."
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:4001
-msgid "The CD or DVD with the following label has been scanned:"
+#, fuzzy
+#| msgid "The CD or DVD with the following label has been scanned:"
+msgid "The image with the following label has been scanned:"
 msgstr "Il CD o DVD con la seguente etichetta è stato analizzato:"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:5001
-msgid "The CD or DVD with the following label has already been scanned:"
+#, fuzzy
+#| msgid "The CD or DVD with the following label has already been scanned:"
+msgid "The image with the following label has already been scanned:"
 msgstr "Il CD o DVD con la seguente etichetta è già stato analizzato:"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:5001
-msgid "Please replace it now if you wish to scan another CD or DVD."
+#, fuzzy
+#| msgid "Please replace it now if you wish to scan another CD or DVD."
+msgid "Please replace it now, if you wish to scan another."
 msgstr "Sostituirlo ora per analizzare un altro CD o DVD."
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:6001
-msgid ""
-"An attempt to configure apt to install additional packages from the CD/DVD "
-"failed."
-msgstr ""
-"Un tentativo di configurare apt per installare ulteriori pacchetti dal CD-"
-"ROM non è riuscito."
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:6001
-msgid "Please check that the CD/DVD has been inserted correctly."
+#, fuzzy
+#| msgid "Please check that the CD/DVD has been inserted correctly."
+msgid "Please check that the media has been inserted correctly."
 msgstr "Verificare che il CD/DVD sia stato inserito correttamente."
 
 #. Type: text
 #. Description
 #. :sl1:
-#. This template uses the same text as used in the package apt for apt-cdrom
-#. Do not translate "/cdrom/" (the mount point)
 #: ../apt-cdrom-setup.templates:7001
 msgid "Media change"
 msgstr "Supporto cambiato"
@@ -3821,12 +3854,12 @@ msgstr "Supporto cambiato"
 #. Type: text
 #. Description
 #. :sl1:
-#. This template uses the same text as used in the package apt for apt-cdrom
-#. Do not translate "/cdrom/" (the mount point)
 #: ../apt-cdrom-setup.templates:7001
-msgid ""
-"/cdrom/: Please insert the disc labeled '${LABEL}' in the drive '/cdrom/' "
-"and press enter."
+#, fuzzy
+#| msgid ""
+#| "/cdrom/: Please insert the disc labeled '${LABEL}' in the drive '/cdrom/' "
+#| "and press enter."
+msgid "Please insert the media labeled '${LABEL}' and press enter."
 msgstr ""
 "/cdrom/: inserire il disco etichettato «${LABEL}» nel drive «/cdrom/» e "
 "premere Invio."
@@ -3846,9 +3879,13 @@ msgstr "Disabilitazione del CD di netinst da sources.list..."
 #. Description
 #. :sl2:
 #: ../apt-cdrom-setup.templates:9001 ../apt-mirror-setup.templates:6001
+#, fuzzy
+#| msgid ""
+#| "If you are installing from a netinst CD and choose not to use a mirror, "
+#| "you will end up with only a very minimal base system."
 msgid ""
-"If you are installing from a netinst CD and choose not to use a mirror, you "
-"will end up with only a very minimal base system."
+"If you are installing from a netinst CD image and choose not to use a "
+"mirror, you will end up with only a very minimal base system."
 msgstr ""
 "Se si sta installando da un CD netinst e si sceglie di non usare un mirror "
 "ci si troverà solo con un sistema base minimale."
@@ -3857,8 +3894,13 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:10001
+#, fuzzy
+#| msgid ""
+#| "You are installing from a netinst CD, which by itself only allows "
+#| "installation of a very minimal base system. Use a mirror to install a "
+#| "more complete system."
 msgid ""
-"You are installing from a netinst CD, which by itself only allows "
+"You are installing from a netinst CD image, which by itself only allows "
 "installation of a very minimal base system. Use a mirror to install a more "
 "complete system."
 msgstr ""
@@ -3869,8 +3911,13 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:11001
+#, fuzzy
+#| msgid ""
+#| "You are installing from a CD, which contains a limited selection of "
+#| "packages."
 msgid ""
-"You are installing from a CD, which contains a limited selection of packages."
+"You are installing from an image which contains a limited selection of "
+"packages."
 msgstr ""
 "Si sta installando da un CD che contiene una selezione limitata di pacchetti."
 
@@ -3879,9 +3926,13 @@ msgstr ""
 #. :sl1:
 #. The value of %i can be 2 or 3
 #: ../apt-cdrom-setup.templates:12001
-#, no-c-format
+#, fuzzy, no-c-format
+#| msgid ""
+#| "You have scanned %i CDs. Even though these contain a fair selection of "
+#| "packages, some may be missing (notably some packages needed to support "
+#| "languages other than English)."
 msgid ""
-"You have scanned %i CDs. Even though these contain a fair selection of "
+"You have scanned %i images. Even though these contain a fair selection of "
 "packages, some may be missing (notably some packages needed to support "
 "languages other than English)."
 msgstr ""
@@ -3894,9 +3945,12 @@ msgstr ""
 #. :sl1:
 #. The value of %i can be from 4 to 8
 #: ../apt-cdrom-setup.templates:13001
-#, no-c-format
+#, fuzzy, no-c-format
+#| msgid ""
+#| "You have scanned %i CDs. Even though these contain a large selection of "
+#| "packages, some may be missing."
 msgid ""
-"You have scanned %i CDs. Even though these contain a large selection of "
+"You have scanned %i images. Even though these contain a large selection of "
 "packages, some may be missing."
 msgstr ""
 "Sono stati analizzati %i CD. Anche se questi contengono una grande quantità "
@@ -3917,8 +3971,12 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:15001
+#, fuzzy
+#| msgid ""
+#| "You are installing from a DVD. Even though the DVD contains a large "
+#| "selection of packages, some may be missing."
 msgid ""
-"You are installing from a DVD. Even though the DVD contains a large "
+"You are installing from a DVD image. Even though it contains a large "
 "selection of packages, some may be missing."
 msgstr ""
 "Si sta installando da DVD. Anche se il DVD contiene una grande quantità di "
@@ -4050,9 +4108,14 @@ msgstr "Usare un mirror di rete?"
 #. Description
 #. :sl1:
 #: ../apt-mirror-setup.templates:5001
+#, fuzzy
+#| msgid ""
+#| "A network mirror can be used to supplement the software that is included "
+#| "on the CD-ROM. This may also make newer versions of software available."
 msgid ""
 "A network mirror can be used to supplement the software that is included on "
-"the CD-ROM. This may also make newer versions of software available."
+"the installation media. This may also make newer versions of software "
+"available."
 msgstr ""
 "È possibile usare un mirror di rete come supplemento al software incluso nel "
 "CD-ROM. Questo può servire a rendere disponibili versioni più aggiornate del "
@@ -4696,6 +4759,67 @@ msgstr "Configurare il Logical Volume Manager"
 #: ../partman-auto-lvm.templates:1001
 msgid "Guided - use entire disk and set up LVM"
 msgstr "Guidato - usa l'intero disco e imposta LVM"
+
+#~ msgid "Load installer components from CD"
+#~ msgstr "Caricare i componenti del programma d'installazione dal CD"
+
+#~ msgid "Detecting hardware to find CD-ROM drives"
+#~ msgstr "Rilevamento hardware alla ricerca di unità CD-ROM"
+
+#~ msgid "Scanning CD-ROM"
+#~ msgstr "Analisi del CD-ROM"
+
+#~ msgid "Unmounting and ejecting CD-ROM..."
+#~ msgstr "Smontaggio ed espulsione del CD-ROM..."
+
+#~ msgid "Scanning the CD-ROM..."
+#~ msgstr "Analisi del CD-ROM..."
+
+#~ msgid "Scan another CD or DVD?"
+#~ msgstr "Analizzare un altro CD o DVD?"
+
+#~ msgid "Your installation CD or DVD has been scanned; its label is:"
+#~ msgstr "Il CD o DVD d'installazione è stato analizzato; la sua etichetta è:"
+
+#~ msgid ""
+#~ "An attempt to configure apt to install additional packages from the CD/"
+#~ "DVD failed."
+#~ msgstr ""
+#~ "Un tentativo di configurare apt per installare ulteriori pacchetti dal CD-"
+#~ "ROM non è riuscito."
+
+#~ msgid "Load CD-ROM drivers from removable media?"
+#~ msgstr "Caricare i driver del CD-ROM dal dispositivo rimovibile?"
+
+#~ msgid "Retry mounting the CD-ROM?"
+#~ msgstr "Tentare nuovamente di montare il CD-ROM?"
+
+#~ msgid "CD-ROM detected"
+#~ msgstr "Rilevato CD-ROM"
+
+#~ msgid "Incorrect CD-ROM detected"
+#~ msgstr "Rilevato CD-ROM non corretto"
+
+#~ msgid "Detect and mount CD-ROM"
+#~ msgstr "Rilevare e montare il CD-ROM"
+
+#~ msgid "Check the CD-ROM(s) integrity"
+#~ msgstr "Verificare integrità CD-ROM"
+
+#~ msgid "Check CD-ROM integrity?"
+#~ msgstr "Verificare l'integrità del CD-ROM?"
+
+#~ msgid "Insert a Debian CD-ROM"
+#~ msgstr "Inserire un CD-ROM Debian"
+
+#~ msgid "Failed to mount CD-ROM"
+#~ msgstr "Montaggio del CD-ROM non riuscito"
+
+#~ msgid "No valid Debian CD-ROM"
+#~ msgstr "Nessun CD-ROM Debian valido"
+
+#~ msgid "Checking CD-ROM integrity"
+#~ msgstr "Verifica integrità del CD-ROM"
 
 #~ msgid "No DHCP client was found. This package requires pump or dhcp-client."
 #~ msgstr ""
@@ -5649,9 +5773,6 @@ msgstr "Guidato - usa l'intero disco e imposta LVM"
 #~ msgstr ""
 #~ "Non è possibile apportare modifiche poiché le partizioni sono già montate."
 
-#~ msgid "Failed to unmount partitions"
-#~ msgstr "Smontaggio delle partizioni non riuscito"
-
 #~ msgid "An unexpected error occurred while unmounting the partitions."
 #~ msgstr "Si è verificato un errore inatteso nello smontare le partizioni."
 
@@ -5838,9 +5959,6 @@ msgstr "Guidato - usa l'intero disco e imposta LVM"
 #~ "L'installazione di SILO come boot loader è un passo richiesto. Tuttavia, "
 #~ "il problema d'installazione potrebbe non essere in relazione con SILO e "
 #~ "l'installazione potrebbe continuare."
-
-#~ msgid "SILO installation failed"
-#~ msgstr "Installazione di Silo non riuscita"
 
 #~ msgid "Running \"/sbin/silo\" failed with error code \"${ERRCODE}\"."
 #~ msgstr ""

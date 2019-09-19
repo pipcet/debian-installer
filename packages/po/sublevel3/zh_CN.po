@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-27 11:53+0000\n"
+"POT-Creation-Date: 2019-09-19 16:20+0000\n"
 "PO-Revision-Date: 2019-02-01 20:18+0000\n"
 "Last-Translator: Boyuan Yang <073plan@gmail.com>\n"
 "Language-Team: <debian-l10n-chinese@lists.debian.org>\n"
@@ -2540,8 +2540,10 @@ msgstr ""
 #. Description
 #. :sl3:
 #: ../cdrom-checker.templates:1001
-msgid "Check CD-ROM integrity?"
-msgstr "检测 CD-ROM 的完整性吗？"
+#, fuzzy
+#| msgid "Continue with the installation?"
+msgid "Check integrity of the installation media?"
+msgstr "继续进行安装吗？"
 
 #. Type: boolean
 #. Description
@@ -2554,15 +2556,21 @@ msgstr "警告：检测跟硬件性能有关，可能需要较长时间。"
 #. Description
 #. :sl3:
 #: ../cdrom-checker.templates:2001
-msgid "Insert a Debian CD-ROM"
-msgstr "插入一张 Debian 光盘"
+#, fuzzy
+#| msgid "Debian installer main menu"
+msgid "Insert Debian installation media"
+msgstr "Debian 安装程序主菜单"
 
 #. Type: note
 #. Description
 #. :sl3:
 #: ../cdrom-checker.templates:2001
+#, fuzzy
+#| msgid ""
+#| "Please insert one of the official Debian CD-ROMs into the drive before "
+#| "continuing."
 msgid ""
-"Please insert one of the official Debian CD-ROMs into the drive before "
+"Please insert one of the official Debian installation media before "
 "continuing."
 msgstr "继续安装前，请插入一张官方的 Debian 光盘到驱动器中。"
 
@@ -2570,15 +2578,21 @@ msgstr "继续安装前，请插入一张官方的 Debian 光盘到驱动器中�
 #. Description
 #. :sl3:
 #: ../cdrom-checker.templates:3001
-msgid "Failed to mount CD-ROM"
-msgstr "无法挂载光盘"
+#, fuzzy
+#| msgid "Failed to unmount partitions"
+msgid "Failed to mount installation media"
+msgstr "卸载分区失败"
 
 #. Type: error
 #. Description
 #. :sl3:
 #: ../cdrom-checker.templates:3001
+#, fuzzy
+#| msgid ""
+#| "The CD-ROM ${CDROM} could not be mounted correctly. Please check the "
+#| "media and cables, and try it again."
 msgid ""
-"The CD-ROM ${CDROM} could not be mounted correctly. Please check the media "
+"The device '${CDROM}' could not be mounted correctly. Please check the media "
 "and cables, and try it again."
 msgstr "光盘 ${CDROM} 不能正确挂载。请检查介质和线缆，并且重试。"
 
@@ -2586,16 +2600,22 @@ msgstr "光盘 ${CDROM} 不能正确挂载。请检查介质和线缆，并且�
 #. Description
 #. :sl3:
 #: ../cdrom-checker.templates:4001
-msgid "No valid Debian CD-ROM"
-msgstr "无效的 Debian 光盘"
+#, fuzzy
+#| msgid "Debian installer main menu"
+msgid "No valid Debian installation media"
+msgstr "Debian 安装程序主菜单"
 
 #. Type: error
 #. Description
 #. :sl3:
 #: ../cdrom-checker.templates:4001
+#, fuzzy
+#| msgid ""
+#| "The CD-ROM you have inserted is not a valid Debian CD-ROM. Please change "
+#| "the disk."
 msgid ""
-"The CD-ROM you have inserted is not a valid Debian CD-ROM. Please change the "
-"disk."
+"What you have inserted is no valid Debian installation media. Please try "
+"again."
 msgstr "插入的光盘不是有效的 Debian 光盘。请更换光盘。"
 
 #. Type: error
@@ -2611,9 +2631,13 @@ msgstr "无法打开校验和文件"
 #. TRANSLATORS: MD5 is a file name, don't translate it.
 #. :sl3:
 #: ../cdrom-checker.templates:5001
+#, fuzzy
+#| msgid ""
+#| "Opening the MD5 file on the CD-ROM failed. This file contains the "
+#| "checksums of the files located on the CD-ROM."
 msgid ""
-"Opening the MD5 file on the CD-ROM failed. This file contains the checksums "
-"of the files located on the CD-ROM."
+"Opening the MD5 file on the media failed. This file contains the checksums "
+"of the files located on the media."
 msgstr "无法打开光盘上的 MD5 文件。这个文件包含光盘上所有文件的校验和。"
 
 #. Type: note
@@ -2627,7 +2651,9 @@ msgstr "完整性检查通过"
 #. Description
 #. :sl3:
 #: ../cdrom-checker.templates:6001
-msgid "The CD-ROM integrity test was successful. The CD-ROM is valid."
+#, fuzzy
+#| msgid "The CD-ROM integrity test was successful. The CD-ROM is valid."
+msgid "The integrity test was successful. The installation image is valid."
 msgstr "光盘完整性检查顺利结束。这是张有效的光盘。"
 
 #. Type: error
@@ -2641,40 +2667,54 @@ msgstr "完整性检查失败"
 #. Description
 #. :sl3:
 #: ../cdrom-checker.templates:7001
+#, fuzzy
+#| msgid ""
+#| "The ${FILE} file failed the MD5 checksum verification. Your CD-ROM or "
+#| "this file may have been corrupted."
 msgid ""
-"The ${FILE} file failed the MD5 checksum verification. Your CD-ROM or this "
-"file may have been corrupted."
+"The file ${FILE} failed the MD5 checksum verification. Your installation "
+"media or this file may have been corrupted."
 msgstr "文件 ${FILE} 的 MD5 校验和验证失败。您的光盘或者这个文件可能已被损坏。"
 
 #. Type: boolean
 #. Description
 #. :sl3:
 #: ../cdrom-checker.templates:8001
-msgid "Check the integrity of another CD-ROM?"
+#, fuzzy
+#| msgid "Check the integrity of another CD-ROM?"
+msgid "Check the integrity of another installation image?"
 msgstr "检测另一张光盘的完整性吗？"
 
 #. Type: note
 #. Description
 #. :sl3:
 #: ../cdrom-checker.templates:9001
-msgid "Insert Debian boot CD-ROM"
+#, fuzzy
+#| msgid "Insert Debian boot CD-ROM"
+msgid "Insert Debian boot media"
 msgstr "插入 Debian 的启动光盘"
 
 #. Type: note
 #. Description
 #. :sl3:
 #: ../cdrom-checker.templates:9001
+#, fuzzy
+#| msgid ""
+#| "Please make sure you have inserted the Debian boot CD-ROM to continue "
+#| "with the installation."
 msgid ""
-"Please make sure you have inserted the Debian boot CD-ROM to continue with "
-"the installation."
+"Please make sure you have inserted the Debian installation media you booted "
+"from, to continue with the installation."
 msgstr "请您确认已经插入了 Debian 启动光盘，然后继续安装。"
 
 #. Type: text
 #. Description
 #. :sl3:
 #: ../cdrom-checker.templates:10001
-msgid "Checking CD-ROM integrity"
-msgstr "正在检查光盘的完整性"
+#, fuzzy
+#| msgid "Gathering information for installation report..."
+msgid "Checking integrity of installation image"
+msgstr "正在为安装报告收集信息 ..."
 
 #. Type: text
 #. Description

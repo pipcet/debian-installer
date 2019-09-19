@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-28 21:20+0000\n"
+"POT-Creation-Date: 2019-09-19 16:20+0000\n"
 "PO-Revision-Date: 2019-08-28 13:24+0000\n"
 "Last-Translator: leela <53352@protonmail.com>\n"
 "Language-Team: Tagalog <debian-tl@banwa.upm.edu.ph>\n"
@@ -672,13 +672,6 @@ msgstr "Magbigay ng datos mano-mano"
 msgid "Download installer components"
 msgstr "Hugutin ang mga bahagi ng installer"
 
-#. Type: text
-#. Description
-#. Main menu item
-#: ../load-cdrom.templates:1001
-msgid "Load installer components from CD"
-msgstr "Kunin ang mga component ng installer mula sa CD"
-
 #. Type: boolean
 #. Description
 #: ../load-media.templates:1001
@@ -792,13 +785,6 @@ msgstr ""
 "ang pipiliin, dapat niyong piliin ang default. Kung mabigo ang sistema ninyo "
 "sa pag-reboot, maaaring subukan muli ang pagluklok gamit ang ibang mga "
 "pagpipilian."
-
-#. Type: text
-#. Description
-#. Release is a filename which should not be translated
-#: ../bootstrap-base.templates:42001
-msgid "Checking Release signature"
-msgstr "Sinusuri ang lagda ng talaksang Release"
 
 #. Type: select
 #. Description
@@ -1654,15 +1640,19 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../cdrom-detect.templates:2001
-msgid "Detecting hardware to find CD-ROM drives"
-msgstr "Naghahanap ng mga CD-ROM drive"
+#, fuzzy
+#| msgid "Detecting hardware to find hard drives"
+msgid "Detecting hardware to find installation media"
+msgstr "Sinisiyasat ang hardware upang makahanap ng mga hard drive"
 
 #. Type: text
 #. Description
 #. :sl1:
 #: ../cdrom-detect.templates:10001
-msgid "Scanning CD-ROM"
-msgstr "Sinisiyasat ang CD-ROM"
+#, fuzzy
+#| msgid "SILO installation failed"
+msgid "Scanning installation media"
+msgstr "Bigo ang pagluklok ng SILO"
 
 #. Type: text
 #. Description
@@ -1676,8 +1666,8 @@ msgstr "Sinisiyasat ang ${DIR}..."
 #. finish-install progress bar item
 #. :sl1:
 #: ../cdrom-detect.templates:19001
-msgid "Unmounting and ejecting CD-ROM..."
-msgstr "Ina-unmount at iluluwa ang CD-ROM..."
+msgid "Unmounting/ejecting installation media..."
+msgstr ""
 
 #. Type: text
 #. Description
@@ -2432,6 +2422,16 @@ msgstr ""
 #: ../mdcfg-utils.templates:6001 ../mdcfg-utils.templates:13001
 msgid "Cancel"
 msgstr "Kanselahin"
+
+#. Type: text
+#. Description
+#. Main menu item
+#. :sl1:
+#: ../load-cdrom.templates:1001
+#, fuzzy
+#| msgid "Load installer components from an installer ISO"
+msgid "Load installer components from installation media"
+msgstr "Magpasok ng mga bahagi ng installer mula sa ISO ng installer"
 
 #. Type: text
 #. Description
@@ -3285,7 +3285,7 @@ msgstr "Naghahanda na iluklok ang batayang sistema..."
 msgid "Installing the base system"
 msgstr "Iniluluklok ang base system"
 
-#. #-#-#-#-#  templates.pot (PACKAGE VERSION)  #-#-#-#-#
+#. #-#-#-#-#  templates.pot (base-installer)  #-#-#-#-#
 #. Type: text
 #. Description
 #. :sl1:
@@ -3500,6 +3500,14 @@ msgstr "Binubuklat ang ${SUBST0}..."
 #: ../bootstrap-base.templates:41001
 msgid "Configuring ${SUBST0}..."
 msgstr "Isinasaayos ang ${SUBST0}..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Release is a filename which should not be translated
+#: ../bootstrap-base.templates:42001
+msgid "Checking Release signature"
+msgstr "Sinusuri ang lagda ng talaksang Release"
 
 #. Type: text
 #. Description
@@ -3775,8 +3783,28 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:1001
-msgid "Scanning the CD-ROM..."
-msgstr "Sinisiyasat ang CD-ROM..."
+#, fuzzy
+#| msgid "Finishing the installation"
+msgid "Scanning the installation media..."
+msgstr "Tinatapos ang pagluklok"
+
+#. Type: error
+#. Description
+#. :sl2:
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:2001 ../apt-cdrom-setup.templates:6001
+#, fuzzy
+#| msgid ""
+#| "An attempt to configure apt to install additional packages from the CD "
+#| "failed."
+msgid ""
+"An attempt to configure apt to install additional packages from the media "
+"failed."
+msgstr ""
+"Bigo ang pagsubok na isaayos ang apt na magluklok ng karagdagang mga pakete "
+"mula sa CD."
 
 #. Type: boolean
 #. Description
@@ -3792,25 +3820,33 @@ msgstr "Sinisiyasat ang CD-ROM..."
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001 ../apt-cdrom-setup.templates:4001
 #: ../apt-cdrom-setup.templates:5001 ../apt-cdrom-setup.templates:6001
-msgid "Scan another CD or DVD?"
-msgstr "Basahin ang isa pang CD o DVD?"
+#, fuzzy
+#| msgid "SILO installation failed"
+msgid "Scan extra installation media?"
+msgstr "Bigo ang pagluklok ng SILO"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001
-msgid "Your installation CD or DVD has been scanned; its label is:"
-msgstr "Nabasa ang CD o DVD ng tagaluklok; ang pangalan nito ay:"
+msgid "Scanning your installation media finds the label:"
+msgstr ""
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001
+#, fuzzy
+#| msgid ""
+#| "You now have the option to scan additional CDs or DVDs for use by the "
+#| "package manager (apt). Normally these should be from the same set as the "
+#| "installation CD/DVD. If you do not have any additional CDs or DVDs "
+#| "available, this step can just be skipped."
 msgid ""
-"You now have the option to scan additional CDs or DVDs for use by the "
-"package manager (apt). Normally these should be from the same set as the "
-"installation CD/DVD. If you do not have any additional CDs or DVDs "
-"available, this step can just be skipped."
+"You now have the option of scanning additional media for use by the package "
+"manager (apt). Normally these should be from the same set as the one you "
+"booted from. If you do not have any additional media, this step can just be "
+"skipped."
 msgstr ""
 "Maari na kayong magbasa ng karagdagang CD o DVD na gagamitin ng tagapamahala "
 "ng mga pakete (apt). Karaniwang magkasama sa isang set ng CD/DVD ng "
@@ -3824,53 +3860,50 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001 ../apt-cdrom-setup.templates:4001
-msgid "If you wish to scan another CD or DVD, please insert it now."
+#, fuzzy
+#| msgid "If you wish to scan another CD or DVD, please insert it now."
+msgid "If you wish to scan more media, please insert another one now."
 msgstr "Kung nais ninyong magbasa ng iba pang CD o DVD, ikasa ito ngayon din."
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:4001
-msgid "The CD or DVD with the following label has been scanned:"
+#, fuzzy
+#| msgid "The CD or DVD with the following label has been scanned:"
+msgid "The image with the following label has been scanned:"
 msgstr "Ang CD o DVD na binasa ay may pangalan na:"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:5001
-msgid "The CD or DVD with the following label has already been scanned:"
+#, fuzzy
+#| msgid "The CD or DVD with the following label has already been scanned:"
+msgid "The image with the following label has already been scanned:"
 msgstr "Nabasa na ang CD o DVD na may pangalang:"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:5001
-msgid "Please replace it now if you wish to scan another CD or DVD."
+#, fuzzy
+#| msgid "Please replace it now if you wish to scan another CD or DVD."
+msgid "Please replace it now, if you wish to scan another."
 msgstr "Palitan ngayon kung nais niyong magbasa ng panibagong CD o DVD."
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:6001
-msgid ""
-"An attempt to configure apt to install additional packages from the CD/DVD "
-"failed."
-msgstr ""
-"Sawi ang pagsubok na isaayos ang apt na magluklok ng karagdagang mga pakete "
-"mula sa CD/DVD."
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:6001
-msgid "Please check that the CD/DVD has been inserted correctly."
+#, fuzzy
+#| msgid "Please check that the CD/DVD has been inserted correctly."
+msgid "Please check that the media has been inserted correctly."
 msgstr "Pakisiguro na tama ang pagkasaksak ng CD/DVD."
 
 #. Type: text
 #. Description
 #. :sl1:
-#. This template uses the same text as used in the package apt for apt-cdrom
-#. Do not translate "/cdrom/" (the mount point)
 #: ../apt-cdrom-setup.templates:7001
 msgid "Media change"
 msgstr "Pagpalit ng media"
@@ -3878,12 +3911,12 @@ msgstr "Pagpalit ng media"
 #. Type: text
 #. Description
 #. :sl1:
-#. This template uses the same text as used in the package apt for apt-cdrom
-#. Do not translate "/cdrom/" (the mount point)
 #: ../apt-cdrom-setup.templates:7001
-msgid ""
-"/cdrom/: Please insert the disc labeled '${LABEL}' in the drive '/cdrom/' "
-"and press enter."
+#, fuzzy
+#| msgid ""
+#| "/cdrom/: Please insert the disc labeled '${LABEL}' in the drive '/cdrom/' "
+#| "and press enter."
+msgid "Please insert the media labeled '${LABEL}' and press enter."
 msgstr ""
 "/cdrom/: Ikasa ang disc na may pangalang '${LABEL}' sa drive '/cdrom/' at "
 "pindutin ang enter."
@@ -3903,9 +3936,13 @@ msgstr "Diniseybol ang netinst CD sa sources.list..."
 #. Description
 #. :sl2:
 #: ../apt-cdrom-setup.templates:9001 ../apt-mirror-setup.templates:6001
+#, fuzzy
+#| msgid ""
+#| "If you are installing from a netinst CD and choose not to use a mirror, "
+#| "you will end up with only a very minimal base system."
 msgid ""
-"If you are installing from a netinst CD and choose not to use a mirror, you "
-"will end up with only a very minimal base system."
+"If you are installing from a netinst CD image and choose not to use a "
+"mirror, you will end up with only a very minimal base system."
 msgstr ""
 "Kung kayo'y nagluluklok mula sa netinst CD at piliin ninyong hindi gumamit "
 "ng mirror, magiging napakapayak na batayang sistema ang inyong maluluklok."
@@ -3914,8 +3951,13 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:10001
+#, fuzzy
+#| msgid ""
+#| "You are installing from a netinst CD, which by itself only allows "
+#| "installation of a very minimal base system. Use a mirror to install a "
+#| "more complete system."
 msgid ""
-"You are installing from a netinst CD, which by itself only allows "
+"You are installing from a netinst CD image, which by itself only allows "
 "installation of a very minimal base system. Use a mirror to install a more "
 "complete system."
 msgstr ""
@@ -3927,8 +3969,13 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:11001
+#, fuzzy
+#| msgid ""
+#| "You are installing from a CD, which contains a limited selection of "
+#| "packages."
 msgid ""
-"You are installing from a CD, which contains a limited selection of packages."
+"You are installing from an image which contains a limited selection of "
+"packages."
 msgstr "Nagluluklok kayo mula sa CD, na naglalaman ng limitadong mga pakete."
 
 #. Type: text
@@ -3936,9 +3983,13 @@ msgstr "Nagluluklok kayo mula sa CD, na naglalaman ng limitadong mga pakete."
 #. :sl1:
 #. The value of %i can be 2 or 3
 #: ../apt-cdrom-setup.templates:12001
-#, no-c-format
+#, fuzzy, no-c-format
+#| msgid ""
+#| "You have scanned %i CDs. Even though these contain a fair selection of "
+#| "packages, some may be missing (notably some packages needed to support "
+#| "languages other than English)."
 msgid ""
-"You have scanned %i CDs. Even though these contain a fair selection of "
+"You have scanned %i images. Even though these contain a fair selection of "
 "packages, some may be missing (notably some packages needed to support "
 "languages other than English)."
 msgstr ""
@@ -3951,9 +4002,12 @@ msgstr ""
 #. :sl1:
 #. The value of %i can be from 4 to 8
 #: ../apt-cdrom-setup.templates:13001
-#, no-c-format
+#, fuzzy, no-c-format
+#| msgid ""
+#| "You have scanned %i CDs. Even though these contain a large selection of "
+#| "packages, some may be missing."
 msgid ""
-"You have scanned %i CDs. Even though these contain a large selection of "
+"You have scanned %i images. Even though these contain a large selection of "
 "packages, some may be missing."
 msgstr ""
 "Nagbasa kayo ng %i na CD. Kahit na napakaraming pagpipilian na mga pakete "
@@ -3974,8 +4028,12 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:15001
+#, fuzzy
+#| msgid ""
+#| "You are installing from a DVD. Even though the DVD contains a large "
+#| "selection of packages, some may be missing."
 msgid ""
-"You are installing from a DVD. Even though the DVD contains a large "
+"You are installing from a DVD image. Even though it contains a large "
 "selection of packages, some may be missing."
 msgstr ""
 "Kayo ay nagluluklok mula sa DVD. Bagamat ang DVD ay naglalaman ng "
@@ -4106,9 +4164,14 @@ msgstr "Gumamit ng network mirror?"
 #. Description
 #. :sl1:
 #: ../apt-mirror-setup.templates:5001
+#, fuzzy
+#| msgid ""
+#| "A network mirror can be used to supplement the software that is included "
+#| "on the CD-ROM. This may also make newer versions of software available."
 msgid ""
 "A network mirror can be used to supplement the software that is included on "
-"the CD-ROM. This may also make newer versions of software available."
+"the installation media. This may also make newer versions of software "
+"available."
 msgstr ""
 "Maaaring gumamit ng network mirror upang madagdagan pa ng software bukod sa "
 "naisama sa CD-ROM. Maaari din nitong magbigay ng mas bagong bersyon ng mga "
@@ -4753,6 +4816,67 @@ msgstr "Isaayos ang Logical Volume Manager"
 #: ../partman-auto-lvm.templates:1001
 msgid "Guided - use entire disk and set up LVM"
 msgstr "May gabay - gamitin ang buong disk at isaayos ang LVM"
+
+#~ msgid "Load installer components from CD"
+#~ msgstr "Kunin ang mga component ng installer mula sa CD"
+
+#~ msgid "Detecting hardware to find CD-ROM drives"
+#~ msgstr "Naghahanap ng mga CD-ROM drive"
+
+#~ msgid "Scanning CD-ROM"
+#~ msgstr "Sinisiyasat ang CD-ROM"
+
+#~ msgid "Unmounting and ejecting CD-ROM..."
+#~ msgstr "Ina-unmount at iluluwa ang CD-ROM..."
+
+#~ msgid "Scanning the CD-ROM..."
+#~ msgstr "Sinisiyasat ang CD-ROM..."
+
+#~ msgid "Scan another CD or DVD?"
+#~ msgstr "Basahin ang isa pang CD o DVD?"
+
+#~ msgid "Your installation CD or DVD has been scanned; its label is:"
+#~ msgstr "Nabasa ang CD o DVD ng tagaluklok; ang pangalan nito ay:"
+
+#~ msgid ""
+#~ "An attempt to configure apt to install additional packages from the CD/"
+#~ "DVD failed."
+#~ msgstr ""
+#~ "Sawi ang pagsubok na isaayos ang apt na magluklok ng karagdagang mga "
+#~ "pakete mula sa CD/DVD."
+
+#~ msgid "Load CD-ROM drivers from removable media?"
+#~ msgstr "Ipasok ang mga CD-ROM driver mula sa removable media?"
+
+#~ msgid "Retry mounting the CD-ROM?"
+#~ msgstr "Subukang i-mount uli ang CD-ROM?"
+
+#~ msgid "CD-ROM detected"
+#~ msgstr "Nakita ang CD-ROM"
+
+#~ msgid "Incorrect CD-ROM detected"
+#~ msgstr "Maling CD-ROM ang nakita"
+
+#~ msgid "Detect and mount CD-ROM"
+#~ msgstr "Hanapin at mag-mount ng CD-ROM"
+
+#~ msgid "Check the CD-ROM(s) integrity"
+#~ msgstr "Suriin ang ayos ng (mga) CD-ROM"
+
+#~ msgid "Check CD-ROM integrity?"
+#~ msgstr "Suriin ang ayos ng CD-ROM?"
+
+#~ msgid "Insert a Debian CD-ROM"
+#~ msgstr "Magkasa ng Debian CD-ROM"
+
+#~ msgid "Failed to mount CD-ROM"
+#~ msgstr "Bigo ang pag-mount ng CD-ROM"
+
+#~ msgid "No valid Debian CD-ROM"
+#~ msgstr "Walang tanggap na CD-ROM na Debian"
+
+#~ msgid "Checking CD-ROM integrity"
+#~ msgstr "Sinusuri ang ayos ng CD-ROM"
 
 #~ msgid "No DHCP client was found. This package requires pump or dhcp-client."
 #~ msgstr ""
@@ -5645,9 +5769,6 @@ msgstr "May gabay - gamitin ang buong disk at isaayos ang LVM"
 #~ "Dahil ang mga partisyon ay naka-mount na, hindi na maaaring palitan ang "
 #~ "pagsaayos."
 
-#~ msgid "Failed to unmount partitions"
-#~ msgstr "Bigo ang pag-unmount ng mga partisyon"
-
 #~ msgid "An unexpected error occurred while unmounting the partitions."
 #~ msgstr ""
 #~ "May naganap na error na hindi inaasahan habang nag-unmount ng mga "
@@ -5821,9 +5942,6 @@ msgstr "May gabay - gamitin ang buong disk at isaayos ang LVM"
 #~ "Bigo ang pagluklok ng 'silo' sa /target/. Ang pagluklok ng SILO bilang "
 #~ "boot loader ay kinakailangan.  Maaaring walang kinalaman ang problema sa "
 #~ "pag-install sa SILO, kaya maaaring magpatuloy ng pagluklok."
-
-#~ msgid "SILO installation failed"
-#~ msgstr "Bigo ang pagluklok ng SILO"
 
 #~ msgid "Running \"/sbin/silo\" failed with error code \"${ERRCODE}\"."
 #~ msgstr ""

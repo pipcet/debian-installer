@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: km\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-28 21:20+0000\n"
+"POT-Creation-Date: 2019-09-19 16:20+0000\n"
 "PO-Revision-Date: 2012-01-17 11:49+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer <support@khmeros.info>\n"
@@ -616,13 +616,6 @@ msgstr "បញ្ចូល​ព័ត៌មាន​ដោយ​ដៃ"
 msgid "Download installer components"
 msgstr "ទាញ​យក​សមាសភាគ​កម្មវិធី​ដំឡើង"
 
-#. Type: text
-#. Description
-#. Main menu item
-#: ../load-cdrom.templates:1001
-msgid "Load installer components from CD"
-msgstr "ផ្ទុក​សមាសភាគ​កម្មវិធី​ដំឡើង​ពី​ស៊ីឌី"
-
 #. Type: boolean
 #. Description
 #: ../load-media.templates:1001
@@ -725,13 +718,6 @@ msgid ""
 msgstr ""
 "បញ្ជី​នេះបង្ហាញ​ឧបករណ៍​ដែល​អាច​ប្រើ​បាន​ ។ បើ​អ្នក​មិន​ច្បាស់​ថា​ត្រូវ​ជ្រើស​មួយ​ណា អ្នក​គួរ​តែ​ជ្រើស​លំនាំដើម ។ "
 "បើ​ប្រព័ន្ធ​របស់​អ្នក​មិន​អាច​ចាប់ផ្ដើម​បាន អ្នក​អាច​ព្យាយាម​ដំឡើង​ម្ដង​ទៀត​ដោយ​ប្រើ​ជម្រើស​ផ្សេង ។"
-
-#. Type: text
-#. Description
-#. Release is a filename which should not be translated
-#: ../bootstrap-base.templates:42001
-msgid "Checking Release signature"
-msgstr "កំពុង​ពិនិត្យ​មើល​ហត្ថលេខា​ចេញផ្សាយ"
 
 #. Type: select
 #. Description
@@ -1570,15 +1556,19 @@ msgstr "មិនមែន​គ្រប់​ចុច​ដែល​បាន
 #. Description
 #. :sl1:
 #: ../cdrom-detect.templates:2001
-msgid "Detecting hardware to find CD-ROM drives"
-msgstr "កំពុង​រក​ផ្នែករឹង ដើម្បី​ស្វែងរក​ដ្រាយ​ស៊ីឌីរ៉ូម"
+#, fuzzy
+#| msgid "Detecting hardware to find hard drives"
+msgid "Detecting hardware to find installation media"
+msgstr "កំពុង​រក​ផ្នែករឹង ដើម្បី​ស្វែង​រក​ដ្រាយ​ថាសរឹង​"
 
 #. Type: text
 #. Description
 #. :sl1:
 #: ../cdrom-detect.templates:10001
-msgid "Scanning CD-ROM"
-msgstr "កំពុង​វិភាគរក​ស៊ីឌីរ៉ូម"
+#, fuzzy
+#| msgid "SILO installation failed"
+msgid "Scanning installation media"
+msgstr "ការ​ដំឡើង SILO បាន​បរាជ័យ"
 
 #. Type: text
 #. Description
@@ -1592,8 +1582,8 @@ msgstr "កំពុង​វិភាគរក ${DIR}..."
 #. finish-install progress bar item
 #. :sl1:
 #: ../cdrom-detect.templates:19001
-msgid "Unmounting and ejecting CD-ROM..."
-msgstr "កំពុង​អាន់ម៉ោន និង ច្រាន​ស៊ីឌីរ៉ូម​ចេញ..."
+msgid "Unmounting/ejecting installation media..."
+msgstr ""
 
 #. Type: text
 #. Description
@@ -2306,6 +2296,16 @@ msgstr ""
 #: ../mdcfg-utils.templates:6001 ../mdcfg-utils.templates:13001
 msgid "Cancel"
 msgstr "បោះបង់"
+
+#. Type: text
+#. Description
+#. Main menu item
+#. :sl1:
+#: ../load-cdrom.templates:1001
+#, fuzzy
+#| msgid "Load installer components from an installer ISO"
+msgid "Load installer components from installation media"
+msgstr "ផ្ទុក​សមាសភាគ​កម្មវិធី​ដំឡើង​ពី ISO សម្រាប់​ដំឡើង"
 
 #. Type: text
 #. Description
@@ -3143,7 +3143,7 @@ msgstr "កំពុង​ប្រុងប្រៀប​ដំឡើង​ប
 msgid "Installing the base system"
 msgstr "កំពុង​ដំឡើង​ប្រព័ន្ធ​គោល"
 
-#. #-#-#-#-#  templates.pot (PACKAGE VERSION)  #-#-#-#-#
+#. #-#-#-#-#  templates.pot (base-installer)  #-#-#-#-#
 #. Type: text
 #. Description
 #. :sl1:
@@ -3357,6 +3357,14 @@ msgstr "កំពុង​ស្រាយ ${SUBST0}..."
 #: ../bootstrap-base.templates:41001
 msgid "Configuring ${SUBST0}..."
 msgstr "កំពុង​កំណត់​រចនាសម្ព័ន្ធ​ ${SUBST0}..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Release is a filename which should not be translated
+#: ../bootstrap-base.templates:42001
+msgid "Checking Release signature"
+msgstr "កំពុង​ពិនិត្យ​មើល​ហត្ថលេខា​ចេញផ្សាយ"
 
 #. Type: text
 #. Description
@@ -3617,8 +3625,26 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:1001
-msgid "Scanning the CD-ROM..."
-msgstr "កំពុង​វិភាគ​ស៊ីឌីរ៉ូម..."
+#, fuzzy
+#| msgid "Finishing the installation"
+msgid "Scanning the installation media..."
+msgstr "កំពុង​បញ្ចប់​ការ​ដំឡើង​"
+
+#. Type: error
+#. Description
+#. :sl2:
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:2001 ../apt-cdrom-setup.templates:6001
+#, fuzzy
+#| msgid ""
+#| "An attempt to configure apt to install additional packages from the CD "
+#| "failed."
+msgid ""
+"An attempt to configure apt to install additional packages from the media "
+"failed."
+msgstr "កិច្ច​ប៉ុនប៉ង​កំណត់​រចនាសម្ព័ន្ធ​​ apt ដើម្បី​ដំឡើង​កញ្ចប់​បន្ថែមពីស៊ីឌី​បាន​បរាជ័យ​ហើយ ។​"
 
 #. Type: boolean
 #. Description
@@ -3634,25 +3660,33 @@ msgstr "កំពុង​វិភាគ​ស៊ីឌីរ៉ូម..."
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001 ../apt-cdrom-setup.templates:4001
 #: ../apt-cdrom-setup.templates:5001 ../apt-cdrom-setup.templates:6001
-msgid "Scan another CD or DVD?"
-msgstr "ស្កេន​ស៊ីឌី/ឌីវីឌី​ផ្សេង​ទៀត ?"
+#, fuzzy
+#| msgid "SILO installation failed"
+msgid "Scan extra installation media?"
+msgstr "ការ​ដំឡើង SILO បាន​បរាជ័យ"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001
-msgid "Your installation CD or DVD has been scanned; its label is:"
-msgstr "ការ​ដំឡើងស៊ីឌី/ឌីវីឌី​ត្រូវ​បានបាន​ស្កេន ស្លាក​របស់​វា​គឺ ៖"
+msgid "Scanning your installation media finds the label:"
+msgstr ""
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001
+#, fuzzy
+#| msgid ""
+#| "You now have the option to scan additional CDs or DVDs for use by the "
+#| "package manager (apt). Normally these should be from the same set as the "
+#| "installation CD/DVD. If you do not have any additional CDs or DVDs "
+#| "available, this step can just be skipped."
 msgid ""
-"You now have the option to scan additional CDs or DVDs for use by the "
-"package manager (apt). Normally these should be from the same set as the "
-"installation CD/DVD. If you do not have any additional CDs or DVDs "
-"available, this step can just be skipped."
+"You now have the option of scanning additional media for use by the package "
+"manager (apt). Normally these should be from the same set as the one you "
+"booted from. If you do not have any additional media, this step can just be "
+"skipped."
 msgstr ""
 "ឥឡូវ​អ្នក​មាន​ជម្រើស​ដើម្បី​ស្កេន​ស៊ីឌី​ ឬ​ឌីវីឌី​បន្ថែមសម្រាប់​ប្រើ ដោយ​កម្មវិធី​គ្រប់គ្រង​កញ្ចប់ (apt) ។ ជា​"
 "ធម្មតា​ វា​គួរ​យក​មកពី​សំណុំ​តែ​មួយ​ដូច​​ដំឡើង​​ស៊ីឌី/ឌីវីឌី ។ ប្រសិនបើអ្នក​មិនមាន​ស៊ីឌី/ឌីវីឌី​បន្ថែម ជំហាន​នេះ​អាច​ត្រូ​វ​"
@@ -3665,51 +3699,50 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001 ../apt-cdrom-setup.templates:4001
-msgid "If you wish to scan another CD or DVD, please insert it now."
+#, fuzzy
+#| msgid "If you wish to scan another CD or DVD, please insert it now."
+msgid "If you wish to scan more media, please insert another one now."
 msgstr "ប្រសិនបើអ្នក​ចង់​ស្កេន​ស៊ីឌី ឬ​ឌីវីឌី​ផ្សេង​ទៀត សូម​បញ្ចូល​វា​ឥឡូវ ។"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:4001
-msgid "The CD or DVD with the following label has been scanned:"
+#, fuzzy
+#| msgid "The CD or DVD with the following label has been scanned:"
+msgid "The image with the following label has been scanned:"
 msgstr "ស៊ីឌី ឬ​ឌីវីឌី​ដែល​មាន​ស្លាក​ដូច​ខាង​ក្រោម​ត្រូ​វបាន​ស្កេន​រួចហើយ ៖"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:5001
-msgid "The CD or DVD with the following label has already been scanned:"
+#, fuzzy
+#| msgid "The CD or DVD with the following label has already been scanned:"
+msgid "The image with the following label has already been scanned:"
 msgstr "ស៊ីឌី ឬ​ឌីវិឌី​ដែលមាន​ស្លាក​ដូច​ខាង​ក្រោម​ត្រូ​វបាន​ស្កេន​រួចរាល់​ហើយ ។"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:5001
-msgid "Please replace it now if you wish to scan another CD or DVD."
+#, fuzzy
+#| msgid "Please replace it now if you wish to scan another CD or DVD."
+msgid "Please replace it now, if you wish to scan another."
 msgstr "សូម​ជំនួស​វា​ឥឡូវ ប្រសិន​បើ​អ្នក​ចង់​វិភាគ​រក​ស៊ីឌី ឬ​ឌីវីឌី​ផ្សេង​ទៀត ។"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:6001
-msgid ""
-"An attempt to configure apt to install additional packages from the CD/DVD "
-"failed."
-msgstr "កិច្ច​ប៉ុនប៉ង​កំណត់​រចនាសម្ព័ន្ធ​​ apt ដើម្បី​ដំឡើង​កញ្ចប់​បន្ថែម​ពី​ស៊ីឌី/ឌីវីឌី​​បាន​បរាជ័យ​ហើយ ។​"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:6001
-msgid "Please check that the CD/DVD has been inserted correctly."
+#, fuzzy
+#| msgid "Please check that the CD/DVD has been inserted correctly."
+msgid "Please check that the media has been inserted correctly."
 msgstr "សូម​ពិនិត្យ​មើល​ថា​តើ​ស៊ីឌី/ឌីវីឌី​ត្រូវ​បា​ន​បញ្ចូល​ត្រឹមត្រូវ​ឬ​ក៏​អត់ ។"
 
 #. Type: text
 #. Description
 #. :sl1:
-#. This template uses the same text as used in the package apt for apt-cdrom
-#. Do not translate "/cdrom/" (the mount point)
 #: ../apt-cdrom-setup.templates:7001
 msgid "Media change"
 msgstr "ការ​ផ្លាស់ប្ដូរមេឌៀ"
@@ -3717,16 +3750,12 @@ msgstr "ការ​ផ្លាស់ប្ដូរមេឌៀ"
 #. Type: text
 #. Description
 #. :sl1:
-#. This template uses the same text as used in the package apt for apt-cdrom
-#. Do not translate "/cdrom/" (the mount point)
 #: ../apt-cdrom-setup.templates:7001
 #, fuzzy
 #| msgid ""
 #| "/cdrom/:Please insert the disc labeled: '${LABEL}' in the drive '/cdrom/' "
 #| "and press enter."
-msgid ""
-"/cdrom/: Please insert the disc labeled '${LABEL}' in the drive '/cdrom/' "
-"and press enter."
+msgid "Please insert the media labeled '${LABEL}' and press enter."
 msgstr ""
 "/cdrom/ ៖ សូម​បញ្ចូល​ថាស​ដែល​មាន​ស្លាក ៖ '${LABEL}' នៅ​ក្នុងដ្រាយ '/cdrom/' និង​ចុច​​គ្រាប់ចុច "
 "បញ្ចូល ។"
@@ -3746,9 +3775,13 @@ msgstr "កំពុង​បិទ​ស៊ីឌី netinst នៅ​ក្ន
 #. Description
 #. :sl2:
 #: ../apt-cdrom-setup.templates:9001 ../apt-mirror-setup.templates:6001
+#, fuzzy
+#| msgid ""
+#| "If you are installing from a netinst CD and choose not to use a mirror, "
+#| "you will end up with only a very minimal base system."
 msgid ""
-"If you are installing from a netinst CD and choose not to use a mirror, you "
-"will end up with only a very minimal base system."
+"If you are installing from a netinst CD image and choose not to use a "
+"mirror, you will end up with only a very minimal base system."
 msgstr ""
 "ប្រសិន​បើ​អ្នក​កំពុង​ដំឡើង​​ពី​ស៊ីឌី netinst ហើយ​​អ្នក​ជ្រើស​មិន​ប្រើ​កញ្ចក់​មួយ អ្នក​នឹង​បញ្ចប់​​ដោយ​មាន​​​ប្រព័ន្ធ​មូលដ្ឋាន​​"
 "តិចតួច​បំផុត​តែ​ប៉ុណ្ណោះ ។"
@@ -3757,8 +3790,13 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:10001
+#, fuzzy
+#| msgid ""
+#| "You are installing from a netinst CD, which by itself only allows "
+#| "installation of a very minimal base system. Use a mirror to install a "
+#| "more complete system."
 msgid ""
-"You are installing from a netinst CD, which by itself only allows "
+"You are installing from a netinst CD image, which by itself only allows "
 "installation of a very minimal base system. Use a mirror to install a more "
 "complete system."
 msgstr ""
@@ -3769,8 +3807,13 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:11001
+#, fuzzy
+#| msgid ""
+#| "You are installing from a CD, which contains a limited selection of "
+#| "packages."
 msgid ""
-"You are installing from a CD, which contains a limited selection of packages."
+"You are installing from an image which contains a limited selection of "
+"packages."
 msgstr "អ្នក​កំពុង​ដំឡើង​ពី​ស៊ីឌី ដែល​មាន​ជម្រើស​កញ្ចប់​ដែល​មាន​ដែន​កំណត់ ។"
 
 #. Type: text
@@ -3778,9 +3821,13 @@ msgstr "អ្នក​កំពុង​ដំឡើង​ពី​ស៊ីឌ
 #. :sl1:
 #. The value of %i can be 2 or 3
 #: ../apt-cdrom-setup.templates:12001
-#, no-c-format
+#, fuzzy, no-c-format
+#| msgid ""
+#| "You have scanned %i CDs. Even though these contain a fair selection of "
+#| "packages, some may be missing (notably some packages needed to support "
+#| "languages other than English)."
 msgid ""
-"You have scanned %i CDs. Even though these contain a fair selection of "
+"You have scanned %i images. Even though these contain a fair selection of "
 "packages, some may be missing (notably some packages needed to support "
 "languages other than English)."
 msgstr ""
@@ -3792,9 +3839,12 @@ msgstr ""
 #. :sl1:
 #. The value of %i can be from 4 to 8
 #: ../apt-cdrom-setup.templates:13001
-#, no-c-format
+#, fuzzy, no-c-format
+#| msgid ""
+#| "You have scanned %i CDs. Even though these contain a large selection of "
+#| "packages, some may be missing."
 msgid ""
-"You have scanned %i CDs. Even though these contain a large selection of "
+"You have scanned %i images. Even though these contain a large selection of "
 "packages, some may be missing."
 msgstr "អ្នក​បាន​វិភាគរក %i CDs ។ ទោះបី​ជា​វា​មាន​ជម្រើស​កញ្ចប់​ដ៏​ធំ​ក៏​ដោយ កញ្ចប់​មួយ​ចំនួន​អាច​បាត់បង់ ។"
 
@@ -3812,8 +3862,12 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:15001
+#, fuzzy
+#| msgid ""
+#| "You are installing from a DVD. Even though the DVD contains a large "
+#| "selection of packages, some may be missing."
 msgid ""
-"You are installing from a DVD. Even though the DVD contains a large "
+"You are installing from a DVD image. Even though it contains a large "
 "selection of packages, some may be missing."
 msgstr "អ្នក​កំពុង​ដំឡើង​ពី​ឌីវីឌី ។ ទោះបី​ជា​ឌីវីឌី​មាន​ជម្រើស​កញ្ចប់​ដ៏ធំ​ក៏​ដោយ កញ្ចប់​មួយ​ចំនួន​អាច​បាត់បង់ ។"
 
@@ -3938,9 +3992,14 @@ msgstr "ប្រើ​កញ្ចក់​បណ្ដាញ​មួយ ?"
 #. Description
 #. :sl1:
 #: ../apt-mirror-setup.templates:5001
+#, fuzzy
+#| msgid ""
+#| "A network mirror can be used to supplement the software that is included "
+#| "on the CD-ROM. This may also make newer versions of software available."
 msgid ""
 "A network mirror can be used to supplement the software that is included on "
-"the CD-ROM. This may also make newer versions of software available."
+"the installation media. This may also make newer versions of software "
+"available."
 msgstr ""
 "កញ្ចក់​បណ្ដាញ​មួយ​អាច​ត្រូវ​បាន​ប្រើ​ដើម្បី​បន្ថែម​កម្មវិធី​​ដែល​ត្រូវ​បាន​​រួម​បញ្ចូល​នៅ​ក្នុង​ស៊ីឌី​រ៉ូម ។ វា​ក៏​អាច​ធ្វើ​ឲ្យ​"
 "កំណែ​ថ្មីៗ​របស់​កម្មវិធី​អាច​ប្រើ​បាន​ផងដែរ ។"
@@ -4566,6 +4625,65 @@ msgstr "កំណត់​រចនា​សម្ព័ន្ធ​ Logical Vol
 #: ../partman-auto-lvm.templates:1001
 msgid "Guided - use entire disk and set up LVM"
 msgstr "បានណែនាំ - ប្រើ​ថាស​ទាំងមូល និង​ដំឡើង LVM"
+
+#~ msgid "Load installer components from CD"
+#~ msgstr "ផ្ទុក​សមាសភាគ​កម្មវិធី​ដំឡើង​ពី​ស៊ីឌី"
+
+#~ msgid "Detecting hardware to find CD-ROM drives"
+#~ msgstr "កំពុង​រក​ផ្នែករឹង ដើម្បី​ស្វែងរក​ដ្រាយ​ស៊ីឌីរ៉ូម"
+
+#~ msgid "Scanning CD-ROM"
+#~ msgstr "កំពុង​វិភាគរក​ស៊ីឌីរ៉ូម"
+
+#~ msgid "Unmounting and ejecting CD-ROM..."
+#~ msgstr "កំពុង​អាន់ម៉ោន និង ច្រាន​ស៊ីឌីរ៉ូម​ចេញ..."
+
+#~ msgid "Scanning the CD-ROM..."
+#~ msgstr "កំពុង​វិភាគ​ស៊ីឌីរ៉ូម..."
+
+#~ msgid "Scan another CD or DVD?"
+#~ msgstr "ស្កេន​ស៊ីឌី/ឌីវីឌី​ផ្សេង​ទៀត ?"
+
+#~ msgid "Your installation CD or DVD has been scanned; its label is:"
+#~ msgstr "ការ​ដំឡើងស៊ីឌី/ឌីវីឌី​ត្រូវ​បានបាន​ស្កេន ស្លាក​របស់​វា​គឺ ៖"
+
+#~ msgid ""
+#~ "An attempt to configure apt to install additional packages from the CD/"
+#~ "DVD failed."
+#~ msgstr "កិច្ច​ប៉ុនប៉ង​កំណត់​រចនាសម្ព័ន្ធ​​ apt ដើម្បី​ដំឡើង​កញ្ចប់​បន្ថែម​ពី​ស៊ីឌី/ឌីវីឌី​​បាន​បរាជ័យ​ហើយ ។​"
+
+#~ msgid "Load CD-ROM drivers from removable media?"
+#~ msgstr "ផ្ទុក​កម្មវិធី​បញ្ជា​ស៊ីឌី​រ៉ូម​ពី​មេឌៀ​ចល័ត ?"
+
+#~ msgid "Retry mounting the CD-ROM?"
+#~ msgstr "ព្យាយាម​ម៉ោន​ស៊ីឌីរ៉ូម​ម្ដង​ទៀត ?"
+
+#~ msgid "CD-ROM detected"
+#~ msgstr "បាន​រក​ឃើញ​ស៊ីឌីរ៉ូម"
+
+#~ msgid "Incorrect CD-ROM detected"
+#~ msgstr "បាន​រក​ឃើញ​ស៊ីឌី​រ៉ូម​មិន​ត្រឹមត្រូវ"
+
+#~ msgid "Detect and mount CD-ROM"
+#~ msgstr "រក និង ម៉ោន​ស៊ីឌីរ៉ូម"
+
+#~ msgid "Check the CD-ROM(s) integrity"
+#~ msgstr "ពិនិត្យ​ភាពត្រឹមត្រូវ​របស់​ស៊ីឌីរ៉ូម"
+
+#~ msgid "Check CD-ROM integrity?"
+#~ msgstr "ពិនិត្យ​ភាព​ត្រឹមត្រូវ​របស់​ស៊ីឌីរ៉ូម ?"
+
+#~ msgid "Insert a Debian CD-ROM"
+#~ msgstr "បញ្ចូល​ស៊ីឌីរ៉ូម​ដេបៀន"
+
+#~ msgid "Failed to mount CD-ROM"
+#~ msgstr "បរាជ័យ​ក្នុង​ម៉ោន​ស៊ីឌីរ៉ូម"
+
+#~ msgid "No valid Debian CD-ROM"
+#~ msgstr "មិន​មាន​ស៊ីឌី​រ៉ូ​ម​ដេបៀន​ត្រឹមត្រូវ"
+
+#~ msgid "Checking CD-ROM integrity"
+#~ msgstr "កំពុង​ពិនិត្យ​ភាព​ត្រឹមត្រូវ​របស់​ស៊ីឌីរ៉ូម"
 
 #~ msgid "No DHCP client was found. This package requires pump or dhcp-client."
 #~ msgstr "រក​មិន​ឃើញ​ម៉ាស៊ីន​ភ្ញៀវ DHCP ឡើយ ។ កញ្ចប់​កម្មវិធី​នេះ​ត្រូវការ pump ឬ dhcp-client ។"
@@ -5461,9 +5579,6 @@ msgstr "បានណែនាំ - ប្រើ​ថាស​ទាំងមូ
 #~ "Since the partitions have already been mounted, you cannot do any changes."
 #~ msgstr "ដោយ​សារ​តែ​អ្នក​បាន​ម៉ោន​ភាគថាស​រួច​ហើយ ដូច្នេះ​អ្នក​មិន​អាច​ធ្វើ​ការ​ផ្លាស់ប្ដូរ​អ្វី​ឡើយ ។"
 
-#~ msgid "Failed to unmount partitions"
-#~ msgstr "បាន​បរាជ័យ​ក្នុងការអាន់ម៉ោនភាគថាស"
-
 #~ msgid "An unexpected error occurred while unmounting the partitions."
 #~ msgstr "កំហុស​ដែល​មិន​បាន​រំពឹងទុក​មួយ​បាន​កើត​ឡើង​ខណៈពេល​អាន់ម៉ោន​ភាគ​ថាស ។"
 
@@ -5622,9 +5737,6 @@ msgstr "បានណែនាំ - ប្រើ​ថាស​ទាំងមូ
 #~ "បាន​បរាជ័យ​ក្នុង​ការ​ដំឡើង​កញ្ចប់ 'silo' ទៅ​ក្នុង /target/ ។ ដាច់​ខាត​អ្នក​ត្រូវ​តែ​ដំឡើង SILO ជា​"
 #~ "កម្មវិធី​ចាប់ផ្ដើម​ប្រព័ន្ធ ។ ទោះ​យ៉ាង​ណា បញ្ហា​ការ​ដំឡើង​ប្រហែល​ជា​មិន​ទាក់ទង​នឹង SILO ឡើយ ដូច្នេះ​អ្នក​"
 #~ "ប្រហែល​ជា​អាច​បន្ត​ការ​ដំឡើង​បាន ។​"
-
-#~ msgid "SILO installation failed"
-#~ msgstr "ការ​ដំឡើង SILO បាន​បរាជ័យ"
 
 #~ msgid "Running \"/sbin/silo\" failed with error code \"${ERRCODE}\"."
 #~ msgstr "ការ​រត់ \"/sbin/silo\" បាន​បរាជ័យ​ជាមួយ​នឹង​កូដ​កំហុស \"${ERRCODE}\" ។"

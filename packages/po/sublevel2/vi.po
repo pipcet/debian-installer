@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer sublevel2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-15 19:16+0000\n"
+"POT-Creation-Date: 2019-09-19 16:20+0000\n"
 "PO-Revision-Date: 2019-02-27 14:31+0700\n"
 "Last-Translator: Trần Ngọc Quân <vnwildman@gmail.com>\n"
 "Language-Team: Vietnamese <debian-l10n-vietnamese@lists.debian.org>\n"
@@ -490,28 +490,33 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:1001
-msgid "Load CD-ROM drivers from removable media?"
-msgstr "Tải các trình điều khiển CD-ROM từ đĩa di động đa phương tiện không?"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../cdrom-detect.templates:1001 ../cdrom-detect.templates:3001
-msgid "No common CD-ROM drive was detected."
-msgstr "Không có ổ đĩa CD-ROM dùng chung nào được dò tìm."
+#, fuzzy
+#| msgid "Load drivers from removable media"
+msgid "Load drivers from removable media?"
+msgstr "Tải các trình điều khiển từ đĩa di động đa phương tiện"
 
 #. Type: boolean
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:1001
+msgid "No device for installation media was detected."
+msgstr ""
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../cdrom-detect.templates:1001
+#, fuzzy
+#| msgid ""
+#| "You may need to load additional CD-ROM drivers from removable media, such "
+#| "as a driver floppy. If you have such media available now, insert it, and "
+#| "continue. Otherwise, you will be given the option to manually select CD-"
+#| "ROM modules."
 msgid ""
-"You may need to load additional CD-ROM drivers from removable media, such as "
-"a driver floppy. If you have such media available now, insert it, and "
-"continue. Otherwise, you will be given the option to manually select CD-ROM "
-"modules."
+"You may need to load additional drivers from removable media, such as a "
+"driver floppy or a USB stick. If you have these available now, insert the "
+"media, and continue. Otherwise, you will be given the option to manually "
+"select some modules."
 msgstr ""
 "Bạn có thể cần tải một số trình điều khiển CD-ROM thêm từ đĩa di động đa "
 "phương tiện, như một đĩa mềm trình điều khiển. Nếu bạn có sẵn vật chứa như "
@@ -522,18 +527,36 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:3001
-msgid "Manually select a CD-ROM module and device?"
+#, fuzzy
+#| msgid "Manually select a CD-ROM module and device?"
+msgid "Manually select a module and device for installation media?"
 msgstr "Bạn muốn tự chọn mô-đun và thiết bị CD-ROM không?"
 
 #. Type: boolean
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:3001
+#, fuzzy
+#| msgid "No common CD-ROM drive was detected."
+msgid "No device for installation media (like a CD-ROM device) was detected."
+msgstr "Không có ổ đĩa CD-ROM dùng chung nào được dò tìm."
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../cdrom-detect.templates:3001
+#, fuzzy
+#| msgid ""
+#| "Your CD-ROM drive may be an old Mitsumi or another non-IDE, non-SCSI CD-"
+#| "ROM drive. In that case you should choose which module to load and the "
+#| "device to use. If you don't know which module and device are needed, look "
+#| "for some documentation or try a network installation instead of a CD-ROM "
+#| "installation."
 msgid ""
-"Your CD-ROM drive may be an old Mitsumi or another non-IDE, non-SCSI CD-ROM "
-"drive. In that case you should choose which module to load and the device to "
-"use. If you don't know which module and device are needed, look for some "
-"documentation or try a network installation instead of a CD-ROM installation."
+"If your CD-ROM drive is an old Mitsumi or another non-IDE, non-SCSI CD-ROM "
+"drive, you should choose which module to load and the device to use. If you "
+"don't know which module and device are needed, look for some documentation "
+"or try a network installation."
 msgstr ""
 "Ổ đĩa CD-ROM của bạn có thể là kiểu Mitsumi cũ, hoặc một ổ đĩa CD-ROM khác "
 "cũng khác IDE khác SCSI. Như thế thì bạn nên chọn mô-đun nào cần tải và "
@@ -544,16 +567,23 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:4001
-msgid "Retry mounting the CD-ROM?"
-msgstr "Thử lại gắn đĩa CD-ROM không?"
+#, fuzzy
+#| msgid "Remote installation password:"
+msgid "Retry mounting installation media?"
+msgstr "Mật khẩu để cài đặt từ xa:"
 
 #. Type: boolean
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:4001
+#, fuzzy
+#| msgid ""
+#| "Your installation CD-ROM couldn't be mounted. This probably means that "
+#| "the CD-ROM was not in the drive. If so you can insert it and try again."
 msgid ""
-"Your installation CD-ROM couldn't be mounted. This probably means that the "
-"CD-ROM was not in the drive. If so you can insert it and try again."
+"Your installation media couldn't be mounted. When installing from CD-ROM, "
+"this probably means that the disk was not in the drive. If so you can insert "
+"it and try again."
 msgstr ""
 "Đĩa CD-ROM cài đặt của bạn không thể gắn được. Rất có thể vì đĩa CD-ROM chưa "
 "nằm trong ổ; như thế thì bạn có thể đưa nó vào và thử lại."
@@ -562,17 +592,24 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:5001
-msgid "Module needed for accessing the CD-ROM:"
+#, fuzzy
+#| msgid "Module needed for accessing the CD-ROM:"
+msgid "Module needed for accessing the installation media:"
 msgstr "Mô-đun cần thiết để truy cập đĩa CD-ROM:"
 
 #. Type: select
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:5001
+#, fuzzy
+#| msgid ""
+#| "The automatic detection didn't find a CD-ROM drive. You can try to load a "
+#| "specific module if you have an unusual CD-ROM drive (that is neither IDE "
+#| "nor SCSI)."
 msgid ""
-"The automatic detection didn't find a CD-ROM drive. You can try to load a "
-"specific module if you have an unusual CD-ROM drive (that is neither IDE nor "
-"SCSI)."
+"The automatic detection didn't find a drive for installation media. When "
+"installing from CD-ROM and you have an unusual CD-ROM drive (that is neither "
+"IDE nor SCSI), you can try to load a specific module."
 msgstr ""
 "Việc dò tìm tự động không tìm thấy ổ đĩa CD-ROM nào. Bạn có thể thử tải một "
 "mô-đun riêng nếu bạn có một ổ đĩa CD-ROM bất thường dùng (tức là khác IDE "
@@ -582,17 +619,24 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:6001
-msgid "Device file for accessing the CD-ROM:"
+#, fuzzy
+#| msgid "Device file for accessing the CD-ROM:"
+msgid "Device file for accessing the installation media:"
 msgstr "Tập tin thiết bị để truy cập đĩa CD-ROM:"
 
 #. Type: string
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:6001
+#, fuzzy
+#| msgid ""
+#| "In order to access your CD-ROM drive, please enter the device file that "
+#| "should be used. Non-standard CD-ROM drives use non-standard device files "
+#| "(such as /dev/mcdx)."
 msgid ""
-"In order to access your CD-ROM drive, please enter the device file that "
-"should be used. Non-standard CD-ROM drives use non-standard device files "
-"(such as /dev/mcdx)."
+"In order to access your installation media (like your CD-ROM), please enter "
+"the device file that should be used. Non-standard CD-ROM drives use non-"
+"standard device files (such as /dev/mcdx)."
 msgstr ""
 "Để truy cập ổ đĩa CD-ROM của bạn, hãy nhập tên tập tin thiết bị cần dùng. "
 "Các ổ CD-ROM khác chuẩn sử dụng tập tin thiết bị cũng khác chuẩn (v.d. “/dev/"
@@ -615,16 +659,23 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:12001
-msgid "CD-ROM detected"
-msgstr "Đĩa CD-ROM được tìm ra"
+#, fuzzy
+#| msgid "UNetbootin media detected"
+msgid "Installation media detected"
+msgstr "Nhận ra đĩa đa phương tiện UNetbootin"
 
 #. Type: note
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:12001
+#, fuzzy
+#| msgid ""
+#| "The CD-ROM autodetection was successful. A CD-ROM drive has been found "
+#| "and it currently contains the CD ${cdname}. The installation will now "
+#| "continue."
 msgid ""
-"The CD-ROM autodetection was successful. A CD-ROM drive has been found and "
-"it currently contains the CD ${cdname}. The installation will now continue."
+"Autodetection of the installation media was successful. A drive has been "
+"found that contains '${cdname}'. The installation will now continue."
 msgstr ""
 "Việc dò tìm tự động đĩa CD-ROM đã thành công. Một ổ đĩa CD-ROM đã được tìm "
 "ra, và nó hiện tại chứa đĩa CD ${cdname}. Vậy tiến trình cài đặt sẽ lúc bây "
@@ -634,21 +685,28 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:14001
-msgid "Incorrect CD-ROM detected"
-msgstr "Đĩa CD-ROM không đúng được tìm ra"
+#, fuzzy
+#| msgid "UNetbootin media detected"
+msgid "Incorrect installation media detected"
+msgstr "Nhận ra đĩa đa phương tiện UNetbootin"
 
 #. Type: error
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:14001
-msgid "The CD-ROM drive contains a CD which cannot be used for installation."
+#, fuzzy
+#| msgid ""
+#| "The CD-ROM drive contains a CD which cannot be used for installation."
+msgid "The detected media cannot be used for installation."
 msgstr "Ổ đĩa CD-ROM chứa một đĩa CD không thể được dùng để cài đắt."
 
 #. Type: error
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:14001
-msgid "Please insert a suitable CD to continue with the installation."
+#, fuzzy
+#| msgid "Please insert a suitable CD to continue with the installation."
+msgid "Please provide suitable media to continue with the installation."
 msgstr "Hãy nạp một đĩa CD thích hợp để tiếp tục lại tiến trình cài đặt."
 
 #. Type: error
@@ -664,9 +722,13 @@ msgstr "Gặp lỗi khi đọc tập tin “Release”"
 #. Translators: DO NOT TRANSLATE "Release". This is the name of a file.
 #. :sl2:
 #: ../cdrom-detect.templates:15001
+#, fuzzy
+#| msgid ""
+#| "The CD-ROM does not seem to contain a valid 'Release' file, or that file "
+#| "could not be read correctly."
 msgid ""
-"The CD-ROM does not seem to contain a valid 'Release' file, or that file "
-"could not be read correctly."
+"The installation media do not seem to contain a valid 'Release' file, or "
+"that file could not be read correctly."
 msgstr ""
 "Có vẻ là đĩa CD-ROM này không chứa một tập tin “Release” (Phát hành) hợp lệ, "
 "hoặc không thể đọc tập tin đó một cách đúng."
@@ -676,8 +738,12 @@ msgstr ""
 #. Translators: DO NOT TRANSLATE "Release". This is the name of a file.
 #. :sl2:
 #: ../cdrom-detect.templates:15001
+#, fuzzy
+#| msgid ""
+#| "You may try to repeat CD-ROM detection but, even if it does succeed the "
+#| "second time, you may experience problems later in the installation."
 msgid ""
-"You may try to repeat CD-ROM detection but, even if it does succeed the "
+"You may try to repeat the media detection, but even if it does succeed the "
 "second time, you may experience problems later in the installation."
 msgstr ""
 "Bạn có thể thử lặp lại việc dò tìm đĩa CD-ROM, nhưng mà, thậm chí nếu việc "
@@ -689,8 +755,10 @@ msgstr ""
 #. Item in the main menu to select this package
 #. :sl2:
 #: ../cdrom-detect.templates:20001
-msgid "Detect and mount CD-ROM"
-msgstr "Dò tìm và gắn đĩa CD-ROM"
+#, fuzzy
+#| msgid "Use the \"exit\" command to return to the installation menu."
+msgid "Detect and mount installation media"
+msgstr "Hãy dùng lệnh “exit” (thoát) để trở về trình đơn cài đặt."
 
 #. Type: select
 #. Choices
@@ -1389,12 +1457,19 @@ msgstr "Tiếp tục lại mà không có tuyến mặc định không?"
 #. Description
 #. :sl2:
 #: ../netcfg-dhcp.templates:8001
+#, fuzzy
+#| msgid ""
+#| "The network autoconfiguration was successful. However, no default route "
+#| "was set: the system does not know how to communicate with hosts on the "
+#| "Internet. This will make it impossible to continue with the installation "
+#| "unless you have the first installation CD-ROM, a 'Netinst' CD-ROM, or "
+#| "packages available on the local network."
 msgid ""
 "The network autoconfiguration was successful. However, no default route was "
 "set: the system does not know how to communicate with hosts on the Internet. "
 "This will make it impossible to continue with the installation unless you "
-"have the first installation CD-ROM, a 'Netinst' CD-ROM, or packages "
-"available on the local network."
+"have the first image from a set of installation media, a 'Netinst' image, or "
+"packages available on the local network."
 msgstr ""
 "Việc tự động cấu hình mạng đã thành công. Tuy nhiên, chưa đặt tuyến mặc định "
 "(default route): hệ thống chưa biết cách giao thông với máy khác trên Mạng. "
@@ -1787,17 +1862,24 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../cdrom-retriever.templates:1001
-msgid "Failed to copy file from CD-ROM. Retry?"
+#, fuzzy
+#| msgid "Failed to copy file from CD-ROM. Retry?"
+msgid "Failed to copy file from installation media. Retry?"
 msgstr "Gặp lỗi khi sao chép tập tin từ đĩa CD-ROM. Thử lại không?"
 
 #. Type: boolean
 #. Description
 #. :sl2:
 #: ../cdrom-retriever.templates:1001
+#, fuzzy
+#| msgid ""
+#| "There was a problem reading data from the CD-ROM. Please make sure it is "
+#| "in the drive. If retrying does not work, you should check the integrity "
+#| "of your CD-ROM."
 msgid ""
-"There was a problem reading data from the CD-ROM. Please make sure it is in "
-"the drive. If retrying does not work, you should check the integrity of your "
-"CD-ROM."
+"There was a problem reading data. Please make sure you have inserted the "
+"installation media correctly. If retrying does not work, you should check "
+"the integrity of your installation media."
 msgstr ""
 "Gặp lỗi khi đọc dữ liệu từ đĩa CD-ROM. Hãy kiểm tra xem nó nằm trong ổ đĩa. "
 "Nếu việc thử lại không hoạt động được, bạn nên kiểm tra tính toàn vẹn của "
@@ -2186,7 +2268,7 @@ msgstr "Vì lý do không rõ, không thể thay đổi kích cỡ của phân v
 #. Type: boolean
 #. Description
 #. :sl2:
-#. #-#-#-#-#  templates.pot (PACKAGE VERSION)  #-#-#-#-#
+#. #-#-#-#-#  templates.pot (base-installer)  #-#-#-#-#
 #. Type: error
 #. Description
 #. :sl2:
@@ -3916,9 +3998,13 @@ msgstr "Không thể cài đặt hệ thống cơ bản"
 #. See http://www.debian.org/doc/debian-policy/ch-binary.html#s3.7
 #. :sl2:
 #: ../bootstrap-base.templates:2001
+#, fuzzy
+#| msgid ""
+#| "The installer cannot figure out how to install the base system. No "
+#| "installable CD-ROM was found and no valid mirror was configured."
 msgid ""
-"The installer cannot figure out how to install the base system. No "
-"installable CD-ROM was found and no valid mirror was configured."
+"The installer cannot figure out how to install the base system. It found no "
+"installable image, and no valid mirror was configured."
 msgstr ""
 "Bộ cài đặt không thể quyết định cách cài đặt hệ thống cơ bản. Chưa tìm thấy "
 "địa CD-ROM có khả năng cài đặt, cũng chưa cấu hình máy bản sao hợp lệ."
@@ -4169,9 +4255,13 @@ msgstr "Tập tin Release không hợp lệ: không có mục tin cho ${SUBST0}.
 #. SUBST0 is a filename or package name
 #. Debootstrap is a program name: should not be translated
 #: ../bootstrap-base.templates:22001
+#, fuzzy
+#| msgid ""
+#| "Couldn't retrieve ${SUBST0}. This may be due to a network problem or a "
+#| "bad CD, depending on your installation method."
 msgid ""
-"Couldn't retrieve ${SUBST0}. This may be due to a network problem or a bad "
-"CD, depending on your installation method."
+"Couldn't retrieve ${SUBST0}. This may be due to a network problem or bad "
+"media, depending on your installation method."
 msgstr ""
 "Không thể lấy ${SUBST0}. Có thể vì gặp lỗi mạng hoặc đĩa CD sai, phụ thuộc "
 "vào phương pháp cài đặt."
@@ -4285,16 +4375,6 @@ msgstr ""
 #: ../apt-cdrom-setup.templates:2001
 msgid "apt configuration problem"
 msgstr "lỗi cấu hình trình apt"
-
-#. Type: error
-#. Description
-#. :sl2:
-#: ../apt-cdrom-setup.templates:2001
-msgid ""
-"An attempt to configure apt to install additional packages from the CD "
-"failed."
-msgstr ""
-"Việc thử cấu hình trình apt để cài đặt các gói thêm từ đĩa CD đã bị lỗi."
 
 #. Type: boolean
 #. Description
@@ -5237,5 +5317,7 @@ msgstr ""
 #. Translators: keep it under 65 columns
 #. :sl2:
 #: ../cdrom-checker.templates:12001
-msgid "Check the CD-ROM(s) integrity"
-msgstr "Kiểm tra tính toàn vẹn của các đĩa CD-ROM"
+#, fuzzy
+#| msgid "Check the integrity of another CD-ROM?"
+msgid "Check the integrity of installation media"
+msgstr "Kiểm tra tính toàn vẹn của một đĩa CD-ROM thêm không ?"

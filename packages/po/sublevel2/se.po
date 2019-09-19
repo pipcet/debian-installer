@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: se\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-15 19:16+0000\n"
+"POT-Creation-Date: 2019-09-19 16:20+0000\n"
 "PO-Revision-Date: 2010-12-31 02:09+0100\n"
 "Last-Translator: Børre Gaup <boerre@skolelinux.no>\n"
 "Language-Team: Northern Saami <i18n-sme@lister.ping.uio.no>\n"
@@ -439,17 +439,14 @@ msgstr ""
 #. :sl2:
 #: ../cdrom-detect.templates:1001
 #, fuzzy
-msgid "Load CD-ROM drivers from removable media?"
-msgstr "Galgágo viežžat váili stivrraniid diskeahtas?"
+msgid "Load drivers from removable media?"
+msgstr "Viečča váili stivrraniid sirddihahtti medias"
 
 #. Type: boolean
 #. Description
 #. :sl2:
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../cdrom-detect.templates:1001 ../cdrom-detect.templates:3001
-msgid "No common CD-ROM drive was detected."
+#: ../cdrom-detect.templates:1001
+msgid "No device for installation media was detected."
 msgstr ""
 
 #. Type: boolean
@@ -458,10 +455,10 @@ msgstr ""
 #: ../cdrom-detect.templates:1001
 #, fuzzy
 msgid ""
-"You may need to load additional CD-ROM drivers from removable media, such as "
-"a driver floppy. If you have such media available now, insert it, and "
-"continue. Otherwise, you will be given the option to manually select CD-ROM "
-"modules."
+"You may need to load additional drivers from removable media, such as a "
+"driver floppy or a USB stick. If you have these available now, insert the "
+"media, and continue. Otherwise, you will be given the option to manually "
+"select some modules."
 msgstr ""
 "Ii gávdnan stivrrana du mašiidnagálvui. Fertet várra viežžat stivrraniid "
 "diskeahtas. Jus dus lea diekkár diskeahtta gearggus dál, cokka dan sisa "
@@ -471,7 +468,14 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:3001
-msgid "Manually select a CD-ROM module and device?"
+msgid "Manually select a module and device for installation media?"
+msgstr ""
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../cdrom-detect.templates:3001
+msgid "No device for installation media (like a CD-ROM device) was detected."
 msgstr ""
 
 #. Type: boolean
@@ -479,33 +483,35 @@ msgstr ""
 #. :sl2:
 #: ../cdrom-detect.templates:3001
 msgid ""
-"Your CD-ROM drive may be an old Mitsumi or another non-IDE, non-SCSI CD-ROM "
-"drive. In that case you should choose which module to load and the device to "
-"use. If you don't know which module and device are needed, look for some "
-"documentation or try a network installation instead of a CD-ROM installation."
+"If your CD-ROM drive is an old Mitsumi or another non-IDE, non-SCSI CD-ROM "
+"drive, you should choose which module to load and the device to use. If you "
+"don't know which module and device are needed, look for some documentation "
+"or try a network installation."
 msgstr ""
 
 #. Type: boolean
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:4001
-msgid "Retry mounting the CD-ROM?"
-msgstr "Háliidatgo geahččalit ođđasit čatnat CD-ROM?"
+#, fuzzy
+msgid "Retry mounting installation media?"
+msgstr "Sajáiduhttinlávki filtii"
 
 #. Type: boolean
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:4001
 msgid ""
-"Your installation CD-ROM couldn't be mounted. This probably means that the "
-"CD-ROM was not in the drive. If so you can insert it and try again."
+"Your installation media couldn't be mounted. When installing from CD-ROM, "
+"this probably means that the disk was not in the drive. If so you can insert "
+"it and try again."
 msgstr ""
 
 #. Type: select
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:5001
-msgid "Module needed for accessing the CD-ROM:"
+msgid "Module needed for accessing the installation media:"
 msgstr ""
 
 #. Type: select
@@ -513,26 +519,28 @@ msgstr ""
 #. :sl2:
 #: ../cdrom-detect.templates:5001
 msgid ""
-"The automatic detection didn't find a CD-ROM drive. You can try to load a "
-"specific module if you have an unusual CD-ROM drive (that is neither IDE nor "
-"SCSI)."
+"The automatic detection didn't find a drive for installation media. When "
+"installing from CD-ROM and you have an unusual CD-ROM drive (that is neither "
+"IDE nor SCSI), you can try to load a specific module."
 msgstr ""
 
 #. Type: string
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:6001
-msgid "Device file for accessing the CD-ROM:"
-msgstr ""
+#, fuzzy
+#| msgid "Device for boot loader installation:"
+msgid "Device file for accessing the installation media:"
+msgstr "Ovttadat gosa vuolggahangieđahalli bidjo:"
 
 #. Type: string
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:6001
 msgid ""
-"In order to access your CD-ROM drive, please enter the device file that "
-"should be used. Non-standard CD-ROM drives use non-standard device files "
-"(such as /dev/mcdx)."
+"In order to access your installation media (like your CD-ROM), please enter "
+"the device file that should be used. Non-standard CD-ROM drives use non-"
+"standard device files (such as /dev/mcdx)."
 msgstr ""
 
 #. Type: string
@@ -549,37 +557,43 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:12001
-msgid "CD-ROM detected"
-msgstr ""
+#, fuzzy
+#| msgid "No network interfaces detected"
+msgid "Installation media detected"
+msgstr "Ii gávdnan fierpmádatlavttaid"
 
 #. Type: note
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:12001
 msgid ""
-"The CD-ROM autodetection was successful. A CD-ROM drive has been found and "
-"it currently contains the CD ${cdname}. The installation will now continue."
+"Autodetection of the installation media was successful. A drive has been "
+"found that contains '${cdname}'. The installation will now continue."
 msgstr ""
 
 #. Type: error
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:14001
-msgid "Incorrect CD-ROM detected"
+#, fuzzy
+#| msgid "No network interfaces detected"
+msgid "Incorrect installation media detected"
+msgstr "Ii gávdnan fierpmádatlavttaid"
+
+#. Type: error
+#. Description
+#. :sl2:
+#: ../cdrom-detect.templates:14001
+msgid "The detected media cannot be used for installation."
 msgstr ""
 
 #. Type: error
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:14001
-msgid "The CD-ROM drive contains a CD which cannot be used for installation."
-msgstr ""
-
-#. Type: error
-#. Description
-#. :sl2:
-#: ../cdrom-detect.templates:14001
-msgid "Please insert a suitable CD to continue with the installation."
+#, fuzzy
+#| msgid "Please insert a suitable CD to continue with the installation."
+msgid "Please provide suitable media to continue with the installation."
 msgstr "Bija heivvolaš CD sisa jus áiggut joatkit sajáiduhttima."
 
 #. Type: error
@@ -597,8 +611,8 @@ msgstr "Viežžamin veršuvdnafiila"
 #. :sl2:
 #: ../cdrom-detect.templates:15001
 msgid ""
-"The CD-ROM does not seem to contain a valid 'Release' file, or that file "
-"could not be read correctly."
+"The installation media do not seem to contain a valid 'Release' file, or "
+"that file could not be read correctly."
 msgstr ""
 
 #. Type: error
@@ -607,7 +621,7 @@ msgstr ""
 #. :sl2:
 #: ../cdrom-detect.templates:15001
 msgid ""
-"You may try to repeat CD-ROM detection but, even if it does succeed the "
+"You may try to repeat the media detection, but even if it does succeed the "
 "second time, you may experience problems later in the installation."
 msgstr ""
 
@@ -616,8 +630,10 @@ msgstr ""
 #. Item in the main menu to select this package
 #. :sl2:
 #: ../cdrom-detect.templates:20001
-msgid "Detect and mount CD-ROM"
-msgstr "Áicca ja čana CD-ROM"
+#, fuzzy
+#| msgid "Use the \"exit\" command to return to the installation menu."
+msgid "Detect and mount installation media"
+msgstr "Geavat «Guođe»-gohččuma jus háliidat máhccat sajáiduhttinfállui."
 
 #. Type: select
 #. Choices
@@ -1287,8 +1303,8 @@ msgid ""
 "The network autoconfiguration was successful. However, no default route was "
 "set: the system does not know how to communicate with hosts on the Internet. "
 "This will make it impossible to continue with the installation unless you "
-"have the first installation CD-ROM, a 'Netinst' CD-ROM, or packages "
-"available on the local network."
+"have the first image from a set of installation media, a 'Netinst' image, or "
+"packages available on the local network."
 msgstr ""
 
 #. Type: boolean
@@ -1652,7 +1668,7 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../cdrom-retriever.templates:1001
-msgid "Failed to copy file from CD-ROM. Retry?"
+msgid "Failed to copy file from installation media. Retry?"
 msgstr ""
 
 #. Type: boolean
@@ -1660,9 +1676,9 @@ msgstr ""
 #. :sl2:
 #: ../cdrom-retriever.templates:1001
 msgid ""
-"There was a problem reading data from the CD-ROM. Please make sure it is in "
-"the drive. If retrying does not work, you should check the integrity of your "
-"CD-ROM."
+"There was a problem reading data. Please make sure you have inserted the "
+"installation media correctly. If retrying does not work, you should check "
+"the integrity of your installation media."
 msgstr ""
 
 #. Type: text
@@ -2051,7 +2067,7 @@ msgstr ""
 #. Type: boolean
 #. Description
 #. :sl2:
-#. #-#-#-#-#  templates.pot (PACKAGE VERSION)  #-#-#-#-#
+#. #-#-#-#-#  templates.pot (base-installer)  #-#-#-#-#
 #. Type: error
 #. Description
 #. :sl2:
@@ -3724,8 +3740,8 @@ msgstr "Ii sáhte sajáiduhttit vuođđovuogádaga"
 #. :sl2:
 #: ../bootstrap-base.templates:2001
 msgid ""
-"The installer cannot figure out how to install the base system. No "
-"installable CD-ROM was found and no valid mirror was configured."
+"The installer cannot figure out how to install the base system. It found no "
+"installable image, and no valid mirror was configured."
 msgstr ""
 
 #. Type: error
@@ -3969,8 +3985,8 @@ msgstr ""
 #. Debootstrap is a program name: should not be translated
 #: ../bootstrap-base.templates:22001
 msgid ""
-"Couldn't retrieve ${SUBST0}. This may be due to a network problem or a bad "
-"CD, depending on your installation method."
+"Couldn't retrieve ${SUBST0}. This may be due to a network problem or bad "
+"media, depending on your installation method."
 msgstr ""
 
 #. Type: error
@@ -4080,15 +4096,6 @@ msgstr ""
 #. :sl2:
 #: ../apt-cdrom-setup.templates:2001
 msgid "apt configuration problem"
-msgstr ""
-
-#. Type: error
-#. Description
-#. :sl2:
-#: ../apt-cdrom-setup.templates:2001
-msgid ""
-"An attempt to configure apt to install additional packages from the CD "
-"failed."
 msgstr ""
 
 #. Type: boolean
@@ -4961,5 +4968,5 @@ msgstr ""
 #. Translators: keep it under 65 columns
 #. :sl2:
 #: ../cdrom-checker.templates:12001
-msgid "Check the CD-ROM(s) integrity"
+msgid "Check the integrity of installation media"
 msgstr ""

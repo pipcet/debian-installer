@@ -32,7 +32,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ro\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-28 21:20+0000\n"
+"POT-Creation-Date: 2019-09-19 16:20+0000\n"
 "PO-Revision-Date: 2018-11-29 15:49+0200\n"
 "Last-Translator: Andrei POPESCU <andreimpopescu@gmail.com>\n"
 "Language-Team: Romanian <debian-l10n-romanian@lists.debian.org>\n"
@@ -638,13 +638,6 @@ msgstr "Introduceți informația manual"
 msgid "Download installer components"
 msgstr "Descărcarea de componente ale programului de instalare"
 
-#. Type: text
-#. Description
-#. Main menu item
-#: ../load-cdrom.templates:1001
-msgid "Load installer components from CD"
-msgstr "Încarcă componentele programului de instalare de pe CD"
-
 #. Type: boolean
 #. Description
 #: ../load-media.templates:1001
@@ -755,13 +748,6 @@ msgstr ""
 "Această listă conține uneltele disponibile. Dacă nu știți pe care să o "
 "selectați, ar trebui să o alegeți pe cea implicită. Dacă sistemul eșuează la "
 "pornire, puteți reîncerca instalarea folosind celelalte opțiuni."
-
-#. Type: text
-#. Description
-#. Release is a filename which should not be translated
-#: ../bootstrap-base.templates:42001
-msgid "Checking Release signature"
-msgstr "Se verifică semnătura Release"
 
 #. Type: select
 #. Description
@@ -1635,15 +1621,19 @@ msgstr "Unele din tastele afișate aici pot lipsi de pe unele tastaturi."
 #. Description
 #. :sl1:
 #: ../cdrom-detect.templates:2001
-msgid "Detecting hardware to find CD-ROM drives"
-msgstr "Se detectează componentele pentru a găsi CD-ROM-ul"
+#, fuzzy
+#| msgid "Detecting hardware to find hard drives"
+msgid "Detecting hardware to find installation media"
+msgstr "Se detectează componentele pentru a găsi discurile fixe"
 
 #. Type: text
 #. Description
 #. :sl1:
 #: ../cdrom-detect.templates:10001
-msgid "Scanning CD-ROM"
-msgstr "Se examinează CD-ROM-ul"
+#, fuzzy
+#| msgid "SILO installation failed"
+msgid "Scanning installation media"
+msgstr "Instalarea SILO a eșuat"
 
 #. Type: text
 #. Description
@@ -1657,8 +1647,8 @@ msgstr "Se examinează ${DIR}..."
 #. finish-install progress bar item
 #. :sl1:
 #: ../cdrom-detect.templates:19001
-msgid "Unmounting and ejecting CD-ROM..."
-msgstr "Se demontează și se scoate CD-ul..."
+msgid "Unmounting/ejecting installation media..."
+msgstr ""
 
 #. Type: text
 #. Description
@@ -2388,6 +2378,16 @@ msgstr ""
 #: ../mdcfg-utils.templates:6001 ../mdcfg-utils.templates:13001
 msgid "Cancel"
 msgstr "Anulează"
+
+#. Type: text
+#. Description
+#. Main menu item
+#. :sl1:
+#: ../load-cdrom.templates:1001
+#, fuzzy
+#| msgid "Load installer components from an installer ISO"
+msgid "Load installer components from installation media"
+msgstr "Încarcă componentele programului de instalare de pe o imagine ISO"
 
 #. Type: text
 #. Description
@@ -3244,7 +3244,7 @@ msgstr "Se pregătește instalarea sistemului de bază..."
 msgid "Installing the base system"
 msgstr "Se instalează sistemul de bază"
 
-#. #-#-#-#-#  templates.pot (PACKAGE VERSION)  #-#-#-#-#
+#. #-#-#-#-#  templates.pot (base-installer)  #-#-#-#-#
 #. Type: text
 #. Description
 #. :sl1:
@@ -3460,6 +3460,14 @@ msgstr "Se despachetează ${SUBST0}..."
 #: ../bootstrap-base.templates:41001
 msgid "Configuring ${SUBST0}..."
 msgstr "Se configurează ${SUBST0}..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Release is a filename which should not be translated
+#: ../bootstrap-base.templates:42001
+msgid "Checking Release signature"
+msgstr "Se verifică semnătura Release"
 
 #. Type: text
 #. Description
@@ -3717,8 +3725,28 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:1001
-msgid "Scanning the CD-ROM..."
-msgstr "Se examinează CD-ROM-ul..."
+#, fuzzy
+#| msgid "Finishing the installation"
+msgid "Scanning the installation media..."
+msgstr "Se finalizează instalarea"
+
+#. Type: error
+#. Description
+#. :sl2:
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:2001 ../apt-cdrom-setup.templates:6001
+#, fuzzy
+#| msgid ""
+#| "An attempt to configure apt to install additional packages from the CD "
+#| "failed."
+msgid ""
+"An attempt to configure apt to install additional packages from the media "
+"failed."
+msgstr ""
+"O încercare de configurare pentru ca apt să instaleze pachete adiționale de "
+"pe CD a eșuat."
 
 #. Type: boolean
 #. Description
@@ -3734,25 +3762,33 @@ msgstr "Se examinează CD-ROM-ul..."
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001 ../apt-cdrom-setup.templates:4001
 #: ../apt-cdrom-setup.templates:5001 ../apt-cdrom-setup.templates:6001
-msgid "Scan another CD or DVD?"
-msgstr "Se examinează un alt CD sau DVD?"
+#, fuzzy
+#| msgid "SILO installation failed"
+msgid "Scan extra installation media?"
+msgstr "Instalarea SILO a eșuat"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001
-msgid "Your installation CD or DVD has been scanned; its label is:"
-msgstr "CD-ul sau DVD-ul dumneavoastră a fost examinat; poartă eticheta:"
+msgid "Scanning your installation media finds the label:"
+msgstr ""
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001
+#, fuzzy
+#| msgid ""
+#| "You now have the option to scan additional CDs or DVDs for use by the "
+#| "package manager (apt). Normally these should be from the same set as the "
+#| "installation CD/DVD. If you do not have any additional CDs or DVDs "
+#| "available, this step can just be skipped."
 msgid ""
-"You now have the option to scan additional CDs or DVDs for use by the "
-"package manager (apt). Normally these should be from the same set as the "
-"installation CD/DVD. If you do not have any additional CDs or DVDs "
-"available, this step can just be skipped."
+"You now have the option of scanning additional media for use by the package "
+"manager (apt). Normally these should be from the same set as the one you "
+"booted from. If you do not have any additional media, this step can just be "
+"skipped."
 msgstr ""
 "Acum puteți să examinați alte CD-uri sau DVD-uri care ar putea fi folosite "
 "de managerul de pachete (apt). În mod normal, acestea ar trebui să fie parte "
@@ -3766,53 +3802,50 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001 ../apt-cdrom-setup.templates:4001
-msgid "If you wish to scan another CD or DVD, please insert it now."
+#, fuzzy
+#| msgid "If you wish to scan another CD or DVD, please insert it now."
+msgid "If you wish to scan more media, please insert another one now."
 msgstr "Dacă doriți să examinați un alt CD sau DVD, introduceți-l acum."
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:4001
-msgid "The CD or DVD with the following label has been scanned:"
+#, fuzzy
+#| msgid "The CD or DVD with the following label has been scanned:"
+msgid "The image with the following label has been scanned:"
 msgstr "A fost examinat CD-ul sau DVD-ul cu eticheta:"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:5001
-msgid "The CD or DVD with the following label has already been scanned:"
+#, fuzzy
+#| msgid "The CD or DVD with the following label has already been scanned:"
+msgid "The image with the following label has already been scanned:"
 msgstr "CD-ul sau DVD-ul cu eticheta de mai jos a fost deja examinat:"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:5001
-msgid "Please replace it now if you wish to scan another CD or DVD."
+#, fuzzy
+#| msgid "Please replace it now if you wish to scan another CD or DVD."
+msgid "Please replace it now, if you wish to scan another."
 msgstr "Înlocuiți-l acum dacă doriți să examinați un alt CD sau DVD."
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:6001
-msgid ""
-"An attempt to configure apt to install additional packages from the CD/DVD "
-"failed."
-msgstr ""
-"O încercare de a configura apt să instaleze pachete adiționale de pe CD/DVD "
-"a eșuat."
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:6001
-msgid "Please check that the CD/DVD has been inserted correctly."
+#, fuzzy
+#| msgid "Please check that the CD/DVD has been inserted correctly."
+msgid "Please check that the media has been inserted correctly."
 msgstr "Asigurați-vă că CD-ul/DVD-ul a fost introdus corect."
 
 #. Type: text
 #. Description
 #. :sl1:
-#. This template uses the same text as used in the package apt for apt-cdrom
-#. Do not translate "/cdrom/" (the mount point)
 #: ../apt-cdrom-setup.templates:7001
 msgid "Media change"
 msgstr "Schimbare de mediu de instalare"
@@ -3820,12 +3853,12 @@ msgstr "Schimbare de mediu de instalare"
 #. Type: text
 #. Description
 #. :sl1:
-#. This template uses the same text as used in the package apt for apt-cdrom
-#. Do not translate "/cdrom/" (the mount point)
 #: ../apt-cdrom-setup.templates:7001
-msgid ""
-"/cdrom/: Please insert the disc labeled '${LABEL}' in the drive '/cdrom/' "
-"and press enter."
+#, fuzzy
+#| msgid ""
+#| "/cdrom/: Please insert the disc labeled '${LABEL}' in the drive '/cdrom/' "
+#| "and press enter."
+msgid "Please insert the media labeled '${LABEL}' and press enter."
 msgstr ""
 "/cdrom/: Introduceți discul etichetat '${LABEL}' în unitatea '/cdrom/' și "
 "apăsați enter."
@@ -3845,9 +3878,13 @@ msgstr "Se dezactivează CD-ul netinst din sources.list..."
 #. Description
 #. :sl2:
 #: ../apt-cdrom-setup.templates:9001 ../apt-mirror-setup.templates:6001
+#, fuzzy
+#| msgid ""
+#| "If you are installing from a netinst CD and choose not to use a mirror, "
+#| "you will end up with only a very minimal base system."
 msgid ""
-"If you are installing from a netinst CD and choose not to use a mirror, you "
-"will end up with only a very minimal base system."
+"If you are installing from a netinst CD image and choose not to use a "
+"mirror, you will end up with only a very minimal base system."
 msgstr ""
 "Dacă instalați de pe un CD netinst și optați să nu folosiți un sit "
 "alternativ veți rămâne doar cu un sistem de bază minimal."
@@ -3856,8 +3893,13 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:10001
+#, fuzzy
+#| msgid ""
+#| "You are installing from a netinst CD, which by itself only allows "
+#| "installation of a very minimal base system. Use a mirror to install a "
+#| "more complete system."
 msgid ""
-"You are installing from a netinst CD, which by itself only allows "
+"You are installing from a netinst CD image, which by itself only allows "
 "installation of a very minimal base system. Use a mirror to install a more "
 "complete system."
 msgstr ""
@@ -3869,8 +3911,13 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:11001
+#, fuzzy
+#| msgid ""
+#| "You are installing from a CD, which contains a limited selection of "
+#| "packages."
 msgid ""
-"You are installing from a CD, which contains a limited selection of packages."
+"You are installing from an image which contains a limited selection of "
+"packages."
 msgstr ""
 "Faceți instalarea de pe un CD; acesta conține un selecție limitată de "
 "pachete."
@@ -3880,9 +3927,13 @@ msgstr ""
 #. :sl1:
 #. The value of %i can be 2 or 3
 #: ../apt-cdrom-setup.templates:12001
-#, no-c-format
+#, fuzzy, no-c-format
+#| msgid ""
+#| "You have scanned %i CDs. Even though these contain a fair selection of "
+#| "packages, some may be missing (notably some packages needed to support "
+#| "languages other than English)."
 msgid ""
-"You have scanned %i CDs. Even though these contain a fair selection of "
+"You have scanned %i images. Even though these contain a fair selection of "
 "packages, some may be missing (notably some packages needed to support "
 "languages other than English)."
 msgstr ""
@@ -3895,9 +3946,12 @@ msgstr ""
 #. :sl1:
 #. The value of %i can be from 4 to 8
 #: ../apt-cdrom-setup.templates:13001
-#, no-c-format
+#, fuzzy, no-c-format
+#| msgid ""
+#| "You have scanned %i CDs. Even though these contain a large selection of "
+#| "packages, some may be missing."
 msgid ""
-"You have scanned %i CDs. Even though these contain a large selection of "
+"You have scanned %i images. Even though these contain a large selection of "
 "packages, some may be missing."
 msgstr ""
 "Ați examinat %i CD-uri. Deși acestea conțin o colecție mare de pachete, este "
@@ -3918,8 +3972,12 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:15001
+#, fuzzy
+#| msgid ""
+#| "You are installing from a DVD. Even though the DVD contains a large "
+#| "selection of packages, some may be missing."
 msgid ""
-"You are installing from a DVD. Even though the DVD contains a large "
+"You are installing from a DVD image. Even though it contains a large "
 "selection of packages, some may be missing."
 msgstr ""
 "Instalați de pe un DVD. Deși acesta conține o colecție mare de pachete, este "
@@ -4048,9 +4106,14 @@ msgstr "Se folosește un sit alternativ?"
 #. Description
 #. :sl1:
 #: ../apt-mirror-setup.templates:5001
+#, fuzzy
+#| msgid ""
+#| "A network mirror can be used to supplement the software that is included "
+#| "on the CD-ROM. This may also make newer versions of software available."
 msgid ""
 "A network mirror can be used to supplement the software that is included on "
-"the CD-ROM. This may also make newer versions of software available."
+"the installation media. This may also make newer versions of software "
+"available."
 msgstr ""
 "Pentru suplimentarea programelor existente pe CD se poate folosi un sit "
 "alternativ. Folosirea acestuia poate chiar să aducă versiuni mai noi ale "
@@ -4694,6 +4757,67 @@ msgstr "Configurează Managerul de volume logice (LVM)"
 #: ../partman-auto-lvm.templates:1001
 msgid "Guided - use entire disk and set up LVM"
 msgstr "Ghidată - pe tot discul și se configurează LVM"
+
+#~ msgid "Load installer components from CD"
+#~ msgstr "Încarcă componentele programului de instalare de pe CD"
+
+#~ msgid "Detecting hardware to find CD-ROM drives"
+#~ msgstr "Se detectează componentele pentru a găsi CD-ROM-ul"
+
+#~ msgid "Scanning CD-ROM"
+#~ msgstr "Se examinează CD-ROM-ul"
+
+#~ msgid "Unmounting and ejecting CD-ROM..."
+#~ msgstr "Se demontează și se scoate CD-ul..."
+
+#~ msgid "Scanning the CD-ROM..."
+#~ msgstr "Se examinează CD-ROM-ul..."
+
+#~ msgid "Scan another CD or DVD?"
+#~ msgstr "Se examinează un alt CD sau DVD?"
+
+#~ msgid "Your installation CD or DVD has been scanned; its label is:"
+#~ msgstr "CD-ul sau DVD-ul dumneavoastră a fost examinat; poartă eticheta:"
+
+#~ msgid ""
+#~ "An attempt to configure apt to install additional packages from the CD/"
+#~ "DVD failed."
+#~ msgstr ""
+#~ "O încercare de a configura apt să instaleze pachete adiționale de pe CD/"
+#~ "DVD a eșuat."
+
+#~ msgid "Load CD-ROM drivers from removable media?"
+#~ msgstr "Se încarcă modulele de nucleu pentru CD-ROM de pe un mediu mobil?"
+
+#~ msgid "Retry mounting the CD-ROM?"
+#~ msgstr "Încercați din nou să montați CD-ROM-ul?"
+
+#~ msgid "CD-ROM detected"
+#~ msgstr "CD-ROM detectat"
+
+#~ msgid "Incorrect CD-ROM detected"
+#~ msgstr "S-a detectat un CD-ROM incorect"
+
+#~ msgid "Detect and mount CD-ROM"
+#~ msgstr "Detectează și montează CD-ul"
+
+#~ msgid "Check the CD-ROM(s) integrity"
+#~ msgstr "Verifică integritatea CD-ului (CD-urilor)"
+
+#~ msgid "Check CD-ROM integrity?"
+#~ msgstr "Verificați integritatea CD-ului?"
+
+#~ msgid "Insert a Debian CD-ROM"
+#~ msgstr "Introduceți un CD Debian"
+
+#~ msgid "Failed to mount CD-ROM"
+#~ msgstr "Eșec la montarea CD-ului"
+
+#~ msgid "No valid Debian CD-ROM"
+#~ msgstr "CD Debian invalid"
+
+#~ msgid "Checking CD-ROM integrity"
+#~ msgstr "Se verifică integritatea CD-ului"
 
 #~ msgid "No DHCP client was found. This package requires pump or dhcp-client."
 #~ msgstr ""
@@ -5655,9 +5779,6 @@ msgstr "Ghidată - pe tot discul și se configurează LVM"
 #~ "Din moment ce partițiile au fost deja montate, nu puteți efectua "
 #~ "schimbări."
 
-#~ msgid "Failed to unmount partitions"
-#~ msgstr "Eșec la demontarea partițiilor"
-
 #~ msgid "An unexpected error occurred while unmounting the partitions."
 #~ msgstr "A apărut o eroare neașteptată în timpul demontării partițiilor."
 
@@ -5836,9 +5957,6 @@ msgstr "Ghidată - pe tot discul și se configurează LVM"
 #~ "SILO ca încărcător de sistem este un pas necesar. Problema instalării ar "
 #~ "putea, totuși, să nu aibă legătură cu SILO, deci continuarea instalării "
 #~ "ar putea fi posibilă."
-
-#~ msgid "SILO installation failed"
-#~ msgstr "Instalarea SILO a eșuat"
 
 #~ msgid "Running \"/sbin/silo\" failed with error code \"${ERRCODE}\"."
 #~ msgstr "Rularea „/sbin/silo” a eșuat cu codul de eroare „${ERRCODE}”."

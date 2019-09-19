@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-15 19:16+0000\n"
+"POT-Creation-Date: 2019-09-19 16:20+0000\n"
 "PO-Revision-Date: 2019-08-20 16:23+0000\n"
 "Last-Translator: Felipe E. F. de Castro <fe2019@penso.eu.nom.br>\n"
 "Language-Team: Esperanto <debian-l10n-esperanto@lists.debian.org>\n"
@@ -486,28 +486,33 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:1001
-msgid "Load CD-ROM drivers from removable media?"
-msgstr "Ĉu ŝargi je lumdiskilaj peliloj el demetebla datumarujo?"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../cdrom-detect.templates:1001 ../cdrom-detect.templates:3001
-msgid "No common CD-ROM drive was detected."
-msgstr "Neniu ordinara lumdiskilo estis detektita."
+#, fuzzy
+#| msgid "Load drivers from removable media"
+msgid "Load drivers from removable media?"
+msgstr "Ŝargi je peliloj el demetebla datumarujo"
 
 #. Type: boolean
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:1001
+msgid "No device for installation media was detected."
+msgstr ""
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../cdrom-detect.templates:1001
+#, fuzzy
+#| msgid ""
+#| "You may need to load additional CD-ROM drivers from removable media, such "
+#| "as a driver floppy. If you have such media available now, insert it, and "
+#| "continue. Otherwise, you will be given the option to manually select CD-"
+#| "ROM modules."
 msgid ""
-"You may need to load additional CD-ROM drivers from removable media, such as "
-"a driver floppy. If you have such media available now, insert it, and "
-"continue. Otherwise, you will be given the option to manually select CD-ROM "
-"modules."
+"You may need to load additional drivers from removable media, such as a "
+"driver floppy or a USB stick. If you have these available now, insert the "
+"media, and continue. Otherwise, you will be given the option to manually "
+"select some modules."
 msgstr ""
 "Vi eble bezonos ŝargi je kromaj lumdiskilaj peliloj el demetebla "
 "datumportilo, kiel ekzemple disketon. Se vi havas tian datumportilon, enmetu "
@@ -517,18 +522,36 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:3001
-msgid "Manually select a CD-ROM module and device?"
+#, fuzzy
+#| msgid "Manually select a CD-ROM module and device?"
+msgid "Manually select a module and device for installation media?"
 msgstr "Ĉu vi volas mem elekti lumdiskilan modulon kaj adaptilon?"
 
 #. Type: boolean
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:3001
+#, fuzzy
+#| msgid "No common CD-ROM drive was detected."
+msgid "No device for installation media (like a CD-ROM device) was detected."
+msgstr "Neniu ordinara lumdiskilo estis detektita."
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../cdrom-detect.templates:3001
+#, fuzzy
+#| msgid ""
+#| "Your CD-ROM drive may be an old Mitsumi or another non-IDE, non-SCSI CD-"
+#| "ROM drive. In that case you should choose which module to load and the "
+#| "device to use. If you don't know which module and device are needed, look "
+#| "for some documentation or try a network installation instead of a CD-ROM "
+#| "installation."
 msgid ""
-"Your CD-ROM drive may be an old Mitsumi or another non-IDE, non-SCSI CD-ROM "
-"drive. In that case you should choose which module to load and the device to "
-"use. If you don't know which module and device are needed, look for some "
-"documentation or try a network installation instead of a CD-ROM installation."
+"If your CD-ROM drive is an old Mitsumi or another non-IDE, non-SCSI CD-ROM "
+"drive, you should choose which module to load and the device to use. If you "
+"don't know which module and device are needed, look for some documentation "
+"or try a network installation."
 msgstr ""
 "Se via lumdiskilo estas malnova 'Mitsumi' aŭ ĝi ne estas 'IDE' nek 'SCSI', "
 "elektu la koncernajn ŝargotan modulon kaj uzotan adaptilon. Se vi ne scias "
@@ -539,16 +562,23 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:4001
-msgid "Retry mounting the CD-ROM?"
-msgstr "Ĉu reprovi munti la lumdiskon?"
+#, fuzzy
+#| msgid "Remote installation password:"
+msgid "Retry mounting installation media?"
+msgstr "Demalproksima instalada pasvorto:"
 
 #. Type: boolean
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:4001
+#, fuzzy
+#| msgid ""
+#| "Your installation CD-ROM couldn't be mounted. This probably means that "
+#| "the CD-ROM was not in the drive. If so you can insert it and try again."
 msgid ""
-"Your installation CD-ROM couldn't be mounted. This probably means that the "
-"CD-ROM was not in the drive. If so you can insert it and try again."
+"Your installation media couldn't be mounted. When installing from CD-ROM, "
+"this probably means that the disk was not in the drive. If so you can insert "
+"it and try again."
 msgstr ""
 "Via instalada lumdisko ne povis esti muntita. Verŝajne ne estas lumdisko en "
 "via lumdiskingo. Se tio okazas, enŝovu ĝin kaj denove reprovu."
@@ -557,17 +587,24 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:5001
-msgid "Module needed for accessing the CD-ROM:"
+#, fuzzy
+#| msgid "Module needed for accessing the CD-ROM:"
+msgid "Module needed for accessing the installation media:"
 msgstr "Bezonata modulo por atingi lumdiskon:"
 
 #. Type: select
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:5001
+#, fuzzy
+#| msgid ""
+#| "The automatic detection didn't find a CD-ROM drive. You can try to load a "
+#| "specific module if you have an unusual CD-ROM drive (that is neither IDE "
+#| "nor SCSI)."
 msgid ""
-"The automatic detection didn't find a CD-ROM drive. You can try to load a "
-"specific module if you have an unusual CD-ROM drive (that is neither IDE nor "
-"SCSI)."
+"The automatic detection didn't find a drive for installation media. When "
+"installing from CD-ROM and you have an unusual CD-ROM drive (that is neither "
+"IDE nor SCSI), you can try to load a specific module."
 msgstr ""
 "La aŭtomata detekto ne trovis lumdiskingan pelilon. Vi povos ŝargi apartan "
 "modulon se vi posedas specifan lumdiskan pelilon (kiu estas nek 'IDE'-a nek "
@@ -577,17 +614,24 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:6001
-msgid "Device file for accessing the CD-ROM:"
+#, fuzzy
+#| msgid "Device file for accessing the CD-ROM:"
+msgid "Device file for accessing the installation media:"
 msgstr "Aparat-dosiero por atingi la lumdiskingon:"
 
 #. Type: string
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:6001
+#, fuzzy
+#| msgid ""
+#| "In order to access your CD-ROM drive, please enter the device file that "
+#| "should be used. Non-standard CD-ROM drives use non-standard device files "
+#| "(such as /dev/mcdx)."
 msgid ""
-"In order to access your CD-ROM drive, please enter the device file that "
-"should be used. Non-standard CD-ROM drives use non-standard device files "
-"(such as /dev/mcdx)."
+"In order to access your installation media (like your CD-ROM), please enter "
+"the device file that should be used. Non-standard CD-ROM drives use non-"
+"standard device files (such as /dev/mcdx)."
 msgstr ""
 "Por atingi vian lumdiskingan pelilon, bonvolu tajpi la uzotan aparat-"
 "dosieron. Malnormecaj diskingoj uzas malnormecajn aparat-dosierojn (kiel "
@@ -610,16 +654,23 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:12001
-msgid "CD-ROM detected"
-msgstr "Lumdisko estis detektita"
+#, fuzzy
+#| msgid "UNetbootin media detected"
+msgid "Installation media detected"
+msgstr "Detektita datumarujo UNetbootin"
 
 #. Type: note
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:12001
+#, fuzzy
+#| msgid ""
+#| "The CD-ROM autodetection was successful. A CD-ROM drive has been found "
+#| "and it currently contains the CD ${cdname}. The installation will now "
+#| "continue."
 msgid ""
-"The CD-ROM autodetection was successful. A CD-ROM drive has been found and "
-"it currently contains the CD ${cdname}. The installation will now continue."
+"Autodetection of the installation media was successful. A drive has been "
+"found that contains '${cdname}'. The installation will now continue."
 msgstr ""
 "La aŭtomata lumdiska detekto sukcesis. Lumdiskinga pelilo estis trovita kaj "
 "ĝi nuntempe enhavas la lumdiskon '${cdname}'. La instalado daŭros ekde nun."
@@ -628,21 +679,28 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:14001
-msgid "Incorrect CD-ROM detected"
-msgstr "Malĝusta lumdisko estis detektita"
+#, fuzzy
+#| msgid "UNetbootin media detected"
+msgid "Incorrect installation media detected"
+msgstr "Detektita datumarujo UNetbootin"
 
 #. Type: error
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:14001
-msgid "The CD-ROM drive contains a CD which cannot be used for installation."
+#, fuzzy
+#| msgid ""
+#| "The CD-ROM drive contains a CD which cannot be used for installation."
+msgid "The detected media cannot be used for installation."
 msgstr "La lumdiskingo enhavas lumdiskon kiu ne estas uzebla por la instalado."
 
 #. Type: error
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:14001
-msgid "Please insert a suitable CD to continue with the installation."
+#, fuzzy
+#| msgid "Please insert a suitable CD to continue with the installation."
+msgid "Please provide suitable media to continue with the installation."
 msgstr "Bonvolu enŝovi taŭgan lumdiskon por daŭrigi la instaladon."
 
 #. Type: error
@@ -658,9 +716,13 @@ msgstr "Eraro dum la legado de la dosiero 'Release'"
 #. Translators: DO NOT TRANSLATE "Release". This is the name of a file.
 #. :sl2:
 #: ../cdrom-detect.templates:15001
+#, fuzzy
+#| msgid ""
+#| "The CD-ROM does not seem to contain a valid 'Release' file, or that file "
+#| "could not be read correctly."
 msgid ""
-"The CD-ROM does not seem to contain a valid 'Release' file, or that file "
-"could not be read correctly."
+"The installation media do not seem to contain a valid 'Release' file, or "
+"that file could not be read correctly."
 msgstr ""
 "La lumdisko ŝajnas ne enhavi validan dosieron 'Release', aŭ tiu dosiero ne "
 "povis esti legita korekte."
@@ -670,8 +732,12 @@ msgstr ""
 #. Translators: DO NOT TRANSLATE "Release". This is the name of a file.
 #. :sl2:
 #: ../cdrom-detect.templates:15001
+#, fuzzy
+#| msgid ""
+#| "You may try to repeat CD-ROM detection but, even if it does succeed the "
+#| "second time, you may experience problems later in the installation."
 msgid ""
-"You may try to repeat CD-ROM detection but, even if it does succeed the "
+"You may try to repeat the media detection, but even if it does succeed the "
 "second time, you may experience problems later in the installation."
 msgstr ""
 "Vi povas reprovi la lumdiskan detekton. Tamen se ĝi sukcesos dum la dua "
@@ -682,8 +748,10 @@ msgstr ""
 #. Item in the main menu to select this package
 #. :sl2:
 #: ../cdrom-detect.templates:20001
-msgid "Detect and mount CD-ROM"
-msgstr "Detekti kaj munti lumdiskon"
+#, fuzzy
+#| msgid "Use the \"exit\" command to return to the installation menu."
+msgid "Detect and mount installation media"
+msgstr "Uzu la komandon 'exit' por reveni al la instalada menuo."
 
 #. Type: select
 #. Choices
@@ -1380,12 +1448,19 @@ msgstr "Ĉu daŭrigi sen implicita irvojo?"
 #. Description
 #. :sl2:
 #: ../netcfg-dhcp.templates:8001
+#, fuzzy
+#| msgid ""
+#| "The network autoconfiguration was successful. However, no default route "
+#| "was set: the system does not know how to communicate with hosts on the "
+#| "Internet. This will make it impossible to continue with the installation "
+#| "unless you have the first installation CD-ROM, a 'Netinst' CD-ROM, or "
+#| "packages available on the local network."
 msgid ""
 "The network autoconfiguration was successful. However, no default route was "
 "set: the system does not know how to communicate with hosts on the Internet. "
 "This will make it impossible to continue with the installation unless you "
-"have the first installation CD-ROM, a 'Netinst' CD-ROM, or packages "
-"available on the local network."
+"have the first image from a set of installation media, a 'Netinst' image, or "
+"packages available on the local network."
 msgstr ""
 "La reta memakomodado sukcesis. Tamen, ne implicita irvojo estis difinita: la "
 "sistemo ne scias kiel komuniki kun aliaj komputilojn en Interreto. Tio "
@@ -1768,17 +1843,24 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../cdrom-retriever.templates:1001
-msgid "Failed to copy file from CD-ROM. Retry?"
+#, fuzzy
+#| msgid "Failed to copy file from CD-ROM. Retry?"
+msgid "Failed to copy file from installation media. Retry?"
 msgstr "Malsukcesa kopio de dosiero el lumdisko. Ĉu reprovi?"
 
 #. Type: boolean
 #. Description
 #. :sl2:
 #: ../cdrom-retriever.templates:1001
+#, fuzzy
+#| msgid ""
+#| "There was a problem reading data from the CD-ROM. Please make sure it is "
+#| "in the drive. If retrying does not work, you should check the integrity "
+#| "of your CD-ROM."
 msgid ""
-"There was a problem reading data from the CD-ROM. Please make sure it is in "
-"the drive. If retrying does not work, you should check the integrity of your "
-"CD-ROM."
+"There was a problem reading data. Please make sure you have inserted the "
+"installation media correctly. If retrying does not work, you should check "
+"the integrity of your installation media."
 msgstr ""
 "Eraro okazis dum la lumdiska legado. Bonvolu kontroli ĉu la lumdisko estas "
 "en la diskingo. Se reprovo ne funkcias, vi devas kontroli la sendifektecon "
@@ -2170,7 +2252,7 @@ msgstr "Pro nekonata kialo, ne eblas reampleksigi tiun ĉi diskparton."
 #. Type: boolean
 #. Description
 #. :sl2:
-#. #-#-#-#-#  templates.pot (PACKAGE VERSION)  #-#-#-#-#
+#. #-#-#-#-#  templates.pot (base-installer)  #-#-#-#-#
 #. Type: error
 #. Description
 #. :sl2:
@@ -3897,9 +3979,13 @@ msgstr "Neeblas instali la bazan sistemon"
 #. See http://www.debian.org/doc/debian-policy/ch-binary.html#s3.7
 #. :sl2:
 #: ../bootstrap-base.templates:2001
+#, fuzzy
+#| msgid ""
+#| "The installer cannot figure out how to install the base system. No "
+#| "installable CD-ROM was found and no valid mirror was configured."
 msgid ""
-"The installer cannot figure out how to install the base system. No "
-"installable CD-ROM was found and no valid mirror was configured."
+"The installer cannot figure out how to install the base system. It found no "
+"installable image, and no valid mirror was configured."
 msgstr ""
 "La instalilo ne trovas manieron instali la bazan sistemon. Neniu instalebla "
 "lumdisko estis trovita kaj neniu valida spegularkivo estis akomodita."
@@ -4152,9 +4238,13 @@ msgstr "Malvalida dosiero 'Release': neniu rikordo por ${SUBST0}."
 #. SUBST0 is a filename or package name
 #. Debootstrap is a program name: should not be translated
 #: ../bootstrap-base.templates:22001
+#, fuzzy
+#| msgid ""
+#| "Couldn't retrieve ${SUBST0}. This may be due to a network problem or a "
+#| "bad CD, depending on your installation method."
 msgid ""
-"Couldn't retrieve ${SUBST0}. This may be due to a network problem or a bad "
-"CD, depending on your installation method."
+"Couldn't retrieve ${SUBST0}. This may be due to a network problem or bad "
+"media, depending on your installation method."
 msgstr ""
 "Ne eblis ricevi ${SUBST0}. Eble temas pri reta problemo aŭ malbona lumdisko, "
 "depende de via instalada metodo."
@@ -4268,17 +4358,6 @@ msgstr ""
 #: ../apt-cdrom-setup.templates:2001
 msgid "apt configuration problem"
 msgstr "'apt'-akomodada problemo"
-
-#. Type: error
-#. Description
-#. :sl2:
-#: ../apt-cdrom-setup.templates:2001
-msgid ""
-"An attempt to configure apt to install additional packages from the CD "
-"failed."
-msgstr ""
-"Malsukcesis la provo agordi 'apt' por ke ĝi instalu aldonajn pakojn el la "
-"lumdisko."
 
 #. Type: boolean
 #. Description
@@ -5220,5 +5299,7 @@ msgstr ""
 #. Translators: keep it under 65 columns
 #. :sl2:
 #: ../cdrom-checker.templates:12001
-msgid "Check the CD-ROM(s) integrity"
-msgstr "Kontroli sendifektecon de lumdisko(j)"
+#, fuzzy
+#| msgid "Check the integrity of another CD-ROM?"
+msgid "Check the integrity of installation media"
+msgstr "Ĉu kontroli la integrecon de alia lumdisko?"

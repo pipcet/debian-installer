@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-28 21:20+0000\n"
+"POT-Creation-Date: 2019-09-19 16:20+0000\n"
 "PO-Revision-Date: 2017-11-26 21:44+0200\n"
 "Last-Translator: Ivan Masár <helix84@centrum.sk>\n"
 "Language-Team: x\n"
@@ -631,13 +631,6 @@ msgstr "manuálne vloženie údajov"
 msgid "Download installer components"
 msgstr "Stiahnutie súčastí inštalačného programu"
 
-#. Type: text
-#. Description
-#. Main menu item
-#: ../load-cdrom.templates:1001
-msgid "Load installer components from CD"
-msgstr "Načítanie súčastí inštalačného programu z CD"
-
 #. Type: boolean
 #. Description
 #: ../load-media.templates:1001
@@ -747,13 +740,6 @@ msgstr ""
 "Zoznam obsahuje dostupné nástroje. Ak si nie ste istí, ktorý si máte zvoliť, "
 "ponechajte predvolený nástroj. Ak zlyhá zavedenie systému, môžete zopakovať "
 "inštaláciu použitím iného nástroja."
-
-#. Type: text
-#. Description
-#. Release is a filename which should not be translated
-#: ../bootstrap-base.templates:42001
-msgid "Checking Release signature"
-msgstr "Kontroluje sa podpis súboru Release"
 
 #. Type: select
 #. Description
@@ -1617,15 +1603,19 @@ msgstr "Nie všetky uvedené klávesy sa nachádzajú na všetkých klávesnicia
 #. Description
 #. :sl1:
 #: ../cdrom-detect.templates:2001
-msgid "Detecting hardware to find CD-ROM drives"
-msgstr "Rozpoznáva sa hardvér aby sa našla mechanika CD-ROM"
+#, fuzzy
+#| msgid "Detecting hardware to find hard drives"
+msgid "Detecting hardware to find installation media"
+msgstr "Rozpoznáva sa hardvér aby sa našli pevné disky"
 
 #. Type: text
 #. Description
 #. :sl1:
 #: ../cdrom-detect.templates:10001
-msgid "Scanning CD-ROM"
-msgstr "Prehľadáva sa CD-ROM"
+#, fuzzy
+#| msgid "SILO installation failed"
+msgid "Scanning installation media"
+msgstr "Inštalácia SILO zlyhala"
 
 #. Type: text
 #. Description
@@ -1639,8 +1629,8 @@ msgstr "Prehľadáva sa ${DIR}..."
 #. finish-install progress bar item
 #. :sl1:
 #: ../cdrom-detect.templates:19001
-msgid "Unmounting and ejecting CD-ROM..."
-msgstr "CD-ROM sa odpája a vysúva..."
+msgid "Unmounting/ejecting installation media..."
+msgstr ""
 
 #. Type: text
 #. Description
@@ -2362,6 +2352,16 @@ msgstr ""
 #: ../mdcfg-utils.templates:6001 ../mdcfg-utils.templates:13001
 msgid "Cancel"
 msgstr "Zrušiť"
+
+#. Type: text
+#. Description
+#. Main menu item
+#. :sl1:
+#: ../load-cdrom.templates:1001
+#, fuzzy
+#| msgid "Load installer components from an installer ISO"
+msgid "Load installer components from installation media"
+msgstr "Načítanie súčastí inštalačného programu z obrazu ISO"
 
 #. Type: text
 #. Description
@@ -3217,7 +3217,7 @@ msgstr "Pripravuje sa inštalácia základného systému..."
 msgid "Installing the base system"
 msgstr "Inštalácia základného systému"
 
-#. #-#-#-#-#  templates.pot (PACKAGE VERSION)  #-#-#-#-#
+#. #-#-#-#-#  templates.pot (base-installer)  #-#-#-#-#
 #. Type: text
 #. Description
 #. :sl1:
@@ -3431,6 +3431,14 @@ msgstr "Rozbaľuje sa ${SUBST0}..."
 #: ../bootstrap-base.templates:41001
 msgid "Configuring ${SUBST0}..."
 msgstr "Nastavuje sa ${SUBST0}..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Release is a filename which should not be translated
+#: ../bootstrap-base.templates:42001
+msgid "Checking Release signature"
+msgstr "Kontroluje sa podpis súboru Release"
 
 #. Type: text
 #. Description
@@ -3686,8 +3694,26 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:1001
-msgid "Scanning the CD-ROM..."
-msgstr "Prehľadáva sa CD-ROM..."
+#, fuzzy
+#| msgid "Finishing the installation"
+msgid "Scanning the installation media..."
+msgstr "Dokončuje sa inštalácia"
+
+#. Type: error
+#. Description
+#. :sl2:
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:2001 ../apt-cdrom-setup.templates:6001
+#, fuzzy
+#| msgid ""
+#| "An attempt to configure apt to install additional packages from the CD "
+#| "failed."
+msgid ""
+"An attempt to configure apt to install additional packages from the media "
+"failed."
+msgstr "Zlyhal pokus o nastavenie apt pre inštaláciu ďalších balíkov z CD."
 
 #. Type: boolean
 #. Description
@@ -3703,25 +3729,33 @@ msgstr "Prehľadáva sa CD-ROM..."
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001 ../apt-cdrom-setup.templates:4001
 #: ../apt-cdrom-setup.templates:5001 ../apt-cdrom-setup.templates:6001
-msgid "Scan another CD or DVD?"
-msgstr "Prehľadať ďalšie CD či DVD?"
+#, fuzzy
+#| msgid "SILO installation failed"
+msgid "Scan extra installation media?"
+msgstr "Inštalácia SILO zlyhala"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001
-msgid "Your installation CD or DVD has been scanned; its label is:"
-msgstr "Vaše inštalačné CD alebo DVD bolo prehľadané; jeho označenie je:"
+msgid "Scanning your installation media finds the label:"
+msgstr ""
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001
+#, fuzzy
+#| msgid ""
+#| "You now have the option to scan additional CDs or DVDs for use by the "
+#| "package manager (apt). Normally these should be from the same set as the "
+#| "installation CD/DVD. If you do not have any additional CDs or DVDs "
+#| "available, this step can just be skipped."
 msgid ""
-"You now have the option to scan additional CDs or DVDs for use by the "
-"package manager (apt). Normally these should be from the same set as the "
-"installation CD/DVD. If you do not have any additional CDs or DVDs "
-"available, this step can just be skipped."
+"You now have the option of scanning additional media for use by the package "
+"manager (apt). Normally these should be from the same set as the one you "
+"booted from. If you do not have any additional media, this step can just be "
+"skipped."
 msgstr ""
 "Teraz máte možnosť nechať prehľadať ďalšie CD alebo DVD, ktoré správca "
 "balíčkov (apt) použije. Bežne sa nachádzajú v rovnakej sade ako inštalačné "
@@ -3734,7 +3768,9 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001 ../apt-cdrom-setup.templates:4001
-msgid "If you wish to scan another CD or DVD, please insert it now."
+#, fuzzy
+#| msgid "If you wish to scan another CD or DVD, please insert it now."
+msgid "If you wish to scan more media, please insert another one now."
 msgstr ""
 "Ak chcete nechať prehľadať ďalšie CD alebo DVD, teraz ho prosím vložte."
 
@@ -3742,44 +3778,41 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:4001
-msgid "The CD or DVD with the following label has been scanned:"
+#, fuzzy
+#| msgid "The CD or DVD with the following label has been scanned:"
+msgid "The image with the following label has been scanned:"
 msgstr "CD alebo DVD s týmto označením bolo prehľadané:"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:5001
-msgid "The CD or DVD with the following label has already been scanned:"
+#, fuzzy
+#| msgid "The CD or DVD with the following label has already been scanned:"
+msgid "The image with the following label has already been scanned:"
 msgstr "CD alebo DVD s týmto označením už bolo prehľadané:"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:5001
-msgid "Please replace it now if you wish to scan another CD or DVD."
+#, fuzzy
+#| msgid "Please replace it now if you wish to scan another CD or DVD."
+msgid "Please replace it now, if you wish to scan another."
 msgstr "Ak si želáte prehľadať ďalšie CD alebo DVD, teraz ho prosím vymeňte."
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:6001
-msgid ""
-"An attempt to configure apt to install additional packages from the CD/DVD "
-"failed."
-msgstr "Zlyhal pokus nastaviť apt pre inštaláciu ďalších balíkov z CD/DVD."
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:6001
-msgid "Please check that the CD/DVD has been inserted correctly."
+#, fuzzy
+#| msgid "Please check that the CD/DVD has been inserted correctly."
+msgid "Please check that the media has been inserted correctly."
 msgstr "Prosím, uistite sa, že CD/DVD bolo vložené správne."
 
 #. Type: text
 #. Description
 #. :sl1:
-#. This template uses the same text as used in the package apt for apt-cdrom
-#. Do not translate "/cdrom/" (the mount point)
 #: ../apt-cdrom-setup.templates:7001
 msgid "Media change"
 msgstr "Výmena nosiča"
@@ -3787,12 +3820,12 @@ msgstr "Výmena nosiča"
 #. Type: text
 #. Description
 #. :sl1:
-#. This template uses the same text as used in the package apt for apt-cdrom
-#. Do not translate "/cdrom/" (the mount point)
 #: ../apt-cdrom-setup.templates:7001
-msgid ""
-"/cdrom/: Please insert the disc labeled '${LABEL}' in the drive '/cdrom/' "
-"and press enter."
+#, fuzzy
+#| msgid ""
+#| "/cdrom/: Please insert the disc labeled '${LABEL}' in the drive '/cdrom/' "
+#| "and press enter."
+msgid "Please insert the media labeled '${LABEL}' and press enter."
 msgstr ""
 "/cdrom/: Prosím, vložte disk s označením '${LABEL}' do jednotky '/cdrom/' a "
 "stlačte Enter."
@@ -3812,9 +3845,13 @@ msgstr "Odstraňuje sa použitie netinst CD v sources.list..."
 #. Description
 #. :sl2:
 #: ../apt-cdrom-setup.templates:9001 ../apt-mirror-setup.templates:6001
+#, fuzzy
+#| msgid ""
+#| "If you are installing from a netinst CD and choose not to use a mirror, "
+#| "you will end up with only a very minimal base system."
 msgid ""
-"If you are installing from a netinst CD and choose not to use a mirror, you "
-"will end up with only a very minimal base system."
+"If you are installing from a netinst CD image and choose not to use a "
+"mirror, you will end up with only a very minimal base system."
 msgstr ""
 "Ak si pri inštalácii z „netinst“ CD nezvolíte použitie sieťového zrkadla, "
 "skončíte s veľmi obmedzeným základným systémom."
@@ -3823,8 +3860,13 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:10001
+#, fuzzy
+#| msgid ""
+#| "You are installing from a netinst CD, which by itself only allows "
+#| "installation of a very minimal base system. Use a mirror to install a "
+#| "more complete system."
 msgid ""
-"You are installing from a netinst CD, which by itself only allows "
+"You are installing from a netinst CD image, which by itself only allows "
 "installation of a very minimal base system. Use a mirror to install a more "
 "complete system."
 msgstr ""
@@ -3836,8 +3878,13 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:11001
+#, fuzzy
+#| msgid ""
+#| "You are installing from a CD, which contains a limited selection of "
+#| "packages."
 msgid ""
-"You are installing from a CD, which contains a limited selection of packages."
+"You are installing from an image which contains a limited selection of "
+"packages."
 msgstr "Inštalujete z CD, ktoré obsahuje obmedzený výber balíkov."
 
 #. Type: text
@@ -3845,9 +3892,13 @@ msgstr "Inštalujete z CD, ktoré obsahuje obmedzený výber balíkov."
 #. :sl1:
 #. The value of %i can be 2 or 3
 #: ../apt-cdrom-setup.templates:12001
-#, no-c-format
+#, fuzzy, no-c-format
+#| msgid ""
+#| "You have scanned %i CDs. Even though these contain a fair selection of "
+#| "packages, some may be missing (notably some packages needed to support "
+#| "languages other than English)."
 msgid ""
-"You have scanned %i CDs. Even though these contain a fair selection of "
+"You have scanned %i images. Even though these contain a fair selection of "
 "packages, some may be missing (notably some packages needed to support "
 "languages other than English)."
 msgstr ""
@@ -3860,9 +3911,12 @@ msgstr ""
 #. :sl1:
 #. The value of %i can be from 4 to 8
 #: ../apt-cdrom-setup.templates:13001
-#, no-c-format
+#, fuzzy, no-c-format
+#| msgid ""
+#| "You have scanned %i CDs. Even though these contain a large selection of "
+#| "packages, some may be missing."
 msgid ""
-"You have scanned %i CDs. Even though these contain a large selection of "
+"You have scanned %i images. Even though these contain a large selection of "
 "packages, some may be missing."
 msgstr ""
 "Nechali ste prehľadať %i CD nosičov. Hoci tieto obsahujú veľký výber "
@@ -3883,8 +3937,12 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:15001
+#, fuzzy
+#| msgid ""
+#| "You are installing from a DVD. Even though the DVD contains a large "
+#| "selection of packages, some may be missing."
 msgid ""
-"You are installing from a DVD. Even though the DVD contains a large "
+"You are installing from a DVD image. Even though it contains a large "
 "selection of packages, some may be missing."
 msgstr ""
 "Inštalujete z DVD. Hoci DVD obsahujú veľký výber balíkov, niektoré môžu "
@@ -4013,9 +4071,14 @@ msgstr "Použiť sieťové zrkadlo archívu?"
 #. Description
 #. :sl1:
 #: ../apt-mirror-setup.templates:5001
+#, fuzzy
+#| msgid ""
+#| "A network mirror can be used to supplement the software that is included "
+#| "on the CD-ROM. This may also make newer versions of software available."
 msgid ""
 "A network mirror can be used to supplement the software that is included on "
-"the CD-ROM. This may also make newer versions of software available."
+"the installation media. This may also make newer versions of software "
+"available."
 msgstr ""
 "Sieťové zrkadlo sa môže použiť na rozšírenie programov dostupných na CD o "
 "ďalšie programy. Takisto sa sprístupnia novšie verzie dostupných programov."
@@ -4647,6 +4710,65 @@ msgstr "Nastavenie správcu logických zväzkov (LVM)"
 #: ../partman-auto-lvm.templates:1001
 msgid "Guided - use entire disk and set up LVM"
 msgstr "Sprievodca - použiť celý disk a nastaviť LVM"
+
+#~ msgid "Load installer components from CD"
+#~ msgstr "Načítanie súčastí inštalačného programu z CD"
+
+#~ msgid "Detecting hardware to find CD-ROM drives"
+#~ msgstr "Rozpoznáva sa hardvér aby sa našla mechanika CD-ROM"
+
+#~ msgid "Scanning CD-ROM"
+#~ msgstr "Prehľadáva sa CD-ROM"
+
+#~ msgid "Unmounting and ejecting CD-ROM..."
+#~ msgstr "CD-ROM sa odpája a vysúva..."
+
+#~ msgid "Scanning the CD-ROM..."
+#~ msgstr "Prehľadáva sa CD-ROM..."
+
+#~ msgid "Scan another CD or DVD?"
+#~ msgstr "Prehľadať ďalšie CD či DVD?"
+
+#~ msgid "Your installation CD or DVD has been scanned; its label is:"
+#~ msgstr "Vaše inštalačné CD alebo DVD bolo prehľadané; jeho označenie je:"
+
+#~ msgid ""
+#~ "An attempt to configure apt to install additional packages from the CD/"
+#~ "DVD failed."
+#~ msgstr "Zlyhal pokus nastaviť apt pre inštaláciu ďalších balíkov z CD/DVD."
+
+#~ msgid "Load CD-ROM drivers from removable media?"
+#~ msgstr "Načítať ovládače CD-ROM z prenosného nosiča?"
+
+#~ msgid "Retry mounting the CD-ROM?"
+#~ msgstr "Pokúsiť sa znovu o pripojenie CD-ROM?"
+
+#~ msgid "CD-ROM detected"
+#~ msgstr "CD-ROM mechanika bola rozpoznaná"
+
+#~ msgid "Incorrect CD-ROM detected"
+#~ msgstr "Nebolo nájdené správne CD-ROM"
+
+#~ msgid "Detect and mount CD-ROM"
+#~ msgstr "Rozpoznanie a pripojenie CD-ROM"
+
+#~ msgid "Check the CD-ROM(s) integrity"
+#~ msgstr "Kontrola integrity CD"
+
+#~ msgid "Check CD-ROM integrity?"
+#~ msgstr "Skontrolovať integritu CD-ROM?"
+
+#~ msgid "Insert a Debian CD-ROM"
+#~ msgstr "Vložte CD s Debianom"
+
+#~ msgid "Failed to mount CD-ROM"
+#~ msgstr "Zlyhalo pripojenie CD"
+
+#~ msgid "No valid Debian CD-ROM"
+#~ msgstr "Nesprávne Debian CD"
+
+#~ msgid "Checking CD-ROM integrity"
+#~ msgstr "Kontrola integrity CD"
 
 #~ msgid "No DHCP client was found. This package requires pump or dhcp-client."
 #~ msgstr ""
@@ -5584,9 +5706,6 @@ msgstr "Sprievodca - použiť celý disk a nastaviť LVM"
 #~ "Since the partitions have already been mounted, you cannot do any changes."
 #~ msgstr "Nemôžete robiť žiadne zmeny, pretože oblasti sú už pripojené."
 
-#~ msgid "Failed to unmount partitions"
-#~ msgstr "Chyba pri odpájaní oblastí"
-
 #~ msgid "An unexpected error occurred while unmounting the partitions."
 #~ msgstr "Pri odpájaní oblastí došlo k neočakávanej chybe."
 
@@ -5764,9 +5883,6 @@ msgstr "Sprievodca - použiť celý disk a nastaviť LVM"
 #~ "Inštalácia balíka „silo“ do /target/ zlyhala. Inštalácia SILO zavádzača "
 #~ "je nutná. Problém pri inštalácii možno nesúvisí so zavádzačom LILO, že "
 #~ "budete môcť pokračovať v inštalácii."
-
-#~ msgid "SILO installation failed"
-#~ msgstr "Inštalácia SILO zlyhala"
 
 #~ msgid "Running \"/sbin/silo\" failed with error code \"${ERRCODE}\"."
 #~ msgstr "Spustenie „/sbin/silo“ zlyhalo s chybou „${ERRCODE}“."

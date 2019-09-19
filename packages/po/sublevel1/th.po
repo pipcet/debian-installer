@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-28 21:20+0000\n"
+"POT-Creation-Date: 2019-09-19 16:20+0000\n"
 "PO-Revision-Date: 2017-02-22 21:20+0700\n"
 "Last-Translator: Theppitak Karoonboonyanan <theppitak@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -623,13 +623,6 @@ msgstr "ป้อนข้อมูลเอง"
 msgid "Download installer components"
 msgstr "ดาวน์โหลดองค์ประกอบการติดตั้ง"
 
-#. Type: text
-#. Description
-#. Main menu item
-#: ../load-cdrom.templates:1001
-msgid "Load installer components from CD"
-msgstr "โหลดองค์ประกอบการติดตั้งจากซีดี"
-
 #. Type: boolean
 #. Description
 #: ../load-media.templates:1001
@@ -734,13 +727,6 @@ msgid ""
 msgstr ""
 "รายการนี้แสดงเครื่องมือที่มีให้ใช้ ถ้าคุณไม่แน่ใจว่าจะเลือกเครื่องมือไหน ก็ควรเลือกตัวเลือกปริยาย "
 "ถ้าระบบบูตไม่สำเร็จ คุณสามารถลองติดตั้งใหม่ด้วยตัวเลือกอื่นได้"
-
-#. Type: text
-#. Description
-#. Release is a filename which should not be translated
-#: ../bootstrap-base.templates:42001
-msgid "Checking Release signature"
-msgstr "กำลังตรวจสอบลายเซ็นกำกับ Release"
 
 #. Type: select
 #. Description
@@ -1571,15 +1557,19 @@ msgstr "ปุ่มในรายชื่อนี้ไม่ได้มี
 #. Description
 #. :sl1:
 #: ../cdrom-detect.templates:2001
-msgid "Detecting hardware to find CD-ROM drives"
-msgstr "กำลังตรวจสอบฮาร์ดแวร์เพื่อหาไดรว์ซีดีรอม"
+#, fuzzy
+#| msgid "Detecting hardware to find hard drives"
+msgid "Detecting hardware to find installation media"
+msgstr "กำลังตรวจสอบฮาร์ดแวร์เพื่อหาฮาร์ดดิสก์"
 
 #. Type: text
 #. Description
 #. :sl1:
 #: ../cdrom-detect.templates:10001
-msgid "Scanning CD-ROM"
-msgstr "กำลังสำรวจข้อมูลในซีดีรอม"
+#, fuzzy
+#| msgid "SILO installation failed"
+msgid "Scanning installation media"
+msgstr "ติดตั้ง SILO ไม่สำเร็จ"
 
 #. Type: text
 #. Description
@@ -1593,8 +1583,8 @@ msgstr "กำลังสำรวจข้อมูลใน ${DIR}..."
 #. finish-install progress bar item
 #. :sl1:
 #: ../cdrom-detect.templates:19001
-msgid "Unmounting and ejecting CD-ROM..."
-msgstr "กำลังเลิกเมานท์และดันแผ่นซีดีรอมออก..."
+msgid "Unmounting/ejecting installation media..."
+msgstr ""
 
 #. Type: text
 #. Description
@@ -2304,6 +2294,16 @@ msgstr "ข้อมูลพร็อกซีควรอยู่ในรู
 #: ../mdcfg-utils.templates:6001 ../mdcfg-utils.templates:13001
 msgid "Cancel"
 msgstr "ยกเลิก"
+
+#. Type: text
+#. Description
+#. Main menu item
+#. :sl1:
+#: ../load-cdrom.templates:1001
+#, fuzzy
+#| msgid "Load installer components from an installer ISO"
+msgid "Load installer components from installation media"
+msgstr "โหลดองค์ประกอบโปรแกรมติดตั้งจาก ISO ของโปรแกรมติดตั้ง"
 
 #. Type: text
 #. Description
@@ -3134,7 +3134,7 @@ msgstr "กำลังเตรียมติดตั้งระบบพื
 msgid "Installing the base system"
 msgstr "กำลังติดตั้งระบบพื้นฐาน"
 
-#. #-#-#-#-#  templates.pot (PACKAGE VERSION)  #-#-#-#-#
+#. #-#-#-#-#  templates.pot (base-installer)  #-#-#-#-#
 #. Type: text
 #. Description
 #. :sl1:
@@ -3348,6 +3348,14 @@ msgstr "กำลังแตก ${SUBST0}..."
 #: ../bootstrap-base.templates:41001
 msgid "Configuring ${SUBST0}..."
 msgstr "กำลังตั้งค่า ${SUBST0}..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Release is a filename which should not be translated
+#: ../bootstrap-base.templates:42001
+msgid "Checking Release signature"
+msgstr "กำลังตรวจสอบลายเซ็นกำกับ Release"
 
 #. Type: text
 #. Description
@@ -3601,8 +3609,26 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:1001
-msgid "Scanning the CD-ROM..."
-msgstr "กำลังสำรวจข้อมูลในซีดีรอม..."
+#, fuzzy
+#| msgid "Finishing the installation"
+msgid "Scanning the installation media..."
+msgstr "กำลังสิ้นสุดการติดตั้ง"
+
+#. Type: error
+#. Description
+#. :sl2:
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:2001 ../apt-cdrom-setup.templates:6001
+#, fuzzy
+#| msgid ""
+#| "An attempt to configure apt to install additional packages from the CD "
+#| "failed."
+msgid ""
+"An attempt to configure apt to install additional packages from the media "
+"failed."
+msgstr "ตั้งค่า apt เพื่อการติดตั้งแพกเกจเพิ่มเติมจากซีดีรอมไม่สำเร็จ"
 
 #. Type: boolean
 #. Description
@@ -3618,25 +3644,33 @@ msgstr "กำลังสำรวจข้อมูลในซีดีรอ
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001 ../apt-cdrom-setup.templates:4001
 #: ../apt-cdrom-setup.templates:5001 ../apt-cdrom-setup.templates:6001
-msgid "Scan another CD or DVD?"
-msgstr "จะสำรวจข้อมูลซีดีหรือดีวีดีแผ่นอื่นอีกหรือไม่?"
+#, fuzzy
+#| msgid "SILO installation failed"
+msgid "Scan extra installation media?"
+msgstr "ติดตั้ง SILO ไม่สำเร็จ"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001
-msgid "Your installation CD or DVD has been scanned; its label is:"
-msgstr "แผ่นซีดีหรือดีวีดีติดตั้งของคุณผ่านการสำรวจข้อมูลเรียบร้อย ป้ายชื่อแผ่นคือ:"
+msgid "Scanning your installation media finds the label:"
+msgstr ""
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001
+#, fuzzy
+#| msgid ""
+#| "You now have the option to scan additional CDs or DVDs for use by the "
+#| "package manager (apt). Normally these should be from the same set as the "
+#| "installation CD/DVD. If you do not have any additional CDs or DVDs "
+#| "available, this step can just be skipped."
 msgid ""
-"You now have the option to scan additional CDs or DVDs for use by the "
-"package manager (apt). Normally these should be from the same set as the "
-"installation CD/DVD. If you do not have any additional CDs or DVDs "
-"available, this step can just be skipped."
+"You now have the option of scanning additional media for use by the package "
+"manager (apt). Normally these should be from the same set as the one you "
+"booted from. If you do not have any additional media, this step can just be "
+"skipped."
 msgstr ""
 "คุณสามารถเลือกสำรวจข้อมูลแผ่นซีดีหรือดีวีดีเพิ่มเติม เพื่อใช้กับโปรแกรมจัดการแพกเกจ (apt) ได้ "
 "โดยปกติแล้ว แผ่นเหล่านี้จะอยู่ในชุดเดียวกับแผ่นซีดี/ดีวีดีติดตั้ง ถ้าคุณไม่มีซีดีหรือดีวีดีแผ่นอื่นอีกแล้ว "
@@ -3649,51 +3683,50 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001 ../apt-cdrom-setup.templates:4001
-msgid "If you wish to scan another CD or DVD, please insert it now."
+#, fuzzy
+#| msgid "If you wish to scan another CD or DVD, please insert it now."
+msgid "If you wish to scan more media, please insert another one now."
 msgstr "ถ้าคุณต้องการสำรวจข้อมูลซีดีหรือดีวีดีแผ่นอื่นเพิ่ม ก็กรุณาใส่แผ่นได้"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:4001
-msgid "The CD or DVD with the following label has been scanned:"
+#, fuzzy
+#| msgid "The CD or DVD with the following label has been scanned:"
+msgid "The image with the following label has been scanned:"
 msgstr "สำรวจข้อมูลแผ่นซีดีหรือดีวีดีชื่อต่อไปนี้เรียบร้อยแล้ว:"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:5001
-msgid "The CD or DVD with the following label has already been scanned:"
+#, fuzzy
+#| msgid "The CD or DVD with the following label has already been scanned:"
+msgid "The image with the following label has already been scanned:"
 msgstr "ได้สำรวจข้อมูลแผ่นซีดีหรือดีวีดีชื่อต่อไปนี้ไปแล้ว:"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:5001
-msgid "Please replace it now if you wish to scan another CD or DVD."
+#, fuzzy
+#| msgid "Please replace it now if you wish to scan another CD or DVD."
+msgid "Please replace it now, if you wish to scan another."
 msgstr "กรุณาใส่แผ่นอื่นแทนถ้าคุณต้องการสำรวจข้อมูลซีดีหรือดีวีดีแผ่นอื่นเพิ่ม"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:6001
-msgid ""
-"An attempt to configure apt to install additional packages from the CD/DVD "
-"failed."
-msgstr "ตั้งค่า apt เพื่อการติดตั้งแพกเกจเพิ่มเติมจากซีดี/ดีวีดีไม่สำเร็จ"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:6001
-msgid "Please check that the CD/DVD has been inserted correctly."
+#, fuzzy
+#| msgid "Please check that the CD/DVD has been inserted correctly."
+msgid "Please check that the media has been inserted correctly."
 msgstr "กรุณาตรวจสอบให้แน่ใจ ว่าคุณได้ใส่แผ่นซีดี/ดีวีดีอย่างถูกต้อง"
 
 #. Type: text
 #. Description
 #. :sl1:
-#. This template uses the same text as used in the package apt for apt-cdrom
-#. Do not translate "/cdrom/" (the mount point)
 #: ../apt-cdrom-setup.templates:7001
 msgid "Media change"
 msgstr "เปลี่ยนแผ่น"
@@ -3701,12 +3734,12 @@ msgstr "เปลี่ยนแผ่น"
 #. Type: text
 #. Description
 #. :sl1:
-#. This template uses the same text as used in the package apt for apt-cdrom
-#. Do not translate "/cdrom/" (the mount point)
 #: ../apt-cdrom-setup.templates:7001
-msgid ""
-"/cdrom/: Please insert the disc labeled '${LABEL}' in the drive '/cdrom/' "
-"and press enter."
+#, fuzzy
+#| msgid ""
+#| "/cdrom/: Please insert the disc labeled '${LABEL}' in the drive '/cdrom/' "
+#| "and press enter."
+msgid "Please insert the media labeled '${LABEL}' and press enter."
 msgstr "/cdrom/: กรุณาใส่แผ่นชื่อ '${LABEL}' ลงในไดรว์ '/cdrom/' แล้วกด enter"
 
 #. Type: text
@@ -3724,9 +3757,13 @@ msgstr "กำลังปิดการใช้งานซีดี netinst 
 #. Description
 #. :sl2:
 #: ../apt-cdrom-setup.templates:9001 ../apt-mirror-setup.templates:6001
+#, fuzzy
+#| msgid ""
+#| "If you are installing from a netinst CD and choose not to use a mirror, "
+#| "you will end up with only a very minimal base system."
 msgid ""
-"If you are installing from a netinst CD and choose not to use a mirror, you "
-"will end up with only a very minimal base system."
+"If you are installing from a netinst CD image and choose not to use a "
+"mirror, you will end up with only a very minimal base system."
 msgstr ""
 "ถ้าคุณกำลังติดตั้งจากแผ่นซีดี netinst แต่เลือกที่จะไม่ใช้แหล่งสำเนาในเครือข่าย "
 "คุณจะได้เพียงระบบพื้นฐานที่จำกัดมากๆ"
@@ -3735,8 +3772,13 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:10001
+#, fuzzy
+#| msgid ""
+#| "You are installing from a netinst CD, which by itself only allows "
+#| "installation of a very minimal base system. Use a mirror to install a "
+#| "more complete system."
 msgid ""
-"You are installing from a netinst CD, which by itself only allows "
+"You are installing from a netinst CD image, which by itself only allows "
 "installation of a very minimal base system. Use a mirror to install a more "
 "complete system."
 msgstr ""
@@ -3747,8 +3789,13 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:11001
+#, fuzzy
+#| msgid ""
+#| "You are installing from a CD, which contains a limited selection of "
+#| "packages."
 msgid ""
-"You are installing from a CD, which contains a limited selection of packages."
+"You are installing from an image which contains a limited selection of "
+"packages."
 msgstr "คุณกำลังติดตั้งจากซีดี ซึ่งมีแพกเกจจำนวนจำกัด"
 
 #. Type: text
@@ -3756,9 +3803,13 @@ msgstr "คุณกำลังติดตั้งจากซีดี ซ�
 #. :sl1:
 #. The value of %i can be 2 or 3
 #: ../apt-cdrom-setup.templates:12001
-#, no-c-format
+#, fuzzy, no-c-format
+#| msgid ""
+#| "You have scanned %i CDs. Even though these contain a fair selection of "
+#| "packages, some may be missing (notably some packages needed to support "
+#| "languages other than English)."
 msgid ""
-"You have scanned %i CDs. Even though these contain a fair selection of "
+"You have scanned %i images. Even though these contain a fair selection of "
 "packages, some may be missing (notably some packages needed to support "
 "languages other than English)."
 msgstr ""
@@ -3770,9 +3821,12 @@ msgstr ""
 #. :sl1:
 #. The value of %i can be from 4 to 8
 #: ../apt-cdrom-setup.templates:13001
-#, no-c-format
+#, fuzzy, no-c-format
+#| msgid ""
+#| "You have scanned %i CDs. Even though these contain a large selection of "
+#| "packages, some may be missing."
 msgid ""
-"You have scanned %i CDs. Even though these contain a large selection of "
+"You have scanned %i images. Even though these contain a large selection of "
 "packages, some may be missing."
 msgstr ""
 "คุณได้สำรวจข้อมูลซีดี %i แผ่น ซึ่งถึงแม้จะมีแพกเกจเป็นจำนวนมาก แต่บางแพกเกจก็อาจขาดหายไป"
@@ -3791,8 +3845,12 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:15001
+#, fuzzy
+#| msgid ""
+#| "You are installing from a DVD. Even though the DVD contains a large "
+#| "selection of packages, some may be missing."
 msgid ""
-"You are installing from a DVD. Even though the DVD contains a large "
+"You are installing from a DVD image. Even though it contains a large "
 "selection of packages, some may be missing."
 msgstr ""
 "คุณกำลังติดตั้งจากดีวีดี ถึงแม้แผ่นดีวีดีจะมีแพกเกจเป็นจำนวนมาก แต่บางแพกเกจก็อาจขาดหายไป"
@@ -3920,9 +3978,14 @@ msgstr "จะใช้แหล่งสำเนาในเครือข่
 #. Description
 #. :sl1:
 #: ../apt-mirror-setup.templates:5001
+#, fuzzy
+#| msgid ""
+#| "A network mirror can be used to supplement the software that is included "
+#| "on the CD-ROM. This may also make newer versions of software available."
 msgid ""
 "A network mirror can be used to supplement the software that is included on "
-"the CD-ROM. This may also make newer versions of software available."
+"the installation media. This may also make newer versions of software "
+"available."
 msgstr ""
 "แหล่งสำเนาในเครือข่าย สามารถใช้เป็นแหล่งเสริมสำหรับซอฟต์แวร์ที่ไม่ได้รวมมาในซีดีรอม "
 "รวมทั้งสามารถใช้ปรับรุ่นซอฟต์แวร์เป็นรุ่นใหม่ๆ ได้ด้วย"
@@ -4535,6 +4598,65 @@ msgstr "ตั้งค่า Logical Volume Manager"
 #: ../partman-auto-lvm.templates:1001
 msgid "Guided - use entire disk and set up LVM"
 msgstr "แนะแนว - ใช้เนื้อที่ทั้งดิสก์โดยใช้ LVM"
+
+#~ msgid "Load installer components from CD"
+#~ msgstr "โหลดองค์ประกอบการติดตั้งจากซีดี"
+
+#~ msgid "Detecting hardware to find CD-ROM drives"
+#~ msgstr "กำลังตรวจสอบฮาร์ดแวร์เพื่อหาไดรว์ซีดีรอม"
+
+#~ msgid "Scanning CD-ROM"
+#~ msgstr "กำลังสำรวจข้อมูลในซีดีรอม"
+
+#~ msgid "Unmounting and ejecting CD-ROM..."
+#~ msgstr "กำลังเลิกเมานท์และดันแผ่นซีดีรอมออก..."
+
+#~ msgid "Scanning the CD-ROM..."
+#~ msgstr "กำลังสำรวจข้อมูลในซีดีรอม..."
+
+#~ msgid "Scan another CD or DVD?"
+#~ msgstr "จะสำรวจข้อมูลซีดีหรือดีวีดีแผ่นอื่นอีกหรือไม่?"
+
+#~ msgid "Your installation CD or DVD has been scanned; its label is:"
+#~ msgstr "แผ่นซีดีหรือดีวีดีติดตั้งของคุณผ่านการสำรวจข้อมูลเรียบร้อย ป้ายชื่อแผ่นคือ:"
+
+#~ msgid ""
+#~ "An attempt to configure apt to install additional packages from the CD/"
+#~ "DVD failed."
+#~ msgstr "ตั้งค่า apt เพื่อการติดตั้งแพกเกจเพิ่มเติมจากซีดี/ดีวีดีไม่สำเร็จ"
+
+#~ msgid "Load CD-ROM drivers from removable media?"
+#~ msgstr "จะโหลดไดรเวอร์ซีดีรอมจากสื่อถอดเสียบหรือไม่?"
+
+#~ msgid "Retry mounting the CD-ROM?"
+#~ msgstr "จะพยายามเมานท์ซีดีรอมอีกครั้งหรือไม่?"
+
+#~ msgid "CD-ROM detected"
+#~ msgstr "ตรวจพบซีดีรอม"
+
+#~ msgid "Incorrect CD-ROM detected"
+#~ msgstr "ตรวจพบแผ่นซีดีรอมที่ไม่ถูกต้อง"
+
+#~ msgid "Detect and mount CD-ROM"
+#~ msgstr "ตรวจหาและเมานท์ซีดีรอม"
+
+#~ msgid "Check the CD-ROM(s) integrity"
+#~ msgstr "ตรวจสอบความสมบูรณ์ของซีดีรอม"
+
+#~ msgid "Check CD-ROM integrity?"
+#~ msgstr "จะตรวจสอบความสมบูรณ์ของซีดีรอมหรือไม่?"
+
+#~ msgid "Insert a Debian CD-ROM"
+#~ msgstr "ใส่แผ่นซีดีรอมเดเบียน"
+
+#~ msgid "Failed to mount CD-ROM"
+#~ msgstr "เมานท์ซีดีรอมไม่สำเร็จ"
+
+#~ msgid "No valid Debian CD-ROM"
+#~ msgstr "ไม่มีแผ่นซีดีรอมเดเบียนที่ใช้การได้"
+
+#~ msgid "Checking CD-ROM integrity"
+#~ msgstr "กำลังตรวจสอบความสมบูรณ์ของซีดีรอม"
 
 #~ msgid "No DHCP client was found. This package requires pump or dhcp-client."
 #~ msgstr "ไม่พบไคลเอนต์ DHCP  แพกเกจนี้ต้องใช้ pump หรือ dhcp-client"
@@ -5411,9 +5533,6 @@ msgstr "แนะแนว - ใช้เนื้อที่ทั้งดิ
 #~ "Since the partitions have already been mounted, you cannot do any changes."
 #~ msgstr "เนื่องจากพาร์ทิชันเหล่านี้ถูกเมานท์ไว้แล้ว คุณจึงยังเปลี่ยนแปลงอะไรไม่ได้"
 
-#~ msgid "Failed to unmount partitions"
-#~ msgstr "เลิกเมานท์พาร์ทิชันไม่สำเร็จ"
-
 #~ msgid "An unexpected error occurred while unmounting the partitions."
 #~ msgstr "เกิดข้อผิดพลาดขณะเลิกเมานท์พาร์ทิชัน"
 
@@ -5579,9 +5698,6 @@ msgstr "แนะแนว - ใช้เนื้อที่ทั้งดิ
 #~ "ติดตั้งแพกเกจ 'silo' ลงใน /target/ ไม่สำเร็จ การติดตั้ง SILO เป็นบูตโหลดเดอร์ "
 #~ "เป็นขั้นตอนที่จำเป็น แต่ปัญหาของการติดตั้งอาจไม่เกี่ยวกับ SILO ก็ได้ ดังนั้น "
 #~ "การดำเนินการติดตั้งต่อไปก็อาจทำได้"
-
-#~ msgid "SILO installation failed"
-#~ msgstr "ติดตั้ง SILO ไม่สำเร็จ"
 
 #~ msgid "Running \"/sbin/silo\" failed with error code \"${ERRCODE}\"."
 #~ msgstr "การทำงานคำสั่ง \"/sbin/silo\" ไม่สำเร็จ โดยมีรหัสข้อผิดพลาด \"${ERRCODE}\""

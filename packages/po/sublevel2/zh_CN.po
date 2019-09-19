@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-15 19:16+0000\n"
+"POT-Creation-Date: 2019-09-19 16:20+0000\n"
 "PO-Revision-Date: 2019-08-26 15:24+0000\n"
 "Last-Translator: Boyuan Yang <073plan@gmail.com>\n"
 "Language-Team: <debian-l10n-chinese@lists.debian.org>\n"
@@ -464,28 +464,33 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:1001
-msgid "Load CD-ROM drivers from removable media?"
-msgstr "从可移动介质中加载光盘驱动器的驱动程序吗？"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../cdrom-detect.templates:1001 ../cdrom-detect.templates:3001
-msgid "No common CD-ROM drive was detected."
-msgstr "没有探测到常见的光盘驱动器。"
+#, fuzzy
+#| msgid "Load drivers from removable media"
+msgid "Load drivers from removable media?"
+msgstr "从可移动介质中加载驱动程序"
 
 #. Type: boolean
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:1001
+msgid "No device for installation media was detected."
+msgstr ""
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../cdrom-detect.templates:1001
+#, fuzzy
+#| msgid ""
+#| "You may need to load additional CD-ROM drivers from removable media, such "
+#| "as a driver floppy. If you have such media available now, insert it, and "
+#| "continue. Otherwise, you will be given the option to manually select CD-"
+#| "ROM modules."
 msgid ""
-"You may need to load additional CD-ROM drivers from removable media, such as "
-"a driver floppy. If you have such media available now, insert it, and "
-"continue. Otherwise, you will be given the option to manually select CD-ROM "
-"modules."
+"You may need to load additional drivers from removable media, such as a "
+"driver floppy or a USB stick. If you have these available now, insert the "
+"media, and continue. Otherwise, you will be given the option to manually "
+"select some modules."
 msgstr ""
 "您可能需要从可移动介质中加载额外的光盘驱动器的驱动模块，例如驱动软盘。如果您"
 "已经拥有这样的介质，请将其插入，然后继续安装进程。否则，将给您一个选项用以手"
@@ -495,18 +500,36 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:3001
-msgid "Manually select a CD-ROM module and device?"
+#, fuzzy
+#| msgid "Manually select a CD-ROM module and device?"
+msgid "Manually select a module and device for installation media?"
 msgstr "手动选择光盘驱动器设备及其模块吗？"
 
 #. Type: boolean
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:3001
+#, fuzzy
+#| msgid "No common CD-ROM drive was detected."
+msgid "No device for installation media (like a CD-ROM device) was detected."
+msgstr "没有探测到常见的光盘驱动器。"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../cdrom-detect.templates:3001
+#, fuzzy
+#| msgid ""
+#| "Your CD-ROM drive may be an old Mitsumi or another non-IDE, non-SCSI CD-"
+#| "ROM drive. In that case you should choose which module to load and the "
+#| "device to use. If you don't know which module and device are needed, look "
+#| "for some documentation or try a network installation instead of a CD-ROM "
+#| "installation."
 msgid ""
-"Your CD-ROM drive may be an old Mitsumi or another non-IDE, non-SCSI CD-ROM "
-"drive. In that case you should choose which module to load and the device to "
-"use. If you don't know which module and device are needed, look for some "
-"documentation or try a network installation instead of a CD-ROM installation."
+"If your CD-ROM drive is an old Mitsumi or another non-IDE, non-SCSI CD-ROM "
+"drive, you should choose which module to load and the device to use. If you "
+"don't know which module and device are needed, look for some documentation "
+"or try a network installation."
 msgstr ""
 "您的光盘驱动器也许是老式的三菱或者其他非 IDE、非 SCSI 的型号。那样的话，请您"
 "手动选择将要使用的设备及其驱动模块。如果您不知道应该用哪一个，请查找相关文档"
@@ -516,16 +539,23 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:4001
-msgid "Retry mounting the CD-ROM?"
-msgstr "再次尝试挂载光盘吗？"
+#, fuzzy
+#| msgid "Remote installation password:"
+msgid "Retry mounting installation media?"
+msgstr "远程安装密码："
 
 #. Type: boolean
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:4001
+#, fuzzy
+#| msgid ""
+#| "Your installation CD-ROM couldn't be mounted. This probably means that "
+#| "the CD-ROM was not in the drive. If so you can insert it and try again."
 msgid ""
-"Your installation CD-ROM couldn't be mounted. This probably means that the "
-"CD-ROM was not in the drive. If so you can insert it and try again."
+"Your installation media couldn't be mounted. When installing from CD-ROM, "
+"this probably means that the disk was not in the drive. If so you can insert "
+"it and try again."
 msgstr ""
 "无法挂载安装光盘，有可能是因为光盘并没不在驱动器中。如果是这样请您插入光盘并"
 "重试。"
@@ -534,17 +564,24 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:5001
-msgid "Module needed for accessing the CD-ROM:"
+#, fuzzy
+#| msgid "Module needed for accessing the CD-ROM:"
+msgid "Module needed for accessing the installation media:"
 msgstr "使用此光盘所需要加载的模块："
 
 #. Type: select
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:5001
+#, fuzzy
+#| msgid ""
+#| "The automatic detection didn't find a CD-ROM drive. You can try to load a "
+#| "specific module if you have an unusual CD-ROM drive (that is neither IDE "
+#| "nor SCSI)."
 msgid ""
-"The automatic detection didn't find a CD-ROM drive. You can try to load a "
-"specific module if you have an unusual CD-ROM drive (that is neither IDE nor "
-"SCSI)."
+"The automatic detection didn't find a drive for installation media. When "
+"installing from CD-ROM and you have an unusual CD-ROM drive (that is neither "
+"IDE nor SCSI), you can try to load a specific module."
 msgstr ""
 "未能通过自动探测发现光盘驱动器。如果您的光盘驱动器十分特殊 (既非 IDE 也非 "
 "SCSI)，请尝试加载特定的驱动模块。"
@@ -553,17 +590,24 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:6001
-msgid "Device file for accessing the CD-ROM:"
+#, fuzzy
+#| msgid "Device file for accessing the CD-ROM:"
+msgid "Device file for accessing the installation media:"
 msgstr "光盘驱动器所对应的设备文件："
 
 #. Type: string
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:6001
+#, fuzzy
+#| msgid ""
+#| "In order to access your CD-ROM drive, please enter the device file that "
+#| "should be used. Non-standard CD-ROM drives use non-standard device files "
+#| "(such as /dev/mcdx)."
 msgid ""
-"In order to access your CD-ROM drive, please enter the device file that "
-"should be used. Non-standard CD-ROM drives use non-standard device files "
-"(such as /dev/mcdx)."
+"In order to access your installation media (like your CD-ROM), please enter "
+"the device file that should be used. Non-standard CD-ROM drives use non-"
+"standard device files (such as /dev/mcdx)."
 msgstr ""
 "为了能使用您的光盘驱动器，请输入相应的设备文件名。非标准的光盘驱动器会使用非"
 "标准的设备名 (例如 /dev/mcdx)。"
@@ -584,16 +628,23 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:12001
-msgid "CD-ROM detected"
-msgstr "探测到光盘"
+#, fuzzy
+#| msgid "UNetbootin media detected"
+msgid "Installation media detected"
+msgstr "探测到 UNetbootin 媒体"
 
 #. Type: note
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:12001
+#, fuzzy
+#| msgid ""
+#| "The CD-ROM autodetection was successful. A CD-ROM drive has been found "
+#| "and it currently contains the CD ${cdname}. The installation will now "
+#| "continue."
 msgid ""
-"The CD-ROM autodetection was successful. A CD-ROM drive has been found and "
-"it currently contains the CD ${cdname}. The installation will now continue."
+"Autodetection of the installation media was successful. A drive has been "
+"found that contains '${cdname}'. The installation will now continue."
 msgstr ""
 "光盘探测成功。发现了一个光盘驱动器，其中包含 ${cdname} 光盘。安装进程将继续。"
 
@@ -601,21 +652,28 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:14001
-msgid "Incorrect CD-ROM detected"
-msgstr "探测到错误的光盘"
+#, fuzzy
+#| msgid "UNetbootin media detected"
+msgid "Incorrect installation media detected"
+msgstr "探测到 UNetbootin 媒体"
 
 #. Type: error
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:14001
-msgid "The CD-ROM drive contains a CD which cannot be used for installation."
+#, fuzzy
+#| msgid ""
+#| "The CD-ROM drive contains a CD which cannot be used for installation."
+msgid "The detected media cannot be used for installation."
 msgstr "光盘驱动器中所放光盘的并不能用于安装。"
 
 #. Type: error
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:14001
-msgid "Please insert a suitable CD to continue with the installation."
+#, fuzzy
+#| msgid "Please insert a suitable CD to continue with the installation."
+msgid "Please provide suitable media to continue with the installation."
 msgstr "请插入合适的光盘以继续安装。"
 
 #. Type: error
@@ -631,9 +689,13 @@ msgstr "读取 Release 文件出错"
 #. Translators: DO NOT TRANSLATE "Release". This is the name of a file.
 #. :sl2:
 #: ../cdrom-detect.templates:15001
+#, fuzzy
+#| msgid ""
+#| "The CD-ROM does not seem to contain a valid 'Release' file, or that file "
+#| "could not be read correctly."
 msgid ""
-"The CD-ROM does not seem to contain a valid 'Release' file, or that file "
-"could not be read correctly."
+"The installation media do not seem to contain a valid 'Release' file, or "
+"that file could not be read correctly."
 msgstr "此光盘并未包括有效的“Release”文件，或者该文件无法被正确地读取。"
 
 #. Type: error
@@ -641,8 +703,12 @@ msgstr "此光盘并未包括有效的“Release”文件，或者该文件无�
 #. Translators: DO NOT TRANSLATE "Release". This is the name of a file.
 #. :sl2:
 #: ../cdrom-detect.templates:15001
+#, fuzzy
+#| msgid ""
+#| "You may try to repeat CD-ROM detection but, even if it does succeed the "
+#| "second time, you may experience problems later in the installation."
 msgid ""
-"You may try to repeat CD-ROM detection but, even if it does succeed the "
+"You may try to repeat the media detection, but even if it does succeed the "
 "second time, you may experience problems later in the installation."
 msgstr ""
 "您可以再次尝试探测光盘，但是，即使能够成功探测到安装光盘，您依然可能在稍后的"
@@ -653,8 +719,10 @@ msgstr ""
 #. Item in the main menu to select this package
 #. :sl2:
 #: ../cdrom-detect.templates:20001
-msgid "Detect and mount CD-ROM"
-msgstr "探测并挂载光盘"
+#, fuzzy
+#| msgid "Use the \"exit\" command to return to the installation menu."
+msgid "Detect and mount installation media"
+msgstr "使用“exit”命令返回到安装菜单。"
 
 #. Type: select
 #. Choices
@@ -1323,12 +1391,19 @@ msgstr "无默认路由，继续安装吗？"
 #. Description
 #. :sl2:
 #: ../netcfg-dhcp.templates:8001
+#, fuzzy
+#| msgid ""
+#| "The network autoconfiguration was successful. However, no default route "
+#| "was set: the system does not know how to communicate with hosts on the "
+#| "Internet. This will make it impossible to continue with the installation "
+#| "unless you have the first installation CD-ROM, a 'Netinst' CD-ROM, or "
+#| "packages available on the local network."
 msgid ""
 "The network autoconfiguration was successful. However, no default route was "
 "set: the system does not know how to communicate with hosts on the Internet. "
 "This will make it impossible to continue with the installation unless you "
-"have the first installation CD-ROM, a 'Netinst' CD-ROM, or packages "
-"available on the local network."
+"have the first image from a set of installation media, a 'Netinst' image, or "
+"packages available on the local network."
 msgstr ""
 "网络自动配置成功。但是由于未设置默认路由，系统将无法连接互联网上的主机。除非"
 "您拥有第一张安装光盘、“Netinst”光盘、或在本地局域网上存有所需的软件包，否则将"
@@ -1701,17 +1776,24 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../cdrom-retriever.templates:1001
-msgid "Failed to copy file from CD-ROM. Retry?"
+#, fuzzy
+#| msgid "Failed to copy file from CD-ROM. Retry?"
+msgid "Failed to copy file from installation media. Retry?"
 msgstr "无法从光盘上拷贝文件。要重试吗？"
 
 #. Type: boolean
 #. Description
 #. :sl2:
 #: ../cdrom-retriever.templates:1001
+#, fuzzy
+#| msgid ""
+#| "There was a problem reading data from the CD-ROM. Please make sure it is "
+#| "in the drive. If retrying does not work, you should check the integrity "
+#| "of your CD-ROM."
 msgid ""
-"There was a problem reading data from the CD-ROM. Please make sure it is in "
-"the drive. If retrying does not work, you should check the integrity of your "
-"CD-ROM."
+"There was a problem reading data. Please make sure you have inserted the "
+"installation media correctly. If retrying does not work, you should check "
+"the integrity of your installation media."
 msgstr ""
 "从光盘上读取数据出错。请确认光盘已被放置在驱动器中。如果重试以后还是无法工"
 "作，请检查光盘的完整性。"
@@ -2087,7 +2169,7 @@ msgstr "由于未知的原因，无法改变分区大小。"
 #. Type: boolean
 #. Description
 #. :sl2:
-#. #-#-#-#-#  templates.pot (PACKAGE VERSION)  #-#-#-#-#
+#. #-#-#-#-#  templates.pot (base-installer)  #-#-#-#-#
 #. Type: error
 #. Description
 #. :sl2:
@@ -3757,9 +3839,13 @@ msgstr "无法安装基本系统"
 #. See http://www.debian.org/doc/debian-policy/ch-binary.html#s3.7
 #. :sl2:
 #: ../bootstrap-base.templates:2001
+#, fuzzy
+#| msgid ""
+#| "The installer cannot figure out how to install the base system. No "
+#| "installable CD-ROM was found and no valid mirror was configured."
 msgid ""
-"The installer cannot figure out how to install the base system. No "
-"installable CD-ROM was found and no valid mirror was configured."
+"The installer cannot figure out how to install the base system. It found no "
+"installable image, and no valid mirror was configured."
 msgstr ""
 "安装程序不知道如何安装基本系统。未找到任何可供安装的光盘，也没有设置任何有效"
 "的镜像。"
@@ -4004,9 +4090,13 @@ msgstr "无效的 Release 文件：没有 ${SUBST0} 项目。"
 #. SUBST0 is a filename or package name
 #. Debootstrap is a program name: should not be translated
 #: ../bootstrap-base.templates:22001
+#, fuzzy
+#| msgid ""
+#| "Couldn't retrieve ${SUBST0}. This may be due to a network problem or a "
+#| "bad CD, depending on your installation method."
 msgid ""
-"Couldn't retrieve ${SUBST0}. This may be due to a network problem or a bad "
-"CD, depending on your installation method."
+"Couldn't retrieve ${SUBST0}. This may be due to a network problem or bad "
+"media, depending on your installation method."
 msgstr ""
 "无法获取 ${SUBST0}。根据您所使用的安装方式，造成此问题的原因可能是网络故障或"
 "光盘受损。"
@@ -4118,15 +4208,6 @@ msgstr "被注释掉的有关 ${HOST} 的条目已被加入到 /etc/apt/sources.
 #: ../apt-cdrom-setup.templates:2001
 msgid "apt configuration problem"
 msgstr "Apt 设置问题"
-
-#. Type: error
-#. Description
-#. :sl2:
-#: ../apt-cdrom-setup.templates:2001
-msgid ""
-"An attempt to configure apt to install additional packages from the CD "
-"failed."
-msgstr "尝试配置 apt 从光盘安装额外的软件包失败。"
 
 #. Type: boolean
 #. Description
@@ -5031,5 +5112,7 @@ msgstr "这些信息也将被存储到系统的 /var/log/installer/ 目录中。
 #. Translators: keep it under 65 columns
 #. :sl2:
 #: ../cdrom-checker.templates:12001
-msgid "Check the CD-ROM(s) integrity"
-msgstr "检测光盘的完整性"
+#, fuzzy
+#| msgid "Check the integrity of another CD-ROM?"
+msgid "Check the integrity of installation media"
+msgstr "检测另一张光盘的完整性吗？"

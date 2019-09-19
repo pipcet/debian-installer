@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: se\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-28 21:20+0000\n"
+"POT-Creation-Date: 2019-09-19 16:20+0000\n"
 "PO-Revision-Date: 2019-08-28 18:10+0000\n"
 "Last-Translator: leela <53352@protonmail.com>\n"
 "Language-Team: Northern Sami <i18n-sme@lister.ping.uio.no>\n"
@@ -634,13 +634,6 @@ msgstr "čális ieš dieđuid"
 msgid "Download installer components"
 msgstr "Viečča sajáiduhti osiid"
 
-#. Type: text
-#. Description
-#. Main menu item
-#: ../load-cdrom.templates:1001
-msgid "Load installer components from CD"
-msgstr "Viečča sajáiduhti osiid CD:s"
-
 #. Type: boolean
 #. Description
 #: ../load-media.templates:1001
@@ -752,13 +745,6 @@ msgstr ""
 "Listu čájeha olámuttus reaiddut. Jus it dieđe maid galggat válljet, vállje "
 "standárda molssaeavttu. Jus du vuogádat ii vuolggahuvvo, geahččal "
 "sajáiduhttit eará molssaeavttuiguin."
-
-#. Type: text
-#. Description
-#. Release is a filename which should not be translated
-#: ../bootstrap-base.templates:42001
-msgid "Checking Release signature"
-msgstr "Dárkkisteamen veršuvdnafiila vuolláičála"
 
 #. Type: select
 #. Description
@@ -1616,15 +1602,17 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../cdrom-detect.templates:2001
-msgid "Detecting hardware to find CD-ROM drives"
-msgstr "Áicamin mašiidnagálvvu gávdnan dihte CD-ROM-ovttadagaid"
+#, fuzzy
+msgid "Detecting hardware to find installation media"
+msgstr "Áicimin mašiidnagálvvu gávdnan dihte CDROM-ovttadagaid"
 
 #. Type: text
 #. Description
 #. :sl1:
 #: ../cdrom-detect.templates:10001
-msgid "Scanning CD-ROM"
-msgstr "Ohcamin CD-CD-ROM čađa"
+#, fuzzy
+msgid "Scanning installation media"
+msgstr "LILO-sajáiduhttin filtii"
 
 #. Type: text
 #. Description
@@ -1638,8 +1626,8 @@ msgstr "Ohcamin ${DIR}"
 #. finish-install progress bar item
 #. :sl1:
 #: ../cdrom-detect.templates:19001
-msgid "Unmounting and ejecting CD-ROM..."
-msgstr "Galgamin ja bálkesteamen CD …"
+msgid "Unmounting/ejecting installation media..."
+msgstr ""
 
 #. Type: text
 #. Description
@@ -2375,6 +2363,16 @@ msgstr ""
 #: ../mdcfg-utils.templates:6001 ../mdcfg-utils.templates:13001
 msgid "Cancel"
 msgstr "Gaskkalduhte"
+
+#. Type: text
+#. Description
+#. Main menu item
+#. :sl1:
+#: ../load-cdrom.templates:1001
+#, fuzzy
+#| msgid "Load installer components from an installer ISO"
+msgid "Load installer components from installation media"
+msgstr "Geavat sajáiduhttinosiid sajáiduhttin-ISO:s"
 
 #. Type: text
 #. Description
@@ -3229,7 +3227,7 @@ msgstr "Rahkáneamen sajáiduhttigoahtit vuođđovuogádaga …"
 msgid "Installing the base system"
 msgstr "Sajáiduhttimin vuođđovuogádaga"
 
-#. #-#-#-#-#  templates.pot (PACKAGE VERSION)  #-#-#-#-#
+#. #-#-#-#-#  templates.pot (base-installer)  #-#-#-#-#
 #. Type: text
 #. Description
 #. :sl1:
@@ -3443,6 +3441,14 @@ msgstr "Páhkkemin olggos ${SUBST0} …"
 #: ../bootstrap-base.templates:41001
 msgid "Configuring ${SUBST0}..."
 msgstr "Heiveheamen ${SUBST0} …"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Release is a filename which should not be translated
+#: ../bootstrap-base.templates:42001
+msgid "Checking Release signature"
+msgstr "Dárkkisteamen veršuvdnafiila vuolláičála"
 
 #. Type: text
 #. Description
@@ -3688,8 +3694,27 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:1001
-msgid "Scanning the CD-ROM..."
-msgstr "Ohcamin CD-ROM čađa …"
+#, fuzzy
+#| msgid "Finishing the installation"
+msgid "Scanning the installation media..."
+msgstr "Gearggaheamen sajáiduhttima"
+
+#. Type: error
+#. Description
+#. :sl2:
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:2001 ../apt-cdrom-setup.templates:6001
+#, fuzzy
+#| msgid ""
+#| "An attempt to configure apt to install additional packages from the CD/"
+#| "DVD failed."
+msgid ""
+"An attempt to configure apt to install additional packages from the media "
+"failed."
+msgstr ""
+"Ii lihkostuvvan heivehit apt nu ahte sajáiduhttá lasi páhkaid CD/DVD:s."
 
 #. Type: boolean
 #. Description
@@ -3705,25 +3730,32 @@ msgstr "Ohcamin CD-ROM čađa …"
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001 ../apt-cdrom-setup.templates:4001
 #: ../apt-cdrom-setup.templates:5001 ../apt-cdrom-setup.templates:6001
-msgid "Scan another CD or DVD?"
-msgstr "Galgágo ohcat eará CD dahje DVD čađa?"
+#, fuzzy
+msgid "Scan extra installation media?"
+msgstr "LILO-sajáiduhttin filtii"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001
-msgid "Your installation CD or DVD has been scanned; its label is:"
-msgstr "Lea geargan du CD dahje DVD čađa ohcamis – dan mearka lea:"
+msgid "Scanning your installation media finds the label:"
+msgstr ""
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001
+#, fuzzy
+#| msgid ""
+#| "You now have the option to scan additional CDs or DVDs for use by the "
+#| "package manager (apt). Normally these should be from the same set as the "
+#| "installation CD/DVD. If you do not have any additional CDs or DVDs "
+#| "available, this step can just be skipped."
 msgid ""
-"You now have the option to scan additional CDs or DVDs for use by the "
-"package manager (apt). Normally these should be from the same set as the "
-"installation CD/DVD. If you do not have any additional CDs or DVDs "
-"available, this step can just be skipped."
+"You now have the option of scanning additional media for use by the package "
+"manager (apt). Normally these should be from the same set as the one you "
+"booted from. If you do not have any additional media, this step can just be "
+"skipped."
 msgstr ""
 "Dál lea vejolaš ohcat eará CD:id dahje DVD:id čađa maid páhkkagieđahalli\n"
 "(apt) galgá geavahit. Dábálaččat dat galget leat seamma čoakkáldagas go\n"
@@ -3737,52 +3769,50 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001 ../apt-cdrom-setup.templates:4001
-msgid "If you wish to scan another CD or DVD, please insert it now."
+#, fuzzy
+#| msgid "If you wish to scan another CD or DVD, please insert it now."
+msgid "If you wish to scan more media, please insert another one now."
 msgstr "Jus háliidat ohcat eará CD dahje DVD čađa, de bija dan sisa dál."
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:4001
-msgid "The CD or DVD with the following label has been scanned:"
+#, fuzzy
+#| msgid "The CD or DVD with the following label has been scanned:"
+msgid "The image with the following label has been scanned:"
 msgstr "Lea ohcan CD dahje DVD čađa mas lea dát namma:"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:5001
-msgid "The CD or DVD with the following label has already been scanned:"
+#, fuzzy
+#| msgid "The CD or DVD with the following label has already been scanned:"
+msgid "The image with the following label has already been scanned:"
 msgstr "Lea juo ohcan CD dahje DVD čađa mas lea namma:"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:5001
-msgid "Please replace it now if you wish to scan another CD or DVD."
+#, fuzzy
+#| msgid "Please replace it now if you wish to scan another CD or DVD."
+msgid "Please replace it now, if you wish to scan another."
 msgstr "Molsso skearru dál jus háliidat ohcat eará CD dahje DVD čađa."
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:6001
-msgid ""
-"An attempt to configure apt to install additional packages from the CD/DVD "
-"failed."
-msgstr ""
-"Ii lihkostuvvan heivehit apt nu ahte sajáiduhttá lasi páhkaid CD/DVD:s."
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:6001
-msgid "Please check that the CD/DVD has been inserted correctly."
+#, fuzzy
+#| msgid "Please check that the CD/DVD has been inserted correctly."
+msgid "Please check that the media has been inserted correctly."
 msgstr "Dárkkis ahte leat bidjan sisa CD/DVD rievttes láhkai."
 
 #. Type: text
 #. Description
 #. :sl1:
-#. This template uses the same text as used in the package apt for apt-cdrom
-#. Do not translate "/cdrom/" (the mount point)
 #: ../apt-cdrom-setup.templates:7001
 msgid "Media change"
 msgstr "Molssui media"
@@ -3790,12 +3820,12 @@ msgstr "Molssui media"
 #. Type: text
 #. Description
 #. :sl1:
-#. This template uses the same text as used in the package apt for apt-cdrom
-#. Do not translate "/cdrom/" (the mount point)
 #: ../apt-cdrom-setup.templates:7001
-msgid ""
-"/cdrom/: Please insert the disc labeled '${LABEL}' in the drive '/cdrom/' "
-"and press enter."
+#, fuzzy
+#| msgid ""
+#| "/cdrom/: Please insert the disc labeled '${LABEL}' in the drive '/cdrom/' "
+#| "and press enter."
+msgid "Please insert the media labeled '${LABEL}' and press enter."
 msgstr ""
 "/cdrom/: Coggal sisa skearru nammaduvon «${LABEL}» «/cdrom/»-stašuvdnii\n"
 "ja deaddil Enter."
@@ -3815,9 +3845,13 @@ msgstr "Váldimin eret netinst-CD sources.list fiillas ..."
 #. Description
 #. :sl2:
 #: ../apt-cdrom-setup.templates:9001 ../apt-mirror-setup.templates:6001
+#, fuzzy
+#| msgid ""
+#| "If you are installing from a netinst CD and choose not to use a mirror, "
+#| "you will end up with only a very minimal base system."
 msgid ""
-"If you are installing from a netinst CD and choose not to use a mirror, you "
-"will end up with only a very minimal base system."
+"If you are installing from a netinst CD image and choose not to use a "
+"mirror, you will end up with only a very minimal base system."
 msgstr ""
 "Jus leat sajáiduhttimin netinst-CD:s ja jus it hálit geavahit "
 "arkiivamáŋgosa,\n"
@@ -3827,8 +3861,13 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:10001
+#, fuzzy
+#| msgid ""
+#| "You are installing from a netinst CD, which by itself only allows "
+#| "installation of a very minimal base system. Use a mirror to install a "
+#| "more complete system."
 msgid ""
-"You are installing from a netinst CD, which by itself only allows "
+"You are installing from a netinst CD image, which by itself only allows "
 "installation of a very minimal base system. Use a mirror to install a more "
 "complete system."
 msgstr ""
@@ -3841,8 +3880,13 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:11001
+#, fuzzy
+#| msgid ""
+#| "You are installing from a CD, which contains a limited selection of "
+#| "packages."
 msgid ""
-"You are installing from a CD, which contains a limited selection of packages."
+"You are installing from an image which contains a limited selection of "
+"packages."
 msgstr "Don leat sajáiduhttimin CD:s mas leat dušše muhton páhkat."
 
 #. Type: text
@@ -3850,9 +3894,13 @@ msgstr "Don leat sajáiduhttimin CD:s mas leat dušše muhton páhkat."
 #. :sl1:
 #. The value of %i can be 2 or 3
 #: ../apt-cdrom-setup.templates:12001
-#, no-c-format
+#, fuzzy, no-c-format
+#| msgid ""
+#| "You have scanned %i CDs. Even though these contain a fair selection of "
+#| "packages, some may be missing (notably some packages needed to support "
+#| "languages other than English)."
 msgid ""
-"You have scanned %i CDs. Even though these contain a fair selection of "
+"You have scanned %i images. Even though these contain a fair selection of "
 "packages, some may be missing (notably some packages needed to support "
 "languages other than English)."
 msgstr ""
@@ -3864,9 +3912,12 @@ msgstr ""
 #. :sl1:
 #. The value of %i can be from 4 to 8
 #: ../apt-cdrom-setup.templates:13001
-#, no-c-format
+#, fuzzy, no-c-format
+#| msgid ""
+#| "You have scanned %i CDs. Even though these contain a large selection of "
+#| "packages, some may be missing."
 msgid ""
-"You have scanned %i CDs. Even though these contain a large selection of "
+"You have scanned %i images. Even though these contain a large selection of "
 "packages, some may be missing."
 msgstr ""
 "Lea ohcan %i CD:id čađa. Váikkoge dáin leat oalle máŋga páhka, de muhtomat \n"
@@ -3887,8 +3938,12 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:15001
+#, fuzzy
+#| msgid ""
+#| "You are installing from a DVD. Even though the DVD contains a large "
+#| "selection of packages, some may be missing."
 msgid ""
-"You are installing from a DVD. Even though the DVD contains a large "
+"You are installing from a DVD image. Even though it contains a large "
 "selection of packages, some may be missing."
 msgstr ""
 "Leat sajáiduhttimin DVD:s. Váikkoge DVD:s leat ollu páhkat, muhtomat\n"
@@ -4021,9 +4076,14 @@ msgstr "Háliidatgo geavahit arkiivamáŋgosa?"
 #. Description
 #. :sl1:
 #: ../apt-mirror-setup.templates:5001
+#, fuzzy
+#| msgid ""
+#| "A network mirror can be used to supplement the software that is included "
+#| "on the CD-ROM. This may also make newer versions of software available."
 msgid ""
 "A network mirror can be used to supplement the software that is included on "
-"the CD-ROM. This may also make newer versions of software available."
+"the installation media. This may also make newer versions of software "
+"available."
 msgstr ""
 "Neahttaarkiivamáŋggus geavahuvvo lassin prográmmaide mat leat CD-ROM:s. Dán\n"
 "láhkai maid šaddet ođđabut veršuvnnat prográmmáin olámuttus."
@@ -4665,6 +4725,41 @@ msgstr "Heivet Logalaš volumaid gieđahalli (LVM)"
 msgid "Guided - use entire disk and set up LVM"
 msgstr "Nevvojuvvon - geavat olles garraskearru ja heivet LVM"
 
+#~ msgid "Load installer components from CD"
+#~ msgstr "Viečča sajáiduhti osiid CD:s"
+
+#~ msgid "Detecting hardware to find CD-ROM drives"
+#~ msgstr "Áicamin mašiidnagálvvu gávdnan dihte CD-ROM-ovttadagaid"
+
+#~ msgid "Scanning CD-ROM"
+#~ msgstr "Ohcamin CD-CD-ROM čađa"
+
+#~ msgid "Unmounting and ejecting CD-ROM..."
+#~ msgstr "Galgamin ja bálkesteamen CD …"
+
+#~ msgid "Scanning the CD-ROM..."
+#~ msgstr "Ohcamin CD-ROM čađa …"
+
+#~ msgid "Scan another CD or DVD?"
+#~ msgstr "Galgágo ohcat eará CD dahje DVD čađa?"
+
+#~ msgid "Your installation CD or DVD has been scanned; its label is:"
+#~ msgstr "Lea geargan du CD dahje DVD čađa ohcamis – dan mearka lea:"
+
+#, fuzzy
+#~ msgid "Load CD-ROM drivers from removable media?"
+#~ msgstr "Galgágo viežžat váili stivrraniid diskeahtas?"
+
+#~ msgid "Retry mounting the CD-ROM?"
+#~ msgstr "Háliidatgo geahččalit ođđasit čatnat CD-ROM?"
+
+#~ msgid "Detect and mount CD-ROM"
+#~ msgstr "Áicca ja čana CD-ROM"
+
+#, fuzzy
+#~ msgid "Failed to mount CD-ROM"
+#~ msgstr "Hálidatgo geahččalit ođđasit čatnat CD-ROM:a?"
+
 #~ msgid "Partition for boot loader installation:"
 #~ msgstr "Partišuvdna gosa vuolggahangieđahalli bidju:"
 
@@ -5056,10 +5151,6 @@ msgstr "Nevvojuvvon - geavat olles garraskearru ja heivet LVM"
 #~ msgstr "Hálidatgo máhccat partišuvdnafállui?"
 
 #, fuzzy
-#~ msgid "Failed to unmount partitions"
-#~ msgstr "ále geavat partišuvnna"
-
-#, fuzzy
 #~ msgid "An unexpected error occurred while unmounting the partitions."
 #~ msgstr "Meattáhus čuožžilii čálidettiin rievdadusaid vurkenovttadahkii."
 
@@ -5126,10 +5217,6 @@ msgstr "Nevvojuvvon - geavat olles garraskearru ja heivet LVM"
 #, fuzzy
 #~ msgid "Network Block Device port or name:"
 #~ msgstr "Heivet fierpmádaga"
-
-#, fuzzy
-#~ msgid "SILO installation failed"
-#~ msgstr "LILO-sajáiduhttin filtii"
 
 #, fuzzy
 #~ msgid "SILO installation successful"

@@ -25,7 +25,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-28 21:20+0000\n"
+"POT-Creation-Date: 2019-09-19 16:20+0000\n"
 "PO-Revision-Date: 2019-01-13 14:06+0000\n"
 "Last-Translator: Louies <louies0623@gmail.com>\n"
 "Language-Team: Debian-user in Chinese [Big5] <debian-chinese-big5@lists."
@@ -664,13 +664,6 @@ msgstr "手動輸入資訊"
 msgid "Download installer components"
 msgstr "下載安裝程式的元件"
 
-#. Type: text
-#. Description
-#. Main menu item
-#: ../load-cdrom.templates:1001
-msgid "Load installer components from CD"
-msgstr "從光碟中載入安裝程式的元件"
-
 #. Type: boolean
 #. Description
 #: ../load-media.templates:1001
@@ -775,13 +768,6 @@ msgid ""
 msgstr ""
 "列表中列出的是可以使用的工具。如果您不確定該如何選擇，您應該使用預設值。如果"
 "您的系統無法開機，您可以再次執行安裝程式並換用其它的選項。"
-
-#. Type: text
-#. Description
-#. Release is a filename which should not be translated
-#: ../bootstrap-base.templates:42001
-msgid "Checking Release signature"
-msgstr "檢驗 Release 簽名"
 
 #. Type: select
 #. Description
@@ -1618,15 +1604,19 @@ msgstr "並不是在此所有列出的鍵都會出現在每個鍵盤上。"
 #. Description
 #. :sl1:
 #: ../cdrom-detect.templates:2001
-msgid "Detecting hardware to find CD-ROM drives"
-msgstr "偵測硬體以找出光碟機"
+#, fuzzy
+#| msgid "Detecting hardware to find hard drives"
+msgid "Detecting hardware to find installation media"
+msgstr "偵測硬體以找出硬碟"
 
 #. Type: text
 #. Description
 #. :sl1:
 #: ../cdrom-detect.templates:10001
-msgid "Scanning CD-ROM"
-msgstr "掃瞄光碟機"
+#, fuzzy
+#| msgid "SILO installation failed"
+msgid "Scanning installation media"
+msgstr "SILO 的安裝失敗了"
 
 #. Type: text
 #. Description
@@ -1640,8 +1630,8 @@ msgstr "正在掃瞄 ${DIR}……"
 #. finish-install progress bar item
 #. :sl1:
 #: ../cdrom-detect.templates:19001
-msgid "Unmounting and ejecting CD-ROM..."
-msgstr "正在卸載並退出光碟片……"
+msgid "Unmounting/ejecting installation media..."
+msgstr ""
 
 #. Type: text
 #. Description
@@ -2350,6 +2340,16 @@ msgstr ""
 #: ../mdcfg-utils.templates:6001 ../mdcfg-utils.templates:13001
 msgid "Cancel"
 msgstr "取消"
+
+#. Type: text
+#. Description
+#. Main menu item
+#. :sl1:
+#: ../load-cdrom.templates:1001
+#, fuzzy
+#| msgid "Load installer components from an installer ISO"
+msgid "Load installer components from installation media"
+msgstr "從安裝程式 ISO 中載入安裝程式的元件"
 
 #. Type: text
 #. Description
@@ -3183,7 +3183,7 @@ msgstr "正在準備安裝基本系統……"
 msgid "Installing the base system"
 msgstr "安裝基本系統"
 
-#. #-#-#-#-#  templates.pot (PACKAGE VERSION)  #-#-#-#-#
+#. #-#-#-#-#  templates.pot (base-installer)  #-#-#-#-#
 #. Type: text
 #. Description
 #. :sl1:
@@ -3397,6 +3397,14 @@ msgstr "正在解開 ${SUBST0}……"
 #: ../bootstrap-base.templates:41001
 msgid "Configuring ${SUBST0}..."
 msgstr "正在設定 ${SUBST0}……"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Release is a filename which should not be translated
+#: ../bootstrap-base.templates:42001
+msgid "Checking Release signature"
+msgstr "檢驗 Release 簽名"
 
 #. Type: text
 #. Description
@@ -3645,8 +3653,26 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:1001
-msgid "Scanning the CD-ROM..."
-msgstr "正在掃瞄光碟……"
+#, fuzzy
+#| msgid "Finishing the installation"
+msgid "Scanning the installation media..."
+msgstr "完成安裝"
+
+#. Type: error
+#. Description
+#. :sl2:
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:2001 ../apt-cdrom-setup.templates:6001
+#, fuzzy
+#| msgid ""
+#| "An attempt to configure apt to install additional packages from the CD "
+#| "failed."
+msgid ""
+"An attempt to configure apt to install additional packages from the media "
+"failed."
+msgstr "試圖設定 apt 可由 CD 來安裝其它套件，但失敗了。"
 
 #. Type: boolean
 #. Description
@@ -3662,25 +3688,33 @@ msgstr "正在掃瞄光碟……"
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001 ../apt-cdrom-setup.templates:4001
 #: ../apt-cdrom-setup.templates:5001 ../apt-cdrom-setup.templates:6001
-msgid "Scan another CD or DVD?"
-msgstr "是否要掃瞄另一片 CD 或 DVD？"
+#, fuzzy
+#| msgid "SILO installation failed"
+msgid "Scan extra installation media?"
+msgstr "SILO 的安裝失敗了"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001
-msgid "Your installation CD or DVD has been scanned; its label is:"
-msgstr "已掃瞄了您的安裝 CD 或 DVD；它的標籤為:"
+msgid "Scanning your installation media finds the label:"
+msgstr ""
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001
+#, fuzzy
+#| msgid ""
+#| "You now have the option to scan additional CDs or DVDs for use by the "
+#| "package manager (apt). Normally these should be from the same set as the "
+#| "installation CD/DVD. If you do not have any additional CDs or DVDs "
+#| "available, this step can just be skipped."
 msgid ""
-"You now have the option to scan additional CDs or DVDs for use by the "
-"package manager (apt). Normally these should be from the same set as the "
-"installation CD/DVD. If you do not have any additional CDs or DVDs "
-"available, this step can just be skipped."
+"You now have the option of scanning additional media for use by the package "
+"manager (apt). Normally these should be from the same set as the one you "
+"booted from. If you do not have any additional media, this step can just be "
+"skipped."
 msgstr ""
 "您可以選擇是否要再掃瞄其它的 CD 或 DVD 以供套件管理程式 (apt) 使用。通常它們"
 "是和安裝 CD/DVD 一起的全套光碟組。如果您手上並沒有其它的 CD 或 DVD，那麼可以"
@@ -3693,51 +3727,50 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001 ../apt-cdrom-setup.templates:4001
-msgid "If you wish to scan another CD or DVD, please insert it now."
+#, fuzzy
+#| msgid "If you wish to scan another CD or DVD, please insert it now."
+msgid "If you wish to scan more media, please insert another one now."
 msgstr "如果您想再掃瞄其它的 CD 或 DVD，現在即可放入。"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:4001
-msgid "The CD or DVD with the following label has been scanned:"
+#, fuzzy
+#| msgid "The CD or DVD with the following label has been scanned:"
+msgid "The image with the following label has been scanned:"
 msgstr "已掃瞄了這張 或 DVD，它的標籤是:"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:5001
-msgid "The CD or DVD with the following label has already been scanned:"
+#, fuzzy
+#| msgid "The CD or DVD with the following label has already been scanned:"
+msgid "The image with the following label has already been scanned:"
 msgstr "這張 CD 或 DVD 已被掃瞄過了，它的標籤是:"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:5001
-msgid "Please replace it now if you wish to scan another CD or DVD."
+#, fuzzy
+#| msgid "Please replace it now if you wish to scan another CD or DVD."
+msgid "Please replace it now, if you wish to scan another."
 msgstr "如果您想再掃瞄其它的 CD 或 DVD，請加以更換。"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:6001
-msgid ""
-"An attempt to configure apt to install additional packages from the CD/DVD "
-"failed."
-msgstr "試圖設定 apt 可利用這張 CD/DVD 來安裝其它套件，但失敗了。"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:6001
-msgid "Please check that the CD/DVD has been inserted correctly."
+#, fuzzy
+#| msgid "Please check that the CD/DVD has been inserted correctly."
+msgid "Please check that the media has been inserted correctly."
 msgstr "請確認這張 CD/DVD 已被正確放入。"
 
 #. Type: text
 #. Description
 #. :sl1:
-#. This template uses the same text as used in the package apt for apt-cdrom
-#. Do not translate "/cdrom/" (the mount point)
 #: ../apt-cdrom-setup.templates:7001
 msgid "Media change"
 msgstr "更換光碟"
@@ -3745,12 +3778,12 @@ msgstr "更換光碟"
 #. Type: text
 #. Description
 #. :sl1:
-#. This template uses the same text as used in the package apt for apt-cdrom
-#. Do not translate "/cdrom/" (the mount point)
 #: ../apt-cdrom-setup.templates:7001
-msgid ""
-"/cdrom/: Please insert the disc labeled '${LABEL}' in the drive '/cdrom/' "
-"and press enter."
+#, fuzzy
+#| msgid ""
+#| "/cdrom/: Please insert the disc labeled '${LABEL}' in the drive '/cdrom/' "
+#| "and press enter."
+msgid "Please insert the media labeled '${LABEL}' and press enter."
 msgstr ""
 "/cdrom/: 請在裝置 /cdrom/ 中放入標籤為 ${LABEL} 的光碟，然後按下 Enter。"
 
@@ -3769,9 +3802,13 @@ msgstr "正在關閉列於 sources.list 中的 netinst CD……"
 #. Description
 #. :sl2:
 #: ../apt-cdrom-setup.templates:9001 ../apt-mirror-setup.templates:6001
+#, fuzzy
+#| msgid ""
+#| "If you are installing from a netinst CD and choose not to use a mirror, "
+#| "you will end up with only a very minimal base system."
 msgid ""
-"If you are installing from a netinst CD and choose not to use a mirror, you "
-"will end up with only a very minimal base system."
+"If you are installing from a netinst CD image and choose not to use a "
+"mirror, you will end up with only a very minimal base system."
 msgstr ""
 "如果您正以 netinst CD 進行安裝，且選擇了不使用鏡像站，您最終得到的將會是極為"
 "精簡的基本系統。"
@@ -3780,8 +3817,13 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:10001
+#, fuzzy
+#| msgid ""
+#| "You are installing from a netinst CD, which by itself only allows "
+#| "installation of a very minimal base system. Use a mirror to install a "
+#| "more complete system."
 msgid ""
-"You are installing from a netinst CD, which by itself only allows "
+"You are installing from a netinst CD image, which by itself only allows "
 "installation of a very minimal base system. Use a mirror to install a more "
 "complete system."
 msgstr ""
@@ -3792,8 +3834,13 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:11001
+#, fuzzy
+#| msgid ""
+#| "You are installing from a CD, which contains a limited selection of "
+#| "packages."
 msgid ""
-"You are installing from a CD, which contains a limited selection of packages."
+"You are installing from an image which contains a limited selection of "
+"packages."
 msgstr "您正以 CD 進行安裝，但它只包含了有限的套件可供選擇。"
 
 #. Type: text
@@ -3801,9 +3848,13 @@ msgstr "您正以 CD 進行安裝，但它只包含了有限的套件可供選�
 #. :sl1:
 #. The value of %i can be 2 or 3
 #: ../apt-cdrom-setup.templates:12001
-#, no-c-format
+#, fuzzy, no-c-format
+#| msgid ""
+#| "You have scanned %i CDs. Even though these contain a fair selection of "
+#| "packages, some may be missing (notably some packages needed to support "
+#| "languages other than English)."
 msgid ""
-"You have scanned %i CDs. Even though these contain a fair selection of "
+"You have scanned %i images. Even though these contain a fair selection of "
 "packages, some may be missing (notably some packages needed to support "
 "languages other than English)."
 msgstr ""
@@ -3815,9 +3866,12 @@ msgstr ""
 #. :sl1:
 #. The value of %i can be from 4 to 8
 #: ../apt-cdrom-setup.templates:13001
-#, no-c-format
+#, fuzzy, no-c-format
+#| msgid ""
+#| "You have scanned %i CDs. Even though these contain a large selection of "
+#| "packages, some may be missing."
 msgid ""
-"You have scanned %i CDs. Even though these contain a large selection of "
+"You have scanned %i images. Even though these contain a large selection of "
 "packages, some may be missing."
 msgstr ""
 "您已掃瞄了 %i 張 CD。但即使他們包含了大量套件可供選擇，但還是可能有所遺漏。"
@@ -3836,8 +3890,12 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:15001
+#, fuzzy
+#| msgid ""
+#| "You are installing from a DVD. Even though the DVD contains a large "
+#| "selection of packages, some may be missing."
 msgid ""
-"You are installing from a DVD. Even though the DVD contains a large "
+"You are installing from a DVD image. Even though it contains a large "
 "selection of packages, some may be missing."
 msgstr ""
 "您正以 DVD 進行安裝。雖然 DVD 包含了大量套件可供選擇，但還是可能有所遺漏。"
@@ -3963,9 +4021,14 @@ msgstr "是否使用網路鏡像站？"
 #. Description
 #. :sl1:
 #: ../apt-mirror-setup.templates:5001
+#, fuzzy
+#| msgid ""
+#| "A network mirror can be used to supplement the software that is included "
+#| "on the CD-ROM. This may also make newer versions of software available."
 msgid ""
 "A network mirror can be used to supplement the software that is included on "
-"the CD-ROM. This may also make newer versions of software available."
+"the installation media. This may also make newer versions of software "
+"available."
 msgstr ""
 "網路鏡像站可以用來增補那些包含在光碟片裡的軟體，也可以用來提供較新版本的軟"
 "體。"
@@ -4575,6 +4638,65 @@ msgstr "設定 Logical Volume Manager"
 #: ../partman-auto-lvm.templates:1001
 msgid "Guided - use entire disk and set up LVM"
 msgstr "導引 - 使用整顆磁碟並設定 LVM"
+
+#~ msgid "Load installer components from CD"
+#~ msgstr "從光碟中載入安裝程式的元件"
+
+#~ msgid "Detecting hardware to find CD-ROM drives"
+#~ msgstr "偵測硬體以找出光碟機"
+
+#~ msgid "Scanning CD-ROM"
+#~ msgstr "掃瞄光碟機"
+
+#~ msgid "Unmounting and ejecting CD-ROM..."
+#~ msgstr "正在卸載並退出光碟片……"
+
+#~ msgid "Scanning the CD-ROM..."
+#~ msgstr "正在掃瞄光碟……"
+
+#~ msgid "Scan another CD or DVD?"
+#~ msgstr "是否要掃瞄另一片 CD 或 DVD？"
+
+#~ msgid "Your installation CD or DVD has been scanned; its label is:"
+#~ msgstr "已掃瞄了您的安裝 CD 或 DVD；它的標籤為:"
+
+#~ msgid ""
+#~ "An attempt to configure apt to install additional packages from the CD/"
+#~ "DVD failed."
+#~ msgstr "試圖設定 apt 可利用這張 CD/DVD 來安裝其它套件，但失敗了。"
+
+#~ msgid "Load CD-ROM drivers from removable media?"
+#~ msgstr "是否要從可移除裝置中載入光碟機的驅動程式？"
+
+#~ msgid "Retry mounting the CD-ROM?"
+#~ msgstr "是否再度嘗試掛載光碟機？"
+
+#~ msgid "CD-ROM detected"
+#~ msgstr "已偵測到光碟機"
+
+#~ msgid "Incorrect CD-ROM detected"
+#~ msgstr "偵測到了不正確的光碟片"
+
+#~ msgid "Detect and mount CD-ROM"
+#~ msgstr "偵測並掛載光碟片"
+
+#~ msgid "Check the CD-ROM(s) integrity"
+#~ msgstr "檢驗光碟的完整性"
+
+#~ msgid "Check CD-ROM integrity?"
+#~ msgstr "是否要檢驗光碟的完整性？"
+
+#~ msgid "Insert a Debian CD-ROM"
+#~ msgstr "放入一張 Debian 光碟"
+
+#~ msgid "Failed to mount CD-ROM"
+#~ msgstr "無法掛載光碟"
+
+#~ msgid "No valid Debian CD-ROM"
+#~ msgstr "並不是正確的 Debian 光碟"
+
+#~ msgid "Checking CD-ROM integrity"
+#~ msgstr "檢驗光碟的完整性"
 
 #~ msgid "No DHCP client was found. This package requires pump or dhcp-client."
 #~ msgstr "找不到 DHCP 用戶端程式。欠缺了 pump 或 dhcp-client 套件。"
@@ -5448,9 +5570,6 @@ msgstr "導引 - 使用整顆磁碟並設定 LVM"
 #~ "Since the partitions have already been mounted, you cannot do any changes."
 #~ msgstr "由於磁碟分割區已經被掛載了，無法進行任何變更。"
 
-#~ msgid "Failed to unmount partitions"
-#~ msgstr "無法卸載磁碟分割區"
-
 #~ msgid "An unexpected error occurred while unmounting the partitions."
 #~ msgstr "在卸載分割區時發生了預期之外的錯誤。"
 
@@ -5609,9 +5728,6 @@ msgstr "導引 - 使用整顆磁碟並設定 LVM"
 #~ "無法將 silo 套件安裝至 /target/。安裝 SILO 以作為開機程式乃是不可或缺的步"
 #~ "驟﹔然而，安裝失敗的原因可能並不是出在 SILO 身上，所以繼續進行安裝或許是無"
 #~ "妨的。"
-
-#~ msgid "SILO installation failed"
-#~ msgstr "SILO 的安裝失敗了"
 
 #~ msgid "Running \"/sbin/silo\" failed with error code \"${ERRCODE}\"."
 #~ msgstr "在執行 /sbin/silo 時失敗了，錯誤代碼為 ${ERRCODE}。"

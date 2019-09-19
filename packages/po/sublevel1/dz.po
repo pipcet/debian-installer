@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dDz.po\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-28 21:20+0000\n"
+"POT-Creation-Date: 2019-09-19 16:20+0000\n"
 "PO-Revision-Date: 2019-08-28 18:09+0000\n"
 "Last-Translator: leela <53352@protonmail.com>\n"
 "Language-Team: Dzongkha <pgeyleg@dit.gov.bt>\n"
@@ -678,13 +678,6 @@ msgstr "བརྡ་དོན་ལག་ཐོག་ལས་བཙུགས་
 msgid "Download installer components"
 msgstr "ཕབ་ལེན་གཞི་བཙུགས་ཆ་ཤས་ཚུ།"
 
-#. Type: text
-#. Description
-#. Main menu item
-#: ../load-cdrom.templates:1001
-msgid "Load installer components from CD"
-msgstr "སི་ཌི་ནང་ལས་གཞི་བཙུགས་པའི་ཆ་ཤས་ཚུ་མངོན་གསལ་འབད།"
-
 #. Type: boolean
 #. Description
 #: ../load-media.templates:1001
@@ -794,13 +787,6 @@ msgstr ""
 "ཡིག་ཐོ་འདི་གྱིས་ཡོད་པའི་ལག་ཆས་ཚུ་སྟོནམ་ཨིན་ ཁྱོད་ཀྱིས་ག་སེལ་འཐུ་འབད་ནི་ཨིན་ན་ངེས་ཏིག་མེད་པ་ཅིན་ ཁྱོད་"
 "ཀྱིས་སྔོན་སྒྲིག་འདི་སེལ་འཐུ་འབད་དགོ་ ཁྱོད་ཀྱི་རིམ་ལུགས་བུཊི་ལུ་འཐུས་ཤོར་བྱུང་པ་ཅིན་ཁྱོད་ཀྱིས་གཞན་གདམ་ཁ་ཚུ་"
 "ལག་ལེན་འཐབ་སྟེ་གཞི་བཙུགས་འབད་ནི་ལུ་སླར་འབད་རྩོལ་བསྐྱེད།"
-
-#. Type: text
-#. Description
-#. Release is a filename which should not be translated
-#: ../bootstrap-base.templates:42001
-msgid "Checking Release signature"
-msgstr "Releaseམིང་རྟགས་ཞིབ་དཔྱད་འབད་དོ།"
 
 #. Type: select
 #. Description
@@ -1661,15 +1647,19 @@ msgstr "ཐོ་བཀོད་འབད་ཡོད་པའི་ལྡེ་
 #. Description
 #. :sl1:
 #: ../cdrom-detect.templates:2001
-msgid "Detecting hardware to find CD-ROM drives"
-msgstr "སི་ཌི་ རོམ་ ་འདྲེན་འཕྲུལ་ཚུ་འཚོལ་ནིའི་དོན་ལུ་སྲ་ཆས་སྐྱོན་འཛིན་འབད་དོ།"
+#, fuzzy
+#| msgid "Detecting hardware to find hard drives"
+msgid "Detecting hardware to find installation media"
+msgstr "ཧརཌི་ཌའིབ་འཚོལ་ནི་ལུ་སྲ་ཆས་སྐྱོན་འཛིན་འབད་དོ།"
 
 #. Type: text
 #. Description
 #. :sl1:
 #: ../cdrom-detect.templates:10001
-msgid "Scanning CD-ROM"
-msgstr "སི་ཌི་ རོམ་ ཞིབ་ལྟ་འབད་དོ།"
+#, fuzzy
+#| msgid "SILO installation failed"
+msgid "Scanning installation media"
+msgstr "SILO གཞི་བཙུགས་འཐུས་ཤོར་བྱུང་ཡོད།"
 
 #. Type: text
 #. Description
@@ -1683,8 +1673,8 @@ msgstr "${DIR}...ཞིབ་ལྟ་འབད་དོ།"
 #. finish-install progress bar item
 #. :sl1:
 #: ../cdrom-detect.templates:19001
-msgid "Unmounting and ejecting CD-ROM..."
-msgstr "སྦྱར་བརྩེགས་མི་འབད་ནི་དང་སི་ཌི་ རོམ་ཕྱིར་བཏོན་ནི..."
+msgid "Unmounting/ejecting installation media..."
+msgstr ""
 
 #. Type: text
 #. Description
@@ -2415,6 +2405,16 @@ msgstr ""
 #: ../mdcfg-utils.templates:6001 ../mdcfg-utils.templates:13001
 msgid "Cancel"
 msgstr "ཆ་མེད་གཏང་།"
+
+#. Type: text
+#. Description
+#. Main menu item
+#. :sl1:
+#: ../load-cdrom.templates:1001
+#, fuzzy
+#| msgid "Load installer components from an installer ISO"
+msgid "Load installer components from installation media"
+msgstr "གཞི་བཙུགས་པ་ISO ལས་གཞི་བཙུགས་པའི་ཆ་ཤས་ཚུ་ཕབ་ལེན་འབད་ནི།"
 
 #. Type: text
 #. Description
@@ -3260,7 +3260,7 @@ msgstr "གཞི་རྟེན་རིམ་ལུགས་འདི་གཞ
 msgid "Installing the base system"
 msgstr "གཞི་རྟེན་རིམ་ལུགས་འདི་གཞི་བཙུགས་འབད་དོ།"
 
-#. #-#-#-#-#  templates.pot (PACKAGE VERSION)  #-#-#-#-#
+#. #-#-#-#-#  templates.pot (base-installer)  #-#-#-#-#
 #. Type: text
 #. Description
 #. :sl1:
@@ -3474,6 +3474,14 @@ msgstr "${SUBST0}...སྦུང་ཚན་མི་འབད།"
 #: ../bootstrap-base.templates:41001
 msgid "Configuring ${SUBST0}..."
 msgstr "${SUBST0}...རིམ་སྒྲིག་འབད་དོ།"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Release is a filename which should not be translated
+#: ../bootstrap-base.templates:42001
+msgid "Checking Release signature"
+msgstr "Releaseམིང་རྟགས་ཞིབ་དཔྱད་འབད་དོ།"
 
 #. Type: text
 #. Description
@@ -3735,8 +3743,28 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:1001
-msgid "Scanning the CD-ROM..."
-msgstr "སི་ཌི་-རོམ་ ཞིབ་ལྟ་འབད་དོ..."
+#, fuzzy
+#| msgid "Finishing the installation"
+msgid "Scanning the installation media..."
+msgstr "གཞི་བཙུགས་འབད་ནི་ལུ་མཇུག་བསྡུ་ནི་འབད་དོ"
+
+#. Type: error
+#. Description
+#. :sl2:
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:2001 ../apt-cdrom-setup.templates:6001
+#, fuzzy
+#| msgid ""
+#| "An attempt to configure apt to install additional packages from the CD "
+#| "failed."
+msgid ""
+"An attempt to configure apt to install additional packages from the media "
+"failed."
+msgstr ""
+"སི་ཌི་ལས་ཐུམ་སྒྲིལ་ཚུ་ཁ་སྐོང་གཞི་བཙུགས་འབད་ནི་ལུ་apt རིམ་སྒྲིག་འབད་ནི་ལུ་དཔའ་བཅམ་མི་འདི་འཐུས་ཤོར་བྱུང་"
+"ཡོདཔ།"
 
 #. Type: boolean
 #. Description
@@ -3752,25 +3780,33 @@ msgstr "སི་ཌི་-རོམ་ ཞིབ་ལྟ་འབད་དོ.
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001 ../apt-cdrom-setup.templates:4001
 #: ../apt-cdrom-setup.templates:5001 ../apt-cdrom-setup.templates:6001
-msgid "Scan another CD or DVD?"
-msgstr "དོ་རུང་ སི་ཌི་ ཡང་ན་ ཌི་བི་ཌི་ ཞིབ་ལྟ་འབད་ནི་ཨིན་ན་?"
+#, fuzzy
+#| msgid "SILO installation failed"
+msgid "Scan extra installation media?"
+msgstr "SILO གཞི་བཙུགས་འཐུས་ཤོར་བྱུང་ཡོད།"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001
-msgid "Your installation CD or DVD has been scanned; its label is:"
-msgstr "ཁྱོད་ཀྱི་གཞི་བཙུགས་ སི་ཌི་ ཡང་ན་ ཌི་བི་ཌི་འདི་ ཞིབ་ལྟ་འབད་ནུག དེའི་ཁ་ཡིག་ཡང་:"
+msgid "Scanning your installation media finds the label:"
+msgstr ""
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001
+#, fuzzy
+#| msgid ""
+#| "You now have the option to scan additional CDs or DVDs for use by the "
+#| "package manager (apt). Normally these should be from the same set as the "
+#| "installation CD/DVD. If you do not have any additional CDs or DVDs "
+#| "available, this step can just be skipped."
 msgid ""
-"You now have the option to scan additional CDs or DVDs for use by the "
-"package manager (apt). Normally these should be from the same set as the "
-"installation CD/DVD. If you do not have any additional CDs or DVDs "
-"available, this step can just be skipped."
+"You now have the option of scanning additional media for use by the package "
+"manager (apt). Normally these should be from the same set as the one you "
+"booted from. If you do not have any additional media, this step can just be "
+"skipped."
 msgstr ""
 "ད་འབདན་ཁྱོད་ལུ་ ཐུམ་སྒྲིལ་འཛིན་སྐྱོང་པ་(apt) གིས་ ལག་ལེན་འཐབ་ནིའི་དོན་ལུ་ ཁ་སྐོང་ཅན་གྱི་སི་ཌི་ ཡང་"
 "ན་ ཌི་བི་ཌི་སོར་སོ་སྦེ་ ཞིབ་ལྟ་འབད་ནིའི་གདམ་ཁ་ཡོད། སྤྱིར་བཏང་ལུ་ གཞི་བཙུགས་ སི་ཌི་/ཌི་བི་ཌི་བཟུམ་སྦེ་ "
@@ -3784,53 +3820,50 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001 ../apt-cdrom-setup.templates:4001
-msgid "If you wish to scan another CD or DVD, please insert it now."
+#, fuzzy
+#| msgid "If you wish to scan another CD or DVD, please insert it now."
+msgid "If you wish to scan more media, please insert another one now."
 msgstr "དོ་རུང་ སི་ཌི་/ཌི་བི་ཌི་གཞན་མི་ཅིག་ ཞིབ་ལྟ་འབད་ནི་ཨིན་པ་ཅིན་ ད་ལྟོ་བཙུགས།"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:4001
-msgid "The CD or DVD with the following label has been scanned:"
+#, fuzzy
+#| msgid "The CD or DVD with the following label has been scanned:"
+msgid "The image with the following label has been scanned:"
 msgstr "སི་ཌི་/ཌི་བི་ཌི་འདི་ འོག་གི་ཁ་ཡིག་དང་བཅས་ ཞིབ་ལྟ་འབད་ཡོདཔ་:"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:5001
-msgid "The CD or DVD with the following label has already been scanned:"
+#, fuzzy
+#| msgid "The CD or DVD with the following label has already been scanned:"
+msgid "The image with the following label has already been scanned:"
 msgstr "སི་ཌི་/ཌི་བི་ཌི་འདི་ འོག་གི་ཁ་ཡིག་དང་བཅས་ ཧེ་མ་ལས་ཞིབ་ལྟ་འབད་ཡོདཔ་:"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:5001
-msgid "Please replace it now if you wish to scan another CD or DVD."
+#, fuzzy
+#| msgid "Please replace it now if you wish to scan another CD or DVD."
+msgid "Please replace it now, if you wish to scan another."
 msgstr "ཁྱོད་ཀྱིས་ སི་ཌི་/ཌི་བི་ཌི་སོར་སོ་ ཞིབ་ལྟ་འབད་ནི་ཨིན་པ་ཅིན་ ད་ལྟོ་ར་ཚབ་མ་བཙུགས།"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:6001
-msgid ""
-"An attempt to configure apt to install additional packages from the CD/DVD "
-"failed."
-msgstr ""
-"སི་ཌི་/ཌི་བི་ཌི་ནང་ལས་ ཐུམ་སྒྲིལ་ཁ་སྐོང་ གཞི་བཙུགས་འབད་ནི་ལུ་apt རིམ་སྒྲིག་འབད་ནིའི་དཔའ་བཅམ་མི་འདི་ "
-"འཐུས་ཤོར་བྱུང་ཡོདཔ།"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:6001
-msgid "Please check that the CD/DVD has been inserted correctly."
+#, fuzzy
+#| msgid "Please check that the CD/DVD has been inserted correctly."
+msgid "Please check that the media has been inserted correctly."
 msgstr "ཁྱོད་ཀྱིས་ སི་ཌི་/ཌི་བི་ཌི་འདི་ ཡོངས་རྫོགས་སྦེ་གཞི་སྒྲིག་འབད་ཡི་ག་ངེས་ཏིག་བཟོ་གནང་།"
 
 #. Type: text
 #. Description
 #. :sl1:
-#. This template uses the same text as used in the package apt for apt-cdrom
-#. Do not translate "/cdrom/" (the mount point)
 #: ../apt-cdrom-setup.templates:7001
 msgid "Media change"
 msgstr "བརྡ་ལམ་གྱི་འགྱུར་བ་"
@@ -3838,12 +3871,12 @@ msgstr "བརྡ་ལམ་གྱི་འགྱུར་བ་"
 #. Type: text
 #. Description
 #. :sl1:
-#. This template uses the same text as used in the package apt for apt-cdrom
-#. Do not translate "/cdrom/" (the mount point)
 #: ../apt-cdrom-setup.templates:7001
-msgid ""
-"/cdrom/: Please insert the disc labeled '${LABEL}' in the drive '/cdrom/' "
-"and press enter."
+#, fuzzy
+#| msgid ""
+#| "/cdrom/: Please insert the disc labeled '${LABEL}' in the drive '/cdrom/' "
+#| "and press enter."
+msgid "Please insert the media labeled '${LABEL}' and press enter."
 msgstr ""
 "/cdrom/: ཁ་ཡིག་ཅན་གྱི་ཌིསཀི་བཙུགས་གནང་ '${LABEL}' འདི་འདྲེན་འཕྲུལ་ '/cdrom/' ནང་བཙུགས་ཏེ་ "
 "བཙུགས་ལུ་ཨེབས།"
@@ -3863,9 +3896,13 @@ msgstr "sources.list ནང་ལུ་ ནེཊི་ཊིངསཊི་ ས
 #. Description
 #. :sl2:
 #: ../apt-cdrom-setup.templates:9001 ../apt-mirror-setup.templates:6001
+#, fuzzy
+#| msgid ""
+#| "If you are installing from a netinst CD and choose not to use a mirror, "
+#| "you will end up with only a very minimal base system."
 msgid ""
-"If you are installing from a netinst CD and choose not to use a mirror, you "
-"will end up with only a very minimal base system."
+"If you are installing from a netinst CD image and choose not to use a "
+"mirror, you will end up with only a very minimal base system."
 msgstr ""
 "ཁྱོད་ཀྱིས་ netinst ནང་ལས་ གཞི་བཙུགས་འབདཝ་ཨིན་པ་ཅིན་ ངོ་འཆར་ལག་ལེན་མ་འཐབ་ དེ་ལག་ལེན་འཐབ་པ་"
 "ཅིན་ གཞི་རྟེན་རིམ་ལུགས་ཨ་ཙི་ཅིག་ལས་འགལ་གཞི་བཙུགས་འབད་མ་ཚུགས་པར་ མཇུག་བསྡུ་འོང་།"
@@ -3874,8 +3911,13 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:10001
+#, fuzzy
+#| msgid ""
+#| "You are installing from a netinst CD, which by itself only allows "
+#| "installation of a very minimal base system. Use a mirror to install a "
+#| "more complete system."
 msgid ""
-"You are installing from a netinst CD, which by itself only allows "
+"You are installing from a netinst CD image, which by itself only allows "
 "installation of a very minimal base system. Use a mirror to install a more "
 "complete system."
 msgstr ""
@@ -3887,8 +3929,13 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:11001
+#, fuzzy
+#| msgid ""
+#| "You are installing from a CD, which contains a limited selection of "
+#| "packages."
 msgid ""
-"You are installing from a CD, which contains a limited selection of packages."
+"You are installing from an image which contains a limited selection of "
+"packages."
 msgstr "ཁྱོད་ཀྱིས་ ཐུམ་སྒྲིལ་ཚད་ཅིག་ལས་བརྒལ་མེད་པའི་སི་ཌི་ཅིག་ནང་ལས་ གཞི་བཙུགས་འབདཝ་ཨིན་པས།"
 
 #. Type: text
@@ -3896,9 +3943,13 @@ msgstr "ཁྱོད་ཀྱིས་ ཐུམ་སྒྲིལ་ཚད་�
 #. :sl1:
 #. The value of %i can be 2 or 3
 #: ../apt-cdrom-setup.templates:12001
-#, no-c-format
+#, fuzzy, no-c-format
+#| msgid ""
+#| "You have scanned %i CDs. Even though these contain a fair selection of "
+#| "packages, some may be missing (notably some packages needed to support "
+#| "languages other than English)."
 msgid ""
-"You have scanned %i CDs. Even though these contain a fair selection of "
+"You have scanned %i images. Even though these contain a fair selection of "
 "packages, some may be missing (notably some packages needed to support "
 "languages other than English)."
 msgstr ""
@@ -3911,9 +3962,12 @@ msgstr ""
 #. :sl1:
 #. The value of %i can be from 4 to 8
 #: ../apt-cdrom-setup.templates:13001
-#, no-c-format
+#, fuzzy, no-c-format
+#| msgid ""
+#| "You have scanned %i CDs. Even though these contain a large selection of "
+#| "packages, some may be missing."
 msgid ""
-"You have scanned %i CDs. Even though these contain a large selection of "
+"You have scanned %i images. Even though these contain a large selection of "
 "packages, some may be missing."
 msgstr ""
 "ཁྱོད་ཀྱིས་ %i སི་ཌི་འདི་ཞིབ་ལྟ་འབད་ནུག། དེ་ནང་ཐུམ་སྒྲིལ་ལེ་ཤ་ཡོད་དེ་འབད་རུང་ ལ་ལོ་ཅིག་མ་ཚང་པར་ཡོདཔ་"
@@ -3934,8 +3988,12 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:15001
+#, fuzzy
+#| msgid ""
+#| "You are installing from a DVD. Even though the DVD contains a large "
+#| "selection of packages, some may be missing."
 msgid ""
-"You are installing from a DVD. Even though the DVD contains a large "
+"You are installing from a DVD image. Even though it contains a large "
 "selection of packages, some may be missing."
 msgstr ""
 "ཁྱོད་ཀྱིས་ ཌི་བི་ཌི་ཅིག་ནང་ལས་ གཞི་བཙུགས་འབདཝ་ཨིན་པས། ཌི་བི་ཌི་དེ་ནང་ཐུམ་སྒྲིལ་ལེ་ཤ་ཡོད་དེ་འབད་རུང་ "
@@ -4063,9 +4121,14 @@ msgstr "ཡོངས་འབྲེལ་ངོ་འཆར་ཅིག་ལག
 #. Description
 #. :sl1:
 #: ../apt-mirror-setup.templates:5001
+#, fuzzy
+#| msgid ""
+#| "A network mirror can be used to supplement the software that is included "
+#| "on the CD-ROM. This may also make newer versions of software available."
 msgid ""
 "A network mirror can be used to supplement the software that is included on "
-"the CD-ROM. This may also make newer versions of software available."
+"the installation media. This may also make newer versions of software "
+"available."
 msgstr ""
 "ཡོངས་འབྲེལ་ངོ་འཆར་འདི་ སི་ཌི་-རཱོམ་ གུའི་གྲངས་སུ་ཚུད་དེ་ཡོད་པའི་ མཉེན་ཆས་ལྷན་ཐབས་ཀྱི་དོན་ལས་ ལག་ལེན་"
 "འཐབ་བཏུབ་ཨིན། དེ་གིས་ མཉེན་ཆས་ཀྱི་ཐོན་རིམ་གསར་ཤོས་ཚུ་འཐོབ་ཚུགསཔ་བཟོ་འོང་།"
@@ -4706,6 +4769,67 @@ msgstr "གཏན་ཚིག་ཅན་གྱི་སྐད་ཤུགས་
 #: ../partman-auto-lvm.templates:1001
 msgid "Guided - use entire disk and set up LVM"
 msgstr "ལམ་སྟོན་ཅན་ - ཌིཀསི་ཧྲིལ་བུ་ལག་ལེན་འཐབ་སྟེ་ ཨེལ་ཝི་ཨེམ་ གཞི་སྒྲིག་འབད།"
+
+#~ msgid "Load installer components from CD"
+#~ msgstr "སི་ཌི་ནང་ལས་གཞི་བཙུགས་པའི་ཆ་ཤས་ཚུ་མངོན་གསལ་འབད།"
+
+#~ msgid "Detecting hardware to find CD-ROM drives"
+#~ msgstr "སི་ཌི་ རོམ་ ་འདྲེན་འཕྲུལ་ཚུ་འཚོལ་ནིའི་དོན་ལུ་སྲ་ཆས་སྐྱོན་འཛིན་འབད་དོ།"
+
+#~ msgid "Scanning CD-ROM"
+#~ msgstr "སི་ཌི་ རོམ་ ཞིབ་ལྟ་འབད་དོ།"
+
+#~ msgid "Unmounting and ejecting CD-ROM..."
+#~ msgstr "སྦྱར་བརྩེགས་མི་འབད་ནི་དང་སི་ཌི་ རོམ་ཕྱིར་བཏོན་ནི..."
+
+#~ msgid "Scanning the CD-ROM..."
+#~ msgstr "སི་ཌི་-རོམ་ ཞིབ་ལྟ་འབད་དོ..."
+
+#~ msgid "Scan another CD or DVD?"
+#~ msgstr "དོ་རུང་ སི་ཌི་ ཡང་ན་ ཌི་བི་ཌི་ ཞིབ་ལྟ་འབད་ནི་ཨིན་ན་?"
+
+#~ msgid "Your installation CD or DVD has been scanned; its label is:"
+#~ msgstr "ཁྱོད་ཀྱི་གཞི་བཙུགས་ སི་ཌི་ ཡང་ན་ ཌི་བི་ཌི་འདི་ ཞིབ་ལྟ་འབད་ནུག དེའི་ཁ་ཡིག་ཡང་:"
+
+#~ msgid ""
+#~ "An attempt to configure apt to install additional packages from the CD/"
+#~ "DVD failed."
+#~ msgstr ""
+#~ "སི་ཌི་/ཌི་བི་ཌི་ནང་ལས་ ཐུམ་སྒྲིལ་ཁ་སྐོང་ གཞི་བཙུགས་འབད་ནི་ལུ་apt རིམ་སྒྲིག་འབད་ནིའི་དཔའ་བཅམ་མི་"
+#~ "འདི་ འཐུས་ཤོར་བྱུང་ཡོདཔ།"
+
+#~ msgid "Load CD-ROM drivers from removable media?"
+#~ msgstr "བཏོན་བཏུབ་པའི་མི་ཌི་ཡ་ནང་ལས་ སི་ཌི་-རོམ་འདྲེན་བྱེད་མངོན་གསལ་འབད་ནི་ཨིན་ན?"
+
+#~ msgid "Retry mounting the CD-ROM?"
+#~ msgstr "སི་ཌི་ རོམ་ལོག་ཁ་ཕྱེ་ནི་ལུ་འབད་རྩོལ་བསྐྱོད་ནི་ཨིན་ན?"
+
+#~ msgid "CD-ROM detected"
+#~ msgstr "སི་ཌི་ རོམ་ སྐྱོན་འཛིན་འབྱུང་ཡོད།"
+
+#~ msgid "Incorrect CD-ROM detected"
+#~ msgstr "སི་ཌི་ རོམ་ལུ་བདེན་མེད་ཀྱི་སྐྱོན་འཛིན་འབྱུང་ཡོདཔ།"
+
+#~ msgid "Detect and mount CD-ROM"
+#~ msgstr "སི་ཌི་ རོམ་སྦྱར་བརྩེགས་འམད་ནི་དང་སྐྱོན་འཛིན།"
+
+#~ msgid "Check the CD-ROM(s) integrity"
+#~ msgstr "སི་ཌི་-རོམ་(ཚུ)ཆིག་སྒྲིལ་འདི་ཞིབ་དཔྱད་འབད།"
+
+#~ msgid "Check CD-ROM integrity?"
+#~ msgstr "སི་ཌི་-རོམ་ ཆིག་སྒྲིལ་ཞིབ་དཔྱད་འབད?"
+
+#~ msgid "Insert a Debian CD-ROM"
+#~ msgstr "ཌི་བི་ཡཱན་སི་ཌི་-རོམ་བཙུགས།"
+
+#~ msgid "Failed to mount CD-ROM"
+#~ msgstr "སི་ཌི་-རོམ་སྦྱར་བཙེགས་འབད་ནི་ལུ་འཐུས་ཤོར་བྱུང་ཡོད།"
+
+#~ msgid "No valid Debian CD-ROM"
+#~ msgstr "ནུས་ཅན་ཌི་བི་ཡཱན་སི་ཌི་-རོམ་འདི་མིན་འདུག"
+
+#~ msgid "Checking CD-ROM integrity"
+#~ msgstr "སི་ཌི་-རོམ་ཆིག་སྒྲིལ་ཞིབ་དཔྱད་འབད་དོ།"
 
 #~ msgid "No DHCP client was found. This package requires pump or dhcp-client."
 #~ msgstr "ཌི་ཨེཆ་སི་པི་ཞབས་ཏོག་སྤྱོད་མི་འཚོལ་མ་འཐོབ་ ཐུམ་སྒྲིལ་འདི་ལུ་པམཔ་ཡང་ཅིན་ཌི་ཨེཆ་སི་པི་དགོ།"
@@ -5628,9 +5752,6 @@ msgstr "ལམ་སྟོན་ཅན་ - ཌིཀསི་ཧྲིལ་བ
 #~ msgstr ""
 #~ "བར་བཅད་ཚུ་ཧེ་མ་ལས་སྦྱར་བརྩེགས་འབད་ཚརཝ་ལས་ ཁྱོད་ཀྱིས་བསྒྱུར་བཅོས་ཚུ་གང་ཡང་འབད་མི་ཚུགས།"
 
-#~ msgid "Failed to unmount partitions"
-#~ msgstr "བར་བཅད་ཚུ་སྦྱར་བརྩེགས་མ་འབད་ནི་ལུ་འཐུས་ཤོར་བྱུང་ཡོད།"
-
 #~ msgid "An unexpected error occurred while unmounting the partitions."
 #~ msgstr "བར་བཅད་སྦྱར་བརྩེགས་འབད་བཤོལ་བའི་བསྒང་ རྣམ་རྟོག་མེད་པའི་འཛོལ་བ་ཅིག་བྱུང་ནུག"
 
@@ -5803,9 +5924,6 @@ msgstr "ལམ་སྟོན་ཅན་ - ཌིཀསི་ཧྲིལ་བ
 #~ "བཟུམ་སྦེ་ SILO་གཞི་བཙུགས་འབད་ནི་འདི་དགོས་མཁོ་ཅན་གྱི་རིམ་པ་ཨིན། ག་དེ་སྦེ་རང་ཨིན་རུང་གཞི་བཙུགས་"
 #~ "དཀའ་ངལ་འདི་ SILO ལུ་འབྲེལ་བ་མེདཔ་འོང་ དེ་འབདཝ་ལས་འཕྲོ་མཐུད་འབད་མི་འདི་གིས་གཞི་བཙུགས་ནི་ལུ་"
 #~ "འབད་ཚུགས་འོང་།"
-
-#~ msgid "SILO installation failed"
-#~ msgstr "SILO གཞི་བཙུགས་འཐུས་ཤོར་བྱུང་ཡོད།"
 
 #~ msgid "Running \"/sbin/silo\" failed with error code \"${ERRCODE}\"."
 #~ msgstr ""

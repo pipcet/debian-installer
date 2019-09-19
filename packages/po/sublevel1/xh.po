@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-28 21:20+0000\n"
+"POT-Creation-Date: 2019-09-19 16:20+0000\n"
 "PO-Revision-Date: 2005-06-13 14:08+0200\n"
 "Last-Translator: Canonical Ltd <translations@canonical.com>\n"
 "Language-Team: Xhosa \n"
@@ -634,13 +634,6 @@ msgstr "ngenisa intsingiselo ngesandla"
 msgid "Download installer components"
 msgstr "Khuphela ulwazi lwamalungu esiseko-nkqubo"
 
-#. Type: text
-#. Description
-#. Main menu item
-#: ../load-cdrom.templates:1001
-msgid "Load installer components from CD"
-msgstr "Layisha amalungu okusekwa kwezixhobo kwi-CD"
-
 #. Type: boolean
 #. Description
 #: ../load-media.templates:1001
@@ -752,14 +745,6 @@ msgid ""
 "should select the default. If your system fails to boot, you can retry the "
 "installation using the other options."
 msgstr ""
-
-#. Type: text
-#. Description
-#. Release is a filename which should not be translated
-#: ../bootstrap-base.templates:42001
-#, fuzzy
-msgid "Checking Release signature"
-msgstr "Ifumana kwakhona ifayili Yokukhutshwa"
 
 #. Type: select
 #. Description
@@ -1591,15 +1576,17 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../cdrom-detect.templates:2001
-msgid "Detecting hardware to find CD-ROM drives"
+#, fuzzy
+msgid "Detecting hardware to find installation media"
 msgstr "Ifumana i-hardware yekhompyutha ukuze ifumane ii-drive ze-CD-ROM"
 
 #. Type: text
 #. Description
 #. :sl1:
 #: ../cdrom-detect.templates:10001
-msgid "Scanning CD-ROM"
-msgstr "Iskena i-CD-ROM"
+#, fuzzy
+msgid "Scanning installation media"
+msgstr "Ukusekwa kwe-LILO akuphumelelanga"
 
 #. Type: text
 #. Description
@@ -1613,8 +1600,8 @@ msgstr "Iskena i ${DIR}..."
 #. finish-install progress bar item
 #. :sl1:
 #: ../cdrom-detect.templates:19001
-msgid "Unmounting and ejecting CD-ROM..."
-msgstr "Iyayehlisa iyayikhupha i-CD-ROM..."
+msgid "Unmounting/ejecting installation media..."
+msgstr ""
 
 #. Type: text
 #. Description
@@ -2374,6 +2361,15 @@ msgstr ""
 #: ../mdcfg-utils.templates:6001 ../mdcfg-utils.templates:13001
 msgid "Cancel"
 msgstr ""
+
+#. Type: text
+#. Description
+#. Main menu item
+#. :sl1:
+#: ../load-cdrom.templates:1001
+#, fuzzy
+msgid "Load installer components from installation media"
+msgstr "Layisha amalungu okusekwa kwezixhobo kwi-CD"
 
 #. Type: text
 #. Description
@@ -3247,7 +3243,7 @@ msgstr "Ilungiselela ukuseka inkqubo esisiseko ye-Debian..."
 msgid "Installing the base system"
 msgstr "Iseka inkqubo esisiseko"
 
-#. #-#-#-#-#  templates.pot (PACKAGE VERSION)  #-#-#-#-#
+#. #-#-#-#-#  templates.pot (base-installer)  #-#-#-#-#
 #. Type: text
 #. Description
 #. :sl1:
@@ -3465,6 +3461,15 @@ msgstr "Ikhupha i-${SUBST0}..."
 #: ../bootstrap-base.templates:41001
 msgid "Configuring ${SUBST0}..."
 msgstr "Imisela inkqubo i-${SUBST0}..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Release is a filename which should not be translated
+#: ../bootstrap-base.templates:42001
+#, fuzzy
+msgid "Checking Release signature"
+msgstr "Ifumana kwakhona ifayili Yokukhutshwa"
 
 #. Type: text
 #. Description
@@ -3717,8 +3722,21 @@ msgstr ""
 #. :sl1:
 #: ../apt-cdrom-setup.templates:1001
 #, fuzzy
-msgid "Scanning the CD-ROM..."
-msgstr "Iskena i-CD-ROM"
+#| msgid "Finishing the installation"
+msgid "Scanning the installation media..."
+msgstr "Igqibezela ukumisela inkqubo yothungelwano"
+
+#. Type: error
+#. Description
+#. :sl2:
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:2001 ../apt-cdrom-setup.templates:6001
+msgid ""
+"An attempt to configure apt to install additional packages from the media "
+"failed."
+msgstr ""
 
 #. Type: boolean
 #. Description
@@ -3734,14 +3752,15 @@ msgstr "Iskena i-CD-ROM"
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001 ../apt-cdrom-setup.templates:4001
 #: ../apt-cdrom-setup.templates:5001 ../apt-cdrom-setup.templates:6001
-msgid "Scan another CD or DVD?"
-msgstr ""
+#, fuzzy
+msgid "Scan extra installation media?"
+msgstr "Ukusekwa kwe-LILO akuphumelelanga"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001
-msgid "Your installation CD or DVD has been scanned; its label is:"
+msgid "Scanning your installation media finds the label:"
 msgstr ""
 
 #. Type: boolean
@@ -3749,10 +3768,10 @@ msgstr ""
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001
 msgid ""
-"You now have the option to scan additional CDs or DVDs for use by the "
-"package manager (apt). Normally these should be from the same set as the "
-"installation CD/DVD. If you do not have any additional CDs or DVDs "
-"available, this step can just be skipped."
+"You now have the option of scanning additional media for use by the package "
+"manager (apt). Normally these should be from the same set as the one you "
+"booted from. If you do not have any additional media, this step can just be "
+"skipped."
 msgstr ""
 
 #. Type: boolean
@@ -3762,45 +3781,37 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001 ../apt-cdrom-setup.templates:4001
-msgid "If you wish to scan another CD or DVD, please insert it now."
+msgid "If you wish to scan more media, please insert another one now."
 msgstr ""
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:4001
-msgid "The CD or DVD with the following label has been scanned:"
+msgid "The image with the following label has been scanned:"
 msgstr ""
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:5001
-msgid "The CD or DVD with the following label has already been scanned:"
+msgid "The image with the following label has already been scanned:"
 msgstr ""
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:5001
-msgid "Please replace it now if you wish to scan another CD or DVD."
-msgstr ""
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:6001
-msgid ""
-"An attempt to configure apt to install additional packages from the CD/DVD "
-"failed."
-msgstr ""
+#, fuzzy
+msgid "Please replace it now, if you wish to scan another."
+msgstr "Nceda ukhethe uhlobo lwe-keyboard oza kuyimisela njengenkqubo."
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:6001
 #, fuzzy
-msgid "Please check that the CD/DVD has been inserted correctly."
+msgid "Please check that the media has been inserted correctly."
 msgstr ""
 "Nceda ungenise igama lomququzeleli wesipili apho Debian luya kukhutshelwa "
 "khona."
@@ -3808,8 +3819,6 @@ msgstr ""
 #. Type: text
 #. Description
 #. :sl1:
-#. This template uses the same text as used in the package apt for apt-cdrom
-#. Do not translate "/cdrom/" (the mount point)
 #: ../apt-cdrom-setup.templates:7001
 msgid "Media change"
 msgstr ""
@@ -3817,12 +3826,8 @@ msgstr ""
 #. Type: text
 #. Description
 #. :sl1:
-#. This template uses the same text as used in the package apt for apt-cdrom
-#. Do not translate "/cdrom/" (the mount point)
 #: ../apt-cdrom-setup.templates:7001
-msgid ""
-"/cdrom/: Please insert the disc labeled '${LABEL}' in the drive '/cdrom/' "
-"and press enter."
+msgid "Please insert the media labeled '${LABEL}' and press enter."
 msgstr ""
 
 #. Type: text
@@ -3841,8 +3846,8 @@ msgstr ""
 #. :sl2:
 #: ../apt-cdrom-setup.templates:9001 ../apt-mirror-setup.templates:6001
 msgid ""
-"If you are installing from a netinst CD and choose not to use a mirror, you "
-"will end up with only a very minimal base system."
+"If you are installing from a netinst CD image and choose not to use a "
+"mirror, you will end up with only a very minimal base system."
 msgstr ""
 
 #. Type: text
@@ -3850,7 +3855,7 @@ msgstr ""
 #. :sl1:
 #: ../apt-cdrom-setup.templates:10001
 msgid ""
-"You are installing from a netinst CD, which by itself only allows "
+"You are installing from a netinst CD image, which by itself only allows "
 "installation of a very minimal base system. Use a mirror to install a more "
 "complete system."
 msgstr ""
@@ -3860,7 +3865,8 @@ msgstr ""
 #. :sl1:
 #: ../apt-cdrom-setup.templates:11001
 msgid ""
-"You are installing from a CD, which contains a limited selection of packages."
+"You are installing from an image which contains a limited selection of "
+"packages."
 msgstr ""
 
 #. Type: text
@@ -3870,7 +3876,7 @@ msgstr ""
 #: ../apt-cdrom-setup.templates:12001
 #, no-c-format
 msgid ""
-"You have scanned %i CDs. Even though these contain a fair selection of "
+"You have scanned %i images. Even though these contain a fair selection of "
 "packages, some may be missing (notably some packages needed to support "
 "languages other than English)."
 msgstr ""
@@ -3882,7 +3888,7 @@ msgstr ""
 #: ../apt-cdrom-setup.templates:13001
 #, no-c-format
 msgid ""
-"You have scanned %i CDs. Even though these contain a large selection of "
+"You have scanned %i images. Even though these contain a large selection of "
 "packages, some may be missing."
 msgstr ""
 
@@ -3900,7 +3906,7 @@ msgstr ""
 #. :sl1:
 #: ../apt-cdrom-setup.templates:15001
 msgid ""
-"You are installing from a DVD. Even though the DVD contains a large "
+"You are installing from a DVD image. Even though it contains a large "
 "selection of packages, some may be missing."
 msgstr ""
 
@@ -4019,7 +4025,8 @@ msgstr ""
 #: ../apt-mirror-setup.templates:5001
 msgid ""
 "A network mirror can be used to supplement the software that is included on "
-"the CD-ROM. This may also make newer versions of software available."
+"the installation media. This may also make newer versions of software "
+"available."
 msgstr ""
 
 #. Type: boolean
@@ -4627,6 +4634,38 @@ msgstr "Misela kwakhona inkqubo yoMphathi woBukhulu oBunegqiqo"
 msgid "Guided - use entire disk and set up LVM"
 msgstr ""
 
+#~ msgid "Load installer components from CD"
+#~ msgstr "Layisha amalungu okusekwa kwezixhobo kwi-CD"
+
+#~ msgid "Detecting hardware to find CD-ROM drives"
+#~ msgstr "Ifumana i-hardware yekhompyutha ukuze ifumane ii-drive ze-CD-ROM"
+
+#~ msgid "Scanning CD-ROM"
+#~ msgstr "Iskena i-CD-ROM"
+
+#~ msgid "Unmounting and ejecting CD-ROM..."
+#~ msgstr "Iyayehlisa iyayikhupha i-CD-ROM..."
+
+#, fuzzy
+#~ msgid "Scanning the CD-ROM..."
+#~ msgstr "Iskena i-CD-ROM"
+
+#, fuzzy
+#~ msgid "Load CD-ROM drivers from removable media?"
+#~ msgstr "Ilayisha abaqhubi bothungelwano ibasusa kwi-floppy yabaqhubi?"
+
+#, fuzzy
+#~ msgid "Retry mounting the CD-ROM?"
+#~ msgstr "Zama kwakhona ukunyusa i-CD-ROM?"
+
+#, fuzzy
+#~ msgid "Detect and mount CD-ROM"
+#~ msgstr "Zama kwakhona ukunyusa i-CD-ROM?"
+
+#, fuzzy
+#~ msgid "Failed to mount CD-ROM"
+#~ msgstr "Zama kwakhona ukunyusa i-CD-ROM?"
+
 #, fuzzy
 #~ msgid "Partition for boot loader installation:"
 #~ msgstr "Isixhobo soseko-nkqubo lwesilayishi sokuvula:"
@@ -4772,10 +4811,6 @@ msgstr ""
 #, fuzzy
 #~ msgid "ZFS pool to delete:"
 #~ msgstr "Iqela lobukhulu lokucinywa:"
-
-#, fuzzy
-#~ msgid "Please select the ZFS pool you wish to delete."
-#~ msgstr "Nceda ukhethe uhlobo lwe-keyboard oza kuyimisela njengenkqubo."
 
 #, fuzzy
 #~ msgid "No ZFS pool has been found."
@@ -4994,10 +5029,6 @@ msgstr ""
 #~ msgstr "Ufuna ukuphindela kwimenyu yokwahlulwa?"
 
 #, fuzzy
-#~ msgid "Failed to unmount partitions"
-#~ msgstr "musa ukukusebenzisa ukwahlulwa"
-
-#, fuzzy
 #~ msgid "An unexpected error occurred while unmounting the partitions."
 #~ msgstr "Impazamo yenzeke xa ibibhalela iinguqulo kwizixhobo zikavimba."
 
@@ -5072,10 +5103,6 @@ msgstr ""
 #, fuzzy
 #~ msgid "Network Block Device port or name:"
 #~ msgstr "Misela inkqubo ye-network"
-
-#, fuzzy
-#~ msgid "SILO installation failed"
-#~ msgstr "Ukusekwa kwe-LILO akuphumelelanga"
 
 #, fuzzy
 #~ msgid "SILO installation successful"

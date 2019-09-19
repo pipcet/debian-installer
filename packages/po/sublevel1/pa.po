@@ -21,7 +21,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pa\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-28 21:20+0000\n"
+"POT-Creation-Date: 2019-09-19 16:20+0000\n"
 "PO-Revision-Date: 2019-03-11 16:03+0000\n"
 "Last-Translator: Aman ALam <alam.yellow@gmail.com>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -626,13 +626,6 @@ msgstr "ਜਾਣਕਾਰੀ ਖੁਦ ਦਿਓ"
 msgid "Download installer components"
 msgstr "ਇੰਸਟਾਲਰ ਭਾਗ ਡਾਊਨਲੋਡ ਕਰੋ"
 
-#. Type: text
-#. Description
-#. Main menu item
-#: ../load-cdrom.templates:1001
-msgid "Load installer components from CD"
-msgstr "ਇੰਸਟਾਲਰ ਭਾਗ CD ਤੋਂ ਲੋਡ ਕਰੋ"
-
 #. Type: boolean
 #. Description
 #: ../load-media.templates:1001
@@ -739,13 +732,6 @@ msgstr ""
 "ਲਿਸਟ ਉਪਲੱਬਧ ਟੂਲ ਵਿਖਾਉਂਦੀ ਹੈ। ਜੇ ਤੁਸੀਂ ਚੁਣਨ ਬਾਰੇ ਜਾਣੂ ਨਹੀਂ ਹੋ ਤਾਂ ਤੁਹਾਨੂੰ ਡਿਫਾਲਟ ਹੀ ਚੁਣਨਾ "
 "ਚਾਹੀਦਾ ਹੈ। ਜੇ ਤੁਹਾਡਾ ਸਿਸਟਮ ਬੂਟ ਹੋਣ ਵਿੱਚ ਅਸਫਲ ਹੈ, ਤੁਸੀਂ ਹੋਰ ਚੋਣ ਵਰਤ ਕੇ ਇੰਸਟਾਲੇਸ਼ਨ ਦੀ ਮੁੜ ਕੋਸ਼ਿਸ਼ "
 "ਕਰ ਸਕਦੇ ਹੋ।"
-
-#. Type: text
-#. Description
-#. Release is a filename which should not be translated
-#: ../bootstrap-base.templates:42001
-msgid "Checking Release signature"
-msgstr "ਜਾਰੀ ਦਸਤਖਤ ਚੈੱਕ ਕੀਤੇ ਜਾ ਰਹੇ ਹਨ"
 
 #. Type: select
 #. Description
@@ -1588,15 +1574,19 @@ msgstr "ਸਾਰੀਆਂ ਦਰਸਾਈਆਂ ਸਵਿੱਚਾਂ ਇਸ �
 #. Description
 #. :sl1:
 #: ../cdrom-detect.templates:2001
-msgid "Detecting hardware to find CD-ROM drives"
-msgstr "CD-ROM ਡਰਾਈਵ ਲੱਭਣ ਲਈ ਹਾਰਡਵੇਅਰ ਪਤਾ ਲਗਾ ਰਿਹਾ ਹੈ"
+#, fuzzy
+#| msgid "Detecting hardware to find hard drives"
+msgid "Detecting hardware to find installation media"
+msgstr "ਹਾਰਡ ਡਰਾਈਵ ਲੱਭਣ ਲਈ ਹਾਰਡਵੇਅਰ ਦੀ ਖੋਜ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ"
 
 #. Type: text
 #. Description
 #. :sl1:
 #: ../cdrom-detect.templates:10001
-msgid "Scanning CD-ROM"
-msgstr "CD-ROM ਦੀ ਜਾਂਚ ਜਾਰੀ"
+#, fuzzy
+#| msgid "SILO installation failed"
+msgid "Scanning installation media"
+msgstr "SILO ਇੰਸਟਾਲੇਸ਼ਨ ਫੇਲ੍ਹ ਹੋਈ"
 
 #. Type: text
 #. Description
@@ -1610,8 +1600,8 @@ msgstr "${DIR} ਦੀ ਜਾਂਚ ਜਾਰੀ..."
 #. finish-install progress bar item
 #. :sl1:
 #: ../cdrom-detect.templates:19001
-msgid "Unmounting and ejecting CD-ROM..."
-msgstr "CD-ROM ਅਣ-ਮਾਊਂਟ ਅਤੇ ਬਾਹਰ ਕੱਢੀ ਜਾ ਰਹੀ ਹੈ..."
+msgid "Unmounting/ejecting installation media..."
+msgstr ""
 
 #. Type: text
 #. Description
@@ -2322,6 +2312,16 @@ msgstr ""
 #: ../mdcfg-utils.templates:6001 ../mdcfg-utils.templates:13001
 msgid "Cancel"
 msgstr "ਰੱਦ ਕਰੋ"
+
+#. Type: text
+#. Description
+#. Main menu item
+#. :sl1:
+#: ../load-cdrom.templates:1001
+#, fuzzy
+#| msgid "Load installer components from an installer ISO"
+msgid "Load installer components from installation media"
+msgstr "ਇੰਸਟਾਲਰ ISO ਤੋਂ ਇੰਸਟਾਲਰ ਭਾਗ ਲੋਡ ਕਰੋ"
 
 #. Type: text
 #. Description
@@ -3159,7 +3159,7 @@ msgstr "ਬੇਸ ਸਿਸਟਮ ਇੰਸਟਾਲ ਕਰਨ ਲਈ ਤਿਆ�
 msgid "Installing the base system"
 msgstr "ਬੇਸ ਸਿਸਟਮ ਇੰਸਟਾਲ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ"
 
-#. #-#-#-#-#  templates.pot (PACKAGE VERSION)  #-#-#-#-#
+#. #-#-#-#-#  templates.pot (base-installer)  #-#-#-#-#
 #. Type: text
 #. Description
 #. :sl1:
@@ -3373,6 +3373,14 @@ msgstr "${SUBST0} ਨੂੰ ਅਣ-ਪੈਕ ਕੀਤਾ ਜਾ ਰਿਹਾ �
 #: ../bootstrap-base.templates:41001
 msgid "Configuring ${SUBST0}..."
 msgstr "${SUBST0} ਨੂੰ ਸੰਰਚਿਤ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Release is a filename which should not be translated
+#: ../bootstrap-base.templates:42001
+msgid "Checking Release signature"
+msgstr "ਜਾਰੀ ਦਸਤਖਤ ਚੈੱਕ ਕੀਤੇ ਜਾ ਰਹੇ ਹਨ"
 
 #. Type: text
 #. Description
@@ -3625,8 +3633,26 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:1001
-msgid "Scanning the CD-ROM..."
-msgstr "CD-ROM ਦੀ ਜਾਂਚ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ..."
+#, fuzzy
+#| msgid "Finishing the installation"
+msgid "Scanning the installation media..."
+msgstr "ਇੰਸਟਾਲੇਸ਼ਨ ਸਮਾਪਤ ਕੀਤੀ ਜਾ ਰਹੀ ਹੈ"
+
+#. Type: error
+#. Description
+#. :sl2:
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:2001 ../apt-cdrom-setup.templates:6001
+#, fuzzy
+#| msgid ""
+#| "An attempt to configure apt to install additional packages from the CD "
+#| "failed."
+msgid ""
+"An attempt to configure apt to install additional packages from the media "
+"failed."
+msgstr "CD ਤੋਂ ਵਾਧੂ ਪੈਕੇਜ ਇੰਸਟਾਲ ਕਰਨ ਲਈ apt ਦੀ ਸੰਰਚਨਾ ਫੇਲ੍ਹ ਹੋਈ।"
 
 #. Type: boolean
 #. Description
@@ -3642,25 +3668,33 @@ msgstr "CD-ROM ਦੀ ਜਾਂਚ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ..."
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001 ../apt-cdrom-setup.templates:4001
 #: ../apt-cdrom-setup.templates:5001 ../apt-cdrom-setup.templates:6001
-msgid "Scan another CD or DVD?"
-msgstr "ਹੋਰ CD ਜਾਂ DVD ਸਕੈਨ ਕਰਨੀ ਹੈ?"
+#, fuzzy
+#| msgid "SILO installation failed"
+msgid "Scan extra installation media?"
+msgstr "SILO ਇੰਸਟਾਲੇਸ਼ਨ ਫੇਲ੍ਹ ਹੋਈ"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001
-msgid "Your installation CD or DVD has been scanned; its label is:"
-msgstr "ਤੁਹਾਡੀ ਇੰਸਟਾਲੇਸ਼ਨ CD ਜਾਂ DVD ਸਕੈਨ ਕੀਤੀ ਗਈ ਹੈ; ਇਸ ਦਾ ਲੇਬਲ ਹੈ:"
+msgid "Scanning your installation media finds the label:"
+msgstr ""
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001
+#, fuzzy
+#| msgid ""
+#| "You now have the option to scan additional CDs or DVDs for use by the "
+#| "package manager (apt). Normally these should be from the same set as the "
+#| "installation CD/DVD. If you do not have any additional CDs or DVDs "
+#| "available, this step can just be skipped."
 msgid ""
-"You now have the option to scan additional CDs or DVDs for use by the "
-"package manager (apt). Normally these should be from the same set as the "
-"installation CD/DVD. If you do not have any additional CDs or DVDs "
-"available, this step can just be skipped."
+"You now have the option of scanning additional media for use by the package "
+"manager (apt). Normally these should be from the same set as the one you "
+"booted from. If you do not have any additional media, this step can just be "
+"skipped."
 msgstr ""
 "ਤੁਹਾਡੇ ਕੋਲ ਹੁਣ ਪੈਕੇਜ ਮੈਨੇਜਰ (apt) ਨਾਲ ਵਰਤਣ ਵਾਸਤੇ ਹੋਰ CD ਜਾਂ DVD ਸਕੈਨ ਕਰਨ ਦੀ ਚੋਣ ਹੈ। ਆਮ ਤੌਰ "
 "ਉਤੇ ਇਹ ਇੰਸਟਾਲੇਸ਼ਨ CD/DVD ਦੇ ਸੈੱਟ ਵਾਂਗ ਹੀ ਹੈ। ਜੇ ਤੁਹਾਡੇ ਕੋਲ ਹੋਰ CD ਜਾਂ DVD ਉਪਲੱਬਧ ਨਹੀਂ ਹੈ ਤਾਂ ਇਹ "
@@ -3673,51 +3707,50 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001 ../apt-cdrom-setup.templates:4001
-msgid "If you wish to scan another CD or DVD, please insert it now."
+#, fuzzy
+#| msgid "If you wish to scan another CD or DVD, please insert it now."
+msgid "If you wish to scan more media, please insert another one now."
 msgstr "ਜੇ ਤੁਸੀਂ ਹੋਰ CD ਜਾਂ DVD ਸਕੈਨ ਕਰਨੀ ਚਾਹੁੰਦੇ ਹੋ ਤਾਂ ਹੁਣੇ ਇਸ ਨੂੰ ਵਿੱਚ ਪਾਓ।"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:4001
-msgid "The CD or DVD with the following label has been scanned:"
+#, fuzzy
+#| msgid "The CD or DVD with the following label has been scanned:"
+msgid "The image with the following label has been scanned:"
 msgstr "ਹੇਠ ਦਿੱਤੇ ਲੇਬਲ ਨਾਲ CD ਜਾਂ DVD ਨੂੰ ਸਕੈਨ ਕੀਤਾ ਗਿਆ ਹੈ:"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:5001
-msgid "The CD or DVD with the following label has already been scanned:"
+#, fuzzy
+#| msgid "The CD or DVD with the following label has already been scanned:"
+msgid "The image with the following label has already been scanned:"
 msgstr "ਹੇਠ ਦਿੱਤੇ ਲੇਬਲ ਨਾਲ CD ਜਾਂ DVD ਨੂੰ ਪਹਿਲਾਂ ਹੀ ਸਕੈਨ ਕੀਤਾ ਗਿਆ ਹੈ:"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:5001
-msgid "Please replace it now if you wish to scan another CD or DVD."
+#, fuzzy
+#| msgid "Please replace it now if you wish to scan another CD or DVD."
+msgid "Please replace it now, if you wish to scan another."
 msgstr "ਜੇ ਤੁਸੀਂ ਹੋਰ CD ਜਾਂ DVD ਸਕੈਨ ਕਰਨੀ ਚਾਹੁੰਦੇ ਹੋ ਤਾਂ ਹੁਣ ਮੌਜੂਦ ਨੂੰ ਬਦਲ ਦਿਉ।"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:6001
-msgid ""
-"An attempt to configure apt to install additional packages from the CD/DVD "
-"failed."
-msgstr "CD/DVD ਤੋਂ ਵਾਧੂ ਪੈਕੇਜ ਇੰਸਟਾਲ ਕਰਨ ਲਈ apt ਸੰਰਚਨਾ ਦੀ ਇੱਕ ਕੋਸ਼ਿਸ਼ ਫੇਲ੍ਹ ਹੋਈ।"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:6001
-msgid "Please check that the CD/DVD has been inserted correctly."
+#, fuzzy
+#| msgid "Please check that the CD/DVD has been inserted correctly."
+msgid "Please check that the media has been inserted correctly."
 msgstr "ਚੈੱਕ ਕਰੋ ਕਿ ਕੀ CD/DVD ਠੀਕ ਤਰ੍ਹਾਂ ਪਾਈ ਹੋਈ ਹੈ।"
 
 #. Type: text
 #. Description
 #. :sl1:
-#. This template uses the same text as used in the package apt for apt-cdrom
-#. Do not translate "/cdrom/" (the mount point)
 #: ../apt-cdrom-setup.templates:7001
 msgid "Media change"
 msgstr "ਮੀਡਿਆ ਬਦਲੋ"
@@ -3725,12 +3758,12 @@ msgstr "ਮੀਡਿਆ ਬਦਲੋ"
 #. Type: text
 #. Description
 #. :sl1:
-#. This template uses the same text as used in the package apt for apt-cdrom
-#. Do not translate "/cdrom/" (the mount point)
 #: ../apt-cdrom-setup.templates:7001
-msgid ""
-"/cdrom/: Please insert the disc labeled '${LABEL}' in the drive '/cdrom/' "
-"and press enter."
+#, fuzzy
+#| msgid ""
+#| "/cdrom/: Please insert the disc labeled '${LABEL}' in the drive '/cdrom/' "
+#| "and press enter."
+msgid "Please insert the media labeled '${LABEL}' and press enter."
 msgstr "/cdrom/: ਡਰਾਇਵ '/cdrom/' ਵਿੱਚ '${LABEL}' ਲੇਬਲ ਨਾਂ ਦੀ ਡਿਸਕ ਪਾ ਕੇ ਐਂਟਰ ਦੱਬੋ ਜੀ।"
 
 #. Type: text
@@ -3748,9 +3781,13 @@ msgstr "sources.list ਵਿੱਚ netinst CD ਆਯੋਗ ਕੀਤੀ ਜਾ �
 #. Description
 #. :sl2:
 #: ../apt-cdrom-setup.templates:9001 ../apt-mirror-setup.templates:6001
+#, fuzzy
+#| msgid ""
+#| "If you are installing from a netinst CD and choose not to use a mirror, "
+#| "you will end up with only a very minimal base system."
 msgid ""
-"If you are installing from a netinst CD and choose not to use a mirror, you "
-"will end up with only a very minimal base system."
+"If you are installing from a netinst CD image and choose not to use a "
+"mirror, you will end up with only a very minimal base system."
 msgstr ""
 "ਜੇ ਤੁਸੀਂ netinst CD ਤੋਂ ਇੰਸਟਾਲ ਕਰ ਰਹੇ ਹੋ ਅਤੇ ਤੁਸੀਂ ਇੱਕ ਮਿਰੱਰ ਦੀ ਚੋਣ ਨਹੀਂ ਕੀਤੀ ਤਾਂ ਤੁਹਾਡੇ ਕੋਲ "
 "ਸਿਰਫ਼ ਇੱਕਲਾ ਬੇਸ ਸਿਸਟਮ ਹੀ ਇੰਸਟਾਲ ਹੋਵੇਗਾ।"
@@ -3759,8 +3796,13 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:10001
+#, fuzzy
+#| msgid ""
+#| "You are installing from a netinst CD, which by itself only allows "
+#| "installation of a very minimal base system. Use a mirror to install a "
+#| "more complete system."
 msgid ""
-"You are installing from a netinst CD, which by itself only allows "
+"You are installing from a netinst CD image, which by itself only allows "
 "installation of a very minimal base system. Use a mirror to install a more "
 "complete system."
 msgstr ""
@@ -3771,8 +3813,13 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:11001
+#, fuzzy
+#| msgid ""
+#| "You are installing from a CD, which contains a limited selection of "
+#| "packages."
 msgid ""
-"You are installing from a CD, which contains a limited selection of packages."
+"You are installing from an image which contains a limited selection of "
+"packages."
 msgstr "ਤੁਸੀਂ ਇੱਕ CD ਤੋਂ ਇੰਸਟਾਲ ਕਰ ਰਹੇ ਹੋ, ਜਿਸ ਵਿੱਚ ਕੁਝ ਸੀਮਿਤ ਪੈਕੇਜ ਹੀ ਹਨ।"
 
 #. Type: text
@@ -3780,9 +3827,13 @@ msgstr "ਤੁਸੀਂ ਇੱਕ CD ਤੋਂ ਇੰਸਟਾਲ ਕਰ ਰਹ�
 #. :sl1:
 #. The value of %i can be 2 or 3
 #: ../apt-cdrom-setup.templates:12001
-#, no-c-format
+#, fuzzy, no-c-format
+#| msgid ""
+#| "You have scanned %i CDs. Even though these contain a fair selection of "
+#| "packages, some may be missing (notably some packages needed to support "
+#| "languages other than English)."
 msgid ""
-"You have scanned %i CDs. Even though these contain a fair selection of "
+"You have scanned %i images. Even though these contain a fair selection of "
 "packages, some may be missing (notably some packages needed to support "
 "languages other than English)."
 msgstr ""
@@ -3794,9 +3845,12 @@ msgstr ""
 #. :sl1:
 #. The value of %i can be from 4 to 8
 #: ../apt-cdrom-setup.templates:13001
-#, no-c-format
+#, fuzzy, no-c-format
+#| msgid ""
+#| "You have scanned %i CDs. Even though these contain a large selection of "
+#| "packages, some may be missing."
 msgid ""
-"You have scanned %i CDs. Even though these contain a large selection of "
+"You have scanned %i images. Even though these contain a large selection of "
 "packages, some may be missing."
 msgstr ""
 "ਤੁਸੀਂ %i CD ਸਕੈਨ ਕਰ ਚੁੱਕੇ ਹੋ। ਭਾਵੇਂ ਕਿ ਇਨ੍ਹਾਂ ਵਿੱਚ ਕਾਫ਼ੀ ਪੈਕੇਜ ਮੌਜੂਦ ਹਨ, ਤਾਂ ਵੀ ਕੁਝ ਗ਼ੈਰ-ਮੌਜੂਦ ਜਾਪਦੇ "
@@ -3817,8 +3871,12 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:15001
+#, fuzzy
+#| msgid ""
+#| "You are installing from a DVD. Even though the DVD contains a large "
+#| "selection of packages, some may be missing."
 msgid ""
-"You are installing from a DVD. Even though the DVD contains a large "
+"You are installing from a DVD image. Even though it contains a large "
 "selection of packages, some may be missing."
 msgstr ""
 "ਤੁਸੀਂ ਇੱਕ DVD ਤੋਂ ਇੰਸਟਾਲ ਕਰਨ ਜਾ ਰਹੇ ਹੋ। ਹਾਲਾਂਕਿ DVD ਵਿੱਚ ਵੱਡੀ ਗਿਣਤੀ ਵਿੱਚ ਪੈਕੇਜ ਹਨ, ਤਾਂ ਵੀ "
@@ -3946,9 +4004,14 @@ msgstr "ਇੱਕ ਨੈੱਟਵਰਕ ਮਿਰੱਰ ਵਰਤਣਾ ਹੈ?"
 #. Description
 #. :sl1:
 #: ../apt-mirror-setup.templates:5001
+#, fuzzy
+#| msgid ""
+#| "A network mirror can be used to supplement the software that is included "
+#| "on the CD-ROM. This may also make newer versions of software available."
 msgid ""
 "A network mirror can be used to supplement the software that is included on "
-"the CD-ROM. This may also make newer versions of software available."
+"the installation media. This may also make newer versions of software "
+"available."
 msgstr ""
 "ਇੱਕ ਨੈੱਟਵਰਕ ਮਿੱਰਰ ਨੂੰ CD-ROM ਉੱਤੇ ਉਪਲੱਬਧ ਸਾਫਟਵੇਅਰ ਦੇ ਸਪਲੀਮੈਂਟ ਦੇ ਤੌਰ ਉੱਤੇ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ। ਇਸ ਨੂੰ "
 "ਸਾਫਟਵੇਅਰ ਦੇ ਨਵੇਂ ਉਪਲੱਬਧ ਵਰਜਨ ਦੇ ਲਈ ਵੀ ਵਰਤਿਆ ਜਾ ਸਕਦਾ ਹੈ।"
@@ -4571,6 +4634,65 @@ msgstr "ਲਾਜ਼ੀਕਲ ਵਾਲੀਅਮ ਮੈਨੇਜਰ ਸੰਰਚਿ
 msgid "Guided - use entire disk and set up LVM"
 msgstr "ਸਹਾਇਕ - ਸਾਰੀ ਡਿਸਕ ਵਰਤੋਂ ਅਤੇ LVM ਸੈੱਟਅੱਪ ਕਰੋ"
 
+#~ msgid "Load installer components from CD"
+#~ msgstr "ਇੰਸਟਾਲਰ ਭਾਗ CD ਤੋਂ ਲੋਡ ਕਰੋ"
+
+#~ msgid "Detecting hardware to find CD-ROM drives"
+#~ msgstr "CD-ROM ਡਰਾਈਵ ਲੱਭਣ ਲਈ ਹਾਰਡਵੇਅਰ ਪਤਾ ਲਗਾ ਰਿਹਾ ਹੈ"
+
+#~ msgid "Scanning CD-ROM"
+#~ msgstr "CD-ROM ਦੀ ਜਾਂਚ ਜਾਰੀ"
+
+#~ msgid "Unmounting and ejecting CD-ROM..."
+#~ msgstr "CD-ROM ਅਣ-ਮਾਊਂਟ ਅਤੇ ਬਾਹਰ ਕੱਢੀ ਜਾ ਰਹੀ ਹੈ..."
+
+#~ msgid "Scanning the CD-ROM..."
+#~ msgstr "CD-ROM ਦੀ ਜਾਂਚ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ..."
+
+#~ msgid "Scan another CD or DVD?"
+#~ msgstr "ਹੋਰ CD ਜਾਂ DVD ਸਕੈਨ ਕਰਨੀ ਹੈ?"
+
+#~ msgid "Your installation CD or DVD has been scanned; its label is:"
+#~ msgstr "ਤੁਹਾਡੀ ਇੰਸਟਾਲੇਸ਼ਨ CD ਜਾਂ DVD ਸਕੈਨ ਕੀਤੀ ਗਈ ਹੈ; ਇਸ ਦਾ ਲੇਬਲ ਹੈ:"
+
+#~ msgid ""
+#~ "An attempt to configure apt to install additional packages from the CD/"
+#~ "DVD failed."
+#~ msgstr "CD/DVD ਤੋਂ ਵਾਧੂ ਪੈਕੇਜ ਇੰਸਟਾਲ ਕਰਨ ਲਈ apt ਸੰਰਚਨਾ ਦੀ ਇੱਕ ਕੋਸ਼ਿਸ਼ ਫੇਲ੍ਹ ਹੋਈ।"
+
+#~ msgid "Load CD-ROM drivers from removable media?"
+#~ msgstr "ਹਟਾਉਣਯੋਗ ਮੀਡਿਆ ਤੋਂ CD-ROM ਡਰਾਈਵਰ ਲੋਡ ਕਰੋ?"
+
+#~ msgid "Retry mounting the CD-ROM?"
+#~ msgstr "ਕੀ ਫਿਰ CD-ROM ਮਾਊਂਟ ਕਰਨ ਦੀ ਕੋਸ਼ਿਸ਼ ਕਰਨੀ ਹੈ?"
+
+#~ msgid "CD-ROM detected"
+#~ msgstr "CD-ROM ਲੱਭ ਗਈ"
+
+#~ msgid "Incorrect CD-ROM detected"
+#~ msgstr "ਗਲਤ CD-ROM ਲੱਭੀ ਹੈ"
+
+#~ msgid "Detect and mount CD-ROM"
+#~ msgstr "CD-ROM ਖੋਜ ਅਤੇ ਮਾਊਂਟ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ"
+
+#~ msgid "Check the CD-ROM(s) integrity"
+#~ msgstr "CD-ROM(s) ਪੂਰਨਤਾ ਦੀ ਜਾਂਚ ਕਰੋ"
+
+#~ msgid "Check CD-ROM integrity?"
+#~ msgstr "CD-ROM ਪੂਰਨਤਾ ਦੀ ਜਾਂਚ ਕਰਨੀ ਹੈ?"
+
+#~ msgid "Insert a Debian CD-ROM"
+#~ msgstr "ਡੇਬੀਅਨ CD-ROM ਪਾਓ"
+
+#~ msgid "Failed to mount CD-ROM"
+#~ msgstr "CD-ROM ਮਾਊਂਟ ਕਰਨ ਵਿੱਚ ਅਸਫਲ"
+
+#~ msgid "No valid Debian CD-ROM"
+#~ msgstr "ਕੋਈ ਯੋਗ ਡੇਬੀਅਨ CD-ROM ਨਹੀਂ"
+
+#~ msgid "Checking CD-ROM integrity"
+#~ msgstr "CD-ROM ਐਂਟੀਗਰੇਟੀ ਚੈੱਕ ਕੀਤੀ ਜਾ ਰਹੀ ਹੈ"
+
 #~ msgid "No DHCP client was found. This package requires pump or dhcp-client."
 #~ msgstr "ਕੋਈ DHCP ਕਲਾਇਟ ਨਹੀਂ ਲੱਭਿਆ। ਇਸ ਪੈਕੇਜ ਨੂੰ pump ਜਾਂ dhcp-ਕਲਾਇਟ ਦੀ ਲੋੜ ਹੈ।"
 
@@ -4728,9 +4850,6 @@ msgstr "ਸਹਾਇਕ - ਸਾਰੀ ਡਿਸਕ ਵਰਤੋਂ ਅਤੇ LV
 #~ msgid ""
 #~ "Since the partitions have already been mounted, you cannot do any changes."
 #~ msgstr "ਕਿਉਂਕਿ ਪਾਰਟੀਸ਼ਨ ਪਹਿਲਾਂ ਹੀ ਮਾਊਂਟ ਕੀਤੇ ਹਨ, ਤੁਸੀਂ ਕੋਈ ਤਬਦੀਲੀ ਨਹੀਂ ਕਰ ਸਕਦੇ।"
-
-#~ msgid "Failed to unmount partitions"
-#~ msgstr "ਪਾਰਟੀਸ਼ਨ ਅਣਮਾਊਟ ਕਰਨ ਵਿੱਚ ਅਸਫਲ"
 
 #~ msgid "An unexpected error occurred while unmounting the partitions."
 #~ msgstr "ਪਾਰਟੀਸ਼ਨ ਅਣ-ਮਾਊਂਟ ਕਰਨ ਦੌਰਾਨ ਅਚਾਨਕ ਗਲਤੀ ਆਈ ਹੈ।"
@@ -4899,9 +5018,6 @@ msgstr "ਸਹਾਇਕ - ਸਾਰੀ ਡਿਸਕ ਵਰਤੋਂ ਅਤੇ LV
 #~ "/target/ ਉੱਤੇ 'silo' ਪੈਕੇਜ ਦੀ ਇੰਸਟਾਲੇਸ਼ਨ ਫੇਲ੍ਹ ਹੋਈ। SILO ਨੂੰ ਬੂਟ ਲੋਡਰ ਤੌਰ ਤੇ ਇੰਸਟਾਲ ਕਰਨਾ "
 #~ "ਲੋੜੀਂਦਾ ਪਗ ਹੈ। ਭਾਵੇਂ ਇੰਸਟਾਲੇਸ਼ਨ ਸਮੱਸਿਆ ਦਾ SILO ਨਾਲ ਕੋਈ ਸੰਬੰਧ ਨਹੀਂ, ਇਸ ਲਈ ਇੰਸਟਾਲੇਸ਼ਨ ਜਾਰੀ "
 #~ "ਕਰਨਾ ਸੰਭਵ ਹੈ।"
-
-#~ msgid "SILO installation failed"
-#~ msgstr "SILO ਇੰਸਟਾਲੇਸ਼ਨ ਫੇਲ੍ਹ ਹੋਈ"
 
 #~ msgid "Running \"/sbin/silo\" failed with error code \"${ERRCODE}\"."
 #~ msgstr "\"/sbin/silo\" ਨੂੰ ਚਲਾਉਣ ਸਮੇਂ ਗਲਤੀ ਕੋਡ \"${ERRCODE}\" ਨਾਲ ਅਸਫਲ ਹੋਇਆ।"

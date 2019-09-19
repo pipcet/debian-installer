@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-28 21:20+0000\n"
+"POT-Creation-Date: 2019-09-19 16:20+0000\n"
 "PO-Revision-Date: 2012-04-24 13:37+0700\n"
 "Last-Translator: Anousak Souphavanh <anousak@gmail.com>\n"
 "Language-Team: Lao <lo@li.org>\n"
@@ -614,13 +614,6 @@ msgstr "ປ້ອນຂໍ້ມູນເອງ"
 msgid "Download installer components"
 msgstr "ດາວໂຫລດອົງປະກອບການຕິດຕັ້ງ"
 
-#. Type: text
-#. Description
-#. Main menu item
-#: ../load-cdrom.templates:1001
-msgid "Load installer components from CD"
-msgstr "ໂຫລດອົງປະກອບການຕິດຕັ້ງຈາກຊີດີ"
-
 #. Type: boolean
 #. Description
 #: ../load-media.templates:1001
@@ -725,13 +718,6 @@ msgid ""
 msgstr ""
 "ລາຍການນີ້ສະແດງເຄື່ອງມືທີ່ມີໃຫ້ໃຊ້ ຖ້າທ່ານບໍ່ແນ່ໃຈວ່າຈະເລືອກເຄື່ອງມືໃດ ກໍ່ຄວນເລືອກໂຕເລືອກຍ່ອຍ "
 "ຖ້າລະບົບບູຕບໍ່ສຳເລັດ ທ່ານສາມາດລອງຕິດຕັ້ງໃໝ່ດ້ວຍໂຕເລືອກອື່ນໄດ້."
-
-#. Type: text
-#. Description
-#. Release is a filename which should not be translated
-#: ../bootstrap-base.templates:42001
-msgid "Checking Release signature"
-msgstr "ກຳລັງກວດສອບລາຍເຊັນກຳກັບອອກລະບົບ"
 
 #. Type: select
 #. Description
@@ -1560,15 +1546,19 @@ msgstr "ບໍ່ທັ້ງໝົດຄີລະບຸໄວ້ນີ້ສະ
 #. Description
 #. :sl1:
 #: ../cdrom-detect.templates:2001
-msgid "Detecting hardware to find CD-ROM drives"
-msgstr "ກຳລັງກວດສອບຮາດແວຣເພື່ອຊອກຫາໄດຣຊີດີຣອມ"
+#, fuzzy
+#| msgid "Detecting hardware to find hard drives"
+msgid "Detecting hardware to find installation media"
+msgstr "ກຳລັງກວດສອບຮາດແວເພື່ອຫາຮາດດິກ"
 
 #. Type: text
 #. Description
 #. :sl1:
 #: ../cdrom-detect.templates:10001
-msgid "Scanning CD-ROM"
-msgstr "ກຳລັງກວດສອບຂໍ້ມູນໃນຊີດີຣອມ"
+#, fuzzy
+#| msgid "SILO installation failed"
+msgid "Scanning installation media"
+msgstr "ຕິດຕັ້ງ SILO ບໍ່ສຳເລັດ"
 
 #. Type: text
 #. Description
@@ -1582,8 +1572,8 @@ msgstr "ກຳລັງສຳຫລວດຂໍ້ມູນໃນ${DIR}..."
 #. finish-install progress bar item
 #. :sl1:
 #: ../cdrom-detect.templates:19001
-msgid "Unmounting and ejecting CD-ROM..."
-msgstr "ກຳລັງເລີກເມາທ ແລະ ດັນແຜ່ນຊີດີຣອມອອກ...."
+msgid "Unmounting/ejecting installation media..."
+msgstr ""
 
 #. Type: text
 #. Description
@@ -2301,6 +2291,16 @@ msgstr "ຂໍ້ມູນພຣ໋ອກຊີຄວນອຍ6່ໃນຮູ�
 #: ../mdcfg-utils.templates:6001 ../mdcfg-utils.templates:13001
 msgid "Cancel"
 msgstr "ຍົກເລີກ"
+
+#. Type: text
+#. Description
+#. Main menu item
+#. :sl1:
+#: ../load-cdrom.templates:1001
+#, fuzzy
+#| msgid "Load installer components from an installer ISO"
+msgid "Load installer components from installation media"
+msgstr "ໂຫລດອົງປະກອບໂປຣແກມຕິດຕັ້ງຈາກ ISO ຂອງໂປຣແກມຕິດຕັ້ງ"
 
 #. Type: text
 #. Description
@@ -3131,7 +3131,7 @@ msgstr "ກຳລັງກຽມລະບົບຕິດຕັ້ງພື້ນ
 msgid "Installing the base system"
 msgstr "ກຳລັງຕິດຕັ້ງລະບົບພື້ນຖານ"
 
-#. #-#-#-#-#  templates.pot (PACKAGE VERSION)  #-#-#-#-#
+#. #-#-#-#-#  templates.pot (base-installer)  #-#-#-#-#
 #. Type: text
 #. Description
 #. :sl1:
@@ -3345,6 +3345,14 @@ msgstr "ກຳລັງແຕກ ${SUBST0}..."
 #: ../bootstrap-base.templates:41001
 msgid "Configuring ${SUBST0}..."
 msgstr "ກຳລັງຕັ້ງຄ່າ ${SUBST0}..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Release is a filename which should not be translated
+#: ../bootstrap-base.templates:42001
+msgid "Checking Release signature"
+msgstr "ກຳລັງກວດສອບລາຍເຊັນກຳກັບອອກລະບົບ"
 
 #. Type: text
 #. Description
@@ -3601,8 +3609,26 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:1001
-msgid "Scanning the CD-ROM..."
-msgstr "ກຳລັງສຳຫລວດຂໍ້ມູນໃນຊີດີຣອມ..."
+#, fuzzy
+#| msgid "Finishing the installation"
+msgid "Scanning the installation media..."
+msgstr "ກຳລັງສິ້ນສຸດການຕິດຕັ້ງ"
+
+#. Type: error
+#. Description
+#. :sl2:
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:2001 ../apt-cdrom-setup.templates:6001
+#, fuzzy
+#| msgid ""
+#| "An attempt to configure apt to install additional packages from the CD "
+#| "failed."
+msgid ""
+"An attempt to configure apt to install additional packages from the media "
+"failed."
+msgstr "ຕັ້ງຄ່າ apt ເພື່ອການຕິດຕັ້ງແພັກເກັດເພີ້ມເຕີມຈາກຊີດີລອ້ມບໍ່ສຳເລັດ "
 
 #. Type: boolean
 #. Description
@@ -3618,25 +3644,33 @@ msgstr "ກຳລັງສຳຫລວດຂໍ້ມູນໃນຊີດີຣ
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001 ../apt-cdrom-setup.templates:4001
 #: ../apt-cdrom-setup.templates:5001 ../apt-cdrom-setup.templates:6001
-msgid "Scan another CD or DVD?"
-msgstr "ຈະສຳຫລວດຂໍ້ມູນຊີດີ ຫລື ດີວີດີແຜ່ນອື່ນອີກຫລືບໍ່?"
+#, fuzzy
+#| msgid "SILO installation failed"
+msgid "Scan extra installation media?"
+msgstr "ຕິດຕັ້ງ SILO ບໍ່ສຳເລັດ"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001
-msgid "Your installation CD or DVD has been scanned; its label is:"
-msgstr "ແຜ່ນຊີດີ ຫລື ດີວີດີຕິດຕັ້ງຂອງທ່ານຜ່ານການສຳຫລວດຂໍ້ມູນຮຽບຮ້ອຍ ປ້າຍຊື່ແຜ່ນຄື:"
+msgid "Scanning your installation media finds the label:"
+msgstr ""
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001
+#, fuzzy
+#| msgid ""
+#| "You now have the option to scan additional CDs or DVDs for use by the "
+#| "package manager (apt). Normally these should be from the same set as the "
+#| "installation CD/DVD. If you do not have any additional CDs or DVDs "
+#| "available, this step can just be skipped."
 msgid ""
-"You now have the option to scan additional CDs or DVDs for use by the "
-"package manager (apt). Normally these should be from the same set as the "
-"installation CD/DVD. If you do not have any additional CDs or DVDs "
-"available, this step can just be skipped."
+"You now have the option of scanning additional media for use by the package "
+"manager (apt). Normally these should be from the same set as the one you "
+"booted from. If you do not have any additional media, this step can just be "
+"skipped."
 msgstr ""
 "ທ່ານສາມາດເລືອກສຳຫລວດຂໍ້ມູນແຜ່ນຊີດີຕື່ມ ເພື່ອໃຊ້ກັບໂປຣແກມຈັການແພກເກັດ (apt) ໄດ້ໂດຍປົກກະຕິແລ້ວ "
 "ແຜ່ນເຫລົ່ານີ້ຈະຢູ່ໃນຊຸດດຽວກັບແຜ່ນຊີດີ/ດີວີດີຕິດຕັ້ງ ຖ້າທ່ານບໍ່ມີຊີດີ ຫລື ດີວີດີແຜ່ນອື່ນອີກແລ້ວ "
@@ -3649,51 +3683,50 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001 ../apt-cdrom-setup.templates:4001
-msgid "If you wish to scan another CD or DVD, please insert it now."
+#, fuzzy
+#| msgid "If you wish to scan another CD or DVD, please insert it now."
+msgid "If you wish to scan more media, please insert another one now."
 msgstr "ຖ້າທ່ານຕ້ອງການສຳຫລວດຂໍ້ມູນຊີດີ ຫລື ດີວີດີແຜ່ນອື່ນຕື່ມ ກໍ່ກະລຸນາໃສ່ແຜ່ນໄດ້"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:4001
-msgid "The CD or DVD with the following label has been scanned:"
+#, fuzzy
+#| msgid "The CD or DVD with the following label has been scanned:"
+msgid "The image with the following label has been scanned:"
 msgstr "ສຳຫລວດຂໍ້ມູນແຜ່ນຊີດີ ຫລື ດີວີດີຕໍ່ໄປນີ້ຮຽບຮ້ອຍແລ້ວ:"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:5001
-msgid "The CD or DVD with the following label has already been scanned:"
+#, fuzzy
+#| msgid "The CD or DVD with the following label has already been scanned:"
+msgid "The image with the following label has already been scanned:"
 msgstr "ໄດ້ສຳຫລວດຂໍ້ມູນແຜ່ນຊີດີ ຫລື ດີວີດີຊື່ຕໍ່ໄປນີ້ໄປແລ້ວ:"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:5001
-msgid "Please replace it now if you wish to scan another CD or DVD."
+#, fuzzy
+#| msgid "Please replace it now if you wish to scan another CD or DVD."
+msgid "Please replace it now, if you wish to scan another."
 msgstr "ກະລຸນາໃສ່ແຜ່ນອື່ນແທນຖ້າທ່ານຕ້ອງການສຳຫລວດຂໍ້ມູນຊີດີ ຫລື ດີວີດີແຜ່ນອື່ນຕື່ມ"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:6001
-msgid ""
-"An attempt to configure apt to install additional packages from the CD/DVD "
-"failed."
-msgstr "ຕັ້ງຄ່າ apt ເພື່ອການຕິດຕັ້ງແພກເກັດຕື່ມຈາກຊີດີ/ດີວີດີບໍ່ສຳເລັດ"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:6001
-msgid "Please check that the CD/DVD has been inserted correctly."
+#, fuzzy
+#| msgid "Please check that the CD/DVD has been inserted correctly."
+msgid "Please check that the media has been inserted correctly."
 msgstr "ກະລຸນາກວດສອບໃຫ້ມັ່ນໃຈວ່າທ່ານໄດ້ໃສ່ແຜ່ນຊີດີ/ດີວີດີຢ່າງຖືກຕ້ອງ"
 
 #. Type: text
 #. Description
 #. :sl1:
-#. This template uses the same text as used in the package apt for apt-cdrom
-#. Do not translate "/cdrom/" (the mount point)
 #: ../apt-cdrom-setup.templates:7001
 msgid "Media change"
 msgstr "ປ່ຽນແຜ່ນ"
@@ -3701,12 +3734,12 @@ msgstr "ປ່ຽນແຜ່ນ"
 #. Type: text
 #. Description
 #. :sl1:
-#. This template uses the same text as used in the package apt for apt-cdrom
-#. Do not translate "/cdrom/" (the mount point)
 #: ../apt-cdrom-setup.templates:7001
-msgid ""
-"/cdrom/: Please insert the disc labeled '${LABEL}' in the drive '/cdrom/' "
-"and press enter."
+#, fuzzy
+#| msgid ""
+#| "/cdrom/: Please insert the disc labeled '${LABEL}' in the drive '/cdrom/' "
+#| "and press enter."
+msgid "Please insert the media labeled '${LABEL}' and press enter."
 msgstr "/cdrom/: ກະລຸນາໃສ່ແຜ່ນຊື່ '${LABEL}' ລົງໃນໄດຣ '/cdrom/' ແລ້ວກົດ enter"
 
 #. Type: text
@@ -3724,9 +3757,13 @@ msgstr "ກຳລັງປິດການໃຊ້ງານຊີດີ netinst 
 #. Description
 #. :sl2:
 #: ../apt-cdrom-setup.templates:9001 ../apt-mirror-setup.templates:6001
+#, fuzzy
+#| msgid ""
+#| "If you are installing from a netinst CD and choose not to use a mirror, "
+#| "you will end up with only a very minimal base system."
 msgid ""
-"If you are installing from a netinst CD and choose not to use a mirror, you "
-"will end up with only a very minimal base system."
+"If you are installing from a netinst CD image and choose not to use a "
+"mirror, you will end up with only a very minimal base system."
 msgstr ""
 "ຖ້າທ່ານກຳລັງຕິດຕັ້ງຈາກແຜ່ນຊີດີ netinst ແຕ່ເລືອກທີ່ຈະບໍ່ໃຊ້ແຫລ່ງສຳເນົາໃນເຄືອຂ່າຍ "
 "ທ່ານຈະໄດ້ແຕ່ລະບົບພື້ນຖານທີ່ຈຳກັດຫລາຍໆ."
@@ -3735,8 +3772,13 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:10001
+#, fuzzy
+#| msgid ""
+#| "You are installing from a netinst CD, which by itself only allows "
+#| "installation of a very minimal base system. Use a mirror to install a "
+#| "more complete system."
 msgid ""
-"You are installing from a netinst CD, which by itself only allows "
+"You are installing from a netinst CD image, which by itself only allows "
 "installation of a very minimal base system. Use a mirror to install a more "
 "complete system."
 msgstr ""
@@ -3747,8 +3789,13 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:11001
+#, fuzzy
+#| msgid ""
+#| "You are installing from a CD, which contains a limited selection of "
+#| "packages."
 msgid ""
-"You are installing from a CD, which contains a limited selection of packages."
+"You are installing from an image which contains a limited selection of "
+"packages."
 msgstr "ທ່ານກຳລັງຕິດຕັ້ງຈາກຊີດີ ເຊີ່ງມີແພກເກັດຈຳນວນຈຳກັດ."
 
 #. Type: text
@@ -3756,9 +3803,13 @@ msgstr "ທ່ານກຳລັງຕິດຕັ້ງຈາກຊີດີ �
 #. :sl1:
 #. The value of %i can be 2 or 3
 #: ../apt-cdrom-setup.templates:12001
-#, no-c-format
+#, fuzzy, no-c-format
+#| msgid ""
+#| "You have scanned %i CDs. Even though these contain a fair selection of "
+#| "packages, some may be missing (notably some packages needed to support "
+#| "languages other than English)."
 msgid ""
-"You have scanned %i CDs. Even though these contain a fair selection of "
+"You have scanned %i images. Even though these contain a fair selection of "
 "packages, some may be missing (notably some packages needed to support "
 "languages other than English)."
 msgstr ""
@@ -3770,9 +3821,12 @@ msgstr ""
 #. :sl1:
 #. The value of %i can be from 4 to 8
 #: ../apt-cdrom-setup.templates:13001
-#, no-c-format
+#, fuzzy, no-c-format
+#| msgid ""
+#| "You have scanned %i CDs. Even though these contain a large selection of "
+#| "packages, some may be missing."
 msgid ""
-"You have scanned %i CDs. Even though these contain a large selection of "
+"You have scanned %i images. Even though these contain a large selection of "
 "packages, some may be missing."
 msgstr ""
 "ທ່ານໄດ້ສຳຫລວດຂໍ້ມູນຊີດີ %i ແຜ່ນ ເຊີ່ງເຖີງແມ່ນຈະມີແພກເກັດເປັນຈຳນວນຫລາຍ ແຕ່ບາງແພກເກັດກໍ່ອາດຂາດໄປ."
@@ -3791,8 +3845,12 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:15001
+#, fuzzy
+#| msgid ""
+#| "You are installing from a DVD. Even though the DVD contains a large "
+#| "selection of packages, some may be missing."
 msgid ""
-"You are installing from a DVD. Even though the DVD contains a large "
+"You are installing from a DVD image. Even though it contains a large "
 "selection of packages, some may be missing."
 msgstr ""
 "ທ່ານກຳລັງຕິດຕັ້ງຈາກດີວີດີ ເຖີງແມ່ນແຜ່ນຊີດີຈະມີແພກເກັດເປັນຈຳນວນຫລາຍ ແຕ່ບາງແພກເກັດກໍ່ອາດຂາດໄປ."
@@ -3919,9 +3977,14 @@ msgstr "ຈະໃຊ້ແຫລ່ງສຳເນົາໃນເຄືອຂ່
 #. Description
 #. :sl1:
 #: ../apt-mirror-setup.templates:5001
+#, fuzzy
+#| msgid ""
+#| "A network mirror can be used to supplement the software that is included "
+#| "on the CD-ROM. This may also make newer versions of software available."
 msgid ""
 "A network mirror can be used to supplement the software that is included on "
-"the CD-ROM. This may also make newer versions of software available."
+"the installation media. This may also make newer versions of software "
+"available."
 msgstr ""
 "ແຫລ່ງສຳເນົາໃນເຄືອຂ່າຍ ສາມາດໃຊ້ເປັນແຫລ່ງເສີມສຳຫລັບຊອບແວຣທີ່ໄດ້ຮ່ວມມາໃນຊີດີຣອມ "
 "ລວມທັ້ງສາມາດໃຊ້ຮັບລຸ້ນຊອບແວຣເປັນລຸ້ນໃໝ່ໆ ໄດ້ນຳ."
@@ -4541,6 +4604,65 @@ msgstr "ຕັ້ງຄ່າ Logical Volume Manager"
 #: ../partman-auto-lvm.templates:1001
 msgid "Guided - use entire disk and set up LVM"
 msgstr "ແນະນຳ - ໃຊ້ເຮື້ອທີ່ດີສໂດຍໃຊ້ LVM"
+
+#~ msgid "Load installer components from CD"
+#~ msgstr "ໂຫລດອົງປະກອບການຕິດຕັ້ງຈາກຊີດີ"
+
+#~ msgid "Detecting hardware to find CD-ROM drives"
+#~ msgstr "ກຳລັງກວດສອບຮາດແວຣເພື່ອຊອກຫາໄດຣຊີດີຣອມ"
+
+#~ msgid "Scanning CD-ROM"
+#~ msgstr "ກຳລັງກວດສອບຂໍ້ມູນໃນຊີດີຣອມ"
+
+#~ msgid "Unmounting and ejecting CD-ROM..."
+#~ msgstr "ກຳລັງເລີກເມາທ ແລະ ດັນແຜ່ນຊີດີຣອມອອກ...."
+
+#~ msgid "Scanning the CD-ROM..."
+#~ msgstr "ກຳລັງສຳຫລວດຂໍ້ມູນໃນຊີດີຣອມ..."
+
+#~ msgid "Scan another CD or DVD?"
+#~ msgstr "ຈະສຳຫລວດຂໍ້ມູນຊີດີ ຫລື ດີວີດີແຜ່ນອື່ນອີກຫລືບໍ່?"
+
+#~ msgid "Your installation CD or DVD has been scanned; its label is:"
+#~ msgstr "ແຜ່ນຊີດີ ຫລື ດີວີດີຕິດຕັ້ງຂອງທ່ານຜ່ານການສຳຫລວດຂໍ້ມູນຮຽບຮ້ອຍ ປ້າຍຊື່ແຜ່ນຄື:"
+
+#~ msgid ""
+#~ "An attempt to configure apt to install additional packages from the CD/"
+#~ "DVD failed."
+#~ msgstr "ຕັ້ງຄ່າ apt ເພື່ອການຕິດຕັ້ງແພກເກັດຕື່ມຈາກຊີດີ/ດີວີດີບໍ່ສຳເລັດ"
+
+#~ msgid "Load CD-ROM drivers from removable media?"
+#~ msgstr "ຈະໂຫຼດໄດເວີຊີດີອອກຈາກສື່ຖອດສຽບ ຫຼື ບໍ່?"
+
+#~ msgid "Retry mounting the CD-ROM?"
+#~ msgstr "ຈະພະຍາຍາມເມົາຊີດີອອກອີກຄັ້ງຫຼືບໍ່?"
+
+#~ msgid "CD-ROM detected"
+#~ msgstr "ກວດພົບຊີດີຮອມ"
+
+#~ msgid "Incorrect CD-ROM detected"
+#~ msgstr "ກວດພົບແຜ່ນຊີດີຮອມທີ່ບໍ່ຖືກຕ້ອງ"
+
+#~ msgid "Detect and mount CD-ROM"
+#~ msgstr "ກວດຫາ ແລະ ເມົາຊີດີ"
+
+#~ msgid "Check the CD-ROM(s) integrity"
+#~ msgstr "ກວດສອບຄວາມສົມບູນຂອງຊີດີລອມ"
+
+#~ msgid "Check CD-ROM integrity?"
+#~ msgstr "ຈະກວດສອບຄວາມສົມບູນຂອງຊີດີລອມ ຫຼື ບໍ?"
+
+#~ msgid "Insert a Debian CD-ROM"
+#~ msgstr "ໃສ່ແຜ່ນຊີດີລອມເດບຽນ"
+
+#~ msgid "Failed to mount CD-ROM"
+#~ msgstr "ເມົ້າທ໌ຊີດີລອມບໍ່ສຳເລັດ"
+
+#~ msgid "No valid Debian CD-ROM"
+#~ msgstr "ບໍ່ມີແຜ່ນຊີດີລອມເດບຽນທີ່ໃຊ້ການໄດ້"
+
+#~ msgid "Checking CD-ROM integrity"
+#~ msgstr "ກຳລັງກວດສອບຄວາມສົມບູນຂອງຊີດີລອມ"
 
 #~ msgid "No DHCP client was found. This package requires pump or dhcp-client."
 #~ msgstr "ບໍ່ພົບໄຄຣແອນ DHCP  ແພັກແກັດນີ້ຕ້ອງໃຊ້ pump ຫຼື dhcp-client"
@@ -5405,9 +5527,6 @@ msgstr "ແນະນຳ - ໃຊ້ເຮື້ອທີ່ດີສໂດຍໃ
 #~ "Since the partitions have already been mounted, you cannot do any changes."
 #~ msgstr "ເນື່ອງຈາກພາທີຊັ້ນເຫຼົ່ານີ້ຖືກເມົ້າທ໌ໃວ້ແລ້ວ ທ່ານຈຶ່ງຍັງປ່ຽນແປງຫັຍງບໍ່ໄດ້"
 
-#~ msgid "Failed to unmount partitions"
-#~ msgstr "ຍົກເລີກເມົ້າທ໌ພາທີຊັ້ນບໍ່ສຳເລັດ"
-
 #~ msgid "An unexpected error occurred while unmounting the partitions."
 #~ msgstr "ເກີດຂໍ້ຜິດພາດຂະນະຍົກເລີກເມົ້າທ໌ພາທີຊັ້ນ"
 
@@ -5564,9 +5683,6 @@ msgstr "ແນະນຳ - ໃຊ້ເຮື້ອທີ່ດີສໂດຍໃ
 #~ "ຕິດຕັ້ງແພັກແກັດ 'silo' ລົງໃນ /target/ ບໍ່ສຳເລັດການຕິດຕັ້ງ SILO ເປັນບູດໂຫຼດເດີ "
 #~ "ເປັນຂັ້ນຕອນທີ່ຈຳເປັນ ແຕ່ບັນຫາຂອງການຕິດຕັ້ງອາດບໍ່ກ່ຽວກັບ SILO ກໍ່ໄດ້ ດັ່ງນັນ "
 #~ "ການດຳເນີນການຕິດຕັ້ງຕໍ່ໄປອາດເຮັດໄດ້"
-
-#~ msgid "SILO installation failed"
-#~ msgstr "ຕິດຕັ້ງ SILO ບໍ່ສຳເລັດ"
 
 #~ msgid "Running \"/sbin/silo\" failed with error code \"${ERRCODE}\"."
 #~ msgstr "ການເຮັດວຽກຄຳສັ່ງ \"/sbin/silo\" ບໍ່ສຳເລັດໂດຍມີລະຫັດຂໍ້ຜິດພາດ \"${ERRCODE}\""

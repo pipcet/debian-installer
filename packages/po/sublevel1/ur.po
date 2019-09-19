@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-28 21:20+0000\n"
+"POT-Creation-Date: 2019-09-19 16:20+0000\n"
 "PO-Revision-Date: 2006-11-26 05:25+0500\n"
 "Last-Translator: TAHIR RAUF <linux_kernel_worm@yahoo.com>\n"
 "Language-Team: \n"
@@ -618,13 +618,6 @@ msgstr "تمام معلومات خود انٹر کریں"
 msgid "Download installer components"
 msgstr " انسٹالر کے کمپونینٹس ڈاؤن لوڈ"
 
-#. Type: text
-#. Description
-#. Main menu item
-#: ../load-cdrom.templates:1001
-msgid "Load installer components from CD"
-msgstr "انسٹالر کمپونینٹس کو CDسے لوڈ کرو"
-
 #. Type: boolean
 #. Description
 #: ../load-media.templates:1001
@@ -721,13 +714,6 @@ msgid ""
 "The list shows the available tools. If you are unsure which to select, you "
 "should select the default. If your system fails to boot, you can retry the "
 "installation using the other options."
-msgstr ""
-
-#. Type: text
-#. Description
-#. Release is a filename which should not be translated
-#: ../bootstrap-base.templates:42001
-msgid "Checking Release signature"
 msgstr ""
 
 #. Type: select
@@ -1548,15 +1534,17 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../cdrom-detect.templates:2001
-msgid "Detecting hardware to find CD-ROM drives"
+#, fuzzy
+msgid "Detecting hardware to find installation media"
 msgstr "ھارڈویر کو ڈیٹیکٹ کر رھا ھے CD-ROMکو ڈھونڈنے کیلے"
 
 #. Type: text
 #. Description
 #. :sl1:
 #: ../cdrom-detect.templates:10001
-msgid "Scanning CD-ROM"
-msgstr "CD-ROM کو سکین کر رھا ھے"
+#, fuzzy
+msgid "Scanning installation media"
+msgstr "انسٹالیشن سٹپ فیل"
 
 #. Type: text
 #. Description
@@ -1570,8 +1558,8 @@ msgstr "${DIR}...کو سکین کر رھا ھے"
 #. finish-install progress bar item
 #. :sl1:
 #: ../cdrom-detect.templates:19001
-msgid "Unmounting and ejecting CD-ROM..."
-msgstr "CD-ROM کو کھول ارو انماؤنٹ کر رھا ھے"
+msgid "Unmounting/ejecting installation media..."
+msgstr ""
 
 #. Type: text
 #. Description
@@ -2251,6 +2239,15 @@ msgstr ""
 #: ../mdcfg-utils.templates:6001 ../mdcfg-utils.templates:13001
 msgid "Cancel"
 msgstr ""
+
+#. Type: text
+#. Description
+#. Main menu item
+#. :sl1:
+#: ../load-cdrom.templates:1001
+#, fuzzy
+msgid "Load installer components from installation media"
+msgstr "انسٹالر کمپونینٹس کو CDسے لوڈ کرو"
 
 #. Type: text
 #. Description
@@ -3059,7 +3056,7 @@ msgstr ""
 msgid "Installing the base system"
 msgstr ""
 
-#. #-#-#-#-#  templates.pot (PACKAGE VERSION)  #-#-#-#-#
+#. #-#-#-#-#  templates.pot (base-installer)  #-#-#-#-#
 #. Type: text
 #. Description
 #. :sl1:
@@ -3273,6 +3270,14 @@ msgstr ""
 #. SUBST0 is a package name
 #: ../bootstrap-base.templates:41001
 msgid "Configuring ${SUBST0}..."
+msgstr ""
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Release is a filename which should not be translated
+#: ../bootstrap-base.templates:42001
+msgid "Checking Release signature"
 msgstr ""
 
 #. Type: text
@@ -3516,8 +3521,22 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:1001
-msgid "Scanning the CD-ROM..."
-msgstr "سی ڈی رام کو سکین کرتے ہوے"
+#, fuzzy
+#| msgid "Finish the installation"
+msgid "Scanning the installation media..."
+msgstr "انسٹالیشن ختم کرو"
+
+#. Type: error
+#. Description
+#. :sl2:
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:2001 ../apt-cdrom-setup.templates:6001
+msgid ""
+"An attempt to configure apt to install additional packages from the media "
+"failed."
+msgstr ""
 
 #. Type: boolean
 #. Description
@@ -3533,14 +3552,15 @@ msgstr "سی ڈی رام کو سکین کرتے ہوے"
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001 ../apt-cdrom-setup.templates:4001
 #: ../apt-cdrom-setup.templates:5001 ../apt-cdrom-setup.templates:6001
-msgid "Scan another CD or DVD?"
-msgstr ""
+#, fuzzy
+msgid "Scan extra installation media?"
+msgstr "انسٹالیشن سٹپ فیل"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001
-msgid "Your installation CD or DVD has been scanned; its label is:"
+msgid "Scanning your installation media finds the label:"
 msgstr ""
 
 #. Type: boolean
@@ -3548,10 +3568,10 @@ msgstr ""
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001
 msgid ""
-"You now have the option to scan additional CDs or DVDs for use by the "
-"package manager (apt). Normally these should be from the same set as the "
-"installation CD/DVD. If you do not have any additional CDs or DVDs "
-"available, this step can just be skipped."
+"You now have the option of scanning additional media for use by the package "
+"manager (apt). Normally these should be from the same set as the one you "
+"booted from. If you do not have any additional media, this step can just be "
+"skipped."
 msgstr ""
 
 #. Type: boolean
@@ -3561,51 +3581,41 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001 ../apt-cdrom-setup.templates:4001
-msgid "If you wish to scan another CD or DVD, please insert it now."
+msgid "If you wish to scan more media, please insert another one now."
 msgstr ""
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:4001
-msgid "The CD or DVD with the following label has been scanned:"
+msgid "The image with the following label has been scanned:"
 msgstr ""
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:5001
-msgid "The CD or DVD with the following label has already been scanned:"
+msgid "The image with the following label has already been scanned:"
 msgstr ""
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:5001
-msgid "Please replace it now if you wish to scan another CD or DVD."
-msgstr ""
+#, fuzzy
+msgid "Please replace it now, if you wish to scan another."
+msgstr "کنفیگر کرنے کیلے کیبورڈ کی قسم کا انتخاب کریں"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:6001
-msgid ""
-"An attempt to configure apt to install additional packages from the CD/DVD "
-"failed."
-msgstr ""
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:6001
-msgid "Please check that the CD/DVD has been inserted correctly."
+msgid "Please check that the media has been inserted correctly."
 msgstr ""
 
 #. Type: text
 #. Description
 #. :sl1:
-#. This template uses the same text as used in the package apt for apt-cdrom
-#. Do not translate "/cdrom/" (the mount point)
 #: ../apt-cdrom-setup.templates:7001
 msgid "Media change"
 msgstr ""
@@ -3613,12 +3623,8 @@ msgstr ""
 #. Type: text
 #. Description
 #. :sl1:
-#. This template uses the same text as used in the package apt for apt-cdrom
-#. Do not translate "/cdrom/" (the mount point)
 #: ../apt-cdrom-setup.templates:7001
-msgid ""
-"/cdrom/: Please insert the disc labeled '${LABEL}' in the drive '/cdrom/' "
-"and press enter."
+msgid "Please insert the media labeled '${LABEL}' and press enter."
 msgstr ""
 
 #. Type: text
@@ -3637,8 +3643,8 @@ msgstr ""
 #. :sl2:
 #: ../apt-cdrom-setup.templates:9001 ../apt-mirror-setup.templates:6001
 msgid ""
-"If you are installing from a netinst CD and choose not to use a mirror, you "
-"will end up with only a very minimal base system."
+"If you are installing from a netinst CD image and choose not to use a "
+"mirror, you will end up with only a very minimal base system."
 msgstr ""
 
 #. Type: text
@@ -3646,7 +3652,7 @@ msgstr ""
 #. :sl1:
 #: ../apt-cdrom-setup.templates:10001
 msgid ""
-"You are installing from a netinst CD, which by itself only allows "
+"You are installing from a netinst CD image, which by itself only allows "
 "installation of a very minimal base system. Use a mirror to install a more "
 "complete system."
 msgstr ""
@@ -3656,7 +3662,8 @@ msgstr ""
 #. :sl1:
 #: ../apt-cdrom-setup.templates:11001
 msgid ""
-"You are installing from a CD, which contains a limited selection of packages."
+"You are installing from an image which contains a limited selection of "
+"packages."
 msgstr ""
 
 #. Type: text
@@ -3666,7 +3673,7 @@ msgstr ""
 #: ../apt-cdrom-setup.templates:12001
 #, no-c-format
 msgid ""
-"You have scanned %i CDs. Even though these contain a fair selection of "
+"You have scanned %i images. Even though these contain a fair selection of "
 "packages, some may be missing (notably some packages needed to support "
 "languages other than English)."
 msgstr ""
@@ -3678,7 +3685,7 @@ msgstr ""
 #: ../apt-cdrom-setup.templates:13001
 #, no-c-format
 msgid ""
-"You have scanned %i CDs. Even though these contain a large selection of "
+"You have scanned %i images. Even though these contain a large selection of "
 "packages, some may be missing."
 msgstr ""
 
@@ -3696,7 +3703,7 @@ msgstr ""
 #. :sl1:
 #: ../apt-cdrom-setup.templates:15001
 msgid ""
-"You are installing from a DVD. Even though the DVD contains a large "
+"You are installing from a DVD image. Even though it contains a large "
 "selection of packages, some may be missing."
 msgstr ""
 
@@ -3813,7 +3820,8 @@ msgstr ""
 #: ../apt-mirror-setup.templates:5001
 msgid ""
 "A network mirror can be used to supplement the software that is included on "
-"the CD-ROM. This may also make newer versions of software available."
+"the installation media. This may also make newer versions of software "
+"available."
 msgstr ""
 
 #. Type: boolean
@@ -4398,6 +4406,37 @@ msgstr "گھڑی کو کنفیگر کرو"
 msgid "Guided - use entire disk and set up LVM"
 msgstr ""
 
+#~ msgid "Load installer components from CD"
+#~ msgstr "انسٹالر کمپونینٹس کو CDسے لوڈ کرو"
+
+#~ msgid "Detecting hardware to find CD-ROM drives"
+#~ msgstr "ھارڈویر کو ڈیٹیکٹ کر رھا ھے CD-ROMکو ڈھونڈنے کیلے"
+
+#~ msgid "Scanning CD-ROM"
+#~ msgstr "CD-ROM کو سکین کر رھا ھے"
+
+#~ msgid "Unmounting and ejecting CD-ROM..."
+#~ msgstr "CD-ROM کو کھول ارو انماؤنٹ کر رھا ھے"
+
+#~ msgid "Scanning the CD-ROM..."
+#~ msgstr "سی ڈی رام کو سکین کرتے ہوے"
+
+#, fuzzy
+#~ msgid "Load CD-ROM drivers from removable media?"
+#~ msgstr "باقی رہ گی ڈرایوز کو فلاپی ڈرایور سے لوڈ کرو؟"
+
+#, fuzzy
+#~ msgid "Retry mounting the CD-ROM?"
+#~ msgstr "CD-ROM کو دوبارہ ماؤنٹ کرنے کی کوشش کریں؟"
+
+#, fuzzy
+#~ msgid "Detect and mount CD-ROM"
+#~ msgstr "CD-ROM کو دوبارہ ماؤنٹ کرنے کی کوشش کریں؟"
+
+#, fuzzy
+#~ msgid "Failed to mount CD-ROM"
+#~ msgstr "CD-ROM کو دوبارہ ماؤنٹ کرنے کی کوشش کریں؟"
+
 #, fuzzy
 #~ msgid "Partition for boot loader installation:"
 #~ msgstr "پارٹیشنز فارمیٹ ھو رھی ھیں"
@@ -4537,10 +4576,6 @@ msgstr ""
 #, fuzzy
 #~ msgid "Error while creating ZFS pool"
 #~ msgstr "تمام لوجیکل والیوم ڈیٹا کر ختم کر دوں؟"
-
-#, fuzzy
-#~ msgid "Please select the ZFS pool you wish to delete."
-#~ msgstr "کنفیگر کرنے کیلے کیبورڈ کی قسم کا انتخاب کریں"
 
 #, fuzzy
 #~ msgid "No ZFS pool has been found."
@@ -4731,10 +4766,6 @@ msgstr ""
 #~ msgstr "کیا ٓاپ پارٹیشن مینو میں واپس جانا چاھتے ھیں؟"
 
 #, fuzzy
-#~ msgid "Failed to unmount partitions"
-#~ msgstr "اس پارٹیشن کو استعمال نہ کرو"
-
-#, fuzzy
 #~ msgid "An unexpected error occurred while unmounting the partitions."
 #~ msgstr "سٹورج ڈیوایس پر تبدیلیؤں کو لکھتے ھوے ایرر ھے۔"
 
@@ -4801,10 +4832,6 @@ msgstr ""
 #, fuzzy
 #~ msgid "Network Block Device port or name:"
 #~ msgstr "نیٹورک کو کنفیگر کرو"
-
-#, fuzzy
-#~ msgid "SILO installation failed"
-#~ msgstr "انسٹالیشن سٹپ فیل"
 
 #, fuzzy
 #~ msgid "SILO installation successful"

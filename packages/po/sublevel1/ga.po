@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-28 21:20+0000\n"
+"POT-Creation-Date: 2019-09-19 16:20+0000\n"
 "PO-Revision-Date: 2006-03-21 14:42-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -621,13 +621,6 @@ msgstr "iontráil faisnéis de láimh"
 msgid "Download installer components"
 msgstr "Íosluchtaigh comhpháirteanna an tsuiteálaí"
 
-#. Type: text
-#. Description
-#. Main menu item
-#: ../load-cdrom.templates:1001
-msgid "Load installer components from CD"
-msgstr "Luchtaigh comhpháirteanna an tsuiteálaí ó dhlúthdhiosca"
-
 #. Type: boolean
 #. Description
 #: ../load-media.templates:1001
@@ -740,13 +733,6 @@ msgstr ""
 "Taispeánann an liosta na huirlisí atá ar fáil. Mura bhfuil tú cinnte cé acu "
 "ba chóir a roghnú, roghnaigh na cinn réamhshocraithe. Mura dtosaíonn do "
 "chóras mar is ceart, déan an tsuiteáil arís le roghanna eile."
-
-#. Type: text
-#. Description
-#. Release is a filename which should not be translated
-#: ../bootstrap-base.templates:42001
-msgid "Checking Release signature"
-msgstr "Síniú \"Release\" á sheiceáil"
 
 #. Type: select
 #. Description
@@ -1613,15 +1599,19 @@ msgstr "Níl gach eochair anseo ar fáil ar gach méarchlár."
 #. Description
 #. :sl1:
 #: ../cdrom-detect.templates:2001
-msgid "Detecting hardware to find CD-ROM drives"
-msgstr "Ag brath crua-earraí chun tiomántáin CD-ROM a aimsiú"
+#, fuzzy
+#| msgid "Detecting hardware to find hard drives"
+msgid "Detecting hardware to find installation media"
+msgstr "Ag brath crua-earraí chun tiomántáin diosca a aimsiú"
 
 #. Type: text
 #. Description
 #. :sl1:
 #: ../cdrom-detect.templates:10001
-msgid "Scanning CD-ROM"
-msgstr "CD-ROM á scanadh"
+#, fuzzy
+#| msgid "SILO installation failed"
+msgid "Scanning installation media"
+msgstr "Theip ar shuiteáil SILO"
 
 #. Type: text
 #. Description
@@ -1635,8 +1625,8 @@ msgstr "${DIR} á scanadh..."
 #. finish-install progress bar item
 #. :sl1:
 #: ../cdrom-detect.templates:19001
-msgid "Unmounting and ejecting CD-ROM..."
-msgstr "CD-ROM á dhífheistiú agus á dhíchur..."
+msgid "Unmounting/ejecting installation media..."
+msgstr ""
 
 #. Type: text
 #. Description
@@ -2366,6 +2356,16 @@ msgstr ""
 #: ../mdcfg-utils.templates:6001 ../mdcfg-utils.templates:13001
 msgid "Cancel"
 msgstr "Cealaigh"
+
+#. Type: text
+#. Description
+#. Main menu item
+#. :sl1:
+#: ../load-cdrom.templates:1001
+#, fuzzy
+#| msgid "Load installer components from an installer ISO"
+msgid "Load installer components from installation media"
+msgstr "Luchtaigh comhpháirteanna an tsuiteálaí ó ISO"
 
 #. Type: text
 #. Description
@@ -3220,7 +3220,7 @@ msgstr "Ag ullmhú leis an mbunchóras a shuiteáil..."
 msgid "Installing the base system"
 msgstr "Bunchóras á shuiteáil"
 
-#. #-#-#-#-#  templates.pot (PACKAGE VERSION)  #-#-#-#-#
+#. #-#-#-#-#  templates.pot (base-installer)  #-#-#-#-#
 #. Type: text
 #. Description
 #. :sl1:
@@ -3434,6 +3434,14 @@ msgstr "${SUBST0} á dhíphacáil..."
 #: ../bootstrap-base.templates:41001
 msgid "Configuring ${SUBST0}..."
 msgstr "${SUBST0} á chumrú..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Release is a filename which should not be translated
+#: ../bootstrap-base.templates:42001
+msgid "Checking Release signature"
+msgstr "Síniú \"Release\" á sheiceáil"
 
 #. Type: text
 #. Description
@@ -3690,8 +3698,28 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:1001
-msgid "Scanning the CD-ROM..."
-msgstr "CD-ROM á scanadh..."
+#, fuzzy
+#| msgid "Finishing the installation"
+msgid "Scanning the installation media..."
+msgstr "Suiteáil á cur i gcrích"
+
+#. Type: error
+#. Description
+#. :sl2:
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:2001 ../apt-cdrom-setup.templates:6001
+#, fuzzy
+#| msgid ""
+#| "An attempt to configure apt to install additional packages from the CD "
+#| "failed."
+msgid ""
+"An attempt to configure apt to install additional packages from the media "
+"failed."
+msgstr ""
+"Níorbh fhéidir apt a chumrú sa chaoi go suiteálfadh sé pacáistí breise ón "
+"dlúthdhiosca."
 
 #. Type: boolean
 #. Description
@@ -3707,25 +3735,33 @@ msgstr "CD-ROM á scanadh..."
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001 ../apt-cdrom-setup.templates:4001
 #: ../apt-cdrom-setup.templates:5001 ../apt-cdrom-setup.templates:6001
-msgid "Scan another CD or DVD?"
-msgstr "An bhfuil fonn ort dlúthdhiosca nó DVD eile a scanadh?"
+#, fuzzy
+#| msgid "SILO installation failed"
+msgid "Scan extra installation media?"
+msgstr "Theip ar shuiteáil SILO"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001
-msgid "Your installation CD or DVD has been scanned; its label is:"
-msgstr "Scanadh do dhlúthdhiosca nó DVD suiteála; seo é a lipéad:"
+msgid "Scanning your installation media finds the label:"
+msgstr ""
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001
+#, fuzzy
+#| msgid ""
+#| "You now have the option to scan additional CDs or DVDs for use by the "
+#| "package manager (apt). Normally these should be from the same set as the "
+#| "installation CD/DVD. If you do not have any additional CDs or DVDs "
+#| "available, this step can just be skipped."
 msgid ""
-"You now have the option to scan additional CDs or DVDs for use by the "
-"package manager (apt). Normally these should be from the same set as the "
-"installation CD/DVD. If you do not have any additional CDs or DVDs "
-"available, this step can just be skipped."
+"You now have the option of scanning additional media for use by the package "
+"manager (apt). Normally these should be from the same set as the one you "
+"booted from. If you do not have any additional media, this step can just be "
+"skipped."
 msgstr ""
 "Anois is féidir leat dlúthdhioscaí nó DVDanna breise a scanadh sa chaoi gur "
 "féidir le bainisteoir na bpacáistí (apt) iad a úsáid.  De ghnáth, ba chóir "
@@ -3739,53 +3775,50 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001 ../apt-cdrom-setup.templates:4001
-msgid "If you wish to scan another CD or DVD, please insert it now."
+#, fuzzy
+#| msgid "If you wish to scan another CD or DVD, please insert it now."
+msgid "If you wish to scan more media, please insert another one now."
 msgstr "Más mian leat dlúthdhiosca nó DVD eile a scanadh, ionsáigh é anois."
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:4001
-msgid "The CD or DVD with the following label has been scanned:"
+#, fuzzy
+#| msgid "The CD or DVD with the following label has been scanned:"
+msgid "The image with the following label has been scanned:"
 msgstr "Scanadh dlúthdhiosca nó DVD leis an lipéad seo a leanas:"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:5001
-msgid "The CD or DVD with the following label has already been scanned:"
+#, fuzzy
+#| msgid "The CD or DVD with the following label has already been scanned:"
+msgid "The image with the following label has already been scanned:"
 msgstr "Scanadh dlúthdhiosca nó DVD leis an lipéad seo a leanas cheana:"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:5001
-msgid "Please replace it now if you wish to scan another CD or DVD."
+#, fuzzy
+#| msgid "Please replace it now if you wish to scan another CD or DVD."
+msgid "Please replace it now, if you wish to scan another."
 msgstr "Cuir é ar ais anois más mian leat dlúthdhiosca nó DVD eile a scanadh."
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:6001
-msgid ""
-"An attempt to configure apt to install additional packages from the CD/DVD "
-"failed."
-msgstr ""
-"Níorbh fhéidir apt a chumrú sa chaoi go suiteálfadh sé pacáistí breise ón CD/"
-"DVD."
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:6001
-msgid "Please check that the CD/DVD has been inserted correctly."
+#, fuzzy
+#| msgid "Please check that the CD/DVD has been inserted correctly."
+msgid "Please check that the media has been inserted correctly."
 msgstr "Bí cinnte go bhfuil an dlúthdhiosca nó DVD ionsáite mar is ceart."
 
 #. Type: text
 #. Description
 #. :sl1:
-#. This template uses the same text as used in the package apt for apt-cdrom
-#. Do not translate "/cdrom/" (the mount point)
 #: ../apt-cdrom-setup.templates:7001
 msgid "Media change"
 msgstr "Athrú meáin"
@@ -3793,12 +3826,12 @@ msgstr "Athrú meáin"
 #. Type: text
 #. Description
 #. :sl1:
-#. This template uses the same text as used in the package apt for apt-cdrom
-#. Do not translate "/cdrom/" (the mount point)
 #: ../apt-cdrom-setup.templates:7001
-msgid ""
-"/cdrom/: Please insert the disc labeled '${LABEL}' in the drive '/cdrom/' "
-"and press enter."
+#, fuzzy
+#| msgid ""
+#| "/cdrom/: Please insert the disc labeled '${LABEL}' in the drive '/cdrom/' "
+#| "and press enter."
+msgid "Please insert the media labeled '${LABEL}' and press enter."
 msgstr ""
 "/cdrom/: Ionsáigh an diosca le lipéad '${LABEL}' i dtiomántán '/cdrom/' agus "
 "brúigh Enter."
@@ -3818,9 +3851,13 @@ msgstr "Dlúthdhiosca netinst á dhíchumasú i sources.list..."
 #. Description
 #. :sl2:
 #: ../apt-cdrom-setup.templates:9001 ../apt-mirror-setup.templates:6001
+#, fuzzy
+#| msgid ""
+#| "If you are installing from a netinst CD and choose not to use a mirror, "
+#| "you will end up with only a very minimal base system."
 msgid ""
-"If you are installing from a netinst CD and choose not to use a mirror, you "
-"will end up with only a very minimal base system."
+"If you are installing from a netinst CD image and choose not to use a "
+"mirror, you will end up with only a very minimal base system."
 msgstr ""
 "Má tá tú ag suiteáil ó dhlúthdhiosca netinst agus má roghnaíonn tú gan "
 "suíomh scáthánaithe a úsáid, ní bheidh agat ach bunchóras an-teoranta."
@@ -3829,8 +3866,13 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:10001
+#, fuzzy
+#| msgid ""
+#| "You are installing from a netinst CD, which by itself only allows "
+#| "installation of a very minimal base system. Use a mirror to install a "
+#| "more complete system."
 msgid ""
-"You are installing from a netinst CD, which by itself only allows "
+"You are installing from a netinst CD image, which by itself only allows "
 "installation of a very minimal base system. Use a mirror to install a more "
 "complete system."
 msgstr ""
@@ -3842,8 +3884,13 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:11001
+#, fuzzy
+#| msgid ""
+#| "You are installing from a CD, which contains a limited selection of "
+#| "packages."
 msgid ""
-"You are installing from a CD, which contains a limited selection of packages."
+"You are installing from an image which contains a limited selection of "
+"packages."
 msgstr ""
 "Tá tú ag suiteáil ó dhlúthdhiosca nach bhfuil ach rogha teoranta pacáistí "
 "air."
@@ -3853,9 +3900,13 @@ msgstr ""
 #. :sl1:
 #. The value of %i can be 2 or 3
 #: ../apt-cdrom-setup.templates:12001
-#, no-c-format
+#, fuzzy, no-c-format
+#| msgid ""
+#| "You have scanned %i CDs. Even though these contain a fair selection of "
+#| "packages, some may be missing (notably some packages needed to support "
+#| "languages other than English)."
 msgid ""
-"You have scanned %i CDs. Even though these contain a fair selection of "
+"You have scanned %i images. Even though these contain a fair selection of "
 "packages, some may be missing (notably some packages needed to support "
 "languages other than English)."
 msgstr ""
@@ -3868,9 +3919,12 @@ msgstr ""
 #. :sl1:
 #. The value of %i can be from 4 to 8
 #: ../apt-cdrom-setup.templates:13001
-#, no-c-format
+#, fuzzy, no-c-format
+#| msgid ""
+#| "You have scanned %i CDs. Even though these contain a large selection of "
+#| "packages, some may be missing."
 msgid ""
-"You have scanned %i CDs. Even though these contain a large selection of "
+"You have scanned %i images. Even though these contain a large selection of "
 "packages, some may be missing."
 msgstr ""
 "Scan tú %i dlúthdhiosca. Cé go bhfuil go leor pacáistí orthu seo, seans go "
@@ -3891,8 +3945,12 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:15001
+#, fuzzy
+#| msgid ""
+#| "You are installing from a DVD. Even though the DVD contains a large "
+#| "selection of packages, some may be missing."
 msgid ""
-"You are installing from a DVD. Even though the DVD contains a large "
+"You are installing from a DVD image. Even though it contains a large "
 "selection of packages, some may be missing."
 msgstr ""
 "Tá tú ag suiteáil ó DVD. Cé go bhfuil go leor pacáistí ar an DVD, seans go "
@@ -4021,9 +4079,14 @@ msgstr "An bhfuil fonn ort suíomh scáthánaithe a úsáid?"
 #. Description
 #. :sl1:
 #: ../apt-mirror-setup.templates:5001
+#, fuzzy
+#| msgid ""
+#| "A network mirror can be used to supplement the software that is included "
+#| "on the CD-ROM. This may also make newer versions of software available."
 msgid ""
 "A network mirror can be used to supplement the software that is included on "
-"the CD-ROM. This may also make newer versions of software available."
+"the installation media. This may also make newer versions of software "
+"available."
 msgstr ""
 "Is féidir suíomh scáthánaithe a úsáid chun na bogearraí ar an CD-ROM a "
 "fhorlíonadh.  Is féidir leaganacha níos nuaí de na bogearraí a fháil freisin."
@@ -4664,6 +4727,67 @@ msgstr "Cumraigh an Bainisteoir Imleabhar Loighciúil"
 #: ../partman-auto-lvm.templates:1001
 msgid "Guided - use entire disk and set up LVM"
 msgstr "Treoraithe - úsáid an diosca iomlán agus socraigh LVM"
+
+#~ msgid "Load installer components from CD"
+#~ msgstr "Luchtaigh comhpháirteanna an tsuiteálaí ó dhlúthdhiosca"
+
+#~ msgid "Detecting hardware to find CD-ROM drives"
+#~ msgstr "Ag brath crua-earraí chun tiomántáin CD-ROM a aimsiú"
+
+#~ msgid "Scanning CD-ROM"
+#~ msgstr "CD-ROM á scanadh"
+
+#~ msgid "Unmounting and ejecting CD-ROM..."
+#~ msgstr "CD-ROM á dhífheistiú agus á dhíchur..."
+
+#~ msgid "Scanning the CD-ROM..."
+#~ msgstr "CD-ROM á scanadh..."
+
+#~ msgid "Scan another CD or DVD?"
+#~ msgstr "An bhfuil fonn ort dlúthdhiosca nó DVD eile a scanadh?"
+
+#~ msgid "Your installation CD or DVD has been scanned; its label is:"
+#~ msgstr "Scanadh do dhlúthdhiosca nó DVD suiteála; seo é a lipéad:"
+
+#~ msgid ""
+#~ "An attempt to configure apt to install additional packages from the CD/"
+#~ "DVD failed."
+#~ msgstr ""
+#~ "Níorbh fhéidir apt a chumrú sa chaoi go suiteálfadh sé pacáistí breise ón "
+#~ "CD/DVD."
+
+#~ msgid "Load CD-ROM drivers from removable media?"
+#~ msgstr "Luchtaigh tiománaithe CD-ROM ó mheán inbhainte?"
+
+#~ msgid "Retry mounting the CD-ROM?"
+#~ msgstr "Déan iarracht eile an CD-ROM a fheistiú?"
+
+#~ msgid "CD-ROM detected"
+#~ msgstr "Braitheadh CD-ROM"
+
+#~ msgid "Incorrect CD-ROM detected"
+#~ msgstr "Braitheadh CD-ROM mícheart"
+
+#~ msgid "Detect and mount CD-ROM"
+#~ msgstr "Braith agus feistigh an CD-ROM"
+
+#~ msgid "Check the CD-ROM(s) integrity"
+#~ msgstr "Seiceáil sláine an CD-ROM"
+
+#~ msgid "Check CD-ROM integrity?"
+#~ msgstr "An bhfuil tú ag iarraidh sláine an CD-ROM a sheiceáil?"
+
+#~ msgid "Insert a Debian CD-ROM"
+#~ msgstr "Ionsáigh CD-ROM Debian"
+
+#~ msgid "Failed to mount CD-ROM"
+#~ msgstr "Theip ar CD-ROM a fheistiú"
+
+#~ msgid "No valid Debian CD-ROM"
+#~ msgstr "Gan CD-ROM bailí Debian"
+
+#~ msgid "Checking CD-ROM integrity"
+#~ msgstr "Sláine an CD-ROM á seiceáil"
 
 #~ msgid "No DHCP client was found. This package requires pump or dhcp-client."
 #~ msgstr ""
@@ -5622,9 +5746,6 @@ msgstr "Treoraithe - úsáid an diosca iomlán agus socraigh LVM"
 #~ "Ní féidir leat aon rud a athrú toisc go bhfuil na deighiltí feistithe "
 #~ "cheana."
 
-#~ msgid "Failed to unmount partitions"
-#~ msgstr "Níorbh fhéidir na deighiltí a dhífheistiú"
-
 #~ msgid "An unexpected error occurred while unmounting the partitions."
 #~ msgstr "Tharla earráid gan súil léi agus na deighiltí á ndífheistiú."
 
@@ -5802,9 +5923,6 @@ msgstr "Treoraithe - úsáid an diosca iomlán agus socraigh LVM"
 #~ "shuiteáil mar luchtóir tosaithe.  Seans nach mbaineann an fhadhb "
 #~ "shuiteála le SILO ar chor ar bith agus beidh tú in ann dul ar aghaidh "
 #~ "leis an tsuiteáil."
-
-#~ msgid "SILO installation failed"
-#~ msgstr "Theip ar shuiteáil SILO"
 
 #~ msgid "Running \"/sbin/silo\" failed with error code \"${ERRCODE}\"."
 #~ msgstr "Theip ar \"/sbin/silo\" le cód earráide \"${ERRCODE}\"."

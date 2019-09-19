@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Debian Installer Level 1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-28 21:20+0000\n"
+"POT-Creation-Date: 2019-09-19 16:20+0000\n"
 "PO-Revision-Date: 2018-01-04 06:20+0000\n"
 "Last-Translator: Anish Sheela <aneesh.nl@gmail.com>\n"
 "Language-Team: Swatantra Malayalam Computing <discuss@lists.smc.org.in>\n"
@@ -659,13 +659,6 @@ msgstr "വിവരം മാന്വലായി ചേര്‍ക്കു�
 msgid "Download installer components"
 msgstr "ഇന്‍സ്റ്റാളര്‍ ഭാഗങ്ങള്‍ ഡൌണ്‍ലോഡ് ചെയ്യുക"
 
-#. Type: text
-#. Description
-#. Main menu item
-#: ../load-cdrom.templates:1001
-msgid "Load installer components from CD"
-msgstr "സിഡിയില്‍ നിന്നും ഇന്‍സ്റ്റാളര്‍ ഘടകങ്ങള്‍ ചേര്‍ക്കുക"
-
 #. Type: boolean
 #. Description
 #: ../load-media.templates:1001
@@ -773,13 +766,6 @@ msgstr ""
 "പട്ടിക കാണിക്കുന്നതു് ലഭ്യമായ പണിയായുധങ്ങളാണു്. ഏതു് തെരഞ്ഞെടുക്കണമെന്നു് ഉറപ്പില്ലെങ്കില്‍ സഹജമായതു് "
 "തെരഞ്ഞെടുക്കുക. നിങ്ങളുടെ സിസ്റ്റം ബൂട്ട് ചെയ്യുന്നതില്‍ പരാജയപ്പെട്ടാല്‍ മറ്റു് തെരഞ്ഞെടുക്കാവുന്ന "
 "വിലകള്‍ ഉപയോഗിച്ചു് നിങ്ങള്‍ക്കു് വീണ്ടും ശ്രമിക്കാവുന്നതാണു്."
-
-#. Type: text
-#. Description
-#. Release is a filename which should not be translated
-#: ../bootstrap-base.templates:42001
-msgid "Checking Release signature"
-msgstr "പുറത്തിറക്കല്‍ കയ്യൊപ്പു് പരിശോധിച്ചു് കൊണ്ടിരിയ്ക്കുന്നു"
 
 #. Type: select
 #. Description
@@ -1634,15 +1620,19 @@ msgstr "നിങ്ങള്‍ നല്‍കിയ കീകളെല്ല�
 #. Description
 #. :sl1:
 #: ../cdrom-detect.templates:2001
-msgid "Detecting hardware to find CD-ROM drives"
-msgstr "സിഡി-റോം ഡ്രൈവുകള്‍ കണ്ടുപിടിക്കാനായി ഹാര്‍ഡ്‌വെയര്‍ തിരിച്ചറിയുന്നു"
+#, fuzzy
+#| msgid "Detecting hardware to find hard drives"
+msgid "Detecting hardware to find installation media"
+msgstr "ഹാര്‍ഡ് ഡ്രൈവുകള്‍ക്കായി ഹാര്‍ഡ്‌വെയര്‍ കണ്ടുപിടിച്ചുകൊണ്ടിരിയ്ക്കുന്നു"
 
 #. Type: text
 #. Description
 #. :sl1:
 #: ../cdrom-detect.templates:10001
-msgid "Scanning CD-ROM"
-msgstr "സിഡി-റോമില്‍ തെരയുന്നു"
+#, fuzzy
+#| msgid "SILO installation failed"
+msgid "Scanning installation media"
+msgstr "സിലോ ഇന്‍സ്റ്റളേഷന്‍ പരാജയപ്പെട്ടു"
 
 #. Type: text
 #. Description
@@ -1656,8 +1646,8 @@ msgstr "${DIR} ല്‍ തെരയുന്നു..."
 #. finish-install progress bar item
 #. :sl1:
 #: ../cdrom-detect.templates:19001
-msgid "Unmounting and ejecting CD-ROM..."
-msgstr "സിഡി-റോം അണ്‍മൌണ്ട് ചെയ്തു് പുറത്തെടുക്കുന്നു..."
+msgid "Unmounting/ejecting installation media..."
+msgstr ""
 
 #. Type: text
 #. Description
@@ -2380,6 +2370,16 @@ msgstr ""
 #: ../mdcfg-utils.templates:6001 ../mdcfg-utils.templates:13001
 msgid "Cancel"
 msgstr "റദ്ദാക്കുക"
+
+#. Type: text
+#. Description
+#. Main menu item
+#. :sl1:
+#: ../load-cdrom.templates:1001
+#, fuzzy
+#| msgid "Load installer components from an installer ISO"
+msgid "Load installer components from installation media"
+msgstr "ഇന്‍സ്റ്റാളര്‍ ഐഎസ്ഒയില്‍ നിന്നും ഇന്‍സ്റ്റാളര്‍ ഘടകങ്ങള്‍ ചേര്‍ക്കുക"
 
 #. Type: text
 #. Description
@@ -3230,7 +3230,7 @@ msgstr "അടിസ്ഥാന സിസ്റ്റം ഇന്‍സ്റ�
 msgid "Installing the base system"
 msgstr "അടിസ്ഥാന സിസ്റ്റം ഇന്‍സ്റ്റോള്‍ ചെയ്തു് കൊണ്ടിരിയ്ക്കുന്നു"
 
-#. #-#-#-#-#  templates.pot (PACKAGE VERSION)  #-#-#-#-#
+#. #-#-#-#-#  templates.pot (base-installer)  #-#-#-#-#
 #. Type: text
 #. Description
 #. :sl1:
@@ -3446,6 +3446,14 @@ msgstr "${SUBST0} തുറന്നു കൊണ്ടിരിയ്ക്ക�
 #: ../bootstrap-base.templates:41001
 msgid "Configuring ${SUBST0}..."
 msgstr "${SUBST0} ക്രമീകരിച്ചു കൊണ്ടിരിയ്ക്കുന്നു..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Release is a filename which should not be translated
+#: ../bootstrap-base.templates:42001
+msgid "Checking Release signature"
+msgstr "പുറത്തിറക്കല്‍ കയ്യൊപ്പു് പരിശോധിച്ചു് കൊണ്ടിരിയ്ക്കുന്നു"
 
 #. Type: text
 #. Description
@@ -3702,8 +3710,28 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:1001
-msgid "Scanning the CD-ROM..."
-msgstr "സിഡിറോമില്‍ തെരഞ്ഞു കൊണ്ടിരിയ്ക്കുന്നു..."
+#, fuzzy
+#| msgid "Finishing the installation"
+msgid "Scanning the installation media..."
+msgstr "ഇന്‍സ്റ്റളേഷന്‍ പൂര്‍ത്തിയാക്കി കൊണ്ടിരിയ്ക്കുന്നു"
+
+#. Type: error
+#. Description
+#. :sl2:
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:2001 ../apt-cdrom-setup.templates:6001
+#, fuzzy
+#| msgid ""
+#| "An attempt to configure apt to install additional packages from the CD "
+#| "failed."
+msgid ""
+"An attempt to configure apt to install additional packages from the media "
+"failed."
+msgstr ""
+"സിഡിയില്‍ നിന്നും കൂടുതല്‍ പാക്കേജുകള്‍ ഇന്‍സ്റ്റാള്‍ ചെയ്യാനായി apt ക്രമീകരിക്കാനുള്ള ശ്രമം "
+"പരാജയപ്പെട്ടു."
 
 #. Type: boolean
 #. Description
@@ -3719,25 +3747,33 @@ msgstr "സിഡിറോമില്‍ തെരഞ്ഞു കൊണ്ട�
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001 ../apt-cdrom-setup.templates:4001
 #: ../apt-cdrom-setup.templates:5001 ../apt-cdrom-setup.templates:6001
-msgid "Scan another CD or DVD?"
-msgstr "വേറൊരു സിഡിയോ ഡിവിഡിയോ ചേര്‍ക്കണോ?"
+#, fuzzy
+#| msgid "SILO installation failed"
+msgid "Scan extra installation media?"
+msgstr "സിലോ ഇന്‍സ്റ്റളേഷന്‍ പരാജയപ്പെട്ടു"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001
-msgid "Your installation CD or DVD has been scanned; its label is:"
-msgstr "നിങ്ങള്‍ ഇന്‍സ്റ്റളേഷനുപയോഗിച്ച സിഡിയോ ഡിവിഡിയോ ചേര്‍ത്തിട്ടുണ്ടു്; അതിന്റെ പേരാണു്:"
+msgid "Scanning your installation media finds the label:"
+msgstr ""
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001
+#, fuzzy
+#| msgid ""
+#| "You now have the option to scan additional CDs or DVDs for use by the "
+#| "package manager (apt). Normally these should be from the same set as the "
+#| "installation CD/DVD. If you do not have any additional CDs or DVDs "
+#| "available, this step can just be skipped."
 msgid ""
-"You now have the option to scan additional CDs or DVDs for use by the "
-"package manager (apt). Normally these should be from the same set as the "
-"installation CD/DVD. If you do not have any additional CDs or DVDs "
-"available, this step can just be skipped."
+"You now have the option of scanning additional media for use by the package "
+"manager (apt). Normally these should be from the same set as the one you "
+"booted from. If you do not have any additional media, this step can just be "
+"skipped."
 msgstr ""
 "പാക്കേജുകളുടെ നടത്തിപ്പുകാരനു് (apt) ഉപയോഗിയ്ക്കാന്‍ കൂടുതല്‍ സിഡികളോ ഡിവിഡികളോ ചേര്‍ക്കാന്‍ "
 "നിങ്ങള്‍ക്കിപ്പോഴവസരമുണ്ടു്. സാധാരണയായി ഇതു് നിങ്ങള്‍ ഇന്‍സ്റ്റളേഷനുപയോഗിച്ച സിഡി/ഡിവിഡി ഗണത്തില്‍ "
@@ -3751,28 +3787,36 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001 ../apt-cdrom-setup.templates:4001
-msgid "If you wish to scan another CD or DVD, please insert it now."
+#, fuzzy
+#| msgid "If you wish to scan another CD or DVD, please insert it now."
+msgid "If you wish to scan more media, please insert another one now."
 msgstr "വേറൊരു സിഡിയോ ഡിവിഡിയോ ചേര്‍ക്കാന്‍ നിങ്ങളാഗ്രഹിയ്ക്കുന്നെങ്കില്‍, ദയവായി അതു് വയ്ക്കൂ."
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:4001
-msgid "The CD or DVD with the following label has been scanned:"
+#, fuzzy
+#| msgid "The CD or DVD with the following label has been scanned:"
+msgid "The image with the following label has been scanned:"
 msgstr "താഴെ പറയുന്ന പേരുള്ള സിഡിയോ ഡിവിഡിയോ ചേര്‍ത്തിട്ടുണ്ടു്:"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:5001
-msgid "The CD or DVD with the following label has already been scanned:"
+#, fuzzy
+#| msgid "The CD or DVD with the following label has already been scanned:"
+msgid "The image with the following label has already been scanned:"
 msgstr "താഴെ കൊടുത്തിരിയ്ക്കുന്ന അതേ പേരുള്ള സിഡിയോ ഡിവിഡിയോ നേരത്തെ തന്നെ ചേര്‍ത്തിട്ടുണ്ടു്:"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:5001
-msgid "Please replace it now if you wish to scan another CD or DVD."
+#, fuzzy
+#| msgid "Please replace it now if you wish to scan another CD or DVD."
+msgid "Please replace it now, if you wish to scan another."
 msgstr ""
 "വേറൊരു സിഡിയോ ഡിവിഡിയോ ചേര്‍ക്കാന്‍ നിങ്ങളാഗ്രഹിയ്ക്കുന്നെങ്കില്‍ ഇപ്പോള്‍ തന്നെ അതു് മാറ്റിയിടുക."
 
@@ -3780,25 +3824,14 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:6001
-msgid ""
-"An attempt to configure apt to install additional packages from the CD/DVD "
-"failed."
-msgstr ""
-"സിഡിയില്‍/ഡിവിഡിയില്‍ നിന്നും കൂടുതല്‍ പൊതികള്‍ ഇന്‍സ്റ്റോള്‍ ചെയ്യാനായി ആപ്റ്റ് (apt) "
-"ക്രമീകരിയ്ക്കാനുള്ള ശ്രമം പരാജയപ്പെട്ടു."
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:6001
-msgid "Please check that the CD/DVD has been inserted correctly."
+#, fuzzy
+#| msgid "Please check that the CD/DVD has been inserted correctly."
+msgid "Please check that the media has been inserted correctly."
 msgstr "ദയവായി സിഡി/ഡിവിഡി നിങ്ങള്‍ ശരിയായി വച്ചിട്ടുണ്ടെന്നുറപ്പുവരുത്തുക."
 
 #. Type: text
 #. Description
 #. :sl1:
-#. This template uses the same text as used in the package apt for apt-cdrom
-#. Do not translate "/cdrom/" (the mount point)
 #: ../apt-cdrom-setup.templates:7001
 msgid "Media change"
 msgstr "മീഡിയ മാറ്റം"
@@ -3806,12 +3839,12 @@ msgstr "മീഡിയ മാറ്റം"
 #. Type: text
 #. Description
 #. :sl1:
-#. This template uses the same text as used in the package apt for apt-cdrom
-#. Do not translate "/cdrom/" (the mount point)
 #: ../apt-cdrom-setup.templates:7001
-msgid ""
-"/cdrom/: Please insert the disc labeled '${LABEL}' in the drive '/cdrom/' "
-"and press enter."
+#, fuzzy
+#| msgid ""
+#| "/cdrom/: Please insert the disc labeled '${LABEL}' in the drive '/cdrom/' "
+#| "and press enter."
+msgid "Please insert the media labeled '${LABEL}' and press enter."
 msgstr ""
 "/cdrom/: ദയവായി '${LABEL}' എന്ന പേരുള്ള ഡിസ്ക് '/cdrom/' എന്ന ഡ്രൈവില്‍ വച്ചു് എന്റര്‍ കീ "
 "അമര്‍ത്തുക."
@@ -3831,9 +3864,13 @@ msgstr "നെറ്റിന്‍സ്റ്റ് സിഡി സോഴ്�
 #. Description
 #. :sl2:
 #: ../apt-cdrom-setup.templates:9001 ../apt-mirror-setup.templates:6001
+#, fuzzy
+#| msgid ""
+#| "If you are installing from a netinst CD and choose not to use a mirror, "
+#| "you will end up with only a very minimal base system."
 msgid ""
-"If you are installing from a netinst CD and choose not to use a mirror, you "
-"will end up with only a very minimal base system."
+"If you are installing from a netinst CD image and choose not to use a "
+"mirror, you will end up with only a very minimal base system."
 msgstr ""
 "നിങ്ങള്‍ ഒരു നെറ്റിന്‍സ്റ്റ് സിഡിയില്‍ നിന്നും ഇന്‍സ്റ്റോള്‍ ചെയ്യുകയും ഒരു മിറര്‍ തെരഞ്ഞെടുക്കാതിരിക്കുകയും "
 "ചെയ്താല്‍ നിങ്ങള്‍ വളരെ ചുരുങ്ങിയ അടിസ്ഥാന സിസ്റ്റത്തില്‍ മാത്രം എത്തിപ്പെടും."
@@ -3842,8 +3879,13 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:10001
+#, fuzzy
+#| msgid ""
+#| "You are installing from a netinst CD, which by itself only allows "
+#| "installation of a very minimal base system. Use a mirror to install a "
+#| "more complete system."
 msgid ""
-"You are installing from a netinst CD, which by itself only allows "
+"You are installing from a netinst CD image, which by itself only allows "
 "installation of a very minimal base system. Use a mirror to install a more "
 "complete system."
 msgstr ""
@@ -3855,8 +3897,13 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:11001
+#, fuzzy
+#| msgid ""
+#| "You are installing from a CD, which contains a limited selection of "
+#| "packages."
 msgid ""
-"You are installing from a CD, which contains a limited selection of packages."
+"You are installing from an image which contains a limited selection of "
+"packages."
 msgstr "വളരെ കുറച്ചു് പൊതികള്‍ ഉള്‍ക്കൊള്ളുന്ന ഒരു സിഡിയില്‍ നിന്നാണു് നിങ്ങള്‍ ഇന്‍സ്റ്റോള്‍ ചെയ്യുന്നതു്."
 
 #. Type: text
@@ -3864,9 +3911,13 @@ msgstr "വളരെ കുറച്ചു് പൊതികള്‍ ഉള്
 #. :sl1:
 #. The value of %i can be 2 or 3
 #: ../apt-cdrom-setup.templates:12001
-#, no-c-format
+#, fuzzy, no-c-format
+#| msgid ""
+#| "You have scanned %i CDs. Even though these contain a fair selection of "
+#| "packages, some may be missing (notably some packages needed to support "
+#| "languages other than English)."
 msgid ""
-"You have scanned %i CDs. Even though these contain a fair selection of "
+"You have scanned %i images. Even though these contain a fair selection of "
 "packages, some may be missing (notably some packages needed to support "
 "languages other than English)."
 msgstr ""
@@ -3879,9 +3930,12 @@ msgstr ""
 #. :sl1:
 #. The value of %i can be from 4 to 8
 #: ../apt-cdrom-setup.templates:13001
-#, no-c-format
+#, fuzzy, no-c-format
+#| msgid ""
+#| "You have scanned %i CDs. Even though these contain a large selection of "
+#| "packages, some may be missing."
 msgid ""
-"You have scanned %i CDs. Even though these contain a large selection of "
+"You have scanned %i images. Even though these contain a large selection of "
 "packages, some may be missing."
 msgstr ""
 "നിങ്ങള്‍ %i സിഡികള്‍ ചേര്‍ത്തിട്ടുണ്ട്. ഇവയില്‍ വളരെയധികം പാക്കേജുകളുണ്ടെങ്കിലും, ഇനിയും ചിലവ "
@@ -3902,8 +3956,12 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:15001
+#, fuzzy
+#| msgid ""
+#| "You are installing from a DVD. Even though the DVD contains a large "
+#| "selection of packages, some may be missing."
 msgid ""
-"You are installing from a DVD. Even though the DVD contains a large "
+"You are installing from a DVD image. Even though it contains a large "
 "selection of packages, some may be missing."
 msgstr ""
 "നിങ്ങളൊരു ഡിവിഡിയില്‍ നിന്നാണു് ഇന്‍സ്റ്റോള്‍ ചെയ്യുന്നതു്. ഇവയില്‍ വളരെയധികം പാക്കേജുകളുണ്ടെങ്കിലും, "
@@ -4034,9 +4092,14 @@ msgstr "ശൃഖല മിറര്‍ ഉപയോഗിക്കണോ?"
 #. Description
 #. :sl1:
 #: ../apt-mirror-setup.templates:5001
+#, fuzzy
+#| msgid ""
+#| "A network mirror can be used to supplement the software that is included "
+#| "on the CD-ROM. This may also make newer versions of software available."
 msgid ""
 "A network mirror can be used to supplement the software that is included on "
-"the CD-ROM. This may also make newer versions of software available."
+"the installation media. This may also make newer versions of software "
+"available."
 msgstr ""
 "സിഡിറോമിലുള്‍‌പ്പെടുത്തിയിട്ടുള്ള സോഫ്റ്റ്‌വെയറിന് പരിപൂരകമായി ഒരു ശൃഖല മിറര്‍ ഉപയോഗിയ്ക്കാം. ഇതു് "
 "സോഫ്റ്റ്‌വെയറിന്റെ പുതിയ ലക്കങ്ങള്‍ ലഭ്യമാക്കിയേക്കാം."
@@ -4666,6 +4729,67 @@ msgstr "ലോജിക്കല്‍ വാള്യം മാനേജര്�
 #: ../partman-auto-lvm.templates:1001
 msgid "Guided - use entire disk and set up LVM"
 msgstr "സഹായത്തോടെയുള്ള - മുഴുവന്‍ ഡിസ്കുമുപയോഗിച്ച് എല്‍വിഎം ഒരുക്കുക"
+
+#~ msgid "Load installer components from CD"
+#~ msgstr "സിഡിയില്‍ നിന്നും ഇന്‍സ്റ്റാളര്‍ ഘടകങ്ങള്‍ ചേര്‍ക്കുക"
+
+#~ msgid "Detecting hardware to find CD-ROM drives"
+#~ msgstr "സിഡി-റോം ഡ്രൈവുകള്‍ കണ്ടുപിടിക്കാനായി ഹാര്‍ഡ്‌വെയര്‍ തിരിച്ചറിയുന്നു"
+
+#~ msgid "Scanning CD-ROM"
+#~ msgstr "സിഡി-റോമില്‍ തെരയുന്നു"
+
+#~ msgid "Unmounting and ejecting CD-ROM..."
+#~ msgstr "സിഡി-റോം അണ്‍മൌണ്ട് ചെയ്തു് പുറത്തെടുക്കുന്നു..."
+
+#~ msgid "Scanning the CD-ROM..."
+#~ msgstr "സിഡിറോമില്‍ തെരഞ്ഞു കൊണ്ടിരിയ്ക്കുന്നു..."
+
+#~ msgid "Scan another CD or DVD?"
+#~ msgstr "വേറൊരു സിഡിയോ ഡിവിഡിയോ ചേര്‍ക്കണോ?"
+
+#~ msgid "Your installation CD or DVD has been scanned; its label is:"
+#~ msgstr "നിങ്ങള്‍ ഇന്‍സ്റ്റളേഷനുപയോഗിച്ച സിഡിയോ ഡിവിഡിയോ ചേര്‍ത്തിട്ടുണ്ടു്; അതിന്റെ പേരാണു്:"
+
+#~ msgid ""
+#~ "An attempt to configure apt to install additional packages from the CD/"
+#~ "DVD failed."
+#~ msgstr ""
+#~ "സിഡിയില്‍/ഡിവിഡിയില്‍ നിന്നും കൂടുതല്‍ പൊതികള്‍ ഇന്‍സ്റ്റോള്‍ ചെയ്യാനായി ആപ്റ്റ് (apt) "
+#~ "ക്രമീകരിയ്ക്കാനുള്ള ശ്രമം പരാജയപ്പെട്ടു."
+
+#~ msgid "Load CD-ROM drivers from removable media?"
+#~ msgstr "നീക്കം ചെയ്യാവുന്ന മാധ്യമത്തില്‍ നിന്നും സിഡി-റോം പ്രവര്‍ത്തകങ്ങള്‍ ചേര്‍ക്കണോ?"
+
+#~ msgid "Retry mounting the CD-ROM?"
+#~ msgstr "സിഡി-റോം മൌണ്ട് ചെയ്യാന്‍ വീണ്ടും ശ്രമിക്കണോ?"
+
+#~ msgid "CD-ROM detected"
+#~ msgstr "സിഡി-റോം തിരിച്ചറിഞ്ഞിരിക്കുന്നു"
+
+#~ msgid "Incorrect CD-ROM detected"
+#~ msgstr "തെറ്റായ സിഡി-റോം തിരിച്ചറിയപ്പെട്ടിരിയ്ക്കുന്നു"
+
+#~ msgid "Detect and mount CD-ROM"
+#~ msgstr "സിഡി-റോം തിരിച്ചറിഞ്ഞു് മൌണ്ട് ചെയ്യുക"
+
+#~ msgid "Check the CD-ROM(s) integrity"
+#~ msgstr "സിഡി-റോമുകളുടെ സമഗ്രത പരിശോധിക്കുക"
+
+#~ msgid "Check CD-ROM integrity?"
+#~ msgstr "സിഡി-റോം സമഗ്രത പരിശോധിക്കണോ?"
+
+#~ msgid "Insert a Debian CD-ROM"
+#~ msgstr "ഒരു ഡെബിയന്‍ സിഡി-റോം വയ്ക്കുക"
+
+#~ msgid "Failed to mount CD-ROM"
+#~ msgstr "സിഡി-റോം മൌണ്ട് ചെയ്യുന്നതില്‍ പരാജയപ്പെട്ടു"
+
+#~ msgid "No valid Debian CD-ROM"
+#~ msgstr "സാധുവായ ഡെബിയന്‍ സിഡി-റോമൊന്നുമില്ല"
+
+#~ msgid "Checking CD-ROM integrity"
+#~ msgstr "സിഡി-റോം സമഗ്രത പരിശോധിച്ചു കൊണ്ടിരിയ്ക്കുന്നു"
 
 #~ msgid "No DHCP client was found. This package requires pump or dhcp-client."
 #~ msgstr ""
@@ -5587,9 +5711,6 @@ msgstr "സഹായത്തോടെയുള്ള - മുഴുവന്‍
 #~ "ഭാഗഹ്ങളെല്ലാം നേരത്തെ തന്നെ മൌണ്ട് ചെയ്തതായതിനാലു്‍ നിങ്ങള്‍ക്കു് മാറ്റങ്ങളൊന്നും തന്നെ "
 #~ "വരുത്താകില്ല."
 
-#~ msgid "Failed to unmount partitions"
-#~ msgstr "ഭാഗങ്ങള്‍ അണ്‍ മൌണ്ട് ചെയ്യുന്നതില്‍ പരാജയപ്പെട്ടു"
-
 #~ msgid "An unexpected error occurred while unmounting the partitions."
 #~ msgstr "ഭാഗങ്ങള്‍ അണ്‍മൌണ്ട് ചെയ്തു് കൊണ്ടിരിക്കുമ്പോള്‍ അപ്രതീക്ഷിതമായ ഒരു തെറ്റ് സംഭവിച്ചു."
 
@@ -5757,9 +5878,6 @@ msgstr "സഹായത്തോടെയുള്ള - മുഴുവന്‍
 #~ "'സിലോ' പാക്കേജ് /target/ ലേക്ക് ഇന്‍സ്റ്റാള്‍ ചെയ്യുന്നതില്‍ പരാജയപ്പെട്ടു. സിലോ ബൂട്ട് "
 #~ "ലോഡറായി ഇന്‍സ്റ്റാള്‍ ചെയ്യുന്നത് ഒരു അവശ്യ നടപടിക്രമമാണു്. എന്നിരുന്നാലും ഇന്‍സ്റ്റാള്‍ പ്രശ്നം "
 #~ "സിലോയുമായി ബന്ധമില്ലാത്തതാകാം, അതു കൊണ്ട് തന്നെ ഇന്‍സ്റ്റളേഷന്‍ തുടരാന്‍ സാധ്യമായേക്കാം."
-
-#~ msgid "SILO installation failed"
-#~ msgstr "സിലോ ഇന്‍സ്റ്റളേഷന്‍ പരാജയപ്പെട്ടു"
 
 #~ msgid "Running \"/sbin/silo\" failed with error code \"${ERRCODE}\"."
 #~ msgstr ""

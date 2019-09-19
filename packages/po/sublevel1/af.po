@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-28 21:20+0000\n"
+"POT-Creation-Date: 2019-09-19 16:20+0000\n"
 "PO-Revision-Date: 2007-10-29 18:09+0000\n"
 "Last-Translator: Heybes <heybes@gmail.com>\n"
 "Language-Team: Afrikaans <af@li.org>\n"
@@ -626,13 +626,6 @@ msgstr "Voer inligting met die hand in"
 msgid "Download installer components"
 msgstr "Laai installasie komponente af"
 
-#. Type: text
-#. Description
-#. Main menu item
-#: ../load-cdrom.templates:1001
-msgid "Load installer components from CD"
-msgstr ""
-
 #. Type: boolean
 #. Description
 #: ../load-media.templates:1001
@@ -733,13 +726,6 @@ msgstr ""
 "Die lys dui aan die beskikbare progamme.  As jy onseker watter een om te "
 "kies, kies gerus die standaardwaarde.  As jou stelsel nie kan boot nie, kan "
 "jy die installasie weer probeer met ander opsies."
-
-#. Type: text
-#. Description
-#. Release is a filename which should not be translated
-#: ../bootstrap-base.templates:42001
-msgid "Checking Release signature"
-msgstr "Kontroleer Release-stempel"
 
 #. Type: select
 #. Description
@@ -1579,15 +1565,18 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../cdrom-detect.templates:2001
-msgid "Detecting hardware to find CD-ROM drives"
+#, fuzzy
+#| msgid "Detecting hardware to find CD-ROM drives"
+msgid "Detecting hardware to find installation media"
 msgstr "Bespeur hardeware om CD-ROM-skywe te ontdek"
 
 #. Type: text
 #. Description
 #. :sl1:
 #: ../cdrom-detect.templates:10001
-msgid "Scanning CD-ROM"
-msgstr "Deursoek CD-ROm"
+#, fuzzy
+msgid "Scanning installation media"
+msgstr "Hou aan met die installasie?"
 
 #. Type: text
 #. Description
@@ -1601,8 +1590,9 @@ msgstr "Deursoek ${DIR}..."
 #. finish-install progress bar item
 #. :sl1:
 #: ../cdrom-detect.templates:19001
-msgid "Unmounting and ejecting CD-ROM..."
-msgstr "Ontheg en gooi uit CD-ROM..."
+#, fuzzy
+msgid "Unmounting/ejecting installation media..."
+msgstr "Kopieër installasielogs..."
 
 #. Type: text
 #. Description
@@ -2309,6 +2299,16 @@ msgstr ""
 #: ../mdcfg-utils.templates:6001 ../mdcfg-utils.templates:13001
 msgid "Cancel"
 msgstr "Kanselleer"
+
+#. Type: text
+#. Description
+#. Main menu item
+#. :sl1:
+#: ../load-cdrom.templates:1001
+#, fuzzy
+#| msgid "Installer components to load:"
+msgid "Load installer components from installation media"
+msgstr "Installasie komponente om te laai:"
 
 #. Type: text
 #. Description
@@ -3125,7 +3125,7 @@ msgstr "Maak gereed om die grondstelsel te installeer..."
 msgid "Installing the base system"
 msgstr ""
 
-#. #-#-#-#-#  templates.pot (PACKAGE VERSION)  #-#-#-#-#
+#. #-#-#-#-#  templates.pot (base-installer)  #-#-#-#-#
 #. Type: text
 #. Description
 #. :sl1:
@@ -3340,6 +3340,14 @@ msgstr ""
 #: ../bootstrap-base.templates:41001
 msgid "Configuring ${SUBST0}..."
 msgstr "Stel ${SUBST0} op..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Release is a filename which should not be translated
+#: ../bootstrap-base.templates:42001
+msgid "Checking Release signature"
+msgstr "Kontroleer Release-stempel"
 
 #. Type: text
 #. Description
@@ -3583,8 +3591,21 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:1001
-msgid "Scanning the CD-ROM..."
-msgstr "Deursoek die CD-ROM..."
+#, fuzzy
+msgid "Scanning the installation media..."
+msgstr "Hou aan met die installasie?"
+
+#. Type: error
+#. Description
+#. :sl2:
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:2001 ../apt-cdrom-setup.templates:6001
+msgid ""
+"An attempt to configure apt to install additional packages from the media "
+"failed."
+msgstr ""
 
 #. Type: boolean
 #. Description
@@ -3600,14 +3621,16 @@ msgstr "Deursoek die CD-ROM..."
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001 ../apt-cdrom-setup.templates:4001
 #: ../apt-cdrom-setup.templates:5001 ../apt-cdrom-setup.templates:6001
-msgid "Scan another CD or DVD?"
-msgstr ""
+#, fuzzy
+#| msgid "Standard Installation"
+msgid "Scan extra installation media?"
+msgstr "Standarde Instalasie"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001
-msgid "Your installation CD or DVD has been scanned; its label is:"
+msgid "Scanning your installation media finds the label:"
 msgstr ""
 
 #. Type: boolean
@@ -3615,10 +3638,10 @@ msgstr ""
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001
 msgid ""
-"You now have the option to scan additional CDs or DVDs for use by the "
-"package manager (apt). Normally these should be from the same set as the "
-"installation CD/DVD. If you do not have any additional CDs or DVDs "
-"available, this step can just be skipped."
+"You now have the option of scanning additional media for use by the package "
+"manager (apt). Normally these should be from the same set as the one you "
+"booted from. If you do not have any additional media, this step can just be "
+"skipped."
 msgstr ""
 
 #. Type: boolean
@@ -3628,51 +3651,50 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001 ../apt-cdrom-setup.templates:4001
-msgid "If you wish to scan another CD or DVD, please insert it now."
+msgid "If you wish to scan more media, please insert another one now."
 msgstr ""
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:4001
-msgid "The CD or DVD with the following label has been scanned:"
-msgstr ""
+#, fuzzy
+#| msgid "The partition tables of the following devices are changed:"
+msgid "The image with the following label has been scanned:"
+msgstr "Die partisietafels van die volgende toestelle het verander:"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:5001
-msgid "The CD or DVD with the following label has already been scanned:"
-msgstr ""
+#, fuzzy
+#| msgid "The partition tables of the following devices are changed:"
+msgid "The image with the following label has already been scanned:"
+msgstr "Die partisietafels van die volgende toestelle het verander:"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:5001
-msgid "Please replace it now if you wish to scan another CD or DVD."
-msgstr ""
+#, fuzzy
+#| msgid ""
+#| "Please choose whether you want this software to be made available to you."
+msgid "Please replace it now, if you wish to scan another."
+msgstr "Besluit asseblief of jy hierdie sagteware beskikbaar wil maak."
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:6001
-msgid ""
-"An attempt to configure apt to install additional packages from the CD/DVD "
-"failed."
+#, fuzzy
+msgid "Please check that the media has been inserted correctly."
 msgstr ""
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:6001
-msgid "Please check that the CD/DVD has been inserted correctly."
-msgstr ""
+"Voer asseblief dieselfde wortel-wagwoord in weer om eker te maak dat jy dit "
+"korek ingetik het."
 
 #. Type: text
 #. Description
 #. :sl1:
-#. This template uses the same text as used in the package apt for apt-cdrom
-#. Do not translate "/cdrom/" (the mount point)
 #: ../apt-cdrom-setup.templates:7001
 msgid "Media change"
 msgstr ""
@@ -3680,12 +3702,8 @@ msgstr ""
 #. Type: text
 #. Description
 #. :sl1:
-#. This template uses the same text as used in the package apt for apt-cdrom
-#. Do not translate "/cdrom/" (the mount point)
 #: ../apt-cdrom-setup.templates:7001
-msgid ""
-"/cdrom/: Please insert the disc labeled '${LABEL}' in the drive '/cdrom/' "
-"and press enter."
+msgid "Please insert the media labeled '${LABEL}' and press enter."
 msgstr ""
 
 #. Type: text
@@ -3704,8 +3722,8 @@ msgstr ""
 #. :sl2:
 #: ../apt-cdrom-setup.templates:9001 ../apt-mirror-setup.templates:6001
 msgid ""
-"If you are installing from a netinst CD and choose not to use a mirror, you "
-"will end up with only a very minimal base system."
+"If you are installing from a netinst CD image and choose not to use a "
+"mirror, you will end up with only a very minimal base system."
 msgstr ""
 
 #. Type: text
@@ -3713,7 +3731,7 @@ msgstr ""
 #. :sl1:
 #: ../apt-cdrom-setup.templates:10001
 msgid ""
-"You are installing from a netinst CD, which by itself only allows "
+"You are installing from a netinst CD image, which by itself only allows "
 "installation of a very minimal base system. Use a mirror to install a more "
 "complete system."
 msgstr ""
@@ -3723,7 +3741,8 @@ msgstr ""
 #. :sl1:
 #: ../apt-cdrom-setup.templates:11001
 msgid ""
-"You are installing from a CD, which contains a limited selection of packages."
+"You are installing from an image which contains a limited selection of "
+"packages."
 msgstr ""
 
 #. Type: text
@@ -3733,7 +3752,7 @@ msgstr ""
 #: ../apt-cdrom-setup.templates:12001
 #, no-c-format
 msgid ""
-"You have scanned %i CDs. Even though these contain a fair selection of "
+"You have scanned %i images. Even though these contain a fair selection of "
 "packages, some may be missing (notably some packages needed to support "
 "languages other than English)."
 msgstr ""
@@ -3745,7 +3764,7 @@ msgstr ""
 #: ../apt-cdrom-setup.templates:13001
 #, no-c-format
 msgid ""
-"You have scanned %i CDs. Even though these contain a large selection of "
+"You have scanned %i images. Even though these contain a large selection of "
 "packages, some may be missing."
 msgstr ""
 
@@ -3763,7 +3782,7 @@ msgstr ""
 #. :sl1:
 #: ../apt-cdrom-setup.templates:15001
 msgid ""
-"You are installing from a DVD. Even though the DVD contains a large "
+"You are installing from a DVD image. Even though it contains a large "
 "selection of packages, some may be missing."
 msgstr ""
 
@@ -3884,7 +3903,8 @@ msgstr ""
 #: ../apt-mirror-setup.templates:5001
 msgid ""
 "A network mirror can be used to supplement the software that is included on "
-"the CD-ROM. This may also make newer versions of software available."
+"the installation media. This may also make newer versions of software "
+"available."
 msgstr ""
 
 #. Type: boolean
@@ -4490,6 +4510,31 @@ msgstr ""
 msgid "Guided - use entire disk and set up LVM"
 msgstr ""
 
+#~ msgid "Scanning CD-ROM"
+#~ msgstr "Deursoek CD-ROm"
+
+#~ msgid "Unmounting and ejecting CD-ROM..."
+#~ msgstr "Ontheg en gooi uit CD-ROM..."
+
+#~ msgid "Scanning the CD-ROM..."
+#~ msgstr "Deursoek die CD-ROM..."
+
+#, fuzzy
+#~ msgid "Load CD-ROM drivers from removable media?"
+#~ msgstr "Laai CD-ROM-aandrywer van sagteskyf?"
+
+#~ msgid "Retry mounting the CD-ROM?"
+#~ msgstr "Probeer weer om die CD-ROM aan te heg?"
+
+#~ msgid "CD-ROM detected"
+#~ msgstr "CD-ROM ontdek"
+
+#~ msgid "Incorrect CD-ROM detected"
+#~ msgstr "Inkorrekte CD-ROM agtergekom"
+
+#~ msgid "Detect and mount CD-ROM"
+#~ msgstr "Ontdek en heg aan CD-ROM..."
+
 #~ msgid "No DHCP client was found. This package requires pump or dhcp-client."
 #~ msgstr ""
 #~ "Geen DHCP kliënt gevind nie. Hierdie paket het pump of dhcp-client nodig."
@@ -4597,12 +4642,6 @@ msgstr ""
 #~ msgstr ""
 #~ "Voer asseblief dieselfde wortel-wagwoord in weer om eker te maak dat jy "
 #~ "dit korek ingetik het."
-
-#, fuzzy
-#~| msgid ""
-#~| "Please choose whether you want this software to be made available to you."
-#~ msgid "Please select the ZFS pool you wish to delete."
-#~ msgstr "Besluit asseblief of jy hierdie sagteware beskikbaar wil maak."
 
 #, fuzzy
 #~| msgid "No root partition found"
@@ -5300,10 +5339,6 @@ msgstr ""
 #~ "(skoonmaak toerusting kan verkry word van elekroniese toerusting "
 #~ "verskaffers)."
 
-#, fuzzy
-#~ msgid "Copying installation logs..."
-#~ msgstr "Kopieër installasielogs..."
-
 #~ msgid "Configuring target system..."
 #~ msgstr "Konfigureer teikien stesel..."
 
@@ -5361,9 +5396,6 @@ msgstr ""
 
 #~ msgid "Two installation types are available for Mythbuntu:"
 #~ msgstr "Twee instalasie tipes is beskikbaar vir Mythbuntu:"
-
-#~ msgid "Standard Installation"
-#~ msgstr "Standarde Instalasie"
 
 #~ msgid "Advanced Installation"
 #~ msgstr "Gevorderde Instalasie"

@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-28 21:20+0000\n"
+"POT-Creation-Date: 2019-09-19 16:20+0000\n"
 "PO-Revision-Date: 2013-09-27 09:51+0600\n"
 "Last-Translator: Abduqadir Abliz <sahran.ug@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -620,13 +620,6 @@ msgstr "ئۇچۇرنى قولدا كىرگۈزۈڭ"
 msgid "Download installer components"
 msgstr "ئورناتقۇنىڭ بۆلەكلىرىنى چۈشۈر"
 
-#. Type: text
-#. Description
-#. Main menu item
-#: ../load-cdrom.templates:1001
-msgid "Load installer components from CD"
-msgstr "ئورناتقۇ بۆلىكىنى CD-ROM دىن يۈكلە"
-
 #. Type: boolean
 #. Description
 #: ../load-media.templates:1001
@@ -739,13 +732,6 @@ msgstr ""
 "جەزملىيەلمىسىڭىز، كۆڭۈلدىكى تاللانمىنى ئىشلىتىڭ. ئەگەر سىستېمىڭىزنىڭ "
 "قوزغىلىشى مەغلۇپ بولسا، ئورنىتىشنى قايتا سىنىسىڭىز ياكى باشقا تاللانمىنى "
 "تاللىسىڭىز بولىدۇ."
-
-#. Type: text
-#. Description
-#. Release is a filename which should not be translated
-#: ../bootstrap-base.templates:42001
-msgid "Checking Release signature"
-msgstr "تارقىتىش ئىمزاسىنى تەكشۈرۈۋاتىدۇ"
 
 #. Type: select
 #. Description
@@ -1602,15 +1588,19 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../cdrom-detect.templates:2001
-msgid "Detecting hardware to find CD-ROM drives"
-msgstr "قاتتىق دېتالدىن CD-ROM قوزغاتقۇچ بايقالدى"
+#, fuzzy
+#| msgid "Detecting hardware to find hard drives"
+msgid "Detecting hardware to find installation media"
+msgstr "قاتتىق دېتالدىن قاتتىق دىسكا قوزغاتقۇچ بايقالدى"
 
 #. Type: text
 #. Description
 #. :sl1:
 #: ../cdrom-detect.templates:10001
-msgid "Scanning CD-ROM"
-msgstr "CD-ROM نى تەكشۈرۈۋاتىدۇ"
+#, fuzzy
+#| msgid "SILO installation failed"
+msgid "Scanning installation media"
+msgstr "SILO ئورنىتىش مەغلۇپ بولدى"
 
 #. Type: text
 #. Description
@@ -1624,8 +1614,8 @@ msgstr "${DIR} نى تەكشۈرۈۋاتىدۇ…"
 #. finish-install progress bar item
 #. :sl1:
 #: ../cdrom-detect.templates:19001
-msgid "Unmounting and ejecting CD-ROM..."
-msgstr "CD-ROM نى ئېگەرسىزلەپ چىقىرىۋاتىدۇ…"
+msgid "Unmounting/ejecting installation media..."
+msgstr ""
 
 #. Type: text
 #. Description
@@ -2354,6 +2344,16 @@ msgstr ""
 #: ../mdcfg-utils.templates:6001 ../mdcfg-utils.templates:13001
 msgid "Cancel"
 msgstr "ۋاز كەچ"
+
+#. Type: text
+#. Description
+#. Main menu item
+#. :sl1:
+#: ../load-cdrom.templates:1001
+#, fuzzy
+#| msgid "Load installer components from an installer ISO"
+msgid "Load installer components from installation media"
+msgstr "ئورناتقۇ ISO تەسۋىرىدىن ئورناتقۇ بۆلەكلىرىنى يۈكلە"
 
 #. Type: text
 #. Description
@@ -3210,7 +3210,7 @@ msgstr "ئاساسىي سىستېما ئورنىتىشقا تەييارلىنى�
 msgid "Installing the base system"
 msgstr "ئاساسىي سىستېمىنى ئورنىتىۋاتىدۇ"
 
-#. #-#-#-#-#  templates.pot (PACKAGE VERSION)  #-#-#-#-#
+#. #-#-#-#-#  templates.pot (base-installer)  #-#-#-#-#
 #. Type: text
 #. Description
 #. :sl1:
@@ -3424,6 +3424,14 @@ msgstr "يېشىۋاتقىنى ${SUBST0} ..."
 #: ../bootstrap-base.templates:41001
 msgid "Configuring ${SUBST0}..."
 msgstr "سەپلەۋاتقىنى ${SUBST0} ..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Release is a filename which should not be translated
+#: ../bootstrap-base.templates:42001
+msgid "Checking Release signature"
+msgstr "تارقىتىش ئىمزاسىنى تەكشۈرۈۋاتىدۇ"
 
 #. Type: text
 #. Description
@@ -3683,8 +3691,27 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:1001
-msgid "Scanning the CD-ROM..."
-msgstr "CD-ROM نى تەكشۈرۈۋاتىدۇ…"
+#, fuzzy
+#| msgid "Finishing the installation"
+msgid "Scanning the installation media..."
+msgstr "ئورنىتىشنى تاماملاۋاتىدۇ"
+
+#. Type: error
+#. Description
+#. :sl2:
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:2001 ../apt-cdrom-setup.templates:6001
+#, fuzzy
+#| msgid ""
+#| "An attempt to configure apt to install additional packages from the CD "
+#| "failed."
+msgid ""
+"An attempt to configure apt to install additional packages from the media "
+"failed."
+msgstr ""
+"apt نى سەپلەپ، CD-ROM دىن قوشۇمچە يۇمشاق دېتال بوغچىسى ئورنىتىش مەغلۇپ بولدى."
 
 #. Type: boolean
 #. Description
@@ -3700,25 +3727,33 @@ msgstr "CD-ROM نى تەكشۈرۈۋاتىدۇ…"
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001 ../apt-cdrom-setup.templates:4001
 #: ../apt-cdrom-setup.templates:5001 ../apt-cdrom-setup.templates:6001
-msgid "Scan another CD or DVD?"
-msgstr "باشقا CD ياكى DVD نى تەكشۈرەمسىز؟"
+#, fuzzy
+#| msgid "SILO installation failed"
+msgid "Scan extra installation media?"
+msgstr "SILO ئورنىتىش مەغلۇپ بولدى"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001
-msgid "Your installation CD or DVD has been scanned; its label is:"
-msgstr "ئورنىتىش CD ياكى DVD دىسكىڭىزنى تەكشۈردى؛ ئۇنىڭ ئەنى:"
+msgid "Scanning your installation media finds the label:"
+msgstr ""
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001
+#, fuzzy
+#| msgid ""
+#| "You now have the option to scan additional CDs or DVDs for use by the "
+#| "package manager (apt). Normally these should be from the same set as the "
+#| "installation CD/DVD. If you do not have any additional CDs or DVDs "
+#| "available, this step can just be skipped."
 msgid ""
-"You now have the option to scan additional CDs or DVDs for use by the "
-"package manager (apt). Normally these should be from the same set as the "
-"installation CD/DVD. If you do not have any additional CDs or DVDs "
-"available, this step can just be skipped."
+"You now have the option of scanning additional media for use by the package "
+"manager (apt). Normally these should be from the same set as the one you "
+"booted from. If you do not have any additional media, this step can just be "
+"skipped."
 msgstr ""
 "سىز ھازىر نورمىدىن سىرت بولغان بوغچا باشقۇرغۇچ (apt) ئىشلىتەلەيدىغان CD ياكى "
 "DVD نى تەكشۈرۈشنى تاللىيالايسىز. ئادەتتە بۇلار سىزنىڭ ئورنىتىش CD/DVD "
@@ -3732,51 +3767,50 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001 ../apt-cdrom-setup.templates:4001
-msgid "If you wish to scan another CD or DVD, please insert it now."
+#, fuzzy
+#| msgid "If you wish to scan another CD or DVD, please insert it now."
+msgid "If you wish to scan more media, please insert another one now."
 msgstr "سىز باشقا CD ياكى DVD تەكشۈرمەكچى بولسىڭىز ئۇنى قىستۇرۇڭ."
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:4001
-msgid "The CD or DVD with the following label has been scanned:"
+#, fuzzy
+#| msgid "The CD or DVD with the following label has been scanned:"
+msgid "The image with the following label has been scanned:"
 msgstr "ئەنى تۆۋەندىكىدەك بولغان CD ياكى DVD تەكشۈرۈش تاماملاندى:"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:5001
-msgid "The CD or DVD with the following label has already been scanned:"
+#, fuzzy
+#| msgid "The CD or DVD with the following label has already been scanned:"
+msgid "The image with the following label has already been scanned:"
 msgstr "ئەنى تۆۋەندىكىدەك بولغان CD ياكى DVD تەكشۈرۈلگەن:"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:5001
-msgid "Please replace it now if you wish to scan another CD or DVD."
+#, fuzzy
+#| msgid "Please replace it now if you wish to scan another CD or DVD."
+msgid "Please replace it now, if you wish to scan another."
 msgstr "ئەگەر باشقا CD ياكى DVD نى تەكشۈرمەكچى بولسىڭىز ئۇنى ئالماشتۇرۇڭ."
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:6001
-msgid ""
-"An attempt to configure apt to install additional packages from the CD/DVD "
-"failed."
-msgstr "apt ئىشلىتىپ CD/DVD دىن قوشۇمچە يۇمشاق دېتال بوغچىسىنى ئورنىتالمىدى."
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:6001
-msgid "Please check that the CD/DVD has been inserted correctly."
+#, fuzzy
+#| msgid "Please check that the CD/DVD has been inserted correctly."
+msgid "Please check that the media has been inserted correctly."
 msgstr "CD/DVD نى توغرا قىستۇرغانلىقىڭىزنى تەكشۈرۈڭ."
 
 #. Type: text
 #. Description
 #. :sl1:
-#. This template uses the same text as used in the package apt for apt-cdrom
-#. Do not translate "/cdrom/" (the mount point)
 #: ../apt-cdrom-setup.templates:7001
 msgid "Media change"
 msgstr "ۋاسىتە ئالماشتۇر"
@@ -3784,12 +3818,12 @@ msgstr "ۋاسىتە ئالماشتۇر"
 #. Type: text
 #. Description
 #. :sl1:
-#. This template uses the same text as used in the package apt for apt-cdrom
-#. Do not translate "/cdrom/" (the mount point)
 #: ../apt-cdrom-setup.templates:7001
-msgid ""
-"/cdrom/: Please insert the disc labeled '${LABEL}' in the drive '/cdrom/' "
-"and press enter."
+#, fuzzy
+#| msgid ""
+#| "/cdrom/: Please insert the disc labeled '${LABEL}' in the drive '/cdrom/' "
+#| "and press enter."
+msgid "Please insert the media labeled '${LABEL}' and press enter."
 msgstr ""
 "/cdrom/: دىسكا ئېنى '${LABEL}' بولغان دىسكىنى '/cdrom/' قوزغاتقۇچقا سېلىپ، "
 "enter نى بېسىڭ."
@@ -3809,9 +3843,13 @@ msgstr "sources.list دا netinst CD چەكلەنگەن…"
 #. Description
 #. :sl2:
 #: ../apt-cdrom-setup.templates:9001 ../apt-mirror-setup.templates:6001
+#, fuzzy
+#| msgid ""
+#| "If you are installing from a netinst CD and choose not to use a mirror, "
+#| "you will end up with only a very minimal base system."
 msgid ""
-"If you are installing from a netinst CD and choose not to use a mirror, you "
-"will end up with only a very minimal base system."
+"If you are installing from a netinst CD image and choose not to use a "
+"mirror, you will end up with only a very minimal base system."
 msgstr ""
 "ئەگەر سىز توردىكى ئورنىتىش دىسكىسىدىن ئورنىتىۋاتقان بولۇپ، تەسۋىر "
 "ئىشلەتمەسلىكنى تاللىغان بولسىڭىز، ناھايىتى كىچىك بولغان ئاساسىي سىستېمىنىلا "
@@ -3821,8 +3859,13 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:10001
+#, fuzzy
+#| msgid ""
+#| "You are installing from a netinst CD, which by itself only allows "
+#| "installation of a very minimal base system. Use a mirror to install a "
+#| "more complete system."
 msgid ""
-"You are installing from a netinst CD, which by itself only allows "
+"You are installing from a netinst CD image, which by itself only allows "
 "installation of a very minimal base system. Use a mirror to install a more "
 "complete system."
 msgstr ""
@@ -3834,8 +3877,13 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:11001
+#, fuzzy
+#| msgid ""
+#| "You are installing from a CD, which contains a limited selection of "
+#| "packages."
 msgid ""
-"You are installing from a CD, which contains a limited selection of packages."
+"You are installing from an image which contains a limited selection of "
+"packages."
 msgstr ""
 "سىز چەكلىمىلىك يۇمشاق دېتال بوغچىسى بار CD-ROM دىن يۇمشاق دېتال "
 "ئورنىتىۋاتىسىز."
@@ -3845,9 +3893,13 @@ msgstr ""
 #. :sl1:
 #. The value of %i can be 2 or 3
 #: ../apt-cdrom-setup.templates:12001
-#, no-c-format
+#, fuzzy, no-c-format
+#| msgid ""
+#| "You have scanned %i CDs. Even though these contain a fair selection of "
+#| "packages, some may be missing (notably some packages needed to support "
+#| "languages other than English)."
 msgid ""
-"You have scanned %i CDs. Even though these contain a fair selection of "
+"You have scanned %i images. Even though these contain a fair selection of "
 "packages, some may be missing (notably some packages needed to support "
 "languages other than English)."
 msgstr ""
@@ -3860,9 +3912,12 @@ msgstr ""
 #. :sl1:
 #. The value of %i can be from 4 to 8
 #: ../apt-cdrom-setup.templates:13001
-#, no-c-format
+#, fuzzy, no-c-format
+#| msgid ""
+#| "You have scanned %i CDs. Even though these contain a large selection of "
+#| "packages, some may be missing."
 msgid ""
-"You have scanned %i CDs. Even though these contain a large selection of "
+"You have scanned %i images. Even though these contain a large selection of "
 "packages, some may be missing."
 msgstr ""
 "سىز %i CD-ROM تەكشۈردىڭىز. بۇ CD-ROM دا نۇرغۇن يۇمشاق دېتال بوغچىسى بولسىمۇ، "
@@ -3883,8 +3938,12 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:15001
+#, fuzzy
+#| msgid ""
+#| "You are installing from a DVD. Even though the DVD contains a large "
+#| "selection of packages, some may be missing."
 msgid ""
-"You are installing from a DVD. Even though the DVD contains a large "
+"You are installing from a DVD image. Even though it contains a large "
 "selection of packages, some may be missing."
 msgstr ""
 "سىز DVD دىن ئورنىتىۋاتىسىز. گەرچە DVD كۆپ مىقداردىكى يۇمشاق دېتال بوغچىسىنى "
@@ -4014,9 +4073,14 @@ msgstr "تور تەسۋىر ئىشلىتەمسىز؟"
 #. Description
 #. :sl1:
 #: ../apt-mirror-setup.templates:5001
+#, fuzzy
+#| msgid ""
+#| "A network mirror can be used to supplement the software that is included "
+#| "on the CD-ROM. This may also make newer versions of software available."
 msgid ""
 "A network mirror can be used to supplement the software that is included on "
-"the CD-ROM. This may also make newer versions of software available."
+"the installation media. This may also make newer versions of software "
+"available."
 msgstr ""
 "تور تەسۋىرى CD-ROM دىكى يۇمشاق دېتالنى تولۇقلاشقا ئىشلىتىلىدۇ، تېخىمۇ يېڭى "
 "نەشرىدىكى يۇمشاق دېتال تەمىنلەشكىمۇ ئىشلىتىلىدۇ."
@@ -4660,6 +4724,66 @@ msgstr "«لوگىكىلىق دىسكا باشقۇرغۇچ» نى سەپلەش"
 #: ../partman-auto-lvm.templates:1001
 msgid "Guided - use entire disk and set up LVM"
 msgstr "يېتەكچى - پۈتۈن دىسكىنى ئىشلىتىپ LVM سەپلەيدۇ"
+
+#~ msgid "Load installer components from CD"
+#~ msgstr "ئورناتقۇ بۆلىكىنى CD-ROM دىن يۈكلە"
+
+#~ msgid "Detecting hardware to find CD-ROM drives"
+#~ msgstr "قاتتىق دېتالدىن CD-ROM قوزغاتقۇچ بايقالدى"
+
+#~ msgid "Scanning CD-ROM"
+#~ msgstr "CD-ROM نى تەكشۈرۈۋاتىدۇ"
+
+#~ msgid "Unmounting and ejecting CD-ROM..."
+#~ msgstr "CD-ROM نى ئېگەرسىزلەپ چىقىرىۋاتىدۇ…"
+
+#~ msgid "Scanning the CD-ROM..."
+#~ msgstr "CD-ROM نى تەكشۈرۈۋاتىدۇ…"
+
+#~ msgid "Scan another CD or DVD?"
+#~ msgstr "باشقا CD ياكى DVD نى تەكشۈرەمسىز؟"
+
+#~ msgid "Your installation CD or DVD has been scanned; its label is:"
+#~ msgstr "ئورنىتىش CD ياكى DVD دىسكىڭىزنى تەكشۈردى؛ ئۇنىڭ ئەنى:"
+
+#~ msgid ""
+#~ "An attempt to configure apt to install additional packages from the CD/"
+#~ "DVD failed."
+#~ msgstr ""
+#~ "apt ئىشلىتىپ CD/DVD دىن قوشۇمچە يۇمشاق دېتال بوغچىسىنى ئورنىتالمىدى."
+
+#~ msgid "Load CD-ROM drivers from removable media?"
+#~ msgstr "يۆتكىمە ۋاسىتىدىن CD-ROM نىڭ قوزغىتىش پروگراممىسىنى يۈكلەمسىز؟"
+
+#~ msgid "Retry mounting the CD-ROM?"
+#~ msgstr "CD-ROM ئېگەرلەشنى قايتا سىنامسىز؟"
+
+#~ msgid "CD-ROM detected"
+#~ msgstr "CD-ROM بايقالدى"
+
+#~ msgid "Incorrect CD-ROM detected"
+#~ msgstr "ناتوغرا CD-ROM قوزغاتقۇچ بايقالدى"
+
+#~ msgid "Detect and mount CD-ROM"
+#~ msgstr "CD-ROM نى تەكشۈرۈپ ئېگەرلە"
+
+#~ msgid "Check the CD-ROM(s) integrity"
+#~ msgstr "CD-ROM نىڭ مۇكەممەللىكىنى تەكشۈر"
+
+#~ msgid "Check CD-ROM integrity?"
+#~ msgstr "CD-ROM نىڭ مۇكەممەللىكىنى تەكشۈرەمسىز؟"
+
+#~ msgid "Insert a Debian CD-ROM"
+#~ msgstr "Debian نۇر دىسكىسىنى قىستۇرۇڭ"
+
+#~ msgid "Failed to mount CD-ROM"
+#~ msgstr "CD-ROM نى ئېگەرلەش مەغلۇپ بولدى"
+
+#~ msgid "No valid Debian CD-ROM"
+#~ msgstr "ئىناۋەتسىز Debian نۇر دىسكىسى"
+
+#~ msgid "Checking CD-ROM integrity"
+#~ msgstr "CD-ROM نىڭ مۇكەممەللىكىنى تەكشۈرۈۋاتىدۇ"
 
 #~ msgid "No DHCP client was found. This package requires pump or dhcp-client."
 #~ msgstr "DHCP خېرىدارى تېپىلمىدى، pump ياكى dhcp-client ئورنىتىش لازىم."
@@ -5576,9 +5700,6 @@ msgstr "يېتەكچى - پۈتۈن دىسكىنى ئىشلىتىپ LVM سەپل
 #~ "Since the partitions have already been mounted, you cannot do any changes."
 #~ msgstr "دىسكا رايونلىرى ئېگەرلىنىپ بولدى. ئەمدى ئۆزگەرتەلمەيسىز."
 
-#~ msgid "Failed to unmount partitions"
-#~ msgstr "رايوننى ئېگەرسىزلەش مەغلۇپ بولدى"
-
 #~ msgid "An unexpected error occurred while unmounting the partitions."
 #~ msgstr "دىسكا رايونىنى ئېگەرسىزلەۋاتقاندا كۈتۈلمىگەن خاتالىق يۈز بەردى."
 
@@ -5746,9 +5867,6 @@ msgstr "يېتەكچى - پۈتۈن دىسكىنى ئىشلىتىپ LVM سەپل
 #~ "SILO يۇمشاق دېتال بوغچىسىنى /target/ قا ئورنىتالمىدى. بۇ SILO نى قوزغىتىش "
 #~ "يېتەكلىگۈچ قىلىپ ئورنىتىشنىڭ زۆرۈر قەدىمى. بۇ ئورنىتىش مەسىلىسى SILO "
 #~ "بىلەن مۇناسىۋەتسىز بولۇشى مۇمكىن، شۇڭلاشقا داۋاملىق ئورنىتىشقا بولۇۋېرىدۇ."
-
-#~ msgid "SILO installation failed"
-#~ msgstr "SILO ئورنىتىش مەغلۇپ بولدى"
 
 #~ msgid "Running \"/sbin/silo\" failed with error code \"${ERRCODE}\"."
 #~ msgstr ""

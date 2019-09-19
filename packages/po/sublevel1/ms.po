@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-28 21:20+0000\n"
+"POT-Creation-Date: 2019-09-19 16:20+0000\n"
 "PO-Revision-Date: 2019-08-28 18:09+0000\n"
 "Last-Translator: leela <53352@protonmail.com>\n"
 "Language-Team: Translation Project Team, Kuching Open Source Community\n"
@@ -652,13 +652,6 @@ msgstr "Masukkan maklumat secara manual"
 msgid "Download installer components"
 msgstr "Muat turun komponen pemasangan"
 
-#. Type: text
-#. Description
-#. Main menu item
-#: ../load-cdrom.templates:1001
-msgid "Load installer components from CD"
-msgstr "Memuat komponen pemasangan dari CD"
-
 #. Type: boolean
 #. Description
 #: ../load-media.templates:1001
@@ -772,13 +765,6 @@ msgid ""
 msgstr ""
 "Daftar menampilkan alat-alat yang tersedia. Jika anda tak yakin, pilih alat "
 "bawaan. Jika sistem anda gagal reboot, coba lagi dengan pilihan yang lain."
-
-#. Type: text
-#. Description
-#. Release is a filename which should not be translated
-#: ../bootstrap-base.templates:42001
-msgid "Checking Release signature"
-msgstr "Menyemak tandatangan lepasan"
 
 #. Type: select
 #. Description
@@ -1642,15 +1628,19 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../cdrom-detect.templates:2001
-msgid "Detecting hardware to find CD-ROM drives"
+#, fuzzy
+#| msgid "Detecting hardware to find CD-ROM drives"
+msgid "Detecting hardware to find installation media"
 msgstr "Mengesan peralatan untuk pemacu CD-ROM"
 
 #. Type: text
 #. Description
 #. :sl1:
 #: ../cdrom-detect.templates:10001
-msgid "Scanning CD-ROM"
-msgstr "Mengesan CD-ROM"
+#, fuzzy
+#| msgid "Scanning removable media"
+msgid "Scanning installation media"
+msgstr "Mengimbas media mudah-alih"
 
 #. Type: text
 #. Description
@@ -1664,8 +1654,8 @@ msgstr "Mengimbas ${DIR}..."
 #. finish-install progress bar item
 #. :sl1:
 #: ../cdrom-detect.templates:19001
-msgid "Unmounting and ejecting CD-ROM..."
-msgstr "Menyahpaut dan melentingkan CD-ROM..."
+msgid "Unmounting/ejecting installation media..."
+msgstr ""
 
 #. Type: text
 #. Description
@@ -2414,6 +2404,16 @@ msgstr ""
 #: ../mdcfg-utils.templates:6001 ../mdcfg-utils.templates:13001
 msgid "Cancel"
 msgstr "Batal"
+
+#. Type: text
+#. Description
+#. Main menu item
+#. :sl1:
+#: ../load-cdrom.templates:1001
+#, fuzzy
+#| msgid "Load installer components from an installer ISO"
+msgid "Load installer components from installation media"
+msgstr "Memuat komponen pemasangan dari ISO pemasang"
 
 #. Type: text
 #. Description
@@ -3283,7 +3283,7 @@ msgstr "Menyediakan pemasangan sistem asas..."
 msgid "Installing the base system"
 msgstr "Memasang sistem dasar"
 
-#. #-#-#-#-#  templates.pot (PACKAGE VERSION)  #-#-#-#-#
+#. #-#-#-#-#  templates.pot (base-installer)  #-#-#-#-#
 #. Type: text
 #. Description
 #. :sl1:
@@ -3509,6 +3509,14 @@ msgstr "Menyahpadatkan ${SUBST0}..."
 #: ../bootstrap-base.templates:41001
 msgid "Configuring ${SUBST0}..."
 msgstr "Menatarajah ${SUBST0}..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Release is a filename which should not be translated
+#: ../bootstrap-base.templates:42001
+msgid "Checking Release signature"
+msgstr "Menyemak tandatangan lepasan"
 
 #. Type: text
 #. Description
@@ -3760,8 +3768,28 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:1001
-msgid "Scanning the CD-ROM..."
-msgstr "Mengimbas CD-ROM..."
+#, fuzzy
+#| msgid "Finishing the installation"
+msgid "Scanning the installation media..."
+msgstr "Sedang menyelesaikan pemasangan"
+
+#. Type: error
+#. Description
+#. :sl2:
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:2001 ../apt-cdrom-setup.templates:6001
+#, fuzzy
+#| msgid ""
+#| "An attempt to configure apt to install additional packages from the CD "
+#| "failed."
+msgid ""
+"An attempt to configure apt to install additional packages from the media "
+"failed."
+msgstr ""
+"Percubaan untuk menatarajah apt bagi memasang pakej-pakej tambahan dari CD "
+"tidak berjaya."
 
 #. Type: boolean
 #. Description
@@ -3777,25 +3805,33 @@ msgstr "Mengimbas CD-ROM..."
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001 ../apt-cdrom-setup.templates:4001
 #: ../apt-cdrom-setup.templates:5001 ../apt-cdrom-setup.templates:6001
-msgid "Scan another CD or DVD?"
-msgstr "Imbas CD atau DVD lain?"
+#, fuzzy
+#| msgid "Finish the installation"
+msgid "Scan extra installation media?"
+msgstr "Selesaikan pemasangan"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001
-msgid "Your installation CD or DVD has been scanned; its label is:"
-msgstr "CD atau DVD pemasangan anda telah diimbas; labelnya adalah:"
+msgid "Scanning your installation media finds the label:"
+msgstr ""
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001
+#, fuzzy
+#| msgid ""
+#| "You now have the option to scan additional CDs or DVDs for use by the "
+#| "package manager (apt). Normally these should be from the same set as the "
+#| "installation CD/DVD. If you do not have any additional CDs or DVDs "
+#| "available, this step can just be skipped."
 msgid ""
-"You now have the option to scan additional CDs or DVDs for use by the "
-"package manager (apt). Normally these should be from the same set as the "
-"installation CD/DVD. If you do not have any additional CDs or DVDs "
-"available, this step can just be skipped."
+"You now have the option of scanning additional media for use by the package "
+"manager (apt). Normally these should be from the same set as the one you "
+"booted from. If you do not have any additional media, this step can just be "
+"skipped."
 msgstr ""
 "Anda kini mempunyai pilihan untuk mengimbas CD atau DVD lain untuk kegunaan "
 "pengurus pakej (apt). Kebiasaannya dari set yag sama dengan CD/DVD "
@@ -3808,7 +3844,9 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001 ../apt-cdrom-setup.templates:4001
-msgid "If you wish to scan another CD or DVD, please insert it now."
+#, fuzzy
+#| msgid "If you wish to scan another CD or DVD, please insert it now."
+msgid "If you wish to scan more media, please insert another one now."
 msgstr ""
 "Sekiranya anda ingin mengimbas CD atau DVD lain, sila masukkan sekarang."
 
@@ -3816,21 +3854,27 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:4001
-msgid "The CD or DVD with the following label has been scanned:"
+#, fuzzy
+#| msgid "The CD or DVD with the following label has been scanned:"
+msgid "The image with the following label has been scanned:"
 msgstr "CD atau DVD dengan label berikut telah diimbas:"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:5001
-msgid "The CD or DVD with the following label has already been scanned:"
+#, fuzzy
+#| msgid "The CD or DVD with the following label has already been scanned:"
+msgid "The image with the following label has already been scanned:"
 msgstr "CD atau DVD dengan label berikut telah pun diimbas:"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:5001
-msgid "Please replace it now if you wish to scan another CD or DVD."
+#, fuzzy
+#| msgid "Please replace it now if you wish to scan another CD or DVD."
+msgid "Please replace it now, if you wish to scan another."
 msgstr ""
 "Sila gantikan sekarang sekiranya anda ingin mengimbas CD atau DVD lain."
 
@@ -3839,18 +3883,7 @@ msgstr ""
 #. :sl1:
 #: ../apt-cdrom-setup.templates:6001
 #, fuzzy
-msgid ""
-"An attempt to configure apt to install additional packages from the CD/DVD "
-"failed."
-msgstr ""
-"Percobaan mengkonfigurasi apt untuk menambah paket-paket dari CD gagal."
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:6001
-#, fuzzy
-msgid "Please check that the CD/DVD has been inserted correctly."
+msgid "Please check that the media has been inserted correctly."
 msgstr ""
 "Silakan masukkan kata sandi root yang sama lagi untuk memastikan bahwa anda "
 "mengetikkannya dengan benar."
@@ -3858,8 +3891,6 @@ msgstr ""
 #. Type: text
 #. Description
 #. :sl1:
-#. This template uses the same text as used in the package apt for apt-cdrom
-#. Do not translate "/cdrom/" (the mount point)
 #: ../apt-cdrom-setup.templates:7001
 msgid "Media change"
 msgstr "Penukaran media"
@@ -3867,12 +3898,12 @@ msgstr "Penukaran media"
 #. Type: text
 #. Description
 #. :sl1:
-#. This template uses the same text as used in the package apt for apt-cdrom
-#. Do not translate "/cdrom/" (the mount point)
 #: ../apt-cdrom-setup.templates:7001
-msgid ""
-"/cdrom/: Please insert the disc labeled '${LABEL}' in the drive '/cdrom/' "
-"and press enter."
+#, fuzzy
+#| msgid ""
+#| "/cdrom/: Please insert the disc labeled '${LABEL}' in the drive '/cdrom/' "
+#| "and press enter."
+msgid "Please insert the media labeled '${LABEL}' and press enter."
 msgstr ""
 "/cdrom/: Sila masukkan CD/DVD yang berlabel '${LABEL}' kedalan pemacu '/"
 "cdrom/' dan tekan enter."
@@ -3895,8 +3926,8 @@ msgstr "Nyahgunakan CD netinst dalam sources.list..."
 #: ../apt-cdrom-setup.templates:9001 ../apt-mirror-setup.templates:6001
 #, fuzzy
 msgid ""
-"If you are installing from a netinst CD and choose not to use a mirror, you "
-"will end up with only a very minimal base system."
+"If you are installing from a netinst CD image and choose not to use a "
+"mirror, you will end up with only a very minimal base system."
 msgstr ""
 "Jika Anda sedang memasang dari CD netinst dan memilih tidak menggunakan "
 "suatu jaringan cermin, Anda hanya akan mendapatkan sistem yang sangat "
@@ -3906,8 +3937,13 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:10001
+#, fuzzy
+#| msgid ""
+#| "You are installing from a netinst CD, which by itself only allows "
+#| "installation of a very minimal base system. Use a mirror to install a "
+#| "more complete system."
 msgid ""
-"You are installing from a netinst CD, which by itself only allows "
+"You are installing from a netinst CD image, which by itself only allows "
 "installation of a very minimal base system. Use a mirror to install a more "
 "complete system."
 msgstr ""
@@ -3918,8 +3954,13 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:11001
+#, fuzzy
+#| msgid ""
+#| "You are installing from a CD, which contains a limited selection of "
+#| "packages."
 msgid ""
-"You are installing from a CD, which contains a limited selection of packages."
+"You are installing from an image which contains a limited selection of "
+"packages."
 msgstr ""
 "Anda memasang dari CD, yang hanya mengandungi pilihan pakej yang terhad."
 
@@ -3928,9 +3969,13 @@ msgstr ""
 #. :sl1:
 #. The value of %i can be 2 or 3
 #: ../apt-cdrom-setup.templates:12001
-#, no-c-format
+#, fuzzy, no-c-format
+#| msgid ""
+#| "You have scanned %i CDs. Even though these contain a fair selection of "
+#| "packages, some may be missing (notably some packages needed to support "
+#| "languages other than English)."
 msgid ""
-"You have scanned %i CDs. Even though these contain a fair selection of "
+"You have scanned %i images. Even though these contain a fair selection of "
 "packages, some may be missing (notably some packages needed to support "
 "languages other than English)."
 msgstr ""
@@ -3942,9 +3987,12 @@ msgstr ""
 #. :sl1:
 #. The value of %i can be from 4 to 8
 #: ../apt-cdrom-setup.templates:13001
-#, no-c-format
+#, fuzzy, no-c-format
+#| msgid ""
+#| "You have scanned %i CDs. Even though these contain a large selection of "
+#| "packages, some may be missing."
 msgid ""
-"You have scanned %i CDs. Even though these contain a large selection of "
+"You have scanned %i images. Even though these contain a large selection of "
 "packages, some may be missing."
 msgstr ""
 "Anda telah mengimbas %i CD. Walaupun terdapat pilihan pakej yang banyak "
@@ -3965,8 +4013,12 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:15001
+#, fuzzy
+#| msgid ""
+#| "You are installing from a DVD. Even though the DVD contains a large "
+#| "selection of packages, some may be missing."
 msgid ""
-"You are installing from a DVD. Even though the DVD contains a large "
+"You are installing from a DVD image. Even though it contains a large "
 "selection of packages, some may be missing."
 msgstr ""
 "Anda memasang dari DVD. Walaupun DVD mengandungi pilihan pakej yang besar, "
@@ -4099,7 +4151,8 @@ msgstr "Gunakan jaringan cermin (mirror)?"
 #, fuzzy
 msgid ""
 "A network mirror can be used to supplement the software that is included on "
-"the CD-ROM. This may also make newer versions of software available."
+"the installation media. This may also make newer versions of software "
+"available."
 msgstr ""
 "Suatu jaringan cermin (mirror) dapat digunakan untuk melengkapi perangkat "
 "lunak yang ada pada CD-ROM. Juga dapat memperbaharui perangkat lunak yang "
@@ -4753,6 +4806,47 @@ msgstr "Mengonfigurasi Pengurus Volum Logikal (LVM)"
 msgid "Guided - use entire disk and set up LVM"
 msgstr "Terpandu - gunakan seluruh cakera dan pasang LVM"
 
+#~ msgid "Load installer components from CD"
+#~ msgstr "Memuat komponen pemasangan dari CD"
+
+#~ msgid "Scanning CD-ROM"
+#~ msgstr "Mengesan CD-ROM"
+
+#~ msgid "Unmounting and ejecting CD-ROM..."
+#~ msgstr "Menyahpaut dan melentingkan CD-ROM..."
+
+#~ msgid "Scanning the CD-ROM..."
+#~ msgstr "Mengimbas CD-ROM..."
+
+#~ msgid "Scan another CD or DVD?"
+#~ msgstr "Imbas CD atau DVD lain?"
+
+#~ msgid "Your installation CD or DVD has been scanned; its label is:"
+#~ msgstr "CD atau DVD pemasangan anda telah diimbas; labelnya adalah:"
+
+#, fuzzy
+#~ msgid ""
+#~ "An attempt to configure apt to install additional packages from the CD/"
+#~ "DVD failed."
+#~ msgstr ""
+#~ "Percobaan mengkonfigurasi apt untuk menambah paket-paket dari CD gagal."
+
+#, fuzzy
+#~ msgid "Load CD-ROM drivers from removable media?"
+#~ msgstr "Muat pemacu CD-ROM daripada pemacu cakera liut?"
+
+#~ msgid "Retry mounting the CD-ROM?"
+#~ msgstr "Cuba pautkan CD-ROM sekali lagi?"
+
+#~ msgid "CD-ROM detected"
+#~ msgstr "CD-ROM dikesan"
+
+#~ msgid "Incorrect CD-ROM detected"
+#~ msgstr "CD-ROM yang salah dikesan"
+
+#~ msgid "Detect and mount CD-ROM"
+#~ msgstr "Mengesan dan memautkan CD-ROM"
+
 #~ msgid "No DHCP client was found. This package requires pump or dhcp-client."
 #~ msgstr ""
 #~ "Tiada klien DHCP dijumpai. Pakej ini memerlukan pam atau klien-dhcp."
@@ -5111,9 +5205,6 @@ msgstr "Terpandu - gunakan seluruh cakera dan pasang LVM"
 
 #~ msgid "Mount point for ${PARTITION}:"
 #~ msgstr "Titik pautan untuk ${PARTITION}:"
-
-#~ msgid "Failed to unmount partitions"
-#~ msgstr "Gagal menyahpaut bahagian"
 
 #, fuzzy
 #~| msgid "Cobalt boot loader installation failed.  Continue anyway?"

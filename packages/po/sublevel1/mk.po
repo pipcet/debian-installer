@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer_packages_po_sublevel1_mk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-28 21:20+0000\n"
+"POT-Creation-Date: 2019-09-19 16:20+0000\n"
 "PO-Revision-Date: 2012-04-11 09:17+0100\n"
 "Last-Translator: Arangel Angov <arangel@linux.net.mk>\n"
 "Language-Team: Macedonian <>\n"
@@ -625,13 +625,6 @@ msgstr "внеси ги информациите рачно"
 msgid "Download installer components"
 msgstr "Преземи ги компонентите на инсталерот"
 
-#. Type: text
-#. Description
-#. Main menu item
-#: ../load-cdrom.templates:1001
-msgid "Load installer components from CD"
-msgstr "Вчитај ги компонентите на инсталерот од CD"
-
 #. Type: boolean
 #. Description
 #: ../load-media.templates:1001
@@ -742,13 +735,6 @@ msgstr ""
 "Листава ги прикажува достапните алатки. Ако не си сигурен која да ја "
 "избереш, треба да ја оставиш вообичаената. Ако твојот систем не успее да се "
 "вчита, може повторно да пробаш користејќи ги другите алатки."
-
-#. Type: text
-#. Description
-#. Release is a filename which should not be translated
-#: ../bootstrap-base.templates:42001
-msgid "Checking Release signature"
-msgstr "Проверка на Release потписот"
 
 #. Type: select
 #. Description
@@ -1603,15 +1589,19 @@ msgstr "Некои тастатури ги немаат сите прикажа�
 #. Description
 #. :sl1:
 #: ../cdrom-detect.templates:2001
-msgid "Detecting hardware to find CD-ROM drives"
-msgstr "Детектирање на хардвер за да се најдат CD-ROM уредите"
+#, fuzzy
+#| msgid "Detecting hardware to find hard drives"
+msgid "Detecting hardware to find installation media"
+msgstr "Детектирање на хардвер за наоѓање на тврди дискови"
 
 #. Type: text
 #. Description
 #. :sl1:
 #: ../cdrom-detect.templates:10001
-msgid "Scanning CD-ROM"
-msgstr "Скенирање на CD-ROM"
+#, fuzzy
+#| msgid "SILO installation failed"
+msgid "Scanning installation media"
+msgstr "Инсталацијата на SILO не успеа"
 
 #. Type: text
 #. Description
@@ -1625,8 +1615,8 @@ msgstr "Скенирање на ${DIR}..."
 #. finish-install progress bar item
 #. :sl1:
 #: ../cdrom-detect.templates:19001
-msgid "Unmounting and ejecting CD-ROM..."
-msgstr "Демонтирање и вадење на CD-ROM..."
+msgid "Unmounting/ejecting installation media..."
+msgstr ""
 
 #. Type: text
 #. Description
@@ -2348,6 +2338,16 @@ msgstr ""
 #: ../mdcfg-utils.templates:6001 ../mdcfg-utils.templates:13001
 msgid "Cancel"
 msgstr "Откажи"
+
+#. Type: text
+#. Description
+#. Main menu item
+#. :sl1:
+#: ../load-cdrom.templates:1001
+#, fuzzy
+#| msgid "Load installer components from an installer ISO"
+msgid "Load installer components from installation media"
+msgstr "Вчитај ги инсталационите компоненти од инсталациона ISO слика"
 
 #. Type: text
 #. Description
@@ -3205,7 +3205,7 @@ msgstr "Се подготвувам да го инсталирам основн�
 msgid "Installing the base system"
 msgstr "Инсталирање на основниот систем"
 
-#. #-#-#-#-#  templates.pot (PACKAGE VERSION)  #-#-#-#-#
+#. #-#-#-#-#  templates.pot (base-installer)  #-#-#-#-#
 #. Type: text
 #. Description
 #. :sl1:
@@ -3420,6 +3420,14 @@ msgstr "Отпакувам ${SUBST0}..."
 #: ../bootstrap-base.templates:41001
 msgid "Configuring ${SUBST0}..."
 msgstr "Конфигурирам ${SUBST0}..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Release is a filename which should not be translated
+#: ../bootstrap-base.templates:42001
+msgid "Checking Release signature"
+msgstr "Проверка на Release потписот"
 
 #. Type: text
 #. Description
@@ -3681,8 +3689,28 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:1001
-msgid "Scanning the CD-ROM..."
-msgstr "Скенирам CD-ROM..."
+#, fuzzy
+#| msgid "Finishing the installation"
+msgid "Scanning the installation media..."
+msgstr "Ја завршувам инсталацијата"
+
+#. Type: error
+#. Description
+#. :sl2:
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:2001 ../apt-cdrom-setup.templates:6001
+#, fuzzy
+#| msgid ""
+#| "An attempt to configure apt to install additional packages from the CD "
+#| "failed."
+msgid ""
+"An attempt to configure apt to install additional packages from the media "
+"failed."
+msgstr ""
+"Не успеа обидот да се конфигурира apt за да инсталира дополнителни пакети од "
+"ЦД."
 
 #. Type: boolean
 #. Description
@@ -3698,25 +3726,33 @@ msgstr "Скенирам CD-ROM..."
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001 ../apt-cdrom-setup.templates:4001
 #: ../apt-cdrom-setup.templates:5001 ../apt-cdrom-setup.templates:6001
-msgid "Scan another CD or DVD?"
-msgstr "Да скенирам друго CD или DVD?"
+#, fuzzy
+#| msgid "SILO installation failed"
+msgid "Scan extra installation media?"
+msgstr "Инсталацијата на SILO не успеа"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001
-msgid "Your installation CD or DVD has been scanned; its label is:"
-msgstr "Вашето инсталационо CD или DVD е скенирано, неговата ознака е:"
+msgid "Scanning your installation media finds the label:"
+msgstr ""
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001
+#, fuzzy
+#| msgid ""
+#| "You now have the option to scan additional CDs or DVDs for use by the "
+#| "package manager (apt). Normally these should be from the same set as the "
+#| "installation CD/DVD. If you do not have any additional CDs or DVDs "
+#| "available, this step can just be skipped."
 msgid ""
-"You now have the option to scan additional CDs or DVDs for use by the "
-"package manager (apt). Normally these should be from the same set as the "
-"installation CD/DVD. If you do not have any additional CDs or DVDs "
-"available, this step can just be skipped."
+"You now have the option of scanning additional media for use by the package "
+"manager (apt). Normally these should be from the same set as the one you "
+"booted from. If you do not have any additional media, this step can just be "
+"skipped."
 msgstr ""
 "Имате опција да скенирате додатни CD-а или DVD-а кои што би се користеле со "
 "менаџерот за пакети (apt). Обично овие медимуи треба да се исти со "
@@ -3730,53 +3766,50 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001 ../apt-cdrom-setup.templates:4001
-msgid "If you wish to scan another CD or DVD, please insert it now."
+#, fuzzy
+#| msgid "If you wish to scan another CD or DVD, please insert it now."
+msgid "If you wish to scan more media, please insert another one now."
 msgstr "Ако сакате да скенирате друго CD или DVD, Ве молам внесете го сега."
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:4001
-msgid "The CD or DVD with the following label has been scanned:"
+#, fuzzy
+#| msgid "The CD or DVD with the following label has been scanned:"
+msgid "The image with the following label has been scanned:"
 msgstr "CD или DVD со оваа ознака е веќе скенирано:"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:5001
-msgid "The CD or DVD with the following label has already been scanned:"
+#, fuzzy
+#| msgid "The CD or DVD with the following label has already been scanned:"
+msgid "The image with the following label has already been scanned:"
 msgstr "CD или DVD со оваа ознака е веќе скенирано."
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:5001
-msgid "Please replace it now if you wish to scan another CD or DVD."
+#, fuzzy
+#| msgid "Please replace it now if you wish to scan another CD or DVD."
+msgid "Please replace it now, if you wish to scan another."
 msgstr "Ве молам заменете го сега ако сакате да скенирате друго CD или DVD."
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:6001
-msgid ""
-"An attempt to configure apt to install additional packages from the CD/DVD "
-"failed."
-msgstr ""
-"Не успеа обидот да се конфигурира apt за да инсталираат дополнителни пакети "
-"од CD/DVD."
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:6001
-msgid "Please check that the CD/DVD has been inserted correctly."
+#, fuzzy
+#| msgid "Please check that the CD/DVD has been inserted correctly."
+msgid "Please check that the media has been inserted correctly."
 msgstr "Ве молам осигурајте се CD/DVD-то е внесено како што треба."
 
 #. Type: text
 #. Description
 #. :sl1:
-#. This template uses the same text as used in the package apt for apt-cdrom
-#. Do not translate "/cdrom/" (the mount point)
 #: ../apt-cdrom-setup.templates:7001
 msgid "Media change"
 msgstr "Промена на медиум"
@@ -3784,12 +3817,12 @@ msgstr "Промена на медиум"
 #. Type: text
 #. Description
 #. :sl1:
-#. This template uses the same text as used in the package apt for apt-cdrom
-#. Do not translate "/cdrom/" (the mount point)
 #: ../apt-cdrom-setup.templates:7001
-msgid ""
-"/cdrom/: Please insert the disc labeled '${LABEL}' in the drive '/cdrom/' "
-"and press enter."
+#, fuzzy
+#| msgid ""
+#| "/cdrom/: Please insert the disc labeled '${LABEL}' in the drive '/cdrom/' "
+#| "and press enter."
+msgid "Please insert the media labeled '${LABEL}' and press enter."
 msgstr ""
 "/cdrom/: Ве молам внесете го дискот со ознаката '${LABEL}' во уредот '/"
 "cdrom/' и притиснете Ентер."
@@ -3809,9 +3842,13 @@ msgstr "Го исклучувам netisnt CD-то во sources.list..."
 #. Description
 #. :sl2:
 #: ../apt-cdrom-setup.templates:9001 ../apt-mirror-setup.templates:6001
+#, fuzzy
+#| msgid ""
+#| "If you are installing from a netinst CD and choose not to use a mirror, "
+#| "you will end up with only a very minimal base system."
 msgid ""
-"If you are installing from a netinst CD and choose not to use a mirror, you "
-"will end up with only a very minimal base system."
+"If you are installing from a netinst CD image and choose not to use a "
+"mirror, you will end up with only a very minimal base system."
 msgstr ""
 "Ако инсталирате од CD за мрежна инсталација и одберете дека нема да "
 "користите огледало, на крај ќе биде инсталиран само основниот минимален "
@@ -3821,8 +3858,13 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:10001
+#, fuzzy
+#| msgid ""
+#| "You are installing from a netinst CD, which by itself only allows "
+#| "installation of a very minimal base system. Use a mirror to install a "
+#| "more complete system."
 msgid ""
-"You are installing from a netinst CD, which by itself only allows "
+"You are installing from a netinst CD image, which by itself only allows "
 "installation of a very minimal base system. Use a mirror to install a more "
 "complete system."
 msgstr ""
@@ -3834,8 +3876,13 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:11001
+#, fuzzy
+#| msgid ""
+#| "You are installing from a CD, which contains a limited selection of "
+#| "packages."
 msgid ""
-"You are installing from a CD, which contains a limited selection of packages."
+"You are installing from an image which contains a limited selection of "
+"packages."
 msgstr "Инсталирате од CD кое што содржи лимитиран избор на пакети."
 
 #. Type: text
@@ -3843,9 +3890,13 @@ msgstr "Инсталирате од CD кое што содржи лимитир
 #. :sl1:
 #. The value of %i can be 2 or 3
 #: ../apt-cdrom-setup.templates:12001
-#, no-c-format
+#, fuzzy, no-c-format
+#| msgid ""
+#| "You have scanned %i CDs. Even though these contain a fair selection of "
+#| "packages, some may be missing (notably some packages needed to support "
+#| "languages other than English)."
 msgid ""
-"You have scanned %i CDs. Even though these contain a fair selection of "
+"You have scanned %i images. Even though these contain a fair selection of "
 "packages, some may be missing (notably some packages needed to support "
 "languages other than English)."
 msgstr ""
@@ -3858,9 +3909,12 @@ msgstr ""
 #. :sl1:
 #. The value of %i can be from 4 to 8
 #: ../apt-cdrom-setup.templates:13001
-#, no-c-format
+#, fuzzy, no-c-format
+#| msgid ""
+#| "You have scanned %i CDs. Even though these contain a large selection of "
+#| "packages, some may be missing."
 msgid ""
-"You have scanned %i CDs. Even though these contain a large selection of "
+"You have scanned %i images. Even though these contain a large selection of "
 "packages, some may be missing."
 msgstr ""
 "Скениравте %i CD-а. Иако овие содржат доста големи избор на пакети, некои "
@@ -3881,8 +3935,12 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:15001
+#, fuzzy
+#| msgid ""
+#| "You are installing from a DVD. Even though the DVD contains a large "
+#| "selection of packages, some may be missing."
 msgid ""
-"You are installing from a DVD. Even though the DVD contains a large "
+"You are installing from a DVD image. Even though it contains a large "
 "selection of packages, some may be missing."
 msgstr ""
 "Инсталирате од DVD. Иако DVD-то содржи голем број на пакети, некои може да "
@@ -4011,9 +4069,14 @@ msgstr "Да користам алтернативна мрежна локаци
 #. Description
 #. :sl1:
 #: ../apt-mirror-setup.templates:5001
+#, fuzzy
+#| msgid ""
+#| "A network mirror can be used to supplement the software that is included "
+#| "on the CD-ROM. This may also make newer versions of software available."
 msgid ""
 "A network mirror can be used to supplement the software that is included on "
-"the CD-ROM. This may also make newer versions of software available."
+"the installation media. This may also make newer versions of software "
+"available."
 msgstr ""
 "Може да се користи алтернативна мрежна локација како дополнителен извор на "
 "програми покрај оние на овој CD-ROM. На мрежната локација може да има и "
@@ -4657,6 +4720,67 @@ msgstr "Конфигурирај го Logical Volume Manager"
 #: ../partman-auto-lvm.templates:1001
 msgid "Guided - use entire disk and set up LVM"
 msgstr "Со помош - користи цел диск и постави LVM"
+
+#~ msgid "Load installer components from CD"
+#~ msgstr "Вчитај ги компонентите на инсталерот од CD"
+
+#~ msgid "Detecting hardware to find CD-ROM drives"
+#~ msgstr "Детектирање на хардвер за да се најдат CD-ROM уредите"
+
+#~ msgid "Scanning CD-ROM"
+#~ msgstr "Скенирање на CD-ROM"
+
+#~ msgid "Unmounting and ejecting CD-ROM..."
+#~ msgstr "Демонтирање и вадење на CD-ROM..."
+
+#~ msgid "Scanning the CD-ROM..."
+#~ msgstr "Скенирам CD-ROM..."
+
+#~ msgid "Scan another CD or DVD?"
+#~ msgstr "Да скенирам друго CD или DVD?"
+
+#~ msgid "Your installation CD or DVD has been scanned; its label is:"
+#~ msgstr "Вашето инсталационо CD или DVD е скенирано, неговата ознака е:"
+
+#~ msgid ""
+#~ "An attempt to configure apt to install additional packages from the CD/"
+#~ "DVD failed."
+#~ msgstr ""
+#~ "Не успеа обидот да се конфигурира apt за да инсталираат дополнителни "
+#~ "пакети од CD/DVD."
+
+#~ msgid "Load CD-ROM drivers from removable media?"
+#~ msgstr "Да ги вчитам драјверите за CD-ROM од преносливоит медиум?"
+
+#~ msgid "Retry mounting the CD-ROM?"
+#~ msgstr "Да пробам повторно да го монтирам CD-ROM-от?"
+
+#~ msgid "CD-ROM detected"
+#~ msgstr "Детектиран CD-ROM"
+
+#~ msgid "Incorrect CD-ROM detected"
+#~ msgstr "Детектиран неправилен CD-ROM"
+
+#~ msgid "Detect and mount CD-ROM"
+#~ msgstr "Детектирање и монтирање CD-ROM"
+
+#~ msgid "Check the CD-ROM(s) integrity"
+#~ msgstr "Провери го интегритетот на CD-ROM-от"
+
+#~ msgid "Check CD-ROM integrity?"
+#~ msgstr "Да проверам интегритет на CD-ROM?"
+
+#~ msgid "Insert a Debian CD-ROM"
+#~ msgstr "Внеси Debian CD-ROM"
+
+#~ msgid "Failed to mount CD-ROM"
+#~ msgstr "Не успеав да го монтирам CD-ROM-от"
+
+#~ msgid "No valid Debian CD-ROM"
+#~ msgstr "Нема валиден Debian CD-ROM"
+
+#~ msgid "Checking CD-ROM integrity"
+#~ msgstr "Проверувам интегритет на CD-ROM"
 
 #~ msgid "No DHCP client was found. This package requires pump or dhcp-client."
 #~ msgstr "Не најдов DHCP клиент. Овој пакет зависи од pump или dhcp клиент."
@@ -5551,9 +5675,6 @@ msgstr "Со помош - користи цел диск и постави LVM"
 #~ "Бидејќи партициите веќе се омнтирани, не може да правиш никакави измени "
 #~ "на нив."
 
-#~ msgid "Failed to unmount partitions"
-#~ msgstr "Неуспеав да ги демонтирам партициите"
-
 #~ msgid "An unexpected error occurred while unmounting the partitions."
 #~ msgstr "Се случи неочекувана грешка додека се демонтираа партициите."
 
@@ -5717,9 +5838,6 @@ msgstr "Со помош - користи цел диск и постави LVM"
 #~ "Пакетот „silo“ не успеа да се инсталира на /target/. Инсталирањето на "
 #~ "SILO подигнувачот е задолжителен чекор. Сепак инсталационите проблем може "
 #~ "да не поврзан со Yaboot, па инсталацијата може да продолжи."
-
-#~ msgid "SILO installation failed"
-#~ msgstr "Инсталацијата на SILO не успеа"
 
 #~ msgid "Running \"/sbin/silo\" failed with error code \"${ERRCODE}\"."
 #~ msgstr "Извршување на „/sbin/slilo“ не успеа со грешка „${ERRCODE}“."

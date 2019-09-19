@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ku\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-28 21:20+0000\n"
+"POT-Creation-Date: 2019-09-19 16:20+0000\n"
 "PO-Revision-Date: 2010-08-16 00:19+0200\n"
 "Last-Translator: Erdal Ronahi <erdal.ronahi@gmail.com>\n"
 "Language-Team: Kurdish Team http://pckurd.net\n"
@@ -643,13 +643,6 @@ msgstr "agahî bi destê xwe binivîse"
 msgid "Download installer components"
 msgstr "Parçeyên sazkarê daxe"
 
-#. Type: text
-#. Description
-#. Main menu item
-#: ../load-cdrom.templates:1001
-msgid "Load installer components from CD"
-msgstr "Parçeyên sazkarê ji CD'ê tên barkirin"
-
 #. Type: boolean
 #. Description
 #: ../load-media.templates:1001
@@ -758,13 +751,6 @@ msgstr ""
 "Amûrên heyî di lîsteyê de dixuyin. Heke tu nizanî tu yê kîjanî hilbijêrî, "
 "divê tu ya standard hilbijêrî. Heke pergala te venebe hewl bide bi "
 "vebijêrkên din re sazkirinê dubare bike."
-
-#. Type: text
-#. Description
-#. Release is a filename which should not be translated
-#: ../bootstrap-base.templates:42001
-msgid "Checking Release signature"
-msgstr "Destnîşana Weşanê tê kontrolkirin"
 
 #. Type: select
 #. Description
@@ -1618,15 +1604,19 @@ msgstr "Hişyarbe ku bişkojên lîstekirî di hemû klavyeyan de tune ne."
 #. Description
 #. :sl1:
 #: ../cdrom-detect.templates:2001
-msgid "Detecting hardware to find CD-ROM drives"
-msgstr "Hardware tê tesbît kirin da ku ajokarên CD-ROM werin dîtin"
+#, fuzzy
+#| msgid "Detecting hardware to find hard drives"
+msgid "Detecting hardware to find installation media"
+msgstr "Bi mebesta ku ajokerên dîskên req bibîne reqalav tê venihêrtin"
 
 #. Type: text
 #. Description
 #. :sl1:
 #: ../cdrom-detect.templates:10001
-msgid "Scanning CD-ROM"
-msgstr "Li CD-ROM tê gerandin"
+#, fuzzy
+#| msgid "SILO installation failed"
+msgid "Scanning installation media"
+msgstr "Sazkirina SILO serneket"
 
 #. Type: text
 #. Description
@@ -1640,8 +1630,8 @@ msgstr "Li ${DIR} tê gerandin..."
 #. finish-install progress bar item
 #. :sl1:
 #: ../cdrom-detect.templates:19001
-msgid "Unmounting and ejecting CD-ROM..."
-msgstr "CD-ROM tê unmountkirin û avêtin..."
+msgid "Unmounting/ejecting installation media..."
+msgstr ""
 
 #. Type: text
 #. Description
@@ -2375,6 +2365,16 @@ msgstr ""
 #: ../mdcfg-utils.templates:6001 ../mdcfg-utils.templates:13001
 msgid "Cancel"
 msgstr "Betal"
+
+#. Type: text
+#. Description
+#. Main menu item
+#. :sl1:
+#: ../load-cdrom.templates:1001
+#, fuzzy
+#| msgid "Load installer components from an installer ISO"
+msgid "Load installer components from installation media"
+msgstr "Parçeyên sazkarê ji ISO'yeke sazkarê bar bike"
 
 #. Type: text
 #. Description
@@ -3227,7 +3227,7 @@ msgstr "Ji bo sazkirina pergala bingehîn tê amadekirin..."
 msgid "Installing the base system"
 msgstr "Pergala bingehî tê avakirin"
 
-#. #-#-#-#-#  templates.pot (PACKAGE VERSION)  #-#-#-#-#
+#. #-#-#-#-#  templates.pot (base-installer)  #-#-#-#-#
 #. Type: text
 #. Description
 #. :sl1:
@@ -3441,6 +3441,14 @@ msgstr "Paketa ${SUBST0} tê vekirin..."
 #: ../bootstrap-base.templates:41001
 msgid "Configuring ${SUBST0}..."
 msgstr "Niha ${SUBST0} tê veavakirin..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Release is a filename which should not be translated
+#: ../bootstrap-base.templates:42001
+msgid "Checking Release signature"
+msgstr "Destnîşana Weşanê tê kontrolkirin"
 
 #. Type: text
 #. Description
@@ -3697,8 +3705,28 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:1001
-msgid "Scanning the CD-ROM..."
-msgstr "CD-ROM tê sken kirin..."
+#, fuzzy
+#| msgid "Finishing the installation"
+msgid "Scanning the installation media..."
+msgstr "Sazkirin tê temamkirin"
+
+#. Type: error
+#. Description
+#. :sl2:
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:2001 ../apt-cdrom-setup.templates:6001
+#, fuzzy
+#| msgid ""
+#| "An attempt to configure apt to install additional packages from the CD "
+#| "failed."
+msgid ""
+"An attempt to configure apt to install additional packages from the media "
+"failed."
+msgstr ""
+"Ceribandineke serastikira apt ji bo sazkirina paketên vebijêrkî yên ji CD'yê "
+"bi ser neket."
 
 #. Type: boolean
 #. Description
@@ -3714,25 +3742,33 @@ msgstr "CD-ROM tê sken kirin..."
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001 ../apt-cdrom-setup.templates:4001
 #: ../apt-cdrom-setup.templates:5001 ../apt-cdrom-setup.templates:6001
-msgid "Scan another CD or DVD?"
-msgstr "CD an DVD'yeke din were venihartin?"
+#, fuzzy
+#| msgid "SILO installation failed"
+msgid "Scan extra installation media?"
+msgstr "Sazkirina SILO serneket"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001
-msgid "Your installation CD or DVD has been scanned; its label is:"
-msgstr "CD an DVD ya sazkirinê hat venihartin; etîketa wê:"
+msgid "Scanning your installation media finds the label:"
+msgstr ""
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001
+#, fuzzy
+#| msgid ""
+#| "You now have the option to scan additional CDs or DVDs for use by the "
+#| "package manager (apt). Normally these should be from the same set as the "
+#| "installation CD/DVD. If you do not have any additional CDs or DVDs "
+#| "available, this step can just be skipped."
 msgid ""
-"You now have the option to scan additional CDs or DVDs for use by the "
-"package manager (apt). Normally these should be from the same set as the "
-"installation CD/DVD. If you do not have any additional CDs or DVDs "
-"available, this step can just be skipped."
+"You now have the option of scanning additional media for use by the package "
+"manager (apt). Normally these should be from the same set as the one you "
+"booted from. If you do not have any additional media, this step can just be "
+"skipped."
 msgstr ""
 "Niha dikarî CD an DVD'yên din ji bo gerînendeyê pakêtan (apt) venihêrî. Di "
 "rewşa asayî de ew ji heman koma wekî CD/DVD'ya sazkirinê bin. CD an DVD'ên "
@@ -3745,28 +3781,36 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001 ../apt-cdrom-setup.templates:4001
-msgid "If you wish to scan another CD or DVD, please insert it now."
+#, fuzzy
+#| msgid "If you wish to scan another CD or DVD, please insert it now."
+msgid "If you wish to scan more media, please insert another one now."
 msgstr "Heke bixwazî CD an DVD'yeke din were venihartin, niha têxe."
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:4001
-msgid "The CD or DVD with the following label has been scanned:"
+#, fuzzy
+#| msgid "The CD or DVD with the following label has been scanned:"
+msgid "The image with the following label has been scanned:"
 msgstr "CD an DVD'ya bi vê etîketê hate venihartin:"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:5001
-msgid "The CD or DVD with the following label has already been scanned:"
+#, fuzzy
+#| msgid "The CD or DVD with the following label has already been scanned:"
+msgid "The image with the following label has already been scanned:"
 msgstr "CD an DVD'ya bi vê etîketê jixwe hate venihartin:"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:5001
-msgid "Please replace it now if you wish to scan another CD or DVD."
+#, fuzzy
+#| msgid "Please replace it now if you wish to scan another CD or DVD."
+msgid "Please replace it now, if you wish to scan another."
 msgstr ""
 "Heke dixwazî CD/DVD'yeke din sken bikî, ji kerema xwe re niha biguherîne."
 
@@ -3774,25 +3818,14 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:6001
-msgid ""
-"An attempt to configure apt to install additional packages from the CD/DVD "
-"failed."
-msgstr ""
-"Ceribandineke veavakirina apt ji bo sazkirina paketên vebijêrkî yên ji CD/"
-"DVD'yê bi ser neket."
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:6001
-msgid "Please check that the CD/DVD has been inserted correctly."
+#, fuzzy
+#| msgid "Please check that the CD/DVD has been inserted correctly."
+msgid "Please check that the media has been inserted correctly."
 msgstr "Ji kerema xwe re CD/DVD'ya hatine zêdekirin kontrol bike."
 
 #. Type: text
 #. Description
 #. :sl1:
-#. This template uses the same text as used in the package apt for apt-cdrom
-#. Do not translate "/cdrom/" (the mount point)
 #: ../apt-cdrom-setup.templates:7001
 msgid "Media change"
 msgstr "Guhartina dîskê"
@@ -3800,12 +3833,12 @@ msgstr "Guhartina dîskê"
 #. Type: text
 #. Description
 #. :sl1:
-#. This template uses the same text as used in the package apt for apt-cdrom
-#. Do not translate "/cdrom/" (the mount point)
 #: ../apt-cdrom-setup.templates:7001
-msgid ""
-"/cdrom/: Please insert the disc labeled '${LABEL}' in the drive '/cdrom/' "
-"and press enter."
+#, fuzzy
+#| msgid ""
+#| "/cdrom/: Please insert the disc labeled '${LABEL}' in the drive '/cdrom/' "
+#| "and press enter."
+msgid "Please insert the media labeled '${LABEL}' and press enter."
 msgstr ""
 "/cdrom/: Ji kerema xwe re dîska bi etîketa '${LABEL}' têxe ajogera '/cdrom/' "
 "û li enter pê bike."
@@ -3825,9 +3858,13 @@ msgstr "Di sources.list de netinst CD tê neçalakkirin..."
 #. Description
 #. :sl2:
 #: ../apt-cdrom-setup.templates:9001 ../apt-mirror-setup.templates:6001
+#, fuzzy
+#| msgid ""
+#| "If you are installing from a netinst CD and choose not to use a mirror, "
+#| "you will end up with only a very minimal base system."
 msgid ""
-"If you are installing from a netinst CD and choose not to use a mirror, you "
-"will end up with only a very minimal base system."
+"If you are installing from a netinst CD image and choose not to use a "
+"mirror, you will end up with only a very minimal base system."
 msgstr ""
 "Heke ji CD'yeke netinst saz dikî û neynikekê hilnabijêrî tu yê tenê bi "
 "pergaleke base a biçûk bidawî bînî."
@@ -3836,8 +3873,13 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:10001
+#, fuzzy
+#| msgid ""
+#| "You are installing from a netinst CD, which by itself only allows "
+#| "installation of a very minimal base system. Use a mirror to install a "
+#| "more complete system."
 msgid ""
-"You are installing from a netinst CD, which by itself only allows "
+"You are installing from a netinst CD image, which by itself only allows "
 "installation of a very minimal base system. Use a mirror to install a more "
 "complete system."
 msgstr ""
@@ -3848,8 +3890,13 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:11001
+#, fuzzy
+#| msgid ""
+#| "You are installing from a CD, which contains a limited selection of "
+#| "packages."
 msgid ""
-"You are installing from a CD, which contains a limited selection of packages."
+"You are installing from an image which contains a limited selection of "
+"packages."
 msgstr "Ji CD'ekê saz dikî, tê de tenê çend pakêt tên hilbijartin."
 
 #. Type: text
@@ -3857,9 +3904,13 @@ msgstr "Ji CD'ekê saz dikî, tê de tenê çend pakêt tên hilbijartin."
 #. :sl1:
 #. The value of %i can be 2 or 3
 #: ../apt-cdrom-setup.templates:12001
-#, no-c-format
+#, fuzzy, no-c-format
+#| msgid ""
+#| "You have scanned %i CDs. Even though these contain a fair selection of "
+#| "packages, some may be missing (notably some packages needed to support "
+#| "languages other than English)."
 msgid ""
-"You have scanned %i CDs. Even though these contain a fair selection of "
+"You have scanned %i images. Even though these contain a fair selection of "
 "packages, some may be missing (notably some packages needed to support "
 "languages other than English)."
 msgstr ""
@@ -3871,9 +3922,12 @@ msgstr ""
 #. :sl1:
 #. The value of %i can be from 4 to 8
 #: ../apt-cdrom-setup.templates:13001
-#, no-c-format
+#, fuzzy, no-c-format
+#| msgid ""
+#| "You have scanned %i CDs. Even though these contain a large selection of "
+#| "packages, some may be missing."
 msgid ""
-"You have scanned %i CDs. Even though these contain a large selection of "
+"You have scanned %i images. Even though these contain a large selection of "
 "packages, some may be missing."
 msgstr ""
 "Te %i CD venihart. Di nav wan de gelek pakêt hene, lê dibe ku çend tune."
@@ -3893,8 +3947,12 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:15001
+#, fuzzy
+#| msgid ""
+#| "You are installing from a DVD. Even though the DVD contains a large "
+#| "selection of packages, some may be missing."
 msgid ""
-"You are installing from a DVD. Even though the DVD contains a large "
+"You are installing from a DVD image. Even though it contains a large "
 "selection of packages, some may be missing."
 msgstr ""
 "Tu ji DVD'yekê saz dikî. Di nav DVD'yê de gelek pakêt hene, lê dibe ku çend "
@@ -4024,9 +4082,14 @@ msgstr "Neynika torê bila were bikaranîn?"
 #. Description
 #. :sl1:
 #: ../apt-mirror-setup.templates:5001
+#, fuzzy
+#| msgid ""
+#| "A network mirror can be used to supplement the software that is included "
+#| "on the CD-ROM. This may also make newer versions of software available."
 msgid ""
 "A network mirror can be used to supplement the software that is included on "
-"the CD-ROM. This may also make newer versions of software available."
+"the installation media. This may also make newer versions of software "
+"available."
 msgstr ""
 "Neynikeke torê dikare bi nivîsbariyeke di CD-ROM'ê re wekî pêvek bê "
 "bikaranîn. Dibe ku bi vê yekê guhartoya nûtirîn a nivîsbariyê pêk bê."
@@ -4663,6 +4726,67 @@ msgstr "Logical Volume Manager tê veavakirin"
 #: ../partman-auto-lvm.templates:1001
 msgid "Guided - use entire disk and set up LVM"
 msgstr "Bi alîkarî - diskê bi tevahî pakij bike û LVM saz bike"
+
+#~ msgid "Load installer components from CD"
+#~ msgstr "Parçeyên sazkarê ji CD'ê tên barkirin"
+
+#~ msgid "Detecting hardware to find CD-ROM drives"
+#~ msgstr "Hardware tê tesbît kirin da ku ajokarên CD-ROM werin dîtin"
+
+#~ msgid "Scanning CD-ROM"
+#~ msgstr "Li CD-ROM tê gerandin"
+
+#~ msgid "Unmounting and ejecting CD-ROM..."
+#~ msgstr "CD-ROM tê unmountkirin û avêtin..."
+
+#~ msgid "Scanning the CD-ROM..."
+#~ msgstr "CD-ROM tê sken kirin..."
+
+#~ msgid "Scan another CD or DVD?"
+#~ msgstr "CD an DVD'yeke din were venihartin?"
+
+#~ msgid "Your installation CD or DVD has been scanned; its label is:"
+#~ msgstr "CD an DVD ya sazkirinê hat venihartin; etîketa wê:"
+
+#~ msgid ""
+#~ "An attempt to configure apt to install additional packages from the CD/"
+#~ "DVD failed."
+#~ msgstr ""
+#~ "Ceribandineke veavakirina apt ji bo sazkirina paketên vebijêrkî yên ji CD/"
+#~ "DVD'yê bi ser neket."
+
+#~ msgid "Load CD-ROM drivers from removable media?"
+#~ msgstr "Bila ajokarên CD-ROM'ê ji dîska guhêzbar bar bibin?"
+
+#~ msgid "Retry mounting the CD-ROM?"
+#~ msgstr "Bila mountkirina CD-ROM'ê ji nû ve were ceribandin?"
+
+#~ msgid "CD-ROM detected"
+#~ msgstr "CD-ROM hat dîtin"
+
+#~ msgid "Incorrect CD-ROM detected"
+#~ msgstr "CD-ROM'eke çewt hat dîtin"
+
+#~ msgid "Detect and mount CD-ROM"
+#~ msgstr "CD-ROM bibîne û mount bike"
+
+#~ msgid "Check the CD-ROM(s) integrity"
+#~ msgstr "Rastbûna CD-ROM an CD-ROM'an kontrol bike"
+
+#~ msgid "Check CD-ROM integrity?"
+#~ msgstr "Bila rastiya CD-ROMê were kontrolkirin?"
+
+#~ msgid "Insert a Debian CD-ROM"
+#~ msgstr "CD-ROM a boot a Debian têxe"
+
+#~ msgid "Failed to mount CD-ROM"
+#~ msgstr "Mountkirina CD-ROM serneket"
+
+#~ msgid "No valid Debian CD-ROM"
+#~ msgstr "CD-ROM a Debian a derbasdar tune"
+
+#~ msgid "Checking CD-ROM integrity"
+#~ msgstr "CD-ROM tê piştrastkirin"
 
 #~ msgid "No DHCP client was found. This package requires pump or dhcp-client."
 #~ msgstr ""
@@ -5435,9 +5559,6 @@ msgstr "Bi alîkarî - diskê bi tevahî pakij bike û LVM saz bike"
 #~ "Since the partitions have already been mounted, you cannot do any changes."
 #~ msgstr "partîsiyon hat mount kirin, ji ber vê tû nikarî biguherînî."
 
-#~ msgid "Failed to unmount partitions"
-#~ msgstr "Unmountkirina partîsiyonan bi ser neket"
-
 #~ msgid "An unexpected error occurred while unmounting the partitions."
 #~ msgstr "Di sazkirina volumên şîfrekirî de çewtiyek derket holê."
 
@@ -5572,9 +5693,6 @@ msgstr "Bi alîkarî - diskê bi tevahî pakij bike û LVM saz bike"
 
 #~ msgid "SILO installation failed.  Continue anyway?"
 #~ msgstr "Sazkirina SILO biserneket.  Dîsa bidomîne?"
-
-#~ msgid "SILO installation failed"
-#~ msgstr "Sazkirina SILO serneket"
 
 #~ msgid "Running \"/sbin/silo\" failed with error code \"${ERRCODE}\"."
 #~ msgstr ""
