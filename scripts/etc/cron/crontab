@@ -23,7 +23,7 @@ DAILY_LOGS_DIR=/home/d-i/daily-build-logs.git
 
 #55 3 * * * for i in `cat $HOME/.websec-txt/lang-mail-cvs.cfg|grep -E -v "^\#" | grep -E -v "^$" | awk '{print $1}' `; do $DI/scripts/l10n/websec/websec-txt-all $i ; done
 
-#0 22 * * * cd $DI; mr -q up ; nice -n 19 $DI/scripts/l10n/l10n-sync --levels=5 --online --commit $DI
+0 20 * * * cd $DI; mr -q up ; nice -n 19 $DI/scripts/l10n/l10n-sync --levels=5 --online --commit $DI
 
 #0 23 * * * cd $DI/installation-guide && git pull ; cd build && destination=$WWW/manual ./build.sh >/dev/null ; ~/bin/push-www
 0 23 * * * cd $DI_MANUAL_DAILY ; nice -n 19 bin/build-manual ; ~/bin/push-www
