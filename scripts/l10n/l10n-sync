@@ -659,7 +659,8 @@ if [ "$COMMIT" = "Y" ] ; then
 		git status >>$COMMITLOGFILE
 		echo "" >>$COMMITLOGFILE
 		git commit -uno -m "$COMMIT_MARKER Updated packages/po/* against package templates (from l10n-sync run at dillon)"
-		git push
+###		git push ### Do not push here; when executing l10n-sync from cron job, this does not work anyway, because of
+###                      ### lacking authentication. So pushing needs to be done afterwards by hand.
 fi
 log ""
 
