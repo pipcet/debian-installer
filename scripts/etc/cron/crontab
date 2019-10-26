@@ -36,6 +36,6 @@ DAILY_LOGS_DIR=/home/d-i/daily-build-logs.git
 15 */4 * * * cd $DI; ./scripts/l10n/scan-trans           > $WWW/translations.txt
 30 */4 * * * cd $DI/scripts; mr -q up; ./kernel-summary    $WWW/kernel-summary.html
 45 */4 * * * cd $DI/scripts; ./www-static.sh             > /dev/null 2>&1
-55 */4 * * * cd $DI; mr -q up ; cd $DI/scripts/testing-summary; ./gen-summary /srv/mirrors/debian > $WWW/testing-summary.html ; ~/bin/push-www
+55 */4 * * * cd $DI; mr -q up ; cd $DI/scripts/testing-summary; ./gen-summary http://deb.debian.org/debian > $WWW/testing-summary.html ; ~/bin/push-www
 
 #0 5,11,17,23 * * * cd $DI/scripts; mr -q up; ./dose4udebs-wrapper /srv/mirrors/debian dose.tmp $WWW/dose ; ~/bin/push-www
