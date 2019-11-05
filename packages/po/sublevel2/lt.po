@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-02 20:51+0100\n"
+"POT-Creation-Date: 2019-11-02 22:41+0100\n"
 "PO-Revision-Date: 2017-11-26 13:04+0000\n"
 "Last-Translator: Rimas Kudelis <rq@akl.lt>\n"
 "Language-Team: Lithuanian <komp_lt@konferencijos.lt>\n"
@@ -1824,13 +1824,9 @@ msgstr "Pakartoti"
 msgid "Change mirror"
 msgstr "Keisti archyvo serverį"
 
-#. #-#-#-#-#  templates.pot (net-retriever)  #-#-#-#-#
 #. Type: select
 #. Description
 #. :sl2:
-#. #-#-#-#-#  templates.pot (apt-setup)  #-#-#-#-#
-#. Type: select
-#. Description
 #: ../net-retriever.templates:1002 ../apt-mirror-setup.templates:4002
 msgid "Downloading a file failed:"
 msgstr "Veiksmas įvykus failo atsisiuntimo klaidai:"
@@ -4342,6 +4338,19 @@ msgstr "Apžvelgiama atgalinio perkėlimo saugykla..."
 msgid "Ignore"
 msgstr "Ignoruoti"
 
+#. Type: select
+#. Description
+#. You should end this with a colon. A non-translatable variable
+#. follows with the mirror URL
+#. :sl2:
+#: ../apt-setup-udeb.templates:8002
+msgid ""
+"The installer failed to download the public key used to sign the local "
+"repository at ${MIRROR}:"
+msgstr ""
+"Įdiegikliui nepavyko parsiųsti viešojo rakto, naudojamo vietinei saugyklai, "
+"esančiai ${MIRROR}, pasirašyti:"
+
 #. Type: error
 #. Description
 #. :sl2:
@@ -4376,6 +4385,21 @@ msgstr ""
 #: ../apt-cdrom-setup.templates:2001
 msgid "apt configuration problem"
 msgstr "Apt konfigūravimo problema"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../apt-mirror-setup.templates:4002
+msgid ""
+"The installer failed to access the mirror. This may be a problem with your "
+"network, or with the mirror. You can choose to retry the download, select a "
+"different mirror, or ignore the problem and continue without all the "
+"packages from this mirror."
+msgstr ""
+"Įdiegikliui nepavyko susisiekti su saugyklos serveriu. Tai gali būti Jūsų "
+"tinklo arba paties serverio problema. Galima pakartoti bandymą parsiųsti "
+"failus, parinkti kitą serverį, arba nepaisyti problemos ir tęsti be paketų "
+"iš šio serverio."
 
 #. Type: boolean
 #. Description
@@ -5227,6 +5251,15 @@ msgstr ""
 "Paprastai jį derėtų taip pat prijungti, nes tai suteiks galimybę pavyzdžiui "
 "įdiegti paleidyklę iš naujo. Kita vertus, jei ${FILESYSTEM} esanti failų "
 "sistema yra sugadinta, gali būti, kad šio skaidini prijungti nenorėsite."
+
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl2:
+#: ../load-iso.templates:1001
+msgid "Load installer components from an installer ISO"
+msgstr "Įdiegiklio komponentų įkėlimas iš įdiegiklio ISO atvaizdžio"
 
 #. Type: select
 #. Choices

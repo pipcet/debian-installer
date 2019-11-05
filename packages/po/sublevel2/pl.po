@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-02 20:51+0100\n"
+"POT-Creation-Date: 2019-11-02 22:41+0100\n"
 "PO-Revision-Date: 2016-10-08 11:53+0200\n"
 "Last-Translator: Michał Kułach <michal.kulach@gmail.com>\n"
 "Language-Team: Polish <debian-l10n-polish@lists.debian.org>\n"
@@ -1830,13 +1830,9 @@ msgstr "Ponów"
 msgid "Change mirror"
 msgstr "Zmień serwer lustrzany"
 
-#. #-#-#-#-#  templates.pot (net-retriever)  #-#-#-#-#
 #. Type: select
 #. Description
 #. :sl2:
-#. #-#-#-#-#  templates.pot (apt-setup)  #-#-#-#-#
-#. Type: select
-#. Description
 #: ../net-retriever.templates:1002 ../apt-mirror-setup.templates:4002
 msgid "Downloading a file failed:"
 msgstr "Pobieranie pliku nie powiodło się:"
@@ -4353,6 +4349,19 @@ msgstr ""
 msgid "Ignore"
 msgstr "Ignoruj"
 
+#. Type: select
+#. Description
+#. You should end this with a colon. A non-translatable variable
+#. follows with the mirror URL
+#. :sl2:
+#: ../apt-setup-udeb.templates:8002
+msgid ""
+"The installer failed to download the public key used to sign the local "
+"repository at ${MIRROR}:"
+msgstr ""
+"Instalatorowi nie udało się pobrać klucza publicznego używanego do "
+"podpisania lokalnego repozytorium w ${MIRROR}:"
+
 #. Type: error
 #. Description
 #. :sl2:
@@ -4387,6 +4396,21 @@ msgstr ""
 #: ../apt-cdrom-setup.templates:2001
 msgid "apt configuration problem"
 msgstr "Problem konfiguracji apta"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../apt-mirror-setup.templates:4002
+msgid ""
+"The installer failed to access the mirror. This may be a problem with your "
+"network, or with the mirror. You can choose to retry the download, select a "
+"different mirror, or ignore the problem and continue without all the "
+"packages from this mirror."
+msgstr ""
+"Instalatorowi nie udało się połączyć z serwerem lustrzanym. Może to oznaczać "
+"problemy z siecią lub tym serwerem. Możesz wybrać ponowienie pobierania, "
+"skorzystanie z innego serwera lustrzanego lub zignorować problem i "
+"kontynuować bez pakietów z tej lokalizacji."
 
 #. Type: boolean
 #. Description
@@ -5235,6 +5259,15 @@ msgstr ""
 "Zwykle powinno się zamontować partycję ${FILESYSTEM} aby umożliwić np. "
 "zaktualizowanie programu rozruchowego. Jednak jeśli jej system plików jest "
 "uszkodzony, można pominąć to montowanie."
+
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl2:
+#: ../load-iso.templates:1001
+msgid "Load installer components from an installer ISO"
+msgstr "Załaduj składniki instalatora z obrazu ISO"
 
 #. Type: select
 #. Choices

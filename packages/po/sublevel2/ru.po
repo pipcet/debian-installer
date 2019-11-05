@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ru\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-02 20:51+0100\n"
+"POT-Creation-Date: 2019-11-02 22:41+0100\n"
 "PO-Revision-Date: 2017-11-17 20:26+0300\n"
 "Last-Translator: Anton Gladky <gladk@debian.org>\n"
 "Language-Team: Russian <debian-l10n-russian@lists.debian.org>\n"
@@ -1832,13 +1832,9 @@ msgstr "Повторить"
 msgid "Change mirror"
 msgstr "Сменить зеркало архива"
 
-#. #-#-#-#-#  templates.pot (net-retriever)  #-#-#-#-#
 #. Type: select
 #. Description
 #. :sl2:
-#. #-#-#-#-#  templates.pot (apt-setup)  #-#-#-#-#
-#. Type: select
-#. Description
 #: ../net-retriever.templates:1002 ../apt-mirror-setup.templates:4002
 msgid "Downloading a file failed:"
 msgstr "Не удалось загрузить файл:"
@@ -4362,6 +4358,19 @@ msgstr "Просмотр репозитория бэкпортированных
 msgid "Ignore"
 msgstr "Игнорировать"
 
+#. Type: select
+#. Description
+#. You should end this with a colon. A non-translatable variable
+#. follows with the mirror URL
+#. :sl2:
+#: ../apt-setup-udeb.templates:8002
+msgid ""
+"The installer failed to download the public key used to sign the local "
+"repository at ${MIRROR}:"
+msgstr ""
+"Программе установки не удалось скачать открытый ключ, которым подписан "
+"локальный репозиторий ${MIRROR}:"
+
 #. Type: error
 #. Description
 #. :sl2:
@@ -4397,6 +4406,21 @@ msgstr ""
 #: ../apt-cdrom-setup.templates:2001
 msgid "apt configuration problem"
 msgstr "проблема с настройкой apt"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../apt-mirror-setup.templates:4002
+msgid ""
+"The installer failed to access the mirror. This may be a problem with your "
+"network, or with the mirror. You can choose to retry the download, select a "
+"different mirror, or ignore the problem and continue without all the "
+"packages from this mirror."
+msgstr ""
+"Программе установки не удалось получить доступ к зеркалу архива. Это может "
+"быть проблема как вашей сети, так и зеркала. Вы можете повторить попытку "
+"загрузки, выбрать другое зеркало или отказаться от скачивания и продолжить "
+"без установки пакетов с этого зеркала."
 
 #. Type: boolean
 #. Description
@@ -5247,6 +5271,15 @@ msgstr ""
 "Обычно, лучше примонтировать его, так как это позволит переустановить "
 "системный загрузчик. Однако, если файловая система в ${FILESYSTEM} "
 "повреждена, то лучше этого не делать."
+
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl2:
+#: ../load-iso.templates:1001
+msgid "Load installer components from an installer ISO"
+msgstr "Загрузка компонентов программы установки с ISO-образа"
 
 #. Type: select
 #. Choices

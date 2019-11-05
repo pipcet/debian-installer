@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-02 20:51+0100\n"
+"POT-Creation-Date: 2019-11-02 22:41+0100\n"
 "PO-Revision-Date: 2019-09-26 08:54+0000\n"
 "Last-Translator: Walter Cheuk <wwycheuk@gmail.com>\n"
 "Language-Team: Debian-user in Chinese [Big5] <debian-chinese-big5@lists."
@@ -1685,13 +1685,9 @@ msgstr "再次嘗試"
 msgid "Change mirror"
 msgstr "更換鏡像站"
 
-#. #-#-#-#-#  templates.pot (net-retriever)  #-#-#-#-#
 #. Type: select
 #. Description
 #. :sl2:
-#. #-#-#-#-#  templates.pot (apt-setup)  #-#-#-#-#
-#. Type: select
-#. Description
 #: ../net-retriever.templates:1002 ../apt-mirror-setup.templates:4002
 msgid "Downloading a file failed:"
 msgstr "在下載檔案時失敗了:"
@@ -4122,6 +4118,17 @@ msgstr "正在掃瞄 backports 套件庫……"
 msgid "Ignore"
 msgstr "忽略"
 
+#. Type: select
+#. Description
+#. You should end this with a colon. A non-translatable variable
+#. follows with the mirror URL
+#. :sl2:
+#: ../apt-setup-udeb.templates:8002
+msgid ""
+"The installer failed to download the public key used to sign the local "
+"repository at ${MIRROR}:"
+msgstr "安裝程式從 ${MIRROR} 下載用於本地端套件庫簽名的公開金鑰時失敗了:"
+
 #. Type: error
 #. Description
 #. :sl2:
@@ -4155,6 +4162,20 @@ msgstr "${HOST} 的項目已被加上註解並附加到 /etc/apt/sources.list �
 #: ../apt-cdrom-setup.templates:2001
 msgid "apt configuration problem"
 msgstr "Apt 設定問題"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../apt-mirror-setup.templates:4002
+msgid ""
+"The installer failed to access the mirror. This may be a problem with your "
+"network, or with the mirror. You can choose to retry the download, select a "
+"different mirror, or ignore the problem and continue without all the "
+"packages from this mirror."
+msgstr ""
+"安裝程式無法存取該鏡像站。可能是您的網路或是該鏡像站出了什麼問題。您可以選擇"
+"再次試著下載、選擇另一個鏡像站、或忽略這個問題並在無法取得該鏡像站所提供的套"
+"件的情況下繼續進行。"
 
 #. Type: boolean
 #. Description
@@ -4962,6 +4983,15 @@ msgstr ""
 "一般來說，會建議掛載該檔案系統，因為掛載該檔案系統將允許如重新安裝開機載入程"
 "式之類的操作，但是如果在 ${FILESYSTEM} 的檔案系統是損毀的，您可能會想避免掛"
 "載。"
+
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl2:
+#: ../load-iso.templates:1001
+msgid "Load installer components from an installer ISO"
+msgstr "從安裝程式 ISO 中載入安裝程式的元件"
 
 #. Type: select
 #. Choices

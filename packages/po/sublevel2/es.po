@@ -44,7 +44,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-02 20:51+0100\n"
+"POT-Creation-Date: 2019-11-02 22:41+0100\n"
 "PO-Revision-Date: 2017-01-26 23:56+0100\n"
 "Last-Translator: Javier Fernández-Sanguino <jfs@debian.org>\n"
 "Language-Team:  Debian Spanish <debian-l10n-spanish@lists.debian.org>\n"
@@ -1934,13 +1934,9 @@ msgstr "Reintentar"
 msgid "Change mirror"
 msgstr "Cambiar de réplica"
 
-#. #-#-#-#-#  templates.pot (net-retriever)  #-#-#-#-#
 #. Type: select
 #. Description
 #. :sl2:
-#. #-#-#-#-#  templates.pot (apt-setup)  #-#-#-#-#
-#. Type: select
-#. Description
 #: ../net-retriever.templates:1002 ../apt-mirror-setup.templates:4002
 msgid "Downloading a file failed:"
 msgstr "Falló la descarga de un fichero:"
@@ -4490,6 +4486,19 @@ msgstr "Analizando el repositorio de programas migrados..."
 msgid "Ignore"
 msgstr "Ignorar"
 
+#. Type: select
+#. Description
+#. You should end this with a colon. A non-translatable variable
+#. follows with the mirror URL
+#. :sl2:
+#: ../apt-setup-udeb.templates:8002
+msgid ""
+"The installer failed to download the public key used to sign the local "
+"repository at ${MIRROR}:"
+msgstr ""
+"El instalador no pudo descargar la clave pública utilizada para firmar el "
+"repositorio local en ${MIRROR}:"
+
 #. Type: error
 #. Description
 #. :sl2:
@@ -4526,6 +4535,21 @@ msgstr ""
 #: ../apt-cdrom-setup.templates:2001
 msgid "apt configuration problem"
 msgstr "problema de configuración de apt"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../apt-mirror-setup.templates:4002
+msgid ""
+"The installer failed to access the mirror. This may be a problem with your "
+"network, or with the mirror. You can choose to retry the download, select a "
+"different mirror, or ignore the problem and continue without all the "
+"packages from this mirror."
+msgstr ""
+"Se produjo un fallo al acceder a la réplica. Esto puede deberse a un "
+"problema en la red o con la réplica. Puede elegir reintentar la descarga, "
+"seleccionar otra réplica o ignorar el problema y continuar sin todos los "
+"paquetes de esta réplica."
 
 #. Type: boolean
 #. Description
@@ -5385,6 +5409,15 @@ msgstr ""
 "operaciones como por ejemplo reinstalar el cargador de arranque. Sin "
 "embargo, debería evitar montarla si el sistema de ficheros en "
 "«${FILESYSTEM}» está corrompido."
+
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl2:
+#: ../load-iso.templates:1001
+msgid "Load installer components from an installer ISO"
+msgstr "Cargar componentes del instalador de una imagen ISO"
 
 #. Type: select
 #. Choices

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-02 20:51+0100\n"
+"POT-Creation-Date: 2019-11-02 22:41+0100\n"
 "PO-Revision-Date: 2017-01-05 15:43+0200\n"
 "Last-Translator: Ivan Masár <helix84@centrum.sk>\n"
 "Language-Team: x\n"
@@ -1802,13 +1802,9 @@ msgstr "Zopakovať"
 msgid "Change mirror"
 msgstr "Zmeniť zrkadlo archívu"
 
-#. #-#-#-#-#  templates.pot (net-retriever)  #-#-#-#-#
 #. Type: select
 #. Description
 #. :sl2:
-#. #-#-#-#-#  templates.pot (apt-setup)  #-#-#-#-#
-#. Type: select
-#. Description
 #: ../net-retriever.templates:1002 ../apt-mirror-setup.templates:4002
 msgid "Downloading a file failed:"
 msgstr "Stiahnutie súboru zlyhalo:"
@@ -4314,6 +4310,19 @@ msgstr "Prehľadáva sa archív spätne prenesených programov..."
 msgid "Ignore"
 msgstr "Ignorovať"
 
+#. Type: select
+#. Description
+#. You should end this with a colon. A non-translatable variable
+#. follows with the mirror URL
+#. :sl2:
+#: ../apt-setup-udeb.templates:8002
+msgid ""
+"The installer failed to download the public key used to sign the local "
+"repository at ${MIRROR}:"
+msgstr ""
+"Inštalátoru sa nepodarilo stiahnuť verejný kľúč, ktorý sa používa na "
+"podpisovanie lokálneho zdroja softvéru na ${MIRROR}:"
+
 #. Type: error
 #. Description
 #. :sl2:
@@ -4349,6 +4358,22 @@ msgstr ""
 #: ../apt-cdrom-setup.templates:2001
 msgid "apt configuration problem"
 msgstr "Chyba pri nastavení apt"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../apt-mirror-setup.templates:4002
+msgid ""
+"The installer failed to access the mirror. This may be a problem with your "
+"network, or with the mirror. You can choose to retry the download, select a "
+"different mirror, or ignore the problem and continue without all the "
+"packages from this mirror."
+msgstr ""
+"Inštalačnému programu sa nepodarilo pristúpiť na archív s Debianom. Možno je "
+"to zapríčinené chybou vo vašej sieti alebo chybou archívu Debianu. Môžete sa "
+"pokúsiť o zopakovanie stiahnutia, môžete si zvoliť iný archív s Debianom, "
+"prípadne ignorovať tento problém a pokračovať bez všetkých balíkov z tohto "
+"archívu Debianu."
 
 #. Type: boolean
 #. Description
@@ -5184,6 +5209,15 @@ msgstr ""
 "Je zvyčajne dobrý nápad pripojiť ju, pretože umožní operácie ako napr. "
 "preinštalovanie zavádzača. Ak je však súborový systém na ${FILESYSTEM} "
 "poškodený, asi ju nebudete chcieť pripojiť."
+
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl2:
+#: ../load-iso.templates:1001
+msgid "Load installer components from an installer ISO"
+msgstr "Načítanie súčastí inštalačného programu z obrazu ISO"
 
 #. Type: select
 #. Choices

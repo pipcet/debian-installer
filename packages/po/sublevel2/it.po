@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-02 20:51+0100\n"
+"POT-Creation-Date: 2019-11-02 22:41+0100\n"
 "PO-Revision-Date: 2017-02-14 11:14+0100\n"
 "Last-Translator: Milo Casagrande <milo@milo.name>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
@@ -1845,13 +1845,9 @@ msgstr "Riprova"
 msgid "Change mirror"
 msgstr "Cambia mirror"
 
-#. #-#-#-#-#  templates.pot (net-retriever)  #-#-#-#-#
 #. Type: select
 #. Description
 #. :sl2:
-#. #-#-#-#-#  templates.pot (apt-setup)  #-#-#-#-#
-#. Type: select
-#. Description
 #: ../net-retriever.templates:1002 ../apt-mirror-setup.templates:4002
 msgid "Downloading a file failed:"
 msgstr "Scaricamento di un file non riuscito:"
@@ -4383,6 +4379,19 @@ msgstr "Analisi del repository dei backport..."
 msgid "Ignore"
 msgstr "Ignora"
 
+#. Type: select
+#. Description
+#. You should end this with a colon. A non-translatable variable
+#. follows with the mirror URL
+#. :sl2:
+#: ../apt-setup-udeb.templates:8002
+msgid ""
+"The installer failed to download the public key used to sign the local "
+"repository at ${MIRROR}:"
+msgstr ""
+"Il programma d'installazione non è riuscito a scaricare la chiave pubblica "
+"utilizzata per firmare il repository locale presso ${MIRROR}:"
+
 #. Type: error
 #. Description
 #. :sl2:
@@ -4417,6 +4426,21 @@ msgstr "Le righe di ${HOST} in /etc/apt/sources.list sono state commentate."
 #: ../apt-cdrom-setup.templates:2001
 msgid "apt configuration problem"
 msgstr "Problema con la configurazione di APT"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../apt-mirror-setup.templates:4002
+msgid ""
+"The installer failed to access the mirror. This may be a problem with your "
+"network, or with the mirror. You can choose to retry the download, select a "
+"different mirror, or ignore the problem and continue without all the "
+"packages from this mirror."
+msgstr ""
+"Il programma d'installazione non è riuscito ad accedere al mirror a causa di "
+"un problema della rete locale o del mirror. È possibile riprovare "
+"l'operazione di scaricamento, scegliere un mirror diverso o ignorare il "
+"problema e continuare senza scaricare i pacchetti da questo mirror."
 
 #. Type: boolean
 #. Description
@@ -5267,6 +5291,15 @@ msgstr ""
 "operazioni come la re-installazione del boot loader. Se il file system "
 "presente in ${FILESYSTEM} è però danneggiato, non è consigliato montare la "
 "partizione."
+
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl2:
+#: ../load-iso.templates:1001
+msgid "Load installer components from an installer ISO"
+msgstr "Caricare i componenti del programma d'installazione da un'immagine ISO"
 
 #. Type: select
 #. Choices

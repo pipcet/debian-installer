@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Debian-installer 1st-stage master file HR\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-02 20:51+0100\n"
+"POT-Creation-Date: 2019-11-02 22:41+0100\n"
 "PO-Revision-Date: 2019-07-19 19:31+0000\n"
 "Last-Translator: gogogogi <trebelnik2@gmail.com>\n"
 "Language-Team: Croatian <lokalizacija@linux.hr>\n"
@@ -1812,13 +1812,9 @@ msgstr "Pokušaj ponovno"
 msgid "Change mirror"
 msgstr "Promijeni zrcalni poslužitelj"
 
-#. #-#-#-#-#  templates.pot (net-retriever)  #-#-#-#-#
 #. Type: select
 #. Description
 #. :sl2:
-#. #-#-#-#-#  templates.pot (apt-setup)  #-#-#-#-#
-#. Type: select
-#. Description
 #: ../net-retriever.templates:1002 ../apt-mirror-setup.templates:4002
 msgid "Downloading a file failed:"
 msgstr "Preuzimanje datoteke nije uspjelo:"
@@ -4341,6 +4337,19 @@ msgstr "Pretraživanje repozitorija podržanih nadopuna..."
 msgid "Ignore"
 msgstr "Zanemari"
 
+#. Type: select
+#. Description
+#. You should end this with a colon. A non-translatable variable
+#. follows with the mirror URL
+#. :sl2:
+#: ../apt-setup-udeb.templates:8002
+msgid ""
+"The installer failed to download the public key used to sign the local "
+"repository at ${MIRROR}:"
+msgstr ""
+"Instalacijski program nije uspio preuzeti javni ključ s kojim se potpisuje "
+"lokalni repozitorij na ${MIRROR}:"
+
 #. Type: error
 #. Description
 #. :sl2:
@@ -4374,6 +4383,21 @@ msgstr "Upisi komentara za ${HOST} su dodani u /etc/apt/sources.list datoteku."
 #: ../apt-cdrom-setup.templates:2001
 msgid "apt configuration problem"
 msgstr "apt problem podešavanja"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../apt-mirror-setup.templates:4002
+msgid ""
+"The installer failed to access the mirror. This may be a problem with your "
+"network, or with the mirror. You can choose to retry the download, select a "
+"different mirror, or ignore the problem and continue without all the "
+"packages from this mirror."
+msgstr ""
+"Instalacijski program nije uspio pristupiti zrcalnom poslužitelju. Možda je "
+"problem u vašoj mreži ili s tim zrcalnim poslužiteljem. Možete pokušati "
+"ponovno preuzimanje, odabrati neki drugi zrcalni poslužitelj, ili zanemariti "
+"problem te nastaviti bez svih paketa s tog zrcalnog poslužitelja."
 
 #. Type: boolean
 #. Description
@@ -5214,6 +5238,15 @@ msgstr ""
 "Uobičajeno je dobra ideja montirati ga jer će dopustiti radnje poput ponovne "
 "instalacije učitača pokretanja. Ipak, ako je datotečni sustav na "
 "${FILESYSTEM} oštećen tada je preporučljivo da izbjegavate montiranje."
+
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl2:
+#: ../load-iso.templates:1001
+msgid "Load installer components from an installer ISO"
+msgstr "Učitaj komponente instalacijskog programa s instalacijske ISO slike"
 
 #. Type: select
 #. Choices

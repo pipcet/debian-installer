@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-02 20:51+0100\n"
+"POT-Creation-Date: 2019-11-02 22:41+0100\n"
 "PO-Revision-Date: 2019-09-20 19:27+0000\n"
 "Last-Translator: Boyuan Yang <073plan@gmail.com>\n"
 "Language-Team: <debian-l10n-chinese@lists.debian.org>\n"
@@ -1736,13 +1736,9 @@ msgstr "重试"
 msgid "Change mirror"
 msgstr "更换镜像"
 
-#. #-#-#-#-#  templates.pot (net-retriever)  #-#-#-#-#
 #. Type: select
 #. Description
 #. :sl2:
-#. #-#-#-#-#  templates.pot (apt-setup)  #-#-#-#-#
-#. Type: select
-#. Description
 #: ../net-retriever.templates:1002 ../apt-mirror-setup.templates:4002
 msgid "Downloading a file failed:"
 msgstr "下载文件失败："
@@ -4172,6 +4168,17 @@ msgstr "正在扫描 backport 软件源..."
 msgid "Ignore"
 msgstr "忽略"
 
+#. Type: select
+#. Description
+#. You should end this with a colon. A non-translatable variable
+#. follows with the mirror URL
+#. :sl2:
+#: ../apt-setup-udeb.templates:8002
+msgid ""
+"The installer failed to download the public key used to sign the local "
+"repository at ${MIRROR}:"
+msgstr "安装程序从 ${MIRROR} 下载用于签署本地仓库的公钥失败："
+
 #. Type: error
 #. Description
 #. :sl2:
@@ -4205,6 +4212,20 @@ msgstr "被注释掉的有关 ${HOST} 的条目已被加入到 /etc/apt/sources.
 #: ../apt-cdrom-setup.templates:2001
 msgid "apt configuration problem"
 msgstr "Apt 设置问题"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../apt-mirror-setup.templates:4002
+msgid ""
+"The installer failed to access the mirror. This may be a problem with your "
+"network, or with the mirror. You can choose to retry the download, select a "
+"different mirror, or ignore the problem and continue without all the "
+"packages from this mirror."
+msgstr ""
+"安装程序无法访问镜像站。这可能是您的网络问题，也可能是保存此密钥的服务器发生"
+"错误。您可以选择重试下载，选择另一个镜像站，或者忽略这一问题，不使用该镜像站"
+"的任何软件包并继续。"
 
 #. Type: boolean
 #. Description
@@ -5007,6 +5028,15 @@ msgid ""
 msgstr ""
 "通常将其挂载是个好主意，因为其将允许您执行重新安装引导器等操作。但是如果 "
 "${FILESYSTEM} 上的文件损坏了，应该避免将其挂载。"
+
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl2:
+#: ../load-iso.templates:1001
+msgid "Load installer components from an installer ISO"
+msgstr "从安装程序 ISO 中加载安装程序的组件"
 
 #. Type: select
 #. Choices

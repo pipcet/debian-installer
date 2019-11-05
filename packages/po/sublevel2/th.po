@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-02 20:51+0100\n"
+"POT-Creation-Date: 2019-11-02 22:41+0100\n"
 "PO-Revision-Date: 2017-02-22 21:24+0700\n"
 "Last-Translator: Theppitak Karoonboonyanan <theppitak@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -1764,13 +1764,9 @@ msgstr "ลองใหม่"
 msgid "Change mirror"
 msgstr "เปลี่ยนแหล่งสำเนา"
 
-#. #-#-#-#-#  templates.pot (net-retriever)  #-#-#-#-#
 #. Type: select
 #. Description
 #. :sl2:
-#. #-#-#-#-#  templates.pot (apt-setup)  #-#-#-#-#
-#. Type: select
-#. Description
 #: ../net-retriever.templates:1002 ../apt-mirror-setup.templates:4002
 msgid "Downloading a file failed:"
 msgstr "ดาวน์โหลดแฟ้มไม่สำเร็จ:"
@@ -4209,6 +4205,18 @@ msgstr "กำลังสำรวจคลังแพกเกจย้าย
 msgid "Ignore"
 msgstr "ละเลย"
 
+#. Type: select
+#. Description
+#. You should end this with a colon. A non-translatable variable
+#. follows with the mirror URL
+#. :sl2:
+#: ../apt-setup-udeb.templates:8002
+msgid ""
+"The installer failed to download the public key used to sign the local "
+"repository at ${MIRROR}:"
+msgstr ""
+"โปรแกรมติดตั้งไม่สามารถดาวน์โหลดกุญแจสาธารณะที่ใช้เซ็นกำกับคลังแพกเกจท้องถิ่นที่ ${MIRROR}:"
+
 #. Type: error
 #. Description
 #. :sl2:
@@ -4244,6 +4252,20 @@ msgstr ""
 #: ../apt-cdrom-setup.templates:2001
 msgid "apt configuration problem"
 msgstr "เกิดปัญหาระหว่างตั้งค่า apt"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../apt-mirror-setup.templates:4002
+msgid ""
+"The installer failed to access the mirror. This may be a problem with your "
+"network, or with the mirror. You can choose to retry the download, select a "
+"different mirror, or ignore the problem and continue without all the "
+"packages from this mirror."
+msgstr ""
+"โปรแกรมติดตั้งไม่สามารถเข้าถึงแหล่งสำเนาได้ อาจเกิดจากปัญหาในเครือข่ายของคุณ "
+"หรือเป็นปัญหาในตัวแหล่งสำเนาเอง คุณสามารถเลือกที่จะลองดาวน์โหลดใหม่ หรือเลือกแหล่งสำเนาอื่น "
+"หรือละเลยปัญหานี้แล้วติดตั้งต่อไปโดยไม่ใช้แพกเกจจากแหล่งสำเนานี้ก็ได้"
 
 #. Type: boolean
 #. Description
@@ -5058,6 +5080,15 @@ msgstr ""
 "โดยทั่วไปแล้ว การเมานท์ก็เป็นความคิดที่ดี "
 "เพราะจะทำให้สามารถดำเนินการอย่างเช่นติดตั้งบูตโหลดเดอร์ซ้ำใหม่ได้ อย่างไรก็ดี ถ้าระบบแฟ้มใน "
 "${FILESYSTEM} เสียหายอยู่ คุณก็อาจไม่ต้องการเมานท์"
+
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl2:
+#: ../load-iso.templates:1001
+msgid "Load installer components from an installer ISO"
+msgstr "โหลดองค์ประกอบโปรแกรมติดตั้งจาก ISO ของโปรแกรมติดตั้ง"
 
 #. Type: select
 #. Choices

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: bugs.debian.org\n"
-"POT-Creation-Date: 2019-11-02 20:51+0100\n"
+"POT-Creation-Date: 2019-11-02 22:41+0100\n"
 "PO-Revision-Date: 2017-02-11 11:59+0900\n"
 "Last-Translator: Changwoo Ryu <cwryu@debian.org>\n"
 "Language-Team:  Korean <debian-l10n-korean@lists.debian.org>\n"
@@ -1782,13 +1782,9 @@ msgstr "다시 시도"
 msgid "Change mirror"
 msgstr "미러 사이트 바꾸기"
 
-#. #-#-#-#-#  templates.pot (net-retriever)  #-#-#-#-#
 #. Type: select
 #. Description
 #. :sl2:
-#. #-#-#-#-#  templates.pot (apt-setup)  #-#-#-#-#
-#. Type: select
-#. Description
 #: ../net-retriever.templates:1002 ../apt-mirror-setup.templates:4002
 msgid "Downloading a file failed:"
 msgstr "파일 다운로드가 실패했습니다:"
@@ -4275,6 +4271,19 @@ msgstr "백포팅 저장소를 읽는 중입니다..."
 msgid "Ignore"
 msgstr "무시"
 
+#. Type: select
+#. Description
+#. You should end this with a colon. A non-translatable variable
+#. follows with the mirror URL
+#. :sl2:
+#: ../apt-setup-udeb.templates:8002
+msgid ""
+"The installer failed to download the public key used to sign the local "
+"repository at ${MIRROR}:"
+msgstr ""
+"설치 프로그램에서 ${MIRROR} 위치의 로컬 저장소에서 디지털 서명하는데 사용하"
+"는 공개 키를 다운로드하는데 실패했습니다:"
+
 #. Type: error
 #. Description
 #. :sl2:
@@ -4309,6 +4318,21 @@ msgstr ""
 #: ../apt-cdrom-setup.templates:2001
 msgid "apt configuration problem"
 msgstr "APT 설정 문제"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../apt-mirror-setup.templates:4002
+msgid ""
+"The installer failed to access the mirror. This may be a problem with your "
+"network, or with the mirror. You can choose to retry the download, select a "
+"different mirror, or ignore the problem and continue without all the "
+"packages from this mirror."
+msgstr ""
+"설치 프로그램이 미러 사이트에서 파일을 다운로드하는데 실패했습니다. 네트워크"
+"에 문제가 있거나, 미러 사이트에 문제가 있을 것입니다. 다시 다운로드를 시도하"
+"거나, 다른 미러 사이트를 선택하거나, 그냥 무시하고 패키지를 다 다운로드하지 "
+"못하더라도 계속 진행할 수 있습니다."
 
 #. Type: boolean
 #. Description
@@ -5133,6 +5157,15 @@ msgstr ""
 "대부분의 경우 이 파티션을 마운트하는 게 좋습니다. 그래야 부트로더를 다시 설치"
 "하는 등의 작업을 할 수 있기 때문입니다. 하지만 ${FILESYSTEM} 파일 시스템이 손"
 "상되었다면 마운트하고 싶지 않을 수도 있습니다."
+
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl2:
+#: ../load-iso.templates:1001
+msgid "Load installer components from an installer ISO"
+msgstr "설치 프로그램 컴포넌트를 설치 프로그램 ISO에서 읽어들이기"
 
 #. Type: select
 #. Choices
