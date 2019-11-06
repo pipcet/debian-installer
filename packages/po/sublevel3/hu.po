@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-02 22:41+0100\n"
+"POT-Creation-Date: 2019-11-05 23:57+0100\n"
 "PO-Revision-Date: 2018-03-21 09:13+0000\n"
 "Last-Translator: Dr. Nagy Elemér Károly <eknagy@omikk.bme.hu>\n"
 "Language-Team: Debian L10n Hungarian <debian-l10n-hungarian@lists.debian."
@@ -2155,6 +2155,15 @@ msgstr "A \"/sbin/lilo\" futtatása \"${ERRCODE}\" hibakódot adott."
 msgid "Install the LILO boot loader on a hard disk"
 msgstr "A LILO rendszerbetöltő merevlemezre telepítése"
 
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl3:
+#: ../network-preseed.templates:1001
+msgid "Download debconf preconfiguration file"
+msgstr "Debconf előbeállító fájl letöltése"
+
 #. Type: string
 #. Description
 #. :sl3:
@@ -2218,6 +2227,15 @@ msgstr ""
 
 #. Type: text
 #. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl3:
+#: ../file-preseed.templates:1001
+msgid "Load debconf preconfiguration file"
+msgstr "Debconf előbeállító fájl betöltése"
+
+#. Type: text
+#. Description
 #. :sl3:
 #: ../rescue-mode.templates:2001
 msgid "No partitions found"
@@ -2238,6 +2256,60 @@ msgstr ""
 "Lehet, hogy a kernel nem tudta érzékelni a merevlemez meghajtót vagy olvasni "
 "a partíciós táblát, vagy a lemez nincs particionálva. Javasoljuk ennek "
 "kiderítését egy héjból a telepítő környezetben."
+
+#. Type: select
+#. Choices
+#. :sl3:
+#: ../rescue-mode.templates:3001
+msgid "Assemble RAID array"
+msgstr "RAID tömb összerakása"
+
+#. Type: select
+#. Choices
+#. :sl3:
+#: ../rescue-mode.templates:3001
+msgid "Do not use a root file system"
+msgstr "Ne használjon gyökérfájlrendszert"
+
+# Type: select
+# Description
+# :sl2:
+#. Type: select
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:3002
+msgid "Device to use as root file system:"
+msgstr "Root fájlrendszerként használandó eszköz:"
+
+# Type: select
+# Description
+# :sl2:
+#. Type: select
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:3002
+msgid ""
+"Enter a device you wish to use as your root file system. You will be able to "
+"choose among various rescue operations to perform on this file system."
+msgstr ""
+"Meg kell adni a gyökér fájlrendszerként használni kívánt eszközt. Ezután "
+"különböző mentési műveletek közti válogatásra nyílik mód."
+
+# Type: select
+# Description
+# :sl2:
+#. Type: select
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:3002
+msgid ""
+"If you choose not to use a root file system, you will be given a reduced "
+"choice of operations that can be performed without one. This may be useful "
+"if you need to correct a partitioning problem."
+msgstr ""
+"Ha nem választ ki használandó gyökér fájlrendszert, csak bizonyos "
+"csökkentett számú műveleteket használhat. Ez hasznos lehet, ha egy partíciós "
+"problémát kell javítani."
 
 #. Type: error
 #. Description
@@ -2282,6 +2354,13 @@ msgstr ""
 msgid "Please check the syslog for more information."
 msgstr "További információ a syslogban található."
 
+#. Type: select
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:6001
+msgid "Rescue operations"
+msgstr "Mentési műveletek"
+
 #. Type: error
 #. Description
 #. :sl3:
@@ -2295,6 +2374,85 @@ msgstr "A mentési művelet meghiúsult"
 #: ../rescue-mode.templates:7001
 msgid "The rescue operation '${OPERATION}' failed with exit code ${CODE}."
 msgstr "Az alábbi mentési művelet: '${OPERATION}' hibakódot adott: ${CODE}."
+
+# Type: text
+# Description
+# :sl2:
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:8001
+msgid "Execute a shell in ${DEVICE}"
+msgstr "Héj futtatása itt: ${DEVICE}"
+
+# Type: text
+# Description
+# :sl2:
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:9001
+msgid "Execute a shell in the installer environment"
+msgstr "Héj futtatása a telepítő környezetben"
+
+# Type: text
+# Description
+# :sl2:
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:10001
+msgid "Choose a different root file system"
+msgstr "Más gyökér fájlrendszer választása"
+
+# Type: text
+# Description
+# :sl2:
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:11001
+msgid "Reboot the system"
+msgstr "A rendszer újraindítása"
+
+# Type: text
+# Description
+# :sl2:
+# Type: text
+# Description
+# :sl2:
+# Type: text
+# Description
+# :sl2:
+#. Type: text
+#. Description
+#. :sl3:
+#. Type: text
+#. Description
+#. :sl3:
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:12001 ../rescue-mode.templates:16001
+#: ../rescue-mode.templates:17001
+msgid "Executing a shell"
+msgstr "Egy héj futtatása"
+
+# Type: text
+# Description
+# :sl2:
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:12001
+msgid ""
+"After this message, you will be given a shell with ${DEVICE} mounted on \"/"
+"\". If you need any other file systems (such as a separate \"/usr\"), you "
+"will have to mount those yourself."
+msgstr ""
+"Ezután az üzenet után a /-re csatolt ${DEVICE} eszközön egy héjprogram "
+"indul. Ha más fájlrendszerek (például egy önálló \"/usr\") elérésére van "
+"szükség, azokat kézzel kell csatolni (mount)."
 
 #. Type: error
 #. Description
@@ -2327,6 +2485,179 @@ msgstr "Nincs héjprogram a /target-ben"
 #: ../rescue-mode.templates:14001
 msgid "No usable shell was found on your root file system (${DEVICE})."
 msgstr "Nincs használható héj a gyökér fájlrendszeren (${DEVICE})."
+
+# Type: text
+# Description
+# :sl2:
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:15001
+msgid "Interactive shell on ${DEVICE}"
+msgstr "Interaktív héj itt: ${DEVICE}"
+
+# Type: text
+# Description
+# :sl2:
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:16001
+msgid ""
+"After this message, you will be given a shell with ${DEVICE} mounted on \"/"
+"target\". You may work on it using the tools available in the installer "
+"environment. If you want to make it your root file system temporarily, run "
+"\"chroot /target\". If you need any other file systems (such as a separate "
+"\"/usr\"), you will have to mount those yourself."
+msgstr ""
+"Ezután az üzenet után a \"target/\"-re csatolt ${DEVICE} eszközön egy "
+"héjprogram indul. Ezen a telepítő környezetben elérhető eszközökkel lehet "
+"dolgozni. Ideiglenes gyökér fájlrendszerré a \"chroot /target\"-tel tehető. "
+"Ha más fájlrendszerek (például egy önálló \"/usr\") elérésére van szükség, "
+"azokat kézzel kell csatolni (mount)."
+
+# Type: text
+# Description
+# :sl2:
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:17001
+msgid ""
+"After this message, you will be given a shell in the installer environment. "
+"No file systems have been mounted."
+msgstr ""
+"Ezután az üzenet után egy héj indul a telepítő környezetben. Nincs "
+"felcsatolt fájlrendszer."
+
+# Type: text
+# Description
+# :sl2:
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:18001
+msgid "Interactive shell in the installer environment"
+msgstr "Interaktív héj a telepítő környezetben"
+
+# Type: password
+# Description
+# :sl2:
+#. Type: password
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:19001
+msgid "Passphrase for ${DEVICE}:"
+msgstr "Jelmondat ehhez: ${DEVICE}:"
+
+# Type: password
+# Description
+# :sl2:
+#. Type: password
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:19001
+msgid "Please enter the passphrase for the encrypted volume ${DEVICE}."
+msgstr "Kérem, adja meg a jelmondatot e kötet titkosításához: ${DEVICE}."
+
+# Type: password
+# Description
+# :sl2:
+#. Type: password
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:19001
+msgid ""
+"If you don't enter anything, the volume will not be available during rescue "
+"operations."
+msgstr ""
+"Ha nem ad meg semmit, a kötet nem lesz elérhető a mentési műveletek alatt."
+
+#. Type: multiselect
+#. Choices
+#. :sl3:
+#: ../rescue-mode.templates:20001
+msgid "Automatic"
+msgstr "Autamata"
+
+# Type: multiselect
+# Description
+# :sl2:
+#. Type: multiselect
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:20002
+msgid "Partitions to assemble:"
+msgstr "Összeállítandó partíciók:"
+
+# Type: multiselect
+# Description
+# :sl2:
+#. Type: multiselect
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:20002
+msgid ""
+"Select the partitions to assemble into a RAID array. If you select "
+"\"Automatic\", then all devices containing RAID physical volumes will be "
+"scanned and assembled."
+msgstr ""
+"Jelölje ki a RAID tömbbe összeállítandó partíciókat. Az \"Automatikus\" "
+"választása esetén az összes RAID fizikai kötetet tartalmazó eszköz "
+"áttekintésre és összeállításra kerül."
+
+# Type: multiselect
+# Description
+# :sl2:
+#. Type: multiselect
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:20002
+msgid ""
+"Note that a RAID partition at the end of a disk may sometimes cause that "
+"disk to be mistakenly detected as containing a RAID physical volume. In that "
+"case, you should select the appropriate partitions individually."
+msgstr ""
+"Jó tudni, hogy egy lemez végi RAID partíció miatt néha tévesen úgy tűnhet, "
+"mintha a lemez fizikai RAID kötetet tartalmazna. Ekkor egyénileg kell "
+"kiválasztania a megfelelő partíciókat."
+
+# Type: boolean
+# Description
+# :sl2:
+#. Type: boolean
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:21001
+msgid "Mount separate ${FILESYSTEM} partition?"
+msgstr "Felcsatoljak külön ${FILESYSTEM} partíciót?"
+
+# Type: boolean
+# Description
+# :sl2:
+#. Type: boolean
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:21001
+msgid "The installed system appears to use a separate ${FILESYSTEM} partition."
+msgstr ""
+"Úgy tűnik, hogy a telepített rendszer külön ${FILESYSTEM} partíciót használ."
+
+# Type: boolean
+# Description
+# :sl2:
+#. Type: boolean
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:21001
+msgid ""
+"It is normally a good idea to mount it as it will allow operations such as "
+"reinstalling the boot loader. However, if the file system on ${FILESYSTEM} "
+"is corrupt then you may want to avoid mounting it."
+msgstr ""
+"Általában jó ötlet felcsatolni, mert ez lehetőséget ad olyan műveletekre, "
+"mint pl. a rendszerbetöltő újratelepítése. Ha viszont a ${FILESYSTEM}-on "
+"lévő fájlrendszer sérült, akkor valószínűleg jobb nem felcsatolni."
 
 #. Type: text
 #. Description
@@ -3067,12 +3398,23 @@ msgstr "Kérlek, indíts újra a helyes kernellel (${DI_KERNEL})."
 msgid "Configure iSCSI volumes"
 msgstr "iSCSI kötetek konfigurálása"
 
+#. Type: select
+#. Choices
+#. Note to translators : Please keep your translations of the choices
+#. below a 65 columns limit (which means 65 characters
+#. in single-byte languages)
+#. :sl3:
+#: ../partman-iscsi.templates:2001
+msgid "Log into iSCSI targets"
+msgstr "Bejelentkezés iSCSI szerverre/célpontra"
+
 #. #-#-#-#-#  templates.pot (partman-iscsi)  #-#-#-#-#
 #. Type: select
 #. Choices
 #. Note to translators : Please keep your translations of the choices
 #. below a 65 columns limit (which means 65 characters
 #. in single-byte languages)
+#. :sl3:
 #. #-#-#-#-#  templates.pot (mdcfg)  #-#-#-#-#
 #. Type: select
 #. Choices

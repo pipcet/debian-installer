@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gl\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-02 22:41+0100\n"
+"POT-Creation-Date: 2019-11-05 23:57+0100\n"
 "PO-Revision-Date: 2018-09-27 20:25+0000\n"
 "Last-Translator: mantinan <github@manty.net>\n"
 "Language-Team: Galician <proxecto@trasno.net>\n"
@@ -244,14 +244,16 @@ msgstr ""
 "Produciuse un erro ao cargar ${PACKAGE} por motivos descoñecidos. "
 "Interrompendo."
 
-#. Type: boolean
+#. Type: error
 #. Description
 #. :sl2:
 #: ../anna.templates:8001
-msgid "Continue the install without loading kernel modules?"
-msgstr "Desexa continuar a instalación sen cargar os módulos do núcleo?"
+#, fuzzy
+#| msgid "No disk found"
+msgid "No kernel modules found"
+msgstr "Non se atopou ningún disco"
 
-#. Type: boolean
+#. Type: error
 #. Description
 #. :sl2:
 #: ../anna.templates:8001
@@ -264,18 +266,14 @@ msgstr ""
 "empregado nesta versión do instalador e o núcleo dispoñíbel no arquivo non "
 "teñen a mesma versión."
 
-#. Type: boolean
+#. Type: error
 #. Description
 #. :sl2:
 #: ../anna.templates:8001
 msgid ""
-"If you're installing from a mirror, you can work around this problem by "
-"choosing to install a different version of Debian. The install will probably "
-"fail to work if you continue without kernel modules."
+"You should make sure that your installation image is up-to-date, or - if "
+"that's the case - try a different mirror, preferably deb.debian.org."
 msgstr ""
-"Se está a instalar desde unha réplica, pode evitar este problema instalando "
-"unha versión diferente de Debian. A instalación ha fallar con bastante "
-"probabilidade se segue sen módulos no núcleo."
 
 #. Type: select
 #. Description
@@ -1012,6 +1010,20 @@ msgstr ""
 "dispoñíbel, deixe este campo en branco."
 
 #. Type: select
+#. Choices
+#. :sl2:
+#: ../netcfg-common.templates:8001
+msgid "WEP/Open Network"
+msgstr "WEP/Rede aberta"
+
+#. Type: select
+#. Choices
+#. :sl2:
+#: ../netcfg-common.templates:8001
+msgid "WPA/WPA2 PSK"
+msgstr "WPA/WPA2 PSK"
+
+#. Type: select
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:8002
@@ -1308,6 +1320,26 @@ msgstr "Rede de infraestrutura (xestionada)"
 msgid "Ad-hoc network (Peer to peer)"
 msgstr "Rede ad-hoc (entre parceiros)"
 
+#. Type: select
+#. Description
+#. :sl2:
+#: ../netcfg-common.templates:24002
+msgid "Type of wireless network:"
+msgstr "Tipo de rede sen fíos:"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../netcfg-common.templates:24002
+msgid ""
+"Wireless networks are either managed or ad-hoc. If you use a real access "
+"point of some sort, your network is Managed. If another computer is your "
+"'access point', then your network may be Ad-hoc."
+msgstr ""
+"As redes sen fíos poden ser xestionadas ou ad-hoc. Se emprega un punto de "
+"acceso de calquera tipo, a rede é Xestionada. Se outro computador é o «punto "
+"de acceso», entón a rede pode ser Ad-hoc."
+
 #. Type: text
 #. Description
 #. :sl2:
@@ -1321,6 +1353,13 @@ msgstr "Configuración da rede sen fíos"
 #: ../netcfg-common.templates:26001
 msgid "Searching for wireless access points..."
 msgstr "Estanse a buscar puntos de acceso sen fíos..."
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../netcfg-common.templates:29001
+msgid "Detecting link on ${interface}; please wait..."
+msgstr "Estase a detectar a conexión en ${interface}. Agarde."
 
 #. Type: text
 #. Description
@@ -1803,6 +1842,15 @@ msgstr ""
 "Escolla o protocolo que quere empregar para descargar ficheiros. Se non está "
 "seguro, escolla «http», xa que ten menos problemas coas devasas."
 
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl2:
+#: ../download-installer.templates:1001
+msgid "Download installer components"
+msgstr "Descargar compoñentes do instalador"
+
 #. #-#-#-#-#  templates.pot (net-retriever)  #-#-#-#-#
 #. Type: select
 #. Choices
@@ -1912,6 +1960,104 @@ msgstr ""
 "Aconteceu un problema ao ler os datos do soporte extraíbel. Asegúrese de que "
 "o soporte correcto estea introducido. Se segue a ter problemas, pode ter un "
 "soporte defectuoso."
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:1001
+msgid "Load drivers from removable media now?"
+msgstr "Desexa cargar agora os controladores desde un soporte extraíbel?"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:1001
+msgid ""
+"You probably need to load drivers from removable media before continuing "
+"with the installation. If you know that the install will work without extra "
+"drivers, you can skip this step."
+msgstr ""
+"É posíbel que teña que cargar controladores dun soporte extraíbel antes de "
+"continuar a instalación. Se xa sabe que a instalación funcionará sen "
+"controladores adicionais, pode omitir este paso."
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:1001
+msgid ""
+"If you do need to load drivers, insert the appropriate removable media, such "
+"as a driver floppy or USB stick before continuing."
+msgstr ""
+"Se ten que cargar controladores, introduza o soporte extraíbel axeitado, "
+"como un disquete ou un lapis USB, antes de continuar."
+
+#. Type: text
+#. Description
+#. main-menu item
+#. Translators: keep below 55 columns
+#. :sl2:
+#: ../load-media.templates:2001
+msgid "Load drivers from removable media"
+msgstr "Cargar os controladores desde un soporte extraíbel"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:3001
+msgid "Unknown removable media. Try to load anyway?"
+msgstr "Soporte extraíbel descoñecido. Desexa tentar cargalo aínda así?"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:3001
+msgid ""
+"Detected removable media that is not a known driver media. Please make sure "
+"that the correct media is inserted. You can still continue if you have an "
+"unofficial removable media you want to use."
+msgstr ""
+"O soporte extraíbel detectado non é un soporte de controladores coñecido. "
+"Comprobe que estea introducido o soporte correcto. Pode continuar se quere "
+"empregar un soporte extraíbel non oficial."
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../load-media.templates:4001
+msgid "Please insert ${DISK_LABEL} ('${DISK_NAME}') first."
+msgstr "Primeiro introduza ${DISK_LABEL} («${DISK_NAME}»)."
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../load-media.templates:4001
+msgid ""
+"Due to dependencies between packages, drivers must be loaded in the correct "
+"order."
+msgstr ""
+"Debido a dependencias entre paquetes, débense cargar os controladores na "
+"orde correcta."
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:5001
+msgid "Load drivers from another removable media?"
+msgstr "Desexa cargar controladores desde outro soporte extraíbel?"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:5001
+msgid ""
+"To load additional drivers from another removable media, please insert the "
+"appropriate removable media, such as a driver floppy or USB stick before "
+"continuing."
+msgstr ""
+"Para cargar controladores adicionais de outro soporte extraíbel, introduza o "
+"soporte extraíbel axeitado, como un disquete ou un lapis USB, antes de "
+"continuar."
 
 #. Type: error
 #. Description
@@ -4801,6 +4947,71 @@ msgstr ""
 msgid "Change debconf priority"
 msgstr "Trocar a prioridade de debconf"
 
+#. Type: select
+#. Choices
+#. :sl2:
+#: ../pkgsel.templates:9001
+msgid "No automatic updates"
+msgstr "Sen actualizacións automáticas"
+
+#. Type: select
+#. Choices
+#. :sl2:
+#: ../pkgsel.templates:9001
+msgid "Install security updates automatically"
+msgstr "Instalar as actualizacións de seguridade automáticamente"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+msgid "Updates management on this system:"
+msgstr "Xestión das actualizacións neste sistema:"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+msgid ""
+"Applying updates on a frequent basis is an important part of keeping the "
+"system secure."
+msgstr ""
+"Aplicar actualizacións con frecuencia é unha parte importante para manter o "
+"sistema seguro."
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+msgid ""
+"By default, security updates are not automatically installed, as security "
+"advisories should be reviewed before manual installation of the updates "
+"using standard package management tools."
+msgstr ""
+"Por defecto, as actualizacións de seguridade non se instalan "
+"automáticamente, xa que os boletíns de seguridade deberían de revisarse "
+"antes da instalación das actualizacións utilizando as ferramentas estándar "
+"de xestión de paquetes."
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+msgid ""
+"Alternatively the unattended-upgrades package can be installed, which will "
+"install security updates automatically. Note however that automatic "
+"installation of updates may occasionally cause unexpected downtime of "
+"services provided by this machine in the rare cases where the update is not "
+"fully backward-compatible, or where the security advisory requires the "
+"administrator to perform some other manual operation."
+msgstr ""
+"Alternativamente o paquete unattended-upgrades pode ser instalado, este "
+"instalará as actualizacións de seguridade automáticamente. Téñase en conta "
+"que a instalacion automática de actualizacións pode ocasionalmente causar a "
+"parada dos servicios proporcionados por esta máquina nos casos raros onde a "
+"actualización non é completamente compatible co anterior, ou se o boletín de "
+"seguridade require que o administrador faga algún tipo de operación manual."
+
 #. Type: error
 #. Description
 #. :sl3:
@@ -5064,220 +5275,6 @@ msgstr ""
 #: ../rescue-check.templates:2001
 msgid "Rescue mode"
 msgstr "Modo de rescate"
-
-#. Type: select
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:3002
-msgid "Device to use as root file system:"
-msgstr "Dispositivo a empregar como sistema de ficheiros raíz:"
-
-#. Type: select
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:3002
-msgid ""
-"Enter a device you wish to use as your root file system. You will be able to "
-"choose among various rescue operations to perform on this file system."
-msgstr ""
-"Introduza o dispositivo que quere empregar como sistema de ficheiros raíz. "
-"Ha poder escoller entre varias operacións de rescate para realizar neste "
-"sistema de ficheiros."
-
-#. Type: select
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:3002
-msgid ""
-"If you choose not to use a root file system, you will be given a reduced "
-"choice of operations that can be performed without one. This may be useful "
-"if you need to correct a partitioning problem."
-msgstr ""
-"Se escolle non empregar un sistema de ficheiros raíz, daráselle unha lista "
-"reducida de escollas de operacións que pode facer sen un, o que pode ser "
-"útil se precisa corrixir un problema de particionamento."
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:8001
-msgid "Execute a shell in ${DEVICE}"
-msgstr "Executar unha shell en ${DEVICE}"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:9001
-msgid "Execute a shell in the installer environment"
-msgstr "Executar unha shell no ambiente do instalador"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:10001
-msgid "Choose a different root file system"
-msgstr "Escoller un sistema de ficheiros raíz diferente"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:11001
-msgid "Reboot the system"
-msgstr "Reiniciar o sistema"
-
-#. Type: text
-#. Description
-#. :sl2:
-#. Type: text
-#. Description
-#. :sl2:
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:12001 ../rescue-mode.templates:16001
-#: ../rescue-mode.templates:17001
-msgid "Executing a shell"
-msgstr "Estase a executar unha shell"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:12001
-msgid ""
-"After this message, you will be given a shell with ${DEVICE} mounted on \"/"
-"\". If you need any other file systems (such as a separate \"/usr\"), you "
-"will have to mount those yourself."
-msgstr ""
-"Despois desta mensaxe háselle dar unha shell con ${DEVICE} montado en «/». "
-"Se precisa de outros sistemas de ficheiros (como un «/usr» separado), ha ter "
-"que montalos por si mesmo."
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:15001
-msgid "Interactive shell on ${DEVICE}"
-msgstr "Shell interactiva en ${DEVICE}"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:16001
-msgid ""
-"After this message, you will be given a shell with ${DEVICE} mounted on \"/"
-"target\". You may work on it using the tools available in the installer "
-"environment. If you want to make it your root file system temporarily, run "
-"\"chroot /target\". If you need any other file systems (such as a separate "
-"\"/usr\"), you will have to mount those yourself."
-msgstr ""
-"Despois desta mensaxe háselle dar unha shell con ${DEVICE} montado en «/"
-"target». Pode traballar nel empregando as ferramentas dispoñíbeis no "
-"ambiente do instalador. Se quere convertelo no sistema de ficheiros raíz de "
-"xeito temporal, execute «chroot /target». Se precisa de outros sistemas de "
-"ficheiros (como un «/usr» separado), ha ter que montalos por si mesmo."
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:17001
-msgid ""
-"After this message, you will be given a shell in the installer environment. "
-"No file systems have been mounted."
-msgstr ""
-"Despois desta mensaxe háselle dar unha shell no ambiente do instalador. Non "
-"se montou ningún sistema de ficheiros."
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:18001
-msgid "Interactive shell in the installer environment"
-msgstr "Shell interactiva no ambiente do instalador"
-
-#. Type: password
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:19001
-msgid "Passphrase for ${DEVICE}:"
-msgstr "Frase de paso para ${DEVICE}:"
-
-#. Type: password
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:19001
-msgid "Please enter the passphrase for the encrypted volume ${DEVICE}."
-msgstr "Introduza a frase de paso do volume cifrado ${DEVICE}."
-
-#. Type: password
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:19001
-msgid ""
-"If you don't enter anything, the volume will not be available during rescue "
-"operations."
-msgstr ""
-"Se non introduce nada, o volume non ha estar dispoñíbel durante as "
-"operacións de rescate."
-
-#. Type: multiselect
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:20002
-msgid "Partitions to assemble:"
-msgstr "Particións a usar:"
-
-#. Type: multiselect
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:20002
-msgid ""
-"Select the partitions to assemble into a RAID array. If you select "
-"\"Automatic\", then all devices containing RAID physical volumes will be "
-"scanned and assembled."
-msgstr ""
-"Escolla as particións para montar o RAID. Se escolle \"Automático\", tódolos "
-"dispositivos que conteñan volumes físicos RAID serán escaneados e usados."
-
-#. Type: multiselect
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:20002
-msgid ""
-"Note that a RAID partition at the end of a disk may sometimes cause that "
-"disk to be mistakenly detected as containing a RAID physical volume. In that "
-"case, you should select the appropriate partitions individually."
-msgstr ""
-"Fíxese que unha partición RAID ao final dun disco podería ás veces causar "
-"que se detecte incorrectamente que ese disco contén un volume físico RAID. "
-"En ese caso debe escoller as particións adecuadas individualmente."
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:21001
-msgid "Mount separate ${FILESYSTEM} partition?"
-msgstr "Quere montar a partición «${FILESYSTEM}» separada?"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:21001
-msgid "The installed system appears to use a separate ${FILESYSTEM} partition."
-msgstr ""
-"O sistema instalado semella usar unha partición «${FILESYSTEM}» separada."
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:21001
-msgid ""
-"It is normally a good idea to mount it as it will allow operations such as "
-"reinstalling the boot loader. However, if the file system on ${FILESYSTEM} "
-"is corrupt then you may want to avoid mounting it."
-msgstr ""
-"Normalmente é boa ida montala xa que lle permitirá realizar certas "
-"operacións como reinstalar o cargador de arranque. Pero se o sistema en "
-"«${FILESYSTEM}» está corrupto pode que prefira non facelo."
 
 #. Type: text
 #. Description

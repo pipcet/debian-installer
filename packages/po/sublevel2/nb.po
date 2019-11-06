@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nb\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-02 22:41+0100\n"
+"POT-Creation-Date: 2019-11-05 23:57+0100\n"
 "PO-Revision-Date: 2019-10-01 09:56+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <i18n-nb@lister.ping.uio.no>\n"
@@ -237,14 +237,16 @@ msgstr "Klarte ikke å laste installasjonskomponenten"
 msgid "Loading ${PACKAGE} failed for unknown reasons. Aborting."
 msgstr "Lastingen av ${PACKAGE} mislyktes av ukjente årsaker. Avbryter."
 
-#. Type: boolean
+#. Type: error
 #. Description
 #. :sl2:
 #: ../anna.templates:8001
-msgid "Continue the install without loading kernel modules?"
-msgstr "Vil du fortsette installasjonen uten å laste inn kjernemoduler?"
+#, fuzzy
+#| msgid "No disk found"
+msgid "No kernel modules found"
+msgstr "Fant ingen harddisker"
 
-#. Type: boolean
+#. Type: error
 #. Description
 #. :sl2:
 #: ../anna.templates:8001
@@ -257,18 +259,14 @@ msgstr ""
 "brukes i denne versjonen av installasjonsprogrammet ikke stemmer med "
 "versjonen som finnes i arkivet."
 
-#. Type: boolean
+#. Type: error
 #. Description
 #. :sl2:
 #: ../anna.templates:8001
 msgid ""
-"If you're installing from a mirror, you can work around this problem by "
-"choosing to install a different version of Debian. The install will probably "
-"fail to work if you continue without kernel modules."
+"You should make sure that your installation image is up-to-date, or - if "
+"that's the case - try a different mirror, preferably deb.debian.org."
 msgstr ""
-"Hvis du installerer fra et nett-arkiv kan du komme rundt dette problemet ved "
-"å velge å installere en annen Debian-versjon. Installasjonen blir antakelig "
-"mislykket hvis du fortsetter uten kjernemoduler."
 
 #. Type: select
 #. Description
@@ -998,6 +996,20 @@ msgstr ""
 "hvis det er det samme hvilket nettverk du bruker."
 
 #. Type: select
+#. Choices
+#. :sl2:
+#: ../netcfg-common.templates:8001
+msgid "WEP/Open Network"
+msgstr "WEP/åpne nettverk"
+
+#. Type: select
+#. Choices
+#. :sl2:
+#: ../netcfg-common.templates:8001
+msgid "WPA/WPA2 PSK"
+msgstr "WPA/WPA2-PSK"
+
+#. Type: select
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:8002
@@ -1292,6 +1304,27 @@ msgstr "Infrastruktur (Håndtert) nettverk"
 msgid "Ad-hoc network (Peer to peer)"
 msgstr "Ad-hoc-nettverk (mellom datamaskiner)"
 
+#. Type: select
+#. Description
+#. :sl2:
+#: ../netcfg-common.templates:24002
+msgid "Type of wireless network:"
+msgstr "Type trådløst nettverk:"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../netcfg-common.templates:24002
+msgid ""
+"Wireless networks are either managed or ad-hoc. If you use a real access "
+"point of some sort, your network is Managed. If another computer is your "
+"'access point', then your network may be Ad-hoc."
+msgstr ""
+"Trådløse nettverk er enten håndterte eller ad-hoc. Hvis du bruker et "
+"virkelig tilgangspunkt av en eller annen type, så er nettverket ditt "
+"håndtert. Hvis en annen datamaskin er «tilgangspunktet» ditt, så er "
+"nettverket ad-hoc."
+
 #. Type: text
 #. Description
 #. :sl2:
@@ -1305,6 +1338,13 @@ msgstr "Oppsett av trådløst nettverk"
 #: ../netcfg-common.templates:26001
 msgid "Searching for wireless access points..."
 msgstr "Søker etter trådløse tilgangspunkt ..."
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../netcfg-common.templates:29001
+msgid "Detecting link on ${interface}; please wait..."
+msgstr "Finner link på ${interface}, vent litt ..."
 
 #. Type: text
 #. Description
@@ -1788,6 +1828,15 @@ msgstr ""
 "usikker, bør du velge «HTTP», siden det er mindre utsatt for problemer med "
 "brannmurer."
 
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl2:
+#: ../download-installer.templates:1001
+msgid "Download installer components"
+msgstr "Last ned installasjonskomponenter"
+
 #. #-#-#-#-#  templates.pot (net-retriever)  #-#-#-#-#
 #. Type: select
 #. Choices
@@ -1897,6 +1946,103 @@ msgstr ""
 "Det gikk ikke å lese dataene fra det fjernbare mediet. Sjekk at rett medium "
 "er tilstede. Hvis du fremdeles har problemer da, kan det hende at det "
 "fjernbare mediet er ødelagt."
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:1001
+msgid "Load drivers from removable media now?"
+msgstr "Vil du laste drivere fra det fjernbare mediet nå?"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:1001
+msgid ""
+"You probably need to load drivers from removable media before continuing "
+"with the installation. If you know that the install will work without extra "
+"drivers, you can skip this step."
+msgstr ""
+"Du må sannsynligvis laste inn drivere fra fjernbare media før du fortsetter "
+"installasjonen. Hvis du vet at installasjonen kan klare seg uten ekstra "
+"drivere, kan du hoppe over dette trinnet."
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:1001
+msgid ""
+"If you do need to load drivers, insert the appropriate removable media, such "
+"as a driver floppy or USB stick before continuing."
+msgstr ""
+"Hvis du trenger å laste drivere, sett inn det rette fjernbare mediet, slik "
+"som en diskett eller USB-pinne, før du fortsetter."
+
+#. Type: text
+#. Description
+#. main-menu item
+#. Translators: keep below 55 columns
+#. :sl2:
+#: ../load-media.templates:2001
+msgid "Load drivers from removable media"
+msgstr "Last inn drivere fra fjernbart medium"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:3001
+msgid "Unknown removable media. Try to load anyway?"
+msgstr "Ukjent fjernbart medium. Forsøke å laste inn likevel?"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:3001
+msgid ""
+"Detected removable media that is not a known driver media. Please make sure "
+"that the correct media is inserted. You can still continue if you have an "
+"unofficial removable media you want to use."
+msgstr ""
+"Funnet fjernbart medium er ikke et kjent drivermedium. Sjekk at rett "
+"fjernbart medium er koblet til. Du kan fremdeles fortsette hvis du har et "
+"uoffisiell fjernbart medium du vil bruke."
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../load-media.templates:4001
+msgid "Please insert ${DISK_LABEL} ('${DISK_NAME}') first."
+msgstr "Sett inn ${DISK_LABEL} ('${DISK_NAME}') først."
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../load-media.templates:4001
+msgid ""
+"Due to dependencies between packages, drivers must be loaded in the correct "
+"order."
+msgstr ""
+"På grunn av avhengigheter mellom pakker må drivere lastes i riktig "
+"rekkefølge."
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:5001
+msgid "Load drivers from another removable media?"
+msgstr "Vil du laste drivere fra et annet fjernbart medium?"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:5001
+msgid ""
+"To load additional drivers from another removable media, please insert the "
+"appropriate removable media, such as a driver floppy or USB stick before "
+"continuing."
+msgstr ""
+"For å laste ekstra drivere fra et annet fjernbart medium, sett inn det rette "
+"fjernbare mediet, slik som en diskett eller USB-pinne, før du fortsetter."
 
 #. Type: error
 #. Description
@@ -4762,6 +4908,68 @@ msgstr ""
 msgid "Change debconf priority"
 msgstr "Endre debconf-prioritet"
 
+#. Type: select
+#. Choices
+#. :sl2:
+#: ../pkgsel.templates:9001
+msgid "No automatic updates"
+msgstr "Ingen automatiske oppdateringer"
+
+#. Type: select
+#. Choices
+#. :sl2:
+#: ../pkgsel.templates:9001
+msgid "Install security updates automatically"
+msgstr "Installer sikkerhetsoppdateringer automatisk"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+msgid "Updates management on this system:"
+msgstr "Oppdateringsadministrasjon på dette systemet:"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+msgid ""
+"Applying updates on a frequent basis is an important part of keeping the "
+"system secure."
+msgstr "Å oppdatere hyppig er en viktig del av å holde systemet sikkert."
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+msgid ""
+"By default, security updates are not automatically installed, as security "
+"advisories should be reviewed before manual installation of the updates "
+"using standard package management tools."
+msgstr ""
+"Som forvalg installeres ikke sikkerhetsoppdateringer automatisk, da "
+"sikkerhetsannonseringer bør ses over før oppdateringene installeres manuelt "
+"ved hjelp av de vanlige verktøyene for pakkehåndtering."
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+msgid ""
+"Alternatively the unattended-upgrades package can be installed, which will "
+"install security updates automatically. Note however that automatic "
+"installation of updates may occasionally cause unexpected downtime of "
+"services provided by this machine in the rare cases where the update is not "
+"fully backward-compatible, or where the security advisory requires the "
+"administrator to perform some other manual operation."
+msgstr ""
+"Alternativt kan pakken unattended-upgrades installeres.  Denne vil "
+"automatisk installere sikkerhetsoppdateringer.  Merk at slik automatisk "
+"installasjon av oppdateringer av og til kan forårsake uventet nedetid på "
+"tjenester som tilbys av maskinen i de sjeldne tilfellene der en oppdatering "
+"ikke er helt bakoverkompatibel eller der sikkerhetsannonseringen krever at "
+"administratoren utfører noen manuelle operasjoner."
+
 #. Type: error
 #. Description
 #. :sl3:
@@ -5022,219 +5230,6 @@ msgstr ""
 #: ../rescue-check.templates:2001
 msgid "Rescue mode"
 msgstr "Nødmodus"
-
-#. Type: select
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:3002
-msgid "Device to use as root file system:"
-msgstr "Enhet som skal monteres som rotfilsystem:"
-
-#. Type: select
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:3002
-msgid ""
-"Enter a device you wish to use as your root file system. You will be able to "
-"choose among various rescue operations to perform on this file system."
-msgstr ""
-"Oppgi en enhet du vil bruke som rot-filsystem. Du vil kunne velge mellom "
-"forskjellige redningshandlinger som kan utføres på dette filsystemet."
-
-#. Type: select
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:3002
-msgid ""
-"If you choose not to use a root file system, you will be given a reduced "
-"choice of operations that can be performed without one. This may be useful "
-"if you need to correct a partitioning problem."
-msgstr ""
-"Hvis du velger å ikke bruke et rotfilsystem, vil du få et redusert valg av "
-"operasjoner som kan utføres uten et. Dette kan være nyttig hvis du må rettet "
-"et partisjoneringsproblem."
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:8001
-msgid "Execute a shell in ${DEVICE}"
-msgstr "Kjør et skall i ${DEVICE}"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:9001
-msgid "Execute a shell in the installer environment"
-msgstr "Kjør et skall i installeringens miljø"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:10001
-msgid "Choose a different root file system"
-msgstr "Velg et annet rot-filsystem"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:11001
-msgid "Reboot the system"
-msgstr "Start systemet på nytt"
-
-#. Type: text
-#. Description
-#. :sl2:
-#. Type: text
-#. Description
-#. :sl2:
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:12001 ../rescue-mode.templates:16001
-#: ../rescue-mode.templates:17001
-msgid "Executing a shell"
-msgstr "Kjører et skall"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:12001
-msgid ""
-"After this message, you will be given a shell with ${DEVICE} mounted on \"/"
-"\". If you need any other file systems (such as a separate \"/usr\"), you "
-"will have to mount those yourself."
-msgstr ""
-"Etter denne meldingen vil du få et skall med ${DEVICE} montert på «/». Hvis "
-"du trenger andre filsystem (som «/usr»), så må du montere disse selv."
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:15001
-msgid "Interactive shell on ${DEVICE}"
-msgstr "Interaktivt skall på ${DEVICE}"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:16001
-msgid ""
-"After this message, you will be given a shell with ${DEVICE} mounted on \"/"
-"target\". You may work on it using the tools available in the installer "
-"environment. If you want to make it your root file system temporarily, run "
-"\"chroot /target\". If you need any other file systems (such as a separate "
-"\"/usr\"), you will have to mount those yourself."
-msgstr ""
-"Etter denne meldingen vil du få et skall med ${DEVICE} montert på  «/"
-"target». Du kan arbeide på det med de verktøyene som finnes i "
-"installeringsmiljøet. Hvis du trenger å gjøre det midlertidig til ditt rot-"
-"filsystem, så kjør «chroot /target». Hvis du trenger andre filsystemer (som "
-"«/usr»), så må du montere disse selv."
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:17001
-msgid ""
-"After this message, you will be given a shell in the installer environment. "
-"No file systems have been mounted."
-msgstr ""
-"Etter denne meldingen vil du få et skall i installasjonsmiljøet. Ingen "
-"filsystem er montert."
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:18001
-msgid "Interactive shell in the installer environment"
-msgstr "Interaktivt skall i installasjonsmiljøet"
-
-#. Type: password
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:19001
-msgid "Passphrase for ${DEVICE}:"
-msgstr "Adgangsfrase for ${DEVICE}:"
-
-#. Type: password
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:19001
-msgid "Please enter the passphrase for the encrypted volume ${DEVICE}."
-msgstr "Skriv inn passord-strengen for det krypterte dataområdet ${DEVICE}."
-
-#. Type: password
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:19001
-msgid ""
-"If you don't enter anything, the volume will not be available during rescue "
-"operations."
-msgstr ""
-"Hvis du ikke skriver inn noe, så vil ikke dataområdet være tilgjengelig "
-"under redningsoperasjoner."
-
-#. Type: multiselect
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:20002
-msgid "Partitions to assemble:"
-msgstr "Partisjoner som skal settes sammen:"
-
-#. Type: multiselect
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:20002
-msgid ""
-"Select the partitions to assemble into a RAID array. If you select "
-"\"Automatic\", then all devices containing RAID physical volumes will be "
-"scanned and assembled."
-msgstr ""
-"Velg partisjonene som skal sette sammen til en RAID-rekke. Hvis du velger "
-"«Automatisk», så vil alle enheter som inneholder fysiske RAID-volum bli "
-"skannet og satt sammen."
-
-#. Type: multiselect
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:20002
-msgid ""
-"Note that a RAID partition at the end of a disk may sometimes cause that "
-"disk to be mistakenly detected as containing a RAID physical volume. In that "
-"case, you should select the appropriate partitions individually."
-msgstr ""
-"Merk at en RAID-partisjon på slutten av en disk kan noen ganger forårsake at "
-"disken blir feilaktig oppfattet som et fysisk RAID-volum. I så fall, bør du "
-"velge passende partisjoner individuelt."
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:21001
-msgid "Mount separate ${FILESYSTEM} partition?"
-msgstr "Monter egen ${FILESYSTEM}-partisjon?"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:21001
-msgid "The installed system appears to use a separate ${FILESYSTEM} partition."
-msgstr ""
-"Det installerte systemet ser ut til å ha en egen ${FILESYSTEM}-partisjon."
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:21001
-msgid ""
-"It is normally a good idea to mount it as it will allow operations such as "
-"reinstalling the boot loader. However, if the file system on ${FILESYSTEM} "
-"is corrupt then you may want to avoid mounting it."
-msgstr ""
-"Det er normalt en god ide å montere det siden det vil tillate operasjoner "
-"som reinstallering av oppstartslasteren. Likevel, hvis filsystemet på "
-"${FILESYSTEM} er ødelagt så vil du kanskje unngå å montere det."
 
 #. Type: text
 #. Description

@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer_packages_po_sublevel2_ro\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-02 22:41+0100\n"
+"POT-Creation-Date: 2019-11-05 23:57+0100\n"
 "PO-Revision-Date: 2018-11-29 14:33+0200\n"
 "Last-Translator: Jobava <jobaval10n@gmail.com>\n"
 "Language-Team: Romanian <debian-l10n-romanian@lists.debian.org>\n"
@@ -248,14 +248,16 @@ msgstr "Încărcarea componentei programului de instalare a eșuat"
 msgid "Loading ${PACKAGE} failed for unknown reasons. Aborting."
 msgstr "Încărcarea ${PACKAGE} a eșuat din motive necunoscute. Se abandonează."
 
-#. Type: boolean
+#. Type: error
 #. Description
 #. :sl2:
 #: ../anna.templates:8001
-msgid "Continue the install without loading kernel modules?"
-msgstr "Se continuă instalarea fără a încărca modulele de nucleu?"
+#, fuzzy
+#| msgid "No disk found"
+msgid "No kernel modules found"
+msgstr "Nu s-a găsit nici un disc"
 
-#. Type: boolean
+#. Type: error
 #. Description
 #. :sl2:
 #: ../anna.templates:8001
@@ -268,18 +270,14 @@ msgstr ""
 "nepotriviri dintre nucleul folosit de această versiune a programului de "
 "instalare și versiunea de nucleu disponibilă în arhivă."
 
-#. Type: boolean
+#. Type: error
 #. Description
 #. :sl2:
 #: ../anna.templates:8001
 msgid ""
-"If you're installing from a mirror, you can work around this problem by "
-"choosing to install a different version of Debian. The install will probably "
-"fail to work if you continue without kernel modules."
+"You should make sure that your installation image is up-to-date, or - if "
+"that's the case - try a different mirror, preferably deb.debian.org."
 msgstr ""
-"Dacă instalați de pe un sit alternativ, puteți ocoli această problemă prin "
-"instalarea altei versiuni de Debian. Instalarea probabil că va eșua dacă "
-"continuați fără module."
 
 #. Type: select
 #. Description
@@ -1020,6 +1018,20 @@ msgstr ""
 "Lăsați acest câmp liber pentru a folosi orice rețea disponibilă."
 
 #. Type: select
+#. Choices
+#. :sl2:
+#: ../netcfg-common.templates:8001
+msgid "WEP/Open Network"
+msgstr "WEP/Rețea deschisă"
+
+#. Type: select
+#. Choices
+#. :sl2:
+#: ../netcfg-common.templates:8001
+msgid "WPA/WPA2 PSK"
+msgstr "WPA/WPA2 PSK"
+
+#. Type: select
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:8002
@@ -1319,6 +1331,26 @@ msgstr "Rețea cu infrastructură (cu management)"
 msgid "Ad-hoc network (Peer to peer)"
 msgstr "Rețea ad-hoc (Peer to peer)"
 
+#. Type: select
+#. Description
+#. :sl2:
+#: ../netcfg-common.templates:24002
+msgid "Type of wireless network:"
+msgstr "Tipul rețelei fără fir:"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../netcfg-common.templates:24002
+msgid ""
+"Wireless networks are either managed or ad-hoc. If you use a real access "
+"point of some sort, your network is Managed. If another computer is your "
+"'access point', then your network may be Ad-hoc."
+msgstr ""
+"Rețelele fără fir sunt fie cu management, fie ad-hoc. Dacă folosiți un punct "
+"de acces real, rețeaua este cu management. Dacă un alt calculator este "
+"punctul de acces, atunci rețeaua ar putea fi de tip ad-hoc."
+
 #. Type: text
 #. Description
 #. :sl2:
@@ -1332,6 +1364,13 @@ msgstr "Configurație de rețea fără fir"
 #: ../netcfg-common.templates:26001
 msgid "Searching for wireless access points..."
 msgstr "Se caută puncte de acces fără fir ..."
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../netcfg-common.templates:29001
+msgid "Detecting link on ${interface}; please wait..."
+msgstr "Se detectează conexiunea pe ${interface}, vă rugăm să așteptați..."
 
 #. Type: text
 #. Description
@@ -1815,6 +1854,15 @@ msgstr ""
 "Dacă știți sigur, selectați „http”; este mai puțin probabil să creeze "
 "probleme legate de firewall-uri."
 
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl2:
+#: ../download-installer.templates:1001
+msgid "Download installer components"
+msgstr "Descărcarea de componente ale programului de instalare"
+
 #. #-#-#-#-#  templates.pot (net-retriever)  #-#-#-#-#
 #. Type: select
 #. Choices
@@ -1924,6 +1972,104 @@ msgstr ""
 "A existat o problemă la citirea datelor de pe mediul mobil. Asigurați-vă că "
 "mediul corect este conectat și/sau prezent. Dacă continuați să întâmpinați "
 "probleme, s-ar putea să aveți un mediu mobil de stocare stricat."
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:1001
+msgid "Load drivers from removable media now?"
+msgstr "Se încarcă modulele de nucleu de pe un mediu mobil?"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:1001
+msgid ""
+"You probably need to load drivers from removable media before continuing "
+"with the installation. If you know that the install will work without extra "
+"drivers, you can skip this step."
+msgstr ""
+"Probabil că va trebui să încărcați module de pe un mediu mobil înainte de a "
+"continua instalarea. Dacă știți că instalarea va funcționa fără alte module "
+"de nucleu, puteți să săriți peste acest pas."
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:1001
+msgid ""
+"If you do need to load drivers, insert the appropriate removable media, such "
+"as a driver floppy or USB stick before continuing."
+msgstr ""
+"Dacă trebuie să încărcați modulele, introduceți mediul mobil potrivit "
+"înainte de a continua."
+
+#. Type: text
+#. Description
+#. main-menu item
+#. Translators: keep below 55 columns
+#. :sl2:
+#: ../load-media.templates:2001
+msgid "Load drivers from removable media"
+msgstr "Se încarcă modulele de nucleu de pe un mediu mobil"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:3001
+msgid "Unknown removable media. Try to load anyway?"
+msgstr "Mediu mobil necunoscut. Se încearcă totuși încărcarea?"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:3001
+msgid ""
+"Detected removable media that is not a known driver media. Please make sure "
+"that the correct media is inserted. You can still continue if you have an "
+"unofficial removable media you want to use."
+msgstr ""
+"Mediul de stocare cu module de nucleu detectat este necunoscut. Asigurați-vă "
+"că mediul mobil corect este conectat. Puteți totuși continua dacă aveți un "
+"mediu de stocare neoficial pe care doriți să îl folosiți."
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../load-media.templates:4001
+msgid "Please insert ${DISK_LABEL} ('${DISK_NAME}') first."
+msgstr "Introduceți mai întâi ${DISK_LABEL} ('${DISK_NAME}')."
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../load-media.templates:4001
+msgid ""
+"Due to dependencies between packages, drivers must be loaded in the correct "
+"order."
+msgstr ""
+"Datorită dependențelor dintre pachete, modulele de nucleu trebuie încărcate "
+"în ordinea corectă."
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:5001
+msgid "Load drivers from another removable media?"
+msgstr "Se încarcă module de nucleu de pe un alt mediu mobil?"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:5001
+msgid ""
+"To load additional drivers from another removable media, please insert the "
+"appropriate removable media, such as a driver floppy or USB stick before "
+"continuing."
+msgstr ""
+"Pentru a încărca module de nucleu adiționale de pe un alt mediu mobil, "
+"introduceți mediul de stocare potrivit, de exemplu, o dischetă cu module sau "
+"un stick USB, înainte de a continua."
 
 #. Type: error
 #. Description
@@ -4826,6 +4972,70 @@ msgstr ""
 msgid "Change debconf priority"
 msgstr "Schimbare a priorității debconf"
 
+#. Type: select
+#. Choices
+#. :sl2:
+#: ../pkgsel.templates:9001
+msgid "No automatic updates"
+msgstr "Fără actualizări automate"
+
+#. Type: select
+#. Choices
+#. :sl2:
+#: ../pkgsel.templates:9001
+msgid "Install security updates automatically"
+msgstr "Instalează automat actualizări de securitate"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+msgid "Updates management on this system:"
+msgstr "Gestiunea actualizărilor pe acest sistem:"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+msgid ""
+"Applying updates on a frequent basis is an important part of keeping the "
+"system secure."
+msgstr ""
+"Actualizarea frecventă este o componentă importantă a unui sistem sigur."
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+msgid ""
+"By default, security updates are not automatically installed, as security "
+"advisories should be reviewed before manual installation of the updates "
+"using standard package management tools."
+msgstr ""
+"În mod implicit, actualizările nu sunt instalate automat deoarece alertele "
+"de securitate are trebui verificate înainte de instalarea manuală a "
+"actualizărilor cu uneltele obișnuite de gestionare a pachetelor. "
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+msgid ""
+"Alternatively the unattended-upgrades package can be installed, which will "
+"install security updates automatically. Note however that automatic "
+"installation of updates may occasionally cause unexpected downtime of "
+"services provided by this machine in the rare cases where the update is not "
+"fully backward-compatible, or where the security advisory requires the "
+"administrator to perform some other manual operation."
+msgstr ""
+"Alternative se poate instala pachetul unattended-upgrades (actualizări "
+"nesupravegheate), care va instala actualizările de securitate automat. "
+"Țineți cont că instalarea automată a actualizărilor poate rezulta în "
+"indisponibilitate neașteptată a serviciilor oferite de acest sistem în "
+"situațiile rare în care actualizarea nu este perfect compatibilă sau atunci "
+"când alerta de securitate impune anumite operațiuni manuale din partea "
+"administratorului de sistem."
+
 #. Type: error
 #. Description
 #. :sl3:
@@ -5088,222 +5298,6 @@ msgstr ""
 #: ../rescue-check.templates:2001
 msgid "Rescue mode"
 msgstr "Mod recuperare"
-
-#. Type: select
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:3002
-msgid "Device to use as root file system:"
-msgstr "Dispozitivul de folosit ca sistem de fișiere rădăcină:"
-
-#. Type: select
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:3002
-msgid ""
-"Enter a device you wish to use as your root file system. You will be able to "
-"choose among various rescue operations to perform on this file system."
-msgstr ""
-"Introduceți un dispozitiv de utilizat ca sistem de fișiere rădăcină. Veți "
-"putea alege diferite opțiuni de recuperare pentru a fi efectuate asupra "
-"sistemului de fișiere."
-
-#. Type: select
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:3002
-msgid ""
-"If you choose not to use a root file system, you will be given a reduced "
-"choice of operations that can be performed without one. This may be useful "
-"if you need to correct a partitioning problem."
-msgstr ""
-"Dacă alegeți să nu folosiți un sistem de fișiere rădăcină, vi se va oferi un "
-"set restrâns de operațiuni ce pot fi efectuate fără sistemul de fișiere "
-"rădăcină. Acest lucru ar putea fi util dacă trebuie să corectați o problemă "
-"de partiționare."
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:8001
-msgid "Execute a shell in ${DEVICE}"
-msgstr "Execută un interpretor de comenzi (shell) în ${DEVICE}"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:9001
-msgid "Execute a shell in the installer environment"
-msgstr "Execută un interpretor de comenzi (shell) în mediul de instalare"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:10001
-msgid "Choose a different root file system"
-msgstr "Alegeți un alt sistem de fișiere rădăcină"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:11001
-msgid "Reboot the system"
-msgstr "Repornirea sistemului"
-
-#. Type: text
-#. Description
-#. :sl2:
-#. Type: text
-#. Description
-#. :sl2:
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:12001 ../rescue-mode.templates:16001
-#: ../rescue-mode.templates:17001
-msgid "Executing a shell"
-msgstr "Se execută un interpretor de comenzi (shell)"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:12001
-msgid ""
-"After this message, you will be given a shell with ${DEVICE} mounted on \"/"
-"\". If you need any other file systems (such as a separate \"/usr\"), you "
-"will have to mount those yourself."
-msgstr ""
-"După acest mesaj, vi se va da o consolă cu ${DEVICE} montat la „/”. Dacă "
-"aveți nevoie și de alte sisteme de fișiere (cum ar fi un „/usr” separat), va "
-"trebui să le montați dumneavoastră."
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:15001
-msgid "Interactive shell on ${DEVICE}"
-msgstr "Consolă interactivă pe ${DEVICE}"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:16001
-msgid ""
-"After this message, you will be given a shell with ${DEVICE} mounted on \"/"
-"target\". You may work on it using the tools available in the installer "
-"environment. If you want to make it your root file system temporarily, run "
-"\"chroot /target\". If you need any other file systems (such as a separate "
-"\"/usr\"), you will have to mount those yourself."
-msgstr ""
-"După acest mesaj, vi se va da o consolă cu ${DEVICE} montat la „/target”. "
-"Veți putea lucra folosind uneltele disponibile în mediul de instalare. Dacă "
-"doriți să folosiți temporar sistemul de fișiere ca sistem de fișiere "
-"rădăcină, rulați „chroot /target”. Dacă aveți nevoie și de alte sisteme de "
-"fișiere (cum ar fi un „/usr” separat), va trebui să le montați dumneavoastră."
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:17001
-msgid ""
-"After this message, you will be given a shell in the installer environment. "
-"No file systems have been mounted."
-msgstr ""
-"După acest mesaj, vi se va da o consolă în mediul de instalare. Nu a fost "
-"montat nici un sistem de fișiere."
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:18001
-msgid "Interactive shell in the installer environment"
-msgstr "Consolă interactivă în mediul de instalare"
-
-#. Type: password
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:19001
-msgid "Passphrase for ${DEVICE}:"
-msgstr "Fraza-parolă pentru ${DEVICE}:"
-
-#. Type: password
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:19001
-msgid "Please enter the passphrase for the encrypted volume ${DEVICE}."
-msgstr "Introduceți fraza-parolă pentru volumul criptat ${DEVICE}."
-
-#. Type: password
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:19001
-msgid ""
-"If you don't enter anything, the volume will not be available during rescue "
-"operations."
-msgstr ""
-"Dacă nu introduceți nimic, volumul nu va fi disponibil în timpul "
-"operațiunilor de recuperare."
-
-#. Type: multiselect
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:20002
-msgid "Partitions to assemble:"
-msgstr "Partiții de asamblat:"
-
-#. Type: multiselect
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:20002
-msgid ""
-"Select the partitions to assemble into a RAID array. If you select "
-"\"Automatic\", then all devices containing RAID physical volumes will be "
-"scanned and assembled."
-msgstr ""
-"Alegeți partițiile de asamblat într-o matrice RAID. Dacă alegeți „Automat”, "
-"atunci toate dispozitivele care conțin volume fizice RAID vor fi scanate și "
-"asamblate."
-
-#. Type: multiselect
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:20002
-msgid ""
-"Note that a RAID partition at the end of a disk may sometimes cause that "
-"disk to be mistakenly detected as containing a RAID physical volume. In that "
-"case, you should select the appropriate partitions individually."
-msgstr ""
-"Țineți cont că o partiție RAID la sfârșitul discului poate determina "
-"detectarea greșită a acelui disc ca și conținând un volum RAID fizic. În "
-"acest caz ar trebui să selectați partițiile individual."
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:21001
-msgid "Mount separate ${FILESYSTEM} partition?"
-msgstr "Să se monteze partiția ${FILESYSTEM} separată?"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:21001
-msgid "The installed system appears to use a separate ${FILESYSTEM} partition."
-msgstr "Sistemul instalat aparent folosește o partiție ${FILESYSTEM} separată."
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:21001
-msgid ""
-"It is normally a good idea to mount it as it will allow operations such as "
-"reinstalling the boot loader. However, if the file system on ${FILESYSTEM} "
-"is corrupt then you may want to avoid mounting it."
-msgstr ""
-"În mod normal este o idee bună să îl montați, deoarece va permite operațiuni "
-"cum ar fi reinstalarea încărcătorului de sistem. Totuși, dacă sistemul de "
-"fișiere de pe ${FILESYSTEM} este corupt atunci poate doriți să evitați "
-"montarea acestuia."
 
 #. Type: text
 #. Description

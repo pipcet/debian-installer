@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-02 22:41+0100\n"
+"POT-Creation-Date: 2019-11-05 23:57+0100\n"
 "PO-Revision-Date: 2015-11-29 16:55+0700\n"
 "Last-Translator: Theppitak Karoonboonyanan <theppitak@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -2120,6 +2120,15 @@ msgstr "การทำงานคำสั่ง \"/sbin/lilo\" ไม่ส�
 msgid "Install the LILO boot loader on a hard disk"
 msgstr "ติดตั้งบูตโหลดเดอร์ LILO ลงในฮาร์ดดิสก์"
 
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl3:
+#: ../network-preseed.templates:1001
+msgid "Download debconf preconfiguration file"
+msgstr "ดาวน์โหลดแฟ้มค่าตั้งล่วงหน้าสำหรับ debconf"
+
 #. Type: string
 #. Description
 #. :sl3:
@@ -2183,6 +2192,15 @@ msgstr "อ่านรายละเอียดเพิ่มเติมไ
 
 #. Type: text
 #. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl3:
+#: ../file-preseed.templates:1001
+msgid "Load debconf preconfiguration file"
+msgstr "โหลดแฟ้มค่าตั้งล่วงหน้าสำหรับ debconf"
+
+#. Type: text
+#. Description
 #. :sl3:
 #: ../rescue-mode.templates:2001
 msgid "No partitions found"
@@ -2203,6 +2221,51 @@ msgstr ""
 "ปัญหานี้อาจเกิดจากเคอร์เนลตรวจหาดิสก์ไดรว์ไม่พบ หรืออ่านตารางพาร์ทิชันไม่ได้ "
 "หรือดิสก์อาจยังไม่ได้แบ่งพาร์ทิชัน คุณอาจตรวจสอบปัญหาผ่านเชลล์ในสภาพแวดล้อมของโปรแกรมติดตั้งได้ "
 "ถ้าคุณต้องการ"
+
+#. Type: select
+#. Choices
+#. :sl3:
+#: ../rescue-mode.templates:3001
+msgid "Assemble RAID array"
+msgstr "ประกอบสร้างอาร์เรย์ RAID"
+
+#. Type: select
+#. Choices
+#. :sl3:
+#: ../rescue-mode.templates:3001
+msgid "Do not use a root file system"
+msgstr "ไม่ใช้ระบบแฟ้มราก"
+
+#. Type: select
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:3002
+msgid "Device to use as root file system:"
+msgstr "อุปกรณ์ที่จะใช้เป็นระบบแฟ้มราก:"
+
+#. Type: select
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:3002
+msgid ""
+"Enter a device you wish to use as your root file system. You will be able to "
+"choose among various rescue operations to perform on this file system."
+msgstr ""
+"ป้อนชื่ออุปกรณ์ที่คุณต้องการใช้เป็นระบบแฟ้มราก คุณจะสามารถเลือกปฏิบัติการกู้ระบบจากตัวเลือกต่างๆ "
+"เพื่อทำกับระบบแฟ้มนี้ได้"
+
+#. Type: select
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:3002
+msgid ""
+"If you choose not to use a root file system, you will be given a reduced "
+"choice of operations that can be performed without one. This may be useful "
+"if you need to correct a partitioning problem."
+msgstr ""
+"ถ้าคุณเลือกที่จะไม่ใช้ระบบแฟ้มราก "
+"จะตัดตัวเลือกการกระทำลงเหลือเฉพาะรายการที่ไม่ต้องใช้ระบบแฟ้มรากเท่านั้น "
+"ซึ่งอาจเป็นประโยชน์ถ้าคุณต้องการแก้ปัญหาการแบ่งพาร์ทิชัน"
 
 #. Type: error
 #. Description
@@ -2244,6 +2307,13 @@ msgstr ""
 msgid "Please check the syslog for more information."
 msgstr "กรุณาตรวจสอบ syslog เพื่อดูรายละเอียดเพิ่มเติม"
 
+#. Type: select
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:6001
+msgid "Rescue operations"
+msgstr "ปฏิบัติการกู้ระบบ"
+
 #. Type: error
 #. Description
 #. :sl3:
@@ -2257,6 +2327,61 @@ msgstr "ปฏิบัติการกู้ระบบล้มเหลว
 #: ../rescue-mode.templates:7001
 msgid "The rescue operation '${OPERATION}' failed with exit code ${CODE}."
 msgstr "ปฏิบัติการกู้ระบบ \"${OPERATION}\" ล้มเหลว ด้วยรหัสผลลัพธ์ ${CODE}"
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:8001
+msgid "Execute a shell in ${DEVICE}"
+msgstr "เปิดเชลล์ใน ${DEVICE}"
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:9001
+msgid "Execute a shell in the installer environment"
+msgstr "เปิดเชลล์ภายใต้สภาพแวดล้อมของโปรแกรมติดตั้ง"
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:10001
+msgid "Choose a different root file system"
+msgstr "เลือกระบบแฟ้มรากอื่น"
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:11001
+msgid "Reboot the system"
+msgstr "เริ่มบูตระบบใหม่"
+
+#. Type: text
+#. Description
+#. :sl3:
+#. Type: text
+#. Description
+#. :sl3:
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:12001 ../rescue-mode.templates:16001
+#: ../rescue-mode.templates:17001
+msgid "Executing a shell"
+msgstr "กำลังเรียกเชลล์"
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:12001
+msgid ""
+"After this message, you will be given a shell with ${DEVICE} mounted on \"/"
+"\". If you need any other file systems (such as a separate \"/usr\"), you "
+"will have to mount those yourself."
+msgstr ""
+"หลังจากข้อความนี้ คุณจะเข้าสู่เชลล์โดยมีการเมานท์ ${DEVICE} เข้ากับ \"/\" "
+"ถ้าคุณต้องการใช้ระบบแฟ้มอื่นๆ (เช่น \"/usr\" ที่ทำแยกต่างหากไว้) ด้วย "
+"คุณจะต้องเมานท์อุปกรณ์ต่างๆ เหล่านั้นเอง"
 
 #. Type: error
 #. Description
@@ -2289,6 +2414,136 @@ msgstr "ไม่พบเชลล์ใน /target"
 #: ../rescue-mode.templates:14001
 msgid "No usable shell was found on your root file system (${DEVICE})."
 msgstr "ไม่พบเชลล์ที่ใช้การได้ในระบบแฟ้มราก (${DEVICE}) ของคุณ"
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:15001
+msgid "Interactive shell on ${DEVICE}"
+msgstr "เปิดเชลล์โต้ตอบใน ${DEVICE}"
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:16001
+msgid ""
+"After this message, you will be given a shell with ${DEVICE} mounted on \"/"
+"target\". You may work on it using the tools available in the installer "
+"environment. If you want to make it your root file system temporarily, run "
+"\"chroot /target\". If you need any other file systems (such as a separate "
+"\"/usr\"), you will have to mount those yourself."
+msgstr ""
+"หลังจากข้อความนี้ คุณจะเข้าสู่เชลล์โดยมีการเมานท์ ${DEVICE} เข้ากับ \"/target\" "
+"คุณสามารถทำงานในระบบแฟ้มดังกล่าวได้ โดยใช้เครื่องมือที่มีในระบบติดตั้ง "
+"ถ้าคุณต้องการทำให้ระบบแฟ้มดังกล่าวกลายเป็นระบบแฟ้มรากชั่วคราว ก็เรียกคำสั่ง \"chroot /target"
+"\" ถ้าคุณต้องการใช้ระบบแฟ้มอื่นๆ (เช่น \"/usr\" ที่ทำแยกต่างหากไว้) ด้วย "
+"คุณจะต้องเมานท์อุปกรณ์ต่างๆ เหล่านั้นเอง"
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:17001
+msgid ""
+"After this message, you will be given a shell in the installer environment. "
+"No file systems have been mounted."
+msgstr ""
+"หลังจากข้อความนี้ คุณจะเข้าสู่เชลล์ภายใต้สภาพแวดล้อมของโปรแกรมติดตั้ง "
+"โดยไม่มีการเมานท์ระบบแฟ้มใดๆ"
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:18001
+msgid "Interactive shell in the installer environment"
+msgstr "เปิดเชลล์โต้ตอบภายใต้สภาพแวดล้อมของโปรแกรมติดตั้ง"
+
+#. Type: password
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:19001
+msgid "Passphrase for ${DEVICE}:"
+msgstr "วลีรหัสผ่านสำหรับ ${DEVICE}:"
+
+#. Type: password
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:19001
+msgid "Please enter the passphrase for the encrypted volume ${DEVICE}."
+msgstr "กรุณาตั้งวลีรหัสผ่านสำหรับเข้ารหัสลับโวลุม ${DEVICE}"
+
+#. Type: password
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:19001
+msgid ""
+"If you don't enter anything, the volume will not be available during rescue "
+"operations."
+msgstr "ถ้าคุณไม่ป้อนอะไรเลย จะใช้โวลุมนี้ไม่ได้ในขณะกู้ระบบ"
+
+#. Type: multiselect
+#. Choices
+#. :sl3:
+#: ../rescue-mode.templates:20001
+msgid "Automatic"
+msgstr "อัตโนมัติ"
+
+#. Type: multiselect
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:20002
+msgid "Partitions to assemble:"
+msgstr "พาร์ทิชันที่จะประกอบสร้าง:"
+
+#. Type: multiselect
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:20002
+msgid ""
+"Select the partitions to assemble into a RAID array. If you select "
+"\"Automatic\", then all devices containing RAID physical volumes will be "
+"scanned and assembled."
+msgstr ""
+"เลือกพาร์ทิชันที่จะประกอบสร้างเป็นอาร์เรย์ RAID  ถ้าคุณเลือก \"อัตโนมัติ\" "
+"ก็จะตรวจหาอุปกรณ์ทั้งหมดที่มีโวลุมจริงของ RAID มาประกอบสร้าง"
+
+#. Type: multiselect
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:20002
+msgid ""
+"Note that a RAID partition at the end of a disk may sometimes cause that "
+"disk to be mistakenly detected as containing a RAID physical volume. In that "
+"case, you should select the appropriate partitions individually."
+msgstr ""
+"ระวังว่าบางครั้งพาร์ทิชัน RAID ที่ท้ายดิสก์อาจทำให้ดิสก์นั้นๆ ถูกตรวจพบว่าเป็นโวลุมจริงของ RAID "
+"ทั้งที่ไม่ใช่ ในกรณีดังกล่าว คุณควรเลือกพาร์ทิชันต่างๆ ที่เหมาะสมทีละพาร์ทิชันเอา"
+
+#. Type: boolean
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:21001
+msgid "Mount separate ${FILESYSTEM} partition?"
+msgstr "จะเมานท์พาร์ทิชัน ${FILESYSTEM} แยกต่างหากหรือไม่?"
+
+#. Type: boolean
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:21001
+msgid "The installed system appears to use a separate ${FILESYSTEM} partition."
+msgstr "พบว่าระบบที่ติดตั้งมีการใช้พาร์ทิชัน ${FILESYSTEM} แยกต่างหาก"
+
+#. Type: boolean
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:21001
+msgid ""
+"It is normally a good idea to mount it as it will allow operations such as "
+"reinstalling the boot loader. However, if the file system on ${FILESYSTEM} "
+"is corrupt then you may want to avoid mounting it."
+msgstr ""
+"โดยทั่วไปแล้ว การเมานท์ก็เป็นความคิดที่ดี "
+"เพราะจะทำให้สามารถดำเนินการอย่างเช่นติดตั้งบูตโหลดเดอร์ซ้ำใหม่ได้ อย่างไรก็ดี ถ้าระบบแฟ้มใน "
+"${FILESYSTEM} เสียหายอยู่ คุณก็อาจไม่ต้องการเมานท์"
 
 #. Type: text
 #. Description
@@ -3003,12 +3258,23 @@ msgstr "กรุณาบูตเครื่องใหม่ด้วยเ
 msgid "Configure iSCSI volumes"
 msgstr "ตั้งค่าโวลุม iSCSI"
 
+#. Type: select
+#. Choices
+#. Note to translators : Please keep your translations of the choices
+#. below a 65 columns limit (which means 65 characters
+#. in single-byte languages)
+#. :sl3:
+#: ../partman-iscsi.templates:2001
+msgid "Log into iSCSI targets"
+msgstr "เข้าสู่ระบบในจุดปลายทาง iSCSI"
+
 #. #-#-#-#-#  templates.pot (partman-iscsi)  #-#-#-#-#
 #. Type: select
 #. Choices
 #. Note to translators : Please keep your translations of the choices
 #. below a 65 columns limit (which means 65 characters
 #. in single-byte languages)
+#. :sl3:
 #. #-#-#-#-#  templates.pot (mdcfg)  #-#-#-#-#
 #. Type: select
 #. Choices

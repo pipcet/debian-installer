@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ru\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-02 22:41+0100\n"
+"POT-Creation-Date: 2019-11-05 23:57+0100\n"
 "PO-Revision-Date: 2017-11-17 20:26+0300\n"
 "Last-Translator: Anton Gladky <gladk@debian.org>\n"
 "Language-Team: Russian <debian-l10n-russian@lists.debian.org>\n"
@@ -240,14 +240,16 @@ msgstr "Не удалось загрузить компонент програм
 msgid "Loading ${PACKAGE} failed for unknown reasons. Aborting."
 msgstr "Не удалось загрузить ${PACKAGE} по неизвестным причинам. Отмена."
 
-#. Type: boolean
+#. Type: error
 #. Description
 #. :sl2:
 #: ../anna.templates:8001
-msgid "Continue the install without loading kernel modules?"
-msgstr "Продолжить установку без загрузки модулей ядра?"
+#, fuzzy
+#| msgid "No disk found"
+msgid "No kernel modules found"
+msgstr "Диск не найден"
 
-#. Type: boolean
+#. Type: error
 #. Description
 #. :sl2:
 #: ../anna.templates:8001
@@ -260,18 +262,14 @@ msgstr ""
 "предназначены не для той версии ядра, которое использует сейчас программа "
 "установки."
 
-#. Type: boolean
+#. Type: error
 #. Description
 #. :sl2:
 #: ../anna.templates:8001
 msgid ""
-"If you're installing from a mirror, you can work around this problem by "
-"choosing to install a different version of Debian. The install will probably "
-"fail to work if you continue without kernel modules."
+"You should make sure that your installation image is up-to-date, or - if "
+"that's the case - try a different mirror, preferably deb.debian.org."
 msgstr ""
-"Если вы производите установку с зеркала, то можете обойти эту проблему, "
-"выбрав для установки другую версию Debian. Без модулей ядра продолжение "
-"установки может оказаться невозможным."
 
 #. Type: select
 #. Description
@@ -1012,6 +1010,20 @@ msgstr ""
 "доступную сеть, оставьте это поле пустым."
 
 #. Type: select
+#. Choices
+#. :sl2:
+#: ../netcfg-common.templates:8001
+msgid "WEP/Open Network"
+msgstr "WEP/Открытая сеть"
+
+#. Type: select
+#. Choices
+#. :sl2:
+#: ../netcfg-common.templates:8001
+msgid "WPA/WPA2 PSK"
+msgstr "WPA/WPA2 PSK"
+
+#. Type: select
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:8002
@@ -1308,6 +1320,28 @@ msgstr "Управляемая сеть (Infrastructure)"
 msgid "Ad-hoc network (Peer to peer)"
 msgstr "Прямое соединение (Ad hoc)"
 
+#. Type: select
+#. Description
+#. :sl2:
+#: ../netcfg-common.templates:24002
+msgid "Type of wireless network:"
+msgstr "Тип беспроводной сети:"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../netcfg-common.templates:24002
+msgid ""
+"Wireless networks are either managed or ad-hoc. If you use a real access "
+"point of some sort, your network is Managed. If another computer is your "
+"'access point', then your network may be Ad-hoc."
+msgstr ""
+"Беспроводные сети бывает двух видов: управляемая сеть (managed network) и "
+"прямое соединение (ad hoc). Если вы подсоединены к сети через какую-либо "
+"настоящую точку доступа (access point), то у вас управляемая сеть. Если "
+"\"точкой доступа\" является другой компьютер, то, вероятно, у вас прямое "
+"соединение."
+
 #. Type: text
 #. Description
 #. :sl2:
@@ -1321,6 +1355,13 @@ msgstr "Настройка беспроводной сети"
 #: ../netcfg-common.templates:26001
 msgid "Searching for wireless access points..."
 msgstr "Поиск точек доступа (access point) беспроводной сети ..."
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../netcfg-common.templates:29001
+msgid "Detecting link on ${interface}; please wait..."
+msgstr "Обнаружение подключения к сети через ${interface}..."
 
 #. Type: text
 #. Description
@@ -1799,6 +1840,15 @@ msgstr ""
 "Выберите протокол загрузки файлов. Если не знаете, что выбрать -- выбирайте "
 "\"http\", с ним не возникает проблем с межсетевыми экранами."
 
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl2:
+#: ../download-installer.templates:1001
+msgid "Download installer components"
+msgstr "Загрузка компонентов программы установки"
+
 #. #-#-#-#-#  templates.pot (net-retriever)  #-#-#-#-#
 #. Type: select
 #. Choices
@@ -1908,6 +1958,105 @@ msgstr ""
 "При чтении данных со сменного носителя возникла ошибка. Убедитесь, что "
 "вставлен правильный носитель. Если ошибка повторится, то возможно, сменный "
 "носитель неисправен."
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:1001
+msgid "Load drivers from removable media now?"
+msgstr "Загрузить драйверы со сменного носителя?"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:1001
+msgid ""
+"You probably need to load drivers from removable media before continuing "
+"with the installation. If you know that the install will work without extra "
+"drivers, you can skip this step."
+msgstr ""
+"Вам, вероятно, придётся подгрузить драйверы с сменного носителя перед "
+"продолжением установки. Если вы уверены, что получится и без них, смело "
+"пропускайте этот шаг."
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:1001
+msgid ""
+"If you do need to load drivers, insert the appropriate removable media, such "
+"as a driver floppy or USB stick before continuing."
+msgstr ""
+"Если вам всё же надо подгрузить драйверы, вставьте соответствующий сменный "
+"носитель, например, дискету с драйвером или USB-накопитель, перед тем как "
+"продолжить."
+
+#. Type: text
+#. Description
+#. main-menu item
+#. Translators: keep below 55 columns
+#. :sl2:
+#: ../load-media.templates:2001
+msgid "Load drivers from removable media"
+msgstr "Загрузка драйверов со сменного носителя"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:3001
+msgid "Unknown removable media. Try to load anyway?"
+msgstr "Неизвестный сменный носитель. Попытаться загрузить?"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:3001
+msgid ""
+"Detected removable media that is not a known driver media. Please make sure "
+"that the correct media is inserted. You can still continue if you have an "
+"unofficial removable media you want to use."
+msgstr ""
+"Обнаруженный сменный носитель не похож на носитель с драйверами. Убедитесь, "
+"что вставлен правильный носитель. Вы можете продолжить, если вы хотите "
+"использовать неофициальную сменный носитель."
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../load-media.templates:4001
+msgid "Please insert ${DISK_LABEL} ('${DISK_NAME}') first."
+msgstr "Сначала вставьте ${DISK_LABEL} ('${DISK_NAME}')."
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../load-media.templates:4001
+msgid ""
+"Due to dependencies between packages, drivers must be loaded in the correct "
+"order."
+msgstr ""
+"Из-за зависимостей между пакетами, драйверы должны загружаться в правильном "
+"порядке."
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:5001
+msgid "Load drivers from another removable media?"
+msgstr "Загрузить драйверы с другого сменного носителя?"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:5001
+msgid ""
+"To load additional drivers from another removable media, please insert the "
+"appropriate removable media, such as a driver floppy or USB stick before "
+"continuing."
+msgstr ""
+"Для загрузки дополнительных драйверов с другого сменного носителя, перед тем "
+"как продолжить, вставьте сменный носитель с необходимым драйвером, например, "
+"дискету или USB-накопитель."
 
 #. Type: error
 #. Description
@@ -4790,6 +4939,71 @@ msgstr ""
 msgid "Change debconf priority"
 msgstr "Изменение уровня важности debconf"
 
+#. Type: select
+#. Choices
+#. :sl2:
+#: ../pkgsel.templates:9001
+msgid "No automatic updates"
+msgstr "Отключить автоматические обновления"
+
+#. Type: select
+#. Choices
+#. :sl2:
+#: ../pkgsel.templates:9001
+msgid "Install security updates automatically"
+msgstr "Автоматически устанавливать обновления безопасности"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+msgid "Updates management on this system:"
+msgstr "Управление обновлениями системы:"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+msgid ""
+"Applying updates on a frequent basis is an important part of keeping the "
+"system secure."
+msgstr ""
+"Установка обновлений на постоянной основе является важной частью поддержки "
+"безопасности системы."
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+msgid ""
+"By default, security updates are not automatically installed, as security "
+"advisories should be reviewed before manual installation of the updates "
+"using standard package management tools."
+msgstr ""
+"По умолчанию, обновления безопасности автоматически не устанавливаются и "
+"перед установкой обновлений вручную с помощью стандартных инструментов "
+"управления пакетами должны обязательно просматриваться указания по "
+"безопасности."
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+msgid ""
+"Alternatively the unattended-upgrades package can be installed, which will "
+"install security updates automatically. Note however that automatic "
+"installation of updates may occasionally cause unexpected downtime of "
+"services provided by this machine in the rare cases where the update is not "
+"fully backward-compatible, or where the security advisory requires the "
+"administrator to perform some other manual operation."
+msgstr ""
+"Вместо этого можно установить пакет unattended-upgrades, который будет "
+"устанавливать обновления безопасности автоматически. Однако заметим, что "
+"автоматическая установка обновлений может случайно привести к "
+"незапланированному простою служб,запущенных на этой машине, так как в редких "
+"случаях обновления не полностью обратно совместимы, или указания по "
+"безопасности требуют от администратора каких-то ручных действий."
+
 #. Type: error
 #. Description
 #. :sl3:
@@ -5052,225 +5266,6 @@ msgstr ""
 #: ../rescue-check.templates:2001
 msgid "Rescue mode"
 msgstr "Режим восстановления"
-
-#. Type: select
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:3002
-msgid "Device to use as root file system:"
-msgstr "Устройство, используемое в качестве корневой файловой системы:"
-
-#. Type: select
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:3002
-msgid ""
-"Enter a device you wish to use as your root file system. You will be able to "
-"choose among various rescue operations to perform on this file system."
-msgstr ""
-"Введите устройство, которое вы хотите использовать в качестве корневой "
-"файловой системы. К ней можно будет применить различные операции "
-"восстановления."
-
-#. Type: select
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:3002
-msgid ""
-"If you choose not to use a root file system, you will be given a reduced "
-"choice of operations that can be performed without one. This may be useful "
-"if you need to correct a partitioning problem."
-msgstr ""
-"Если вы выберете не использовать корневую файловую систему, то это приведёт "
-"к сокращению количества возможных операций. Но это может быть полезно при "
-"исправлении ошибок в разметке дисков."
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:8001
-msgid "Execute a shell in ${DEVICE}"
-msgstr "Запуск оболочки в ${DEVICE}"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:9001
-msgid "Execute a shell in the installer environment"
-msgstr "Запуск оболочки в рабочей среде программы установки"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:10001
-msgid "Choose a different root file system"
-msgstr "Выберите другую корневую файловую систему"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:11001
-msgid "Reboot the system"
-msgstr "Перезагрузка системы"
-
-#. Type: text
-#. Description
-#. :sl2:
-#. Type: text
-#. Description
-#. :sl2:
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:12001 ../rescue-mode.templates:16001
-#: ../rescue-mode.templates:17001
-msgid "Executing a shell"
-msgstr "Запускается оболочка"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:12001
-msgid ""
-"After this message, you will be given a shell with ${DEVICE} mounted on \"/"
-"\". If you need any other file systems (such as a separate \"/usr\"), you "
-"will have to mount those yourself."
-msgstr ""
-"После этого сообщения будет запущен интерпретатор командной строки со "
-"смонтированной корневой файловой системой \"/\" на устройстве ${DEVICE}. "
-"Если вам понадобятся дополнительные файловые системы (например, у вас "
-"отдельный раздел для \"/usr\"), то их придётся монтировать вручную."
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:15001
-msgid "Interactive shell on ${DEVICE}"
-msgstr "Интерактивная оболочка на ${DEVICE}"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:16001
-msgid ""
-"After this message, you will be given a shell with ${DEVICE} mounted on \"/"
-"target\". You may work on it using the tools available in the installer "
-"environment. If you want to make it your root file system temporarily, run "
-"\"chroot /target\". If you need any other file systems (such as a separate "
-"\"/usr\"), you will have to mount those yourself."
-msgstr ""
-"После этого сообщения устройство ${DEVICE} будет смонтировано в каталог \"/"
-"target\" и запущен интерпретатор командной строки. В нём доступны утилиты из "
-"среды программы установки. Если вы хотите сделать его временно в качестве "
-"корневой файловой системы, то выполните \"chroot /target\". Если вам нужны "
-"дополнительные файловые системы (например, у вас отдельный раздел \"/usr\"), "
-"то их придётся монтировать вручную."
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:17001
-msgid ""
-"After this message, you will be given a shell in the installer environment. "
-"No file systems have been mounted."
-msgstr ""
-"После этого сообщения будет запущен интерпретатор командной строки в "
-"окружении программы установки. Никакие файловые системы смонтированы не "
-"будут."
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:18001
-msgid "Interactive shell in the installer environment"
-msgstr "Интерактивная оболочка в окружении программы установки"
-
-#. Type: password
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:19001
-msgid "Passphrase for ${DEVICE}:"
-msgstr "Ключевая фраза для ${DEVICE}:"
-
-#. Type: password
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:19001
-msgid "Please enter the passphrase for the encrypted volume ${DEVICE}."
-msgstr "Введите ключевую фразу для шифрованного тома ${DEVICE}."
-
-#. Type: password
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:19001
-msgid ""
-"If you don't enter anything, the volume will not be available during rescue "
-"operations."
-msgstr ""
-"Если вы ничего не введёте, том будет недоступен во время операций по "
-"восстановлению."
-
-#. Type: multiselect
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:20002
-msgid "Partitions to assemble:"
-msgstr "Разделы для сборки:"
-
-#. Type: multiselect
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:20002
-msgid ""
-"Select the partitions to assemble into a RAID array. If you select "
-"\"Automatic\", then all devices containing RAID physical volumes will be "
-"scanned and assembled."
-msgstr ""
-"Выберите разделы для сборки в RAID-массив. Если вы выберете \"Автоматически"
-"\", то все устройства, составляющие физические тома RAID, будут "
-"просканированы и собраны."
-
-#. Type: multiselect
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:20002
-msgid ""
-"Note that a RAID partition at the end of a disk may sometimes cause that "
-"disk to be mistakenly detected as containing a RAID physical volume. In that "
-"case, you should select the appropriate partitions individually."
-msgstr ""
-"Заметим, что нахождение раздела RAID у конца диска может привести к тому, "
-"что диск будет ошибочно определён как содержащий физический том RAID. В этом "
-"случае вам нужно выбрать соответствующие разделы отдельно."
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:21001
-msgid "Mount separate ${FILESYSTEM} partition?"
-msgstr "Монтировать ${FILESYSTEM} как отдельный раздел?"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:21001
-msgid "The installed system appears to use a separate ${FILESYSTEM} partition."
-msgstr ""
-"В установленной системе, кажется, используется отдельный раздел для "
-"${FILESYSTEM}."
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:21001
-msgid ""
-"It is normally a good idea to mount it as it will allow operations such as "
-"reinstalling the boot loader. However, if the file system on ${FILESYSTEM} "
-"is corrupt then you may want to avoid mounting it."
-msgstr ""
-"Обычно, лучше примонтировать его, так как это позволит переустановить "
-"системный загрузчик. Однако, если файловая система в ${FILESYSTEM} "
-"повреждена, то лучше этого не делать."
 
 #. Type: text
 #. Description

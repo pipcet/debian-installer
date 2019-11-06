@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer_packages_po_sublevel3_hi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-02 22:41+0100\n"
+"POT-Creation-Date: 2019-11-05 23:57+0100\n"
 "PO-Revision-Date: 2012-10-02 08:20-0500\n"
 "Last-Translator: Kumar Appaiah\n"
 "Language-Team: \n"
@@ -2137,6 +2137,15 @@ msgstr "\"/sbin/lilo\" का कार्यान्वयन त्रुट�
 msgid "Install the LILO boot loader on a hard disk"
 msgstr "हार्ड डिस्क में लिलो बूट लोडर को संस्थापित करें"
 
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl3:
+#: ../network-preseed.templates:1001
+msgid "Download debconf preconfiguration file"
+msgstr "डेबकॉन्फ प्रीकॉन्फिगरेशन फाइल को डाउनलोड करे"
+
 #. Type: string
 #. Description
 #. :sl3:
@@ -2201,6 +2210,15 @@ msgstr "उदाहरण के लिए http://wiki.debian.org/DebianInstall
 
 #. Type: text
 #. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl3:
+#: ../file-preseed.templates:1001
+msgid "Load debconf preconfiguration file"
+msgstr "डेबकॉन्फ प्रीकॉन्फिगरेशन फाइल को लोड करे"
+
+#. Type: text
+#. Description
 #. :sl3:
 #: ../rescue-mode.templates:2001
 msgid "No partitions found"
@@ -2221,6 +2239,50 @@ msgstr ""
 "ड्राइव को पहचानने में कर्नल की असफलता या डिस्क में पार्टिशन न होना इसके कुछ कारण हो सकते "
 "हैं. आप चाहें तो इसे संस्थापक के एक शैल से इस समस्या के बारे में अधिक जानकारी प्राप्त कर सकते "
 "हैं."
+
+#. Type: select
+#. Choices
+#. :sl3:
+#: ../rescue-mode.templates:3001
+msgid "Assemble RAID array"
+msgstr "रेड अरे एकाग्र करें"
+
+#. Type: select
+#. Choices
+#. :sl3:
+#: ../rescue-mode.templates:3001
+msgid "Do not use a root file system"
+msgstr "रूट फ़ाइल सिस्टम का उपयोग न करें"
+
+#. Type: select
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:3002
+msgid "Device to use as root file system:"
+msgstr "रूट फ़ाइल सिस्टम की तरह प्रयोग करने के लिए उपकरण:"
+
+#. Type: select
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:3002
+msgid ""
+"Enter a device you wish to use as your root file system. You will be able to "
+"choose among various rescue operations to perform on this file system."
+msgstr ""
+"वह उपकरण बताएँ जिसे आप रूट फाइलतंत्र की तरह प्रयोग करना चाहते हैं. आप इस फाइलतंत्र पर "
+"किये जाने वाले कई बचाव कार्यों को चुन सकेंगे."
+
+#. Type: select
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:3002
+msgid ""
+"If you choose not to use a root file system, you will be given a reduced "
+"choice of operations that can be performed without one. This may be useful "
+"if you need to correct a partitioning problem."
+msgstr ""
+"रूट फ़ैल तंत्र न रखने का अगर आप फैसला करें तो इसके बिना जोकार्य साध्य हैं, वह प्रस्तुत किये "
+"जायेंगे. यह पार्टीशन त्रुटियों को ठीक करनेके लिए लाभदायक हो सकता है."
 
 #. Type: error
 #. Description
@@ -2265,6 +2327,13 @@ msgstr ""
 msgid "Please check the syslog for more information."
 msgstr "अधिक जानकारी के लिए कृपया सिसलॉग देखें."
 
+#. Type: select
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:6001
+msgid "Rescue operations"
+msgstr "राहत एवं बचाव कार्य"
+
 #. Type: error
 #. Description
 #. :sl3:
@@ -2278,6 +2347,61 @@ msgstr "बचाव प्रक्रिया असफल"
 #: ../rescue-mode.templates:7001
 msgid "The rescue operation '${OPERATION}' failed with exit code ${CODE}."
 msgstr "बचाव प्रक्रिया '${OPERATION}' एग्ज़िट कोड ${CODE} के साथ असफल हुई."
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:8001
+msgid "Execute a shell in ${DEVICE}"
+msgstr "${DEVICE} में एक शेल चलाएँ"
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:9001
+msgid "Execute a shell in the installer environment"
+msgstr "संस्थापक परिवेश में एक शैल चलाएँ"
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:10001
+msgid "Choose a different root file system"
+msgstr "भिन्न रूट फ़ाइल सिस्टम चुनें"
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:11001
+msgid "Reboot the system"
+msgstr "तंत्र को रीबूट करें"
+
+#. Type: text
+#. Description
+#. :sl3:
+#. Type: text
+#. Description
+#. :sl3:
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:12001 ../rescue-mode.templates:16001
+#: ../rescue-mode.templates:17001
+msgid "Executing a shell"
+msgstr "एक शेल चला रहे हैं"
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:12001
+msgid ""
+"After this message, you will be given a shell with ${DEVICE} mounted on \"/"
+"\". If you need any other file systems (such as a separate \"/usr\"), you "
+"will have to mount those yourself."
+msgstr ""
+"इस संदेश के बाद आपको \"/\" पर माउंट किये हुए ${DEVICE} के साथ एक शैल दिया जाएगा. यदि "
+"आपको अन्य फाइलतंत्रों की आवश्यकता पड़ती है (जैसे कि एक अलग \"/usr\"), तो उसे आपको स्वयं "
+"माउंट करना होगा."
 
 #. Type: error
 #. Description
@@ -2310,6 +2434,137 @@ msgstr "/target में कोई शैल नहीं पाया गय�
 #: ../rescue-mode.templates:14001
 msgid "No usable shell was found on your root file system (${DEVICE})."
 msgstr "आपके रूट फाइलतंत्र (${DEVICE}) में कोई भी उपयोगी शैल नहीं पाया गया."
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:15001
+msgid "Interactive shell on ${DEVICE}"
+msgstr "${DEVICE} में इन्टरैक्टिव शेल"
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:16001
+msgid ""
+"After this message, you will be given a shell with ${DEVICE} mounted on \"/"
+"target\". You may work on it using the tools available in the installer "
+"environment. If you want to make it your root file system temporarily, run "
+"\"chroot /target\". If you need any other file systems (such as a separate "
+"\"/usr\"), you will have to mount those yourself."
+msgstr ""
+"इस संदेश के बाद ${DEVICE} को \"/target\" पर माउंट करके आपको एक शैल दिया जाएगा. आप "
+"संस्थापक परिवेश में उपलब्ध औजारों का उपयोग करके उस शैल में कार्य कर सकते हैं. यदि आप इसे "
+"अस्थायी रूप से अपना रूट फाइलतंत्र बनाना चाहते हैं तो \"chroot /target\" चलाएँ. यदि "
+"आपको अन्य फाइलतंत्रों (जैसे कि एक पृथक \"/usr\" ) की आवश्यकता पड़ती है तो उन्हें आपको स्वयं "
+"माउंट करना होगा."
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:17001
+msgid ""
+"After this message, you will be given a shell in the installer environment. "
+"No file systems have been mounted."
+msgstr ""
+"इस संदेश के बाद आपको संस्थापक के अंदर एक शैल दिया जाएगा.कोई फाइल सिस्टम माउंट नहीं किया "
+"गया."
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:18001
+msgid "Interactive shell in the installer environment"
+msgstr "संस्थापक परिवेश में इंटरैक्टिव शैल चलाएँ"
+
+#. Type: password
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:19001
+msgid "Passphrase for ${DEVICE}:"
+msgstr "${DEVICE} से डाटा मिटा रहे हैं।"
+
+#. Type: password
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:19001
+msgid "Please enter the passphrase for the encrypted volume ${DEVICE}."
+msgstr "${DEVICE} को कूटबद्ध करने के लिए आपको एक कूटवाक्यांश लिखें."
+
+#. Type: password
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:19001
+msgid ""
+"If you don't enter anything, the volume will not be available during rescue "
+"operations."
+msgstr " कुछ  चुनने की स्थिति में वॉल्यूम बचाव के समय उपलब्ध नहीं होगा।म"
+
+#. Type: multiselect
+#. Choices
+#. :sl3:
+#: ../rescue-mode.templates:20001
+msgid "Automatic"
+msgstr "स्वचालित"
+
+#. Type: multiselect
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:20002
+msgid "Partitions to assemble:"
+msgstr "किन पार्टीशन को एकाग्र करें:"
+
+#. Type: multiselect
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:20002
+msgid ""
+"Select the partitions to assemble into a RAID array. If you select "
+"\"Automatic\", then all devices containing RAID physical volumes will be "
+"scanned and assembled."
+msgstr ""
+"रेड अरे मैं एकाग्र करने के लिए पार्टीशन चुनें. अगर आप\"स्वचालित\" चुनेंगे, तो सारे उपकरण, "
+"जिनमें रेड फिज़िकल वाल्यूम हों,उन्हें स्कैन करके एकाग्र किया जाएगा."
+
+#. Type: multiselect
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:20002
+msgid ""
+"Note that a RAID partition at the end of a disk may sometimes cause that "
+"disk to be mistakenly detected as containing a RAID physical volume. In that "
+"case, you should select the appropriate partitions individually."
+msgstr ""
+"कभी कभी डिस्क के अंत में रेड पार्टीशन को गलती सेरेड फिज़िकल वाल्यूम के रूप में डिटेक्ट किया "
+"जाता है. इसस्थिति में सही पर्तिषणों को एक-एक करके चुनें."
+
+#. Type: boolean
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:21001
+#, fuzzy
+#| msgid "Separate /home partition"
+msgid "Mount separate ${FILESYSTEM} partition?"
+msgstr "अलग /home पार्टिशन"
+
+#. Type: boolean
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:21001
+#, fuzzy
+#| msgid "Install the kernel on a PReP boot partition"
+msgid "The installed system appears to use a separate ${FILESYSTEM} partition."
+msgstr "कर्नेल को प्रेप बूट पार्टिशन पर संस्थापित करें"
+
+#. Type: boolean
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:21001
+msgid ""
+"It is normally a good idea to mount it as it will allow operations such as "
+"reinstalling the boot loader. However, if the file system on ${FILESYSTEM} "
+"is corrupt then you may want to avoid mounting it."
+msgstr ""
 
 #. Type: text
 #. Description
@@ -3052,12 +3307,23 @@ msgstr "सही कर्नल वर्शन (${DI_KERNEL}) के सा�
 msgid "Configure iSCSI volumes"
 msgstr "कूटबद्ध वॉल्यूम व्यवस्थित करें"
 
+#. Type: select
+#. Choices
+#. Note to translators : Please keep your translations of the choices
+#. below a 65 columns limit (which means 65 characters
+#. in single-byte languages)
+#. :sl3:
+#: ../partman-iscsi.templates:2001
+msgid "Log into iSCSI targets"
+msgstr "ISCSI लक्ष्यों में लॉग इन करें"
+
 #. #-#-#-#-#  templates.pot (partman-iscsi)  #-#-#-#-#
 #. Type: select
 #. Choices
 #. Note to translators : Please keep your translations of the choices
 #. below a 65 columns limit (which means 65 characters
 #. in single-byte languages)
+#. :sl3:
 #. #-#-#-#-#  templates.pot (mdcfg)  #-#-#-#-#
 #. Type: select
 #. Choices

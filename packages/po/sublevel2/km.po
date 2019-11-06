@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: km\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-02 22:41+0100\n"
+"POT-Creation-Date: 2019-11-05 23:57+0100\n"
 "PO-Revision-Date: 2012-01-17 11:26+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer <support@khmeros.info>\n"
@@ -224,14 +224,16 @@ msgstr "បាន​បរាជ័យ​ក្នុងការ​ផ្ទុ
 msgid "Loading ${PACKAGE} failed for unknown reasons. Aborting."
 msgstr "ការ​ផ្ទុក ${PACKAGE} បាន​បរាជ័យ​ដោយ​មិន​ដឹង​មូលហេតុ ។ កំពុង​បោះបង់ ។"
 
-#. Type: boolean
+#. Type: error
 #. Description
 #. :sl2:
 #: ../anna.templates:8001
-msgid "Continue the install without loading kernel modules?"
-msgstr "បន្ដ​ដំឡើង​ដោយ​មិន​ផ្ទុក​ម៉ូឌុលខឺណែល ?"
+#, fuzzy
+#| msgid "No disk found"
+msgid "No kernel modules found"
+msgstr "រក​មិន​ឃើញ​ថាស"
 
-#. Type: boolean
+#. Type: error
 #. Description
 #. :sl2:
 #: ../anna.templates:8001
@@ -243,17 +245,14 @@ msgstr ""
 "រក​មិន​ឃើញ​ម៉ូឌុល​ខឺណែល​ ។ នេះ​ប្រហែល​ជា​បណ្ដាល​មក​ពី​ភាព​ខុស​គ្នា​រវាង​ខឺណែល​ដែល​ប្រើ​ដោយ​កំណែ​កម្មវិធី​ដំឡើង​នេះ "
 "និង កំណែ​ខឺណែល​ដែល​មាន​ក្នុង​ប័ណ្ណសារ ។​"
 
-#. Type: boolean
+#. Type: error
 #. Description
 #. :sl2:
 #: ../anna.templates:8001
 msgid ""
-"If you're installing from a mirror, you can work around this problem by "
-"choosing to install a different version of Debian. The install will probably "
-"fail to work if you continue without kernel modules."
+"You should make sure that your installation image is up-to-date, or - if "
+"that's the case - try a different mirror, preferably deb.debian.org."
 msgstr ""
-"បើ​អ្នក​កំពុង​ដំឡើង​ពី​កញ្ចក់​មួយ អ្នក​អាច​ដោះស្រាយ​បញ្ហា​នេះ ដោយ​ជ្រើស​ដំឡើង​កំណែ​ផ្សេង​ទៀត​របស់​ដេបៀន ។ ការ​"
-"ដំឡើងនឹង​ប្រហែល​ជា​បរាជ័យ​ បើ​អ្នក​​បន្ត​ដោយ​មិន​មាន​ម៉ូឌុល​ខឺណែល ។​"
 
 #. Type: select
 #. Description
@@ -971,6 +970,20 @@ msgstr ""
 "ឲ្យ​ ${iface} ប្រើ ។ បើ​អ្នក​ចង់​ប្រើ​បណ្ដាញ​ដែល​មាន​ផ្សេង​ទៀត សូម​ទុក​វាល​នេះ​នៅ​ទទេ ។"
 
 #. Type: select
+#. Choices
+#. :sl2:
+#: ../netcfg-common.templates:8001
+msgid "WEP/Open Network"
+msgstr "បណ្ដាញ WEP/Open"
+
+#. Type: select
+#. Choices
+#. :sl2:
+#: ../netcfg-common.templates:8001
+msgid "WPA/WPA2 PSK"
+msgstr "WPA/WPA2 PSK"
+
+#. Type: select
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:8002
@@ -1258,6 +1271,26 @@ msgstr "បណ្ដាញ​មាន​រចនាសម្ព័ន្ធ (�
 msgid "Ad-hoc network (Peer to peer)"
 msgstr "បណ្ដាញ Ad-hoc (ចំណុច​ទៅ​ចំណុច)"
 
+#. Type: select
+#. Description
+#. :sl2:
+#: ../netcfg-common.templates:24002
+msgid "Type of wireless network:"
+msgstr "ប្រភេទ​បណ្ដាញ​ឥតខ្សែ ៖"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../netcfg-common.templates:24002
+msgid ""
+"Wireless networks are either managed or ad-hoc. If you use a real access "
+"point of some sort, your network is Managed. If another computer is your "
+"'access point', then your network may be Ad-hoc."
+msgstr ""
+"បណ្ដាញ​ឥតខ្សែ​អាច​ជា​បណ្ដាញ​ដែល​មាន​អ្នក​គ្រប់គ្រង ឬ បណ្ដាញ ad-hoc ។ បើ​អ្នក​ប្រើ​ចំណុច​ចូលដំណើរការ​ពិត​"
+"ប្រាកដ​មួយ បណ្ដាញ​របស់​អ្នក​នឹង​ជា​បណ្ដាញ​ដែល​មាន​អ្នក​គ្រប់គ្រង ។ បើ​កុំព្យូទ័រ​មួយ​ទៀត​គឺ​ជា 'ចំណុច​ចូលដំណើរការ' "
+"របស់​អ្នក នោះ​បណ្ដាញ​របស់​អ្នក​គឺ​ជា​បណ្ដាញ Ad-hoc ។"
+
 #. Type: text
 #. Description
 #. :sl2:
@@ -1271,6 +1304,13 @@ msgstr "ការ​កំណត់រចនាសម្ព័ន្ធ​បណ
 #: ../netcfg-common.templates:26001
 msgid "Searching for wireless access points..."
 msgstr "កំពុង​ស្វែង​រក​ចំណុច​ចូល​ដំណើរការ​ឥតខ្សែ..."
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../netcfg-common.templates:29001
+msgid "Detecting link on ${interface}; please wait..."
+msgstr "រក​ឃើញ​តំណ​នៅលើ ${interface}; សូម​រង់ចាំ..."
 
 #. Type: text
 #. Description
@@ -1738,6 +1778,15 @@ msgstr ""
 "សូម​ជ្រើស​ពិធីការ​ដែល​ត្រូវ​ប្រើ​សម្រាប់​ទាញយក​ឯកសារ ។ បើ​មិន​ប្រាកដ សូម​ជ្រើស\"http\" ។ វា​មិន​សូវ​មាន​"
 "បញ្ហា​ជាមួយ​ជញ្ជាំងភ្លើង ។"
 
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl2:
+#: ../download-installer.templates:1001
+msgid "Download installer components"
+msgstr "ទាញ​យក​សមាសភាគ​កម្មវិធី​ដំឡើង"
+
 #. #-#-#-#-#  templates.pot (net-retriever)  #-#-#-#-#
 #. Type: select
 #. Choices
@@ -1843,6 +1892,97 @@ msgid ""
 msgstr ""
 "មាន​បញ្ហា​ក្នុងកា​រអាន​ទិន្នន័យ​ពី​មេឌៀ​ចល័ត ។ សូម​ប្រាកដ​ថា​មាន​មេឌៀ​ដែល​ត្រឹមត្រូវ ។ ប្រសិន​បើ​​អ្នកបន្ត​នៅ​"
 "មានបញ្ហា មេឌៀ​ចល័ត​របស់​អ្នក​អាច​ខូច​ហើយ ។"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:1001
+msgid "Load drivers from removable media now?"
+msgstr "ផ្ទុក​កម្មវិធី​បញ្ជា​ស៊ីឌីរ៉ូម​ពី​ថាសទន់​កម្មវិធី​បញ្ជា ?"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:1001
+msgid ""
+"You probably need to load drivers from removable media before continuing "
+"with the installation. If you know that the install will work without extra "
+"drivers, you can skip this step."
+msgstr ""
+"អ្នក​ប្រហែល​ជា​ត្រូវផ្ទុក​កម្មវិធី​បញ្ជា​ពី​ថាសទន់ មុន​នឹង​បន្តការ​ដំឡើង ។ បើ​អ្នក​ដឹង​ថា​ការ​ដំឡើង​នឹង​ដំណើរការ​ដោយ​"
+"មិន​ត្រូវការ​កម្មវិធី​បញ្ជា​បន្ថែម អ្នក​អាច​រំលង​ជំហាន​នេះ​បាន ។"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:1001
+msgid ""
+"If you do need to load drivers, insert the appropriate removable media, such "
+"as a driver floppy or USB stick before continuing."
+msgstr "បើ​អ្នក​ពិតជា​ត្រូវការ​ផ្ទុក​កម្មវិធី​បញ្ជា សូម​បញ្ចូល​ថាសទន់​កម្មវិធី​បញ្ជា​ត្រឹមត្រូវ មុន​នឹង​បន្ត ។"
+
+#. Type: text
+#. Description
+#. main-menu item
+#. Translators: keep below 55 columns
+#. :sl2:
+#: ../load-media.templates:2001
+msgid "Load drivers from removable media"
+msgstr "ផ្ទុក​កម្មវិធី​បញ្ជា​ស៊ីឌីរ៉ូម​ពី​មេឌៀ​ចល័ត។"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:3001
+msgid "Unknown removable media. Try to load anyway?"
+msgstr "មិន​ស្គាល់​ថាស​ទន់ ។ ទោះ​ជា​យ៉ាង​ណា​ក៏​ដោយ​ព្យាយាមផ្ទុក ?"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:3001
+msgid ""
+"Detected removable media that is not a known driver media. Please make sure "
+"that the correct media is inserted. You can still continue if you have an "
+"unofficial removable media you want to use."
+msgstr ""
+"មេឌៀ​ចល័ត​ដែល​រកឃើញ​មិន​ត្រូវ​បាន​ស្គាល់​មេឌៀ​កម្មវិធី​បញ្ជា ។ សូម​ប្រាកដ​ថា មេឌៀ​ដែល​ត្រឹមត្រូវ​ត្រូវ​បានបញ្ចូល "
+"។ អ្នក​នៅតែ​អាច​បន្ដ​ ប្រសិន​បើ​អ្នក​មាន​មេឌៀ​ចល័ត​មិនផ្លូវការ​ដែល​អ្នក​ចង់​ប្រើ ។"
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../load-media.templates:4001
+msgid "Please insert ${DISK_LABEL} ('${DISK_NAME}') first."
+msgstr "សូម​បញ្ចូល ${DISK_LABEL} ('${DISK_NAME}') ជា​មុន​សិន ។"
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../load-media.templates:4001
+msgid ""
+"Due to dependencies between packages, drivers must be loaded in the correct "
+"order."
+msgstr "ដោយ​សារ​តែ​ភាព​អាស្រ័យ​រវាង​កញ្ចប់ កម្មវិធី​បញ្ជា ត្រូវ​បានតែ​បានផ្ទុក​នៅ​ក្នុង​លំដាប់ត្រឹមត្រូវ ។"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:5001
+msgid "Load drivers from another removable media?"
+msgstr "ផ្ទុក​កម្មវិធី​បញ្ជា​ពី​ចល័ត​ផ្សេង​ទៀត ?"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:5001
+msgid ""
+"To load additional drivers from another removable media, please insert the "
+"appropriate removable media, such as a driver floppy or USB stick before "
+"continuing."
+msgstr ""
+"ដើម្បី​ផ្ទុក​កម្មវិធី​បញ្ជា​បន្ថែម​ពី​មេឌៀ​ចល័ត​ដទៃ​ទៀត សូម​បញ្ចូល​កម្មវិធីមេឌៀ​ចល័ត​ដែល​​​សមរម្យ​ ដូច​ជា ថាស​ទន់​"
+"កម្មវិធី​បញ្ជា ឬ​ឧបករណ៍​ផ្ទុក​ចល័ត​មុននឹង​បន្ត ។"
 
 #. Type: error
 #. Description
@@ -4667,6 +4807,59 @@ msgstr ""
 msgid "Change debconf priority"
 msgstr "ប្តូរ​អាទិភាព debconf"
 
+#. Type: select
+#. Choices
+#. :sl2:
+#: ../pkgsel.templates:9001
+msgid "No automatic updates"
+msgstr ""
+
+#. Type: select
+#. Choices
+#. :sl2:
+#: ../pkgsel.templates:9001
+msgid "Install security updates automatically"
+msgstr ""
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+msgid "Updates management on this system:"
+msgstr ""
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+msgid ""
+"Applying updates on a frequent basis is an important part of keeping the "
+"system secure."
+msgstr ""
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+msgid ""
+"By default, security updates are not automatically installed, as security "
+"advisories should be reviewed before manual installation of the updates "
+"using standard package management tools."
+msgstr ""
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+msgid ""
+"Alternatively the unattended-upgrades package can be installed, which will "
+"install security updates automatically. Note however that automatic "
+"installation of updates may occasionally cause unexpected downtime of "
+"services provided by this machine in the rare cases where the update is not "
+"fully backward-compatible, or where the security advisory requires the "
+"administrator to perform some other manual operation."
+msgstr ""
+
 #. Type: error
 #. Description
 #. :sl3:
@@ -4919,214 +5112,6 @@ msgstr "ការ​ប្រតិបត្តិ​ពាក្យ​បញ្
 #: ../rescue-check.templates:2001
 msgid "Rescue mode"
 msgstr "របៀប​សង្គ្រោះ"
-
-#. Type: select
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:3002
-msgid "Device to use as root file system:"
-msgstr "ឧបករណ៍​ដែល​ត្រូវ​ប្រើ​ជា​ប្រព័ន្ធ​ឯកសារ root ៖"
-
-#. Type: select
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:3002
-msgid ""
-"Enter a device you wish to use as your root file system. You will be able to "
-"choose among various rescue operations to perform on this file system."
-msgstr ""
-"បញ្ចូល​ឧបករណ៍​ដែល​អ្នក​ចង់​ប្រើ​​ជា​ប្រព័ន្ធ​ឯកសារ root របស់​អ្នក ។​ អ្នក​នឹង​អាច​ជ្រើស​ក្នុង​ចំណោម​របៀប​សង្គ្រោះ​"
-"ជាច្រើន ដើម្បី​ប្រតិបត្តិ​លើ​ប្រព័ន្ធ​ឯកសារ​នេះ ។"
-
-#. Type: select
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:3002
-msgid ""
-"If you choose not to use a root file system, you will be given a reduced "
-"choice of operations that can be performed without one. This may be useful "
-"if you need to correct a partitioning problem."
-msgstr ""
-"ប្រសិនបើ​អ្នក​ជ្រើស​មិន​ប្រើ​ប្រព័ន្ធ​ឯកសារ root  អ្នក​នឹង​ត្រូវបានផ្ដល់​នូវ​ជម្រើស​ដែល​បានកាត់​បន្ថយ​របស់​"
-"ប្រតិបត្តិការ​ ដែល​អាច​ត្រូវ​បាន​អនុវត្ត​ដោយ​គ្មាន​វា ។ វា​អាច​មានប្រយោជន៍​ ប្រសិនបើ​អ្នក​ត្រូវ​កែ​បញ្ហា​"
-"ក្នុងការ​ចែក​ភាគ​ថាស ។"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:8001
-msgid "Execute a shell in ${DEVICE}"
-msgstr "ប្រតិបត្តិ​សែល​មួយ​ក្នុង ${DEVICE}"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:9001
-msgid "Execute a shell in the installer environment"
-msgstr "ប្រតិបត្តិ​សែល​មួយ​ក្នុង​បរិស្ថាន​កម្មវិធី​ដំឡើង"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:10001
-msgid "Choose a different root file system"
-msgstr "ជ្រើស​ប្រព័ន្ធ​ឯកសារ root ផ្សេង​ទៀត"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:11001
-msgid "Reboot the system"
-msgstr "ចាប់ផ្ដើម​ប្រព័ន្ធ​ឡើង​វិញ"
-
-#. Type: text
-#. Description
-#. :sl2:
-#. Type: text
-#. Description
-#. :sl2:
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:12001 ../rescue-mode.templates:16001
-#: ../rescue-mode.templates:17001
-msgid "Executing a shell"
-msgstr "កំពុង​ប្រតិបត្តិ​សែល"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:12001
-msgid ""
-"After this message, you will be given a shell with ${DEVICE} mounted on \"/"
-"\". If you need any other file systems (such as a separate \"/usr\"), you "
-"will have to mount those yourself."
-msgstr ""
-"បន្ទាប់​ពី​សារ​នេះ អ្នក​នឹង​ទទួល​បាន​សែល​មួយ​ដែល​មាន ${DEVICE} ម៉ោន​ត្រង់ \"/\" ។ បើ​អ្នក​ត្រូវការ​ប្រព័ន្ធ​"
-"ឯកសារ​ផ្សេង​ទៀត (ដូចជា \"/usr\" ផ្សេង​ពី​គេ) អ្នក​ត្រូវ​តែ​ម៉ោន​ប្រព័ន្ធ​ឯកសារ​ទាំងនោះ​ដោយ​ខ្លួន​ឯង ។"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:15001
-msgid "Interactive shell on ${DEVICE}"
-msgstr "សែល​អន្តរសកម្មលើ ${DEVICE}"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:16001
-msgid ""
-"After this message, you will be given a shell with ${DEVICE} mounted on \"/"
-"target\". You may work on it using the tools available in the installer "
-"environment. If you want to make it your root file system temporarily, run "
-"\"chroot /target\". If you need any other file systems (such as a separate "
-"\"/usr\"), you will have to mount those yourself."
-msgstr ""
-"បន្ទាប់​ពី​សារ​នេះ អ្នក​នឹង​ទទួល​បាន​សែល​មួយ​ដែល​មាន ${DEVICE} ​ដែល​បាន​ម៉ោន​ត្រង់ \"/target\" ។ អ្នក​"
-"អាច​​ធ្វើ​ការ​លើវា​ដោយ​ប្រើ​ឧបករណ៍​ដែល​មាន​ក្នុង​បរិស្ថាន​កម្មវិធី​ដំឡើង ។ បើ​អ្នក​ចង់​ធ្វើ​ឲ្យ​វា​ក្លាយ​ជា​ប្រព័ន្ធ​"
-"ឯកសារ root បណ្ដោះអាសន្ន​របស់​អ្នក អ្នក​អាច​រត់ \"chroot /target\" ។ បើ​អ្នក​ត្រូវ​ការ​ប្រព័ន្ធ​"
-"ឯកសារ​ផ្សេង​ទៀត (ដូចជា \"/usr\" ផ្សេង​ពី​គេ) អ្នក​ត្រូវ​តែ​ម៉ោន​ប្រព័ន្ធ​ឯកសារ​ទាំងនោះ​ដោយ​ខ្លួន​ឯង ។"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:17001
-msgid ""
-"After this message, you will be given a shell in the installer environment. "
-"No file systems have been mounted."
-msgstr ""
-"បន្ទាប់​ពី​សារ​នេះ អ្នកនឹង​ត្រូវបាន​ផ្ដល់​សែល​មួយ​នៅ​ក្នុង​បរិស្ថាន​កម្មវិធី​ដំឡើង ។ គ្មាន​ប្រព័ន្ធ​ឯកសារ​"
-"ត្រូវបានម៉ោន​ទេ ។"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:18001
-msgid "Interactive shell in the installer environment"
-msgstr "សែល​អន្តរសកម្ម​នៅ​ក្នុង​បរិស្ថាន​កម្មវិធី​ដំឡើង"
-
-#. Type: password
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:19001
-msgid "Passphrase for ${DEVICE}:"
-msgstr "ឃ្លា​សម្ងាត់​សម្រាប់ ${DEVICE} ៖"
-
-#. Type: password
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:19001
-msgid "Please enter the passphrase for the encrypted volume ${DEVICE}."
-msgstr "សូម​បញ្ចូល​ឃ្លា​សម្ងាត់​សម្រាប់​ភាគ​ថាស​ដែល​បាន​អ៊ីនគ្រិប ${DEVICE} ។"
-
-#. Type: password
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:19001
-msgid ""
-"If you don't enter anything, the volume will not be available during rescue "
-"operations."
-msgstr "ប្រិសន​បើ​អ្នក​មិន​បញ្ចូល​អ្វី​ទេ​ ភាគ​ថាស​នឹង​មិនអាច​ប្រើ​បាន​ទេ​ក្នុង​កំឡុង​ពេល​​ប្រតិបត្តិការ​​ពេល​សង្គ្រោះ​ ។"
-
-#. Type: multiselect
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:20002
-msgid "Partitions to assemble:"
-msgstr "ភាគ​ថាស​​ត្រូវ​ផ្ដុំ​​ ៖"
-
-#. Type: multiselect
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:20002
-msgid ""
-"Select the partitions to assemble into a RAID array. If you select "
-"\"Automatic\", then all devices containing RAID physical volumes will be "
-"scanned and assembled."
-msgstr ""
-"ជ្រើស​ភាគ​ថាស​ ដើម្បី​ផ្ដុំ​​ទៅ​ជា​អារេ RAID ។ បើ​អ្នក​គូស​ធីក​ \"ស្វ័យ​ប្រវត្តិ​\" ពេល​នោះ ឧបករណ៍​ទាំង​អស់​ដែល​"
-"មាន​ភាគ​ហ្វីស៊ីខល​ RAID នឹង​​ត្រូវ​បាន​ស្កេន និង​ផ្ដុំ​គ្នា​ ។"
-
-#. Type: multiselect
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:20002
-msgid ""
-"Note that a RAID partition at the end of a disk may sometimes cause that "
-"disk to be mistakenly detected as containing a RAID physical volume. In that "
-"case, you should select the appropriate partitions individually."
-msgstr ""
-"ចំណាំ​ថា​ ភាគ​ថាស​ RAID នៅ​ខាង​ចុង​ថាស​ ជួនកាល​អាច​បណ្ដាល​ឲ្យ​​​​រក​ឃើញ​​ដោយ​ច្រឡំ​ថា​ថាស​នោះ​មាន​ភាគ​ហ្វីស៊ីខល​ "
-"RAID  ។ ក្នុង​ករណី​ដូច្នោះ អ្នក​គួរ​​តែ​ជ្រើស​ភាគ​ថាស​ឲ្យ​បាន​ត្រឹម​ត្រូវ​ដាច់​ដោយ​ឡែក​ពី​គ្នា ។"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:21001
-#, fuzzy
-#| msgid "Separate /home partition"
-msgid "Mount separate ${FILESYSTEM} partition?"
-msgstr "បំបែក​ភាគ​ថាស /home"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:21001
-#, fuzzy
-#| msgid "Install the kernel on a PReP boot partition"
-msgid "The installed system appears to use a separate ${FILESYSTEM} partition."
-msgstr "ដំឡើង​ខឺណែល​លើ​ភាគថាស​​ចាប់ផ្ដើម PReP"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:21001
-msgid ""
-"It is normally a good idea to mount it as it will allow operations such as "
-"reinstalling the boot loader. However, if the file system on ${FILESYSTEM} "
-"is corrupt then you may want to avoid mounting it."
-msgstr ""
 
 #. Type: text
 #. Description

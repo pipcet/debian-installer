@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ta\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-02 22:41+0100\n"
+"POT-Creation-Date: 2019-11-05 23:57+0100\n"
 "PO-Revision-Date: 2019-08-28 18:10+0000\n"
 "Last-Translator: leela <53352@protonmail.com>\n"
 "Language-Team: Tamil <<gnome-tamil-translation@googlegroups.com>>\n"
@@ -231,14 +231,16 @@ msgstr "நிறுவியின் பாகத்தை ஏற்ற இய
 msgid "Loading ${PACKAGE} failed for unknown reasons. Aborting."
 msgstr "${PACKAGE}'ன் ஏற்றம், தெரியாத காரணங்களால் தோல்வியடைந்தது. கைவிடப்படுகிறது."
 
-#. Type: boolean
+#. Type: error
 #. Description
 #. :sl2:
 #: ../anna.templates:8001
-msgid "Continue the install without loading kernel modules?"
-msgstr "உட்கருவின் கூறுகளை ஏற்றாமல் நிறுவலை தொடரவா?"
+#, fuzzy
+#| msgid "No disk found"
+msgid "No kernel modules found"
+msgstr "வட்டுகள் ஏதும் காணவில்லை"
 
-#. Type: boolean
+#. Type: error
 #. Description
 #. :sl2:
 #: ../anna.templates:8001
@@ -250,17 +252,14 @@ msgstr ""
 "கருவின் கூறுகள் ஏதும் காணவில்லை. அனேகமாக இது நிறுவி பயன் படுத்தும் கருவின் வடிவ நிலை "
 "வேறு, காப்பக கருவின் வடிவ நிலை வேறு என்பதால் இருக்கலாம்."
 
-#. Type: boolean
+#. Type: error
 #. Description
 #. :sl2:
 #: ../anna.templates:8001
 msgid ""
-"If you're installing from a mirror, you can work around this problem by "
-"choosing to install a different version of Debian. The install will probably "
-"fail to work if you continue without kernel modules."
+"You should make sure that your installation image is up-to-date, or - if "
+"that's the case - try a different mirror, preferably deb.debian.org."
 msgstr ""
-"நீங்கள் இணைப் பதிப்பிலிருந்து நிறுவிகிறீர்களாயின் இந்த பிரச்சனைக்கு தீர்வாக வேறு டிபியன் "
-"பதிப்பை நிறுவவும். கரு தொகுதிகள் இல்லாமல் தொடர்ந்தால் நிறுவல் தோல்வியடையலாம்."
 
 #. Type: select
 #. Description
@@ -986,6 +985,20 @@ msgstr ""
 "புலத்தை காலியாக விடவும்."
 
 #. Type: select
+#. Choices
+#. :sl2:
+#: ../netcfg-common.templates:8001
+msgid "WEP/Open Network"
+msgstr "வெப்/திறந்த வலைப்பின்னல்"
+
+#. Type: select
+#. Choices
+#. :sl2:
+#: ../netcfg-common.templates:8001
+msgid "WPA/WPA2 PSK"
+msgstr "டபிள்யூபிஏ/டபிள்யூபிஏ2 பிஎஸ்கே"
+
+#. Type: select
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:8002
@@ -1279,6 +1292,27 @@ msgstr "கட்டமைப்பு (நிர்வகிக்கப்ப�
 msgid "Ad-hoc network (Peer to peer)"
 msgstr "தற்காலிக வலையமைப்பு (பியர்-டு-பியர்)"
 
+#. Type: select
+#. Description
+#. :sl2:
+#: ../netcfg-common.templates:24002
+msgid "Type of wireless network:"
+msgstr "கம்பியில்லா வலையின் வகை :"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../netcfg-common.templates:24002
+msgid ""
+"Wireless networks are either managed or ad-hoc. If you use a real access "
+"point of some sort, your network is Managed. If another computer is your "
+"'access point', then your network may be Ad-hoc."
+msgstr ""
+"கம்பியில்லா வலையமைப்புகள் நிர்வகிக்கப்படுவதாகவோ அல்லது தற்காலிக (ad-hoc) வகையினதாகவோ "
+"இருக்கலாம். தங்களிடம் மெய்யான அணுகல் புள்ளி ( real access point) ஏதேனும் இருந்தால் அது "
+"நிர்வகிக்கப்படும் வகை. தங்களுக்கான அணுகல் புள்ளி மற்றொரு கண்ணியில் இருந்தால் அது தற்காலிக "
+"வலையமைப்பு."
+
 #. Type: text
 #. Description
 #. :sl2:
@@ -1292,6 +1326,13 @@ msgstr "கம்பியில்லா வலையமைப்பு வட�
 #: ../netcfg-common.templates:26001
 msgid "Searching for wireless access points..."
 msgstr "கம்பியில்லா அணுகல் புள்ளிகள் தேடப்படுகின்றன ..."
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../netcfg-common.templates:29001
+msgid "Detecting link on ${interface}; please wait..."
+msgstr " ${interface} இல் தொடுப்பு கண்டறியப்படுகிறது, பொறுத்திருக்கவும்..."
 
 #. Type: text
 #. Description
@@ -1769,6 +1810,15 @@ msgstr ""
 "கோப்புகளை பதிவிறக்கம் செய்வதற்கான நெறிமுறையை தேர்ந்தெடுக்கவும். நிச்சயமில்லை எனில் \"http"
 "\"; ஐ தேர்ந்தெடுக்கவும். அது தீச்சுவர்கள் பிரச்சினைகள் குறைவாக இருக்க ஏதுவானது."
 
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl2:
+#: ../download-installer.templates:1001
+msgid "Download installer components"
+msgstr "நிறுவி பாகங்களை தரவிறக்கு"
+
 #. #-#-#-#-#  templates.pot (net-retriever)  #-#-#-#-#
 #. Type: select
 #. Choices
@@ -1877,6 +1927,99 @@ msgstr ""
 " நீக்கக்கூடிய ஊடகத்திலிருந்து படிப்பதில் பிரச்சினை உள்ளது. சரியான  ஊடகம் உள்ளே உள்ளதா என "
 "சரி பார்க்கவும். தொடர்ந்து பிரச்சினை இருப்பின் நீக்கக்கூடிய ஊடகம் மோசமாக உள்ளது என "
 "அறியவும் ."
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:1001
+msgid "Load drivers from removable media now?"
+msgstr "நீக்கக்கூடிய ஊடகத்திலிருந்து இயக்கிகளை ஏற்றவா??"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:1001
+msgid ""
+"You probably need to load drivers from removable media before continuing "
+"with the installation. If you know that the install will work without extra "
+"drivers, you can skip this step."
+msgstr ""
+"நீங்கள் நிறுவலை தொடரு முன் நீக்கக்கூடிய ஊடகத்திலிருந்து இயக்கிகளை ஏற்ற வேண்டும். நிறுவல் "
+"கூடுதல் இயக்கிகள் இன்றி வேலை செய்யும் என அறிந்திருந்தால் இந்த படியை விட்டு விடலாம்."
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:1001
+msgid ""
+"If you do need to load drivers, insert the appropriate removable media, such "
+"as a driver floppy or USB stick before continuing."
+msgstr ""
+"கூடுதல் இயக்கிகள் தேவையானால் தொடரும் முன் பொருத்தமான நீக்கக்கூடிய ஊடகத்தை உள் செருகவும்."
+
+#. Type: text
+#. Description
+#. main-menu item
+#. Translators: keep below 55 columns
+#. :sl2:
+#: ../load-media.templates:2001
+#, fuzzy
+msgid "Load drivers from removable media"
+msgstr "நீக்கக்கூடிய ஊடகத்திலிருந்து இயக்கிகளை ஏற்றவா"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:3001
+msgid "Unknown removable media. Try to load anyway?"
+msgstr "அறியப்படாத நீக்கக்கூடிய ஊடகம். எனினும் ஏற்ற முயற்சி செய்யவா?"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:3001
+msgid ""
+"Detected removable media that is not a known driver media. Please make sure "
+"that the correct media is inserted. You can still continue if you have an "
+"unofficial removable media you want to use."
+msgstr ""
+"நீக்கக்கூடிய ஊடகம் அறியப்படாத ஊடகம் ஆகும். சரியான  நீக்கக்கூடிய ஊடகம் உள்ளதா என்று உறுதி "
+"செய்து கொள்ளவும். அதிகார பூவமில்லாத  ஊடகத்தை  நீங்கள் உபயோகிக்க விரும்பினால் தொடரலாம்."
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../load-media.templates:4001
+msgid "Please insert ${DISK_LABEL} ('${DISK_NAME}') first."
+msgstr "${DISK_LABEL}·('${DISK_NAME}')-ஐ முதலில் சொருகவும்."
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../load-media.templates:4001
+msgid ""
+"Due to dependencies between packages, drivers must be loaded in the correct "
+"order."
+msgstr "தொகுப்புகளின் இடையே உள்ள சார்புகளால் இயக்கிகள் சரியான வரிசையில் ஏற்றப்பட வேண்டும்."
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:5001
+msgid "Load drivers from another removable media?"
+msgstr "இயக்கிகளை மற்றொரு நீக்கக்கூடிய ஊடகத்திலிருந்து ஏற்றவா?"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:5001
+msgid ""
+"To load additional drivers from another removable media, please insert the "
+"appropriate removable media, such as a driver floppy or USB stick before "
+"continuing."
+msgstr ""
+"மற்றொரு நீக்கக்கூடிய ஊடகத்திலிருந்து கூடிதல்  இயக்கிகளை ஏற்ற, சரியான  நீக்கக்கூடிய "
+"ஊடகத்தை - எ-டு இயக்கி ஃப்ளாப்பி, யூஎஸ் பி குச்சி- தொடரும் முன்  சொருகவும்."
 
 #. Type: error
 #. Description
@@ -4735,6 +4878,59 @@ msgstr ""
 msgid "Change debconf priority"
 msgstr "டெப் கான்ப்ஃ முன்னுரிமையை மாற்று "
 
+#. Type: select
+#. Choices
+#. :sl2:
+#: ../pkgsel.templates:9001
+msgid "No automatic updates"
+msgstr ""
+
+#. Type: select
+#. Choices
+#. :sl2:
+#: ../pkgsel.templates:9001
+msgid "Install security updates automatically"
+msgstr ""
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+msgid "Updates management on this system:"
+msgstr ""
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+msgid ""
+"Applying updates on a frequent basis is an important part of keeping the "
+"system secure."
+msgstr ""
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+msgid ""
+"By default, security updates are not automatically installed, as security "
+"advisories should be reviewed before manual installation of the updates "
+"using standard package management tools."
+msgstr ""
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+msgid ""
+"Alternatively the unattended-upgrades package can be installed, which will "
+"install security updates automatically. Note however that automatic "
+"installation of updates may occasionally cause unexpected downtime of "
+"services provided by this machine in the rare cases where the update is not "
+"fully backward-compatible, or where the security advisory requires the "
+"administrator to perform some other manual operation."
+msgstr ""
+
 #. Type: error
 #. Description
 #. :sl3:
@@ -4991,217 +5187,6 @@ msgstr ""
 #: ../rescue-check.templates:2001
 msgid "Rescue mode"
 msgstr "மீட்பு முறைமை"
-
-#. Type: select
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:3002
-msgid "Device to use as root file system:"
-msgstr "மூல (ரூட்) கோப்பு அமைப்பாக பயன் படுத்தும் சாதனம்:"
-
-#. Type: select
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:3002
-msgid ""
-"Enter a device you wish to use as your root file system. You will be able to "
-"choose among various rescue operations to perform on this file system."
-msgstr ""
-"மூல (ரூட்) கோப்பு அமைப்பாக பயன் படுத்த சாதனத்தை உள்ளீடு செய்க. உங்களால் இந்த கோப்பு "
-"அமைப்பில் செய்யக் கூடிய பலவிதமான மீட்பு முறைகளில் ஒன்றை தேர்வு செய்ய இயலும்."
-
-#. Type: select
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:3002
-msgid ""
-"If you choose not to use a root file system, you will be given a reduced "
-"choice of operations that can be performed without one. This may be useful "
-"if you need to correct a partitioning problem."
-msgstr ""
-"ரூட் கோப்பு அமைப்பை பயன்படுத்த நீங்கள் விம்பாவிட்டால் உங்களுக்கு அது இல்லாமல் செய்யக்கூடிய "
-"செயல்கள் மட்டுப்படுத்தப்படும். நீங்கள் ஒரு பகிர்வாக்க பிரச்சினையை சரி செய்ய வேண்டுமானால் இது "
-"பயன்படலாம்."
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:8001
-msgid "Execute a shell in ${DEVICE}"
-msgstr "${DEVICE} இல் கட்டளைச்செயலியை இயக்கு"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:9001
-msgid "Execute a shell in the installer environment"
-msgstr "நிறுவி சூழ் நிலையில் இல் கட்டளைச்செயலியை இயக்கு"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:10001
-msgid "Choose a different root file system"
-msgstr "வேறு மூல (ரூட்) கோப்பு அமைப்பை தேர்வு செய்க"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:11001
-msgid "Reboot the system"
-msgstr "கணினியை திரும்பத் துவக்கு"
-
-#. Type: text
-#. Description
-#. :sl2:
-#. Type: text
-#. Description
-#. :sl2:
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:12001 ../rescue-mode.templates:16001
-#: ../rescue-mode.templates:17001
-msgid "Executing a shell"
-msgstr "கட்டளைச்செயலி இயக்கப்படுகிறது"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:12001
-msgid ""
-"After this message, you will be given a shell with ${DEVICE} mounted on \"/"
-"\". If you need any other file systems (such as a separate \"/usr\"), you "
-"will have to mount those yourself."
-msgstr ""
-"இந்த செய்திக்குப் பிறகு உங்களுக்கு \"/\" மீது ஏற்றப் பட்ட ${DEVICE} இல் கட்டளைச்செயலி தரப் "
-"படும். தனி \"/usr\", போன்ற மற்ற கோப்பு அமைப்புகள் ஏதேனும் தேவையானால் அவற்றை நீங்களே ஏற்ற "
-"வேண்டும்."
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:15001
-msgid "Interactive shell on ${DEVICE}"
-msgstr "${DEVICE} இல் ஊடாடும் ஷெல் "
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:16001
-msgid ""
-"After this message, you will be given a shell with ${DEVICE} mounted on \"/"
-"target\". You may work on it using the tools available in the installer "
-"environment. If you want to make it your root file system temporarily, run "
-"\"chroot /target\". If you need any other file systems (such as a separate "
-"\"/usr\"), you will have to mount those yourself."
-msgstr ""
-"இந்த செய்திக்குப் பிறகு உங்களுக்கு \"/target\" மீது ஏற்றப் பட்ட ${DEVICE} இல் "
-"கட்டளைச்செயலி தரப் படும். நிறுவல் சூழ்நிலையில் கிடைக்கக்கூடிய கருவிகளுடன் நீங்கள் வேலை "
-"செய்யலாம். உங்களுக்கு மூல கோப்பு அமைப்பு தற்காலிகமாக தேவையானால் \"chroot /target\" "
-"கட்டளையை இயக்கலாம். தனி \"/usr\", போன்ற மற்ற கோப்பு அமைப்புகள் ஏதேனும் தேவையானால் "
-"அவற்றை நீங்களே ஏற்ற வேண்டும்."
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:17001
-msgid ""
-"After this message, you will be given a shell in the installer environment. "
-"No file systems have been mounted."
-msgstr ""
-"இந்த செய்திக்குப் பிறகு உங்களுக்கு நிறுவல் சூழலில்  ஷெல் தரப்படும், எந்த கோப்பு அமைப்பும் "
-"ஏற்றித் தரப்படவில்லை."
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:18001
-msgid "Interactive shell in the installer environment"
-msgstr "நிறுவி சூழ் நிலையில் இல் ஊடாடும் ஷெல்"
-
-#. Type: password
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:19001
-msgid "Passphrase for ${DEVICE}:"
-msgstr "${DEVICE}' க்கு கடவு வாக்கியம்:"
-
-#. Type: password
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:19001
-msgid "Please enter the passphrase for the encrypted volume ${DEVICE}."
-msgstr "${DEVICE}-ஐ மறைக்குறியீடாக்க ஒரு கடவு வாக்கியத்தை உள்ளிடுக "
-
-#. Type: password
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:19001
-msgid ""
-"If you don't enter anything, the volume will not be available during rescue "
-"operations."
-msgstr "நீங்கள் ஏது உள்ளிடவில்லையானால் இந்த தொகுதி உங்களுக்கு மீட்பு பணிகளில் கிடைக்காது."
-
-#. Type: multiselect
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:20002
-msgid "Partitions to assemble:"
-msgstr "தொகுக்க வேண்டிய பகிர்வுகள்:"
-
-#. Type: multiselect
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:20002
-msgid ""
-"Select the partitions to assemble into a RAID array. If you select "
-"\"Automatic\", then all devices containing RAID physical volumes will be "
-"scanned and assembled."
-msgstr ""
-"ரெய்ட் வரிசையாக தொகுக்க பகிர்வுகளை தேர்ந்தெடுக்கவும். நீங்கள் \"தானியங்கி\" என தேர்வு "
-"செய்தால் ரெய்ட் பௌதிக தொகுதிகளை கொண்ட எல்லா சாதனங்களையும் வருடி ஆய்ந்து தொகுக்கப்படும்."
-
-#. Type: multiselect
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:20002
-msgid ""
-"Note that a RAID partition at the end of a disk may sometimes cause that "
-"disk to be mistakenly detected as containing a RAID physical volume. In that "
-"case, you should select the appropriate partitions individually."
-msgstr ""
-"குறிப்பு: ஒரு வட்டின் கடைசியில் ஒரு ரெய்ட் பகிர்வு இருப்பின் சில சமயம் அது ஒரு ரெய்ட் "
-"பௌதிக தொகுதியாக தவறாக கொள்ளப்படும். அப்படி நிகழ்ந்தால் நீங்கள் பொருத்தமான பகிர்வுகளை "
-"தனித்தனியாக தேர்ந்து எடுக்க வேண்டும்."
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:21001
-#, fuzzy
-#| msgid "Separate /home partition"
-msgid "Mount separate ${FILESYSTEM} partition?"
-msgstr "தனியான /இல்ல பகிர்வு"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:21001
-#, fuzzy
-#| msgid "Install the kernel on a PReP boot partition"
-msgid "The installed system appears to use a separate ${FILESYSTEM} partition."
-msgstr "PReP துவக்கி பகிர்வில் கரு நிறுவப்பட்டது"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:21001
-msgid ""
-"It is normally a good idea to mount it as it will allow operations such as "
-"reinstalling the boot loader. However, if the file system on ${FILESYSTEM} "
-"is corrupt then you may want to avoid mounting it."
-msgstr ""
 
 #. Type: text
 #. Description

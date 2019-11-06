@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: el\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-02 22:41+0100\n"
+"POT-Creation-Date: 2019-11-05 23:57+0100\n"
 "PO-Revision-Date: 2019-06-26 14:09+0200\n"
 "Last-Translator: galaxico <galas@tee.gr>\n"
 "Language-Team: Greek <debian-l10n-greek@lists.debian.org>\n"
@@ -2200,6 +2200,15 @@ msgstr "Η εκτέλεση του \"/sbin/lilo\" απέτυχε με κωδικ
 msgid "Install the LILO boot loader on a hard disk"
 msgstr "Εγκατάσταση του LILΟ σε σκληρό δίσκο"
 
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl3:
+#: ../network-preseed.templates:1001
+msgid "Download debconf preconfiguration file"
+msgstr "Κατεβάστε από το δίκυο το αρχείο προρυθμίσεων debconf"
+
 #. Type: string
 #. Description
 #. :sl3:
@@ -2266,6 +2275,15 @@ msgstr ""
 
 #. Type: text
 #. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl3:
+#: ../file-preseed.templates:1001
+msgid "Load debconf preconfiguration file"
+msgstr "Φόρτωση του αρχείου προρυθμίσεων debconf"
+
+#. Type: text
+#. Description
 #. :sl3:
 #: ../rescue-mode.templates:2001
 msgid "No partitions found"
@@ -2287,6 +2305,54 @@ msgstr ""
 "συμβαίνει είτε από αδυναμία του πυρήνα να διαβάσει τον πίνακα διαμέρισης του "
 "δίσκου σας ή επειδή ο δίσκος δεν έχει ίσως διαμεριστεί. Αν θέλετε, μπορείτε "
 "να το διερευνήσετε από ένα κέλυφος στο περιβάλλον του εγκαταστάτη."
+
+#. Type: select
+#. Choices
+#. :sl3:
+#: ../rescue-mode.templates:3001
+msgid "Assemble RAID array"
+msgstr "Συγκρότηση συστοιχίας RAID"
+
+#. Type: select
+#. Choices
+#. :sl3:
+#: ../rescue-mode.templates:3001
+msgid "Do not use a root file system"
+msgstr "Μην χρησιμοποιήσετε ένα ριζικό σύστημα αρχείων"
+
+#. Type: select
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:3002
+msgid "Device to use as root file system:"
+msgstr "Συσκευή που θα χρησιμοποιηθεί για το ριζικό (βασικό) σύστημα αρχείων:"
+
+#. Type: select
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:3002
+msgid ""
+"Enter a device you wish to use as your root file system. You will be able to "
+"choose among various rescue operations to perform on this file system."
+msgstr ""
+"Εισάγετε μια συσκευή που θέλετε να χρησιμοποιήσετε σαν το ριζικό σύστημα "
+"αρχείων σας. Θα έχετε την δυνατότητα να διαλέξετε ανάμεσα σε διάφορες "
+"ενέργειες \"διάσωσης\" που μπορείτε να πραγματοποιήσετε σ' αυτό το σύστημα "
+"αρχείων."
+
+#. Type: select
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:3002
+msgid ""
+"If you choose not to use a root file system, you will be given a reduced "
+"choice of operations that can be performed without one. This may be useful "
+"if you need to correct a partitioning problem."
+msgstr ""
+"Αν επιλέξετε να μην χρησιμοποιήσετε ένα ριζικό σύστημα αρχείων τότε θα σας "
+"δοθούν και περιορισμένες επιλογές ενεργειών που μπορούν να πραγματοποιηθούν "
+"χωρίς ένα τέτοιο σύστημα. Αυτό είναι χρήσιμο σε περίπτωση που πρέπει να "
+"διορθώσετε ένα πρόβλημα διαμέρισης."
 
 #. Type: error
 #. Description
@@ -2331,6 +2397,13 @@ msgstr ""
 msgid "Please check the syslog for more information."
 msgstr "Παρακαλώ, ελέγξτε το αρχείο syslog για περισσότερες πληροφορίες."
 
+#. Type: select
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:6001
+msgid "Rescue operations"
+msgstr "Ενέργειες διάσωσης"
+
 #. Type: error
 #. Description
 #. :sl3:
@@ -2345,6 +2418,61 @@ msgstr "Η ενέργεια \"διάσωσης\" απέτυχε"
 msgid "The rescue operation '${OPERATION}' failed with exit code ${CODE}."
 msgstr ""
 "Η ενέργεια \"διάσωσης\" '${OPERATION}' απέτυχε με κωδικό εξόδου ${CODE}."
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:8001
+msgid "Execute a shell in ${DEVICE}"
+msgstr "Εκτέλεση ενός κελύφους στο ${DEVICE}"
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:9001
+msgid "Execute a shell in the installer environment"
+msgstr "Εκτέλεση ενός κελύφους στο περιβάλλον του εγκαταστάτη"
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:10001
+msgid "Choose a different root file system"
+msgstr "Διαλέξτε ένα διαφορετικό ριζικό σύστημα αρχείων"
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:11001
+msgid "Reboot the system"
+msgstr "Επανεκκίνηση του συστήματος"
+
+#. Type: text
+#. Description
+#. :sl3:
+#. Type: text
+#. Description
+#. :sl3:
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:12001 ../rescue-mode.templates:16001
+#: ../rescue-mode.templates:17001
+msgid "Executing a shell"
+msgstr "Εκτέλεση ενός κελύφους"
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:12001
+msgid ""
+"After this message, you will be given a shell with ${DEVICE} mounted on \"/"
+"\". If you need any other file systems (such as a separate \"/usr\"), you "
+"will have to mount those yourself."
+msgstr ""
+"Μετά από αυτό το μήνυμα, θα σας δωθεί ένα κέλυφος στην κατάτμηση${DEVICE} "
+"που είναι προσαρτημένη στο \"/\". Αν χρειάζεστε άλλα συστήματα αρχείων (όπως "
+"ένα ξεχωριστό \"/usr\"), θα πρέπει να τα προσαρτήσετε ο ίδιος/η ίδια."
 
 #. Type: error
 #. Description
@@ -2379,6 +2507,147 @@ msgid "No usable shell was found on your root file system (${DEVICE})."
 msgstr ""
 "Δεν βρέθηκε χρησιμοποιήσιμο κέλυφος στο βασικό σύστημα αρχείων σας "
 "(${DEVICE})."
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:15001
+msgid "Interactive shell on ${DEVICE}"
+msgstr "Διαδραστικό κελύφους στο ${DEVICE}"
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:16001
+msgid ""
+"After this message, you will be given a shell with ${DEVICE} mounted on \"/"
+"target\". You may work on it using the tools available in the installer "
+"environment. If you want to make it your root file system temporarily, run "
+"\"chroot /target\". If you need any other file systems (such as a separate "
+"\"/usr\"), you will have to mount those yourself."
+msgstr ""
+"Μετά απ' αυτό το μήνυμα, θα σας δωθεί ένα κέλυφος με την κατάτμηση ${DEVICE} "
+"προσαρτημένη στον κατάλογο \"/target\". Μπορείτε να δουλέψετε σ' αυτό με τα "
+"εργαλεία που είναι διαθέσιμα στο περιβάλλον του εγκαταστάτη. Αν θέλετε να το "
+"χρησιμοποιήσετε προσωρινά σαν ριζικό σύστημα αρχείων, εκτελέστε την εντολή "
+"\"chroot /target\". Αν χρειάζεστε οποιαδήποτε άλλα συστήματα αρχείων (όπως "
+"ένα ξεχωριστό \"/usr\"), θα πρέπει να τα προσαρτήσετε ο ίδιος/η ίδια."
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:17001
+msgid ""
+"After this message, you will be given a shell in the installer environment. "
+"No file systems have been mounted."
+msgstr ""
+"Μετά από αυτό το μήνυμα, θα σας δωθεί ένα κέλυφος στο περιβάλλον του "
+"εγκαταστάτη. Δεν έχει προσαρτηθεί κανένα συστήματα αρχείων."
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:18001
+msgid "Interactive shell in the installer environment"
+msgstr "Διαδραστικό κέλυφος στο περιβάλλον του εγκαταστάτη"
+
+#. Type: password
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:19001
+msgid "Passphrase for ${DEVICE}:"
+msgstr "Συνθηματική φράση για τη συσκευή ${DEVICE}:"
+
+#. Type: password
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:19001
+msgid "Please enter the passphrase for the encrypted volume ${DEVICE}."
+msgstr ""
+"Παρακαλώ εισάγετε την συνθηματική φράση για τον κρυπτογραφημένο τόμο "
+"${DEVICE}."
+
+#. Type: password
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:19001
+msgid ""
+"If you don't enter anything, the volume will not be available during rescue "
+"operations."
+msgstr ""
+"Αν δεν εισάγετε εδώ κάτι, ο τόμος δεν θα είναι διαθέσιμος σε διαδικασίες "
+"διάσωσης."
+
+#. Type: multiselect
+#. Choices
+#. :sl3:
+#: ../rescue-mode.templates:20001
+msgid "Automatic"
+msgstr "Αυτοματη"
+
+#. Type: multiselect
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:20002
+msgid "Partitions to assemble:"
+msgstr "Κατατμήσεις προς συνάθροιση:"
+
+#. Type: multiselect
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:20002
+msgid ""
+"Select the partitions to assemble into a RAID array. If you select "
+"\"Automatic\", then all devices containing RAID physical volumes will be "
+"scanned and assembled."
+msgstr ""
+"Επιλέξτε τις κατατμήσεις που θα συγκροτήσουν τη συστοιχία RAID. Αν "
+"επιλέέξετε \"Αυτόματη\", τότε όλες οι συσκευές που περιέχουν φυσικούς τόμους "
+"RAID θα ανιχνευθούν και θα συναθροιστούν."
+
+#. Type: multiselect
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:20002
+msgid ""
+"Note that a RAID partition at the end of a disk may sometimes cause that "
+"disk to be mistakenly detected as containing a RAID physical volume. In that "
+"case, you should select the appropriate partitions individually."
+msgstr ""
+"Σημειώστε ότι μια κατάτμηση RAID στο τέλος ενός δίσκου μπορεί μερικές φορές "
+"να προκαλέσει την λανθασμένη ανίχνευση αυτού του δίσκου σαν να περιέχει έναν "
+"φυσικό τόμο RAID. Στην περίπτωση αυτή, θα πρέπει να επιλέξετε τις κατάλληλες "
+"κατατμήσεις ξεχωριστά."
+
+#. Type: boolean
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:21001
+msgid "Mount separate ${FILESYSTEM} partition?"
+msgstr "Να γίνει προσάρτηση ξεχωριστής κατάτμησης ${FILESYSTEM};"
+
+#. Type: boolean
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:21001
+msgid "The installed system appears to use a separate ${FILESYSTEM} partition."
+msgstr ""
+"Το εγκατεστημένο σύστημα φαίνεται να χρησιμοποιεί μια ξεχωριστή κατάτμηση /"
+"boot."
+
+#. Type: boolean
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:21001
+msgid ""
+"It is normally a good idea to mount it as it will allow operations such as "
+"reinstalling the boot loader. However, if the file system on ${FILESYSTEM} "
+"is corrupt then you may want to avoid mounting it."
+msgstr ""
+"Η προσάρτησή της είναι συνήθως μια καλή ιδέα καθώς θα επιτρέψει ενέργειες "
+"όπως η επανεγκατάσταση του φορτωτή εκκίνησης. Όμως, αν το σύστημα αρχείων "
+"στην κατάτμηση ${FILESYSTEM} είναι κατεστραμμένο τότε θα θέλατε μάλλον να "
+"αποφύγετε την προσάρτησή της κατάτμησης."
 
 #. Type: text
 #. Description
@@ -3152,12 +3421,23 @@ msgstr ""
 msgid "Configure iSCSI volumes"
 msgstr "Ρύθμιση iSCSI volumes"
 
+#. Type: select
+#. Choices
+#. Note to translators : Please keep your translations of the choices
+#. below a 65 columns limit (which means 65 characters
+#. in single-byte languages)
+#. :sl3:
+#: ../partman-iscsi.templates:2001
+msgid "Log into iSCSI targets"
+msgstr "Σύνδεση σε iSCSI προορισμούς"
+
 #. #-#-#-#-#  templates.pot (partman-iscsi)  #-#-#-#-#
 #. Type: select
 #. Choices
 #. Note to translators : Please keep your translations of the choices
 #. below a 65 columns limit (which means 65 characters
 #. in single-byte languages)
+#. :sl3:
 #. #-#-#-#-#  templates.pot (mdcfg)  #-#-#-#-#
 #. Type: select
 #. Choices

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-02 22:41+0100\n"
+"POT-Creation-Date: 2019-11-05 23:57+0100\n"
 "PO-Revision-Date: 2018-03-19 21:51+0000\n"
 "Last-Translator: Huw Waters <huwwaters@gmail.com>\n"
 "Language-Team: Welsh <daf@muse.19inch.net>\n"
@@ -2159,6 +2159,15 @@ msgstr "Methodd gweithrediad \"/sbin/lilo\" gyda'r côd gwall \"${ERRCODE}\"."
 msgid "Install the LILO boot loader on a hard disk"
 msgstr "Sefydlu'r llwythwr cychwyn LILO ar ddisg galed"
 
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl3:
+#: ../network-preseed.templates:1001
+msgid "Download debconf preconfiguration file"
+msgstr "Lawrlwytho ffeil rhag-gyflunio Debconf "
+
 #. Type: string
 #. Description
 #. :sl3:
@@ -2224,6 +2233,15 @@ msgstr ""
 
 #. Type: text
 #. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl3:
+#: ../file-preseed.templates:1001
+msgid "Load debconf preconfiguration file"
+msgstr "Llwytho ffeil rhag-gyflunio Debconf "
+
+#. Type: text
+#. Description
 #. :sl3:
 #: ../rescue-mode.templates:2001
 msgid "No partitions found"
@@ -2245,6 +2263,52 @@ msgstr ""
 "methu canfod eich disg galed neu methu darllen y tabl rhaniadau, neu falle "
 "nad oes rhaniadau ar y disg. Os hoffech, fe allwch chi ymchwilio hyn o "
 "gragen yn amgylchedd y sefydlydd."
+
+#. Type: select
+#. Choices
+#. :sl3:
+#: ../rescue-mode.templates:3001
+msgid "Assemble RAID array"
+msgstr "Adeiladu arae RAID"
+
+#. Type: select
+#. Choices
+#. :sl3:
+#: ../rescue-mode.templates:3001
+msgid "Do not use a root file system"
+msgstr "Peidio defnyddio system ffeiliau gwraidd"
+
+#. Type: select
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:3002
+msgid "Device to use as root file system:"
+msgstr "Y ddyfais i'w glymu fel y system ffeiliau gwraidd:"
+
+#. Type: select
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:3002
+msgid ""
+"Enter a device you wish to use as your root file system. You will be able to "
+"choose among various rescue operations to perform on this file system."
+msgstr ""
+"Mewnosodwch ddyfais yr ydych am ddefnyddio fel ei system ffeil gwraidd. "
+"Byddwch yn medru dewis rhwng gwahanol wasanaethau achub i weithredu ar y "
+"system ffeil yma."
+
+#. Type: select
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:3002
+msgid ""
+"If you choose not to use a root file system, you will be given a reduced "
+"choice of operations that can be performed without one. This may be useful "
+"if you need to correct a partitioning problem."
+msgstr ""
+"Os nad ydych chi'n dewis system ffeilio graidd, fe fyddwch yn cael dewis "
+"llai o weithredoedd allwch wneud hebddo. Fe all hyn fod yn ddefnyddiol os "
+"ydych yn ceisio cywiro problem rhaniadau."
 
 #. Type: error
 #. Description
@@ -2289,6 +2353,13 @@ msgstr ""
 msgid "Please check the syslog for more information."
 msgstr "Edrychwch ar y syslog am fwy o wybodaeth."
 
+#. Type: select
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:6001
+msgid "Rescue operations"
+msgstr "Gweithredoedd achub"
+
 #. Type: error
 #. Description
 #. :sl3:
@@ -2302,6 +2373,61 @@ msgstr "Methodd y weithred achub"
 #: ../rescue-mode.templates:7001
 msgid "The rescue operation '${OPERATION}' failed with exit code ${CODE}."
 msgstr "Methodd y weithred achub \"${OPERATION}\" gyda'r côd gadael ${CODE}."
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:8001
+msgid "Execute a shell in ${DEVICE}"
+msgstr "Gweithredu cragen yn ${DEVICE}"
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:9001
+msgid "Execute a shell in the installer environment"
+msgstr "Gweithredu cragen yn amgylchedd y sefydlydd"
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:10001
+msgid "Choose a different root file system"
+msgstr "Dewiswch system ffeilio graidd"
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:11001
+msgid "Reboot the system"
+msgstr "Ailgychwyn y system"
+
+#. Type: text
+#. Description
+#. :sl3:
+#. Type: text
+#. Description
+#. :sl3:
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:12001 ../rescue-mode.templates:16001
+#: ../rescue-mode.templates:17001
+msgid "Executing a shell"
+msgstr "Gweithredu cragen"
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:12001
+msgid ""
+"After this message, you will be given a shell with ${DEVICE} mounted on \"/"
+"\". If you need any other file systems (such as a separate \"/usr\"), you "
+"will have to mount those yourself."
+msgstr ""
+"Yn dilyn y neges hwn, cewch gragen ar ${DEVICE} wedi ei osod ar  \"/\". Os "
+"ydych angen unrhyw system ffeiliau ychwanegol (fel \"/usr\" ar wahan), fe "
+"fydd yn rhaid i chi glymu rheiny eich hun."
 
 #. Type: error
 #. Description
@@ -2335,6 +2461,138 @@ msgstr "Dim cragen wedi ei ganfod yn /target"
 msgid "No usable shell was found on your root file system (${DEVICE})."
 msgstr ""
 "Ni chanfuwyd cragen defnyddiadwy ar eich system ffeiliau gwraidd (${DEVICE})."
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:15001
+msgid "Interactive shell on ${DEVICE}"
+msgstr "Cragen rhyngweithiol ar ${DEVICE}"
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:16001
+msgid ""
+"After this message, you will be given a shell with ${DEVICE} mounted on \"/"
+"target\". You may work on it using the tools available in the installer "
+"environment. If you want to make it your root file system temporarily, run "
+"\"chroot /target\". If you need any other file systems (such as a separate "
+"\"/usr\"), you will have to mount those yourself."
+msgstr ""
+"Yn dilyn y neges hwn, cewch gragen ar ${DEVICE} wedi ei osod ar \"/target\". "
+"Fe allwch weithio arno gan ddefnyddio'r offer sydd ar gael yn amgylchedd y "
+"sefydlydd. Os ydych eisiau ei wneud yn system ffeiliau craidd dros dro, "
+"rhedwch \"chroot /target\". Os ydych angen unrhyw system ffeiliau ychwanegol "
+"(fel \"/usr\" ar wahan), fe fydd yn rhaid i chi glymu rheiny eich hun."
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:17001
+msgid ""
+"After this message, you will be given a shell in the installer environment. "
+"No file systems have been mounted."
+msgstr ""
+"Yn dilyn y neges hwn, cewch gragen yn amgylchedd y sefydlydd. Ni fydd unrhyw "
+"system ffeiliau wedi eu clymu."
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:18001
+msgid "Interactive shell in the installer environment"
+msgstr "Cragen rhyngweithiol yn amgylchedd y sefydlydd"
+
+#. Type: password
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:19001
+msgid "Passphrase for ${DEVICE}:"
+msgstr "Cyfrinair ar gyfer ${DEVICE}:"
+
+#. Type: password
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:19001
+msgid "Please enter the passphrase for the encrypted volume ${DEVICE}."
+msgstr "Mewnosodwch y cyfrinair ar gyfer y gyfrol amgryptedig ${DEVICE}."
+
+#. Type: password
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:19001
+msgid ""
+"If you don't enter anything, the volume will not be available during rescue "
+"operations."
+msgstr ""
+"Os na deipiwch unrhyw beth, ni fydd y gyfrol ar gael yn ystod y broses achub."
+
+#. Type: multiselect
+#. Choices
+#. :sl3:
+#: ../rescue-mode.templates:20001
+msgid "Automatic"
+msgstr "Awtomatig"
+
+#. Type: multiselect
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:20002
+msgid "Partitions to assemble:"
+msgstr "Rhaniadau i adeiladu:"
+
+#. Type: multiselect
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:20002
+msgid ""
+"Select the partitions to assemble into a RAID array. If you select "
+"\"Automatic\", then all devices containing RAID physical volumes will be "
+"scanned and assembled."
+msgstr ""
+"Dewiswch y rhaniadau i adeiladu mewn i arae RAID. Os ydych yn dewis "
+"\"Awtomatig\", yna fe fydd yr holl ddyfeisiau sy'n cynnwys cyfrolau "
+"corfforol RAID yn cael eu sganio a'u adeiladu:"
+
+#. Type: multiselect
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:20002
+msgid ""
+"Note that a RAID partition at the end of a disk may sometimes cause that "
+"disk to be mistakenly detected as containing a RAID physical volume. In that "
+"case, you should select the appropriate partitions individually."
+msgstr ""
+"Weithiau fe allai rhaniad RAID ar ddiwedd disg achosi'r disg hynny i'w "
+"adnabod fel cyfrol corfforol RAID. Yn yr achos hynny, fe ddylech ddewis y "
+"rhaniadau perthnasol yn unigol."
+
+#. Type: boolean
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:21001
+msgid "Mount separate ${FILESYSTEM} partition?"
+msgstr "Clymu rhaniad ar wahân ${FILESYSTEM}?"
+
+#. Type: boolean
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:21001
+msgid "The installed system appears to use a separate ${FILESYSTEM} partition."
+msgstr ""
+"Mae'n ymddangos bod y system sefydledig yn defnyddio rhaniad ${FILESYSTEM} "
+"ar wahân."
+
+#. Type: boolean
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:21001
+msgid ""
+"It is normally a good idea to mount it as it will allow operations such as "
+"reinstalling the boot loader. However, if the file system on ${FILESYSTEM} "
+"is corrupt then you may want to avoid mounting it."
+msgstr ""
 
 #. Type: text
 #. Description
@@ -3083,12 +3341,23 @@ msgstr "Ailgychwynnwch gyda'r cnewyllyn cywir (${DI_KERNEL})."
 msgid "Configure iSCSI volumes"
 msgstr "Cyflunio cyfrolau iSCSI"
 
+#. Type: select
+#. Choices
+#. Note to translators : Please keep your translations of the choices
+#. below a 65 columns limit (which means 65 characters
+#. in single-byte languages)
+#. :sl3:
+#: ../partman-iscsi.templates:2001
+msgid "Log into iSCSI targets"
+msgstr "Mewngofnodi i dargedau iSCSI"
+
 #. #-#-#-#-#  templates.pot (partman-iscsi)  #-#-#-#-#
 #. Type: select
 #. Choices
 #. Note to translators : Please keep your translations of the choices
 #. below a 65 columns limit (which means 65 characters
 #. in single-byte languages)
+#. :sl3:
 #. #-#-#-#-#  templates.pot (mdcfg)  #-#-#-#-#
 #. Type: select
 #. Choices

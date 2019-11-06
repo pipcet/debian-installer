@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer (level1)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-02 22:41+0100\n"
+"POT-Creation-Date: 2019-11-05 23:57+0100\n"
 "PO-Revision-Date: 2019-09-24 14:28+0000\n"
 "Last-Translator: Andika Triwidada <andika@gmail.com>\n"
 "Language-Team: Debian Indonesia Translators <debian-l10n-indonesian@lists."
@@ -2168,6 +2168,15 @@ msgstr "Eksekusi \"/sbin/lilo\" gagal dengan kode kesalahan \"${ERRCODE}\"."
 msgid "Install the LILO boot loader on a hard disk"
 msgstr "Memasang boot loader LILO pada hard disk"
 
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl3:
+#: ../network-preseed.templates:1001
+msgid "Download debconf preconfiguration file"
+msgstr "Mengunduh berkas prakonfigurasi debconf"
+
 #. Type: string
 #. Description
 #. :sl3:
@@ -2232,6 +2241,15 @@ msgstr "Lihat http://wiki.debian.org/DebianInstaller/Preseed untuk inspirasi."
 
 #. Type: text
 #. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl3:
+#: ../file-preseed.templates:1001
+msgid "Load debconf preconfiguration file"
+msgstr "Memuat berkas prakonfigurasi debconf"
+
+#. Type: text
+#. Description
 #. :sl3:
 #: ../rescue-mode.templates:2001
 msgid "No partitions found"
@@ -2253,6 +2271,52 @@ msgstr ""
 "gagal mendeteksi harddisk Anda atau gagal membaca tabel partisi, atau "
 "harddisk memang belum dipartisi. Jika mau, Anda dapat menyelidiki hal ini "
 "dari shell dalam lingkungan program instalasi."
+
+#. Type: select
+#. Choices
+#. :sl3:
+#: ../rescue-mode.templates:3001
+msgid "Assemble RAID array"
+msgstr "Susun larik RAID"
+
+#. Type: select
+#. Choices
+#. :sl3:
+#: ../rescue-mode.templates:3001
+msgid "Do not use a root file system"
+msgstr "Jangan gunakan sistem berkas root"
+
+#. Type: select
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:3002
+msgid "Device to use as root file system:"
+msgstr "Piranti yang akan digunakan sebagai sistem berkas root:"
+
+#. Type: select
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:3002
+msgid ""
+"Enter a device you wish to use as your root file system. You will be able to "
+"choose among various rescue operations to perform on this file system."
+msgstr ""
+"Masukkan piranti yang ingin anda gunakan sebagai sistem berkas root. Anda "
+"dapat memilih salah satu operasi penyelamatan yg akan dilakukan pada sistem "
+"berkas ini."
+
+#. Type: select
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:3002
+msgid ""
+"If you choose not to use a root file system, you will be given a reduced "
+"choice of operations that can be performed without one. This may be useful "
+"if you need to correct a partitioning problem."
+msgstr ""
+"Jika Anda memilih tidak menggunakan sistem berkas root, Anda akan diberi "
+"sedikit pilihan operasional yang dapat dilakukan tanpa root. Hal ini sangat "
+"berguna misalkan untuk memperbaiki masalah partisi."
 
 #. Type: error
 #. Description
@@ -2297,6 +2361,13 @@ msgstr ""
 msgid "Please check the syslog for more information."
 msgstr "Silakan lihat syslog untuk keterangan rinci."
 
+#. Type: select
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:6001
+msgid "Rescue operations"
+msgstr "Operasi penyelamatan"
+
 #. Type: error
 #. Description
 #. :sl3:
@@ -2310,6 +2381,61 @@ msgstr "Operasi penyelamatan gagal"
 #: ../rescue-mode.templates:7001
 msgid "The rescue operation '${OPERATION}' failed with exit code ${CODE}."
 msgstr "Operasi penyelamatan '${OPERATION}' gagal dengan kode ${CODE}."
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:8001
+msgid "Execute a shell in ${DEVICE}"
+msgstr "Menjalankan shell pada ${DEVICE}"
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:9001
+msgid "Execute a shell in the installer environment"
+msgstr "Menjalankan shell pada lingkungan program instalasi"
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:10001
+msgid "Choose a different root file system"
+msgstr "Pilih sistem berkas root yang berbeda"
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:11001
+msgid "Reboot the system"
+msgstr "Reboot sistem"
+
+#. Type: text
+#. Description
+#. :sl3:
+#. Type: text
+#. Description
+#. :sl3:
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:12001 ../rescue-mode.templates:16001
+#: ../rescue-mode.templates:17001
+msgid "Executing a shell"
+msgstr "Menjalankan shell"
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:12001
+msgid ""
+"After this message, you will be given a shell with ${DEVICE} mounted on \"/"
+"\". If you need any other file systems (such as a separate \"/usr\"), you "
+"will have to mount those yourself."
+msgstr ""
+"Setelah pesan ini, Anda akan diberikan shell dengan ${DEVICE} dikaitkan pada "
+"\"/\". Jika anda perlu sistem berkas lainnya (misalnya \"/usr\" yg "
+"terpisah), Anda harus mengaitkannya sendiri."
 
 #. Type: error
 #. Description
@@ -2343,6 +2469,142 @@ msgstr "Tidak ada shell di dalam /target"
 msgid "No usable shell was found on your root file system (${DEVICE})."
 msgstr ""
 "Tidak ada shell yang bisa digunakan pada sistem berkas root (${DEVICE}) Anda."
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:15001
+msgid "Interactive shell on ${DEVICE}"
+msgstr "Menjalankan shell pada ${DEVICE}"
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:16001
+msgid ""
+"After this message, you will be given a shell with ${DEVICE} mounted on \"/"
+"target\". You may work on it using the tools available in the installer "
+"environment. If you want to make it your root file system temporarily, run "
+"\"chroot /target\". If you need any other file systems (such as a separate "
+"\"/usr\"), you will have to mount those yourself."
+msgstr ""
+"Setelah pesan ini, Anda akan diberikan shell dengan ${DEVICE} dikaitkan pada "
+"\"/target\". Anda dapat bekerja di situ menggunakan alat-alat yang tersedia "
+"pada lingkungan instaler. Jika Anda ingin membuatnya menjadi sistem berkas "
+"root untuk sementera, jalankan \"chroot /target\". Jika Anda ingin "
+"menggunakan sistem berkas yang lain (misalnya \"/usr\" yang terpisah), Anda "
+"harus mengaitkannya sendiri."
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:17001
+msgid ""
+"After this message, you will be given a shell in the installer environment. "
+"No file systems have been mounted."
+msgstr ""
+"Setelah pesan ini, Anda akan diberikan shell dalam lingkungan program "
+"instalasi. Tidak ada sistem berkas yang tersedia untuk Anda."
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:18001
+msgid "Interactive shell in the installer environment"
+msgstr "Menjalankan shell dalam lingkungan program instalasi"
+
+#. Type: password
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:19001
+msgid "Passphrase for ${DEVICE}:"
+msgstr "Kunci frase untuk ${DEVICE}:"
+
+#. Type: password
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:19001
+msgid "Please enter the passphrase for the encrypted volume ${DEVICE}."
+msgstr "Anda perlu memilih kunci frase untuk volum terenkripsi ${DEVICE}."
+
+#. Type: password
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:19001
+msgid ""
+"If you don't enter anything, the volume will not be available during rescue "
+"operations."
+msgstr ""
+"Jika Anda tidak memasukkan sesuatu,  volum ini tidak akan tersedia selama "
+"proses penyelamatan."
+
+#. Type: multiselect
+#. Choices
+#. :sl3:
+#: ../rescue-mode.templates:20001
+msgid "Automatic"
+msgstr "Otomatis"
+
+#. Type: multiselect
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:20002
+msgid "Partitions to assemble:"
+msgstr "Partisi yang akan disusun:"
+
+#. Type: multiselect
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:20002
+msgid ""
+"Select the partitions to assemble into a RAID array. If you select "
+"\"Automatic\", then all devices containing RAID physical volumes will be "
+"scanned and assembled."
+msgstr ""
+"Pilih partisi yang akan disusun ke dalam larik RAID. Jika Anda memilih "
+"\"Otomatis\", maka semua piranti yang berisi volum fisik RAID akan dipindai "
+"dan disusun ke dalam larik."
+
+#. Type: multiselect
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:20002
+msgid ""
+"Note that a RAID partition at the end of a disk may sometimes cause that "
+"disk to be mistakenly detected as containing a RAID physical volume. In that "
+"case, you should select the appropriate partitions individually."
+msgstr ""
+"Ingat bahwa sebuah partisi RAID di akhir ruang harddisk kadangkala membuat "
+"harddisk tersebut salah dikenali sebagai volum fisik RAID. Dalam hal "
+"tersebut, Anda harus memilih masing-masing partisi yang sesuai."
+
+#. Type: boolean
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:21001
+msgid "Mount separate ${FILESYSTEM} partition?"
+msgstr "Kait partisi ${FILESYSTEM} terpisah?"
+
+#. Type: boolean
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:21001
+msgid "The installed system appears to use a separate ${FILESYSTEM} partition."
+msgstr ""
+"Sistem terpasang mungkin memakai partisi ${FILESYSTEM} secara terpisah."
+
+#. Type: boolean
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:21001
+msgid ""
+"It is normally a good idea to mount it as it will allow operations such as "
+"reinstalling the boot loader. However, if the file system on ${FILESYSTEM} "
+"is corrupt then you may want to avoid mounting it."
+msgstr ""
+"Biasanya ide bagus untuk mengaitnya karena akan memungkinkan operasi seperti "
+"memasang ulang boot loader. Namun, jika sistem berkas pada ${FILESYSTEM} "
+"rusak maka Anda mungkin ingin menghindari mengaitnya."
 
 #. Type: text
 #. Description
@@ -3060,12 +3322,23 @@ msgstr "Silakan booting ulang dengan versi kernel (${DI_KERNEL}) yang benar."
 msgid "Configure iSCSI volumes"
 msgstr "Mengonfigurasi volum iSCSI"
 
+#. Type: select
+#. Choices
+#. Note to translators : Please keep your translations of the choices
+#. below a 65 columns limit (which means 65 characters
+#. in single-byte languages)
+#. :sl3:
+#: ../partman-iscsi.templates:2001
+msgid "Log into iSCSI targets"
+msgstr "Masuk ke target iSCSI"
+
 #. #-#-#-#-#  templates.pot (partman-iscsi)  #-#-#-#-#
 #. Type: select
 #. Choices
 #. Note to translators : Please keep your translations of the choices
 #. below a 65 columns limit (which means 65 characters
 #. in single-byte languages)
+#. :sl3:
 #. #-#-#-#-#  templates.pot (mdcfg)  #-#-#-#-#
 #. Type: select
 #. Choices

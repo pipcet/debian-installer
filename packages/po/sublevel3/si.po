@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-02 22:41+0100\n"
+"POT-Creation-Date: 2019-11-05 23:57+0100\n"
 "PO-Revision-Date: 2019-08-28 18:10+0000\n"
 "Last-Translator: leela <53352@protonmail.com>\n"
 "Language-Team: Sinhala <info@hanthana.org>\n"
@@ -2125,6 +2125,15 @@ msgstr "\"/sbin/lilo\" ක්‍රියාත්මක කිරීම  \"${ER
 msgid "Install the LILO boot loader on a hard disk"
 msgstr "LILO ආරම්භක පූරකය දෘඩතැටිය මත ස්ථාපනය කරන්න"
 
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl3:
+#: ../network-preseed.templates:1001
+msgid "Download debconf preconfiguration file"
+msgstr "පෙරසැකසූ debconf ගොනුව ලබාගන්න"
+
 #. Type: string
 #. Description
 #. :sl3:
@@ -2186,6 +2195,15 @@ msgstr "තොරතුරු සඳහා http://wiki.debian.org/DebianInstalle
 
 #. Type: text
 #. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl3:
+#: ../file-preseed.templates:1001
+msgid "Load debconf preconfiguration file"
+msgstr "debconf පෙරසැකසූ ගොනුව පූරණය"
+
+#. Type: text
+#. Description
 #. :sl3:
 #: ../rescue-mode.templates:2001
 msgid "No partitions found"
@@ -2206,6 +2224,50 @@ msgstr ""
 "මෙය ඔබේ දෘඩතැටිය හඳුනාගැනීමට කර්නලයට නොහැකි වීම හෝ කොටස්කරණ වගුව කියවිය නොහැකි වීම නිසා "
 "විය හැක.නැතහොත් මෙම තැටිය කොටස් නොකර තබාඇතිවා විය හැක. ඔබ කැමති නම්, මෙම ගැටළුව ස්ථාපන "
 "පරිසරයේ ශෙලය භාවිතයෙන් පිරික්සිය හැක."
+
+#. Type: select
+#. Choices
+#. :sl3:
+#: ../rescue-mode.templates:3001
+msgid "Assemble RAID array"
+msgstr "RAID අරාව එකලස් කරන්න"
+
+#. Type: select
+#. Choices
+#. :sl3:
+#: ../rescue-mode.templates:3001
+msgid "Do not use a root file system"
+msgstr "මූල ගොනු පද්ධතිය භාවිත නොකරන්න"
+
+#. Type: select
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:3002
+msgid "Device to use as root file system:"
+msgstr "මූල ගොනු පද්ධතිය ලෙස භාවිත කලයුතු උපකරණය:"
+
+#. Type: select
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:3002
+msgid ""
+"Enter a device you wish to use as your root file system. You will be able to "
+"choose among various rescue operations to perform on this file system."
+msgstr ""
+"ඔබේ මූල ගොනු පද්ධතිය ලෙස යොදාගැනීමට කැමති උපකරණය ඇතුළත් කරන්න. ඔබට මෙම ගොනු පද්ධතිය තුල "
+"විවිධ ගලවාගැනීම් මෙහෙයුම් අතරින් තෝරාගැනීමක් කල හැක."
+
+#. Type: select
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:3002
+msgid ""
+"If you choose not to use a root file system, you will be given a reduced "
+"choice of operations that can be performed without one. This may be useful "
+"if you need to correct a partitioning problem."
+msgstr ""
+"ඔබ මූල පද්ධතියක් භාවිත නොකරන ලෙස තෝරා ඇත. ඔබට එවැන්නක් නොමැතිව සිදුකල හැකි මෙහෙයුම් ගණන "
+"සීමිත වනු ඇත. මෙය ඇතැම්විට ඔබට කොටස්කරණ ගැටළුවක් විසඳා ගැනීමට උපකාරී විය හැක."
 
 #. Type: error
 #. Description
@@ -2250,6 +2312,13 @@ msgstr ""
 msgid "Please check the syslog for more information."
 msgstr "කරුණාකර වැඩිදුර තොරතුරු සඳහා syslog පිරික්සන්න"
 
+#. Type: select
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:6001
+msgid "Rescue operations"
+msgstr "ආපදා මෙහෙයුම්"
+
 #. Type: error
 #. Description
 #. :sl3:
@@ -2263,6 +2332,60 @@ msgstr "ගලවාගැනීමේ මෙහෙයුම අසාර්ථ�
 #: ../rescue-mode.templates:7001
 msgid "The rescue operation '${OPERATION}' failed with exit code ${CODE}."
 msgstr "'${OPERATION}' ගලවාගැනීමේ මෙහෙයුම ${CODE} කේතය සමඟ වසාදැමිනි."
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:8001
+msgid "Execute a shell in ${DEVICE}"
+msgstr "${DEVICE} මත ශෙලලයක් ක්‍රියාකරවන්න"
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:9001
+msgid "Execute a shell in the installer environment"
+msgstr "ස්ථාපක පරිසරය තුළ ශෙලයක් ක්‍රියාකරවන්න"
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:10001
+msgid "Choose a different root file system"
+msgstr "වෙනස් මූල ගොනු පද්ධතියක් තෝරන්න"
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:11001
+msgid "Reboot the system"
+msgstr "පද්ධතිය ප්‍රථිපණගන්වන්න"
+
+#. Type: text
+#. Description
+#. :sl3:
+#. Type: text
+#. Description
+#. :sl3:
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:12001 ../rescue-mode.templates:16001
+#: ../rescue-mode.templates:17001
+msgid "Executing a shell"
+msgstr "ශෙලයක් ක්‍රියාත්මක කරමින්"
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:12001
+msgid ""
+"After this message, you will be given a shell with ${DEVICE} mounted on \"/"
+"\". If you need any other file systems (such as a separate \"/usr\"), you "
+"will have to mount those yourself."
+msgstr ""
+"මෙම පණිවුඩයෙන් පසු ඔබට ${DEVICE} \"/\" මත රැඳවූ ශෙලයක් ලැබෙනු ඇත. ඔබට වෙනත් ගොනු "
+"පද්ධතියක් ඇවැසි නම් (වෙන් වූ \"/usr\" වැනි) ඔබට ඒවා ඔබ විසින්ම රඳවා ගැනීමට සිදුවේ."
 
 #. Type: error
 #. Description
@@ -2295,6 +2418,136 @@ msgstr "/ඉලක්කය මත ශෙලයක් හමු නොවින�
 #: ../rescue-mode.templates:14001
 msgid "No usable shell was found on your root file system (${DEVICE})."
 msgstr "(${DEVICE}) මත ඔබේ මූල ගොනු පද්ධතිය මත භාවිත කල හැකි ශෙලයක් හමු නොවිනි.."
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:15001
+msgid "Interactive shell on ${DEVICE}"
+msgstr "${DEVICE} මත අන්තර්ක්‍රියාකාරී ශෙලය"
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:16001
+msgid ""
+"After this message, you will be given a shell with ${DEVICE} mounted on \"/"
+"target\". You may work on it using the tools available in the installer "
+"environment. If you want to make it your root file system temporarily, run "
+"\"chroot /target\". If you need any other file systems (such as a separate "
+"\"/usr\"), you will have to mount those yourself."
+msgstr ""
+"මෙම පණිවුඩයෙන් පසු ඔබට ${DEVICE} මත \"/ඉලක්කය\" රැඳවූ ශෙලයක් ලැබෙනු ඇත. ස්ථාපක "
+"පාරිසරිකය විසින් දෙනලද මෙවලම් උපයෝගී කරගෙන ඔබට එහි කටයුතු කල හැකි. ඔබට එය ඔබේ මූල ගොනු "
+"පද්ධතිය ලෙස තාවකාලිකව සැකසීමට ඇවැසි නම්. \"chroot /target\" ක්‍රියාත්මක කරන්න. ඔබට වෙනත් "
+"ගොනු පද්ධතියක් (වෙන් වූ \"/usr\" වැනි) ඇවැසි නම් ඔබට එය ඔබ විසින්ම රැඳවීමට සිදුවේ."
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:17001
+msgid ""
+"After this message, you will be given a shell in the installer environment. "
+"No file systems have been mounted."
+msgstr ""
+"මෙම පණිවුඩයෙන් පසු, ඔබට ස්ථාපක පරිසරයේ ශෙලයක් ලැබෙනු ඇත කිසිඳු ගොනු පද්ධතියක් නොරැඳවේ."
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:18001
+msgid "Interactive shell in the installer environment"
+msgstr "ස්ථාපක පරිසරයේ අන්තර්ක්‍රියාකාරී ශෙලය"
+
+#. Type: password
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:19001
+msgid "Passphrase for ${DEVICE}:"
+msgstr "${DEVICE} සඳහා මුර වදන:"
+
+#. Type: password
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:19001
+msgid "Please enter the passphrase for the encrypted volume ${DEVICE}."
+msgstr "කරුණාකර ගුප්තකේතිත ${DEVICE} වෙළුම සඳහා මුරවදන ඇතුළත් කරන්න."
+
+#. Type: password
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:19001
+msgid ""
+"If you don't enter anything, the volume will not be available during rescue "
+"operations."
+msgstr "ඔබ විසින් කිසිවක් නිවේශනය නොකලේ නම්, මෙම වෙළුම ගලවාගැනීමේ මෙහෙයුමේදී නොපවතිනු ඇත."
+
+#. Type: multiselect
+#. Choices
+#. :sl3:
+#: ../rescue-mode.templates:20001
+msgid "Automatic"
+msgstr "ස්වයංක්‍රීය"
+
+#. Type: multiselect
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:20002
+msgid "Partitions to assemble:"
+msgstr "එකලස් කිරීමට බෙදුම්:"
+
+#. Type: multiselect
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:20002
+msgid ""
+"Select the partitions to assemble into a RAID array. If you select "
+"\"Automatic\", then all devices containing RAID physical volumes will be "
+"scanned and assembled."
+msgstr ""
+"RAID අරාවකට එකලස් කිරීමට බෙදුම් තෝරන්න. ඔබ \"ස්වයං\" තේරුවොත්, RAID භෞතික පරිමා අඩංගු "
+"සියළු මෙවලම් පරිලෝකනය කරනු සහ එකලස් කරනු ඇත."
+
+#. Type: multiselect
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:20002
+msgid ""
+"Note that a RAID partition at the end of a disk may sometimes cause that "
+"disk to be mistakenly detected as containing a RAID physical volume. In that "
+"case, you should select the appropriate partitions individually."
+msgstr ""
+"තැටියේ අවසානයේ ඇති RAID බෙදුමක් සමහරවිට RAID භෞතික පරිමාවක් අඩංගු තැටියක් ලෙස වරදවා "
+"අනාවරණය කිරීමට හේතු විය හැකි බව සටහන් කරගන්න. එවැනි අවස්ථාවක ඔබ අදාළ බෙදුම් තනි තනිව තේරිය "
+"යුතුයි."
+
+#. Type: boolean
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:21001
+#, fuzzy
+#| msgid "Separate /home partition"
+msgid "Mount separate ${FILESYSTEM} partition?"
+msgstr "වෙනම /home කොටස"
+
+#. Type: boolean
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:21001
+#, fuzzy
+#| msgid "Install the kernel on a PReP boot partition"
+msgid "The installed system appears to use a separate ${FILESYSTEM} partition."
+msgstr "කර්නලය PReP ආරම්භක කොටසක ස්ථාපනය කරන්න"
+
+#. Type: boolean
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:21001
+msgid ""
+"It is normally a good idea to mount it as it will allow operations such as "
+"reinstalling the boot loader. However, if the file system on ${FILESYSTEM} "
+"is corrupt then you may want to avoid mounting it."
+msgstr ""
 
 #. Type: text
 #. Description
@@ -3024,12 +3277,23 @@ msgstr "කරුණාකර නිවැරදි කර්නලය සමඟ
 msgid "Configure iSCSI volumes"
 msgstr "ගුප්තකේතිත වෙළුම් සකසන්න"
 
+#. Type: select
+#. Choices
+#. Note to translators : Please keep your translations of the choices
+#. below a 65 columns limit (which means 65 characters
+#. in single-byte languages)
+#. :sl3:
+#: ../partman-iscsi.templates:2001
+msgid "Log into iSCSI targets"
+msgstr ""
+
 #. #-#-#-#-#  templates.pot (partman-iscsi)  #-#-#-#-#
 #. Type: select
 #. Choices
 #. Note to translators : Please keep your translations of the choices
 #. below a 65 columns limit (which means 65 characters
 #. in single-byte languages)
+#. :sl3:
 #. #-#-#-#-#  templates.pot (mdcfg)  #-#-#-#-#
 #. Type: select
 #. Choices

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fa\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-02 22:41+0100\n"
+"POT-Creation-Date: 2019-11-05 23:57+0100\n"
 "PO-Revision-Date: 2018-01-13 19:56+0000\n"
 "Last-Translator: nima sahraneshin <unix.nima@gmail.com>\n"
 "Language-Team: debian-l10n-persian <debian-l10n-persian@lists.debian.org>\n"
@@ -234,14 +234,16 @@ msgstr "بارگیری مؤلفه‌های نصاب شکست خورد"
 msgid "Loading ${PACKAGE} failed for unknown reasons. Aborting."
 msgstr "بارگذاری ${PACKAGE} به علت نا معلومی شکست خورد، در حال خاتمه."
 
-#. Type: boolean
+#. Type: error
 #. Description
 #. :sl2:
 #: ../anna.templates:8001
-msgid "Continue the install without loading kernel modules?"
-msgstr "نصب بدون بارگذاری ماژول‌های هسته ادامه یابد؟"
+#, fuzzy
+#| msgid "No disk found"
+msgid "No kernel modules found"
+msgstr "هیچ دیسکی یافت نشد."
 
-#. Type: boolean
+#. Type: error
 #. Description
 #. :sl2:
 #: ../anna.templates:8001
@@ -253,18 +255,14 @@ msgstr ""
 "هیچ ماژول هسته‌ای یافت نشد. احتمالاً به علت نبود تناسب بین هستهٔ مورد استفادهٔ "
 "این نسخه از نصاب و نسخهٔ هستهٔ موجود در بایگانی است."
 
-#. Type: boolean
+#. Type: error
 #. Description
 #. :sl2:
 #: ../anna.templates:8001
 msgid ""
-"If you're installing from a mirror, you can work around this problem by "
-"choosing to install a different version of Debian. The install will probably "
-"fail to work if you continue without kernel modules."
+"You should make sure that your installation image is up-to-date, or - if "
+"that's the case - try a different mirror, preferably deb.debian.org."
 msgstr ""
-"اگر از آینه‌ها در حال نصب کردن هستید، می‌توانید با انتخاب نصب نسخهٔ دیگری از "
-"دبیان از کنار این مشکل بگذرید. اگر بدون ماژول‌های هسته ادامه دهید، نصب "
-"احتمالاً با شکست مواجه خواهد شد."
 
 #. Type: select
 #. Description
@@ -993,6 +991,20 @@ msgstr ""
 "شبکه ای که در دسترس بود را استفاده کنید, این قسمت را خالی بگذارید."
 
 #. Type: select
+#. Choices
+#. :sl2:
+#: ../netcfg-common.templates:8001
+msgid "WEP/Open Network"
+msgstr "WEP/Open شبکه"
+
+#. Type: select
+#. Choices
+#. :sl2:
+#: ../netcfg-common.templates:8001
+msgid "WPA/WPA2 PSK"
+msgstr "WPA/WPA2 PSK"
+
+#. Type: select
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:8002
@@ -1284,6 +1296,26 @@ msgstr "زیرساخت (مدیریت‌شده) شبکه"
 msgid "Ad-hoc network (Peer to peer)"
 msgstr "شبکهٔ Ad-hoc (جفت به جفت)"
 
+#. Type: select
+#. Description
+#. :sl2:
+#: ../netcfg-common.templates:24002
+msgid "Type of wireless network:"
+msgstr "تنظیم مجدد شبکهٔ بیسیم:"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../netcfg-common.templates:24002
+msgid ""
+"Wireless networks are either managed or ad-hoc. If you use a real access "
+"point of some sort, your network is Managed. If another computer is your "
+"'access point', then your network may be Ad-hoc."
+msgstr ""
+"شبکه‌های بیسیم یا به صورت مدیریت شده هستند یا به صورت موردی. اگر شما از یک "
+"نقطهٔ دسترسی واقعی استفاده می‌کنید، شبکهٔ شما از نوع مدیریت شده است اما اگر "
+"رایانهٔ دیگری خود نقطهٔ دسترسی شماست، شبکهٔ شما احتمالا موردی است."
+
 #. Type: text
 #. Description
 #. :sl2:
@@ -1297,6 +1329,13 @@ msgstr "تنظیمات شبکهٔ بیسیم"
 #: ../netcfg-common.templates:26001
 msgid "Searching for wireless access points..."
 msgstr "جستجوی نقاط دسترسی بیسیم..."
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../netcfg-common.templates:29001
+msgid "Detecting link on ${interface}; please wait..."
+msgstr "جستجوی لینک ${interface}; لطفا صبر کنید ..."
 
 #. Type: text
 #. Description
@@ -1774,6 +1813,15 @@ msgstr ""
 "لطفاً پروتکل لازم برای بارگیری پرونده‌ها را انتخاب کنید. اگر مطمئن نیستید، "
 "«http» را انتخاب کنید؛ کمتر مستعد مشکلات درگیر با دیوارهای آتشین است."
 
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl2:
+#: ../download-installer.templates:1001
+msgid "Download installer components"
+msgstr "بارگیری مولفه‌های نصاب"
+
 #. #-#-#-#-#  templates.pot (net-retriever)  #-#-#-#-#
 #. Type: select
 #. Choices
@@ -1882,6 +1930,102 @@ msgstr ""
 "مشکلی در خواندن داده از روی رسانهٔ جداشدنی وجود داشت. لطفاً مطمئن شوید که "
 "رسانهٔ درست حاضر باشد. اگر همچنان مشکل داشتید،رسانهٔ جداشدنی شما ممکن است بد "
 "باشد."
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:1001
+msgid "Load drivers from removable media now?"
+msgstr "آیا می‌خواهید درایور را از روی فلاپی بارگیری کنید؟"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:1001
+msgid ""
+"You probably need to load drivers from removable media before continuing "
+"with the installation. If you know that the install will work without extra "
+"drivers, you can skip this step."
+msgstr ""
+"احتمالا قبل از آنکه به نصب ادامه دهید، لازم است که درایورهایی از طریق یکی از "
+"رسانه های ذخیره سازی، بارگذاری کنید. اگر شما مطمئن هستید که بدون این "
+"درایورها قادر به ادامهٔ کار هستید می‌توانید از این مرحله صرف نظر کنید."
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:1001
+msgid ""
+"If you do need to load drivers, insert the appropriate removable media, such "
+"as a driver floppy or USB stick before continuing."
+msgstr ""
+"اگر شما به درایورهای خاصی نیاز دارید، رسانه ذخیره سازی مربوط به آن، مانند "
+"فلاپی یا دیسک USB را قبل از ادامه کار واردکنید."
+
+#. Type: text
+#. Description
+#. main-menu item
+#. Translators: keep below 55 columns
+#. :sl2:
+#: ../load-media.templates:2001
+msgid "Load drivers from removable media"
+msgstr "بارگیری درایورها از طریق رسانه های ذخیره سازی"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:3001
+msgid "Unknown removable media. Try to load anyway?"
+msgstr "رسانه مورد نظر شناخته نشد، مجددا برای بارگزاری به هر صورتی اقدام شود؟"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:3001
+msgid ""
+"Detected removable media that is not a known driver media. Please make sure "
+"that the correct media is inserted. You can still continue if you have an "
+"unofficial removable media you want to use."
+msgstr ""
+"یک رسانه ذخیره سازی شناخته شد، که یک رسانه درایور شناخته شده نیست. لطفا "
+"مطمئن شوید که رسانه درستی را وارد کرده اید. در صورتی که یک رسانه غیر رسمی در "
+"اختبار دارید همچنان می‌توانید ادامه دهید."
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../load-media.templates:4001
+msgid "Please insert ${DISK_LABEL} ('${DISK_NAME}') first."
+msgstr "لطفا در ابتدا ${DISK_LABEL} ('${DISK_NAME}') را وارد کنید."
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../load-media.templates:4001
+msgid ""
+"Due to dependencies between packages, drivers must be loaded in the correct "
+"order."
+msgstr ""
+"به دلیل وجود وابستگی‌ها بین بسته ها، درابور ها باید به ترتیب بارگزاری شوند."
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:5001
+msgid "Load drivers from another removable media?"
+msgstr "آیا می‌خواهید درایور کارت شبکه را از روی رسانه دیگری بارگیری کنید؟"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:5001
+msgid ""
+"To load additional drivers from another removable media, please insert the "
+"appropriate removable media, such as a driver floppy or USB stick before "
+"continuing."
+msgstr ""
+"به منظور بارگیری درایورهای اضافی از طریق یک رسانه دیگر، لطفا رسانه مناسب، "
+"مانند فلاپی یا  دیسک USB را قبل از ادامه، وارد نمایید."
 
 #. Type: error
 #. Description
@@ -4739,6 +4883,68 @@ msgstr ""
 msgid "Change debconf priority"
 msgstr "اولویت debconf را تغییر دهید"
 
+#. Type: select
+#. Choices
+#. :sl2:
+#: ../pkgsel.templates:9001
+msgid "No automatic updates"
+msgstr "بدون بروز‌رسانی‌های خودکار"
+
+#. Type: select
+#. Choices
+#. :sl2:
+#: ../pkgsel.templates:9001
+msgid "Install security updates automatically"
+msgstr "نصب خودکار بروز‌رسانی‌های امینیتی"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+msgid "Updates management on this system:"
+msgstr "بروز‌رسانی‌های مدیریتی این سیستم:"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+msgid ""
+"Applying updates on a frequent basis is an important part of keeping the "
+"system secure."
+msgstr ""
+"برای امن بودن سیستم، مهم است تا قسمت‌های اساسی متدوال بروز نگه داشته شوند."
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+msgid ""
+"By default, security updates are not automatically installed, as security "
+"advisories should be reviewed before manual installation of the updates "
+"using standard package management tools."
+msgstr ""
+"بشکل پیش‌فرض بروز‌رسانی‌های امنیتی خودکار نصب نمی‌شوند. پیش از نصب دستی "
+"بروز‌رسانی‌ها توست ابزار‌های مدیریتی استاندارد باید توصیه های امنیتی بررسی شود."
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+msgid ""
+"Alternatively the unattended-upgrades package can be installed, which will "
+"install security updates automatically. Note however that automatic "
+"installation of updates may occasionally cause unexpected downtime of "
+"services provided by this machine in the rare cases where the update is not "
+"fully backward-compatible, or where the security advisory requires the "
+"administrator to perform some other manual operation."
+msgstr ""
+"در غیر این صورت بسته‌های نصب بدون نظارت می تواند نصب شوند، که به روز رسانی "
+"های امنیتی را به صورت خودکار نصب می کنند. توجه داشته باشید با این که نصب "
+"خودکار به روزرسانی گاهی اوقات باعث خرابی غیرمنتظره سرویس های ارائه شده توسط "
+"این دستگاه ( در  موارد نادر)  می شود که در حالتی است که بروزرسانی کاملا با "
+"نسخه‌های قبل سازگار نباشند و یا در صورتی که مشاوره امنیتی نیاز به سرپرستان "
+"برای انجام عملیات دستی دیگر داشته باشد."
+
 #. Type: error
 #. Description
 #. :sl3:
@@ -4996,220 +5202,6 @@ msgstr "اجرای فرمان ... «${COMMAND}» با کد خروج ${CODE} شک
 #: ../rescue-check.templates:2001
 msgid "Rescue mode"
 msgstr "حالت نجات"
-
-#. Type: select
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:3002
-msgid "Device to use as root file system:"
-msgstr "تجهیز مورد استفاده به عنوان فایل سیستم ریشه "
-
-#. Type: select
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:3002
-msgid ""
-"Enter a device you wish to use as your root file system. You will be able to "
-"choose among various rescue operations to perform on this file system."
-msgstr ""
-"ابزاری را وارد کنید که تمایل دارید به عنوان فایل‌سیستم ریشه استفاده کنید. شما "
-"قادر خواهید بود که از میان عملیات‌های نجات گوناگون برای انجام روی این "
-"فایل‌سیستم انتخاب کنید."
-
-#. Type: select
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:3002
-msgid ""
-"If you choose not to use a root file system, you will be given a reduced "
-"choice of operations that can be performed without one. This may be useful "
-"if you need to correct a partitioning problem."
-msgstr ""
-"اگر انتخاب کنید که از یک فایل‌سیستم ریشه استفاده نکنید، انتخاب عملیات کاهش "
-"یافته‌ای که بدون آن می‌تواند انجام شود به شما داده خواهد شد. اگر نیاز دارید یک "
-"مشکل پارتیشن‌بندی را تصحیح کنید این ممکن است مفید باشد."
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:8001
-msgid "Execute a shell in ${DEVICE}"
-msgstr "اجرای یک پوسته در ${DEVICE}"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:9001
-msgid "Execute a shell in the installer environment"
-msgstr "اجرا کردن یک پوسته در محیط نصب"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:10001
-msgid "Choose a different root file system"
-msgstr "یک فایل سیستم ریشه متفاوت انتخاب کنید"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:11001
-msgid "Reboot the system"
-msgstr "سیستم را مجدداً راه اندازی کنید"
-
-#. Type: text
-#. Description
-#. :sl2:
-#. Type: text
-#. Description
-#. :sl2:
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:12001 ../rescue-mode.templates:16001
-#: ../rescue-mode.templates:17001
-msgid "Executing a shell"
-msgstr "اجرای یک پوسته"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:12001
-msgid ""
-"After this message, you will be given a shell with ${DEVICE} mounted on \"/"
-"\". If you need any other file systems (such as a separate \"/usr\"), you "
-"will have to mount those yourself."
-msgstr ""
-"بعد از این پیغام، به شما یک پوسته با ${DEVICE} ماونت‌شده روی «/» داده خواهد "
-"شد. اگر هر فایل‌سیستم دیگری نیاز دارید (مانند یک «/usr» جداگانه)، مجبورید "
-"آن‌ها را خودتان ماونت کنید."
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:15001
-msgid "Interactive shell on ${DEVICE}"
-msgstr "پوسته تعاملی در ${DEVICE}"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:16001
-msgid ""
-"After this message, you will be given a shell with ${DEVICE} mounted on \"/"
-"target\". You may work on it using the tools available in the installer "
-"environment. If you want to make it your root file system temporarily, run "
-"\"chroot /target\". If you need any other file systems (such as a separate "
-"\"/usr\"), you will have to mount those yourself."
-msgstr ""
-"بعد از این پیغام، به شما یک پوسته با ${DEVICE} ماونت‌شده روی «/target» داده "
-"خواهد شد. می‌توانید با استفاده از ابزارهای فراهم در محیط نصاب روی آن کار "
-"کنید. اگر می‌خواهید آنرا به طور موقت فایل‌سیستم ریشهٔ خود بسازید، «chroot /"
-"target» را اجرا کنید. اگر هر فایل‌سیستم دیگری (مانند یک «/usr») نیاز دارید، "
-"مجبورید آنها را خودتان ماونت کنید."
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:17001
-msgid ""
-"After this message, you will be given a shell in the installer environment. "
-"No file systems have been mounted."
-msgstr ""
-"بعد از این پیغام، یک پوسته در محیط نصب داده خواهید شد. هیچ فایل‌سیستم‌ای ماونت "
-"نشده است."
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:18001
-msgid "Interactive shell in the installer environment"
-msgstr "پوسته‌ٔ محاوره‌ای در محیط نصب"
-
-#. Type: password
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:19001
-msgid "Passphrase for ${DEVICE}:"
-msgstr "عبارت‌عبور برای ${DEVICE}:"
-
-#. Type: password
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:19001
-msgid "Please enter the passphrase for the encrypted volume ${DEVICE}."
-msgstr "لطفاً یک عبارت رمز برای فضای رمزنگاری شدهٔ ${DEVICE} وارد کنید."
-
-#. Type: password
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:19001
-msgid ""
-"If you don't enter anything, the volume will not be available during rescue "
-"operations."
-msgstr ""
-"اگر چیزی وارد نکنید، فضای مورد نظر در حین عملیات نجات در دسترس نخواهد بود."
-
-#. Type: multiselect
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:20002
-msgid "Partitions to assemble:"
-msgstr "پارتیشن‌های برای یکسان‌سازی:"
-
-#. Type: multiselect
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:20002
-msgid ""
-"Select the partitions to assemble into a RAID array. If you select "
-"\"Automatic\", then all devices containing RAID physical volumes will be "
-"scanned and assembled."
-msgstr ""
-"پارتیشن هایی که می‌خواهید در RAID array قرار گیرند را انتخاب کنید. اگر شما، "
-"«خودکار» را انتخاب کنید، همه دستگاه‌های حاوی فضای فیزیکی RAID شناسایی و  سوار "
-"می‌شوند."
-
-#. Type: multiselect
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:20002
-msgid ""
-"Note that a RAID partition at the end of a disk may sometimes cause that "
-"disk to be mistakenly detected as containing a RAID physical volume. In that "
-"case, you should select the appropriate partitions individually."
-msgstr ""
-"به خاطر داشته باشید یک پارتیشن RAID در انتهای یک دیسک، گاهی ممکن است به "
-"اشتباه به عنوان یک فضای فیزیکی RAID شناسایی شود. در این حالت، شما می‌بایست "
-"پارتیشن مناسب را شخصا انتخاب کنید."
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:21001
-#, fuzzy
-#| msgid "Separate /home partition"
-msgid "Mount separate ${FILESYSTEM} partition?"
-msgstr "شاخه /home مجزا"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:21001
-#, fuzzy
-#| msgid "Install the kernel on a PReP boot partition"
-msgid "The installed system appears to use a separate ${FILESYSTEM} partition."
-msgstr "نصب کرنل روی پارتیشن boot PReP"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:21001
-msgid ""
-"It is normally a good idea to mount it as it will allow operations such as "
-"reinstalling the boot loader. However, if the file system on ${FILESYSTEM} "
-"is corrupt then you may want to avoid mounting it."
-msgstr ""
 
 #. Type: text
 #. Description

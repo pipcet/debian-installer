@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-02 22:41+0100\n"
+"POT-Creation-Date: 2019-11-05 23:57+0100\n"
 "PO-Revision-Date: 2006-03-21 14:42-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language: ga\n"
@@ -228,14 +228,16 @@ msgstr "Theip ar chomhpháirt suiteála a luchtú"
 msgid "Loading ${PACKAGE} failed for unknown reasons. Aborting."
 msgstr "Theip ar luchtú ${PACKAGE} agus ní fios cén fáth. Á thobscor."
 
-#. Type: boolean
+#. Type: error
 #. Description
 #. :sl2:
 #: ../anna.templates:8001
-msgid "Continue the install without loading kernel modules?"
-msgstr "Lean ar aghaidh leis an tsuiteáil gan na modúil eithne a luchtú?"
+#, fuzzy
+#| msgid "No disk found"
+msgid "No kernel modules found"
+msgstr "Níor aimsíodh diosca"
 
-#. Type: boolean
+#. Type: error
 #. Description
 #. :sl2:
 #: ../anna.templates:8001
@@ -248,18 +250,14 @@ msgstr ""
 "an leagan seo den suiteálaí comhoiriúnach leis an eithne atá ar fáil sa "
 "chartlann."
 
-#. Type: boolean
+#. Type: error
 #. Description
 #. :sl2:
 #: ../anna.templates:8001
 msgid ""
-"If you're installing from a mirror, you can work around this problem by "
-"choosing to install a different version of Debian. The install will probably "
-"fail to work if you continue without kernel modules."
+"You should make sure that your installation image is up-to-date, or - if "
+"that's the case - try a different mirror, preferably deb.debian.org."
 msgstr ""
-"Má tá tú ag suiteáil ó shuíomh scáthánaithe, is féidir an fhadhb seo a "
-"sheachaint trí leagan difriúil de Debian a shuiteáil. Is dócha nach n-"
-"éireofar leis an tsuiteáil má théann tú ar aghaidh gan mhodúil eithne."
 
 #. Type: select
 #. Description
@@ -1003,6 +1001,20 @@ msgstr ""
 "fáil a úsáid, fág an réimse seo bán."
 
 #. Type: select
+#. Choices
+#. :sl2:
+#: ../netcfg-common.templates:8001
+msgid "WEP/Open Network"
+msgstr "Líonra WEP/Oscailte"
+
+#. Type: select
+#. Choices
+#. :sl2:
+#: ../netcfg-common.templates:8001
+msgid "WPA/WPA2 PSK"
+msgstr "WPA/WPA2 PSK"
+
+#. Type: select
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:8002
@@ -1300,6 +1312,27 @@ msgstr "Bunlíonra (Bainistithe)"
 msgid "Ad-hoc network (Peer to peer)"
 msgstr "Líonra ad-hoc (idir comhghleacaithe)"
 
+#. Type: select
+#. Description
+#. :sl2:
+#: ../netcfg-common.templates:24002
+msgid "Type of wireless network:"
+msgstr "Cineál an líonra gan sreang:"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../netcfg-common.templates:24002
+msgid ""
+"Wireless networks are either managed or ad-hoc. If you use a real access "
+"point of some sort, your network is Managed. If another computer is your "
+"'access point', then your network may be Ad-hoc."
+msgstr ""
+"Tá dhá chineál líonra gan sreang ann: bainistithe nó ad hoc.  Má úsáideann "
+"tú fíorphointe rochtana de chineál éigin, tá líonra Bainistithe agat.  Má "
+"úsáideann tú ríomhaire eile mar do 'phointe rochtana', is dócha go bhfuil "
+"líonra ad hoc agat."
+
 #. Type: text
 #. Description
 #. :sl2:
@@ -1313,6 +1346,13 @@ msgstr "Cumraíocht an líonra gan sreang"
 #: ../netcfg-common.templates:26001
 msgid "Searching for wireless access points..."
 msgstr "Ag déanamh cuardach ar phointí rochtana gan sreang..."
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../netcfg-common.templates:29001
+msgid "Detecting link on ${interface}; please wait..."
+msgstr "Nasc á bhrath ar ${interface}; fan go fóill..."
 
 #. Type: text
 #. Description
@@ -1796,6 +1836,15 @@ msgstr ""
 "cinnte, roghnaigh \"http\"; is lú an seans go mbeadh fadhbanna agat le "
 "ballaí dóiteáin."
 
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl2:
+#: ../download-installer.templates:1001
+msgid "Download installer components"
+msgstr "Íosluchtaigh comhpháirteanna an tsuiteálaí"
+
 #. #-#-#-#-#  templates.pot (net-retriever)  #-#-#-#-#
 #. Type: select
 #. Choices
@@ -1905,6 +1954,106 @@ msgstr ""
 "Bhí fadhb ann agus sonraí á léamh ón mheán inbhainte.  Bí cinnte go bhfuil "
 "an meán ceart sa tiomántán. Mura n-oibríonn sé nuair a bhainfidh tú triail "
 "eile as, b'fhéidir go bhfuil meán truaillithe agat."
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:1001
+msgid "Load drivers from removable media now?"
+msgstr "An bhfuil fonn ort tiománaithe a luchtú ó mheán inbhainte anois?"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:1001
+msgid ""
+"You probably need to load drivers from removable media before continuing "
+"with the installation. If you know that the install will work without extra "
+"drivers, you can skip this step."
+msgstr ""
+"Is dócha go gcaithfidh tú tiománaithe a luchtú ó mheán inbhainte sular "
+"féidir leat dul ar aghaidh leis an tsuiteáil.  Má tá tú cinnte go n-"
+"oibreoidh an tsuiteáil gan tiománaithe breise, ná bac leis an gcéim seo."
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:1001
+msgid ""
+"If you do need to load drivers, insert the appropriate removable media, such "
+"as a driver floppy or USB stick before continuing."
+msgstr ""
+"Má tá tiománaithe de dhíth ort, ionsáigh an meán inbhainte oiriúnach, mar "
+"shampla diosca flapach nó méaróg USB leis na tiománaithe, sula leanann tú ar "
+"aghaidh."
+
+#. Type: text
+#. Description
+#. main-menu item
+#. Translators: keep below 55 columns
+#. :sl2:
+#: ../load-media.templates:2001
+msgid "Load drivers from removable media"
+msgstr "Luchtaigh tiománaithe ó mheán inbhainte"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:3001
+msgid "Unknown removable media. Try to load anyway?"
+msgstr "Meán inbhainte anaithnid. An bhfuil fonn ort luchtú mar sin féin?"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:3001
+msgid ""
+"Detected removable media that is not a known driver media. Please make sure "
+"that the correct media is inserted. You can still continue if you have an "
+"unofficial removable media you want to use."
+msgstr ""
+"Braitheadh meán inbhainte ach ní aithnítear é mar mheán tiománaithe.  Bí "
+"cinnte go bhfuil an meán ceart sa tiomántán. Is féidir leat dul ar aghaidh "
+"mar sin féin má tá meán inbhainte neamhoifigiúil agat agus is mian leat é a "
+"úsáid."
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../load-media.templates:4001
+msgid "Please insert ${DISK_LABEL} ('${DISK_NAME}') first."
+msgstr "Ionsáigh ${DISK_LABEL} ('${DISK_NAME}') ar dtús."
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../load-media.templates:4001
+msgid ""
+"Due to dependencies between packages, drivers must be loaded in the correct "
+"order."
+msgstr ""
+"Toisc go mbraitheann pacáistí ar phacáistí eile, ní mór duit na tiománaithe "
+"a luchtú san ord ceart."
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:5001
+msgid "Load drivers from another removable media?"
+msgstr "An bhfuil fonn ort tiománaithe a luchtú ó mheán inbhainte eile?"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:5001
+msgid ""
+"To load additional drivers from another removable media, please insert the "
+"appropriate removable media, such as a driver floppy or USB stick before "
+"continuing."
+msgstr ""
+"Chun tiománaithe breise a luchtú ó mheán inbhainte eile, ionsáigh an meán "
+"oiriúnach, mar shampla diosca flapach nó méaróg USB leis na tiománaithe, "
+"sula leanann tú ar aghaidh."
 
 #. Type: error
 #. Description
@@ -4797,6 +4946,70 @@ msgstr ""
 msgid "Change debconf priority"
 msgstr "Athraigh tosaíocht debconf"
 
+#. Type: select
+#. Choices
+#. :sl2:
+#: ../pkgsel.templates:9001
+msgid "No automatic updates"
+msgstr "Ná déan nuashonrú uathoibríoch riamh"
+
+#. Type: select
+#. Choices
+#. :sl2:
+#: ../pkgsel.templates:9001
+msgid "Install security updates automatically"
+msgstr "Suiteáil nuashonruithe slándála go huathoibríoch"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+msgid "Updates management on this system:"
+msgstr "Nuashonruithe ar an gcóras seo:"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+msgid ""
+"Applying updates on a frequent basis is an important part of keeping the "
+"system secure."
+msgstr ""
+"Tá sé an-tábhachtach nuashonruithe a shuiteáil ar bhonn rialta chun an córas "
+"a choinneáil slán."
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+#, fuzzy
+#| msgid ""
+#| "By default, security updates are automatically installed by the "
+#| "unattended-upgrades package. Alternatively, you can opt-out from this "
+#| "system and apply updates manually using standard package management tools."
+msgid ""
+"By default, security updates are not automatically installed, as security "
+"advisories should be reviewed before manual installation of the updates "
+"using standard package management tools."
+msgstr ""
+"De réir réamhshocraithe, suiteálann an pacáiste unattended-upgrades "
+"nuashonruithe slándála go huathoibríoch. Mar mhalairt ar an gcóras sin, is "
+"féidir leat nuashonruithe a shuiteáil de láimh leis na gnáthuirlisí "
+"bainistíochta."
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+msgid ""
+"Alternatively the unattended-upgrades package can be installed, which will "
+"install security updates automatically. Note however that automatic "
+"installation of updates may occasionally cause unexpected downtime of "
+"services provided by this machine in the rare cases where the update is not "
+"fully backward-compatible, or where the security advisory requires the "
+"administrator to perform some other manual operation."
+msgstr ""
+
 #. Type: error
 #. Description
 #. :sl3:
@@ -5057,224 +5270,6 @@ msgstr ""
 #: ../rescue-check.templates:2001
 msgid "Rescue mode"
 msgstr "Mód tarrthála"
-
-#. Type: select
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:3002
-msgid "Device to use as root file system:"
-msgstr "Gléas le húsáid mar fhréamhchóras comhad:"
-
-#. Type: select
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:3002
-msgid ""
-"Enter a device you wish to use as your root file system. You will be able to "
-"choose among various rescue operations to perform on this file system."
-msgstr ""
-"Iontráil an gléas is mian leat a úsáid mar do fhréamhchóras comhad.  Beidh "
-"tú in ann oibríochtaí éagsúla tarrthála a roghnú agus a chur i bhfeidhm ar "
-"an gcóras comhad seo."
-
-#. Type: select
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:3002
-msgid ""
-"If you choose not to use a root file system, you will be given a reduced "
-"choice of operations that can be performed without one. This may be useful "
-"if you need to correct a partitioning problem."
-msgstr ""
-"Má roghnaíonn tú gan a bheith úsáid fréamhchórais comhad, cuirfear níos lú "
-"oibríochtaí ar fáil duit, na cinn is féidir a chur i bhfeidhm ina easpa.  "
-"Seans go mbainfidh tú tairbhe as an rogha seo más gá duit fadhb leis na "
-"deighiltí a réiteach."
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:8001
-msgid "Execute a shell in ${DEVICE}"
-msgstr "Rith blaosc i ${DEVICE}"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:9001
-msgid "Execute a shell in the installer environment"
-msgstr "Rith blaosc i dtimpeallacht an tsuiteálaí"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:10001
-msgid "Choose a different root file system"
-msgstr "Roghnaigh fréamhchóras comhad eile"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:11001
-msgid "Reboot the system"
-msgstr "Atosaigh an córas"
-
-#. Type: text
-#. Description
-#. :sl2:
-#. Type: text
-#. Description
-#. :sl2:
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:12001 ../rescue-mode.templates:16001
-#: ../rescue-mode.templates:17001
-msgid "Executing a shell"
-msgstr "Blaosc á rith"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:12001
-msgid ""
-"After this message, you will be given a shell with ${DEVICE} mounted on \"/"
-"\". If you need any other file systems (such as a separate \"/usr\"), you "
-"will have to mount those yourself."
-msgstr ""
-"Tar éis na teachtaireachta seo, tabharfar blaosc duit le ${DEVICE} feistithe "
-"ar \"/\".  Má tá córais chomhad eile de dhíth ort (mar shampla \"/usr\" ar "
-"leith), caithfidh tusa iad sin a fheistiú."
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:15001
-msgid "Interactive shell on ${DEVICE}"
-msgstr "Blaosc idirghníomhach ar ${DEVICE}"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:16001
-msgid ""
-"After this message, you will be given a shell with ${DEVICE} mounted on \"/"
-"target\". You may work on it using the tools available in the installer "
-"environment. If you want to make it your root file system temporarily, run "
-"\"chroot /target\". If you need any other file systems (such as a separate "
-"\"/usr\"), you will have to mount those yourself."
-msgstr ""
-"Tar éis na teachtaireachta seo, tabharfar blaosc duit le ${DEVICE} feistithe "
-"ar \"/\".  Is féidir leat obair a dhéanamh uirthi leis na huirlisí atá ar "
-"fáil i dtimpeallacht an tsuiteálaí.  Más mian leat é a bheith ina "
-"fhréamhchóras comhad go sealadach, rith an t-ordú \"chroot /target\".  Má tá "
-"córais chomhad eile de dhíth ort (mar shampla \"/usr\" ar leith), caithfidh "
-"tusa iad sin a fheistiú."
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:17001
-msgid ""
-"After this message, you will be given a shell in the installer environment. "
-"No file systems have been mounted."
-msgstr ""
-"Tar éis na teachtaireachta seo, tabharfar blaosc duit i dtimpeallacht an "
-"tsuiteálaí. Níl aon chórais comhad feistithe."
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:18001
-msgid "Interactive shell in the installer environment"
-msgstr "Blaosc idirghníomhach i dtimpeallacht an tsuiteálaí"
-
-#. Type: password
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:19001
-msgid "Passphrase for ${DEVICE}:"
-msgstr "Frása faire do ${DEVICE}:"
-
-#. Type: password
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:19001
-msgid "Please enter the passphrase for the encrypted volume ${DEVICE}."
-msgstr "Iontráil an frása faire don imleabhar criptithe ${DEVICE}."
-
-#. Type: password
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:19001
-msgid ""
-"If you don't enter anything, the volume will not be available during rescue "
-"operations."
-msgstr ""
-"Mura n-iontrálann tú faic, ní bheidh an t-imleabhar ar fáil le linn "
-"oibríochtaí tarrthála."
-
-#. Type: multiselect
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:20002
-msgid "Partitions to assemble:"
-msgstr "Deighiltí le cur le chéile:"
-
-#. Type: multiselect
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:20002
-msgid ""
-"Select the partitions to assemble into a RAID array. If you select "
-"\"Automatic\", then all devices containing RAID physical volumes will be "
-"scanned and assembled."
-msgstr ""
-"Roghnaigh na deighiltí ba mhaith leat cur le chéile mar eagar RAID. Má "
-"roghnaíonn tú \"Uathoibríoch\", bainfear úsáid as gach gléas ar a bhfuil "
-"imleabhar fisiceach RAID."
-
-#. Type: multiselect
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:20002
-msgid ""
-"Note that a RAID partition at the end of a disk may sometimes cause that "
-"disk to be mistakenly detected as containing a RAID physical volume. In that "
-"case, you should select the appropriate partitions individually."
-msgstr ""
-"Nóta: uaireanta nuair atá deighilt RAID ag deireadh diosca, ceapfar go "
-"bhfuil imleabhar fisiceach RAID ar an diosca sin, fiú mura bhfuil.   Sa chás "
-"sin, ba chóir duit na deighiltí oiriúnacha a roghnú ceann ar cheann."
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:21001
-msgid "Mount separate ${FILESYSTEM} partition?"
-msgstr "An bhfuil fonn ort deighilt ${FILESYSTEM} ar leith a fheistiú?"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:21001
-msgid "The installed system appears to use a separate ${FILESYSTEM} partition."
-msgstr ""
-"Dealraíonn sé go n-úsáideann an córas suiteáilte deighilt ${FILESYSTEM} ar "
-"leith."
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:21001
-msgid ""
-"It is normally a good idea to mount it as it will allow operations such as "
-"reinstalling the boot loader. However, if the file system on ${FILESYSTEM} "
-"is corrupt then you may want to avoid mounting it."
-msgstr ""
-"De ghnáth, is smaoineamh maith é a fheistiú toisc go mbeidh tú in ann an "
-"luchtóir tosaithe a athshuiteáil mar shampla. Ach, má tá an córas comhad "
-"${FILESYSTEM} truaillithe, níor chóir é a fheistiú."
 
 #. Type: text
 #. Description

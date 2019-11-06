@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: el\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-02 22:41+0100\n"
+"POT-Creation-Date: 2019-11-05 23:57+0100\n"
 "PO-Revision-Date: 2018-11-29 08:07+0000\n"
 "Last-Translator: Vangelis Skarmoutsos <skarmoutsosv@gmail.com>\n"
 "Language-Team: el <debian-l10n-greek@lists.debian.org>\n"
@@ -249,15 +249,16 @@ msgstr ""
 "Η φόρτωση του πακέτου λογισμικού ${PACKAGE} απέτυχε για άγνωστους λόγους. Η "
 "διαδικασία θα τερματιστεί."
 
-#. Type: boolean
+#. Type: error
 #. Description
 #. :sl2:
 #: ../anna.templates:8001
-msgid "Continue the install without loading kernel modules?"
-msgstr ""
-"Να συνεχιστεί η εγκατάσταση χωρίς τη φόρτωση των αρθρωμάτων του πυρήνα;"
+#, fuzzy
+#| msgid "No disk found"
+msgid "No kernel modules found"
+msgstr "Δε βρέθηκε δίσκος"
 
-#. Type: boolean
+#. Type: error
 #. Description
 #. :sl2:
 #: ../anna.templates:8001
@@ -270,19 +271,14 @@ msgstr ""
 "της έκδοσης του πυρήνα που χρησιμοποιείται για την εγκατάσταση και της "
 "έκδοσης που βρίσκεται στην αρχειοθήκη του Debian."
 
-#. Type: boolean
+#. Type: error
 #. Description
 #. :sl2:
 #: ../anna.templates:8001
 msgid ""
-"If you're installing from a mirror, you can work around this problem by "
-"choosing to install a different version of Debian. The install will probably "
-"fail to work if you continue without kernel modules."
+"You should make sure that your installation image is up-to-date, or - if "
+"that's the case - try a different mirror, preferably deb.debian.org."
 msgstr ""
-"Αν κάνετε την εγκατάσταση από κάποιον καθρέφτη αρχείων, μπορείτε το "
-"ξεπεράσετε το πρόβλημα δοκιμάζοντας να εγκαταστήσετε διαφορετική έκδοση του "
-"Debian. Η εγκατάσταση πιθανότατα θα αποτύχει αν συνεχίσετε χωρίς αρθρώματα "
-"του πυρήνα."
 
 #. Type: select
 #. Description
@@ -1035,6 +1031,20 @@ msgstr ""
 "πεδίο κενό."
 
 #. Type: select
+#. Choices
+#. :sl2:
+#: ../netcfg-common.templates:8001
+msgid "WEP/Open Network"
+msgstr "WEP/Ανοιχτό Δίκτυο"
+
+#. Type: select
+#. Choices
+#. :sl2:
+#: ../netcfg-common.templates:8001
+msgid "WPA/WPA2 PSK"
+msgstr "WPA/WPA2 PSK"
+
+#. Type: select
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:8002
@@ -1336,6 +1346,27 @@ msgstr "Δίκτυο υποδομής (Διαχειριζόμενο)"
 msgid "Ad-hoc network (Peer to peer)"
 msgstr "Ad-hoc δίκτυο (Peer to peer)"
 
+#. Type: select
+#. Description
+#. :sl2:
+#: ../netcfg-common.templates:24002
+msgid "Type of wireless network:"
+msgstr "Τύπος του ασύρματου δικτύου:"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../netcfg-common.templates:24002
+msgid ""
+"Wireless networks are either managed or ad-hoc. If you use a real access "
+"point of some sort, your network is Managed. If another computer is your "
+"'access point', then your network may be Ad-hoc."
+msgstr ""
+"Τα ασύρματα δίκτυα είναι είτε διαχειριζόμενα (managed) ή ad-hoc. Αν "
+"χρησιμοποιείτε κάποιο σημείο πρόσβασης (access point), το δίκτυό σας είναι "
+"Διαχειριζόμενο. Αν κάποιος άλλος υπολογιστής παίζει το ρόλο του 'σημείου "
+"πρόσβασης' τότε το δίκτυό σας είναι Ad-hoc."
+
 #. Type: text
 #. Description
 #. :sl2:
@@ -1349,6 +1380,13 @@ msgstr "Ρύθμιση ασύρματου δικτύου"
 #: ../netcfg-common.templates:26001
 msgid "Searching for wireless access points..."
 msgstr "Ανίχνευση για ασύρματα σημεία πρόσβασης ..."
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../netcfg-common.templates:29001
+msgid "Detecting link on ${interface}; please wait..."
+msgstr "Ανίχνευση συνδέσμου στο ${interface}; παρακαλώ περιμένετε..."
 
 #. Type: text
 #. Description
@@ -1842,6 +1880,15 @@ msgstr ""
 "αρχείων. Αν δεν είστε βέβαιοι, επιλέξτε την μέθοδο \"http\". Είναι λιγότερο "
 "επιρρεπής σε προβλήματα από την παρουσία firewall."
 
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl2:
+#: ../download-installer.templates:1001
+msgid "Download installer components"
+msgstr "Μεταφόρτωση των συνιστωσών του εγκαταστάτη"
+
 #. #-#-#-#-#  templates.pot (net-retriever)  #-#-#-#-#
 #. Type: select
 #. Choices
@@ -1952,6 +1999,104 @@ msgstr ""
 "Υπήρξε κάποιο πρόβλημα στην ανάγνωση δεδομένων από το αφαιρέσιμο μέσο. "
 "Παρακαλώ βεβαιωθείτε ότι έχετε το σωστό μέσο. Αν εξακολουθήσετε να έχετε "
 "προβλήματα, πιθανόν το συγκεκριμένο μέσο να είναι ελαττωματικό."
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:1001
+msgid "Load drivers from removable media now?"
+msgstr "Θέλετε να φορτώσετε τους οδηγούς από ένα αφαιρέσιμο μέσο τώρα;"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:1001
+msgid ""
+"You probably need to load drivers from removable media before continuing "
+"with the installation. If you know that the install will work without extra "
+"drivers, you can skip this step."
+msgstr ""
+"Πιθανόν πρέπει να φορτώσετε κάποιους οδηγούς από ένα αφαιρέσιμο μέσο πριν "
+"προχωρήσετε με την εγκατάσταση. Αν γνωρίζετε ότι η εγκατάσταση μπορεί να "
+"γίνει και χωρίς επιπλέον οδηγούς, μπορείτε να παραλείψετε αυτό το βήμα."
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:1001
+msgid ""
+"If you do need to load drivers, insert the appropriate removable media, such "
+"as a driver floppy or USB stick before continuing."
+msgstr ""
+"Αν πράγματι χρειάζεται να φορτώσετε οδηγούς, τοποθετήστε το κατάλληλο "
+"αφαιρέσιμο μέσο, όπως μια δισκέττα ή ένα κλειδί USB, πριν συνεχίσετε."
+
+#. Type: text
+#. Description
+#. main-menu item
+#. Translators: keep below 55 columns
+#. :sl2:
+#: ../load-media.templates:2001
+msgid "Load drivers from removable media"
+msgstr "Φόρτωση οδηγών από αφαιρέσιμα μέσα"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:3001
+msgid "Unknown removable media. Try to load anyway?"
+msgstr "Άγνωστο αφαιρέσιμο μέσο. Να γίνει φόρτωση έτσι κι αλλιώς;"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:3001
+msgid ""
+"Detected removable media that is not a known driver media. Please make sure "
+"that the correct media is inserted. You can still continue if you have an "
+"unofficial removable media you want to use."
+msgstr ""
+"Ανιχνεύθηκε ένα αφαιρέσιμο μέσο που δεν είναι μια γνωστή μονάδα. Παρακαλώ "
+"βεβαιωθείτε ότι έχετε εισάγει το σωστό μέσο. Μπορείτε ακόμα να συνεχίσετε αν "
+"έχετε ένα ανεπίσημο μέσο που θέλετε να χρησιμοποιήσετε."
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../load-media.templates:4001
+msgid "Please insert ${DISK_LABEL} ('${DISK_NAME}') first."
+msgstr "Παρακαλώ εισάγετε πρώτα την ${DISK_LABEL} ('${DISK_NAME}')."
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../load-media.templates:4001
+msgid ""
+"Due to dependencies between packages, drivers must be loaded in the correct "
+"order."
+msgstr ""
+"Λόγω εξαρτήσεων ανάμεσα στα πακέτα, οι οδηγοί θα πρέπει να φορτωθούν με την "
+"σωστή σειρά."
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:5001
+msgid "Load drivers from another removable media?"
+msgstr "Να γίνει η φόρτωση των οδηγών από κάποιο άλλο αφαιρέσιμο μέσο;"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:5001
+msgid ""
+"To load additional drivers from another removable media, please insert the "
+"appropriate removable media, such as a driver floppy or USB stick before "
+"continuing."
+msgstr ""
+"Για να φορτώσετε επιπλέον οδηγούς από κάποιο άλλο αφαιρέσιμο μέσο, παρακαλώ "
+"εισάγετε το κατάλληλο αφαιρέσιμο μέσο, όπως δισκέττα ή κλειδί USB, πριν "
+"συνεχίσετε."
 
 #. Type: error
 #. Description
@@ -4879,6 +5024,72 @@ msgstr ""
 msgid "Change debconf priority"
 msgstr "Αλλαγή της προτεραιότητας του debconf"
 
+#. Type: select
+#. Choices
+#. :sl2:
+#: ../pkgsel.templates:9001
+msgid "No automatic updates"
+msgstr "Μη αυτόματες ενημερώσεις"
+
+#. Type: select
+#. Choices
+#. :sl2:
+#: ../pkgsel.templates:9001
+msgid "Install security updates automatically"
+msgstr "Αυτόματη εγκατάσταση ενημερώσεων ασφαλείας"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+msgid "Updates management on this system:"
+msgstr "Διαχείριση ενημερώσεων στο παρόν σύστημα:"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+msgid ""
+"Applying updates on a frequent basis is an important part of keeping the "
+"system secure."
+msgstr ""
+"Η εφαρμογή ενημερώσεων σε μια συχνή βάση είναι σημαντική για να κρατάτε το "
+"σύστημά σας ασφαλές."
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+msgid ""
+"By default, security updates are not automatically installed, as security "
+"advisories should be reviewed before manual installation of the updates "
+"using standard package management tools."
+msgstr ""
+"Από προεπιλογή, οι ενημερώσεις ασφάλειας δεν εγκαθίστανται αυτόματα, καθώς "
+"οι γνωμοδοτήσεις ασφάλειας πρέπει να επανεξεταστούν πριν την χειροκίνητη "
+"εγκατάσταση των ενημερώσεων με τη χρήση τυπικών εργαλείων εγκατάστασης "
+"πακέτων."
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+msgid ""
+"Alternatively the unattended-upgrades package can be installed, which will "
+"install security updates automatically. Note however that automatic "
+"installation of updates may occasionally cause unexpected downtime of "
+"services provided by this machine in the rare cases where the update is not "
+"fully backward-compatible, or where the security advisory requires the "
+"administrator to perform some other manual operation."
+msgstr ""
+"Εναλλακτικά, μπορεί να εγκατασταθεί το πακέτο unattended-upgrades, το οποίο "
+"θα εγκαταθιστά τις ενημερώσεις ασφαλείας αυτόματα. Σημειώστε όμως ότι η "
+"αυτόματη εγκατάσταση ενημερώσεων μπορεί περιστασιακά να προκαλέσει μη "
+"αναμενόμενο χρόνο διακοπής (downtime) των υπηρεσιών που παρέχονται από το "
+"παρόν μηχάνημα στην σπάνια περίπτωση που η ενημέρωση δεν είναι πλήρως "
+"συμβατή με παλιότερες εκδόσεις ή που η ενημέρωση ασφαλείας απαιτεί από τον "
+"διαχειριστή την εκτέλεση κάποιας άλλης χειροκίνητας λειτουργίας."
+
 #. Type: error
 #. Description
 #. :sl3:
@@ -5145,229 +5356,6 @@ msgstr ""
 #: ../rescue-check.templates:2001
 msgid "Rescue mode"
 msgstr "Κατάσταση Διάσωσης"
-
-#. Type: select
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:3002
-msgid "Device to use as root file system:"
-msgstr "Συσκευή που θα χρησιμοποιηθεί για το ριζικό (βασικό) σύστημα αρχείων:"
-
-#. Type: select
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:3002
-msgid ""
-"Enter a device you wish to use as your root file system. You will be able to "
-"choose among various rescue operations to perform on this file system."
-msgstr ""
-"Εισάγετε μια συσκευή που θέλετε να χρησιμοποιήσετε σαν το ριζικό σύστημα "
-"αρχείων σας. Θα έχετε την δυνατότητα να διαλέξετε ανάμεσα σε διάφορες "
-"ενέργειες \"διάσωσης\" που μπορείτε να πραγματοποιήσετε σ' αυτό το σύστημα "
-"αρχείων."
-
-#. Type: select
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:3002
-msgid ""
-"If you choose not to use a root file system, you will be given a reduced "
-"choice of operations that can be performed without one. This may be useful "
-"if you need to correct a partitioning problem."
-msgstr ""
-"Αν επιλέξετε να μην χρησιμοποιήσετε ένα ριζικό σύστημα αρχείων τότε θα σας "
-"δοθούν και περιορισμένες επιλογές ενεργειών που μπορούν να πραγματοποιηθούν "
-"χωρίς ένα τέτοιο σύστημα. Αυτό είναι χρήσιμο σε περίπτωση που πρέπει να "
-"διορθώσετε ένα πρόβλημα διαμέρισης."
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:8001
-msgid "Execute a shell in ${DEVICE}"
-msgstr "Εκτέλεση ενός κελύφους στο ${DEVICE}"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:9001
-msgid "Execute a shell in the installer environment"
-msgstr "Εκτέλεση ενός κελύφους στο περιβάλλον του εγκαταστάτη"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:10001
-msgid "Choose a different root file system"
-msgstr "Διαλέξτε ένα διαφορετικό ριζικό σύστημα αρχείων"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:11001
-msgid "Reboot the system"
-msgstr "Επανεκκίνηση του συστήματος"
-
-#. Type: text
-#. Description
-#. :sl2:
-#. Type: text
-#. Description
-#. :sl2:
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:12001 ../rescue-mode.templates:16001
-#: ../rescue-mode.templates:17001
-msgid "Executing a shell"
-msgstr "Εκτέλεση ενός κελύφους"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:12001
-msgid ""
-"After this message, you will be given a shell with ${DEVICE} mounted on \"/"
-"\". If you need any other file systems (such as a separate \"/usr\"), you "
-"will have to mount those yourself."
-msgstr ""
-"Μετά από αυτό το μήνυμα, θα σας δωθεί ένα κέλυφος στην κατάτμηση${DEVICE} "
-"που είναι προσαρτημένη στο \"/\". Αν χρειάζεστε άλλα συστήματα αρχείων (όπως "
-"ένα ξεχωριστό \"/usr\"), θα πρέπει να τα προσαρτήσετε ο ίδιος/η ίδια."
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:15001
-msgid "Interactive shell on ${DEVICE}"
-msgstr "Διαδραστικό κελύφους στο ${DEVICE}"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:16001
-msgid ""
-"After this message, you will be given a shell with ${DEVICE} mounted on \"/"
-"target\". You may work on it using the tools available in the installer "
-"environment. If you want to make it your root file system temporarily, run "
-"\"chroot /target\". If you need any other file systems (such as a separate "
-"\"/usr\"), you will have to mount those yourself."
-msgstr ""
-"Μετά απ' αυτό το μήνυμα, θα σας δωθεί ένα κέλυφος με την κατάτμηση ${DEVICE} "
-"προσαρτημένη στον κατάλογο \"/target\". Μπορείτε να δουλέψετε σ' αυτό με τα "
-"εργαλεία που είναι διαθέσιμα στο περιβάλλον του εγκαταστάτη. Αν θέλετε να το "
-"χρησιμοποιήσετε προσωρινά σαν ριζικό σύστημα αρχείων, εκτελέστε την εντολή "
-"\"chroot /target\". Αν χρειάζεστε οποιαδήποτε άλλα συστήματα αρχείων (όπως "
-"ένα ξεχωριστό \"/usr\"), θα πρέπει να τα προσαρτήσετε ο ίδιος/η ίδια."
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:17001
-msgid ""
-"After this message, you will be given a shell in the installer environment. "
-"No file systems have been mounted."
-msgstr ""
-"Μετά από αυτό το μήνυμα, θα σας δωθεί ένα κέλυφος στο περιβάλλον του "
-"εγκαταστάτη. Δεν έχει προσαρτηθεί κανένα συστήματα αρχείων."
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:18001
-msgid "Interactive shell in the installer environment"
-msgstr "Διαδραστικό κέλυφος στο περιβάλλον του εγκαταστάτη"
-
-#. Type: password
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:19001
-msgid "Passphrase for ${DEVICE}:"
-msgstr "Συνθηματική φράση για τη συσκευή ${DEVICE}:"
-
-#. Type: password
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:19001
-msgid "Please enter the passphrase for the encrypted volume ${DEVICE}."
-msgstr ""
-"Παρακαλώ εισάγετε την συνθηματική φράση για τον κρυπτογραφημένο τόμο "
-"${DEVICE}."
-
-#. Type: password
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:19001
-msgid ""
-"If you don't enter anything, the volume will not be available during rescue "
-"operations."
-msgstr ""
-"Αν δεν εισάγετε εδώ κάτι, ο τόμος δεν θα είναι διαθέσιμος σε διαδικασίες "
-"διάσωσης."
-
-#. Type: multiselect
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:20002
-msgid "Partitions to assemble:"
-msgstr "Κατατμήσεις προς συνάθροιση:"
-
-#. Type: multiselect
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:20002
-msgid ""
-"Select the partitions to assemble into a RAID array. If you select "
-"\"Automatic\", then all devices containing RAID physical volumes will be "
-"scanned and assembled."
-msgstr ""
-"Επιλέξτε τις κατατμήσεις που θα συγκροτήσουν τη συστοιχία RAID. Αν "
-"επιλέέξετε \"Αυτόματη\", τότε όλες οι συσκευές που περιέχουν φυσικούς τόμους "
-"RAID θα ανιχνευθούν και θα συναθροιστούν."
-
-#. Type: multiselect
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:20002
-msgid ""
-"Note that a RAID partition at the end of a disk may sometimes cause that "
-"disk to be mistakenly detected as containing a RAID physical volume. In that "
-"case, you should select the appropriate partitions individually."
-msgstr ""
-"Σημειώστε ότι μια κατάτμηση RAID στο τέλος ενός δίσκου μπορεί μερικές φορές "
-"να προκαλέσει την λανθασμένη ανίχνευση αυτού του δίσκου σαν να περιέχει έναν "
-"φυσικό τόμο RAID. Στην περίπτωση αυτή, θα πρέπει να επιλέξετε τις κατάλληλες "
-"κατατμήσεις ξεχωριστά."
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:21001
-msgid "Mount separate ${FILESYSTEM} partition?"
-msgstr "Να γίνει προσάρτηση ξεχωριστής κατάτμησης ${FILESYSTEM};"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:21001
-msgid "The installed system appears to use a separate ${FILESYSTEM} partition."
-msgstr ""
-"Το εγκατεστημένο σύστημα φαίνεται να χρησιμοποιεί μια ξεχωριστή κατάτμηση /"
-"boot."
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:21001
-msgid ""
-"It is normally a good idea to mount it as it will allow operations such as "
-"reinstalling the boot loader. However, if the file system on ${FILESYSTEM} "
-"is corrupt then you may want to avoid mounting it."
-msgstr ""
-"Η προσάρτησή της είναι συνήθως μια καλή ιδέα καθώς θα επιτρέψει ενέργειες "
-"όπως η επανεγκατάσταση του φορτωτή εκκίνησης. Όμως, αν το σύστημα αρχείων "
-"στην κατάτμηση ${FILESYSTEM} είναι κατεστραμμένο τότε θα θέλατε μάλλον να "
-"αποφύγετε την προσάρτησή της κατάτμησης."
 
 #. Type: text
 #. Description

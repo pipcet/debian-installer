@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-02 22:41+0100\n"
+"POT-Creation-Date: 2019-11-05 23:57+0100\n"
 "PO-Revision-Date: 2018-08-22 12:42+0000\n"
 "Last-Translator: ButterflyOfFire <ButterflyOfFire@protonmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -2165,6 +2165,15 @@ msgstr "\"/sbin/lilo\" ئىجرا قىلىش مەغلۇپ بولدى، خاتا�
 msgid "Install the LILO boot loader on a hard disk"
 msgstr "LILO قوزغىتىش يېتەكلىگۈچنى قاتتىق دىسكىغا ئورنات"
 
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl3:
+#: ../network-preseed.templates:1001
+msgid "Download debconf preconfiguration file"
+msgstr "debconf ئالدىن سەپلىمە ھۆججەت چۈشۈر"
+
 #. Type: string
 #. Description
 #. :sl3:
@@ -2228,6 +2237,15 @@ msgstr "تەپسىلاتىنى http://wiki.debian.org/DebianInstaller/Preseed ن
 
 #. Type: text
 #. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl3:
+#: ../file-preseed.templates:1001
+msgid "Load debconf preconfiguration file"
+msgstr "debconf ئالدىن سەپلىمە ھۆججەت يۈكلە"
+
+#. Type: text
+#. Description
 #. :sl3:
 #: ../rescue-mode.templates:2001
 msgid "No partitions found"
@@ -2249,6 +2267,52 @@ msgstr ""
 "بولغانلىقتىن ياكى رايون تەقسىمات جەدۋىلىنى ئوقۇش مەغلۇپ بولغانلىقتىن بولۇشى "
 "مۇمكىن، ياكى دىسكا رايونغا ئايرىلمىغانلىقتىن بولۇشى مۇمكىن. ئەگەر خالىسىڭىز، "
 "ئورنىتىش پروگرامما مۇھىتىدىكى shell دا بۇنى تەكشۈرەلەيسىز."
+
+#. Type: select
+#. Choices
+#. :sl3:
+#: ../rescue-mode.templates:3001
+msgid "Assemble RAID array"
+msgstr "يېڭى RAID تىزىقى"
+
+#. Type: select
+#. Choices
+#. :sl3:
+#: ../rescue-mode.templates:3001
+msgid "Do not use a root file system"
+msgstr "غول ھۆججەت سىستېمىسى ئىشلەتمە"
+
+#. Type: select
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:3002
+msgid "Device to use as root file system:"
+msgstr "غول ھۆججەت سىستېمىسى قىلىپ ئىشلىتىدىغان ئۈسكۈنە:"
+
+#. Type: select
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:3002
+msgid ""
+"Enter a device you wish to use as your root file system. You will be able to "
+"choose among various rescue operations to perform on this file system."
+msgstr ""
+"غول ھۆججەت سىستېمىسى قىلىپ ئىشلىتىدىغان ئۈسكۈنىدىن بىرنى كىرگۈزۈڭ. بۇ خىل "
+"ھۆججەت سىستېمىسىدا ئىجرا قىلىنىدىغان ھەر خىل جىددىي قۇتقۇزۇش تەدبىرلىرىنى "
+"تاللىيالايسىز."
+
+#. Type: select
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:3002
+msgid ""
+"If you choose not to use a root file system, you will be given a reduced "
+"choice of operations that can be performed without one. This may be useful "
+"if you need to correct a partitioning problem."
+msgstr ""
+"غول ھۆججەت سىستېمىسىنى ئىشلەتمەسلىكنى تاللىسىڭىز چەكلىك بولغان غول ھۆججەت "
+"سىستېمىسى لازىم بولمايدىغان بىر قىسىم مەشغۇلاتلارنى ئېلىپ بارالايسىز. رايون "
+"كاشىلىسىنى ئوڭشاشتا بۇ بەك كېرەكلىك."
 
 #. Type: error
 #. Description
@@ -2293,6 +2357,13 @@ msgstr ""
 msgid "Please check the syslog for more information."
 msgstr "سىستېما كۈندىلىك خاتىرىسىنى تەكشۈرۈپ تېخىمۇ كۆپ ئۇچۇرغا ئېرىشىڭ."
 
+#. Type: select
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:6001
+msgid "Rescue operations"
+msgstr "قۇتقۇزۇش مەشغۇلاتى"
+
 #. Type: error
 #. Description
 #. :sl3:
@@ -2306,6 +2377,61 @@ msgstr "قۇتقۇزۇش مەشغۇلاتى مەغلۇپ بولدى"
 #: ../rescue-mode.templates:7001
 msgid "The rescue operation '${OPERATION}' failed with exit code ${CODE}."
 msgstr "قۇتقۇزۇش مەشغۇلاتى '${OPERATION}' مەغلۇپ بولدى، چېكىنىش كودى ${CODE}."
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:8001
+msgid "Execute a shell in ${DEVICE}"
+msgstr "${DEVICE} دا shell ئىجرا قىل"
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:9001
+msgid "Execute a shell in the installer environment"
+msgstr "ئورنىتىش پروگراممىسى مۇھىتىدا shell ئىجرا قىل"
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:10001
+msgid "Choose a different root file system"
+msgstr "باشقا غول ھۆججەت سىستېمىسى تاللاڭ"
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:11001
+msgid "Reboot the system"
+msgstr "سىستېمىنى قايتا قوزغات"
+
+#. Type: text
+#. Description
+#. :sl3:
+#. Type: text
+#. Description
+#. :sl3:
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:12001 ../rescue-mode.templates:16001
+#: ../rescue-mode.templates:17001
+msgid "Executing a shell"
+msgstr "shell ئىجرا قىلىۋاتىدۇ"
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:12001
+msgid ""
+"After this message, you will be given a shell with ${DEVICE} mounted on \"/"
+"\". If you need any other file systems (such as a separate \"/usr\"), you "
+"will have to mount those yourself."
+msgstr ""
+"بۇ ئۇچۇردىن كېيىن، سىز \"/\" غا ئېگەرلەنگەن ${DEVICE} مۇھىتىدىكى shell غا "
+"ئېرىشىسىز. ئەگەر باشقا ھۆججەت سىستېمىسىغا ئېھتىياجلىق بولسىڭىز (مەسىلەن يەككە"
+"\"/usr\")، ئۇلارنى ئۆزىڭىز ئېگەرلەيسىز."
 
 #. Type: error
 #. Description
@@ -2339,6 +2465,143 @@ msgstr "/target تا shell بايقالمىدى"
 msgid "No usable shell was found on your root file system (${DEVICE})."
 msgstr ""
 "غول ھۆججەت سىستېمىسى (${DEVICE}) دىن ئىشلىتىشكە بولىدىغان shell تېپىلمىدى."
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:15001
+msgid "Interactive shell on ${DEVICE}"
+msgstr "${DEVICE} دىكى shell"
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:16001
+msgid ""
+"After this message, you will be given a shell with ${DEVICE} mounted on \"/"
+"target\". You may work on it using the tools available in the installer "
+"environment. If you want to make it your root file system temporarily, run "
+"\"chroot /target\". If you need any other file systems (such as a separate "
+"\"/usr\"), you will have to mount those yourself."
+msgstr ""
+"بۇ ئۇچۇردىن كېيىن، shell دىن بىرگە ئېرىشىسىز، ئۇنىڭ ئىچىدە ${DEVICE} نى \"/"
+"target\" قا ئېگەرلىدى. سىز ئورنىتىش پروگراممىسى مۇھىتى تەمىنلىگەن قورالدىن "
+"پايدىلىنىپ ئۇنىڭغا مەشغۇلات قىلسىڭىز بولىدۇ. ئەگەر سىز ئۇنى ۋاقىتلىق غول "
+"ھۆججەت سىستېمىسى قىلماقچى بولسىڭىز \"chroot /target\" ئىجرا قىلىڭ. ئەگەر "
+"باشقا ھۆججەت سىستېمىسىغا ئېھتىياجلىق بولسىڭىز (مەسىلەن يەككە  \"/usr\") "
+"ئۇنداقتا ئۆزىڭىز ئېگەرلەڭ."
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:17001
+msgid ""
+"After this message, you will be given a shell in the installer environment. "
+"No file systems have been mounted."
+msgstr ""
+"بۇ ئۇچۇردىن كېيىن، ئورنىتىش مۇھىتىدا بىر shell مۇھىتىغا ئېرىشىسىز. ھېچقانداق "
+"ھۆججەت سىستېمىسى ئېگەرلەنمىگەن."
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:18001
+msgid "Interactive shell in the installer environment"
+msgstr "ئورنىتىش پروگرامما مۇھىتىدىكى ھەرىكەتچان shell"
+
+#. Type: password
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:19001
+msgid "Passphrase for ${DEVICE}:"
+msgstr "${DEVICE} ئىم جۈملىسى:"
+
+#. Type: password
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:19001
+msgid "Please enter the passphrase for the encrypted volume ${DEVICE}."
+msgstr "شىفىرلىق دىسكا ${DEVICE} نىڭ ئىم جۈملىسىنى كىرگۈزۈڭ."
+
+#. Type: password
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:19001
+msgid ""
+"If you don't enter anything, the volume will not be available during rescue "
+"operations."
+msgstr ""
+"ئەگەر ھېچنېمە كىرگۈزمىگەن بولسىڭىز، قۇتقۇزۇش مەشغۇلاتى قىلغاندا بۇ دىسكىنى  "
+"ئىشلىتەلمەيسىز."
+
+#. Type: multiselect
+#. Choices
+#. :sl3:
+#: ../rescue-mode.templates:20001
+msgid "Automatic"
+msgstr "ئاپتوماتىك"
+
+#. Type: multiselect
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:20002
+msgid "Partitions to assemble:"
+msgstr "قۇراشتۇرىدىغان رايون:"
+
+#. Type: multiselect
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:20002
+msgid ""
+"Select the partitions to assemble into a RAID array. If you select "
+"\"Automatic\", then all devices containing RAID physical volumes will be "
+"scanned and assembled."
+msgstr ""
+"رايوندىن بىرنى تاللاپ RAID قاتارغا قۇراشتۇرىدۇ. ئەگەر «ئۆزلۈكىدىن» تاللانسا، "
+"RAID فىزىكىلىق ئەننى ئۆز ئىچىگە ئالغان ھەممە ئۈسكۈنىلەرنى تەكشۈرۈپ "
+"قۇراشتۇرىدۇ."
+
+#. Type: multiselect
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:20002
+msgid ""
+"Note that a RAID partition at the end of a disk may sometimes cause that "
+"disk to be mistakenly detected as containing a RAID physical volume. In that "
+"case, you should select the appropriate partitions individually."
+msgstr ""
+"دىققەت: دىسكىنىڭ ئاخىرىدىكى RAID رايون بەزىدە خاتا ھالدا RAID فىزىكىلىق "
+"ئەننى ئۆز ئىچىگە ئالغان دەپ بايقىلىپ قالىدۇ. بۇ چاغدا مۇناسىپ رايوننى ئايرىم "
+"تاللاش لازىم."
+
+#. Type: boolean
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:21001
+msgid "Mount separate ${FILESYSTEM} partition?"
+msgstr "مۇستەقىل ${FILESYSTEM} رايون ئېگەرلەمدۇ؟"
+
+#. Type: boolean
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:21001
+msgid "The installed system appears to use a separate ${FILESYSTEM} partition."
+msgstr ""
+"بۇ ئورنىتىلغان سىستېما مۇستەقىل بىر ${FILESYSTEM} رايونى ئىشلىتىدىغاندەك "
+"تۇرىدۇ."
+
+#. Type: boolean
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:21001
+msgid ""
+"It is normally a good idea to mount it as it will allow operations such as "
+"reinstalling the boot loader. However, if the file system on ${FILESYSTEM} "
+"is corrupt then you may want to avoid mounting it."
+msgstr ""
+"قوزغىتىش يېتەكلىگۈچنى قايتا ئورنىتىشقا ئوخشاش مەشغۇلاتتا ئۇنى يۈكلەش ئادەتتە "
+"ناھايىتى ياخشى ئوي-پىكىر. ئەمما ${FILESYSTEM} دىكى ھۆججەت سىستېمىسى بۇزۇلغان "
+"بولسا ئۇنى ئېگەرلەشتىن ھەزەر ئەيلەڭ."
 
 #. Type: text
 #. Description
@@ -3097,12 +3360,23 @@ msgstr "توغرا نەشرى (${DI_KERNEL})نى ئىشلىتىپ قايتا ق�
 msgid "Configure iSCSI volumes"
 msgstr "شىفىرلىق دىسكىنى سەپلەش"
 
+#. Type: select
+#. Choices
+#. Note to translators : Please keep your translations of the choices
+#. below a 65 columns limit (which means 65 characters
+#. in single-byte languages)
+#. :sl3:
+#: ../partman-iscsi.templates:2001
+msgid "Log into iSCSI targets"
+msgstr ""
+
 #. #-#-#-#-#  templates.pot (partman-iscsi)  #-#-#-#-#
 #. Type: select
 #. Choices
 #. Note to translators : Please keep your translations of the choices
 #. below a 65 columns limit (which means 65 characters
 #. in single-byte languages)
+#. :sl3:
 #. #-#-#-#-#  templates.pot (mdcfg)  #-#-#-#-#
 #. Type: select
 #. Choices

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-02 22:41+0100\n"
+"POT-Creation-Date: 2019-11-05 23:57+0100\n"
 "PO-Revision-Date: 2018-10-12 09:01+0900\n"
 "Last-Translator:  Kenshi Muto <kmuto@debian.org>\n"
 "Language-Team: Debian L10n Japanese <debian-japanese@lists.debian.org>\n"
@@ -229,14 +229,16 @@ msgstr "インストーラコンポーネントのロードに失敗しました
 msgid "Loading ${PACKAGE} failed for unknown reasons. Aborting."
 msgstr "未知の理由で ${PACKAGE} のロードに失敗しました。中断します。"
 
-#. Type: boolean
+#. Type: error
 #. Description
 #. :sl2:
 #: ../anna.templates:8001
-msgid "Continue the install without loading kernel modules?"
-msgstr "カーネルモジュールをロードせずにインストールを続けますか?"
+#, fuzzy
+#| msgid "No logical volume found"
+msgid "No kernel modules found"
+msgstr "論理ボリュームが見つかりません"
 
-#. Type: boolean
+#. Type: error
 #. Description
 #. :sl2:
 #: ../anna.templates:8001
@@ -249,18 +251,14 @@ msgstr ""
 "バージョンで使っているカーネルと、アーカイブで利用できるカーネルバージョンに"
 "ミスマッチが起きているためです。"
 
-#. Type: boolean
+#. Type: error
 #. Description
 #. :sl2:
 #: ../anna.templates:8001
 msgid ""
-"If you're installing from a mirror, you can work around this problem by "
-"choosing to install a different version of Debian. The install will probably "
-"fail to work if you continue without kernel modules."
+"You should make sure that your installation image is up-to-date, or - if "
+"that's the case - try a different mirror, preferably deb.debian.org."
 msgstr ""
-"ミラーからインストールしているのであれば、異なる Debian バージョンのインス"
-"トールを選ぶことで、この問題に対処できます。カーネルモジュールなしに続ける"
-"と、インストールはおそらく失敗します。"
 
 #. Type: select
 #. Description
@@ -996,6 +994,20 @@ msgstr ""
 "たいときには、この欄は空のままにしておきます。"
 
 #. Type: select
+#. Choices
+#. :sl2:
+#: ../netcfg-common.templates:8001
+msgid "WEP/Open Network"
+msgstr "WEP/Open Network"
+
+#. Type: select
+#. Choices
+#. :sl2:
+#: ../netcfg-common.templates:8001
+msgid "WPA/WPA2 PSK"
+msgstr "WPA/WPA2 PSK"
+
+#. Type: select
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:8002
@@ -1290,6 +1302,27 @@ msgstr "インフラストラクチャ (マネージド) ネットワーク"
 msgid "Ad-hoc network (Peer to peer)"
 msgstr "アドホックネットワーク (ピアツーピア)"
 
+#. Type: select
+#. Description
+#. :sl2:
+#: ../netcfg-common.templates:24002
+msgid "Type of wireless network:"
+msgstr "無線ネットワークの種類:"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../netcfg-common.templates:24002
+msgid ""
+"Wireless networks are either managed or ad-hoc. If you use a real access "
+"point of some sort, your network is Managed. If another computer is your "
+"'access point', then your network may be Ad-hoc."
+msgstr ""
+"無線ネットワークはマネージドまたはアドホックのどちらかです。何らかの実際のア"
+"クセスポイントを使っているのであれば、あなたのネットワークはマネージドです。"
+"もしほかのコンピュータがあなたの「アクセスポイント」となっているのであれば、"
+"あなたのネットワークはアドホックでしょう。"
+
 #. Type: text
 #. Description
 #. :sl2:
@@ -1303,6 +1336,13 @@ msgstr "無線ネットワークの設定"
 #: ../netcfg-common.templates:26001
 msgid "Searching for wireless access points..."
 msgstr "無線アクセスポイントを探しています..."
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../netcfg-common.templates:29001
+msgid "Detecting link on ${interface}; please wait..."
+msgstr "${interface} のリンクの検出中です。しばらくお待ちください..."
 
 #. Type: text
 #. Description
@@ -1781,6 +1821,15 @@ msgstr ""
 "いのであれば、\"http\" を選んでください。これは、ファイアウォールを伴ったとき"
 "に問題が比較的少ないものです。"
 
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl2:
+#: ../download-installer.templates:1001
+msgid "Download installer components"
+msgstr "インストーラコンポーネントのダウンロード"
+
 #. #-#-#-#-#  templates.pot (net-retriever)  #-#-#-#-#
 #. Type: select
 #. Choices
@@ -1890,6 +1939,104 @@ msgstr ""
 "リムーバブルメディアからデータの読み込み中に問題が発生しました。正しいメディ"
 "アであることを確認してください。問題がまだ続くようなら、リムーバブルメディア"
 "がおかしいのでしょう。"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:1001
+msgid "Load drivers from removable media now?"
+msgstr "ドライバをリムーバブルメディアから今ロードしますか?"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:1001
+msgid ""
+"You probably need to load drivers from removable media before continuing "
+"with the installation. If you know that the install will work without extra "
+"drivers, you can skip this step."
+msgstr ""
+"インストールを続ける前に、おそらくリムーバブルメディアからドライバをロードす"
+"る必要があります。追加ドライバなしにインストールが動作するとわかっているとき"
+"には、このステップは省略できます。"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:1001
+msgid ""
+"If you do need to load drivers, insert the appropriate removable media, such "
+"as a driver floppy or USB stick before continuing."
+msgstr ""
+"ドライバのロードを選ぶ場合、続ける前に適切なリムーバブルメディア (ドライバフ"
+"ロッピーや USB メモリなど) を挿入してください。"
+
+#. Type: text
+#. Description
+#. main-menu item
+#. Translators: keep below 55 columns
+#. :sl2:
+#: ../load-media.templates:2001
+msgid "Load drivers from removable media"
+msgstr "ドライバをリムーバブルメディアからロード"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:3001
+msgid "Unknown removable media. Try to load anyway?"
+msgstr "未知のリムーバブルメディアです。それでもロードを試みますか?"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:3001
+msgid ""
+"Detected removable media that is not a known driver media. Please make sure "
+"that the correct media is inserted. You can still continue if you have an "
+"unofficial removable media you want to use."
+msgstr ""
+"リムーバブルメディアは既知のドライバメディアではありません。正しいメディアが"
+"挿入されていることを確認してください。非公式のリムーバブルメディアを利用した"
+"いのであれば、このまま継続できます。"
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../load-media.templates:4001
+msgid "Please insert ${DISK_LABEL} ('${DISK_NAME}') first."
+msgstr "${DISK_LABEL} ('${DISK_NAME}') を最初に挿入してください。"
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../load-media.templates:4001
+msgid ""
+"Due to dependencies between packages, drivers must be loaded in the correct "
+"order."
+msgstr ""
+"パッケージ間の依存関係のために、ドライバは正しい順序でロードされなければなり"
+"ません。"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:5001
+msgid "Load drivers from another removable media?"
+msgstr "ドライバを別のリムーバブルメディアからロードしますか?"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:5001
+msgid ""
+"To load additional drivers from another removable media, please insert the "
+"appropriate removable media, such as a driver floppy or USB stick before "
+"continuing."
+msgstr ""
+"ほかのリムーバブルメディアから追加ドライバをロードするためには、続ける前に適"
+"切なリムーバブルメディア (ドライバフロッピーや USB メモリなど) を挿入してくだ"
+"さい。"
 
 #. Type: error
 #. Description
@@ -4763,6 +4910,67 @@ msgstr ""
 msgid "Change debconf priority"
 msgstr "debconf 優先度の変更"
 
+#. Type: select
+#. Choices
+#. :sl2:
+#: ../pkgsel.templates:9001
+msgid "No automatic updates"
+msgstr "自動更新なし"
+
+#. Type: select
+#. Choices
+#. :sl2:
+#: ../pkgsel.templates:9001
+msgid "Install security updates automatically"
+msgstr "セキュリティ更新を自動でインストール"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+msgid "Updates management on this system:"
+msgstr "このシステムの更新管理:"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+msgid ""
+"Applying updates on a frequent basis is an important part of keeping the "
+"system secure."
+msgstr "更新を頻繁に適用することはシステムをセキュアに保つ上で重要です。"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+msgid ""
+"By default, security updates are not automatically installed, as security "
+"advisories should be reviewed before manual installation of the updates "
+"using standard package management tools."
+msgstr ""
+"標準的なパッケージ管理ツールを使って手動で更新をインストールする前にセキュリ"
+"ティ勧告を吟味すべきなので、デフォルトでは、セキュリティ更新は自動ではインス"
+"トールされません。"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+msgid ""
+"Alternatively the unattended-upgrades package can be installed, which will "
+"install security updates automatically. Note however that automatic "
+"installation of updates may occasionally cause unexpected downtime of "
+"services provided by this machine in the rare cases where the update is not "
+"fully backward-compatible, or where the security advisory requires the "
+"administrator to perform some other manual operation."
+msgstr ""
+"別の方法として、セキュリティ更新を自動でインストールしてくれる unattended-"
+"upgrades パッケージをインストールできます。ただし、更新の自動インストールは、"
+"「更新が完全な後方互換性を持っていなかった」「セキュリティ勧告で管理者に何か"
+"別の手動操作をするよう要求していた」といったまれな場合に、このマシンで提供し"
+"ているサービスに、予期せぬ停止時間を引き起こすかもしれません。"
+
 #. Type: error
 #. Description
 #. :sl3:
@@ -5022,219 +5230,6 @@ msgstr ""
 #: ../rescue-check.templates:2001
 msgid "Rescue mode"
 msgstr "レスキューモード"
-
-#. Type: select
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:3002
-msgid "Device to use as root file system:"
-msgstr "ルートファイルシステムとして使うデバイス:"
-
-#. Type: select
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:3002
-msgid ""
-"Enter a device you wish to use as your root file system. You will be able to "
-"choose among various rescue operations to perform on this file system."
-msgstr ""
-"ルートファイルシステムとして使いたいデバイスを入力してください。さまざまなレ"
-"スキュー操作を、このファイルシステムに実行できます。"
-
-#. Type: select
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:3002
-msgid ""
-"If you choose not to use a root file system, you will be given a reduced "
-"choice of operations that can be performed without one. This may be useful "
-"if you need to correct a partitioning problem."
-msgstr ""
-"ルートファイルシステムを使用しないことを選んだ場合、これなしに実行可能な操作"
-"の選択肢は限定的になります。パーティショニングの問題を修正したいときには役に"
-"立つでしょう。"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:8001
-msgid "Execute a shell in ${DEVICE}"
-msgstr "${DEVICE} 内でシェルを実行"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:9001
-msgid "Execute a shell in the installer environment"
-msgstr "インストーラ環境内でシェルを実行"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:10001
-msgid "Choose a different root file system"
-msgstr "異なるルートファイルシステムを選択"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:11001
-msgid "Reboot the system"
-msgstr "システムの再起動"
-
-#. Type: text
-#. Description
-#. :sl2:
-#. Type: text
-#. Description
-#. :sl2:
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:12001 ../rescue-mode.templates:16001
-#: ../rescue-mode.templates:17001
-msgid "Executing a shell"
-msgstr "シェルを実行しています"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:12001
-msgid ""
-"After this message, you will be given a shell with ${DEVICE} mounted on \"/"
-"\". If you need any other file systems (such as a separate \"/usr\"), you "
-"will have to mount those yourself."
-msgstr ""
-"このメッセージのあと、\"/\" にマウントされた ${DEVICE} のシェルを得ます。ほか"
-"のファイルシステム (分離されている \"/usr\" など) も必要であれば、それらをあ"
-"なた自身でマウントする必要があります。"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:15001
-msgid "Interactive shell on ${DEVICE}"
-msgstr "${DEVICE} 上のインタラクティブシェル"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:16001
-msgid ""
-"After this message, you will be given a shell with ${DEVICE} mounted on \"/"
-"target\". You may work on it using the tools available in the installer "
-"environment. If you want to make it your root file system temporarily, run "
-"\"chroot /target\". If you need any other file systems (such as a separate "
-"\"/usr\"), you will have to mount those yourself."
-msgstr ""
-"このメッセージのあと、\"/target\" にマウントされた ${DEVICE} のシェルを得ま"
-"す。インストーラ環境にあるツールを利用して作業が可能です。ルートファイルシス"
-"テムを一時的に作成したいときには、\"chroot /target\" を実行してください。ほか"
-"のファイルシステム (分離されている \"/usr\" など) も必要であれば、それらをあ"
-"なた自身でマウントする必要があります。"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:17001
-msgid ""
-"After this message, you will be given a shell in the installer environment. "
-"No file systems have been mounted."
-msgstr ""
-"このメッセージのあと、インストーラ環境のシェルを得ます。ファイルシステムは何"
-"もマウントされていません。"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:18001
-msgid "Interactive shell in the installer environment"
-msgstr "インストーラ環境内のインタラクティブシェル"
-
-#. Type: password
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:19001
-msgid "Passphrase for ${DEVICE}:"
-msgstr "${DEVICE} のパスフレーズ:"
-
-#. Type: password
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:19001
-msgid "Please enter the passphrase for the encrypted volume ${DEVICE}."
-msgstr "暗号化ボリューム ${DEVICE} のパスフレーズを入力してください。"
-
-#. Type: password
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:19001
-msgid ""
-"If you don't enter anything, the volume will not be available during rescue "
-"operations."
-msgstr "何も入力しないと、ボリュームはレスキュー作業の間利用できません。"
-
-#. Type: multiselect
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:20002
-msgid "Partitions to assemble:"
-msgstr "組み合わせるパーティション:"
-
-#. Type: multiselect
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:20002
-msgid ""
-"Select the partitions to assemble into a RAID array. If you select "
-"\"Automatic\", then all devices containing RAID physical volumes will be "
-"scanned and assembled."
-msgstr ""
-"RAID アレイとして組み合わせるパーティションを選んでください。\"自動\" を選択"
-"すると、RAID 物理ボリュームを含むすべてのデバイスが走査され、組み合わされま"
-"す。"
-
-#. Type: multiselect
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:20002
-msgid ""
-"Note that a RAID partition at the end of a disk may sometimes cause that "
-"disk to be mistakenly detected as containing a RAID physical volume. In that "
-"case, you should select the appropriate partitions individually."
-msgstr ""
-"ディスクの最後にある RAID パーティションは、RAID 物理ボリュームを含むディスク"
-"として誤検出されてしまうことがたまにあるので、注意してください。その場合、適"
-"切なパーティションを個別に選択するようにしてください。"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:21001
-msgid "Mount separate ${FILESYSTEM} partition?"
-msgstr "別個の ${FILESYSTEM} パーティションをマウントしますか?"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:21001
-msgid "The installed system appears to use a separate ${FILESYSTEM} partition."
-msgstr ""
-"インストールされたシステムでは、別個の ${FILESYSTEM} パーティションを使ってい"
-"るようです。"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:21001
-msgid ""
-"It is normally a good idea to mount it as it will allow operations such as "
-"reinstalling the boot loader. However, if the file system on ${FILESYSTEM} "
-"is corrupt then you may want to avoid mounting it."
-msgstr ""
-"マウントするとブートローダの再インストールなどの操作ができるようになるので、"
-"マウントするのは本来良い策です。しかし、${FILESYSTEM} のファイルシステムが破"
-"損している場合には、マウントを避けてもかまいません。"
 
 #. Type: text
 #. Description

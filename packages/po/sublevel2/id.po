@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer (level1)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-02 22:41+0100\n"
+"POT-Creation-Date: 2019-11-05 23:57+0100\n"
 "PO-Revision-Date: 2019-10-01 09:56+0000\n"
 "Last-Translator: Andika Triwidada <andika@gmail.com>\n"
 "Language-Team: Bahasa Indonesia <debian-l10n-id@gurame.fisika.ui.ac.id>\n"
@@ -246,14 +246,16 @@ msgstr "Gagal memuat komponen instalasi"
 msgid "Loading ${PACKAGE} failed for unknown reasons. Aborting."
 msgstr "Pemuatan ${PACKAGE} gagal tanpa sebab jelas. Terpaksa dibatalkan."
 
-#. Type: boolean
+#. Type: error
 #. Description
 #. :sl2:
 #: ../anna.templates:8001
-msgid "Continue the install without loading kernel modules?"
-msgstr "Melanjutkan instalasi tanpa memuat modul-modul kernel?"
+#, fuzzy
+#| msgid "No disk found"
+msgid "No kernel modules found"
+msgstr "Harddisk tidak ditemukan"
 
-#. Type: boolean
+#. Type: error
 #. Description
 #. :sl2:
 #: ../anna.templates:8001
@@ -266,18 +268,14 @@ msgstr ""
 "kernel yang digunakan penginstal ini dan versi kernel yang tersedia pada "
 "arsip."
 
-#. Type: boolean
+#. Type: error
 #. Description
 #. :sl2:
 #: ../anna.templates:8001
 msgid ""
-"If you're installing from a mirror, you can work around this problem by "
-"choosing to install a different version of Debian. The install will probably "
-"fail to work if you continue without kernel modules."
+"You should make sure that your installation image is up-to-date, or - if "
+"that's the case - try a different mirror, preferably deb.debian.org."
 msgstr ""
-"Jika Anda memasang dari sebuah mirror, Anda dapat memecahkannya dengan "
-"memilih memasang versi Debian yang lain. Pemasangan kemungkinan besar akan "
-"gagal bila Anda melanjutkan tanpa memasang modul-modul kernel."
 
 #. Type: select
 #. Description
@@ -956,6 +954,20 @@ msgstr ""
 "menggunakan jaringan apa saja yang tersedia biarkan ruas ini kosong."
 
 #. Type: select
+#. Choices
+#. :sl2:
+#: ../netcfg-common.templates:8001
+msgid "WEP/Open Network"
+msgstr "WEP/Jaringan terbuka"
+
+#. Type: select
+#. Choices
+#. :sl2:
+#: ../netcfg-common.templates:8001
+msgid "WPA/WPA2 PSK"
+msgstr "WPA/WPA2 PSK"
+
+#. Type: select
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:8002
@@ -1252,6 +1264,26 @@ msgstr "Jaringan Infrastruktur (Dikelola)"
 msgid "Ad-hoc network (Peer to peer)"
 msgstr "Jaringan Ad-hoc (Peer to peer)"
 
+#. Type: select
+#. Description
+#. :sl2:
+#: ../netcfg-common.templates:24002
+msgid "Type of wireless network:"
+msgstr "Jenis jaringan nirkabel:"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../netcfg-common.templates:24002
+msgid ""
+"Wireless networks are either managed or ad-hoc. If you use a real access "
+"point of some sort, your network is Managed. If another computer is your "
+"'access point', then your network may be Ad-hoc."
+msgstr ""
+"Jaringan nirkabel dapat merupakan 'jaringan dikelola' atau 'ad-hoc'. Bila "
+"Anda menggunakan titik akses yang nyata, jaringan Anda Dikelola. Bila "
+"komputer lain merupakan 'titik akses', maka jaringan Anda Ad-hoc."
+
 #. Type: text
 #. Description
 #. :sl2:
@@ -1265,6 +1297,13 @@ msgstr "Konfigurasi jaringan nirkabel"
 #: ../netcfg-common.templates:26001
 msgid "Searching for wireless access points..."
 msgstr "Sedang mencari titik akses nirkabel ..."
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../netcfg-common.templates:29001
+msgid "Detecting link on ${interface}; please wait..."
+msgstr "Mencari perangkat keras di ${interface}, mohon tunggu..."
 
 #. Type: text
 #. Description
@@ -1738,6 +1777,15 @@ msgstr ""
 "Silakan memilih protokol untuk mengambil berkas. Jika tidak yakin, pilih "
 "\"http\". HTTP biasanya tidak terlalu bermasalah dengan firewall."
 
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl2:
+#: ../download-installer.templates:1001
+msgid "Download installer components"
+msgstr "Mengunduh komponen instalasi"
+
 #. #-#-#-#-#  templates.pot (net-retriever)  #-#-#-#-#
 #. Type: select
 #. Choices
@@ -1841,6 +1889,102 @@ msgstr ""
 "Ada masalah saat membaca data dari media lepas-pasang. Pastikan Anda "
 "memasukkan media yang benar. Bila Anda terus mendapatkan masalah ini, "
 "mungkin media lepas-pasang Anda rusak."
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:1001
+msgid "Load drivers from removable media now?"
+msgstr "Muatkan driver dari media lepas-pasang sekarang?"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:1001
+msgid ""
+"You probably need to load drivers from removable media before continuing "
+"with the installation. If you know that the install will work without extra "
+"drivers, you can skip this step."
+msgstr ""
+"Anda mungkin perlu memuat driver dari media lepas-pasang sebelum melanjutkan "
+"instalasi. Jika Anda yakin bahwa instalasi akan berjalan tanpa driver "
+"tambahan, Anda dapat melewatkan langkah ini."
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:1001
+msgid ""
+"If you do need to load drivers, insert the appropriate removable media, such "
+"as a driver floppy or USB stick before continuing."
+msgstr ""
+"Bila Anda perlu memuat driver, masukkan media lepas-pasang yang sesuai, "
+"seperti disket atau USB flashdisk sebelum melanjutkan."
+
+#. Type: text
+#. Description
+#. main-menu item
+#. Translators: keep below 55 columns
+#. :sl2:
+#: ../load-media.templates:2001
+msgid "Load drivers from removable media"
+msgstr "Muat driver dari media lepas-pasang"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:3001
+msgid "Unknown removable media. Try to load anyway?"
+msgstr "Media lepas-pasang tak dikenal. Tetap dilanjutkan?"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:3001
+msgid ""
+"Detected removable media that is not a known driver media. Please make sure "
+"that the correct media is inserted. You can still continue if you have an "
+"unofficial removable media you want to use."
+msgstr ""
+"Media lepas-pasang ini bukan media driver yang dikenal. Pastikan Anda "
+"memasukkan media yang benar. Anda tetap dapat melanjutkan jika Anda ingin "
+"menggunakan media lepas-pasang yang tak resmi."
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../load-media.templates:4001
+msgid "Please insert ${DISK_LABEL} ('${DISK_NAME}') first."
+msgstr "Silakan masukkan ${DISK_LABEL} ('${DISK_NAME}') lebih dahulu."
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../load-media.templates:4001
+msgid ""
+"Due to dependencies between packages, drivers must be loaded in the correct "
+"order."
+msgstr ""
+"Oleh sebab ketergantungan antar paket, driver harus dimuat sesuai urutan."
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:5001
+msgid "Load drivers from another removable media?"
+msgstr "Muatkan driver dari media lepas-pasang lainnya?"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:5001
+msgid ""
+"To load additional drivers from another removable media, please insert the "
+"appropriate removable media, such as a driver floppy or USB stick before "
+"continuing."
+msgstr ""
+"Untuk memuat driver dari media lepas-pasang, silakan masukkan media yang "
+"sesuai, seperti disket driver atau USB flashdisk, sebelum Anda melanjutkan."
 
 #. Type: error
 #. Description
@@ -4707,6 +4851,71 @@ msgstr ""
 msgid "Change debconf priority"
 msgstr "Ganti prioritas debconf"
 
+#. Type: select
+#. Choices
+#. :sl2:
+#: ../pkgsel.templates:9001
+msgid "No automatic updates"
+msgstr "Update otomatis tidak tersedia"
+
+#. Type: select
+#. Choices
+#. :sl2:
+#: ../pkgsel.templates:9001
+msgid "Install security updates automatically"
+msgstr "Pasang pembaharuan keamanan secara otomatis"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+msgid "Updates management on this system:"
+msgstr "Manajemen pembaruan pada sistem ini:"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+msgid ""
+"Applying updates on a frequent basis is an important part of keeping the "
+"system secure."
+msgstr ""
+"Menerapkan pembaruan secara sering merupakan bagian penting dalam menjaga "
+"sistem tetap aman."
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+msgid ""
+"By default, security updates are not automatically installed, as security "
+"advisories should be reviewed before manual installation of the updates "
+"using standard package management tools."
+msgstr ""
+"Secara baku, pembaruan keamanan tidak dipasang secara otomatis, karena "
+"peringatan keamanan mesti ditinjau sebelum menerapkan pembaruan secara "
+"manual menggunakan alat manajemen paket standar."
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+msgid ""
+"Alternatively the unattended-upgrades package can be installed, which will "
+"install security updates automatically. Note however that automatic "
+"installation of updates may occasionally cause unexpected downtime of "
+"services provided by this machine in the rare cases where the update is not "
+"fully backward-compatible, or where the security advisory requires the "
+"administrator to perform some other manual operation."
+msgstr ""
+"Sebagai alternatif, paket unattended-upgrade dapat dipasang, yang akan "
+"secara otomatis memasang pembaruan keamanan. Namun perhatikan bahwa "
+"instalasi otomatis pembaruan kadang-kadang dapat menyebabkan downtime yang "
+"tak terduga dari layanan yang disediakan oleh mesin ini dalam kondisi langka "
+"saat pembaruan tidak sepenuhnya kompatibel ke belakang, atau saat peringatan "
+"keamanan memerlukan administrator untuk melakukan beberapa operasi manual "
+"lain."
+
 #. Type: error
 #. Description
 #. :sl3:
@@ -4965,222 +5174,6 @@ msgstr "Jalannya perintah preseeded \"${COMMAND}\" gagal dengan kode ${CODE}."
 #: ../rescue-check.templates:2001
 msgid "Rescue mode"
 msgstr "Moda darurat"
-
-#. Type: select
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:3002
-msgid "Device to use as root file system:"
-msgstr "Piranti yang akan digunakan sebagai sistem berkas root:"
-
-#. Type: select
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:3002
-msgid ""
-"Enter a device you wish to use as your root file system. You will be able to "
-"choose among various rescue operations to perform on this file system."
-msgstr ""
-"Masukkan piranti yang ingin anda gunakan sebagai sistem berkas root. Anda "
-"dapat memilih salah satu operasi penyelamatan yg akan dilakukan pada sistem "
-"berkas ini."
-
-#. Type: select
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:3002
-msgid ""
-"If you choose not to use a root file system, you will be given a reduced "
-"choice of operations that can be performed without one. This may be useful "
-"if you need to correct a partitioning problem."
-msgstr ""
-"Jika Anda memilih tidak menggunakan sistem berkas root, Anda akan diberi "
-"sedikit pilihan operasional yang dapat dilakukan tanpa root. Hal ini sangat "
-"berguna misalkan untuk memperbaiki masalah partisi."
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:8001
-msgid "Execute a shell in ${DEVICE}"
-msgstr "Menjalankan shell pada ${DEVICE}"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:9001
-msgid "Execute a shell in the installer environment"
-msgstr "Menjalankan shell pada lingkungan program instalasi"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:10001
-msgid "Choose a different root file system"
-msgstr "Pilih sistem berkas root yang berbeda"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:11001
-msgid "Reboot the system"
-msgstr "Reboot sistem"
-
-#. Type: text
-#. Description
-#. :sl2:
-#. Type: text
-#. Description
-#. :sl2:
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:12001 ../rescue-mode.templates:16001
-#: ../rescue-mode.templates:17001
-msgid "Executing a shell"
-msgstr "Menjalankan shell"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:12001
-msgid ""
-"After this message, you will be given a shell with ${DEVICE} mounted on \"/"
-"\". If you need any other file systems (such as a separate \"/usr\"), you "
-"will have to mount those yourself."
-msgstr ""
-"Setelah pesan ini, Anda akan diberikan shell dengan ${DEVICE} dikaitkan pada "
-"\"/\". Jika anda perlu sistem berkas lainnya (misalnya \"/usr\" yg "
-"terpisah), Anda harus mengaitkannya sendiri."
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:15001
-msgid "Interactive shell on ${DEVICE}"
-msgstr "Menjalankan shell pada ${DEVICE}"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:16001
-msgid ""
-"After this message, you will be given a shell with ${DEVICE} mounted on \"/"
-"target\". You may work on it using the tools available in the installer "
-"environment. If you want to make it your root file system temporarily, run "
-"\"chroot /target\". If you need any other file systems (such as a separate "
-"\"/usr\"), you will have to mount those yourself."
-msgstr ""
-"Setelah pesan ini, Anda akan diberikan shell dengan ${DEVICE} dikaitkan pada "
-"\"/target\". Anda dapat bekerja di situ menggunakan alat-alat yang tersedia "
-"pada lingkungan instaler. Jika Anda ingin membuatnya menjadi sistem berkas "
-"root untuk sementera, jalankan \"chroot /target\". Jika Anda ingin "
-"menggunakan sistem berkas yang lain (misalnya \"/usr\" yang terpisah), Anda "
-"harus mengaitkannya sendiri."
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:17001
-msgid ""
-"After this message, you will be given a shell in the installer environment. "
-"No file systems have been mounted."
-msgstr ""
-"Setelah pesan ini, Anda akan diberikan shell dalam lingkungan program "
-"instalasi. Tidak ada sistem berkas yang tersedia untuk Anda."
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:18001
-msgid "Interactive shell in the installer environment"
-msgstr "Menjalankan shell dalam lingkungan program instalasi"
-
-#. Type: password
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:19001
-msgid "Passphrase for ${DEVICE}:"
-msgstr "Kunci frase untuk ${DEVICE}:"
-
-#. Type: password
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:19001
-msgid "Please enter the passphrase for the encrypted volume ${DEVICE}."
-msgstr "Anda perlu memilih kunci frase untuk volum terenkripsi ${DEVICE}."
-
-#. Type: password
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:19001
-msgid ""
-"If you don't enter anything, the volume will not be available during rescue "
-"operations."
-msgstr ""
-"Jika Anda tidak memasukkan sesuatu,  volum ini tidak akan tersedia selama "
-"proses penyelamatan."
-
-#. Type: multiselect
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:20002
-msgid "Partitions to assemble:"
-msgstr "Partisi yang akan disusun:"
-
-#. Type: multiselect
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:20002
-msgid ""
-"Select the partitions to assemble into a RAID array. If you select "
-"\"Automatic\", then all devices containing RAID physical volumes will be "
-"scanned and assembled."
-msgstr ""
-"Pilih partisi yang akan disusun ke dalam larik RAID. Jika Anda memilih "
-"\"Otomatis\", maka semua piranti yang berisi volum fisik RAID akan dipindai "
-"dan disusun ke dalam larik."
-
-#. Type: multiselect
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:20002
-msgid ""
-"Note that a RAID partition at the end of a disk may sometimes cause that "
-"disk to be mistakenly detected as containing a RAID physical volume. In that "
-"case, you should select the appropriate partitions individually."
-msgstr ""
-"Ingat bahwa sebuah partisi RAID di akhir ruang harddisk kadangkala membuat "
-"harddisk tersebut salah dikenali sebagai volum fisik RAID. Dalam hal "
-"tersebut, Anda harus memilih masing-masing partisi yang sesuai."
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:21001
-msgid "Mount separate ${FILESYSTEM} partition?"
-msgstr "Kait partisi ${FILESYSTEM} terpisah?"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:21001
-msgid "The installed system appears to use a separate ${FILESYSTEM} partition."
-msgstr ""
-"Sistem terpasang mungkin memakai partisi ${FILESYSTEM} secara terpisah."
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:21001
-msgid ""
-"It is normally a good idea to mount it as it will allow operations such as "
-"reinstalling the boot loader. However, if the file system on ${FILESYSTEM} "
-"is corrupt then you may want to avoid mounting it."
-msgstr ""
-"Biasanya ide bagus untuk mengaitnya karena akan memungkinkan operasi seperti "
-"memasang ulang boot loader. Namun, jika sistem berkas pada ${FILESYSTEM} "
-"rusak maka Anda mungkin ingin menghindari mengaitnya."
 
 #. Type: text
 #. Description

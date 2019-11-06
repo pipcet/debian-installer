@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-02 22:41+0100\n"
+"POT-Creation-Date: 2019-11-05 23:57+0100\n"
 "PO-Revision-Date: 2019-09-20 19:27+0000\n"
 "Last-Translator: Boyuan Yang <073plan@gmail.com>\n"
 "Language-Team: <debian-l10n-chinese@lists.debian.org>\n"
@@ -223,14 +223,16 @@ msgstr "加载安装程序组件失败"
 msgid "Loading ${PACKAGE} failed for unknown reasons. Aborting."
 msgstr "未知原因导致组件 ${PACKAGE} 加载失败。程序中止。"
 
-#. Type: boolean
+#. Type: error
 #. Description
 #. :sl2:
 #: ../anna.templates:8001
-msgid "Continue the install without loading kernel modules?"
-msgstr "未加载内核模块，继续安装吗？"
+#, fuzzy
+#| msgid "No disk found"
+msgid "No kernel modules found"
+msgstr "未找到磁盘"
 
-#. Type: boolean
+#. Type: error
 #. Description
 #. :sl2:
 #: ../anna.templates:8001
@@ -242,17 +244,14 @@ msgstr ""
 "未找到内核模块。这可能是由于本安装程序所使用的内核版本与网络存档中的内核版本"
 "不同造成的。"
 
-#. Type: boolean
+#. Type: error
 #. Description
 #. :sl2:
 #: ../anna.templates:8001
 msgid ""
-"If you're installing from a mirror, you can work around this problem by "
-"choosing to install a different version of Debian. The install will probably "
-"fail to work if you continue without kernel modules."
+"You should make sure that your installation image is up-to-date, or - if "
+"that's the case - try a different mirror, preferably deb.debian.org."
 msgstr ""
-"如果您正在从镜像进行网络安装，可以选择安装其他版本的 Debian 以解决这个问题。"
-"如果您选择不加载内核模块，安装程序可能将无法正常工作。"
 
 #. Type: select
 #. Description
@@ -946,6 +945,20 @@ msgstr ""
 "(ESSID)。如果您希望使用任意可用的网络，请将此处置空。"
 
 #. Type: select
+#. Choices
+#. :sl2:
+#: ../netcfg-common.templates:8001
+msgid "WEP/Open Network"
+msgstr "WEP/开放网络"
+
+#. Type: select
+#. Choices
+#. :sl2:
+#: ../netcfg-common.templates:8001
+msgid "WPA/WPA2 PSK"
+msgstr "WPA/WPA2 PSK"
+
+#. Type: select
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:8002
@@ -1227,6 +1240,26 @@ msgstr "共用 (Managed) 网络"
 msgid "Ad-hoc network (Peer to peer)"
 msgstr "Ad-hoc 网络 (点对点)"
 
+#. Type: select
+#. Description
+#. :sl2:
+#: ../netcfg-common.templates:24002
+msgid "Type of wireless network:"
+msgstr "无线网络的类型："
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../netcfg-common.templates:24002
+msgid ""
+"Wireless networks are either managed or ad-hoc. If you use a real access "
+"point of some sort, your network is Managed. If another computer is your "
+"'access point', then your network may be Ad-hoc."
+msgstr ""
+"无线网络可以是客户端 (managed) 或对等式 (ad-hoc) 两种类型。如果您使用了某种实"
+"体装置作为接入点 (access point)，您的网络就是 Managed。如果是以另一台计算机作"
+"为您的“接入点”，那么您的网络就应该是 Ad-hoc。"
+
 #. Type: text
 #. Description
 #. :sl2:
@@ -1240,6 +1273,13 @@ msgstr "无线网络设置"
 #: ../netcfg-common.templates:26001
 msgid "Searching for wireless access points..."
 msgstr "正在搜索无线网络接入点..."
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../netcfg-common.templates:29001
+msgid "Detecting link on ${interface}; please wait..."
+msgstr "正在探测 ${interface} 上的连接，请稍候..."
 
 #. Type: text
 #. Description
@@ -1703,6 +1743,15 @@ msgstr ""
 "请选择下载文件时使用的协议。如果不确定，请选择“http”。即使有防火墙，它一般也"
 "不会出错。"
 
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl2:
+#: ../download-installer.templates:1001
+msgid "Download installer components"
+msgstr "下载安装程序组件"
+
 #. #-#-#-#-#  templates.pot (net-retriever)  #-#-#-#-#
 #. Type: select
 #. Choices
@@ -1809,6 +1858,99 @@ msgid ""
 msgstr ""
 "从可移动介质上读取数据出错。请确定存在正确的介质。如果您持续遇到错误，也许是"
 "您的可移动介质已经损坏。"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:1001
+msgid "Load drivers from removable media now?"
+msgstr "现在从可移动介质中加载驱动程序吗？"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:1001
+msgid ""
+"You probably need to load drivers from removable media before continuing "
+"with the installation. If you know that the install will work without extra "
+"drivers, you can skip this step."
+msgstr ""
+"在继续安装之前，您可能需要从可移动介质中加载一些驱动程序。如果安装过程不需要"
+"其他驱动程序，可以跳过这一步。"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:1001
+msgid ""
+"If you do need to load drivers, insert the appropriate removable media, such "
+"as a driver floppy or USB stick before continuing."
+msgstr ""
+"如果您确实需要加载驱动程序，请在选择继续之前插入相应的可移动介质，比如驱动软"
+"盘或者 USB 棒。"
+
+#. Type: text
+#. Description
+#. main-menu item
+#. Translators: keep below 55 columns
+#. :sl2:
+#: ../load-media.templates:2001
+msgid "Load drivers from removable media"
+msgstr "从可移动介质中加载驱动程序"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:3001
+msgid "Unknown removable media. Try to load anyway?"
+msgstr "未知的可移动介质。仍然试图加载吗？"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:3001
+msgid ""
+"Detected removable media that is not a known driver media. Please make sure "
+"that the correct media is inserted. You can still continue if you have an "
+"unofficial removable media you want to use."
+msgstr ""
+"检测到的可移动介质不是已知的驱动介质。请确定驱动器中所插入的是正确的介质。如"
+"果您是要使用非官方的可移动介质，那么您仍可以继续。"
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../load-media.templates:4001
+msgid "Please insert ${DISK_LABEL} ('${DISK_NAME}') first."
+msgstr "请首先插入 ${DISK_LABEL} (“${DISK_NAME}”)。"
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../load-media.templates:4001
+msgid ""
+"Due to dependencies between packages, drivers must be loaded in the correct "
+"order."
+msgstr "由于软件包之间存在依赖关系，必须以正确的顺序加载驱动程序。"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:5001
+msgid "Load drivers from another removable media?"
+msgstr "从另一个可移动介质中加载驱动程序吗？"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:5001
+msgid ""
+"To load additional drivers from another removable media, please insert the "
+"appropriate removable media, such as a driver floppy or USB stick before "
+"continuing."
+msgstr ""
+"如果您要从另一张可移动介质里加载其他驱动程序，请在选择继续之前插入相应的可移"
+"动介质，比如驱动软盘或者 USB 棒。"
 
 #. Type: error
 #. Description
@@ -4578,6 +4720,64 @@ msgstr ""
 msgid "Change debconf priority"
 msgstr "改变 debconf 的优先级设置"
 
+#. Type: select
+#. Choices
+#. :sl2:
+#: ../pkgsel.templates:9001
+msgid "No automatic updates"
+msgstr "无自动更新"
+
+#. Type: select
+#. Choices
+#. :sl2:
+#: ../pkgsel.templates:9001
+msgid "Install security updates automatically"
+msgstr "自动安装安全更新"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+msgid "Updates management on this system:"
+msgstr "本系统上的更新管理："
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+msgid ""
+"Applying updates on a frequent basis is an important part of keeping the "
+"system secure."
+msgstr "经常应用更新是保持系统安全的重要措施之一。"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+msgid ""
+"By default, security updates are not automatically installed, as security "
+"advisories should be reviewed before manual installation of the updates "
+"using standard package management tools."
+msgstr ""
+"默认情况下，安全更新将不会自动安装；这是因为在使用标准软件包管理工具安装更新"
+"前，管理员应当对发布的安全通告进行检查。"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+msgid ""
+"Alternatively the unattended-upgrades package can be installed, which will "
+"install security updates automatically. Note however that automatic "
+"installation of updates may occasionally cause unexpected downtime of "
+"services provided by this machine in the rare cases where the update is not "
+"fully backward-compatible, or where the security advisory requires the "
+"administrator to perform some other manual operation."
+msgstr ""
+"作为替代选项，您可以考虑安装 unattended-upgrades 软件包以自动安装安全更新。请"
+"注意启用自动安装更新在罕见的情况下（如当更新并非完全后向兼容，或者安全通告要"
+"求管理员进行某些手动操作时）偶尔会导致无法预料的服务中断。"
+
 #. Type: error
 #. Description
 #. :sl3:
@@ -4824,210 +5024,6 @@ msgstr "执行预置命令 (“${COMMAND}”) 失败，退出代码为 ${CODE}�
 #: ../rescue-check.templates:2001
 msgid "Rescue mode"
 msgstr "急救模式"
-
-#. Type: select
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:3002
-msgid "Device to use as root file system:"
-msgstr "要用作根文件系统的设备："
-
-#. Type: select
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:3002
-msgid ""
-"Enter a device you wish to use as your root file system. You will be able to "
-"choose among various rescue operations to perform on this file system."
-msgstr ""
-"请输入一个您想要用作根文件系统的设备。您将可以选择各种能在这个文件系统上实行"
-"的急救措施。"
-
-#. Type: select
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:3002
-msgid ""
-"If you choose not to use a root file system, you will be given a reduced "
-"choice of operations that can be performed without one. This may be useful "
-"if you need to correct a partitioning problem."
-msgstr ""
-"如果您选择不使用根文件系统，您将会得到一个经删减的不需要根文件系统的操作选"
-"择。如果您需要修复分区问题这将可能会有所帮助。"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:8001
-msgid "Execute a shell in ${DEVICE}"
-msgstr "在 ${DEVICE} 中运行 shell"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:9001
-msgid "Execute a shell in the installer environment"
-msgstr "在安装程序环境中运行 shell"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:10001
-msgid "Choose a different root file system"
-msgstr "另外选择其他根文件系统"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:11001
-msgid "Reboot the system"
-msgstr "重新启动系统"
-
-#. Type: text
-#. Description
-#. :sl2:
-#. Type: text
-#. Description
-#. :sl2:
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:12001 ../rescue-mode.templates:16001
-#: ../rescue-mode.templates:17001
-msgid "Executing a shell"
-msgstr "正在运行 shell"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:12001
-msgid ""
-"After this message, you will be given a shell with ${DEVICE} mounted on \"/"
-"\". If you need any other file systems (such as a separate \"/usr\"), you "
-"will have to mount those yourself."
-msgstr ""
-"在这条信息之后，您将得到一个 ${DEVICE} 已被挂载到“/”上的环境中的 shell。如果"
-"您还需要其他文件系统 (例如一个单独的“/usr”)，您必须自行挂载它们。"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:15001
-msgid "Interactive shell on ${DEVICE}"
-msgstr "在 ${DEVICE} 中的 shell"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:16001
-msgid ""
-"After this message, you will be given a shell with ${DEVICE} mounted on \"/"
-"target\". You may work on it using the tools available in the installer "
-"environment. If you want to make it your root file system temporarily, run "
-"\"chroot /target\". If you need any other file systems (such as a separate "
-"\"/usr\"), you will have to mount those yourself."
-msgstr ""
-"在这条信息之后，您将得到一个 shell，其中 ${DEVICE} 已被挂载到“/target”上。您"
-"可以利用安装程序环境中提供的工具对其进行操作。如果您想暂时使其成为您的根文件"
-"系统，请运行“chroot /target”。如果您还需要其他文件系统 (例如一个单独的“/"
-"usr”)，您必须自行挂载它们。"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:17001
-msgid ""
-"After this message, you will be given a shell in the installer environment. "
-"No file systems have been mounted."
-msgstr ""
-"在这条信息之后，您将得到一个安装程序环境中的 shell。没有挂载任何文件系统。"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:18001
-msgid "Interactive shell in the installer environment"
-msgstr "安装程序环境中的互动 shell"
-
-#. Type: password
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:19001
-msgid "Passphrase for ${DEVICE}:"
-msgstr "${DEVICE} 的密码："
-
-#. Type: password
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:19001
-msgid "Please enter the passphrase for the encrypted volume ${DEVICE}."
-msgstr "请输入加密卷 ${DEVICE} 的密码。"
-
-#. Type: password
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:19001
-msgid ""
-"If you don't enter anything, the volume will not be available during rescue "
-"operations."
-msgstr "如果您什么都不输入，急救操作时将无法使用这一磁盘卷。"
-
-#. Type: multiselect
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:20002
-msgid "Partitions to assemble:"
-msgstr "要装配的分区："
-
-#. Type: multiselect
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:20002
-msgid ""
-"Select the partitions to assemble into a RAID array. If you select "
-"\"Automatic\", then all devices containing RAID physical volumes will be "
-"scanned and assembled."
-msgstr ""
-"选择一个分区以装配到一个 RAID 阵列。如果选择“自动”，将扫描并装配所有包含 "
-"RAID 物理卷的设备。"
-
-#. Type: multiselect
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:20002
-msgid ""
-"Note that a RAID partition at the end of a disk may sometimes cause that "
-"disk to be mistakenly detected as containing a RAID physical volume. In that "
-"case, you should select the appropriate partitions individually."
-msgstr ""
-"注意：磁盘尾部的 RAID 分区有时会造成磁盘被错误的探测为包含 RAID 物理卷。这"
-"时，需要分别选择相应的分区。"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:21001
-msgid "Mount separate ${FILESYSTEM} partition?"
-msgstr "挂载单独的 ${FILESYSTEM} 分区？"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:21001
-msgid "The installed system appears to use a separate ${FILESYSTEM} partition."
-msgstr "安装的系统要使用单独的 ${FILESYSTEM} 分区。"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:21001
-msgid ""
-"It is normally a good idea to mount it as it will allow operations such as "
-"reinstalling the boot loader. However, if the file system on ${FILESYSTEM} "
-"is corrupt then you may want to avoid mounting it."
-msgstr ""
-"通常将其挂载是个好主意，因为其将允许您执行重新安装引导器等操作。但是如果 "
-"${FILESYSTEM} 上的文件损坏了，应该避免将其挂载。"
 
 #. Type: text
 #. Description

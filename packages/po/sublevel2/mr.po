@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-02 22:41+0100\n"
+"POT-Creation-Date: 2019-11-05 23:57+0100\n"
 "PO-Revision-Date: 2018-10-07 18:30+0000\n"
 "Last-Translator: Nayan Nakhare <nayannakhare@rediffmail.com>\n"
 "Language-Team: janabhaaratii, C-DAC (formerly NCST), Mumbai-21, India\n"
@@ -230,14 +230,16 @@ msgstr "अधिष्ठापकाचे घटक लोड होण्य
 msgid "Loading ${PACKAGE} failed for unknown reasons. Aborting."
 msgstr "${PACKAGE} लोड होणे अपरिचित कारणांनी अयशस्वी झाले. अर्धवट सोडत आहे."
 
-#. Type: boolean
+#. Type: error
 #. Description
 #. :sl2:
 #: ../anna.templates:8001
-msgid "Continue the install without loading kernel modules?"
-msgstr "कर्नल मोडयुल्स न वापरता अधिष्ठापना पुढे चालू ठेवायची?"
+#, fuzzy
+#| msgid "No disk found"
+msgid "No kernel modules found"
+msgstr "कोणतीही डिस्क सापडली नाही"
 
-#. Type: boolean
+#. Type: error
 #. Description
 #. :sl2:
 #: ../anna.templates:8001
@@ -249,18 +251,14 @@ msgstr ""
 "कोणतेही कर्नल मोडयुल्स सापडले नाहीत. हे कदाचित अधिष्ठापकाच्या या आवृत्तीने वापरलेले कर्नल "
 "आणि आर्काइव्ह्झ्मध्ये असलेल्य कर्नलची आवृत्ती यांच्यातील विसंगतीमुळे असेल."
 
-#. Type: boolean
+#. Type: error
 #. Description
 #. :sl2:
 #: ../anna.templates:8001
 msgid ""
-"If you're installing from a mirror, you can work around this problem by "
-"choosing to install a different version of Debian. The install will probably "
-"fail to work if you continue without kernel modules."
+"You should make sure that your installation image is up-to-date, or - if "
+"that's the case - try a different mirror, preferably deb.debian.org."
 msgstr ""
-"जर तुम्ही मिरर मधून अधिष्ठापना करत असाल तर तूम्ही डेबिअनची वेगळी आवृत्ती अधिष्ठापित करुन "
-"या समस्येवर तोडगा काढू शकता. जर तुम्ही कर्नल मॉड्यूल्सशिवाय ही अधिष्ठापना पुढे सुरू ठेवली "
-"तर ती बहुदा अयशस्वी होईल."
 
 #. Type: select
 #. Description
@@ -986,6 +984,20 @@ msgstr ""
 "तुमची इच्छा असल्यास, हे क्षेत्र रिक्त सोडा."
 
 #. Type: select
+#. Choices
+#. :sl2:
+#: ../netcfg-common.templates:8001
+msgid "WEP/Open Network"
+msgstr "WEP/उघडे नेटवर्क"
+
+#. Type: select
+#. Choices
+#. :sl2:
+#: ../netcfg-common.templates:8001
+msgid "WPA/WPA2 PSK"
+msgstr "WPA/WPA2 PSK"
+
+#. Type: select
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:8002
@@ -1277,6 +1289,26 @@ msgstr "पायाभूत (व्यवस्थापित) नेटव�
 msgid "Ad-hoc network (Peer to peer)"
 msgstr "विशिष्ट (पिअर ते पिअर) नेटवर्क"
 
+#. Type: select
+#. Description
+#. :sl2:
+#: ../netcfg-common.templates:24002
+msgid "Type of wireless network:"
+msgstr "बिनतारी नेटवर्कचा प्रकार:"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../netcfg-common.templates:24002
+msgid ""
+"Wireless networks are either managed or ad-hoc. If you use a real access "
+"point of some sort, your network is Managed. If another computer is your "
+"'access point', then your network may be Ad-hoc."
+msgstr ""
+"बिनतारी नेटवर्क ही एकतर व्यवस्थापित केलेली असतात किंवा विशिष्ट कारणांपुरती असतात. जर "
+"तुम्ही कोणत्याही प्रकारचा प्रत्यक्ष प्रवेश बिंदू वापरत असाल, तर तुमचे नेटवर्क हे व्यवस्थापित "
+"आहे जर अन्य संगणक हा तुमचा 'प्रवेश बिंदु' असेल तर तुमचे नेटवर्क विशिष्ट कारणापुरते असू शकेल."
+
 #. Type: text
 #. Description
 #. :sl2:
@@ -1290,6 +1322,13 @@ msgstr "बिनतारी नेटवर्क संरचना"
 #: ../netcfg-common.templates:26001
 msgid "Searching for wireless access points..."
 msgstr "बिनतारी प्रवेश बिंदूंचा शोध घेत आहे..."
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../netcfg-common.templates:29001
+msgid "Detecting link on ${interface}; please wait..."
+msgstr "${interface} वर दुवा शोधत आहे, कृपया थांबा..."
 
 #. Type: text
 #. Description
@@ -1762,6 +1801,15 @@ msgstr ""
 "\"http\"; ची निवड करावी. सुरक्षाभिंतींमुळे निर्माण होणाऱ्या तांत्रिक गुंत्यांपासून तुलनेने "
 "त्यात अधिक स्थिरता आहे."
 
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl2:
+#: ../download-installer.templates:1001
+msgid "Download installer components"
+msgstr "अधिष्ठापक घटक डाउनलोड करा"
+
 #. #-#-#-#-#  templates.pot (net-retriever)  #-#-#-#-#
 #. Type: select
 #. Choices
@@ -1868,6 +1916,101 @@ msgid ""
 msgstr ""
 "काढता येण्याजोगे माध्यम वाचताना समस्या उद्भवली. योग्य ते काढता येण्याजोगे माध्यम उपल्ब्ध "
 "आहे, याची खात्री करा. समस्या चालू राहिल्यास, आपले काढता येण्याजोगे माध्यम खराब असू शकते."
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:1001
+msgid "Load drivers from removable media now?"
+msgstr "काढता येण्याजोग्या माध्यमामधून ड्रायव्हर्स घ्यायचे?"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:1001
+msgid ""
+"You probably need to load drivers from removable media before continuing "
+"with the installation. If you know that the install will work without extra "
+"drivers, you can skip this step."
+msgstr ""
+"अधिष्ठापना पुढे चालू ठेवण्याआधी बहुदा तुम्हाला काढता येण्याजोग्या माध्यमामधून ड्रायव्हर्स लोड "
+"करावे लागतील. अधिष्ठापित होणारी प्रणाली अतिरिक्त ड्रायव्हर्सशिवाय कार्य करू शकेल याची "
+"तुम्हाला खात्री असेल, तर ही पायरी तुम्ही वगळू शकता."
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:1001
+msgid ""
+"If you do need to load drivers, insert the appropriate removable media, such "
+"as a driver floppy or USB stick before continuing."
+msgstr ""
+"आपणास ड्रायव्हर्स लोड करावयाची आवश्यकता असल्यास, पुढे जाण्यापूर्वी ड्रायव्हर फ्लॉपी वा "
+"यूएसबी स्टिक यांसारखे योग्य ते काढता येण्याजोगे माध्यम घाला."
+
+#. Type: text
+#. Description
+#. main-menu item
+#. Translators: keep below 55 columns
+#. :sl2:
+#: ../load-media.templates:2001
+msgid "Load drivers from removable media"
+msgstr "काढता येण्याजोग्या माध्यमामधून ड्रायव्हर्स घ्या"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:3001
+msgid "Unknown removable media. Try to load anyway?"
+msgstr "अपरिचित काढता येण्याजोगे माध्यम. तरीही लोड करण्याचा प्रयत्न करायचा?"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:3001
+msgid ""
+"Detected removable media that is not a known driver media. Please make sure "
+"that the correct media is inserted. You can still continue if you have an "
+"unofficial removable media you want to use."
+msgstr ""
+"शोधलेले काढता येण्याजोगे माध्यम ज्ञात ड्रायव्हर माध्यम नाही. ड्राईव्हमधे योग्य माध्यम "
+"असल्याची खात्री करा. जर हे काढता येण्याजोगे माध्यम अनधिकृत असेल जे तुम्ही वापरू इच्छिता,  "
+"तर तुम्ही अजूनही पुढे जाऊ शकता."
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../load-media.templates:4001
+msgid "Please insert ${DISK_LABEL} ('${DISK_NAME}') first."
+msgstr "कृपया प्रथम ${DISK_LABEL} ('${DISK_NAME}') घाला."
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../load-media.templates:4001
+msgid ""
+"Due to dependencies between packages, drivers must be loaded in the correct "
+"order."
+msgstr "पॅकेजांमधील अवलंबित्वांमुळे, ड्रायव्हर योग्य क्रमानेच लोड करणे आवश्यक आहे."
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:5001
+msgid "Load drivers from another removable media?"
+msgstr "अन्य काढता येण्याजोग्या माध्यमामधून ड्रायव्हर्स घ्यायचे?"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:5001
+msgid ""
+"To load additional drivers from another removable media, please insert the "
+"appropriate removable media, such as a driver floppy or USB stick before "
+"continuing."
+msgstr ""
+"अन्य काढता येण्याजोग्या माध्यमामधून अतिरिक्त ड्रायव्हर्स लोड करण्याकरिता, पुढे जाण्यापूर्वी "
+"ड्रायव्हर फ्लॉपी वा यूएसबी स्टिक यांसारखे योग्य ते काढता येण्याजोगे माध्यम घाला."
 
 #. Type: error
 #. Description
@@ -4701,6 +4844,65 @@ msgstr ""
 msgid "Change debconf priority"
 msgstr "डेबकॉन्फ अग्रक्रम बदला"
 
+#. Type: select
+#. Choices
+#. :sl2:
+#: ../pkgsel.templates:9001
+msgid "No automatic updates"
+msgstr "स्वयं अद्यतने नको"
+
+#. Type: select
+#. Choices
+#. :sl2:
+#: ../pkgsel.templates:9001
+msgid "Install security updates automatically"
+msgstr "सुरक्षा अद्यतने आपोआप स्थापित करा"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+msgid "Updates management on this system:"
+msgstr "या प्रणालीवरील अद्यतन व्यवस्थापन:"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+msgid ""
+"Applying updates on a frequent basis is an important part of keeping the "
+"system secure."
+msgstr "प्रणाली सुरक्षित राखण्यासाठी वारंवार अद्यतने लागू करणे महत्वाचे आहे."
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+msgid ""
+"By default, security updates are not automatically installed, as security "
+"advisories should be reviewed before manual installation of the updates "
+"using standard package management tools."
+msgstr ""
+"मूलनिर्धारितपणे, सुरक्षा अद्यतने स्वयंचलित स्थापित होत नाहीत, कारण प्रमाण पॅकेज व्यवस्थापन "
+"साधने वापरून स्वहस्ते सुरक्षा अद्यतने स्थापित करण्यापूर्वी सुरक्षा सल्ले अवलोकन केले गेले पाहिजेत."
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+msgid ""
+"Alternatively the unattended-upgrades package can be installed, which will "
+"install security updates automatically. Note however that automatic "
+"installation of updates may occasionally cause unexpected downtime of "
+"services provided by this machine in the rare cases where the update is not "
+"fully backward-compatible, or where the security advisory requires the "
+"administrator to perform some other manual operation."
+msgstr ""
+"पर्यायस्वरूपी, लक्ष न देता अपग्रेड करणारे पॅकेज स्थापित होऊ शकते, जे अद्यतने स्वयंचलित स्थापित "
+"करेल. लक्षात घ्या, अद्यतने स्वयंचलित स्थापित केल्याने अद्यतने पूर्णपणे मागच्याशी जुळणारी नसतील "
+"तेव्हा, वा सुरक्षा सल्ला प्रशासकाने काही स्वहस्ते ऑपरेशन करणे आवश्यक करतो तेव्हा या यंत्राने "
+"पुरवलेल्या सेवा दुर्मिळ परिस्थितीत अनपेक्षित बंद होऊ शकतात."
+
 #. Type: error
 #. Description
 #. :sl3:
@@ -4953,215 +5155,6 @@ msgstr "\"${COMMAND}\" ही पुर्वबीज आज्ञा कार
 #: ../rescue-check.templates:2001
 msgid "Rescue mode"
 msgstr "बचाव मोड"
-
-#. Type: select
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:3002
-msgid "Device to use as root file system:"
-msgstr "मूल फाईल प्रणाली म्हणून वापरण्याचे उपकरण:"
-
-#. Type: select
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:3002
-msgid ""
-"Enter a device you wish to use as your root file system. You will be able to "
-"choose among various rescue operations to perform on this file system."
-msgstr ""
-"मूल फाईल प्रणाली म्हणून कोणते उपकरण वापरवयाचे ते नोंदवा. या फाईल प्रणालीवर "
-"वापरण्यासाठी तुम्ही विविध बचाव प्रक्रिया निवडू शकतात."
-
-#. Type: select
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:3002
-msgid ""
-"If you choose not to use a root file system, you will be given a reduced "
-"choice of operations that can be performed without one. This may be useful "
-"if you need to correct a partitioning problem."
-msgstr ""
-"जर तुम्ही मूल फाईल प्रणाली न वापरण्याचे निवडले, तर तुम्हाला तिच्याशिवाय करता येण्याजोग्या "
-"क्रियांचा घटवलेला पर्याय दिला जाईल. तुम्हाला विभाजनाच्या समस्या दुरुस्त करण्याची गरज "
-"असेल, तर हे उपयुक्त ठरू शकेल."
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:8001
-msgid "Execute a shell in ${DEVICE}"
-msgstr "${DEVICE} मधे शेल कार्यान्वयीत करा"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:9001
-msgid "Execute a shell in the installer environment"
-msgstr "अधिष्ठापक आसमंतात शेल प्रक्रिया कर्यान्वयीत करा"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:10001
-msgid "Choose a different root file system"
-msgstr "अन्य मूल फाईल प्रणाली निवडा"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:11001
-msgid "Reboot the system"
-msgstr "संगणक पुन्हा सुरु करा"
-
-#. Type: text
-#. Description
-#. :sl2:
-#. Type: text
-#. Description
-#. :sl2:
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:12001 ../rescue-mode.templates:16001
-#: ../rescue-mode.templates:17001
-msgid "Executing a shell"
-msgstr "शेल कार्यान्वयीत होत आहे"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:12001
-msgid ""
-"After this message, you will be given a shell with ${DEVICE} mounted on \"/"
-"\". If you need any other file systems (such as a separate \"/usr\"), you "
-"will have to mount those yourself."
-msgstr ""
-"या सुचनेनंतर ${DEVICE} मध्ये \"/\" \"\" वर आरोहित केलेली शेल तुम्हाला दिली जाईल. जर "
-"तुम्हाला या व्यतिरीक्त अन्य फाईल प्रणाली (जशी स्वतंत्र \"/usr\") हवी असल्यास ती तुम्हाला "
-"स्वता:हून आरोहित करुन घ्यावी लागेल."
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:15001
-msgid "Interactive shell on ${DEVICE}"
-msgstr "${DEVICE} वर परस्परसंवादी शेल"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:16001
-msgid ""
-"After this message, you will be given a shell with ${DEVICE} mounted on \"/"
-"target\". You may work on it using the tools available in the installer "
-"environment. If you want to make it your root file system temporarily, run "
-"\"chroot /target\". If you need any other file systems (such as a separate "
-"\"/usr\"), you will have to mount those yourself."
-msgstr ""
-"या सुचनेनंतर ${DEVICE} मध्ये \" /target\" वर आरोहित केलेली शेल तुम्हाला दिली जाईल. "
-"अधिष्ठापक आसमंतातील संसाधने वापरून तुम्ही तिच्यात काम करू शकता. तुम्हाला ती तुमची "
-"तात्पूरती मूल फाइल प्रणाली बनवायची असल्यास  \"chroot /target\"  ही आज्ञावली चालवा. "
-"या पेक्षाही वेगळी फाईल प्रणाली हवी असल्यास (जशी  स्वतंत्र \" /usr\") त्याचे आरोहण "
-"तुम्हाला स्वतःच करून घ्यावे लागेल."
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:17001
-msgid ""
-"After this message, you will be given a shell in the installer environment. "
-"No file systems have been mounted."
-msgstr ""
-"या सूचनेनंतर अधिष्ठापक आसमंतात एक शेल तुम्हाला दिली जाईल. कोणतीही फाईल प्रणाली आरोहित "
-"केली गेलेली नाही."
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:18001
-msgid "Interactive shell in the installer environment"
-msgstr "अधिष्ठापक आसमंतात परस्परसंवादी शेल"
-
-#. Type: password
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:19001
-msgid "Passphrase for ${DEVICE}:"
-msgstr "${DEVICE} करिता कूटशब्द:"
-
-#. Type: password
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:19001
-msgid "Please enter the passphrase for the encrypted volume ${DEVICE}."
-msgstr "${DEVICE} या संकेताधारीत खंडाकरिता कूटशब्द द्या."
-
-#. Type: password
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:19001
-msgid ""
-"If you don't enter anything, the volume will not be available during rescue "
-"operations."
-msgstr "आपण काहीच न दिल्यास हा खंड बचाव प्रक्रियांदरम्यान उपलब्ध होणार नाही."
-
-#. Type: multiselect
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:20002
-msgid "Partitions to assemble:"
-msgstr "एकत्र करावयाची विभाजने:"
-
-#. Type: multiselect
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:20002
-msgid ""
-"Select the partitions to assemble into a RAID array. If you select "
-"\"Automatic\", then all devices containing RAID physical volumes will be "
-"scanned and assembled."
-msgstr ""
-"रॅड ऍरेमध्ये एकत्र करावयाची विभाजने निवडा. तुम्ही जर \"Automatic\" निवडले, तर रेड "
-"भौतिक खंड असलेली सर्व उपकरणे तपासली व एकत्र केली जातील."
-
-#. Type: multiselect
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:20002
-msgid ""
-"Note that a RAID partition at the end of a disk may sometimes cause that "
-"disk to be mistakenly detected as containing a RAID physical volume. In that "
-"case, you should select the appropriate partitions individually."
-msgstr ""
-"डिस्कच्या शेवटी रेड विभाजने असल्यास कधीकधी अशा डिस्कला चुकून रेड भौतिक खंड असलेली असे गणले "
-"जाऊ शकते. अशा वेळी, तुम्ही योग्य विभाजने स्वतः निवडावीत."
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:21001
-msgid "Mount separate ${FILESYSTEM} partition?"
-msgstr "स्वतंत्र ${FILESYSTEM} विभाजन आरोहित करायचे?"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:21001
-msgid "The installed system appears to use a separate ${FILESYSTEM} partition."
-msgstr "अधिष्ठापित प्रणाली स्वतंत्र ${FILESYSTEM} विभाजन वापरतेय असे वाटते आहे."
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:21001
-msgid ""
-"It is normally a good idea to mount it as it will allow operations such as "
-"reinstalling the boot loader. However, if the file system on ${FILESYSTEM} "
-"is corrupt then you may want to avoid mounting it."
-msgstr ""
-"सामान्यपणे ते आरोहित करणे ही चांगली कल्पना ठरते, कारण त्यामुळे आरंभ सूचक पुनर्अधिष्ठापित "
-"करणे यांसारख्या क्रिया त्यामुळे शक्य होतात. तथापि, ${FILESYSTEM} वरील फाईल प्रणाली "
-"भ्रष्ट असल्यास ते आरोहित करणे टाळलेले बरे."
 
 #. Type: text
 #. Description

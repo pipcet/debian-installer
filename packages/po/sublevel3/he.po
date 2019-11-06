@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-02 22:41+0100\n"
+"POT-Creation-Date: 2019-11-05 23:57+0100\n"
 "PO-Revision-Date: 2019-09-22 13:28+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew (https://www.transifex.com/yaron/teams/79473/he/)\n"
@@ -2140,6 +2140,15 @@ msgstr "הרצת „‎/sbin/lilo” נכשלה עם קוד השגיאה „${ER
 msgid "Install the LILO boot loader on a hard disk"
 msgstr "התקנת מנהל האתחול LILO על הכונן הקשיח"
 
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl3:
+#: ../network-preseed.templates:1001
+msgid "Download debconf preconfiguration file"
+msgstr "הורדת קובץ הגדרות מוקדמות של debconf"
+
 #. Type: string
 #. Description
 #. :sl3:
@@ -2202,6 +2211,15 @@ msgstr "ראו את http://wiki.debian.org/DebianInstaller/Preseed עבור הש
 
 #. Type: text
 #. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl3:
+#: ../file-preseed.templates:1001
+msgid "Load debconf preconfiguration file"
+msgstr "טעינת קובץ הגדרות מוקדמות של debconf"
+
+#. Type: text
+#. Description
 #. :sl3:
 #: ../rescue-mode.templates:2001
 msgid "No partitions found"
@@ -2222,6 +2240,50 @@ msgstr ""
 "סיבות אפשריות לכך הן, שהליבה לא גילתה את הדיסק הקשיח שלך, או לא הצליחה לקרוא "
 "את טבלת המחיצות, או שהדיסק לא חולק למחיצות. אם הינך רוצה בכך, הינך יכול "
 "לחקור את זה משורת הפקודה בסביבת מנהל ההתקנה."
+
+#. Type: select
+#. Choices
+#. :sl3:
+#: ../rescue-mode.templates:3001
+msgid "Assemble RAID array"
+msgstr "הרכבת מערך RAID"
+
+#. Type: select
+#. Choices
+#. :sl3:
+#: ../rescue-mode.templates:3001
+msgid "Do not use a root file system"
+msgstr "לא להשתמש במערכת קבצים כתיקיית שורש"
+
+#. Type: select
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:3002
+msgid "Device to use as root file system:"
+msgstr "התקן לשימוש כשורש מערכת הקבצים:"
+
+#. Type: select
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:3002
+msgid ""
+"Enter a device you wish to use as your root file system. You will be able to "
+"choose among various rescue operations to perform on this file system."
+msgstr ""
+"נא להקליד שם של התקן שישמש אותך כשורש מערכת הקבצים. לרשותך תעמודנה מגוון "
+"פעולות לחילוץ מערכת הקבצים הזו."
+
+#. Type: select
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:3002
+msgid ""
+"If you choose not to use a root file system, you will be given a reduced "
+"choice of operations that can be performed without one. This may be useful "
+"if you need to correct a partitioning problem."
+msgstr ""
+"בחירה שלא להשתמש בשורש מערכת הקבצים תוביל לצמצום מגוון הפעולות שניתן לבצע "
+"ללא גישה אליו. עשוי להיות שימושי לטובת תיקון תקלת חלוקה למחיצות."
 
 #. Type: error
 #. Description
@@ -2266,6 +2328,13 @@ msgstr ""
 msgid "Please check the syslog for more information."
 msgstr "בדוק את התיעוד המערכת (syslog) בשביל מידע נוסף."
 
+#. Type: select
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:6001
+msgid "Rescue operations"
+msgstr "פעולות הצלה"
+
 #. Type: error
 #. Description
 #. :sl3:
@@ -2279,6 +2348,60 @@ msgstr "פעולת הצלה נכשלה"
 #: ../rescue-mode.templates:7001
 msgid "The rescue operation '${OPERATION}' failed with exit code ${CODE}."
 msgstr "פעולת ההצלה '${OPERATION}' נכשלה עם קוד יציאה ${CODE}."
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:8001
+msgid "Execute a shell in ${DEVICE}"
+msgstr "הרצת מעטפת בהתקן ${DEVICE}"
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:9001
+msgid "Execute a shell in the installer environment"
+msgstr "להריץ מעטפת בסביבת ההתקנה"
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:10001
+msgid "Choose a different root file system"
+msgstr "נא לבחור שורש אחר למערכת הקבצים"
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:11001
+msgid "Reboot the system"
+msgstr "הפעלת המערכת מחדש"
+
+#. Type: text
+#. Description
+#. :sl3:
+#. Type: text
+#. Description
+#. :sl3:
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:12001 ../rescue-mode.templates:16001
+#: ../rescue-mode.templates:17001
+msgid "Executing a shell"
+msgstr "הרצת מעטפת"
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:12001
+msgid ""
+"After this message, you will be given a shell with ${DEVICE} mounted on \"/"
+"\". If you need any other file systems (such as a separate \"/usr\"), you "
+"will have to mount those yourself."
+msgstr ""
+"לאחר הודעה זאת, תופיע מעטפת עם ${DEVICE} עם עיגון על „/”. אם נדרשות מערכות "
+"קבצים אחרות (כגון „‎/usr” בנפרד), יש לעגן אותן באופן עצמאי."
 
 #. Type: error
 #. Description
@@ -2312,6 +2435,136 @@ msgstr "לא נמצאה מעטפת (shell) ב־‎/target"
 msgid "No usable shell was found on your root file system (${DEVICE})."
 msgstr ""
 "לא נמצאה מעטפת בה ניתן להשתמש בשורש מערכת הקבצים (${DEVICE}) על ‎/target."
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:15001
+msgid "Interactive shell on ${DEVICE}"
+msgstr "מעטפת אינטראקטיבית בהתקן ${DEVICE}"
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:16001
+msgid ""
+"After this message, you will be given a shell with ${DEVICE} mounted on \"/"
+"target\". You may work on it using the tools available in the installer "
+"environment. If you want to make it your root file system temporarily, run "
+"\"chroot /target\". If you need any other file systems (such as a separate "
+"\"/usr\"), you will have to mount those yourself."
+msgstr ""
+"לאחר הודעה זאת, תופיע מעטפת עם ${DEVICE} עם עיגון על „‎/target”. ניתן לעבוד "
+"עליה עם הכלים הזמינים בסביבת תכנית ההתקנה. אם ברצונך לכוון אותה אל שורש "
+"מערכת הקבצים באופן זמני, עליך להריץ את הפקודה „chroot /target”. אם נדרשות לך "
+"מערכות קבצים אחרות (כגון „‎/usr” בנפרד), יש לעגן אותן באופן עצמאי."
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:17001
+msgid ""
+"After this message, you will be given a shell in the installer environment. "
+"No file systems have been mounted."
+msgstr ""
+"אחרי הודעה זאת, תופעל מעטפת עם הסביבה של תכנית ההתקנה. אף מערכת קבצים לא "
+"עוגנה."
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:18001
+msgid "Interactive shell in the installer environment"
+msgstr "מעטפת אינטראקטיבית בסביבת ההתקנה"
+
+#. Type: password
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:19001
+msgid "Passphrase for ${DEVICE}:"
+msgstr "מילת צופן עבור ${DEVICE}:"
+
+#. Type: password
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:19001
+msgid "Please enter the passphrase for the encrypted volume ${DEVICE}."
+msgstr "נא להקליד את מילת הצופן של הכרך המוצפן ${DEVICE}."
+
+#. Type: password
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:19001
+msgid ""
+"If you don't enter anything, the volume will not be available during rescue "
+"operations."
+msgstr "אם שדה זה יישאר ריק, הכרך לא יהיה זמין במהלך פעולות חילוץ."
+
+#. Type: multiselect
+#. Choices
+#. :sl3:
+#: ../rescue-mode.templates:20001
+msgid "Automatic"
+msgstr "אוטומטי"
+
+#. Type: multiselect
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:20002
+msgid "Partitions to assemble:"
+msgstr "מחיצות להרכבה:"
+
+#. Type: multiselect
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:20002
+msgid ""
+"Select the partitions to assemble into a RAID array. If you select "
+"\"Automatic\", then all devices containing RAID physical volumes will be "
+"scanned and assembled."
+msgstr ""
+"יש לבחור את המחיצות להרכבה לתוך מערך RAID. בחירה במצב „באופן אוטומטי”, תסרוק "
+"ותרכיב כל ההתקנים המכילים כרכים פיזיים מסוג RAID."
+
+#. Type: multiselect
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:20002
+msgid ""
+"Note that a RAID partition at the end of a disk may sometimes cause that "
+"disk to be mistakenly detected as containing a RAID physical volume. In that "
+"case, you should select the appropriate partitions individually."
+msgstr ""
+"נא לשים לב שמחיצת RAID בסוף כונן עשויה לפעמים לגרום לזיהוי כוזב של הכונן "
+"כאילו הוא מכיל כרך RAID פיזי. במקרה שכזה, יש לבחור את המחיצות המתאימות באופן "
+"פרטני."
+
+#. Type: boolean
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:21001
+msgid "Mount separate ${FILESYSTEM} partition?"
+msgstr "לעגן מחיצה נפרדת ל־${FILESYSTEM}?"
+
+#. Type: boolean
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:21001
+msgid "The installed system appears to use a separate ${FILESYSTEM} partition."
+msgstr "נראה שהמערכת המותקנת משתמשת במחיצת ${FILESYSTEM} נפרדת."
+
+#. Type: boolean
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:21001
+msgid ""
+"It is normally a good idea to mount it as it will allow operations such as "
+"reinstalling the boot loader. However, if the file system on ${FILESYSTEM} "
+"is corrupt then you may want to avoid mounting it."
+msgstr ""
+"על פי רוב מומלץ לעגן אותה כיוון שמצב זה יאפשר פעולות כגון התקנת מערכת הטעינה "
+"מחדש. עם זאת, אם מערכת הקבצים שב־${FILESYSTEM} פגומה אז יתכן שעדיף לך לא "
+"לעגן אותה."
 
 #. Type: text
 #. Description
@@ -3008,12 +3261,23 @@ msgstr "יש להפעיל מחדש עם גרסת ליבה נכונה (${DI_KERNE
 msgid "Configure iSCSI volumes"
 msgstr "הגדרת כרכי iSCSI"
 
+#. Type: select
+#. Choices
+#. Note to translators : Please keep your translations of the choices
+#. below a 65 columns limit (which means 65 characters
+#. in single-byte languages)
+#. :sl3:
+#: ../partman-iscsi.templates:2001
+msgid "Log into iSCSI targets"
+msgstr "כניסה לתוך יעדי iSCSI"
+
 #. #-#-#-#-#  templates.pot (partman-iscsi)  #-#-#-#-#
 #. Type: select
 #. Choices
 #. Note to translators : Please keep your translations of the choices
 #. below a 65 columns limit (which means 65 characters
 #. in single-byte languages)
+#. :sl3:
 #. #-#-#-#-#  templates.pot (mdcfg)  #-#-#-#-#
 #. Type: select
 #. Choices

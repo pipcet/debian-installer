@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-02 22:41+0100\n"
+"POT-Creation-Date: 2019-11-05 23:57+0100\n"
 "PO-Revision-Date: 2017-01-05 15:43+0200\n"
 "Last-Translator: Ivan Masár <helix84@centrum.sk>\n"
 "Language-Team: x\n"
@@ -226,14 +226,16 @@ msgstr "Načítanie súčasti inštalačného programu zlyhalo"
 msgid "Loading ${PACKAGE} failed for unknown reasons. Aborting."
 msgstr "Načítanie ${PACKAGE} zlyhalo z neznámych dôvodov. Akcia sa ruší."
 
-#. Type: boolean
+#. Type: error
 #. Description
 #. :sl2:
 #: ../anna.templates:8001
-msgid "Continue the install without loading kernel modules?"
-msgstr "Pokračovať v inštalácii bez načítania modulov jadra?"
+#, fuzzy
+#| msgid "No disk found"
+msgid "No kernel modules found"
+msgstr "Nenašiel sa žiaden disk"
 
-#. Type: boolean
+#. Type: error
 #. Description
 #. :sl2:
 #: ../anna.templates:8001
@@ -246,18 +248,14 @@ msgstr ""
 "verziou jadra používaného týmto inštalačným programom a verziou jadra "
 "dostupného v archíve."
 
-#. Type: boolean
+#. Type: error
 #. Description
 #. :sl2:
 #: ../anna.templates:8001
 msgid ""
-"If you're installing from a mirror, you can work around this problem by "
-"choosing to install a different version of Debian. The install will probably "
-"fail to work if you continue without kernel modules."
+"You should make sure that your installation image is up-to-date, or - if "
+"that's the case - try a different mirror, preferably deb.debian.org."
 msgstr ""
-"Ak inštalujete z niektorého zrkadla, tento problém vyriešite zvolením inej "
-"verzie Debianu. Inštalácia pravdepodobne zlyhá ak sa rozhodnete pokračovať "
-"bez modulov jadra."
 
 #. Type: select
 #. Description
@@ -987,6 +985,20 @@ msgstr ""
 "ľubovoľnú dostupnú sieť, nič nevyplňujte."
 
 #. Type: select
+#. Choices
+#. :sl2:
+#: ../netcfg-common.templates:8001
+msgid "WEP/Open Network"
+msgstr "WEP/Otvorená sieť"
+
+#. Type: select
+#. Choices
+#. :sl2:
+#: ../netcfg-common.templates:8001
+msgid "WPA/WPA2 PSK"
+msgstr "WPA/WPA2 PSK"
+
+#. Type: select
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:8002
@@ -1282,6 +1294,26 @@ msgstr "Riadená (štruktúrovaná) sieť"
 msgid "Ad-hoc network (Peer to peer)"
 msgstr "Náhodná (peer to peer) sieť"
 
+#. Type: select
+#. Description
+#. :sl2:
+#: ../netcfg-common.templates:24002
+msgid "Type of wireless network:"
+msgstr "Typ bezdrôtovej siete:"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../netcfg-common.templates:24002
+msgid ""
+"Wireless networks are either managed or ad-hoc. If you use a real access "
+"point of some sort, your network is Managed. If another computer is your "
+"'access point', then your network may be Ad-hoc."
+msgstr ""
+"Bezdrôtové siete sú riadené alebo účelové. Ak používate skutočný prístupový "
+"bod, je táto sieť riadená (managed). Ak je vašim „prístupovým bodom“ (access "
+"point) priamo iný počítač, jedná sa o účelovú sieť (ad-hoc)."
+
 #. Type: text
 #. Description
 #. :sl2:
@@ -1295,6 +1327,13 @@ msgstr "Nastavenie bezdrôtovej siete"
 #: ../netcfg-common.templates:26001
 msgid "Searching for wireless access points..."
 msgstr "Hľadajú sa bezdrôtové prístupové body ..."
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../netcfg-common.templates:29001
+msgid "Detecting link on ${interface}; please wait..."
+msgstr "Zisťuje sa stav spojenia rozhrania ${interface}. Prosím, počkajte..."
 
 #. Type: text
 #. Description
@@ -1769,6 +1808,15 @@ msgstr ""
 "Zvoľte si protokol na sťahovanie súborov. Ak si nie ste istí, skúste „http“, "
 "pretože má menej problémov s firewallmi."
 
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl2:
+#: ../download-installer.templates:1001
+msgid "Download installer components"
+msgstr "Stiahnutie súčastí inštalačného programu"
+
 #. #-#-#-#-#  templates.pot (net-retriever)  #-#-#-#-#
 #. Type: select
 #. Choices
@@ -1879,6 +1927,103 @@ msgstr ""
 "Vyskytol sa problém pri načítavaní údajov z prenosného nosiča. Uistite sa, "
 "že máte vložený správny nosič. Ak budú problémy pokračovať, váš nosič môže "
 "byť poškodený."
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:1001
+msgid "Load drivers from removable media now?"
+msgstr "Načítať teraz ovládače z prenosného nosiča?"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:1001
+msgid ""
+"You probably need to load drivers from removable media before continuing "
+"with the installation. If you know that the install will work without extra "
+"drivers, you can skip this step."
+msgstr ""
+"Pred pokračovaním inštalácie možno budete potrebovať načítať ovládače z "
+"prenosného nosiča. Ak viete, že inštalácia bude úspešne pokračovať bez "
+"potreby ďalších ovládačov, môžete preskočiť tento krok."
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:1001
+msgid ""
+"If you do need to load drivers, insert the appropriate removable media, such "
+"as a driver floppy or USB stick before continuing."
+msgstr ""
+"Ak potrebujete načítať ovládače, pred ďalším pokračovaním vložte príslušný "
+"prenosný nosič s ovládačmi."
+
+#. Type: text
+#. Description
+#. main-menu item
+#. Translators: keep below 55 columns
+#. :sl2:
+#: ../load-media.templates:2001
+msgid "Load drivers from removable media"
+msgstr "Načítať ovládače z prenosného nosiča"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:3001
+msgid "Unknown removable media. Try to load anyway?"
+msgstr "Neznámy prenosný nosič. Napriek tomu načítať?"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:3001
+msgid ""
+"Detected removable media that is not a known driver media. Please make sure "
+"that the correct media is inserted. You can still continue if you have an "
+"unofficial removable media you want to use."
+msgstr ""
+"Prenosný nosič nie je známy nosič s ovládačmi. Uistite sa, že máte vložený "
+"správny nosič. Ak máte neoficiálny nosič, ktorý chcete použiť, môžete "
+"napriek tomu pokračovať."
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../load-media.templates:4001
+msgid "Please insert ${DISK_LABEL} ('${DISK_NAME}') first."
+msgstr "Prosím, vložte najprv ${DISK_LABEL} („${DISK_NAME}“)."
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../load-media.templates:4001
+msgid ""
+"Due to dependencies between packages, drivers must be loaded in the correct "
+"order."
+msgstr ""
+"Kvôli závislostiam medzi balíkmi je potrebné načítavať nosiče s ovládačmi v "
+"správnom poradí."
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:5001
+msgid "Load drivers from another removable media?"
+msgstr "Načítať ovládače z iného prenosného nosiča?"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:5001
+msgid ""
+"To load additional drivers from another removable media, please insert the "
+"appropriate removable media, such as a driver floppy or USB stick before "
+"continuing."
+msgstr ""
+"Ak potrebujete načítať ovládače z iného nosiča, pred ďalším pokračovaním "
+"vložte príslušný nosič s ovládačmi."
 
 #. Type: error
 #. Description
@@ -4739,6 +4884,67 @@ msgstr ""
 msgid "Change debconf priority"
 msgstr "Zmena priority otázok"
 
+#. Type: select
+#. Choices
+#. :sl2:
+#: ../pkgsel.templates:9001
+msgid "No automatic updates"
+msgstr "Bez automatických aktualizácií"
+
+#. Type: select
+#. Choices
+#. :sl2:
+#: ../pkgsel.templates:9001
+msgid "Install security updates automatically"
+msgstr "Automaticky inštalovať bezpečnostné aktualizácie"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+msgid "Updates management on this system:"
+msgstr "Správa aktualizácií na tomto systéme:"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+msgid ""
+"Applying updates on a frequent basis is an important part of keeping the "
+"system secure."
+msgstr "Časté aktualizácie sú dôležitou súčasťou zabezpečenia systému."
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+#, fuzzy
+#| msgid ""
+#| "By default, security updates are automatically installed by the "
+#| "unattended-upgrades package. Alternatively, you can opt-out from this "
+#| "system and apply updates manually using standard package management tools."
+msgid ""
+"By default, security updates are not automatically installed, as security "
+"advisories should be reviewed before manual installation of the updates "
+"using standard package management tools."
+msgstr ""
+"Štandardne bezpečnostné aktualizácie inštaluje automaticky balík unattended-"
+"upgrades. Namiesto toho môžete aktualizácie inštalovať manuálne pomocou "
+"štandardných nástrojov na správu balíkov."
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+msgid ""
+"Alternatively the unattended-upgrades package can be installed, which will "
+"install security updates automatically. Note however that automatic "
+"installation of updates may occasionally cause unexpected downtime of "
+"services provided by this machine in the rare cases where the update is not "
+"fully backward-compatible, or where the security advisory requires the "
+"administrator to perform some other manual operation."
+msgstr ""
+
 #. Type: error
 #. Description
 #. :sl3:
@@ -4997,218 +5203,6 @@ msgstr "Vykonanie preseed príkazu „${COMMAND}“ zlyhalo s chybou ${CODE}."
 #: ../rescue-check.templates:2001
 msgid "Rescue mode"
 msgstr "Záchranný režim"
-
-#. Type: select
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:3002
-msgid "Device to use as root file system:"
-msgstr "Zariadenie na použitie koreňového súborového systému:"
-
-#. Type: select
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:3002
-msgid ""
-"Enter a device you wish to use as your root file system. You will be able to "
-"choose among various rescue operations to perform on this file system."
-msgstr ""
-"Zadajte zariadenie, ktoré chcete použiť ako váš koreňový súborový systém. Na "
-"tomto súborovom systéme budete môcť vykonávať rôzne záchranné operácie."
-
-#. Type: select
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:3002
-msgid ""
-"If you choose not to use a root file system, you will be given a reduced "
-"choice of operations that can be performed without one. This may be useful "
-"if you need to correct a partitioning problem."
-msgstr ""
-"Ak si zvolíte nepoužívať koreňový súborový systém, dostanete zredukovanú "
-"množinu možných operácií, ktoré môžete bez neho vykonávať. To môže byť "
-"užitočné ak potrebujete napraviť problém s rozdelením diskov."
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:8001
-msgid "Execute a shell in ${DEVICE}"
-msgstr "Spustenie shellu na ${DEVICE}"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:9001
-msgid "Execute a shell in the installer environment"
-msgstr "Spustenie shellu v prostredí inštalátora"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:10001
-msgid "Choose a different root file system"
-msgstr "Zvoliť iný koreňový súborový systém"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:11001
-msgid "Reboot the system"
-msgstr "Reštart systému"
-
-#. Type: text
-#. Description
-#. :sl2:
-#. Type: text
-#. Description
-#. :sl2:
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:12001 ../rescue-mode.templates:16001
-#: ../rescue-mode.templates:17001
-msgid "Executing a shell"
-msgstr "Spustenie shellu"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:12001
-msgid ""
-"After this message, you will be given a shell with ${DEVICE} mounted on \"/"
-"\". If you need any other file systems (such as a separate \"/usr\"), you "
-"will have to mount those yourself."
-msgstr ""
-"Po tejto správe dostanete shell s ${DEVICE} pripojeným na „/“. Ak "
-"potrebujete hocijaké ďalšie súborové systémy (ako napr. samostatné „/usr“), "
-"musíte si ich pripojiť manuálne."
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:15001
-msgid "Interactive shell on ${DEVICE}"
-msgstr "Interaktívny shell na ${DEVICE}"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:16001
-msgid ""
-"After this message, you will be given a shell with ${DEVICE} mounted on \"/"
-"target\". You may work on it using the tools available in the installer "
-"environment. If you want to make it your root file system temporarily, run "
-"\"chroot /target\". If you need any other file systems (such as a separate "
-"\"/usr\"), you will have to mount those yourself."
-msgstr ""
-"Po tejto správe dostanete shell s ${DEVICE} pripojeným do „/target“. Na "
-"prácu môžete použiť nástroje dostupné v prostredí inštalátora. Ak si "
-"potrebujete dočasne vytvoriť koreňový súborový systém, spustite „chroot /"
-"target“. Ak potrebujete hocijaké ďalšie súborové systémy (ako napr. "
-"samostatné „/usr“), musíte si ich pripojiť manuálne."
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:17001
-msgid ""
-"After this message, you will be given a shell in the installer environment. "
-"No file systems have been mounted."
-msgstr ""
-"Po tejto správe dostanete shell v prostredí inštalátora. Neboli pripojené "
-"žiadne súborové systémy."
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:18001
-msgid "Interactive shell in the installer environment"
-msgstr "Interaktívny shell v prostredí inštalátora"
-
-#. Type: password
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:19001
-msgid "Passphrase for ${DEVICE}:"
-msgstr "Heslo pre ${DEVICE}:"
-
-#. Type: password
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:19001
-msgid "Please enter the passphrase for the encrypted volume ${DEVICE}."
-msgstr "Prosím, zadajte heslo pre šifrovaný zväzok ${DEVICE}."
-
-#. Type: password
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:19001
-msgid ""
-"If you don't enter anything, the volume will not be available during rescue "
-"operations."
-msgstr "Ak nič nezadáte, zväzok nebude dostupný pri záchranných operáciách."
-
-#. Type: multiselect
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:20002
-msgid "Partitions to assemble:"
-msgstr "Zostaviť z oblastí:"
-
-#. Type: multiselect
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:20002
-msgid ""
-"Select the partitions to assemble into a RAID array. If you select "
-"\"Automatic\", then all devices containing RAID physical volumes will be "
-"scanned and assembled."
-msgstr ""
-"Vyberte, z ktorých diskových oblastí chcete zostaviť pole RAID. Ak zvolíte "
-"„Automaticky“, všetky zariadenia obsahujúce fyzické zväzky RAID sa "
-"prehľadajú a použijú."
-
-#. Type: multiselect
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:20002
-msgid ""
-"Note that a RAID partition at the end of a disk may sometimes cause that "
-"disk to be mistakenly detected as containing a RAID physical volume. In that "
-"case, you should select the appropriate partitions individually."
-msgstr ""
-"Pamätajte, že RAID oblasť na konci disku môže niekedy spôsobiť chybné "
-"zistenie, že disk obsahuje fyzický zväzok RAID. V takom prípade by ste mali "
-"vybrať vhodné oblasti jednotlivo."
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:21001
-msgid "Mount separate ${FILESYSTEM} partition?"
-msgstr "Pripojiť samostatnú oblasť ${FILESYSTEM}?"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:21001
-msgid "The installed system appears to use a separate ${FILESYSTEM} partition."
-msgstr ""
-"Zdá sa, že nainštalovaný systém používa samostatnú oblasť ${FILESYSTEM}."
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:21001
-msgid ""
-"It is normally a good idea to mount it as it will allow operations such as "
-"reinstalling the boot loader. However, if the file system on ${FILESYSTEM} "
-"is corrupt then you may want to avoid mounting it."
-msgstr ""
-"Je zvyčajne dobrý nápad pripojiť ju, pretože umožní operácie ako napr. "
-"preinštalovanie zavádzača. Ak je však súborový systém na ${FILESYSTEM} "
-"poškodený, asi ju nebudete chcieť pripojiť."
 
 #. Type: text
 #. Description

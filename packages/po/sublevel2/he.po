@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer_packages_po_sublevel2_he\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-02 22:41+0100\n"
+"POT-Creation-Date: 2019-11-05 23:57+0100\n"
 "PO-Revision-Date: 2019-10-01 09:56+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <debian-hebrew-common@lists.alioth.debian.org>\n"
@@ -228,14 +228,16 @@ msgstr "טעינת רכיב של תכנית ההתקנה נכשלה"
 msgid "Loading ${PACKAGE} failed for unknown reasons. Aborting."
 msgstr "טעינת ${PACKAGE} נכשלה מסיבה לא ברורה. התהליך מבוטל."
 
-#. Type: boolean
+#. Type: error
 #. Description
 #. :sl2:
 #: ../anna.templates:8001
-msgid "Continue the install without loading kernel modules?"
-msgstr "להמשיך את ההתקנה בלי לטעון מודולי ליבה?"
+#, fuzzy
+#| msgid "No disk found"
+msgid "No kernel modules found"
+msgstr "אף דיסק לא נמצא"
 
-#. Type: boolean
+#. Type: error
 #. Description
 #. :sl2:
 #: ../anna.templates:8001
@@ -247,18 +249,14 @@ msgstr ""
 "לא נמצאו מודולי ליבה. כנראה עקב חוסר התאמה בין הליבה שבשימוש בגרסה זו של "
 "תכנית ההתקנה לבין גרסת הליבה שזמינה בארכיון."
 
-#. Type: boolean
+#. Type: error
 #. Description
 #. :sl2:
 #: ../anna.templates:8001
 msgid ""
-"If you're installing from a mirror, you can work around this problem by "
-"choosing to install a different version of Debian. The install will probably "
-"fail to work if you continue without kernel modules."
+"You should make sure that your installation image is up-to-date, or - if "
+"that's the case - try a different mirror, preferably deb.debian.org."
 msgstr ""
-"אם התקנה זו מתבצעת דרך אתר מראה, ניתן לעקוף בעיה זו על ידי בחירה בהתקנה של "
-"גרסה אחרת של דביאן. ההתקנה כנראה תפסיק לפעול אם בחירתך תהיה להמשיך ללא "
-"מודולי ליבה."
 
 #. Type: select
 #. Description
@@ -915,6 +913,20 @@ msgstr ""
 "ריק."
 
 #. Type: select
+#. Choices
+#. :sl2:
+#: ../netcfg-common.templates:8001
+msgid "WEP/Open Network"
+msgstr "WEP/רשת פתוחה"
+
+#. Type: select
+#. Choices
+#. :sl2:
+#: ../netcfg-common.templates:8001
+msgid "WPA/WPA2 PSK"
+msgstr "מפתח משותף מראש (PSK) מסוג WPA/WPA2"
+
+#. Type: select
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:8002
@@ -1205,6 +1217,26 @@ msgstr "רשת מנוהלת"
 msgid "Ad-hoc network (Peer to peer)"
 msgstr "רשת ייעודית (peer to peer)"
 
+#. Type: select
+#. Description
+#. :sl2:
+#: ../netcfg-common.templates:24002
+msgid "Type of wireless network:"
+msgstr "סוג הרשת האלחוטית:"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../netcfg-common.templates:24002
+msgid ""
+"Wireless networks are either managed or ad-hoc. If you use a real access "
+"point of some sort, your network is Managed. If another computer is your "
+"'access point', then your network may be Ad-hoc."
+msgstr ""
+"רשתות אלחוטיות יכולות להיות או מנוהלות או ייעודיות. אם נעשה שימוש בנקודת "
+"גישה מכל סוג שהוא, הרשת שלך מנוהלת. אם מחשב אחר משרת אותך בתור נקודת גישה, "
+"אז הרשת שלך היא כנראה ייעודית."
+
 #. Type: text
 #. Description
 #. :sl2:
@@ -1218,6 +1250,13 @@ msgstr "הגדרת רשת אלחוטית"
 #: ../netcfg-common.templates:26001
 msgid "Searching for wireless access points..."
 msgstr "מתבצע חיפוש אחר נקודות גישה אלחוטיות…"
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../netcfg-common.templates:29001
+msgid "Detecting link on ${interface}; please wait..."
+msgstr "החיבור דרך ${interface} בבדיקה, נא להמתין…"
 
 #. Type: text
 #. Description
@@ -1682,6 +1721,15 @@ msgstr ""
 "נא לבחור באיזה פרוטוקול להשתמש להורדת קבצים. במקרה של ספק, מוטב לבחור ב־"
 "„http” כיוון שבדרך כלל הוא חסין מפני תקלות הקשורות בחומות אש (firewalls)."
 
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl2:
+#: ../download-installer.templates:1001
+msgid "Download installer components"
+msgstr "הורדת רכיבי תכנית ההתקנה"
+
 #. #-#-#-#-#  templates.pot (net-retriever)  #-#-#-#-#
 #. Type: select
 #. Choices
@@ -1782,6 +1830,100 @@ msgid ""
 msgstr ""
 "אירעה שגיאה בעת קריאת נתונים מהמדיה הנתיקה. עליך לוודא שהמדיה הנכונה אכן "
 "קיימת. אם עדיין מופיעה תקלה, יכול להיות שהמדיה הנתיקה שלך פגומה."
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:1001
+msgid "Load drivers from removable media now?"
+msgstr "לטעון מנהלי התקנים מתוך מדיה נתיקה?"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:1001
+msgid ""
+"You probably need to load drivers from removable media before continuing "
+"with the installation. If you know that the install will work without extra "
+"drivers, you can skip this step."
+msgstr ""
+"כנראה שצריך לטעון מנהלי התקנים מדיסקט או מהתקן USB לפני שממשיכים עם ההתקנה. "
+"אם ידוע לך שההתקנה תעבוד ללא מנהלי התקנים נוספים ניתן לדלג על שלב זה."
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:1001
+msgid ""
+"If you do need to load drivers, insert the appropriate removable media, such "
+"as a driver floppy or USB stick before continuing."
+msgstr ""
+"אם יש לטעון מנהלי התקנים, נא להכניס דיסקט או התקן USB שמכיל את מנהלי ההתקנים "
+"המתאימים לכונן לפני המשך התהליך."
+
+#. Type: text
+#. Description
+#. main-menu item
+#. Translators: keep below 55 columns
+#. :sl2:
+#: ../load-media.templates:2001
+msgid "Load drivers from removable media"
+msgstr "טעינת מנהלי התקנים מתוך מדיה נתיקה"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:3001
+msgid "Unknown removable media. Try to load anyway?"
+msgstr "מדיה נתיקה לא מוכרת. לנסות לטעון בכל זאת?"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:3001
+msgid ""
+"Detected removable media that is not a known driver media. Please make sure "
+"that the correct media is inserted. You can still continue if you have an "
+"unofficial removable media you want to use."
+msgstr ""
+"הדיסקט או התקן ה־USB אינם מכילים מנהל התקן מוכר. נא לוודא כי השתמשת בדיסקט "
+"או בהתקן ה־USB הנכון. ניתן עדיין להמשיך אם יש לך דיסקט או התקן USB לא רשמי "
+"שברצונך להשתמש בו."
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../load-media.templates:4001
+msgid "Please insert ${DISK_LABEL} ('${DISK_NAME}') first."
+msgstr "נא להכניס את ${DISK_LABEL} (‚${DISK_NAME}’) תחילה."
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../load-media.templates:4001
+msgid ""
+"Due to dependencies between packages, drivers must be loaded in the correct "
+"order."
+msgstr "עקב תלויות בין החבילות, טעינת מנהלי ההתקנים חייבת להתבצע בסדר הנכון."
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:5001
+msgid "Load drivers from another removable media?"
+msgstr "לטעון מנהלי התקנים מתוך מדיה נתיקה אחרת?"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:5001
+msgid ""
+"To load additional drivers from another removable media, please insert the "
+"appropriate removable media, such as a driver floppy or USB stick before "
+"continuing."
+msgstr ""
+"כדי לטעון מנהלי התקנים מתקליטון או מהתקן USB אחר, יש להכניס את המדיה המתאימה "
+"לפני המשך התהליך."
 
 #. Type: error
 #. Description
@@ -4590,6 +4732,65 @@ msgstr ""
 msgid "Change debconf priority"
 msgstr "שינוי העדיפות של Debconf"
 
+#. Type: select
+#. Choices
+#. :sl2:
+#: ../pkgsel.templates:9001
+msgid "No automatic updates"
+msgstr "ללא עדכונים אוטומטיים"
+
+#. Type: select
+#. Choices
+#. :sl2:
+#: ../pkgsel.templates:9001
+msgid "Install security updates automatically"
+msgstr "התקנת עדכוני אבטחה אוטומטית"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+msgid "Updates management on this system:"
+msgstr "ניהול עדכונים במערכת הזאת:"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+msgid ""
+"Applying updates on a frequent basis is an important part of keeping the "
+"system secure."
+msgstr "החלת עדכונים על בסיס קבוע היא פעולה חשובה לשמירה על אבטחת המערכת."
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+msgid ""
+"By default, security updates are not automatically installed, as security "
+"advisories should be reviewed before manual installation of the updates "
+"using standard package management tools."
+msgstr ""
+"כבררת מחדל, עדכוני אבטחה אינם מותקנים אוטומטית, כיוון שמוטב לסקור הכרזות "
+"אבטחה בטרם התקנה ידנית של העדכונים באמצעות כלי ניהול חבילות."
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+msgid ""
+"Alternatively the unattended-upgrades package can be installed, which will "
+"install security updates automatically. Note however that automatic "
+"installation of updates may occasionally cause unexpected downtime of "
+"services provided by this machine in the rare cases where the update is not "
+"fully backward-compatible, or where the security advisory requires the "
+"administrator to perform some other manual operation."
+msgstr ""
+"לחלופין, ניתן להתקין את החבילה unattended-upgrades שמתקינה עדכוני אבטחה "
+"אוטומטית. כדאי לשים לב לכך שהתקנה אוטומטית של עדכונים עשויה לגרום להשבתת "
+"שירותים שמסופקים על ידי המכונה במקרים נדירים כאשר לעדכון אין תאימות לחבילות "
+"ישנות או שהכרזות האבטחה דורשות מההנהלה לבצע פעולות ידניות נוספות."
+
 #. Type: error
 #. Description
 #. :sl3:
@@ -4839,213 +5040,6 @@ msgstr "הרצת הפקודה „${COMMAND}” שנטענה מראש נכשלה 
 #: ../rescue-check.templates:2001
 msgid "Rescue mode"
 msgstr "מצב הצלה"
-
-#. Type: select
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:3002
-msgid "Device to use as root file system:"
-msgstr "התקן לשימוש כשורש מערכת הקבצים:"
-
-#. Type: select
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:3002
-msgid ""
-"Enter a device you wish to use as your root file system. You will be able to "
-"choose among various rescue operations to perform on this file system."
-msgstr ""
-"נא להקליד שם של התקן שישמש אותך כשורש מערכת הקבצים. לרשותך תעמודנה מגוון "
-"פעולות לחילוץ מערכת הקבצים הזו."
-
-#. Type: select
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:3002
-msgid ""
-"If you choose not to use a root file system, you will be given a reduced "
-"choice of operations that can be performed without one. This may be useful "
-"if you need to correct a partitioning problem."
-msgstr ""
-"בחירה שלא להשתמש בשורש מערכת הקבצים תוביל לצמצום מגוון הפעולות שניתן לבצע "
-"ללא גישה אליו. עשוי להיות שימושי לטובת תיקון תקלת חלוקה למחיצות."
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:8001
-msgid "Execute a shell in ${DEVICE}"
-msgstr "הרצת מעטפת בהתקן ${DEVICE}"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:9001
-msgid "Execute a shell in the installer environment"
-msgstr "להריץ מעטפת בסביבת ההתקנה"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:10001
-msgid "Choose a different root file system"
-msgstr "נא לבחור שורש אחר למערכת הקבצים"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:11001
-msgid "Reboot the system"
-msgstr "הפעלת המערכת מחדש"
-
-#. Type: text
-#. Description
-#. :sl2:
-#. Type: text
-#. Description
-#. :sl2:
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:12001 ../rescue-mode.templates:16001
-#: ../rescue-mode.templates:17001
-msgid "Executing a shell"
-msgstr "הרצת מעטפת"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:12001
-msgid ""
-"After this message, you will be given a shell with ${DEVICE} mounted on \"/"
-"\". If you need any other file systems (such as a separate \"/usr\"), you "
-"will have to mount those yourself."
-msgstr ""
-"לאחר הודעה זאת, תופיע מעטפת עם ${DEVICE} עם עיגון על „/”. אם נדרשות מערכות "
-"קבצים אחרות (כגון „‎/usr” בנפרד), יש לעגן אותן באופן עצמאי."
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:15001
-msgid "Interactive shell on ${DEVICE}"
-msgstr "מעטפת אינטראקטיבית בהתקן ${DEVICE}"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:16001
-msgid ""
-"After this message, you will be given a shell with ${DEVICE} mounted on \"/"
-"target\". You may work on it using the tools available in the installer "
-"environment. If you want to make it your root file system temporarily, run "
-"\"chroot /target\". If you need any other file systems (such as a separate "
-"\"/usr\"), you will have to mount those yourself."
-msgstr ""
-"לאחר הודעה זאת, תופיע מעטפת עם ${DEVICE} עם עיגון על „‎/target”. ניתן לעבוד "
-"עליה עם הכלים הזמינים בסביבת תכנית ההתקנה. אם ברצונך לכוון אותה אל שורש "
-"מערכת הקבצים באופן זמני, עליך להריץ את הפקודה „chroot /target”. אם נדרשות לך "
-"מערכות קבצים אחרות (כגון „‎/usr” בנפרד), יש לעגן אותן באופן עצמאי."
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:17001
-msgid ""
-"After this message, you will be given a shell in the installer environment. "
-"No file systems have been mounted."
-msgstr ""
-"אחרי הודעה זאת, תופעל מעטפת עם הסביבה של תכנית ההתקנה. אף מערכת קבצים לא "
-"עוגנה."
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:18001
-msgid "Interactive shell in the installer environment"
-msgstr "מעטפת אינטראקטיבית בסביבת ההתקנה"
-
-#. Type: password
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:19001
-msgid "Passphrase for ${DEVICE}:"
-msgstr "מילת צופן עבור ${DEVICE}:"
-
-#. Type: password
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:19001
-msgid "Please enter the passphrase for the encrypted volume ${DEVICE}."
-msgstr "נא להקליד את מילת הצופן של הכרך המוצפן ${DEVICE}."
-
-#. Type: password
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:19001
-msgid ""
-"If you don't enter anything, the volume will not be available during rescue "
-"operations."
-msgstr "אם שדה זה יישאר ריק, הכרך לא יהיה זמין במהלך פעולות חילוץ."
-
-#. Type: multiselect
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:20002
-msgid "Partitions to assemble:"
-msgstr "מחיצות להרכבה:"
-
-#. Type: multiselect
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:20002
-msgid ""
-"Select the partitions to assemble into a RAID array. If you select "
-"\"Automatic\", then all devices containing RAID physical volumes will be "
-"scanned and assembled."
-msgstr ""
-"יש לבחור את המחיצות להרכבה לתוך מערך RAID. בחירה במצב „באופן אוטומטי”, תסרוק "
-"ותרכיב כל ההתקנים המכילים כרכים פיזיים מסוג RAID."
-
-#. Type: multiselect
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:20002
-msgid ""
-"Note that a RAID partition at the end of a disk may sometimes cause that "
-"disk to be mistakenly detected as containing a RAID physical volume. In that "
-"case, you should select the appropriate partitions individually."
-msgstr ""
-"נא לשים לב שמחיצת RAID בסוף כונן עשויה לפעמים לגרום לזיהוי כוזב של הכונן "
-"כאילו הוא מכיל כרך RAID פיזי. במקרה שכזה, יש לבחור את המחיצות המתאימות באופן "
-"פרטני."
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:21001
-msgid "Mount separate ${FILESYSTEM} partition?"
-msgstr "לעגן מחיצה נפרדת ל־${FILESYSTEM}?"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:21001
-msgid "The installed system appears to use a separate ${FILESYSTEM} partition."
-msgstr "נראה שהמערכת המותקנת משתמשת במחיצת ${FILESYSTEM} נפרדת."
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:21001
-msgid ""
-"It is normally a good idea to mount it as it will allow operations such as "
-"reinstalling the boot loader. However, if the file system on ${FILESYSTEM} "
-"is corrupt then you may want to avoid mounting it."
-msgstr ""
-"על פי רוב מומלץ לעגן אותה כיוון שמצב זה יאפשר פעולות כגון התקנת מערכת הטעינה "
-"מחדש. עם זאת, אם מערכת הקבצים שב־${FILESYSTEM} פגומה אז יתכן שעדיף לך לא "
-"לעגן אותה."
 
 #. Type: text
 #. Description

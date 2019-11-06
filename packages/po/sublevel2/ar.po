@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ar\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-02 22:41+0100\n"
+"POT-Creation-Date: 2019-11-05 23:57+0100\n"
 "PO-Revision-Date: 2019-06-10 10:55+0000\n"
 "Last-Translator: ButterflyOfFire <ButterflyOfFire@protonmail.com>\n"
 "Language-Team: \n"
@@ -224,14 +224,16 @@ msgstr "فشل تحميل مكوّن برنامج التثبيت"
 msgid "Loading ${PACKAGE} failed for unknown reasons. Aborting."
 msgstr "فشل تحميل ${PACKAGE} لأسبابٍ مجهولة. جاري الإجهاض."
 
-#. Type: boolean
+#. Type: error
 #. Description
 #. :sl2:
 #: ../anna.templates:8001
-msgid "Continue the install without loading kernel modules?"
-msgstr "الاستمرار بالتثبيت دون تحميل وحدات النواة؟"
+#, fuzzy
+#| msgid "No disk found"
+msgid "No kernel modules found"
+msgstr "لم يعثر على أي قرص"
 
-#. Type: boolean
+#. Type: error
 #. Description
 #. :sl2:
 #: ../anna.templates:8001
@@ -244,17 +246,14 @@ msgstr ""
 "المستخدمة من قبل هذه النسخة من برنامج التثبيت ونسخة النواة المتوفرة في "
 "الأرشيف."
 
-#. Type: boolean
+#. Type: error
 #. Description
 #. :sl2:
 #: ../anna.templates:8001
 msgid ""
-"If you're installing from a mirror, you can work around this problem by "
-"choosing to install a different version of Debian. The install will probably "
-"fail to work if you continue without kernel modules."
+"You should make sure that your installation image is up-to-date, or - if "
+"that's the case - try a different mirror, preferably deb.debian.org."
 msgstr ""
-"إن كنت تقوم بالتثبيت من مرآة، فيمكنك حلّ هذه المشكلة باختيار تثبيت نسخة أخرى "
-"من دبيان. سيخفق التثبيت على الأرجح ان استمريت بدون وحدات النواة."
 
 #. Type: select
 #. Description
@@ -980,6 +979,20 @@ msgstr ""
 "متوفّرة فاترك هذا الحقل خالياً."
 
 #. Type: select
+#. Choices
+#. :sl2:
+#: ../netcfg-common.templates:8001
+msgid "WEP/Open Network"
+msgstr "WEP/شبكة مفتوحة"
+
+#. Type: select
+#. Choices
+#. :sl2:
+#: ../netcfg-common.templates:8001
+msgid "WPA/WPA2 PSK"
+msgstr "WPA/WPA2 PSK"
+
+#. Type: select
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:8002
@@ -1271,6 +1284,26 @@ msgstr "شبكة بنية تحتيّة (مدارة)"
 msgid "Ad-hoc network (Peer to peer)"
 msgstr "شبكة مصطنعة (ند إلى ند)"
 
+#. Type: select
+#. Description
+#. :sl2:
+#: ../netcfg-common.templates:24002
+msgid "Type of wireless network:"
+msgstr "نوع الشبكة اللاسلكية:"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../netcfg-common.templates:24002
+msgid ""
+"Wireless networks are either managed or ad-hoc. If you use a real access "
+"point of some sort, your network is Managed. If another computer is your "
+"'access point', then your network may be Ad-hoc."
+msgstr ""
+"الشّبكات اللاسلكية تكون إمّا مدارةً أو مصطنعة. إذا كنت تستعمل نقطة وصولٍ حقيقيّة "
+"أو ما شابه، فشبكتك مدارة. إذا كانت 'نقطة وصولك' هي عبارةٌ عن حاسوبٍ آخر فقد "
+"تكون شبكتك مصطنعة."
+
 #. Type: text
 #. Description
 #. :sl2:
@@ -1284,6 +1317,13 @@ msgstr "تهيئة الشبكة اللاسلكية"
 #: ../netcfg-common.templates:26001
 msgid "Searching for wireless access points..."
 msgstr "البحث عن نقاط الوصول اللاسلكي ..."
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../netcfg-common.templates:29001
+msgid "Detecting link on ${interface}; please wait..."
+msgstr "اكتشاف الاتصال على ${interface}; الرجاء الانتظار..."
 
 #. Type: text
 #. Description
@@ -1753,6 +1793,15 @@ msgstr ""
 "الرجاء اختيار بروتوكول تنزيل الملفّات. إن لم تكن متأكّداً اختر \"http\" فهو أقل "
 "عرضةً للمشاكل المتعلّقة بالجدر النارية."
 
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl2:
+#: ../download-installer.templates:1001
+msgid "Download installer components"
+msgstr "تنزيل مكونات برنامج التثبيت"
+
 #. #-#-#-#-#  templates.pot (net-retriever)  #-#-#-#-#
 #. Type: select
 #. Choices
@@ -1861,6 +1910,101 @@ msgstr ""
 "كان هناك خطأ في قراءة البيانات من الوسط القابل للإزالة. رجاء تأكّد من أن وجود "
 "الوسطالقابل للإزالة الصحيح موجود. إن استمريت في مواجهة المشاكل، فقد يكون "
 "الوسط القابل للإزالة الذي لديك سيّء."
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:1001
+msgid "Load drivers from removable media now?"
+msgstr "هل تريد تحميل المُعرّفات من الوسط القابل للإزالة؟"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:1001
+msgid ""
+"You probably need to load drivers from removable media before continuing "
+"with the installation. If you know that the install will work without extra "
+"drivers, you can skip this step."
+msgstr ""
+"ربما تحتاج لتحميل مُعرّفات من الوسط القابل للإزالة قبل الاستمرار في التثبيت.إن "
+"كنت واثقا من أن التثبيت سينجح دون هذه المُعرّفات الأضافية، يمكنك تخطّي هذه "
+"الخطوة."
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:1001
+msgid ""
+"If you do need to load drivers, insert the appropriate removable media, such "
+"as a driver floppy or USB stick before continuing."
+msgstr ""
+"إن لم تكن بحاجة إلى تحميل مُعرّفات، أدخل الوسط القابل للإزالة، مثل القرص المرن "
+"أو USB قبل الاستمرار."
+
+#. Type: text
+#. Description
+#. main-menu item
+#. Translators: keep below 55 columns
+#. :sl2:
+#: ../load-media.templates:2001
+msgid "Load drivers from removable media"
+msgstr "تحميل المُعرّفات من وسط قابل للإزالة"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:3001
+msgid "Unknown removable media. Try to load anyway?"
+msgstr "الوسط القابل للإزالة مجهول. هل تريد محاولة تحميله على أي حال؟"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:3001
+msgid ""
+"Detected removable media that is not a known driver media. Please make sure "
+"that the correct media is inserted. You can still continue if you have an "
+"unofficial removable media you want to use."
+msgstr ""
+"الوسط القابل للإزالة الذي عُثر عليه مجهول. الرجاء التأكد من أن الوسط موجود في "
+"السواقة. لا زال بإمكانك الاستمرار إن كان لديك وسط قابل للإزالة غير رسمي تود "
+"استخدامه."
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../load-media.templates:4001
+msgid "Please insert ${DISK_LABEL} ('${DISK_NAME}') first."
+msgstr "الرجاء إدخال ${DISK_LABEL} ('${DISK_NAME}') أولاً."
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../load-media.templates:4001
+msgid ""
+"Due to dependencies between packages, drivers must be loaded in the correct "
+"order."
+msgstr "بسبب الاعتمادات بين الحزم، يجب تحميل المُعرّفاتبالترتيب الصحيح."
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:5001
+msgid "Load drivers from another removable media?"
+msgstr "تحميل برامج التعريف من وسط قابل للإزالة آخر؟"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:5001
+msgid ""
+"To load additional drivers from another removable media, please insert the "
+"appropriate removable media, such as a driver floppy or USB stick before "
+"continuing."
+msgstr ""
+"لتحميل برامج تعريف إضافية من وسط قابل للإزالة آخر، الرجاء أدخل الوسط القابل "
+"للإزالة الملائم، كالقرص المرن أو قرص USB قبل الاستمرار."
 
 #. Type: error
 #. Description
@@ -4676,6 +4820,66 @@ msgstr ""
 msgid "Change debconf priority"
 msgstr "تغيير أولويّة debconf"
 
+#. Type: select
+#. Choices
+#. :sl2:
+#: ../pkgsel.templates:9001
+msgid "No automatic updates"
+msgstr "لا توجد تحديثات تلقائية"
+
+#. Type: select
+#. Choices
+#. :sl2:
+#: ../pkgsel.templates:9001
+msgid "Install security updates automatically"
+msgstr "تثبيت تحديثات الأمان تلقائياً"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+msgid "Updates management on this system:"
+msgstr "إدارة التحديثات على هذا النظام:"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+msgid ""
+"Applying updates on a frequent basis is an important part of keeping the "
+"system secure."
+msgstr "تطبيق التحديثات على بشكل دوري أمر مهم للحفاظ على أمن النظام."
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+msgid ""
+"By default, security updates are not automatically installed, as security "
+"advisories should be reviewed before manual installation of the updates "
+"using standard package management tools."
+msgstr ""
+"لا تثُبت التحديثات الأمنية تلقائيا؛ لإن التحذيرات الأمنية يجب مراجعتها قبل "
+"التطبيق  اليدوي للتاحديثات باستخدام أدوات إدارة الحزم القياسية."
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+msgid ""
+"Alternatively the unattended-upgrades package can be installed, which will "
+"install security updates automatically. Note however that automatic "
+"installation of updates may occasionally cause unexpected downtime of "
+"services provided by this machine in the rare cases where the update is not "
+"fully backward-compatible, or where the security advisory requires the "
+"administrator to perform some other manual operation."
+msgstr ""
+"أو يمكن تثبيت حزمة unattended-upgrades؛ و التي سوف تثبت التحديثات الأمنية "
+"تلقائيا. يجب ملاحظة أن التحديثات التلقائيا من الممكن أن تسبب انقطاع في بعض "
+"الخدمات على هذا الحاسب في الحالات النادرة التي يكون فيها التحديث غير متوافق "
+"مع النسخ السابقة أو تكون بعد التحذيرات الأمنية تستدعي من المدير أن يقوم بعض "
+"العمليات اليدوية."
+
 #. Type: error
 #. Description
 #. :sl3:
@@ -4928,214 +5132,6 @@ msgstr "فشل تنفيذ أمر preseed )\"${COMMAND}\"( مُرجعاً رمز 
 #: ../rescue-check.templates:2001
 msgid "Rescue mode"
 msgstr "وضع الإنقاذ"
-
-#. Type: select
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:3002
-msgid "Device to use as root file system:"
-msgstr "الجهاز المطلوب استخدامه كنظام ملفات جذري:"
-
-#. Type: select
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:3002
-msgid ""
-"Enter a device you wish to use as your root file system. You will be able to "
-"choose among various rescue operations to perform on this file system."
-msgstr ""
-"أدخل اسم الجهاز الذي تود استخدامه كنظام ملفات جذر. سيتاح لك اختيار العديد من "
-"عمليات الإنقاذ لتنفيذها على نظام الملفات."
-
-#. Type: select
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:3002
-msgid ""
-"If you choose not to use a root file system, you will be given a reduced "
-"choice of operations that can be performed without one. This may be useful "
-"if you need to correct a partitioning problem."
-msgstr ""
-"ان اخترت عدم استخدام نظام ملفات جذر، فستُعطى خيارات إجراءات أقل يمكن تنفيذها "
-"دونه. قد يكون هذا مفيداً إن أردت حلّ مشكلة التجزئة."
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:8001
-msgid "Execute a shell in ${DEVICE}"
-msgstr "فتح سطر الأوامر في ${DEVICE}"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:9001
-msgid "Execute a shell in the installer environment"
-msgstr "فتح سطر الأوامر في بيئة برنامج التثبيت"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:10001
-msgid "Choose a different root file system"
-msgstr "اختيار نظام ملفات جذر مختلف"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:11001
-msgid "Reboot the system"
-msgstr "إعادة تشغيل النظام"
-
-#. Type: text
-#. Description
-#. :sl2:
-#. Type: text
-#. Description
-#. :sl2:
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:12001 ../rescue-mode.templates:16001
-#: ../rescue-mode.templates:17001
-msgid "Executing a shell"
-msgstr "فتح سطر الأوامر"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:12001
-msgid ""
-"After this message, you will be given a shell with ${DEVICE} mounted on \"/"
-"\". If you need any other file systems (such as a separate \"/usr\"), you "
-"will have to mount those yourself."
-msgstr ""
-"عقب هذه الرسالة، سوف تعطى سطر أوامر مع ${DEVICE} مركب في \"/\". إن كنت بحاجة "
-"إلى أي أنظمة ملفات أخرى (مثل \"/usr\" منفصل)، فستحتاج إلى تركيبها بنفسك."
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:15001
-msgid "Interactive shell on ${DEVICE}"
-msgstr "فتح سطر الأوامر في ${DEVICE}"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:16001
-msgid ""
-"After this message, you will be given a shell with ${DEVICE} mounted on \"/"
-"target\". You may work on it using the tools available in the installer "
-"environment. If you want to make it your root file system temporarily, run "
-"\"chroot /target\". If you need any other file systems (such as a separate "
-"\"/usr\"), you will have to mount those yourself."
-msgstr ""
-"عقب هذه الرسالة، سوف يظهر لك سطر أوامر يتوفر فيه الجهاز ${DEVICE} مركباً في "
-"المجلد \"target/\". يمكنك العمل عليه باستخدام الأدوات المتوفرة في بيئة "
-"برنامج التثبيت. إن كنت تريد جعله نظام الملفات الجذر مؤقتاً، نفذ الأمر "
-"\"chroot /target\". وإن كنت بحاجة إلى أنظمة ملفات أخرى (مثل جزء \"/usr\" "
-"منفصل)، فعليك بتركيبها بنفسك."
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:17001
-msgid ""
-"After this message, you will be given a shell in the installer environment. "
-"No file systems have been mounted."
-msgstr ""
-"عقب هذه الرسالة، سوف تعطى سطر أوامر في بيئة برنامج التثبيت.لم يتم تركيب أية "
-"أنظمة ملفات."
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:18001
-msgid "Interactive shell in the installer environment"
-msgstr "فتح سطر الأوامر في بيئة برنامج التثبيت"
-
-#. Type: password
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:19001
-msgid "Passphrase for ${DEVICE}:"
-msgstr "كلمة المرور للجهاز ${DEVICE}:"
-
-#. Type: password
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:19001
-msgid "Please enter the passphrase for the encrypted volume ${DEVICE}."
-msgstr "الرجاء إدخال كلمة المرور للكتلة المشفرة ${DEVICE}."
-
-#. Type: password
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:19001
-msgid ""
-"If you don't enter anything, the volume will not be available during rescue "
-"operations."
-msgstr ""
-"إن لم تكتب اي شيء، فلن تكون الكتلة قابلة للاستخدام خلال عمليات الإنقاذ."
-
-#. Type: multiselect
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:20002
-msgid "Partitions to assemble:"
-msgstr "الأجزاء المطلوب جمعها:"
-
-#. Type: multiselect
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:20002
-msgid ""
-"Select the partitions to assemble into a RAID array. If you select "
-"\"Automatic\", then all devices containing RAID physical volumes will be "
-"scanned and assembled."
-msgstr ""
-"اختر الأجزاء المطلوب جمعها في مصفوفة RAID. إن اخترت الخيار \"آلياً\"، فسيتم "
-"البحث عن جميع الأجهزة التي تحتوي كتل RAID وجمعها."
-
-#. Type: multiselect
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:20002
-msgid ""
-"Note that a RAID partition at the end of a disk may sometimes cause that "
-"disk to be mistakenly detected as containing a RAID physical volume. In that "
-"case, you should select the appropriate partitions individually."
-msgstr ""
-"انتبه إلى أن وجود جزء RAID في نهاية قرص ما قد يتسبب أحياناً باعتبار ذلك القرص "
-"يحتوي كتلة RAID. في تلك الحالة، يجب أن تحدد الأجزاء المناسبة يدوياً."
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:21001
-msgid "Mount separate ${FILESYSTEM} partition?"
-msgstr "تركيب جزء ${FILESYSTEM} منفصل؟"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:21001
-msgid "The installed system appears to use a separate ${FILESYSTEM} partition."
-msgstr "يبدو أن النظام المثبّت يستخدم جزء ${FILESYSTEM} منفصل."
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:21001
-msgid ""
-"It is normally a good idea to mount it as it will allow operations such as "
-"reinstalling the boot loader. However, if the file system on ${FILESYSTEM} "
-"is corrupt then you may want to avoid mounting it."
-msgstr ""
-"من الجيد عادة تركيب جزء ${FILESYSTEM} لإتاحة العمليات عليه كإعادة تثبيت محمّل "
-"الإقلاع. على أي، إن كان نظام الملفات لذلك الجزء لا يعمل فقط ترغب بتجنب "
-"تركيبه."
 
 #. Type: text
 #. Description

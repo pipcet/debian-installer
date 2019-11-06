@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: be\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-02 22:41+0100\n"
+"POT-Creation-Date: 2019-11-05 23:57+0100\n"
 "PO-Revision-Date: 2018-06-12 16:58+0300\n"
 "Last-Translator: Viktar Siarheichyk <vics@fsfe.org>\n"
 "Language-Team: Debian l10n team for Belarusian <debian-l10n-belarusian@lists."
@@ -2163,6 +2163,15 @@ msgstr "Запуск \"/sbin/lilo\" вярнуў код памылкі \"${ERRCO
 msgid "Install the LILO boot loader on a hard disk"
 msgstr "Усталяваць загрузчык LILO на жорсткі дыск"
 
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl3:
+#: ../network-preseed.templates:1001
+msgid "Download debconf preconfiguration file"
+msgstr "Спампоўка файла папярэдніх наладак debconf"
+
 #. Type: string
 #. Description
 #. :sl3:
@@ -2226,6 +2235,15 @@ msgstr "Глядзі http://wiki.debian.org/DebianInstaller/Preseed для на�
 
 #. Type: text
 #. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl3:
+#: ../file-preseed.templates:1001
+msgid "Load debconf preconfiguration file"
+msgstr "Загрузка файла папярэдніх наладак debconf"
+
+#. Type: text
+#. Description
 #. :sl3:
 #: ../rescue-mode.templates:2001
 msgid "No partitions found"
@@ -2247,6 +2265,51 @@ msgstr ""
 "вызначыла ваш жорсткі дыск, або не прачытала табліцу падзелаў, або жорсткі "
 "дыск не падзелены. Вы можаце разабрацца з сітуацыяй з каманднай абалонкі ў "
 "асяроддзі праграмы ўсталявання."
+
+#. Type: select
+#. Choices
+#. :sl3:
+#: ../rescue-mode.templates:3001
+msgid "Assemble RAID array"
+msgstr "Зборка RAID-масіва"
+
+#. Type: select
+#. Choices
+#. :sl3:
+#: ../rescue-mode.templates:3001
+msgid "Do not use a root file system"
+msgstr "Не выкарыстоўвайць каранёвую файлаваю сістэму"
+
+#. Type: select
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:3002
+msgid "Device to use as root file system:"
+msgstr "Прылада, якую трэба ўжываць як каранёвую файлавую сістэму:"
+
+#. Type: select
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:3002
+msgid ""
+"Enter a device you wish to use as your root file system. You will be able to "
+"choose among various rescue operations to perform on this file system."
+msgstr ""
+"Вызначце прыладу, якую Вы хочаце ўжываць як каранёвую файлавую сістэму. Вы "
+"будзеце мець магчымасць выбраць, якія ратавальныя аперацыі зрабіць з ёй."
+
+#. Type: select
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:3002
+msgid ""
+"If you choose not to use a root file system, you will be given a reduced "
+"choice of operations that can be performed without one. This may be useful "
+"if you need to correct a partitioning problem."
+msgstr ""
+"Калі не будзеце выкарыстоўваць каранёвай файлавай сістэмы, вам будзе дадзены "
+"зменшаны выбар аперацый. Гэта будзе карысным, калі Вы хочаце скарэктаваць "
+"праблемы падзялення дыску."
 
 #. Type: error
 #. Description
@@ -2291,6 +2354,13 @@ msgstr ""
 msgid "Please check the syslog for more information."
 msgstr "Па дадатковыя звесткі можна звярнуцца да сістэмнага журанала (syslog)."
 
+#. Type: select
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:6001
+msgid "Rescue operations"
+msgstr "Аперацыі ратавання"
+
 #. Type: error
 #. Description
 #. :sl3:
@@ -2304,6 +2374,61 @@ msgstr "Не атрымалася аперацыя ратавання"
 #: ../rescue-mode.templates:7001
 msgid "The rescue operation '${OPERATION}' failed with exit code ${CODE}."
 msgstr "Аперацыя ратавання '${OPERATION}' аварыйна скончылася з кодам ${CODE}."
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:8001
+msgid "Execute a shell in ${DEVICE}"
+msgstr "Запусціць камандную абалонку на ${DEVICE}"
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:9001
+msgid "Execute a shell in the installer environment"
+msgstr "Запусціць камандную абалонку ў асяродку праграмы ўстаноўкі"
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:10001
+msgid "Choose a different root file system"
+msgstr "Выбраць іншую каранёвую файлавую сістэму"
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:11001
+msgid "Reboot the system"
+msgstr "Перазагрузіцца"
+
+#. Type: text
+#. Description
+#. :sl3:
+#. Type: text
+#. Description
+#. :sl3:
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:12001 ../rescue-mode.templates:16001
+#: ../rescue-mode.templates:17001
+msgid "Executing a shell"
+msgstr "Запуск каманднай абалонкі"
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:12001
+msgid ""
+"After this message, you will be given a shell with ${DEVICE} mounted on \"/"
+"\". If you need any other file systems (such as a separate \"/usr\"), you "
+"will have to mount those yourself."
+msgstr ""
+"Пасля гэтага паведамлення Вы трапіце ў камандную абалонку, у якой прылада "
+"${DEVICE} будзе прымацаваная да \"/\". Калі Вам патрэбныя іншыя файлавыя "
+"сістэмы (напрыклад, \"/usr\"), Вам давядзецца прымацаваць іх самастойна."
 
 #. Type: error
 #. Description
@@ -2337,6 +2462,140 @@ msgstr "Не знойдзена каманднай абалонкі ў /target"
 msgid "No usable shell was found on your root file system (${DEVICE})."
 msgstr ""
 "На каранёвай сістэме (${DEVICE}) не знойдзена прыдатнай каманднай абалонкі"
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:15001
+msgid "Interactive shell on ${DEVICE}"
+msgstr "Камандная абалонка на ${DEVICE}"
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:16001
+msgid ""
+"After this message, you will be given a shell with ${DEVICE} mounted on \"/"
+"target\". You may work on it using the tools available in the installer "
+"environment. If you want to make it your root file system temporarily, run "
+"\"chroot /target\". If you need any other file systems (such as a separate "
+"\"/usr\"), you will have to mount those yourself."
+msgstr ""
+"Пасля гэтага паведамлення Вы патрапіце ў камандную абалонку, дзе ${DEVICE} "
+"будзе прымацаваная да \"/target\". Вы можаце працаваць у ёй з прыладамі, "
+"даступнымі ў асяродку праграмы ўстаноўкі. Калі Вы хочаце часова змяніць "
+"каранёвую файлавую сістэму, запусціце \"chroot /target\". Калі Вам патрэбныя "
+"іншыя файлавыя сістэму (напрыклад, \"/usr\"), іх давядзецца мацаваць "
+"самастойна."
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:17001
+msgid ""
+"After this message, you will be given a shell in the installer environment. "
+"No file systems have been mounted."
+msgstr ""
+"Пасля гэтага паведамлення Вы трапіце ў асяроддзе праграмы ўсталявання. "
+"Ніводная файлавая сістэма не прымацавана."
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:18001
+msgid "Interactive shell in the installer environment"
+msgstr "Камандная абалонка ў асяроддзі праграмы ўстаноўкі"
+
+#. Type: password
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:19001
+msgid "Passphrase for ${DEVICE}:"
+msgstr "Сакрэтны сказ для ${DEVICE}:"
+
+#. Type: password
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:19001
+msgid "Please enter the passphrase for the encrypted volume ${DEVICE}."
+msgstr "Увядзіце сакрэтны сказ для шыфраванага тома ${DEVICE}."
+
+#. Type: password
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:19001
+msgid ""
+"If you don't enter anything, the volume will not be available during rescue "
+"operations."
+msgstr ""
+"Калі не ўвядзеце нічога, том не будзе даступным падчас аперацыі ратавання."
+
+#. Type: multiselect
+#. Choices
+#. :sl3:
+#: ../rescue-mode.templates:20001
+msgid "Automatic"
+msgstr "Аўтаматычна"
+
+#. Type: multiselect
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:20002
+msgid "Partitions to assemble:"
+msgstr "Падзелы для зборкі:"
+
+#. Type: multiselect
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:20002
+msgid ""
+"Select the partitions to assemble into a RAID array. If you select "
+"\"Automatic\", then all devices containing RAID physical volumes will be "
+"scanned and assembled."
+msgstr ""
+"Абярыце падзелы для зборкі RAID-масіва. Калі вы абярэце \"Аўтаматычна\", то "
+"будуць прасканаваныя і сабраныя ўсе прылады, што ўтрымліваюць фізічныя тамы "
+"RAID."
+
+#. Type: multiselect
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:20002
+msgid ""
+"Note that a RAID partition at the end of a disk may sometimes cause that "
+"disk to be mistakenly detected as containing a RAID physical volume. In that "
+"case, you should select the appropriate partitions individually."
+msgstr ""
+"Заўважце, што калі RAID-падзел знаходзіцца ў канцы дыску, то гэты дыск можа "
+"палічыцца, нібыта ён утрымлівае фізічны RAID том. У гэтым разе вам належыць "
+"пазначыць кожны патрэбны падзел."
+
+#. Type: boolean
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:21001
+msgid "Mount separate ${FILESYSTEM} partition?"
+msgstr "Замантаваць асобны раздзел ${FILESYSTEM}?"
+
+#. Type: boolean
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:21001
+msgid "The installed system appears to use a separate ${FILESYSTEM} partition."
+msgstr "Выглядае, што ўсталяваная сістэма ўжывае асобны раздзел ${FILESYSTEM}."
+
+#. Type: boolean
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:21001
+msgid ""
+"It is normally a good idea to mount it as it will allow operations such as "
+"reinstalling the boot loader. However, if the file system on ${FILESYSTEM} "
+"is corrupt then you may want to avoid mounting it."
+msgstr ""
+"Звычайна мае сэнс мантаваць яго, таму што гэта дазволіць, напрыклад, "
+"пераставіць загрузчык. Аднак, калі файлавая сістэма на ${FILESYSTEM} "
+"сапсаваная, то магчыма, не трэба мантаваць яго."
 
 #. Type: text
 #. Description
@@ -3087,12 +3346,23 @@ msgstr "Калі ласка, перазагрузітеся з адпаведн�
 msgid "Configure iSCSI volumes"
 msgstr "Наладзіць тамы iSCSI"
 
+#. Type: select
+#. Choices
+#. Note to translators : Please keep your translations of the choices
+#. below a 65 columns limit (which means 65 characters
+#. in single-byte languages)
+#. :sl3:
+#: ../partman-iscsi.templates:2001
+msgid "Log into iSCSI targets"
+msgstr "Падключыць мэты (серверы) iSCSI"
+
 #. #-#-#-#-#  templates.pot (partman-iscsi)  #-#-#-#-#
 #. Type: select
 #. Choices
 #. Note to translators : Please keep your translations of the choices
 #. below a 65 columns limit (which means 65 characters
 #. in single-byte languages)
+#. :sl3:
 #. #-#-#-#-#  templates.pot (mdcfg)  #-#-#-#-#
 #. Type: select
 #. Choices

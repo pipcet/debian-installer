@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-02 22:41+0100\n"
+"POT-Creation-Date: 2019-11-05 23:57+0100\n"
 "PO-Revision-Date: 2012-04-24 13:51+0700\n"
 "Last-Translator: Anousak Souphavanh <anousak@gmail.com>\n"
 "Language-Team: Lao <lo@li.org>\n"
@@ -218,14 +218,16 @@ msgstr "ໂຫຼດອົງປະກອບການຕິດຕັ້ງບໍ
 msgid "Loading ${PACKAGE} failed for unknown reasons. Aborting."
 msgstr "ໂຫຼດ ${PACKAGE} ບໍ່ສຳເລັດໂດຍບໍ່ຮູ້ເຫດຜົນ. ຍົກເລີກ"
 
-#. Type: boolean
+#. Type: error
 #. Description
 #. :sl2:
 #: ../anna.templates:8001
-msgid "Continue the install without loading kernel modules?"
-msgstr "ຈະຕິດຕັ້ງຕໍ່ໄປໂດຍບໍ່ໂຫຼດໂມດຸນຂອງເຄວຣ໌ເນລຫຼືບໍ່?"
+#, fuzzy
+#| msgid "No disk found"
+msgid "No kernel modules found"
+msgstr "ບໍ່ພົບດິດສ໌"
 
-#. Type: boolean
+#. Type: error
 #. Description
 #. :sl2:
 #: ../anna.templates:8001
@@ -237,17 +239,14 @@ msgstr ""
 "ບໍ່ພົບໂມດູນຂອງເຄຣ໌ວເນຣ໌ວ ອາດເປັນເພາະລຸ່ນຂອງເຄຣ໌ວເນຣ໌ວທີ່ໃຊ້ໃນໂປຣແກຣມຕິດຕັ້ງນີ້ "
 "ບໍ່ກົງກັບລຸ່ນຂອງເຄຣ໌ວເນຣ໌ວ ທີ່ມີໃນແພັກເກັດ."
 
-#. Type: boolean
+#. Type: error
 #. Description
 #. :sl2:
 #: ../anna.templates:8001
 msgid ""
-"If you're installing from a mirror, you can work around this problem by "
-"choosing to install a different version of Debian. The install will probably "
-"fail to work if you continue without kernel modules."
+"You should make sure that your installation image is up-to-date, or - if "
+"that's the case - try a different mirror, preferably deb.debian.org."
 msgstr ""
-"ຖ້າເຈົ້າກຳລັງຈະຕິດຕັ້ງຈາກແຫຼ່ງສຳເນົາ ເຈົ້າອາດແກ້ໄຂບັນຫານີ້ຊົ່ວຄາວໂດຍການເລືອກຕິດຕັ້ງເດບຽນລຸ່ນອື່ນ "
-"ການຕິດຕັ້ງອາດຈະບໍ່ສຳເລັດຖ້າເຈົ້າພາຍາຍາມເຮັດຕໍ່ໄປ ໂດຍບໍ່ມີໂມດູນເຄຣ໌ວເນຣ໌ວ."
 
 #. Type: select
 #. Description
@@ -953,6 +952,20 @@ msgstr ""
 "${iface} ໃຊ້ ຖ້າທ່ານຕ້ອງການໃຊ້ເຄືອຂ່າຍໃດກໍ່ໄດ້ທີ່ມີຢູ່ ກໍ່ປ່ອຍຊ່ອງນີ້ໃຫ້ວ່າງໄວ້."
 
 #. Type: select
+#. Choices
+#. :sl2:
+#: ../netcfg-common.templates:8001
+msgid "WEP/Open Network"
+msgstr "WEP/Open Network"
+
+#. Type: select
+#. Choices
+#. :sl2:
+#: ../netcfg-common.templates:8001
+msgid "WPA/WPA2 PSK"
+msgstr "WPA/WPA2 PSK"
+
+#. Type: select
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:8002
@@ -1237,6 +1250,26 @@ msgstr "ເຄືອຂ່າຍ (ເເບບຄວບຄຸມ) ໂຄງຣ�
 msgid "Ad-hoc network (Peer to peer)"
 msgstr "ເຄືອຂ່າຍ ad-hoc (peer to peer)"
 
+#. Type: select
+#. Description
+#. :sl2:
+#: ../netcfg-common.templates:24002
+msgid "Type of wireless network:"
+msgstr "ເຄືອຂ່າຍບໍ່ມີສາຍປະເພດ:"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../netcfg-common.templates:24002
+msgid ""
+"Wireless networks are either managed or ad-hoc. If you use a real access "
+"point of some sort, your network is Managed. If another computer is your "
+"'access point', then your network may be Ad-hoc."
+msgstr ""
+"ເຄືອຂ່າຍບໍ່ມີສາຍແບບ managed ແລະ ແບບ ad-hoc ຖ້າທ່ານໃຊ້ແບບໃດແບບໜຶ່ງ ເຄືອຂ່າຍຂອງທ່ານກໍ່ເປັນແບບ "
+"managed ແຕ່ຖ້າທ່ານໃຊ້ຄອມພິວເຕີອີກເຄື່ອງເປັນ access point' ຂອງທ່ານ "
+"ເຄືອຂ່າຍຂອງທ່ານອາດເປັນແບບ  ad-hoc"
+
 #. Type: text
 #. Description
 #. :sl2:
@@ -1250,6 +1283,13 @@ msgstr "ການຕັ້ງຄ່າເຄືອຂ່າຍໄຮ້ສາຍ
 #: ../netcfg-common.templates:26001
 msgid "Searching for wireless access points..."
 msgstr "ກຳລັງຊອກຫາ access point ໄຮ້ສາຍ..."
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../netcfg-common.templates:29001
+msgid "Detecting link on ${interface}; please wait..."
+msgstr "ກຳລັງກວດຫາຮາດແວຣຕ່າງ ໆ ${interface}; ກະລຸນາລໍຖ້າ...."
 
 #. Type: text
 #. Description
@@ -1718,6 +1758,15 @@ msgstr ""
 "ກາລຸນາເລືອກໂພໂທຄໍ່ສຳລັບດາວໂຫຼດແຟ້ມ ຫາກບໍ່ແນ່ໃຈ ທ່ານຄວນເລືອກ  \"http\" "
 "ເນື່ອງຈາກມີໂອກາດທີ່ມີບັນຫາກັບໄໄຟຣ໌ໜ້ອຍກ່ວາ."
 
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl2:
+#: ../download-installer.templates:1001
+msgid "Download installer components"
+msgstr "ດາວໂຫລດອົງປະກອບການຕິດຕັ້ງ"
+
 #. #-#-#-#-#  templates.pot (net-retriever)  #-#-#-#-#
 #. Type: select
 #. Choices
@@ -1824,6 +1873,99 @@ msgid ""
 msgstr ""
 "ເກີດປັນຫາຕອນອ່ານເຄື່ຶງຖອດສຽບ ກະລູນາກວດສອບວ່າເຈົ້າໃສ່ຖຶກຕ້ອງບໍ່ ຖ້າລອງໄຫມ່ເເລ້ວຍັງບໍ່ໃດ້ "
 "ກໍ່ຫມາຍຄວາມວ່າເຄື່ຶງຖອດສຽບອາດຈະເສຍ."
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:1001
+msgid "Load drivers from removable media now?"
+msgstr "ຈະໂຫລດໄດເວີຈາກສື່ຖອດສຽບຫລືບໍ່?"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:1001
+msgid ""
+"You probably need to load drivers from removable media before continuing "
+"with the installation. If you know that the install will work without extra "
+"drivers, you can skip this step."
+msgstr ""
+"ທ່ານອາດຕ້ອງດາວໂຫລດໄດເວີຈາກສື່ຖອດສຽບກ່ອນທີ່ຈະດຳເນີນການຕິດຕັ້ງຕໍ່ "
+"ຖ້າຫາກວ່າຮູ້ວ່າການຕິດຕັ້ງສາມາດເຮັດໄດ້ໂດຍບໍ່ຕ້ອງມີໄດເວີພິເສດ ທ່ານກໍ່ອາດຂ້າມຂັ້ນຕອນນີ້ໄປໄດ້"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:1001
+msgid ""
+"If you do need to load drivers, insert the appropriate removable media, such "
+"as a driver floppy or USB stick before continuing."
+msgstr ""
+"ຖ້າທ່ານຈຳເປັນຕ້ອງໂຫລດໄດເວີ ກະລຸນາໃສ່ສື່ຖອດສຽບ ເຊັ່ນ ແຜ່ນດິສ ຫລື USB ທີ່ເກັບມ້ຽນໄດເວີ "
+"ກ່ອນທີ່ຈະດຳເນີນການຕໍ່ໄປ "
+
+#. Type: text
+#. Description
+#. main-menu item
+#. Translators: keep below 55 columns
+#. :sl2:
+#: ../load-media.templates:2001
+msgid "Load drivers from removable media"
+msgstr "ໂຫລດໄດເວີຈາກສື່ຖອດສຽບ"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:3001
+msgid "Unknown removable media. Try to load anyway?"
+msgstr "ເຫັນສື່ຖອດສຽບທີ່ບໍ່ຮູ້ຈັກ ຈະອ່ານຫລືບໍ່?"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:3001
+msgid ""
+"Detected removable media that is not a known driver media. Please make sure "
+"that the correct media is inserted. You can still continue if you have an "
+"unofficial removable media you want to use."
+msgstr ""
+"ເຫັນສື່ຖອດສຽບທີ່ບໍ່ແມ່ນສື່ເກັບມ້ຽນໄດເວີທີ່ຮູ້ຈັກ ກະລຸນາກວດສອບວ່າທ່ານໃສ່ສື່ທີ່ຖືກຕ້ອງ "
+"ທ່ານຍັງສາມາດດຳເນີນການຕໍ່ໄປໄດ້ ຖ້າທ່ານມີສື່ທີ່ບໍ່ເປັນທາງການທີ່ຕ້ອງການໃຊ້"
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../load-media.templates:4001
+msgid "Please insert ${DISK_LABEL} ('${DISK_NAME}') first."
+msgstr "ກະລຸນາໃສ່ແຜ່ນ ${DISK_LABEL} ('${DISK_NAME}') ກ່ອນ"
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../load-media.templates:4001
+msgid ""
+"Due to dependencies between packages, drivers must be loaded in the correct "
+"order."
+msgstr "ເນື່ອງຈາກມີຄວາມຂື້ນຕໍ່ກັນລະຫວ່າງແພກເກັດຕ່າງໆ ຈຶ່ງຕ້ອງໂຫລດໄດເວີຕາມລຳດັບທີ່ຖືກຕ້ອງ."
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:5001
+msgid "Load drivers from another removable media?"
+msgstr "ຈະໂຫລດໄດເວີຈາກສື່ຖອດສຽບອື່ນຫລືບໍ່?"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:5001
+msgid ""
+"To load additional drivers from another removable media, please insert the "
+"appropriate removable media, such as a driver floppy or USB stick before "
+"continuing."
+msgstr ""
+"ຖ້າທ່ານຈຳເປັນຕ້ອງໂຫລດໄດເວີຈາກສື່ຖອດສຽບອື່ນຕື່ມ ກະລຸນາໃສ່ສື່ຖອດສຽບ ເຊັ່ນ ແຜ່ນດີສ ຫລື USB  "
+"ທີ່ເກັບມ້ຽນໄດເວີ ກ່ອນທີ່ຈະດຳເນີນການຕໍ່ໄປ"
 
 #. Type: error
 #. Description
@@ -4598,6 +4740,59 @@ msgstr ""
 msgid "Change debconf priority"
 msgstr "ປ່ຽນລະດັບຄວາມສຳຄັນຂອງຖາມ debconf"
 
+#. Type: select
+#. Choices
+#. :sl2:
+#: ../pkgsel.templates:9001
+msgid "No automatic updates"
+msgstr ""
+
+#. Type: select
+#. Choices
+#. :sl2:
+#: ../pkgsel.templates:9001
+msgid "Install security updates automatically"
+msgstr ""
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+msgid "Updates management on this system:"
+msgstr ""
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+msgid ""
+"Applying updates on a frequent basis is an important part of keeping the "
+"system secure."
+msgstr ""
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+msgid ""
+"By default, security updates are not automatically installed, as security "
+"advisories should be reviewed before manual installation of the updates "
+"using standard package management tools."
+msgstr ""
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+msgid ""
+"Alternatively the unattended-upgrades package can be installed, which will "
+"install security updates automatically. Note however that automatic "
+"installation of updates may occasionally cause unexpected downtime of "
+"services provided by this machine in the rare cases where the update is not "
+"fully backward-compatible, or where the security advisory requires the "
+"administrator to perform some other manual operation."
+msgstr ""
+
 #. Type: error
 #. Description
 #. :sl3:
@@ -4845,215 +5040,6 @@ msgstr ""
 #: ../rescue-check.templates:2001
 msgid "Rescue mode"
 msgstr "ໂໝດກູ້ລະຫັດ"
-
-#. Type: select
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:3002
-msgid "Device to use as root file system:"
-msgstr "ອຸປະກອນທີ່ຈະໃຊ້ເປັນລະບົບແຟັມລາກ:"
-
-#. Type: select
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:3002
-msgid ""
-"Enter a device you wish to use as your root file system. You will be able to "
-"choose among various rescue operations to perform on this file system."
-msgstr ""
-"ປອ້ນຊື່ອຸປະກອນທີ່ເຈົ້າຕອ້ງການໃຊ້ເປັນລະບົບແຟັມລາກເຈົ້າສາມາດເລືອກປະຕິບັດການກູ້ລະບົບຈາກຕົວເລືອກຕ່າງໆ "
-"ເພື່ອເຮັດກັບລະບົບແຟັມນີ້ໄດ້ "
-
-#. Type: select
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:3002
-msgid ""
-"If you choose not to use a root file system, you will be given a reduced "
-"choice of operations that can be performed without one. This may be useful "
-"if you need to correct a partitioning problem."
-msgstr ""
-"ຖ້າເຈົ້າເລືອກທີ່ຈະບໍ່ໃຊ້ລະບົບແຟັມລາກ "
-"ຈະຕັດຕົວເລືອກການກະທຳລົງເຫຼືອສະເພາະລາຍການທີ່ບໍ່ຕອ້ງໃຊ້ລະບົບແຟັມລາກເທົ່ານັ້ນ "
-"ຊື່ງອາດເປັນປະໂຫຍດຖ້າເຈົ້າຕອ້ງການແກ້ປັນຫາການແບ່ງພາທິຊັນ  "
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:8001
-msgid "Execute a shell in ${DEVICE}"
-msgstr "ເປີດເຊວໃນ ${DEVICE}"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:9001
-msgid "Execute a shell in the installer environment"
-msgstr "ເປີດເຊວພາຍໃຕ້ສະພາບແວດລອ້ມຂອງໂປແກຣັມຕິດຕັ້ງ"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:10001
-msgid "Choose a different root file system"
-msgstr "ເລືອກລະບົບແຟັມລາກອື່ນ"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:11001
-msgid "Reboot the system"
-msgstr "ເລີ່ມບູດລະບົບໃໝ່"
-
-#. Type: text
-#. Description
-#. :sl2:
-#. Type: text
-#. Description
-#. :sl2:
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:12001 ../rescue-mode.templates:16001
-#: ../rescue-mode.templates:17001
-msgid "Executing a shell"
-msgstr "ກຳລັງເອີ້ນເຊວ"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:12001
-msgid ""
-"After this message, you will be given a shell with ${DEVICE} mounted on \"/"
-"\". If you need any other file systems (such as a separate \"/usr\"), you "
-"will have to mount those yourself."
-msgstr ""
-"ຫຼັງຈາກຂໍ້ຄວາມນີ້ ເຈົ້າຈະເຂົ້າສູ່ເຊວໂດຍມີການເມົາ ${DEVICE} ເຂົ້າກັບ \"/\" "
-"ຖ້າເຈົ້າຕອ້ງການເຂົ້າສູ່ລະບົບແຟັມອື່ນໆ (ເຊັ່ນ \"/usr\"ທີ່ເຮັດແຍກໄວ້ຕ່າງຫາກ) ດວ້ຍ "
-"ເຈົ້າຕອ້ງເມົາອຸປະກອນຕ່າງໆ ເຫຼົ່ານັ້ນເອງ "
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:15001
-msgid "Interactive shell on ${DEVICE}"
-msgstr "ເປີດເຊວໂຕ້ຕອບໃນ ${DEVICE}"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:16001
-msgid ""
-"After this message, you will be given a shell with ${DEVICE} mounted on \"/"
-"target\". You may work on it using the tools available in the installer "
-"environment. If you want to make it your root file system temporarily, run "
-"\"chroot /target\". If you need any other file systems (such as a separate "
-"\"/usr\"), you will have to mount those yourself."
-msgstr ""
-"ຫຼັງຈາກຂໍ້ຄວາມນີ້ເຈົ້າຈະເຂົ້າສູ່ເຊວໂດຍມີການເມົາ${DEVICE} ເຂົ້າກັບ \"/target\" "
-"ເຈົ້າສາມາດເຮັດວຽກໃນລະບົບແຟັມດັ່ງກ່າວໄດ້ ໂດຍໃຊ້ເຄື່ອງມືທີ່ມີໃນລະບົບຕິດຕັ້ງ "
-"ຖ້າເຈົ້າຕອ້ງການເຮັດໃຫ້ລະບົບແຟັມດັ່ງກ່າວກາຍເປັນລະບົບແຟັມລາກຊົ່ວຄາວ ກໍເອີ້ນຄຳສັ່ງ \"chroot /target"
-"\" ຖ້າເຈົ້າຕອ້ງການໃຊ້ລະບົບແຟັມອື່ນໆ (ເຊັ່ນ \"/usr\" ທີ່ແຍກຕ່າງຫາກໄວ້) ດວ້ຍ "
-"ເຈົ້າຕອ້ງການເມົາອຸປະກອນຕ່າງໆ ເຫຼົ່ານັ້ນເອງ "
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:17001
-msgid ""
-"After this message, you will be given a shell in the installer environment. "
-"No file systems have been mounted."
-msgstr ""
-"ຫຼັງຈາກຂໍ້ຄວາມນີ້ເຈົ້າຈະເຂົ້າສູ່ເຊວພາຍໃຕ້ສະພາບແວດລອ້ມຂອງໂປແກຣັມຕິດຕັ້ງ ໂດຍບໍ່ມີການເມົາລະບົບແຟັມໃດໆ "
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:18001
-msgid "Interactive shell in the installer environment"
-msgstr "ເປີດເຊວໂຕ້ຕອບພາຍໃຕ້ສະພາບແວດລອ້ມຂອງໂປແກຣັມຕິດຕັ້ງ"
-
-#. Type: password
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:19001
-msgid "Passphrase for ${DEVICE}:"
-msgstr "ວະລີລະຫັດຜ່ານສຳລັບ ${DEVICE}:"
-
-#. Type: password
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:19001
-msgid "Please enter the passphrase for the encrypted volume ${DEVICE}."
-msgstr "ກະລຸນາຕັ້ງວະລີລະຫັດຜ່ານສຳລັບເຂົ້າລະຫັດລັບໂວລຸມ ${DEVICE}"
-
-#. Type: password
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:19001
-msgid ""
-"If you don't enter anything, the volume will not be available during rescue "
-"operations."
-msgstr "ຖ້າເຈົ້າບໍ່ປອ້ນຫຍັງເລີຍ ຈະໃຊ້ໂວລຸມນີ້ຂະນະກູ້ລະບົບ"
-
-#. Type: multiselect
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:20002
-msgid "Partitions to assemble:"
-msgstr "ພາທິຊັນທີ່ປະກອບສ້າງ:"
-
-#. Type: multiselect
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:20002
-msgid ""
-"Select the partitions to assemble into a RAID array. If you select "
-"\"Automatic\", then all devices containing RAID physical volumes will be "
-"scanned and assembled."
-msgstr ""
-"ເລືອກພາທິຊັ້ນທີ່ປະກອບສ້າງເປັນອາເລ RAID  ຖ້າເຈົ້າເລືອກ \"ອັດຕະໂນມັດ\" "
-"ກໍຈະກວດຫາອຸປະກອນທັງໝົດທີ່ມີໂວລຸມແທ້ຂອງ RAID ມາປະກອບສ້າງ"
-
-#. Type: multiselect
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:20002
-msgid ""
-"Note that a RAID partition at the end of a disk may sometimes cause that "
-"disk to be mistakenly detected as containing a RAID physical volume. In that "
-"case, you should select the appropriate partitions individually."
-msgstr ""
-"ລະວັງບາງຄັ້ງບາງທິຊັນ RAID ບາງທີອາດຈະເຮັດໃຫ້ດິດນັ້ນ ຖືກກວດພົບວ່າເປັນໂວລຸມແທ້ຂອງ  RAID "
-"ທັງທີ່ບໍ່ແມ່ນໃນກໍລະນີດັ່ງກ່າວ ເຈົ້າຄວນເລືອກພາທິຊັນຕ່າງໆ ທີ່ເໝາະສົມທີ່ພາທິຊັນເອົາ"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:21001
-#, fuzzy
-#| msgid "Separate /home partition"
-msgid "Mount separate ${FILESYSTEM} partition?"
-msgstr "ແຍກພາທິຊັນ /home"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:21001
-#, fuzzy
-#| msgid "Install the kernel on a PReP boot partition"
-msgid "The installed system appears to use a separate ${FILESYSTEM} partition."
-msgstr "ຕິດຕັ້ງເຄີເນວໃນພາທິຊັ້ນບູດແບບ PReP"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:21001
-msgid ""
-"It is normally a good idea to mount it as it will allow operations such as "
-"reinstalling the boot loader. However, if the file system on ${FILESYSTEM} "
-"is corrupt then you may want to avoid mounting it."
-msgstr ""
 
 #. Type: text
 #. Description

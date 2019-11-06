@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lv\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-02 22:41+0100\n"
+"POT-Creation-Date: 2019-11-05 23:57+0100\n"
 "PO-Revision-Date: 2019-10-08 08:56+0000\n"
 "Last-Translator: Tranzistors <rudolfs.mazurs@gmail.com>\n"
 "Language-Team: Latvian <locale-l10n@googlegroups.com>\n"
@@ -238,14 +238,16 @@ msgid "Loading ${PACKAGE} failed for unknown reasons. Aborting."
 msgstr ""
 "Moduļa ${PACKAGE} ielāde nezināmu iemeslu dēļ nav izdevusies. Pārtrauc darbu."
 
-#. Type: boolean
+#. Type: error
 #. Description
 #. :sl2:
 #: ../anna.templates:8001
-msgid "Continue the install without loading kernel modules?"
-msgstr "Turpināt instalēšanu, neielādējot kodola moduļus?"
+#, fuzzy
+#| msgid "No logical volume found"
+msgid "No kernel modules found"
+msgstr "Loģiskie sējumi nav atrasti"
 
-#. Type: boolean
+#. Type: error
 #. Description
 #. :sl2:
 #: ../anna.templates:8001
@@ -257,18 +259,14 @@ msgstr ""
 "Kodola moduļi nav atrasti. Iespējamais iemesls ir instalatora izmantotās un "
 "arhīvā pieejamās kodola versiju nesakritība."
 
-#. Type: boolean
+#. Type: error
 #. Description
 #. :sl2:
 #: ../anna.templates:8001
 msgid ""
-"If you're installing from a mirror, you can work around this problem by "
-"choosing to install a different version of Debian. The install will probably "
-"fail to work if you continue without kernel modules."
+"You should make sure that your installation image is up-to-date, or - if "
+"that's the case - try a different mirror, preferably deb.debian.org."
 msgstr ""
-"Ja instalējat no spoguļservera, jūs šo problēmu varat apiet, izvēloties "
-"instalēt citu Debian versiju. Ja turpināsiet bez kodola moduļiem, "
-"instalēšana visdrīzāk nebūs sekmīga."
 
 #. Type: select
 #. Description
@@ -1001,6 +999,20 @@ msgstr ""
 "tīklu, atstājiet šo lauku tukšu."
 
 #. Type: select
+#. Choices
+#. :sl2:
+#: ../netcfg-common.templates:8001
+msgid "WEP/Open Network"
+msgstr "WEP / atvērts tīkls"
+
+#. Type: select
+#. Choices
+#. :sl2:
+#: ../netcfg-common.templates:8001
+msgid "WPA/WPA2 PSK"
+msgstr "WPA/WPA2 PSK"
+
+#. Type: select
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:8002
@@ -1295,6 +1307,26 @@ msgstr "Infrastruktūras (pārvaldīts) tīkls"
 msgid "Ad-hoc network (Peer to peer)"
 msgstr "Ad-hoc (vienādranga) tīkls"
 
+#. Type: select
+#. Description
+#. :sl2:
+#: ../netcfg-common.templates:24002
+msgid "Type of wireless network:"
+msgstr "Bezvadu tīkla veids:"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../netcfg-common.templates:24002
+msgid ""
+"Wireless networks are either managed or ad-hoc. If you use a real access "
+"point of some sort, your network is Managed. If another computer is your "
+"'access point', then your network may be Ad-hoc."
+msgstr ""
+"Bezvadu tīkli ir vai nu pārvaldītie, vai arī ad-hoc tipa. Ja izmantojat īstu "
+"pieejas punktu, jūsu tīkla tips ir 'pārvaldīts'. Ja kāds cits dators kalpo "
+"par jūsu pieejas punktu, tad tīkla tips varētu būt ad-hoc."
+
 #. Type: text
 #. Description
 #. :sl2:
@@ -1308,6 +1340,13 @@ msgstr "Bezvadu tīkla konfigurēšana"
 #: ../netcfg-common.templates:26001
 msgid "Searching for wireless access points..."
 msgstr "Meklē bezvadu tīkla piekļuves punktus..."
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../netcfg-common.templates:29001
+msgid "Detecting link on ${interface}; please wait..."
+msgstr "Meklē saiti uz ${interface}. Lūdzu, uzgaidiet..."
 
 #. Type: text
 #. Description
@@ -1785,6 +1824,15 @@ msgstr ""
 "Lūdzu, izvēlieties lejupielādes protokolu. Ja neesat pārliecināts, "
 "izvēlieties \"http\" - šim protokolam ir mazāk problēmu ar ugunsmūriem."
 
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl2:
+#: ../download-installer.templates:1001
+msgid "Download installer components"
+msgstr "Lejupielādēt instalatora komponentes"
+
 #. #-#-#-#-#  templates.pot (net-retriever)  #-#-#-#-#
 #. Type: select
 #. Choices
@@ -1893,6 +1941,102 @@ msgstr ""
 "Notika kļūme, mēģinot nolasīt datus no datu nesēja. Lūdzu, pārliecinieties "
 "vai ir ievietots pareizais datu nesējs. Iespējams, ka šīs datu nesējs ir "
 "bojāts."
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:1001
+msgid "Load drivers from removable media now?"
+msgstr "Ielādēt draiverus no izņemamā datu nesēja?"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:1001
+msgid ""
+"You probably need to load drivers from removable media before continuing "
+"with the installation. If you know that the install will work without extra "
+"drivers, you can skip this step."
+msgstr ""
+"Visticamāk, būs jāielādē draiveri no datu nesēja, pirms varēsiet turpināt "
+"instalāciju. Ja zināt, ka instalāciju var turpināt bez papildu draiveriem, "
+"varat izlaist šo soli."
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:1001
+msgid ""
+"If you do need to load drivers, insert the appropriate removable media, such "
+"as a driver floppy or USB stick before continuing."
+msgstr ""
+"Ja ir jāielādē draiveri, ievietojiet attiecīgo draiveru datu nesēju, pirms "
+"turpināt."
+
+#. Type: text
+#. Description
+#. main-menu item
+#. Translators: keep below 55 columns
+#. :sl2:
+#: ../load-media.templates:2001
+msgid "Load drivers from removable media"
+msgstr "Ielādēt draiverus no izņemamā datu nesēja"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:3001
+msgid "Unknown removable media. Try to load anyway?"
+msgstr "Nezināms izņemamais datu nesējs. Tomēr mēģināt ielādēt?"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:3001
+msgid ""
+"Detected removable media that is not a known driver media. Please make sure "
+"that the correct media is inserted. You can still continue if you have an "
+"unofficial removable media you want to use."
+msgstr ""
+"Atrastais izņemamais datu nesējs nav draiveru datu nesēju sarakstā. Lūdzu "
+"pārliecinieties, ka ir ievietots pareizais datu nesējs. Jūs varat turpināt, "
+"ja šis ir neoficiāls datu nesējs."
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../load-media.templates:4001
+msgid "Please insert ${DISK_LABEL} ('${DISK_NAME}') first."
+msgstr "Lūdzu, vispirms ielieciet ${DISK_LABEL} ('${DISK_NAME}')."
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../load-media.templates:4001
+msgid ""
+"Due to dependencies between packages, drivers must be loaded in the correct "
+"order."
+msgstr ""
+"Draiveru datu nesēji ir jāielādē pareizā secībā savstarpējo atkarību dēļ."
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:5001
+msgid "Load drivers from another removable media?"
+msgstr "Ielādēt vēl draiverus no cita datu nesēja?"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:5001
+msgid ""
+"To load additional drivers from another removable media, please insert the "
+"appropriate removable media, such as a driver floppy or USB stick before "
+"continuing."
+msgstr ""
+"Ja ir jāielādē papildu draiveri, ievietojiet attiecīgo datu nesēju, pirms "
+"turpināt."
 
 #. Type: error
 #. Description
@@ -4749,6 +4893,70 @@ msgstr ""
 msgid "Change debconf priority"
 msgstr "Mainīt debconf prioritāti"
 
+#. Type: select
+#. Choices
+#. :sl2:
+#: ../pkgsel.templates:9001
+msgid "No automatic updates"
+msgstr "Bez automātiskajiem atjauninājumiem"
+
+#. Type: select
+#. Choices
+#. :sl2:
+#: ../pkgsel.templates:9001
+msgid "Install security updates automatically"
+msgstr "Instalēt drošības atjauninājumus automātiski"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+msgid "Updates management on this system:"
+msgstr "Atjaunina pārvaldību uz šīs sistēmas:"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+msgid ""
+"Applying updates on a frequent basis is an important part of keeping the "
+"system secure."
+msgstr ""
+"Bieža atjauninājumu uzlikšana ir svarīga sistēmas drošības nodrošināšanas "
+"daļa."
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+msgid ""
+"By default, security updates are not automatically installed, as security "
+"advisories should be reviewed before manual installation of the updates "
+"using standard package management tools."
+msgstr ""
+"Pēc noklusējuma drošības atjauninājumi netiek instalēti, jo drošības "
+"ieteikumus vajadzētu pārskatīt pirms manuālas atjauninājumu instalēšanas, "
+"izmantojot standarta pakotņu pārvaldības rīkus."
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+msgid ""
+"Alternatively the unattended-upgrades package can be installed, which will "
+"install security updates automatically. Note however that automatic "
+"installation of updates may occasionally cause unexpected downtime of "
+"services provided by this machine in the rare cases where the update is not "
+"fully backward-compatible, or where the security advisory requires the "
+"administrator to perform some other manual operation."
+msgstr ""
+"Var arī uzinstalēt pakotni unattended-upgrades, kas automātiski instalēs "
+"drošības atjauninājumus. Ņemiet vērā, ka automātiska atjauninājumu "
+"instalēšana var izraisīt negaidītu dīkstāvi pakalpojumiem, kurus nodrošina "
+"šis dators, tajos retajos gadījumos, kad atjauninājumi nav pilnībā "
+"atpakaļsaderīgi, vai kad drošības ieteikumi pieprasa administratoram veikt "
+"kādas manuālas darbības."
+
 #. Type: error
 #. Description
 #. :sl3:
@@ -5008,219 +5216,6 @@ msgstr ""
 #: ../rescue-check.templates:2001
 msgid "Rescue mode"
 msgstr "Glābšanas režīms"
-
-#. Type: select
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:3002
-msgid "Device to use as root file system:"
-msgstr "Ierīce, kuru izmantot saknes datņu sistēmai:"
-
-#. Type: select
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:3002
-msgid ""
-"Enter a device you wish to use as your root file system. You will be able to "
-"choose among various rescue operations to perform on this file system."
-msgstr ""
-"Ievadiet ierīci, ko vēlaties lietot kā savas sistēmas saknes datņu sistēmu. "
-"Jums tiks piedāvātas vairākas glābšanas darbības, ko jūs varēsiet veikt ar "
-"šo datņu sistēmu."
-
-#. Type: select
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:3002
-msgid ""
-"If you choose not to use a root file system, you will be given a reduced "
-"choice of operations that can be performed without one. This may be useful "
-"if you need to correct a partitioning problem."
-msgstr ""
-"Izvēloties nelietot saknes datņu sistēmu, jums tiks dota pieeja ierobežotam "
-"darbību sarakstam, ko var veikt bez datņu sistēmas. Tas varbūt noderīgi "
-"nodalījumu veidošanas problēmu novēršanai."
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:8001
-msgid "Execute a shell in ${DEVICE}"
-msgstr "Palaiž čaulu uz ${DEVICE}"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:9001
-msgid "Execute a shell in the installer environment"
-msgstr "Palaist komandrindu instalatora vidē"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:10001
-msgid "Choose a different root file system"
-msgstr "Izvēlēties citu saknes datņu sistēmu"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:11001
-msgid "Reboot the system"
-msgstr "Pārstartēt sistēmu"
-
-#. Type: text
-#. Description
-#. :sl2:
-#. Type: text
-#. Description
-#. :sl2:
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:12001 ../rescue-mode.templates:16001
-#: ../rescue-mode.templates:17001
-msgid "Executing a shell"
-msgstr "Palaiž čaulu"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:12001
-msgid ""
-"After this message, you will be given a shell with ${DEVICE} mounted on \"/"
-"\". If you need any other file systems (such as a separate \"/usr\"), you "
-"will have to mount those yourself."
-msgstr ""
-"Pēc šī ziņojuma, ja datņu sistēma ${DEVICE} būs piemontēta sekmīgi, jums "
-"tiks piedāvāta čaula šajā datņu sistēmā. Ja jums ir nepieciešamas vēl kādas "
-"datņu sistēmas (piemēram, atsevišķa \"/usr\"), tās būs jāpiemontē manuāli."
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:15001
-msgid "Interactive shell on ${DEVICE}"
-msgstr "Komandrinda uz ${DEVICE}"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:16001
-msgid ""
-"After this message, you will be given a shell with ${DEVICE} mounted on \"/"
-"target\". You may work on it using the tools available in the installer "
-"environment. If you want to make it your root file system temporarily, run "
-"\"chroot /target\". If you need any other file systems (such as a separate "
-"\"/usr\"), you will have to mount those yourself."
-msgstr ""
-"Pēc šī ziņojuma, ja datņu sistēma ${DEVICE} būs piemontēta sekmīgi, jums "
-"tiks piedāvāta čaula ar šo datņu sistēmu piemontētu kā \"/target\". Jūs "
-"varat darboties uz tās ar rīkiem no instalatora vides. Ja vēlaties īslaicīgi "
-"padarīt to par jūsu čaulas saknes datņu sistēmu, izmantojiet komandu "
-"\"chroot /target\". Ja jums ir nepieciešamas citas datņu sistēmas (piemēram, "
-"atsevišķa \"/usr\"), tās būs jāpiemontē manuāli."
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:17001
-msgid ""
-"After this message, you will be given a shell in the installer environment. "
-"No file systems have been mounted."
-msgstr ""
-"Pēc šī ziņojuma jums tiks piedāvāta komandrinda instalatora vidē. Nekādas "
-"datņu sistēmas nav piemontētas."
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:18001
-msgid "Interactive shell in the installer environment"
-msgstr "Palaist komandrindu instalatora vidē"
-
-#. Type: password
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:19001
-msgid "Passphrase for ${DEVICE}:"
-msgstr "Parole sējumam ${DEVICE}:"
-
-#. Type: password
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:19001
-msgid "Please enter the passphrase for the encrypted volume ${DEVICE}."
-msgstr "Lūdzu, ievadiet paroli šifrētajam sējumam ${DEVICE}."
-
-#. Type: password
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:19001
-msgid ""
-"If you don't enter anything, the volume will not be available during rescue "
-"operations."
-msgstr "Ja atstāsiet šo tukšu, sējums nebūs pieejams glābšanas darbu laikā."
-
-#. Type: multiselect
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:20002
-msgid "Partitions to assemble:"
-msgstr "Saliekamie nodalījumi:"
-
-#. Type: multiselect
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:20002
-msgid ""
-"Select the partitions to assemble into a RAID array. If you select "
-"\"Automatic\", then all devices containing RAID physical volumes will be "
-"scanned and assembled."
-msgstr ""
-"Nodalījumu izvēle RAID masīva salikšanai. Izvēloties \"Automātiski\" visas "
-"ierīces ar RAID fiziskajiem sējumiem tiks noskanētas un saliktas kopā."
-
-#. Type: multiselect
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:20002
-msgid ""
-"Note that a RAID partition at the end of a disk may sometimes cause that "
-"disk to be mistakenly detected as containing a RAID physical volume. In that "
-"case, you should select the appropriate partitions individually."
-msgstr ""
-"Jāņem vērā, ka ja RAID nodalījums atrodas diska beigās, tad tas var izraisīt "
-"nepareizu šī diska noteikšanu kā RAID fiziskos sējumu saturošu. Šādā "
-"gadījumā ir manuāli jāizvēlas atbilstošie nodalījumi."
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:21001
-msgid "Mount separate ${FILESYSTEM} partition?"
-msgstr "Montēt atsevišķu ${FILESYSTEM} nodalījumu?"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:21001
-msgid "The installed system appears to use a separate ${FILESYSTEM} partition."
-msgstr ""
-"Izskatās, ka instalētā sistēma izmanto atsevišķu ${FILESYSTEM} nodalījumu."
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:21001
-msgid ""
-"It is normally a good idea to mount it as it will allow operations such as "
-"reinstalling the boot loader. However, if the file system on ${FILESYSTEM} "
-"is corrupt then you may want to avoid mounting it."
-msgstr ""
-"Parasti tā ir laba doma to montēt, jo tas ļauj veikt tādas darbības, kā "
-"palaidēja pārinstalēšanu. Bet datņu sistēma uz ${FILESYSTEM} ir bojāta un "
-"jūs varētu vēlēties to nemontēt."
 
 #. Type: text
 #. Description

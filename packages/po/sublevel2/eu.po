@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eu\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-02 22:41+0100\n"
+"POT-Creation-Date: 2019-11-05 23:57+0100\n"
 "PO-Revision-Date: 2019-08-28 18:10+0000\n"
 "Last-Translator: leela <53352@protonmail.com>\n"
 "Language-Team: Basque <debian-l10n-eu@lists.debian.org>\n"
@@ -236,14 +236,16 @@ msgstr ""
 "Ezin izan da ${PACKAGE} kargatu arrazoi ezezagunengatik. Bertan behera "
 "utziko da."
 
-#. Type: boolean
+#. Type: error
 #. Description
 #. :sl2:
 #: ../anna.templates:8001
-msgid "Continue the install without loading kernel modules?"
-msgstr "Instalatzen jarraitu nahi duzu nukleo moduluak kargatu gabe?"
+#, fuzzy
+#| msgid "No disk found"
+msgid "No kernel modules found"
+msgstr "Ez da diskorik aurkitu"
 
-#. Type: boolean
+#. Type: error
 #. Description
 #. :sl2:
 #: ../anna.templates:8001
@@ -256,18 +258,14 @@ msgstr ""
 "erabilitako nukleoa eta fitxategian erabilgarri dagoen nukleoaren bertsioa "
 "bat ez datozelako izango da ziurrenik."
 
-#. Type: boolean
+#. Type: error
 #. Description
 #. :sl2:
 #: ../anna.templates:8001
 msgid ""
-"If you're installing from a mirror, you can work around this problem by "
-"choosing to install a different version of Debian. The install will probably "
-"fail to work if you continue without kernel modules."
+"You should make sure that your installation image is up-to-date, or - if "
+"that's the case - try a different mirror, preferably deb.debian.org."
 msgstr ""
-"Ispilu batetik instalatzen ari bazara, arazo horri ekiteko Debian-en beste "
-"bertsio bat instalatzea hauta dezakezu. Instalazioak ziurrenik ez du "
-"funtzionatuko nukleoaren modulurik gabe jarraitzen baduzu."
 
 #. Type: select
 #. Description
@@ -1007,6 +1005,20 @@ msgstr ""
 "dagoen edozein sare erabili nahi baduzu, utzi hutsik eremu hau."
 
 #. Type: select
+#. Choices
+#. :sl2:
+#: ../netcfg-common.templates:8001
+msgid "WEP/Open Network"
+msgstr "WEP/Sare irekia"
+
+#. Type: select
+#. Choices
+#. :sl2:
+#: ../netcfg-common.templates:8001
+msgid "WPA/WPA2 PSK"
+msgstr "WPA/WPA2 PSK"
+
+#. Type: select
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:8002
@@ -1300,6 +1312,26 @@ msgstr "Azpiegitura sarea (kudeatua)"
 msgid "Ad-hoc network (Peer to peer)"
 msgstr "Ad-hoc sarea (pareko artekoa)"
 
+#. Type: select
+#. Description
+#. :sl2:
+#: ../netcfg-common.templates:24002
+msgid "Type of wireless network:"
+msgstr "Haririk gabeko sare mota:"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../netcfg-common.templates:24002
+msgid ""
+"Wireless networks are either managed or ad-hoc. If you use a real access "
+"point of some sort, your network is Managed. If another computer is your "
+"'access point', then your network may be Ad-hoc."
+msgstr ""
+"Haririk gabeko sareak kudeatuak edo ad-hoc dira. Nolabaiteko sarbide-puntu "
+"erreala erabiltzen baduzu, sarea kudeatua da. 'Sarbide-puntua' beste "
+"ordenagailu bat bada, orduan sarea Ad-hoc izango da."
+
 #. Type: text
 #. Description
 #. :sl2:
@@ -1313,6 +1345,13 @@ msgstr "Haririk gabeko sarearen konfigurazioa"
 #: ../netcfg-common.templates:26001
 msgid "Searching for wireless access points..."
 msgstr "Haririk gabeko sarbide-puntuak bilatzen..."
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../netcfg-common.templates:29001
+msgid "Detecting link on ${interface}; please wait..."
+msgstr "${interface}-ko lotura antzematen; itxoin mesedez..."
 
 #. Type: text
 #. Description
@@ -1792,6 +1831,15 @@ msgstr ""
 "Hautatu fitxategiak deskargatzeko protokoloa. Ziur ez bazaude, hautatu \"http"
 "\"; suebakien arazoak edukitzeko aukera gutxiago dago."
 
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl2:
+#: ../download-installer.templates:1001
+msgid "Download installer components"
+msgstr "Deskargatu instalatzailearen osagaiak"
+
 #. #-#-#-#-#  templates.pot (net-retriever)  #-#-#-#-#
 #. Type: select
 #. Choices
@@ -1902,6 +1950,104 @@ msgstr ""
 "Arazoa gertatu da euskarri aldagarritik datuak irakurtzean. Ziurtatu "
 "euskarri egokia dagoela unitatean. Arazoak jarraitzen badu, baliteke "
 "euskarria hondatuta egotea."
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:1001
+msgid "Load drivers from removable media now?"
+msgstr "Kargatu orain kontrolatzaileak euskarri aldagarritik?"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:1001
+msgid ""
+"You probably need to load drivers from removable media before continuing "
+"with the installation. If you know that the install will work without extra "
+"drivers, you can skip this step."
+msgstr ""
+"Ziurrenik kontrolatzaileak kargatu beharko dituzu instalazioarekin jarraitu "
+"baino lehen. Instalazioak kontrolatzaile osagarririk gabe funtzionatuko "
+"duela baldin badakizu, urrats hau salta dezakezu."
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:1001
+msgid ""
+"If you do need to load drivers, insert the appropriate removable media, such "
+"as a driver floppy or USB stick before continuing."
+msgstr ""
+"Kontrolatzaileak kargatu behar badituzu, jarraitu baino lehen sartu "
+"kontrolatzailea duen diskete edo usb-arkatza bezalako euskarri aldagarri "
+"egokia."
+
+#. Type: text
+#. Description
+#. main-menu item
+#. Translators: keep below 55 columns
+#. :sl2:
+#: ../load-media.templates:2001
+msgid "Load drivers from removable media"
+msgstr "Kargatu kontrolatzaileak euskarri aldagarritik"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:3001
+msgid "Unknown removable media. Try to load anyway?"
+msgstr "Euskarri aldagarri ezezaguna. Hala ere kargatzen saiatu?"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:3001
+msgid ""
+"Detected removable media that is not a known driver media. Please make sure "
+"that the correct media is inserted. You can still continue if you have an "
+"unofficial removable media you want to use."
+msgstr ""
+"Kontrolatzaile euskarri bezala ezagutzen ez den euskarri aldagarri bat "
+"atzeman da. Ziurtatu euskarri egokia dagoela unitatean. Ofiziala ez den "
+"kontrolatzaile euskarri bat baduzu aurrera jarraitu dezakezu."
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../load-media.templates:4001
+msgid "Please insert ${DISK_LABEL} ('${DISK_NAME}') first."
+msgstr "Sartu ${DISK_LABEL} ('${DISK_NAME}') lehendabizi."
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../load-media.templates:4001
+msgid ""
+"Due to dependencies between packages, drivers must be loaded in the correct "
+"order."
+msgstr ""
+"Paketeen arteko dependentziak direla eta, kontrolatzaileen kontrolatzaileak "
+"ordena jakin batetan kargatu behar dira."
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:5001
+msgid "Load drivers from another removable media?"
+msgstr "Kargatu kontrolatzaileak euskarri aldagarritik?"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:5001
+msgid ""
+"To load additional drivers from another removable media, please insert the "
+"appropriate removable media, such as a driver floppy or USB stick before "
+"continuing."
+msgstr ""
+"Kontrolatzaile gehigarriak beste euskarri aldagarri batetik kargatzeko, "
+"sartu kontrolatzaileen euskarri aldagarria jarraitu aurretik."
 
 #. Type: error
 #. Description
@@ -4798,6 +4944,59 @@ msgstr ""
 msgid "Change debconf priority"
 msgstr "Aldatu debconf-en lehentasuna"
 
+#. Type: select
+#. Choices
+#. :sl2:
+#: ../pkgsel.templates:9001
+msgid "No automatic updates"
+msgstr ""
+
+#. Type: select
+#. Choices
+#. :sl2:
+#: ../pkgsel.templates:9001
+msgid "Install security updates automatically"
+msgstr ""
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+msgid "Updates management on this system:"
+msgstr ""
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+msgid ""
+"Applying updates on a frequent basis is an important part of keeping the "
+"system secure."
+msgstr ""
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+msgid ""
+"By default, security updates are not automatically installed, as security "
+"advisories should be reviewed before manual installation of the updates "
+"using standard package management tools."
+msgstr ""
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+msgid ""
+"Alternatively the unattended-upgrades package can be installed, which will "
+"install security updates automatically. Note however that automatic "
+"installation of updates may occasionally cause unexpected downtime of "
+"services provided by this machine in the rare cases where the update is not "
+"fully backward-compatible, or where the security advisory requires the "
+"administrator to perform some other manual operation."
+msgstr ""
+
 #. Type: error
 #. Description
 #. :sl3:
@@ -5054,232 +5253,6 @@ msgstr ""
 #: ../rescue-check.templates:2001
 msgid "Rescue mode"
 msgstr "Berreskuratze modua"
-
-#. Type: select
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:3002
-msgid "Device to use as root file system:"
-msgstr "Gailua (erroko fitxategi-sistema gisa erabiltzeko):"
-
-#. Type: select
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:3002
-msgid ""
-"Enter a device you wish to use as your root file system. You will be able to "
-"choose among various rescue operations to perform on this file system."
-msgstr ""
-"Idatzi erroko fitxategi-sistema gisa erabili nahi duzun gailua. Fitxategi-"
-"sistema horretan egin daitezkeen berreskuratze ekintza desberdinen artean "
-"hautatu ahal izango duzu."
-
-#. Type: select
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:3002
-msgid ""
-"If you choose not to use a root file system, you will be given a reduced "
-"choice of operations that can be performed without one. This may be useful "
-"if you need to correct a partitioning problem."
-msgstr ""
-"Erro fitxategi sistema ez erabiltzea hautatzen baduzu, hau gabe aurrera "
-"eraman daitezken ekintzen aukera murriztu bat emango zaizu. Hau erabilgarri "
-"izan daiteke partizio arazo bat konpontzeko."
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:8001
-msgid "Execute a shell in ${DEVICE}"
-msgstr "Exekutatu shell-a ${DEVICE}(e)n"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:9001
-msgid "Execute a shell in the installer environment"
-msgstr "Exekutatu shell bat instalatzailearen ingurunean"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:10001
-msgid "Choose a different root file system"
-msgstr "Aukeratu beste erroko fitxategi-sistema"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:11001
-msgid "Reboot the system"
-msgstr "Berrabiarazi sistema"
-
-#. Type: text
-#. Description
-#. :sl2:
-#. Type: text
-#. Description
-#. :sl2:
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:12001 ../rescue-mode.templates:16001
-#: ../rescue-mode.templates:17001
-msgid "Executing a shell"
-msgstr "Exekutatu shell-a"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:12001
-msgid ""
-"After this message, you will be given a shell with ${DEVICE} mounted on \"/"
-"\". If you need any other file systems (such as a separate \"/usr\"), you "
-"will have to mount those yourself."
-msgstr ""
-"Mezu honen ondoren,  ${DEVICE} fitxategi-sistema \"/\"-an muntatua duen "
-"shell bat izango duzu. Beste edozein fitxategi-sistema (berezitutako \"/usr"
-"\" adib.) behar izanez gero, eskuz muntatu beharko duzu."
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:15001
-msgid "Interactive shell on ${DEVICE}"
-msgstr "Exekutatu shell interaktiboa ${DEVICE}(e)n"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:16001
-msgid ""
-"After this message, you will be given a shell with ${DEVICE} mounted on \"/"
-"target\". You may work on it using the tools available in the installer "
-"environment. If you want to make it your root file system temporarily, run "
-"\"chroot /target\". If you need any other file systems (such as a separate "
-"\"/usr\"), you will have to mount those yourself."
-msgstr ""
-"Mezu honen ondoren, ${DEVICE} fitxategi-sistema \"/target\"-en muntatua duen "
-"shell bat izango duzu. Bertan instalatzailearen ingurunean erabilgarri "
-"dauden tresnekin lan egin ahal izango duzu. Berau aldi batetarako erroko "
-"fitxategi-sistema egin nahi izanez gero \"chroot /target\" exekutatu. Beste "
-"edozein fitxategi-sistema (berezitutako \"/usr\" adib.) behar izanez gero, "
-"eskuz muntatu beharko duzu."
-
-# <span class="translation-space"> </span>
-# msgid ""<br /><span class="translation-space"> </span>
-# "After this message, you will be given a shell with ${DEVICE} mounted on "<br /><span class="translation-space"> </span>
-# "\"/\". If you need any other file systems (such as a separate \"/usr\"), "<br /><span class="translation-space"> </span>
-# "you will have to mount those yourself."<br /><span class="translation-space"> </span>
-# msgid ""<br /><span class="translation-space"> </span>
-# "After this message, you will be given a shell in the installer "<br /><span class="translation-space"> </span>
-# "environment. Since the installer could not find any partitions, no file "<br /><span class="translation-space"> </span>
-# "systems have been mounted for you."
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:17001
-msgid ""
-"After this message, you will be given a shell in the installer environment. "
-"No file systems have been mounted."
-msgstr ""
-"Mezu honen ondoren,  instalatzaile ingurunean shell bat izango duzu. Ez da "
-"fitxategi-sistemarik muntatuko."
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:18001
-msgid "Interactive shell in the installer environment"
-msgstr "Exekutatu shell interaktibo bat instalatzailearen ingurunean"
-
-#. Type: password
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:19001
-msgid "Passphrase for ${DEVICE}:"
-msgstr "${DEVICE}(r)en pasaesaldia:"
-
-#. Type: password
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:19001
-msgid "Please enter the passphrase for the encrypted volume ${DEVICE}."
-msgstr "Idatzi pasaesaldia ${DEVICE} bolumen enkriptatuarentzako."
-
-#. Type: password
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:19001
-msgid ""
-"If you don't enter anything, the volume will not be available during rescue "
-"operations."
-msgstr ""
-"Ezer idazten ez baduzu, bolumena ez da eskuragarri egongo berreskuratze "
-"ekintzetan."
-
-#. Type: multiselect
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:20002
-msgid "Partitions to assemble:"
-msgstr "Batzeko partizioak:"
-
-#. Type: multiselect
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:20002
-msgid ""
-"Select the partitions to assemble into a RAID array. If you select "
-"\"Automatic\", then all devices containing RAID physical volumes will be "
-"scanned and assembled."
-msgstr ""
-"Hautatu RAID array-ean batzeko partizioak. \"Automatikoa\" hautatzen baduzu "
-"RAID bolumen fisikoak dituzten gailu guztiak eskaneatu eta batuko dira."
-
-#. Type: multiselect
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:20002
-msgid ""
-"Note that a RAID partition at the end of a disk may sometimes cause that "
-"disk to be mistakenly detected as containing a RAID physical volume. In that "
-"case, you should select the appropriate partitions individually."
-msgstr ""
-"Kontutan izan disko amaierako RAID partizio batek diskoan dauden RAID "
-"bolumen fisikoen antzemate errore bat sor dezakeela batzuetan. Kasu honetan, "
-"partizio egokiak eskuz hautatu beharko dituzu."
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:21001
-#, fuzzy
-msgid "Mount separate ${FILESYSTEM} partition?"
-msgstr "Bereizitako ${FILESYSTEM} partizioa?"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:21001
-msgid "The installed system appears to use a separate ${FILESYSTEM} partition."
-msgstr ""
-"Dirudienez instalatutako sistemak bereizitako ${FILESYSTEM} partizio bat "
-"darabiliki"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:21001
-msgid ""
-"It is normally a good idea to mount it as it will allow operations such as "
-"reinstalling the boot loader. However, if the file system on ${FILESYSTEM} "
-"is corrupt then you may want to avoid mounting it."
-msgstr ""
-"Normalean ideia ona da merau horrela muntatzea abio kargatzailea "
-"berrinstalatzea bezalako ekintzak burutzeko. Hala ere ${FILESYSTEM}-eko "
-"fitxategi sistema hondaturik balego berau muntatzea saihestu beharko zenuke."
 
 #. Type: text
 #. Description

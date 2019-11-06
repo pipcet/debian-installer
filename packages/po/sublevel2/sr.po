@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-02 22:41+0100\n"
+"POT-Creation-Date: 2019-11-05 23:57+0100\n"
 "PO-Revision-Date: 2018-02-07 21:39+0000\n"
 "Last-Translator: Слободан Симић(Slobodan Simić) <slsimic@gmail.com>\n"
 "Language-Team: Serbian <debian-l10n-serbian@lists.debian.org>\n"
@@ -238,14 +238,16 @@ msgstr "Неуспело учитавање компоненте инстала�
 msgid "Loading ${PACKAGE} failed for unknown reasons. Aborting."
 msgstr "Учитавање ${PACKAGE} неуспешно из непознатих разлога. Прекидање."
 
-#. Type: boolean
+#. Type: error
 #. Description
 #. :sl2:
 #: ../anna.templates:8001
-msgid "Continue the install without loading kernel modules?"
-msgstr "Наставити инсталацију без учитавања модула за кернел?"
+#, fuzzy
+#| msgid "No disk found"
+msgid "No kernel modules found"
+msgstr "Није пронађен ниједан диск"
 
-#. Type: boolean
+#. Type: error
 #. Description
 #. :sl2:
 #: ../anna.templates:8001
@@ -257,18 +259,14 @@ msgstr ""
 "Нема модула за кернел. Разлог томе је вероватно неподударност верзија "
 "кернела који користи инсталација и кернела доступног у архиви."
 
-#. Type: boolean
+#. Type: error
 #. Description
 #. :sl2:
 #: ../anna.templates:8001
 msgid ""
-"If you're installing from a mirror, you can work around this problem by "
-"choosing to install a different version of Debian. The install will probably "
-"fail to work if you continue without kernel modules."
+"You should make sure that your installation image is up-to-date, or - if "
+"that's the case - try a different mirror, preferably deb.debian.org."
 msgstr ""
-"Ако инсталирате са мирора, можете заобићи овај проблем тако што ћете "
-"изабрати да инсталирате другу верзију Debian-а. Инсталација вероватно неће "
-"радити ако наставите без модула за кернел."
 
 #. Type: select
 #. Description
@@ -1000,6 +998,20 @@ msgstr ""
 "мрежу, оставите поље празним."
 
 #. Type: select
+#. Choices
+#. :sl2:
+#: ../netcfg-common.templates:8001
+msgid "WEP/Open Network"
+msgstr "WEP/Отворена мрежа"
+
+#. Type: select
+#. Choices
+#. :sl2:
+#: ../netcfg-common.templates:8001
+msgid "WPA/WPA2 PSK"
+msgstr "WPA/WPA2 PSK"
+
+#. Type: select
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:8002
@@ -1297,6 +1309,26 @@ msgstr "Инфраструктурна (управљана) мрежа"
 msgid "Ad-hoc network (Peer to peer)"
 msgstr "Ад-хок мрежа (Peer to peer)"
 
+#. Type: select
+#. Description
+#. :sl2:
+#: ../netcfg-common.templates:24002
+msgid "Type of wireless network:"
+msgstr "Тип бежичне мреже:"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../netcfg-common.templates:24002
+msgid ""
+"Wireless networks are either managed or ad-hoc. If you use a real access "
+"point of some sort, your network is Managed. If another computer is your "
+"'access point', then your network may be Ad-hoc."
+msgstr ""
+"Бежичне мреже су или управљане или ад-хок мреже. Уколико користите неку "
+"врсту стварне приступне тачке, ваша мрежа је управљана. У случају да је ваша "
+"приступна тачка неки други рачунар, онда ваша мрежа може бити ад-хок типа."
+
 #. Type: text
 #. Description
 #. :sl2:
@@ -1310,6 +1342,13 @@ msgstr "Подешавање бежичне мреже"
 #: ../netcfg-common.templates:26001
 msgid "Searching for wireless access points..."
 msgstr "Тражење прикључне тачке бежичне мреже..."
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../netcfg-common.templates:29001
+msgid "Detecting link on ${interface}; please wait..."
+msgstr "Детектовање линка на ${interface}; сачекајте..."
 
 #. Type: text
 #. Description
@@ -1787,6 +1826,15 @@ msgstr ""
 "сигурни шта да изаберете, изаберите „http“, јер је мање осетљив на проблеме "
 "са фајерволовима."
 
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl2:
+#: ../download-installer.templates:1001
+msgid "Download installer components"
+msgstr "Преузми компоненте инсталера"
+
 #. #-#-#-#-#  templates.pot (net-retriever)  #-#-#-#-#
 #. Type: select
 #. Choices
@@ -1896,6 +1944,104 @@ msgstr ""
 "Уочен је проблем при читању података са изменљивог медијума. Проверите да ли "
 "је одговарајући медијум убачен. Уколико наставите да имате проблема, ваш "
 "изменљиви медијум је можда лош."
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:1001
+msgid "Load drivers from removable media now?"
+msgstr "Учитати недостајуће драјвере са изменљивог медијума?"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:1001
+msgid ""
+"You probably need to load drivers from removable media before continuing "
+"with the installation. If you know that the install will work without extra "
+"drivers, you can skip this step."
+msgstr ""
+"Вероватно би требало учитати драјвере са изменљивог медијума пре него што "
+"наставите са инсталацијом. Ако знате да ће инсталирање радити без додатних "
+"драјвера можете прескочити овај корак."
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:1001
+msgid ""
+"If you do need to load drivers, insert the appropriate removable media, such "
+"as a driver floppy or USB stick before continuing."
+msgstr ""
+"Ако је потребно да учитате драјвере убаците одговарајући изменљиви медијум "
+"као што је флопи диск или USB флеш пре него што наставите."
+
+#. Type: text
+#. Description
+#. main-menu item
+#. Translators: keep below 55 columns
+#. :sl2:
+#: ../load-media.templates:2001
+msgid "Load drivers from removable media"
+msgstr "Учитај драјвере са изменљивог медијума"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:3001
+msgid "Unknown removable media. Try to load anyway?"
+msgstr "Непознат изменљиви медијум. Ипак учитати?"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:3001
+msgid ""
+"Detected removable media that is not a known driver media. Please make sure "
+"that the correct media is inserted. You can still continue if you have an "
+"unofficial removable media you want to use."
+msgstr ""
+"Детектован је изменљиви медијум који није познат медијум са драјверима. "
+"Проверите да ли је убачен исправан медијум. И даље можете наставити уколико "
+"имате незванични изменљиви медијум са драјверима који желите да користите."
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../load-media.templates:4001
+msgid "Please insert ${DISK_LABEL} ('${DISK_NAME}') first."
+msgstr "Прво убаците ${DISK_LABEL} ('${DISK_NAME}')."
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../load-media.templates:4001
+msgid ""
+"Due to dependencies between packages, drivers must be loaded in the correct "
+"order."
+msgstr ""
+"Због међузависности пакета, драјвери морају бити учитани по исправном "
+"редоследу."
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:5001
+msgid "Load drivers from another removable media?"
+msgstr "Учитати драјвере са неког другог изменљивог медијума?"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:5001
+msgid ""
+"To load additional drivers from another removable media, please insert the "
+"appropriate removable media, such as a driver floppy or USB stick before "
+"continuing."
+msgstr ""
+"Да бисте учитали додатне драјевере са неког другог изменљивог медијума, "
+"убаците одговарајући медијум као што је флопи диск или USB флеш пре "
+"настављања."
 
 #. Type: error
 #. Description
@@ -4756,6 +4902,68 @@ msgstr ""
 msgid "Change debconf priority"
 msgstr "Промени debconf ниво важности"
 
+#. Type: select
+#. Choices
+#. :sl2:
+#: ../pkgsel.templates:9001
+msgid "No automatic updates"
+msgstr "Без аутоматског ажурирања"
+
+#. Type: select
+#. Choices
+#. :sl2:
+#: ../pkgsel.templates:9001
+msgid "Install security updates automatically"
+msgstr "Инсталирај аутоматски безбедоносна ажурирања"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+msgid "Updates management on this system:"
+msgstr "Ажурирање менаџмента на овом систему:"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+msgid ""
+"Applying updates on a frequent basis is an important part of keeping the "
+"system secure."
+msgstr "Примена честог ажурирања је важан део за очување безбедности система."
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+msgid ""
+"By default, security updates are not automatically installed, as security "
+"advisories should be reviewed before manual installation of the updates "
+"using standard package management tools."
+msgstr ""
+"Подразумевано, безбедоносна ажурирања се аутоматски не инсталирају, и савете "
+"о безбедности треба прегледати пре ручне инсталације помоћу стандардних "
+"алата за управљање пакетом."
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+msgid ""
+"Alternatively the unattended-upgrades package can be installed, which will "
+"install security updates automatically. Note however that automatic "
+"installation of updates may occasionally cause unexpected downtime of "
+"services provided by this machine in the rare cases where the update is not "
+"fully backward-compatible, or where the security advisory requires the "
+"administrator to perform some other manual operation."
+msgstr ""
+"Алтернативно се може инсталирати пакет без надгледања, који ће аутоматски "
+"инсталирати безбедоносне исправке. Имајте на уму да аутоматска инсталација "
+"ажурирања може повремено изазвати неочекиване застоје сервиса које "
+"обезбеђује ова машина у ретким случајевима када ажурирање није потпуно "
+"компатибилно, или када сигурносни савет захтева од администратора да изврши "
+"неку другу ручну операцију."
+
 #. Type: error
 #. Description
 #. :sl3:
@@ -5016,219 +5224,6 @@ msgstr ""
 #: ../rescue-check.templates:2001
 msgid "Rescue mode"
 msgstr "Мод за поправљање система"
-
-#. Type: select
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:3002
-msgid "Device to use as root file system:"
-msgstr "Уређај који ће бити коришћен као root фајл систем:"
-
-#. Type: select
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:3002
-msgid ""
-"Enter a device you wish to use as your root file system. You will be able to "
-"choose among various rescue operations to perform on this file system."
-msgstr ""
-"Унесите уређај који желите да користие као ваш „root“ фајл систем. Моћи ћете "
-"да изаберете неку од различитих операција поправке система која би требала "
-"да се изврши на овом фајл систему."
-
-#. Type: select
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:3002
-msgid ""
-"If you choose not to use a root file system, you will be given a reduced "
-"choice of operations that can be performed without one. This may be useful "
-"if you need to correct a partitioning problem."
-msgstr ""
-"Ако изаберете да не користите „root“ фајл систем, смањиће се број опција. "
-"Ово може бити корисно за решавање проблема са партицијама."
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:8001
-msgid "Execute a shell in ${DEVICE}"
-msgstr "Покрени командни интерфејс на ${DEVICE}"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:9001
-msgid "Execute a shell in the installer environment"
-msgstr "Покрени командни интерфејс у окружењу инсталера"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:10001
-msgid "Choose a different root file system"
-msgstr "Изаберите други „root“ фајл систем"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:11001
-msgid "Reboot the system"
-msgstr "Поново покрените систем"
-
-#. Type: text
-#. Description
-#. :sl2:
-#. Type: text
-#. Description
-#. :sl2:
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:12001 ../rescue-mode.templates:16001
-#: ../rescue-mode.templates:17001
-msgid "Executing a shell"
-msgstr "Покретање командног интерфејса"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:12001
-msgid ""
-"After this message, you will be given a shell with ${DEVICE} mounted on \"/"
-"\". If you need any other file systems (such as a separate \"/usr\"), you "
-"will have to mount those yourself."
-msgstr ""
-"После ове поруке покренуће се командни интерфејс са ${DEVICE} партицијом "
-"монтираном на „/“. Ако су вам потребни неки други фајл систем (као што је "
-"засебни „/usr“), мораћете да их монтирате ручно."
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:15001
-msgid "Interactive shell on ${DEVICE}"
-msgstr "Интерактивни командни интерфејс на ${DEVICE}"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:16001
-msgid ""
-"After this message, you will be given a shell with ${DEVICE} mounted on \"/"
-"target\". You may work on it using the tools available in the installer "
-"environment. If you want to make it your root file system temporarily, run "
-"\"chroot /target\". If you need any other file systems (such as a separate "
-"\"/usr\"), you will have to mount those yourself."
-msgstr ""
-"После ове поруке покренуће се командни интерфејс са ${DEVICE} партицијом "
-"монтираном на „/target“. Можете радити на њему користећи алатке доступне у "
-"окружењу инсталера. Ако желите да ова партиција буде привремено ваш „root“ "
-"фајл систем, извршите команду „chroot /target“. Ако су вам потребни неки "
-"други фајл системи (као што је засебан „/usr“), мораћете сами да их "
-"монтирате."
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:17001
-msgid ""
-"After this message, you will be given a shell in the installer environment. "
-"No file systems have been mounted."
-msgstr ""
-"Након ове поруке добићете shell у окружењу инсталера. Ни један фајл систем "
-"није монтиран."
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:18001
-msgid "Interactive shell in the installer environment"
-msgstr "Интерактивни командни интерфејс у окружењу инсталера"
-
-#. Type: password
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:19001
-msgid "Passphrase for ${DEVICE}:"
-msgstr "Лозинка за ${DEVICE}:"
-
-#. Type: password
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:19001
-msgid "Please enter the passphrase for the encrypted volume ${DEVICE}."
-msgstr "Унесите лозинку за шифровани волумен ${DEVICE}."
-
-#. Type: password
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:19001
-msgid ""
-"If you don't enter anything, the volume will not be available during rescue "
-"operations."
-msgstr ""
-"Уколико не унесете ништа, волумен неће бити доступан током извршавања "
-"операција поправке система."
-
-#. Type: multiselect
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:20002
-msgid "Partitions to assemble:"
-msgstr "Партиције за састављање:"
-
-#. Type: multiselect
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:20002
-msgid ""
-"Select the partitions to assemble into a RAID array. If you select "
-"\"Automatic\", then all devices containing RAID physical volumes will be "
-"scanned and assembled."
-msgstr ""
-"Изаберите партиције за састављање RAID низа. Уколико изаберете „Аутоматско“, "
-"сви уређаји који садрже RAID физичје волумене ће бити скенирани и састављени."
-
-#. Type: multiselect
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:20002
-msgid ""
-"Note that a RAID partition at the end of a disk may sometimes cause that "
-"disk to be mistakenly detected as containing a RAID physical volume. In that "
-"case, you should select the appropriate partitions individually."
-msgstr ""
-"RAID партиција на крају диска понекад може довести до тога да се тај диск "
-"грешком детектује као диск који садржи RAID физички волумен. У том случају, "
-"појединачно изаберите одговарајуће партиције."
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:21001
-msgid "Mount separate ${FILESYSTEM} partition?"
-msgstr "Монтирај засебну ${FILESYSTEM} партицију?"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:21001
-msgid "The installed system appears to use a separate ${FILESYSTEM} partition."
-msgstr "Инсталирани систем изгледа користи засебну ${FILESYSTEM} партицију."
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:21001
-msgid ""
-"It is normally a good idea to mount it as it will allow operations such as "
-"reinstalling the boot loader. However, if the file system on ${FILESYSTEM} "
-"is corrupt then you may want to avoid mounting it."
-msgstr ""
-"То је обично добра идеја да се монтира јер ће омогућити операције као што је "
-"враћање покретачког програма. Међутим, ако је систем фајлова на "
-"${FILESYSTEM} оштећен онда ћете можда желети да избегнете монтирање."
 
 #. Type: text
 #. Description

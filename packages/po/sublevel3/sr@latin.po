@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-02 22:41+0100\n"
+"POT-Creation-Date: 2019-11-05 23:57+0100\n"
 "PO-Revision-Date: 2012-10-15 05:36+0100\n"
 "Last-Translator: Milan Kostic <kosticmilan77@open.telekom.rs>\n"
 "Language-Team: Serbian <debian-l10n-serbian@lists.debian.org>\n"
@@ -2147,6 +2147,15 @@ msgstr "Pokretanje „/sbin/lilo“ nije uspelo, kod greške „${ERRCODE}“."
 msgid "Install the LILO boot loader on a hard disk"
 msgstr "Instaliraj LILO but louder na hard disk"
 
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl3:
+#: ../network-preseed.templates:1001
+msgid "Download debconf preconfiguration file"
+msgstr "Preuzmi „debconf“ prekonfiguracioni fajl"
+
 #. Type: string
 #. Description
 #. :sl3:
@@ -2211,6 +2220,15 @@ msgstr "Vidite http://wiki.debian.org/DebianInstaller/Preseed za inspiraciju."
 
 #. Type: text
 #. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl3:
+#: ../file-preseed.templates:1001
+msgid "Load debconf preconfiguration file"
+msgstr "Učitaj „debconf“ prekonfiguracioni fajl"
+
+#. Type: text
+#. Description
 #. :sl3:
 #: ../rescue-mode.templates:2001
 msgid "No partitions found"
@@ -2231,6 +2249,51 @@ msgstr ""
 "sistem. Do ovoga je možda došlo jer kernel nije mogao da detektuje hard disk "
 "ili nije uspeo da pročita particionu tabelu, ili disk nije particionisan. "
 "Ako želite, možete ovo da proverite iz shell-a u instaleru."
+
+#. Type: select
+#. Choices
+#. :sl3:
+#: ../rescue-mode.templates:3001
+msgid "Assemble RAID array"
+msgstr "Sastavljanje RAID niza"
+
+#. Type: select
+#. Choices
+#. :sl3:
+#: ../rescue-mode.templates:3001
+msgid "Do not use a root file system"
+msgstr "Ne koristi „root“ fajl sistem"
+
+#. Type: select
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:3002
+msgid "Device to use as root file system:"
+msgstr "Uređaj koji će biti korišćen kao root fajl sistem:"
+
+#. Type: select
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:3002
+msgid ""
+"Enter a device you wish to use as your root file system. You will be able to "
+"choose among various rescue operations to perform on this file system."
+msgstr ""
+"Unesite uređaj koji želite da koristie kao vaš „root“ fajl sistem. Moći ćete "
+"da izaberete neku od različitih operacija popravke sistema koja bi trebala "
+"da se izvrši na ovom fajl sistemu."
+
+#. Type: select
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:3002
+msgid ""
+"If you choose not to use a root file system, you will be given a reduced "
+"choice of operations that can be performed without one. This may be useful "
+"if you need to correct a partitioning problem."
+msgstr ""
+"Ako izaberete da ne koristite „root“ fajl sistem, smanjiće se broj opcija. "
+"Ovo može biti korisno za rešavanje problema sa particijama."
 
 #. Type: error
 #. Description
@@ -2275,6 +2338,13 @@ msgstr ""
 msgid "Please check the syslog for more information."
 msgstr "Proverite „syslog“ za više informacija."
 
+#. Type: select
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:6001
+msgid "Rescue operations"
+msgstr "Operacije spasavanja"
+
 #. Type: error
 #. Description
 #. :sl3:
@@ -2289,6 +2359,61 @@ msgstr "Operacija popravke nije uspela"
 msgid "The rescue operation '${OPERATION}' failed with exit code ${CODE}."
 msgstr ""
 "Operacija popravke „${OPERATION}“ nije uspela sa izlaznim kodom ${CODE}."
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:8001
+msgid "Execute a shell in ${DEVICE}"
+msgstr "Pokreni komandni interfejs na ${DEVICE}"
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:9001
+msgid "Execute a shell in the installer environment"
+msgstr "Pokreni komandni interfejs u okruženju instalera"
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:10001
+msgid "Choose a different root file system"
+msgstr "Izaberite drugi „root“ fajl sistem"
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:11001
+msgid "Reboot the system"
+msgstr "Ponovo pokrenite sistem"
+
+#. Type: text
+#. Description
+#. :sl3:
+#. Type: text
+#. Description
+#. :sl3:
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:12001 ../rescue-mode.templates:16001
+#: ../rescue-mode.templates:17001
+msgid "Executing a shell"
+msgstr "Pokretanje komandnog interfejsa"
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:12001
+msgid ""
+"After this message, you will be given a shell with ${DEVICE} mounted on \"/"
+"\". If you need any other file systems (such as a separate \"/usr\"), you "
+"will have to mount those yourself."
+msgstr ""
+"Posle ove poruke pokrenuće se komandni interfejs sa ${DEVICE} particijom "
+"montiranom na „/“. Ako su vam potrebni neki drugi fajl sistem (kao što je "
+"zasebni „/usr“), moraćete da ih montirate ručno."
 
 #. Type: error
 #. Description
@@ -2321,6 +2446,142 @@ msgstr "Shell nije nađen na /target"
 #: ../rescue-mode.templates:14001
 msgid "No usable shell was found on your root file system (${DEVICE})."
 msgstr "Nije pronađen shell na root fajl sistemu (${DEVICE})."
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:15001
+msgid "Interactive shell on ${DEVICE}"
+msgstr "Interaktivni komandni interfejs na ${DEVICE}"
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:16001
+msgid ""
+"After this message, you will be given a shell with ${DEVICE} mounted on \"/"
+"target\". You may work on it using the tools available in the installer "
+"environment. If you want to make it your root file system temporarily, run "
+"\"chroot /target\". If you need any other file systems (such as a separate "
+"\"/usr\"), you will have to mount those yourself."
+msgstr ""
+"Posle ove poruke pokrenuće se komandni interfejs sa ${DEVICE} particijom "
+"montiranom na „/target“. Možete raditi na njemu koristeći alatke dostupne u "
+"okruženju instalera. Ako želite da ova particija bude privremeno vaš „root“ "
+"fajl sistem, izvršite komandu „chroot /target“. Ako su vam potrebni neki "
+"drugi fajl sistemi (kao što je zaseban „/usr“), moraćete sami da ih "
+"montirate."
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:17001
+msgid ""
+"After this message, you will be given a shell in the installer environment. "
+"No file systems have been mounted."
+msgstr ""
+"Nakon ove poruke dobićete shell u okruženju instalera. Ni jedan fajl sistem "
+"nije montiran."
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:18001
+msgid "Interactive shell in the installer environment"
+msgstr "Interaktivni komandni interfejs u okruženju instalera"
+
+#. Type: password
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:19001
+msgid "Passphrase for ${DEVICE}:"
+msgstr "Lozinka za ${DEVICE}:"
+
+#. Type: password
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:19001
+msgid "Please enter the passphrase for the encrypted volume ${DEVICE}."
+msgstr "Unesite lozinku za šifrovani volumen ${DEVICE}."
+
+#. Type: password
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:19001
+msgid ""
+"If you don't enter anything, the volume will not be available during rescue "
+"operations."
+msgstr ""
+"Ukoliko ne unesete ništa, volumen neće biti dostupan tokom izvršavanja "
+"operacija popravke sistema."
+
+#. Type: multiselect
+#. Choices
+#. :sl3:
+#: ../rescue-mode.templates:20001
+msgid "Automatic"
+msgstr "Automatsko"
+
+#. Type: multiselect
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:20002
+msgid "Partitions to assemble:"
+msgstr "Particije za sastavljanje:"
+
+#. Type: multiselect
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:20002
+msgid ""
+"Select the partitions to assemble into a RAID array. If you select "
+"\"Automatic\", then all devices containing RAID physical volumes will be "
+"scanned and assembled."
+msgstr ""
+"Izaberite particije za sastavljanje RAID niza. Ukoliko izaberete "
+"„Automatsko“, svi uređaji koji sadrže RAID fizičje volumene će biti "
+"skenirani i sastavljeni."
+
+#. Type: multiselect
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:20002
+msgid ""
+"Note that a RAID partition at the end of a disk may sometimes cause that "
+"disk to be mistakenly detected as containing a RAID physical volume. In that "
+"case, you should select the appropriate partitions individually."
+msgstr ""
+"RAID particija na kraju diska ponekad može dovesti do toga da se taj disk "
+"greškom detektuje kao disk koji sadrži RAID fizički volumen. U tom slučaju, "
+"pojedinačno izaberite odgovarajuće particije."
+
+#. Type: boolean
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:21001
+#, fuzzy
+#| msgid "Separate /home partition"
+msgid "Mount separate ${FILESYSTEM} partition?"
+msgstr "Zasebna /home particija"
+
+#. Type: boolean
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:21001
+#, fuzzy
+#| msgid "Install the kernel on a PReP boot partition"
+msgid "The installed system appears to use a separate ${FILESYSTEM} partition."
+msgstr "Instaliraj kernel na PReP pokretačku particiju"
+
+#. Type: boolean
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:21001
+msgid ""
+"It is normally a good idea to mount it as it will allow operations such as "
+"reinstalling the boot loader. However, if the file system on ${FILESYSTEM} "
+"is corrupt then you may want to avoid mounting it."
+msgstr ""
 
 #. Type: text
 #. Description
@@ -3067,12 +3328,23 @@ msgstr "Restartujte računar sa kernelom (${DI_KERNEL})."
 msgid "Configure iSCSI volumes"
 msgstr "Konfiguriši enkriptovane volumene"
 
+#. Type: select
+#. Choices
+#. Note to translators : Please keep your translations of the choices
+#. below a 65 columns limit (which means 65 characters
+#. in single-byte languages)
+#. :sl3:
+#: ../partman-iscsi.templates:2001
+msgid "Log into iSCSI targets"
+msgstr ""
+
 #. #-#-#-#-#  templates.pot (partman-iscsi)  #-#-#-#-#
 #. Type: select
 #. Choices
 #. Note to translators : Please keep your translations of the choices
 #. below a 65 columns limit (which means 65 characters
 #. in single-byte languages)
+#. :sl3:
 #. #-#-#-#-#  templates.pot (mdcfg)  #-#-#-#-#
 #. Type: select
 #. Choices

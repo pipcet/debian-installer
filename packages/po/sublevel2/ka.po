@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer.2006071\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-02 22:41+0100\n"
+"POT-Creation-Date: 2019-11-05 23:57+0100\n"
 "PO-Revision-Date: 2011-03-01 11:41+0400\n"
 "Last-Translator: Aiet Kolkhi <aietkolkhi@gmail.com>\n"
 "Language-Team: Georgian\n"
@@ -240,14 +240,16 @@ msgstr ""
 "${PACKAGE} პაკეტის გამოძახება გაურკვეველი მიზეზების გამო შეფერხდა. პროცესი "
 "შეწყდა."
 
-#. Type: boolean
+#. Type: error
 #. Description
 #. :sl2:
 #: ../anna.templates:8001
-msgid "Continue the install without loading kernel modules?"
-msgstr "გსურთ ინსტალაციის გაგრძელება კკერნელის მოდულების გამოძახების გარეშე?"
+#, fuzzy
+#| msgid "No disk found"
+msgid "No kernel modules found"
+msgstr "დისკი ვერ მოიძებნა"
 
-#. Type: boolean
+#. Type: error
 #. Description
 #. :sl2:
 #: ../anna.templates:8001
@@ -260,18 +262,14 @@ msgstr ""
 "გამოყენებული კერნელის ვერსიისა და არქივში არსებული კერნელის შეუთავსებლობის "
 "ბრალია."
 
-#. Type: boolean
+#. Type: error
 #. Description
 #. :sl2:
 #: ../anna.templates:8001
 msgid ""
-"If you're installing from a mirror, you can work around this problem by "
-"choosing to install a different version of Debian. The install will probably "
-"fail to work if you continue without kernel modules."
+"You should make sure that your installation image is up-to-date, or - if "
+"that's the case - try a different mirror, preferably deb.debian.org."
 msgstr ""
-"თუ თქვენ ინსტალაციას მირორიდან ახორციელდებთ, თქვენ შეგიძლიათ ამ პრობლემის "
-"მოგვარება, თუ Debian-ის სხვა ვერსიის დააყენებთ. თუ კერნელის მოდულების გარეშე "
-"ინსტალაციას გააგრძელებთ, სავარაუდოდ საინსტალაციო პროგამა ვერ იმუშავებს."
 
 #. Type: select
 #. Description
@@ -998,6 +996,20 @@ msgstr ""
 "გამოყენება გსურთ, დატოვეთ ეს ველი ცარიელი."
 
 #. Type: select
+#. Choices
+#. :sl2:
+#: ../netcfg-common.templates:8001
+msgid "WEP/Open Network"
+msgstr ""
+
+#. Type: select
+#. Choices
+#. :sl2:
+#: ../netcfg-common.templates:8001
+msgid "WPA/WPA2 PSK"
+msgstr ""
+
+#. Type: select
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:8002
@@ -1292,6 +1304,27 @@ msgstr "ინფრასტრუქტურული ქსელი"
 msgid "Ad-hoc network (Peer to peer)"
 msgstr "Ad-hoc ქსელი (Peer to peer)"
 
+#. Type: select
+#. Description
+#. :sl2:
+#: ../netcfg-common.templates:24002
+msgid "Type of wireless network:"
+msgstr "უსადენო ქსელის ტიპი:"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../netcfg-common.templates:24002
+msgid ""
+"Wireless networks are either managed or ad-hoc. If you use a real access "
+"point of some sort, your network is Managed. If another computer is your "
+"'access point', then your network may be Ad-hoc."
+msgstr ""
+"უსადენო ქსელები ან იმართება, ან „ad-hoc” მდგომარეობაშია. თუ თქვენ რაიმე "
+"სახის რეალურ წვდომის წერტილს (Access Point) იყენებთ, თქვენი ქსელი იმართება. "
+"თუ თქვენი „წვდომის წერტილი” უბრალოდ სხვა კომპიუტერია, მაშინ შესაძლოა თქვენი "
+"ქსელი „Ad-hoc” იყოს."
+
 #. Type: text
 #. Description
 #. :sl2:
@@ -1305,6 +1338,13 @@ msgstr "უკაბელო ქსელის კონფიგურაც�
 #: ../netcfg-common.templates:26001
 msgid "Searching for wireless access points..."
 msgstr "მიმდინარეობს უკაბელო ქსელის წვდომის წერტილების ძიება..."
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../netcfg-common.templates:29001
+msgid "Detecting link on ${interface}; please wait..."
+msgstr "მიმდინარეობს ${interface}-ზე ბმულის ამოცნობა; გთხოვთ, დაელოდოთ..."
 
 #. Type: text
 #. Description
@@ -1784,6 +1824,15 @@ msgstr ""
 "მიუთითეთ ფაილების ჩამოტვირთვის პროტოკოლი. თუ დარწმუნებული არ ხართ, ამოირჩიეთ "
 "\"http\", მას არა აქვს პრობლემები ქსელთაშორის ეკრანთან."
 
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl2:
+#: ../download-installer.templates:1001
+msgid "Download installer components"
+msgstr "ინსტალერის კომპონენტების ჩამოტვირთვა"
+
 #. #-#-#-#-#  templates.pot (net-retriever)  #-#-#-#-#
 #. Type: select
 #. Choices
@@ -1893,6 +1942,103 @@ msgstr ""
 "შეცდომა შეცვლადი დისკიდან ინფორმაციის წაკითხვისას. დარწმუნდით, რომ მედია "
 "ხელმისაწვდომია. თუ შეცდომა განმეორდა, გადაამოწმეთ შეცვლადი მედიის "
 "ვარგისიანობა."
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:1001
+msgid "Load drivers from removable media now?"
+msgstr "გსურთ დრაივერების შეცვლადი მედიიდან ჩატვირთვა?"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:1001
+msgid ""
+"You probably need to load drivers from removable media before continuing "
+"with the installation. If you know that the install will work without extra "
+"drivers, you can skip this step."
+msgstr ""
+"ინსტალაციის გასაგრძელებლად შეიძლება დაგჭირდეთ დრაივერების შეცვლადი მედიიდან "
+"ჩატვირთვა. თუ დარწმუნებული ხართ, რომ ინსტალაციას დამატებითი დრაივერი არ "
+"დაჭჲრდება, გამოტოვეთ ეს ეტაპი."
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:1001
+msgid ""
+"If you do need to load drivers, insert the appropriate removable media, such "
+"as a driver floppy or USB stick before continuing."
+msgstr ""
+"თუ დრაივერების ჩატვირთვა გსურთ, გასაგრძელებლად ჩადეთ შესაბამისი შეცვლადი "
+"მედიუმი, მაგ. ფლოპი-დისკი ანდ USB მეხსიერების მოდული."
+
+#. Type: text
+#. Description
+#. main-menu item
+#. Translators: keep below 55 columns
+#. :sl2:
+#: ../load-media.templates:2001
+msgid "Load drivers from removable media"
+msgstr "დრაივერების შეცვლადი მედიუმიდან ჩატვირთვა"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:3001
+msgid "Unknown removable media. Try to load anyway?"
+msgstr "უცნობი შეცვლადი მედიუმი. მაინც ვცადო ჩატვირთვა?"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:3001
+msgid ""
+"Detected removable media that is not a known driver media. Please make sure "
+"that the correct media is inserted. You can still continue if you have an "
+"unofficial removable media you want to use."
+msgstr ""
+"ამოცნობილი შეცვლადი მედიუმი ნაცნობი დრაივერების მედიუმი არ არის. დარწმუნდით, "
+"რომ სწორი მედიუმი არის ჩადებული. თუ არაოფიციალური შეცვლადი მედიუმის "
+"გამოყენება გსურთ, შეგიძლიათ მაინც გაარძელოთ."
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../load-media.templates:4001
+msgid "Please insert ${DISK_LABEL} ('${DISK_NAME}') first."
+msgstr "გთხოვთ ჯერ ${DISK_LABEL} ('${DISK_NAME}') ჩადოთ."
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../load-media.templates:4001
+msgid ""
+"Due to dependencies between packages, drivers must be loaded in the correct "
+"order."
+msgstr ""
+"პაკეტების ერთმანეთზე დამოკიდებულებების გამო, დარივერები სწორი მიმდევრობით "
+"უნდა იყოს ჩაიტვირთოს."
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:5001
+msgid "Load drivers from another removable media?"
+msgstr "გსურთ დრაივერების სხვა შეცვლადი დისკიდან ჩატვირთვა?"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:5001
+msgid ""
+"To load additional drivers from another removable media, please insert the "
+"appropriate removable media, such as a driver floppy or USB stick before "
+"continuing."
+msgstr ""
+"თუ დრაივერების ჩატვირთვა სხვა შეცვლადი მედიუმიდან გსურთ, გასაგრძელებლად "
+"ჩადეთ შესაბამისი მედია, მაგ. ფლოპი-დისკი ან USB მეხსიერების მოდული."
 
 #. Type: error
 #. Description
@@ -4794,6 +4940,59 @@ msgstr ""
 msgid "Change debconf priority"
 msgstr "debconf პრიორიტეტის შეცვლა"
 
+#. Type: select
+#. Choices
+#. :sl2:
+#: ../pkgsel.templates:9001
+msgid "No automatic updates"
+msgstr ""
+
+#. Type: select
+#. Choices
+#. :sl2:
+#: ../pkgsel.templates:9001
+msgid "Install security updates automatically"
+msgstr ""
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+msgid "Updates management on this system:"
+msgstr ""
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+msgid ""
+"Applying updates on a frequent basis is an important part of keeping the "
+"system secure."
+msgstr ""
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+msgid ""
+"By default, security updates are not automatically installed, as security "
+"advisories should be reviewed before manual installation of the updates "
+"using standard package management tools."
+msgstr ""
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../pkgsel.templates:9002
+msgid ""
+"Alternatively the unattended-upgrades package can be installed, which will "
+"install security updates automatically. Note however that automatic "
+"installation of updates may occasionally cause unexpected downtime of "
+"services provided by this machine in the rare cases where the update is not "
+"fully backward-compatible, or where the security advisory requires the "
+"administrator to perform some other manual operation."
+msgstr ""
+
 #. Type: error
 #. Description
 #. :sl3:
@@ -5066,222 +5265,6 @@ msgstr ""
 #: ../rescue-check.templates:2001
 msgid "Rescue mode"
 msgstr "აღდგენის რეჟიმი"
-
-#. Type: select
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:3002
-msgid "Device to use as root file system:"
-msgstr "მოწყობილობა ძირითადი ფაილური სისტემით:"
-
-#. Type: select
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:3002
-msgid ""
-"Enter a device you wish to use as your root file system. You will be able to "
-"choose among various rescue operations to perform on this file system."
-msgstr ""
-"მიუთითეთ მოწყობილობა, რომელიც გამოყენებული იქნება როგორც ძირითადი ფაილური "
-"სისტემა. ამ სისტემაზე შემდგომ შეგეძლებათ გარკვეული აღდგენითი პროცედურების "
-"ჩატარება."
-
-#. Type: select
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:3002
-msgid ""
-"If you choose not to use a root file system, you will be given a reduced "
-"choice of operations that can be performed without one. This may be useful "
-"if you need to correct a partitioning problem."
-msgstr ""
-"თუ გადაწყვეტთ, უარი თქვათ root ფაილური სისტემის გამოყენებაზე, მის გარეშე "
-"შეზღუდული რაოდენობის ოპერაციის შესრულებას შეძლებთ. ეს შესაძლოა "
-"პარტიციონირების პრობლემის აღმოფხვრაში დაგეხმაროთ."
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:8001
-msgid "Execute a shell in ${DEVICE}"
-msgstr "გარსის გაშვება მოწყობილობაში ${DEVICE}"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:9001
-msgid "Execute a shell in the installer environment"
-msgstr "გარსის გაშვება ინსტალერის გარემოში"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:10001
-msgid "Choose a different root file system"
-msgstr "აირჩიეთ სხვა ძირითადი ფაილური სისტემა"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:11001
-msgid "Reboot the system"
-msgstr "სისტემის გადატვირთვა"
-
-#. Type: text
-#. Description
-#. :sl2:
-#. Type: text
-#. Description
-#. :sl2:
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:12001 ../rescue-mode.templates:16001
-#: ../rescue-mode.templates:17001
-msgid "Executing a shell"
-msgstr "გარსის გაშვება"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:12001
-msgid ""
-"After this message, you will be given a shell with ${DEVICE} mounted on \"/"
-"\". If you need any other file systems (such as a separate \"/usr\"), you "
-"will have to mount those yourself."
-msgstr ""
-"ეხლა გაიშვება გარსი (ბრძანებათა სტრიქონის ინტერპრეტატორი) ${DEVICE}-ზე "
-"დამონტაჟებული \"/\" ფაილური სისტემიდან. თუ თქვენ სხვა ფაილური სისტემაც "
-"დაგჭირდათ (მაგალითად, გამოყოფილი \"/usr\"-სათვის), იგი თქვენ თვითონ უნდა "
-"დაამონტაჟოთ."
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:15001
-msgid "Interactive shell on ${DEVICE}"
-msgstr "ინტერაქტიული გარსი ${DEVICE} მოწყობილობაზე"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:16001
-msgid ""
-"After this message, you will be given a shell with ${DEVICE} mounted on \"/"
-"target\". You may work on it using the tools available in the installer "
-"environment. If you want to make it your root file system temporarily, run "
-"\"chroot /target\". If you need any other file systems (such as a separate "
-"\"/usr\"), you will have to mount those yourself."
-msgstr ""
-"ახლა თქვენ მოგეცემათ \"/target\"-ზე მონტირებულ ${DEVICE}-სთან მიმართვის "
-"საშუალება. თქვენ შეგეძლებათ იმუშაოთ მასზე ინსტალერისათვის ხელმისაწვდომი "
-"ინსტრუმენტებით. თუ გინდათ ის დროებით თქვენი ძირითადი ფაილური სისტემა გახდეს, "
-"შეასრულეთ ბრძანება \"chroot /target\", ან დაამონტაჟეთ სხვა სისტემა (როგორც "
-"მაგ.:  \"/usr\") თქვენ თვითონ."
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:17001
-msgid ""
-"After this message, you will be given a shell in the installer environment. "
-"No file systems have been mounted."
-msgstr ""
-"ამ შეტყობინების შემდეგ გაეშვება ინსტალერის გარემოს გარსი (ბრძანებათა "
-"სტრიქონი). რომელიმე ფაილური სისტემა არ იქნება ჩამონტაჟებული."
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:18001
-msgid "Interactive shell in the installer environment"
-msgstr "ინტერაქტიული გარსი ინსტალერის გარემოში"
-
-#. Type: password
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:19001
-msgid "Passphrase for ${DEVICE}:"
-msgstr "პაროლი ${DEVICE}-ისთვის:"
-
-#. Type: password
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:19001
-msgid "Please enter the passphrase for the encrypted volume ${DEVICE}."
-msgstr "შეიყვანეთ დაშიფრული ტომის ${DEVICE}-ის პაროლი."
-
-#. Type: password
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:19001
-msgid ""
-"If you don't enter anything, the volume will not be available during rescue "
-"operations."
-msgstr ""
-"თუ რაიმეს არ შეიყვანთ, ეს ტომი გადარჩენის ოპერაციების დროს ხელმისაწვდომი არ "
-"იქნება."
-
-#. Type: multiselect
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:20002
-msgid "Partitions to assemble:"
-msgstr "დანაყოფები ასემბლირებისათვის:"
-
-#. Type: multiselect
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:20002
-msgid ""
-"Select the partitions to assemble into a RAID array. If you select "
-"\"Automatic\", then all devices containing RAID physical volumes will be "
-"scanned and assembled."
-msgstr ""
-"ამოირჩიეთ დანაყოფები, რომელთაგანაც RAID-მასივის შექმნა გსურთ. თუ "
-"„ავტომატურს“ ამოირჩევთ, მაშინ დასკანირდება და ასემბლირდება ყველა "
-"მოწყობილობა, რომელსაც RAID-ის ფიზიკური დანაყოფი გააჩნია."
-
-#. Type: multiselect
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:20002
-msgid ""
-"Note that a RAID partition at the end of a disk may sometimes cause that "
-"disk to be mistakenly detected as containing a RAID physical volume. In that "
-"case, you should select the appropriate partitions individually."
-msgstr ""
-"გაითვალისწინეთ, რომ დისკის ბოლოს მოთავსებული RAID-ის დანაყოფი შეიძლება "
-"ზოგჯერ არასწორად იქნეს ამოცნობილი, როგორც RAID-ის ფიზიკურ დანაყოფად. ასეთ "
-"შემთხვევაში ამოირჩიეთ დანაყოფები ხელით."
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:21001
-#, fuzzy
-#| msgid "Separate /home partition"
-msgid "Mount separate ${FILESYSTEM} partition?"
-msgstr "დამოუკიდებელი /home დანაყოფი"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:21001
-#, fuzzy
-#| msgid "Install the kernel on a PReP boot partition"
-msgid "The installed system appears to use a separate ${FILESYSTEM} partition."
-msgstr "კერნელის დაყენება PReP ჩატვირთვად დანაყოფზე"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../rescue-mode.templates:21001
-msgid ""
-"It is normally a good idea to mount it as it will allow operations such as "
-"reinstalling the boot loader. However, if the file system on ${FILESYSTEM} "
-"is corrupt then you may want to avoid mounting it."
-msgstr ""
 
 #. Type: text
 #. Description

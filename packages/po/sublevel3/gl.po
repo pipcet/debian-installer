@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gl\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-02 22:41+0100\n"
+"POT-Creation-Date: 2019-11-05 23:57+0100\n"
 "PO-Revision-Date: 2018-09-18 20:24+0000\n"
 "Last-Translator: mantinan <github@manty.net>\n"
 "Language-Team: Galician <proxecto@trasno.net>\n"
@@ -2170,6 +2170,15 @@ msgstr "A execución de «/sbin/lilo» devolveu o código de erro «${ERRCODE}»
 msgid "Install the LILO boot loader on a hard disk"
 msgstr "Instalar o cargador de arranque LILO nun disco duro"
 
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl3:
+#: ../network-preseed.templates:1001
+msgid "Download debconf preconfiguration file"
+msgstr "Descargar o ficheiro de preconfiguración de debconf"
+
 #. Type: string
 #. Description
 #. :sl3:
@@ -2236,6 +2245,15 @@ msgstr ""
 
 #. Type: text
 #. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl3:
+#: ../file-preseed.templates:1001
+msgid "Load debconf preconfiguration file"
+msgstr "Cargar o ficheiro de preconfiguración de debconf"
+
+#. Type: text
+#. Description
 #. :sl3:
 #: ../rescue-mode.templates:2001
 msgid "No partitions found"
@@ -2257,6 +2275,52 @@ msgstr ""
 "detectase o disco duro ou non puidese ler a táboa de particións, ou que o "
 "disco duro non estea particionado. Se quere, pode investigar isto desde unha "
 "shell no ambiente do instalador."
+
+#. Type: select
+#. Choices
+#. :sl3:
+#: ../rescue-mode.templates:3001
+msgid "Assemble RAID array"
+msgstr "Montar un RAID"
+
+#. Type: select
+#. Choices
+#. :sl3:
+#: ../rescue-mode.templates:3001
+msgid "Do not use a root file system"
+msgstr "Non empregar un sistema de ficheiros raíz"
+
+#. Type: select
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:3002
+msgid "Device to use as root file system:"
+msgstr "Dispositivo a empregar como sistema de ficheiros raíz:"
+
+#. Type: select
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:3002
+msgid ""
+"Enter a device you wish to use as your root file system. You will be able to "
+"choose among various rescue operations to perform on this file system."
+msgstr ""
+"Introduza o dispositivo que quere empregar como sistema de ficheiros raíz. "
+"Ha poder escoller entre varias operacións de rescate para realizar neste "
+"sistema de ficheiros."
+
+#. Type: select
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:3002
+msgid ""
+"If you choose not to use a root file system, you will be given a reduced "
+"choice of operations that can be performed without one. This may be useful "
+"if you need to correct a partitioning problem."
+msgstr ""
+"Se escolle non empregar un sistema de ficheiros raíz, daráselle unha lista "
+"reducida de escollas de operacións que pode facer sen un, o que pode ser "
+"útil se precisa corrixir un problema de particionamento."
 
 #. Type: error
 #. Description
@@ -2301,6 +2365,13 @@ msgstr ""
 msgid "Please check the syslog for more information."
 msgstr "Consulte o rexistro do sistema para obter máis información."
 
+#. Type: select
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:6001
+msgid "Rescue operations"
+msgstr "Operacións de rescate"
+
 #. Type: error
 #. Description
 #. :sl3:
@@ -2315,6 +2386,61 @@ msgstr "Fallou a operación de rescate"
 msgid "The rescue operation '${OPERATION}' failed with exit code ${CODE}."
 msgstr ""
 "A operación de rescate «${OPERATION}» fallou co código de saída ${CODE}."
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:8001
+msgid "Execute a shell in ${DEVICE}"
+msgstr "Executar unha shell en ${DEVICE}"
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:9001
+msgid "Execute a shell in the installer environment"
+msgstr "Executar unha shell no ambiente do instalador"
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:10001
+msgid "Choose a different root file system"
+msgstr "Escoller un sistema de ficheiros raíz diferente"
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:11001
+msgid "Reboot the system"
+msgstr "Reiniciar o sistema"
+
+#. Type: text
+#. Description
+#. :sl3:
+#. Type: text
+#. Description
+#. :sl3:
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:12001 ../rescue-mode.templates:16001
+#: ../rescue-mode.templates:17001
+msgid "Executing a shell"
+msgstr "Estase a executar unha shell"
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:12001
+msgid ""
+"After this message, you will be given a shell with ${DEVICE} mounted on \"/"
+"\". If you need any other file systems (such as a separate \"/usr\"), you "
+"will have to mount those yourself."
+msgstr ""
+"Despois desta mensaxe háselle dar unha shell con ${DEVICE} montado en «/». "
+"Se precisa de outros sistemas de ficheiros (como un «/usr» separado), ha ter "
+"que montalos por si mesmo."
 
 #. Type: error
 #. Description
@@ -2349,6 +2475,140 @@ msgid "No usable shell was found on your root file system (${DEVICE})."
 msgstr ""
 "Non se atopou ningunha shell utilizábel no sistema de ficheiros raíz "
 "(${DEVICE})."
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:15001
+msgid "Interactive shell on ${DEVICE}"
+msgstr "Shell interactiva en ${DEVICE}"
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:16001
+msgid ""
+"After this message, you will be given a shell with ${DEVICE} mounted on \"/"
+"target\". You may work on it using the tools available in the installer "
+"environment. If you want to make it your root file system temporarily, run "
+"\"chroot /target\". If you need any other file systems (such as a separate "
+"\"/usr\"), you will have to mount those yourself."
+msgstr ""
+"Despois desta mensaxe háselle dar unha shell con ${DEVICE} montado en «/"
+"target». Pode traballar nel empregando as ferramentas dispoñíbeis no "
+"ambiente do instalador. Se quere convertelo no sistema de ficheiros raíz de "
+"xeito temporal, execute «chroot /target». Se precisa de outros sistemas de "
+"ficheiros (como un «/usr» separado), ha ter que montalos por si mesmo."
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:17001
+msgid ""
+"After this message, you will be given a shell in the installer environment. "
+"No file systems have been mounted."
+msgstr ""
+"Despois desta mensaxe háselle dar unha shell no ambiente do instalador. Non "
+"se montou ningún sistema de ficheiros."
+
+#. Type: text
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:18001
+msgid "Interactive shell in the installer environment"
+msgstr "Shell interactiva no ambiente do instalador"
+
+#. Type: password
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:19001
+msgid "Passphrase for ${DEVICE}:"
+msgstr "Frase de paso para ${DEVICE}:"
+
+#. Type: password
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:19001
+msgid "Please enter the passphrase for the encrypted volume ${DEVICE}."
+msgstr "Introduza a frase de paso do volume cifrado ${DEVICE}."
+
+#. Type: password
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:19001
+msgid ""
+"If you don't enter anything, the volume will not be available during rescue "
+"operations."
+msgstr ""
+"Se non introduce nada, o volume non ha estar dispoñíbel durante as "
+"operacións de rescate."
+
+#. Type: multiselect
+#. Choices
+#. :sl3:
+#: ../rescue-mode.templates:20001
+msgid "Automatic"
+msgstr "Automático"
+
+#. Type: multiselect
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:20002
+msgid "Partitions to assemble:"
+msgstr "Particións a usar:"
+
+#. Type: multiselect
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:20002
+msgid ""
+"Select the partitions to assemble into a RAID array. If you select "
+"\"Automatic\", then all devices containing RAID physical volumes will be "
+"scanned and assembled."
+msgstr ""
+"Escolla as particións para montar o RAID. Se escolle \"Automático\", tódolos "
+"dispositivos que conteñan volumes físicos RAID serán escaneados e usados."
+
+#. Type: multiselect
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:20002
+msgid ""
+"Note that a RAID partition at the end of a disk may sometimes cause that "
+"disk to be mistakenly detected as containing a RAID physical volume. In that "
+"case, you should select the appropriate partitions individually."
+msgstr ""
+"Fíxese que unha partición RAID ao final dun disco podería ás veces causar "
+"que se detecte incorrectamente que ese disco contén un volume físico RAID. "
+"En ese caso debe escoller as particións adecuadas individualmente."
+
+#. Type: boolean
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:21001
+msgid "Mount separate ${FILESYSTEM} partition?"
+msgstr "Quere montar a partición «${FILESYSTEM}» separada?"
+
+#. Type: boolean
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:21001
+msgid "The installed system appears to use a separate ${FILESYSTEM} partition."
+msgstr ""
+"O sistema instalado semella usar unha partición «${FILESYSTEM}» separada."
+
+#. Type: boolean
+#. Description
+#. :sl3:
+#: ../rescue-mode.templates:21001
+msgid ""
+"It is normally a good idea to mount it as it will allow operations such as "
+"reinstalling the boot loader. However, if the file system on ${FILESYSTEM} "
+"is corrupt then you may want to avoid mounting it."
+msgstr ""
+"Normalmente é boa ida montala xa que lle permitirá realizar certas "
+"operacións como reinstalar o cargador de arranque. Pero se o sistema en "
+"«${FILESYSTEM}» está corrupto pode que prefira non facelo."
 
 #. Type: text
 #. Description
@@ -3100,12 +3360,23 @@ msgstr "Reinicie co núcleo correcto (${DI_KERNEL})."
 msgid "Configure iSCSI volumes"
 msgstr "Configurar os volumes iSCSI"
 
+#. Type: select
+#. Choices
+#. Note to translators : Please keep your translations of the choices
+#. below a 65 columns limit (which means 65 characters
+#. in single-byte languages)
+#. :sl3:
+#: ../partman-iscsi.templates:2001
+msgid "Log into iSCSI targets"
+msgstr "Rexistrarse en dispositivos iSCSI"
+
 #. #-#-#-#-#  templates.pot (partman-iscsi)  #-#-#-#-#
 #. Type: select
 #. Choices
 #. Note to translators : Please keep your translations of the choices
 #. below a 65 columns limit (which means 65 characters
 #. in single-byte languages)
+#. :sl3:
 #. #-#-#-#-#  templates.pot (mdcfg)  #-#-#-#-#
 #. Type: select
 #. Choices
