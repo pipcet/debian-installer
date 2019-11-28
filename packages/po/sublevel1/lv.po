@@ -4498,6 +4498,65 @@ msgstr "Konfigurēt Logical Volume Manager"
 msgid "Guided - use entire disk and set up LVM"
 msgstr "Vadītā — izmantot visu disku un iestatīt LVM"
 
+#~ msgid "Install the Arcboot boot loader on a hard disk"
+#~ msgstr "Instalēt Arcboot palaidēju uz cietā diska"
+
+#~ msgid "Disk for boot loader installation:"
+#~ msgstr "Ierīce palaidēja instalācijai:"
+
+#~ msgid ""
+#~ "Arcboot must be installed into the volume header of a disk with a SGI "
+#~ "disklabel. Usually the volume header of /dev/sda is used. Please give the "
+#~ "device name of the disk on which to put arcboot."
+#~ msgstr ""
+#~ "Arcboot ir jāinstalē galvenes daļā diskam ar SGI diska etiķeti. Parasti "
+#~ "tiek lietota /dev/sda galvene. Lūdzu nosauciet diska ierīci uz kuras "
+#~ "uzlikt arcboot."
+
+#~ msgid "Arcboot configured to use a serial console"
+#~ msgstr "Arcboot ir nokonfigurēts, lai izmantotu seriālo konsoli"
+
+#~ msgid ""
+#~ "Arcboot is configured to use the serial port ${PORT} as the console. The "
+#~ "serial port speed is set to ${SPEED}."
+#~ msgstr ""
+#~ "Arcboot ir nokonfigurēts, lai kā konsoli izmantotu seriālo pieslēgvietu "
+#~ "${PORT}. Seriālajai pieslēgvietai ir iestatīts sekojošs ātrums: ${SPEED}."
+
+#~ msgid "Arcboot installation failed.  Continue anyway?"
+#~ msgstr "Arcboot instalēšana bija nesekmīga. Tomēr turpināt?"
+
+#~ msgid ""
+#~ "The arcboot package failed to install into /target/.  Installing Arcboot "
+#~ "as a boot loader is a required step.  The install problem might however "
+#~ "be unrelated to Arcboot, so continuing the installation may be possible."
+#~ msgstr ""
+#~ "'arcboot' pakotnes instalēšana uz /target/ beidzās nesekmīgi. Arcboot kā "
+#~ "palaidēja instalēšana ir nepieciešams solis. Taču instalēšanas problēma "
+#~ "varētu būt nesaistīta ar Arcboot, un tāpēc ir iespējams, ka sistēmas "
+#~ "instalēšanu var turpināt."
+
+#~ msgid "Setting PROM variables for Arcboot"
+#~ msgstr "Iestata Arcboot PROM mainīgos"
+
+#~ msgid ""
+#~ "If this is the first Linux installation on this machine, or if the hard "
+#~ "drives have been repartitioned, some variables need to be set in the PROM "
+#~ "before the system is able to boot normally."
+#~ msgstr ""
+#~ "Ja šī ir pirmā Linux instalācija uz šī datora vai, ja cietais disks ir "
+#~ "sadalīts vairākos nodalījumos, jums ir jāiestata daži PROM mainīgie, "
+#~ "pirms varēsiet normāli palaist sistēmu."
+
+#~ msgid ""
+#~ "At the end of this installation stage, the system will reboot.  After "
+#~ "this, enter the command monitor from the \"Stop for Maintenance\" option, "
+#~ "and enter the following commands:"
+#~ msgstr ""
+#~ "Šī instalācijas posma beigās sistēma pārstartēsies. Pēc tam no \"Apturēt "
+#~ "apkopes veikšanai\" opcijas ieejiet komandu monitorā un ievadiet "
+#~ "sekojošas komandas:"
+
 #~ msgid "Continue the install without loading kernel modules?"
 #~ msgstr "Turpināt instalēšanu, neielādējot kodola moduļus?"
 
@@ -4669,9 +4728,6 @@ msgstr "Vadītā — izmantot visu disku un iestatīt LVM"
 
 #~ msgid "NewWorld boot partition"
 #~ msgstr "NewWorld palaižamais nodalījums"
-
-#~ msgid "Go back to the menu and resume partitioning?"
-#~ msgstr "Atgriezties izvēlnē un turpināt disku dalīšanu?"
 
 #~ msgid ""
 #~ "No NewWorld boot partition was found. The yaboot boot loader requires an "
@@ -5110,49 +5166,6 @@ msgstr "Vadītā — izmantot visu disku un iestatīt LVM"
 #~| msgid "Registering modules..."
 #~ msgid "Loading ZFS module..."
 #~ msgstr "Reģistrē moduļus..."
-
-#~ msgid ""
-#~ "In order to start your new system, the firmware on your Itanium system "
-#~ "loads the boot loader from its private EFI partition on the hard disk.  "
-#~ "The boot loader then loads the operating system from that same "
-#~ "partition.  An EFI partition has a FAT16 file system formatted on it and "
-#~ "the bootable flag set. Most installations place the EFI partition on the "
-#~ "first primary partition of the same hard disk that holds the root file "
-#~ "system."
-#~ msgstr ""
-#~ "Lai palaistu jauno sistēmu, Itanium aparatūrprogrammatūra ielādēs "
-#~ "palaidēju no sava EFI nodalījuma. Palaidējs pēc tam no tā paša nodalījuma "
-#~ "ielādēs operētājsistēmu. EFI nodalījums ir formatēts ar FAT16 datņu "
-#~ "sistēmu un tai ir iestatīta palaišanas iezīme. Lielākoties EFI nodalījumu "
-#~ "novieto uz tā diska pirmā primārā nodalījuma, uz kura atrodas saknes "
-#~ "datņu sistēma."
-
-#, fuzzy
-#~| msgid "EFI boot partition"
-#~ msgid "EFI System Partition"
-#~ msgstr "EFI palaižamais nodalījums"
-
-#~ msgid "No EFI partition was found."
-#~ msgstr "EFI nodalījums netika atrasts."
-
-#~ msgid "EFI-fat16"
-#~ msgstr "EFI-fat16"
-
-#, fuzzy
-#~| msgid ""
-#~| "EFI boot partitions on this architecture cannot be created with a size "
-#~| "less than 35 MB. Please make the EFI boot partition larger."
-#~ msgid ""
-#~ "EFI System Partitions on this architecture cannot be created with a size "
-#~ "less than 35 MB. Please make the EFI System Partition larger."
-#~ msgstr ""
-#~ "Šai arhitektūrai nevar izveidot EFI ielādes nodalījumu, kas ir mazāks kā "
-#~ "35MB. Lūdzu, izveidojiet lielāku EFI ielādes nodalījumu."
-
-#, fuzzy
-#~| msgid "Abort the installation"
-#~ msgid "Force UEFI installation?"
-#~ msgstr "Pārtraukt instalēšanu"
 
 #~ msgid "Installing quik"
 #~ msgstr "Instalē quik"

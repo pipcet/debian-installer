@@ -4411,6 +4411,61 @@ msgstr "ตั้งค่า Logical Volume Manager"
 msgid "Guided - use entire disk and set up LVM"
 msgstr "แนะแนว - ใช้เนื้อที่ทั้งดิสก์โดยใช้ LVM"
 
+#~ msgid "Install the Arcboot boot loader on a hard disk"
+#~ msgstr "ติดตั้งบูตโหลดเดอร์ Arcboot ลงในฮาร์ดดิสก์"
+
+#~ msgid "Disk for boot loader installation:"
+#~ msgstr "ดิสก์สำหรับติดตั้งบูตโหลดเดอร์"
+
+#~ msgid ""
+#~ "Arcboot must be installed into the volume header of a disk with a SGI "
+#~ "disklabel. Usually the volume header of /dev/sda is used. Please give the "
+#~ "device name of the disk on which to put arcboot."
+#~ msgstr ""
+#~ "arcboot จะต้องติดตั้งลงในส่วนต้นของดิสก์ที่มีป้ายชื่อดิสก์แบบ SGI ซึ่งโดยปกติแล้ว "
+#~ "จะใช้ส่วนต้นของ /dev/sda กรุณาระบุชื่ออุปกรณ์ของดิสก์ที่จะติดตั้ง arcboot"
+
+#~ msgid "Arcboot configured to use a serial console"
+#~ msgstr "arcboot ถูกตั้งค่าไว้ให้ใช้คอนโซลอนุกรม"
+
+#~ msgid ""
+#~ "Arcboot is configured to use the serial port ${PORT} as the console. The "
+#~ "serial port speed is set to ${SPEED}."
+#~ msgstr ""
+#~ "arcboot ถูกตั้งค่าไว้ให้ใช้พอร์ตอนุกรม ${PORT} เป็นคอนโซล "
+#~ "ความเร็วของพอร์ตอนุกรมถูกกำหนดไว้เป็น ${SPEED}"
+
+#~ msgid "Arcboot installation failed.  Continue anyway?"
+#~ msgstr "ติดตั้ง arcboot ไม่สำเร็จ จะดำเนินการต่อไปหรือไม่?"
+
+#~ msgid ""
+#~ "The arcboot package failed to install into /target/.  Installing Arcboot "
+#~ "as a boot loader is a required step.  The install problem might however "
+#~ "be unrelated to Arcboot, so continuing the installation may be possible."
+#~ msgstr ""
+#~ "ติดตั้งแพกเกจ arcboot ลงใน /target/ ไม่สำเร็จ การติดตั้ง Arcboot เป็นบูตโหลดเดอร์ "
+#~ "เป็นขั้นตอนที่จำเป็น แต่ปัญหาของการติดตั้งอาจไม่เกี่ยวกับ Arcboot ก็ได้ ดังนั้น "
+#~ "การดำเนินการติดตั้งต่อไปก็อาจทำได้"
+
+#~ msgid "Setting PROM variables for Arcboot"
+#~ msgstr "กำลังกำหนดค่า PROM สำหรับ Arcboot"
+
+#~ msgid ""
+#~ "If this is the first Linux installation on this machine, or if the hard "
+#~ "drives have been repartitioned, some variables need to be set in the PROM "
+#~ "before the system is able to boot normally."
+#~ msgstr ""
+#~ "ถ้านี่เป็นการติดตั้งลินุกซ์ครั้งแรกในเครื่องนี้ หรือมีการแบ่งพาร์ทิชันในฮาร์ดดิสก์ใหม่ ค่าบางค่าใน "
+#~ "PROM จะต้องถูกกำหนดใหม่ เพื่อให้ระบบสามารถบูตได้ตามปกติ"
+
+#~ msgid ""
+#~ "At the end of this installation stage, the system will reboot.  After "
+#~ "this, enter the command monitor from the \"Stop for Maintenance\" option, "
+#~ "and enter the following commands:"
+#~ msgstr ""
+#~ "เมื่อจบขั้นตอนการติดตั้งนี้ ระบบจะบูตใหม่ หลังจากนั้น ให้คุณเข้าสู่หน้าจอคำสั่งจากตัวเลือก \"Stop "
+#~ "for Maintenance\" แล้วป้อนคำสั่งต่อไปนี้:"
+
 #~ msgid "Continue the install without loading kernel modules?"
 #~ msgstr "จะติดตั้งต่อไปโดยไม่โหลดมอดูลของเคอร์เนลหรือไม่?"
 
@@ -4574,9 +4629,6 @@ msgstr "แนะแนว - ใช้เนื้อที่ทั้งดิ
 
 #~ msgid "NewWorld boot partition"
 #~ msgstr "พาร์ทิชันบูตแบบ NewWorld"
-
-#~ msgid "Go back to the menu and resume partitioning?"
-#~ msgstr "จะกลับไปยังเมนูเพื่อแบ่งพาร์ทิชันใหม่หรือไม่?"
 
 #~ msgid ""
 #~ "No NewWorld boot partition was found. The yaboot boot loader requires an "
@@ -4968,68 +5020,6 @@ msgstr "แนะแนว - ใช้เนื้อที่ทั้งดิ
 
 #~ msgid "Loading ZFS module..."
 #~ msgstr "กำลังโหลดมอดูล ZFS..."
-
-#~ msgid ""
-#~ "In order to start your new system, the firmware on your Itanium system "
-#~ "loads the boot loader from its private EFI partition on the hard disk.  "
-#~ "The boot loader then loads the operating system from that same "
-#~ "partition.  An EFI partition has a FAT16 file system formatted on it and "
-#~ "the bootable flag set. Most installations place the EFI partition on the "
-#~ "first primary partition of the same hard disk that holds the root file "
-#~ "system."
-#~ msgstr ""
-#~ "ในการเริ่มบูตระบบที่ติดตั้งใหม่ของคุณ เฟิร์มแวร์ในระบบ Itanium "
-#~ "ของคุณจะโหลดบูตโหลดเดอร์จากพาร์ทิชันเฉพาะแบบ EFI จากฮาร์ดดิสก์ จากนั้น "
-#~ "บูตโหลดเดอร์จึงจะโหลดระบบปฏิบัติการจากพาร์ทิชันเดียวกันขึ้นมา พาร์ทิชัน EFI "
-#~ "จะฟอร์แมตไว้ด้วยระบบแฟ้มแบบ FAT16 โดยตั้งแฟล็กให้บูตได้เอาไว้ "
-#~ "การติดตั้งส่วนใหญ่จะสร้างพาร์ทิชัน EFI ไว้ในพาร์ทิชัน primary "
-#~ "แรกของฮาร์ดดิสก์เดียวกับที่เก็บระบบแฟ้มราก"
-
-#~ msgid "EFI System Partition"
-#~ msgstr "พาร์ทิชันระบบของ EFI"
-
-#~ msgid "No EFI partition was found."
-#~ msgstr "ไม่พบพาร์ทิชัน EFI"
-
-#~ msgid "ESP"
-#~ msgstr "ESP"
-
-#~ msgid "EFI-fat16"
-#~ msgstr "EFI-fat16"
-
-#~ msgid ""
-#~ "EFI System Partitions on this architecture cannot be created with a size "
-#~ "less than 35 MB. Please make the EFI System Partition larger."
-#~ msgstr ""
-#~ "ไม่สามารถสร้างพาร์ทิชันระบบของ EFI บนเครื่องชนิดนี้ให้มีขนาดเล็กกว่า 35 MB ได้ "
-#~ "กรุณาเพิ่มขนาดของพาร์ทิชันระบบของ EFI"
-
-#~ msgid "Force UEFI installation?"
-#~ msgstr "บังคับติดตั้งแบบ UEFI หรือไม่?"
-
-#~ msgid ""
-#~ "This machine's firmware has started the installer in UEFI mode but it "
-#~ "looks like there may be existing operating systems already installed "
-#~ "using \"BIOS compatibility mode\". If you continue to install Debian in "
-#~ "UEFI mode, it might be difficult to reboot the machine into any BIOS-mode "
-#~ "operating systems later."
-#~ msgstr ""
-#~ "เฟิร์มแวร์ของเครื่องของคุณได้เรียกโปรแกรมติดตั้งในโหมด UEFI "
-#~ "แต่ดูเหมือนจะมีระบบปฏิบัติการที่ติดตั้งไว้โดยใช้ \"โหมดเข้ากันได้กับ BIOS\" อยู่ "
-#~ "ถ้าคุณดำเนินการติดตั้งเดเบียนในโหมด UEFI ต่อไป "
-#~ "ก็อาจทำให้บูตเครื่องของคุณใหม่เข้าสู่ระบบปฏิบัติการใดๆ ที่ใช้โหมด BIOS ได้ยาก"
-
-#~ msgid ""
-#~ "If you wish to install in UEFI mode and don't care about keeping the "
-#~ "ability to boot one of the existing systems, you have the option to force "
-#~ "that here. If you wish to keep the option to boot an existing operating "
-#~ "system, you should choose NOT to force UEFI installation here."
-#~ msgstr ""
-#~ "ถ้าคุณต้องการติดตั้งในโหมด UEFI "
-#~ "และไม่สนใจที่จะคงความสามารถในการบูตระบบใดระบบหนึ่งที่มีอยู่ "
-#~ "คุณก็สามารถเลือกบังคับให้เป็นเช่นนั้นได้ "
-#~ "แต่ถ้าคุณต้องการรักษาทางเลือกที่จะบูตระบบปฏิบัติการที่มีอยู่ไว้ คุณก็ควรเลือกที่จะ *ไม่* "
-#~ "บังคับติดตั้งแบบ UEFI"
 
 #~ msgid "Installing quik"
 #~ msgstr "กำลังติดตั้ง quik"

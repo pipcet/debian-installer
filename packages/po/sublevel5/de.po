@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-26 22:05+0000\n"
+"POT-Creation-Date: 2019-11-24 22:59+0100\n"
 "PO-Revision-Date: 2016-05-24 20:40+0200\n"
 "Last-Translator: Holger Wansing <linux@wansing-online.de>\n"
 "Language-Team: German <debian-l10n-german@lists.debian.org>\n"
@@ -90,6 +90,124 @@ msgstr ""
 "Ihre Boot-Partition befindet sich nicht auf der ersten Partition Ihrer "
 "Festplatte. Dies ist aber nötig, damit der Computer starten kann. Bitte "
 "gehen Sie zurück und wählen Sie die erste Partition als Boot-Partition aus."
+
+#. Type: text
+#. Description
+#. :sl5:
+#: ../partman-efi.templates:1001
+msgid ""
+"In order to start your new system, the firmware on your Itanium system loads "
+"the boot loader from its private EFI partition on the hard disk.  The boot "
+"loader then loads the operating system from that same partition.  An EFI "
+"partition has a FAT16 file system formatted on it and the bootable flag set. "
+"Most installations place the EFI partition on the first primary partition of "
+"the same hard disk that holds the root file system."
+msgstr ""
+"Damit Ihr Computer Debian starten kann, lädt die Firmware Ihres Itanium-"
+"Systems den Bootloader aus der EFI-Partition der Festplatte. Der Bootloader "
+"lädt dann das Betriebssystem von derselben Partition. Eine EFI-Partition ist "
+"ein FAT16-Dateisystem mit gesetztem »Boot«-Flag. Die meisten Installationen "
+"haben die EFI-Partition in der ersten primären Partition der Festplatte, auf "
+"der sich auch das Wurzeldateisystem befindet."
+
+#. Type: text
+#. Description
+#. :sl5:
+#. Type: text
+#. Description
+#. :sl5:
+#: ../partman-efi.templates:2001 ../partman-efi.templates:4001
+msgid "EFI System Partition"
+msgstr "EFI-System-Partition"
+
+#. Type: boolean
+#. Description
+#. :sl5:
+#: ../partman-efi.templates:3001
+msgid "Go back to the menu and resume partitioning?"
+msgstr "Zurück zum Hauptmenü und Partitionierung fortsetzen?"
+
+#. Type: boolean
+#. Description
+#. :sl5:
+#: ../partman-efi.templates:3001
+msgid "No EFI partition was found."
+msgstr "Es wurde keine EFI-Partition gefunden."
+
+#. Type: text
+#. Description
+#. :sl5:
+#. short variant of 'EFI System Partition'
+#. Up to 10 character positions
+#: ../partman-efi.templates:5001
+msgid "ESP"
+msgstr "ESP"
+
+#. Type: text
+#. Description
+#. :sl5:
+#: ../partman-efi.templates:7001
+msgid "EFI-fat16"
+msgstr "EFI-fat16"
+
+#. Type: error
+#. Description
+#. :sl5:
+#: ../partman-efi.templates:8001
+#, fuzzy
+#| msgid "Partitions to assemble:"
+msgid "EFI partition too small"
+msgstr "Zu assemblierende Partitionen:"
+
+#. Type: error
+#. Description
+#. :sl5:
+#: ../partman-efi.templates:8001
+msgid ""
+"EFI System Partitions on this architecture cannot be created with a size "
+"less than 35 MB. Please make the EFI System Partition larger."
+msgstr ""
+"EFI-System-Partitionen auf dieser Architektur können nicht in einer Größe "
+"unter 35 MB erstellt werden. Bitte vergrößern Sie die EFI-System-Partition."
+
+#. Type: boolean
+#. Description
+#. :sl5:
+#: ../partman-efi.templates:9001
+msgid "Force UEFI installation?"
+msgstr "UEFI-Installation erzwingen?"
+
+#. Type: boolean
+#. Description
+#. :sl5:
+#: ../partman-efi.templates:9001
+msgid ""
+"This machine's firmware has started the installer in UEFI mode but it looks "
+"like there may be existing operating systems already installed using \"BIOS "
+"compatibility mode\". If you continue to install Debian in UEFI mode, it "
+"might be difficult to reboot the machine into any BIOS-mode operating "
+"systems later."
+msgstr ""
+"Die Firmware dieses Rechners hat den Installer im UEFI-Modus gestartet, aber "
+"scheinbar existieren weitere Betriebssysteme auf dem Rechner, die im »BIOS-"
+"Kompatibilitätsmodus« installiert wurden. Wenn Sie mit der Debian-"
+"Installation im UEFI-Modus fortfahren, könnte es später problematisch "
+"werden, eines der anderen Betriebssysteme im BIOS-Modus zu starten."
+
+#. Type: boolean
+#. Description
+#. :sl5:
+#: ../partman-efi.templates:9001
+msgid ""
+"If you wish to install in UEFI mode and don't care about keeping the ability "
+"to boot one of the existing systems, you have the option to force that here. "
+"If you wish to keep the option to boot an existing operating system, you "
+"should choose NOT to force UEFI installation here."
+msgstr ""
+"Falls Sie im UEFI-Modus installieren möchten und die Möglichkeit zum Starten "
+"der anderen Betriebssysteme nicht benötigen, können Sie dies hiermit "
+"erzwingen. Möchten Sie die anderen Betriebssysteme weiterhin startfähig "
+"halten, sollten Sie die UEFI-Installation NICHT fortsetzen."
 
 #. Type: select
 #. Choices

@@ -4538,6 +4538,65 @@ msgstr "Tee loogisen taltiohallinnan (LVM) asetukset"
 msgid "Guided - use entire disk and set up LVM"
 msgstr "Ohjattu - käytä koko levyä ja tee LVM:n asetukset"
 
+#~ msgid "Install the Arcboot boot loader on a hard disk"
+#~ msgstr "Asenna Arcboot-alkulatausohjelma kiintolevylle"
+
+#~ msgid "Disk for boot loader installation:"
+#~ msgstr "Alkulatausohjelma asennetaan levylle:"
+
+#~ msgid ""
+#~ "Arcboot must be installed into the volume header of a disk with a SGI "
+#~ "disklabel. Usually the volume header of /dev/sda is used. Please give the "
+#~ "device name of the disk on which to put arcboot."
+#~ msgstr ""
+#~ "Arcboot on asennettava taltion otsikkoon levylle, jolla on SGI-levynimiö. "
+#~ "Tavallisesti käytetään taltion /dev/sda otsikkoa. Anna sen levyn "
+#~ "laitenimi, johon arcboot asennetaan."
+
+#~ msgid "Arcboot configured to use a serial console"
+#~ msgstr "Arcboot on asetettu käyttämään sarjaporttiin kiinnitettyä päätettä"
+
+#~ msgid ""
+#~ "Arcboot is configured to use the serial port ${PORT} as the console. The "
+#~ "serial port speed is set to ${SPEED}."
+#~ msgstr ""
+#~ "Arcboot on asetettu käyttämään sarjaporttia ${PORT} konsolina. "
+#~ "Sarjaportin nopeudeksi on asetettu ${SPEED}."
+
+#~ msgid "Arcboot installation failed.  Continue anyway?"
+#~ msgstr "Arcbootin asennus epäonnistui. Jatketaanko silti?"
+
+#~ msgid ""
+#~ "The arcboot package failed to install into /target/.  Installing Arcboot "
+#~ "as a boot loader is a required step.  The install problem might however "
+#~ "be unrelated to Arcboot, so continuing the installation may be possible."
+#~ msgstr ""
+#~ "Arcboot-ohjelmapaketin asennus hakemistoon /target/ ei onnistunut. "
+#~ "Arcbootin asennus alkulatausohjelmaksi on pakollinen vaihe. "
+#~ "Asennusongelmat saattavat kuitenkin olla muusta kuin Arcbootista "
+#~ "johtuvia, joten asennuksen jatkaminen on ehkä mahdollista."
+
+#~ msgid "Setting PROM variables for Arcboot"
+#~ msgstr "Annetaan arvot muuttujille PROMissa Arcbootia varten"
+
+#~ msgid ""
+#~ "If this is the first Linux installation on this machine, or if the hard "
+#~ "drives have been repartitioned, some variables need to be set in the PROM "
+#~ "before the system is able to boot normally."
+#~ msgstr ""
+#~ "Jos tämä on koneen ensimmäinen Linux-asennus, tai jos kiintolevyille on "
+#~ "tehty uudet levyosiot, on joidenkin muuttujien arvo asetettava PROMissa "
+#~ "ennen kuin järjestelmä voi käynnistyä normaalisti."
+
+#~ msgid ""
+#~ "At the end of this installation stage, the system will reboot.  After "
+#~ "this, enter the command monitor from the \"Stop for Maintenance\" option, "
+#~ "and enter the following commands:"
+#~ msgstr ""
+#~ "Tämän asennusvaiheen lopussa järjestelmä käynnistetään uudelleen. Avaa "
+#~ "sen jälkeen ”command monitor” valikon kohdasta ”Stop for Maintenance”, ja "
+#~ "kirjoita seuraavat komennot:"
+
 #~ msgid "Continue the install without loading kernel modules?"
 #~ msgstr "Jatketaanko asennusta lataamatta ytimen moduuleita?"
 
@@ -4711,9 +4770,6 @@ msgstr "Ohjattu - käytä koko levyä ja tee LVM:n asetukset"
 
 #~ msgid "NewWorld boot partition"
 #~ msgstr "NewWorld-käynnistysosio"
-
-#~ msgid "Go back to the menu and resume partitioning?"
-#~ msgstr "Palataanko valikkoon jatkamaan osioiden tekoa?"
 
 #~ msgid ""
 #~ "No NewWorld boot partition was found. The yaboot boot loader requires an "
@@ -5153,50 +5209,6 @@ msgstr "Ohjattu - käytä koko levyä ja tee LVM:n asetukset"
 #~| msgid "Registering modules..."
 #~ msgid "Loading ZFS module..."
 #~ msgstr "Rekisteröidään moduulit..."
-
-#~ msgid ""
-#~ "In order to start your new system, the firmware on your Itanium system "
-#~ "loads the boot loader from its private EFI partition on the hard disk.  "
-#~ "The boot loader then loads the operating system from that same "
-#~ "partition.  An EFI partition has a FAT16 file system formatted on it and "
-#~ "the bootable flag set. Most installations place the EFI partition on the "
-#~ "first primary partition of the same hard disk that holds the root file "
-#~ "system."
-#~ msgstr ""
-#~ "Kun uusi järjestelmä käynnistetään lataa Itanium-järjestelmän "
-#~ "laiteohjelmisto alkulatausohjelman kiintolevyltä yksityiseltä EFI-"
-#~ "osioltaan. Alkulatausohjelma lataa sitten käyttöjärjestelmän tuolta "
-#~ "samalta osiolta. EFI-osio on alustettu FAT16-tiedostojärjestelmäksi ja "
-#~ "käynnistyskelpoisuuden ilmaisin on päällä. Useimmat laitteistot "
-#~ "sijoittavat EFI-osion juuritiedostojärjestelmän kanssa samalle "
-#~ "kiintolevylle sen ensimmäiseksi ensisijaiseksi osioksi."
-
-#, fuzzy
-#~| msgid "EFI boot partition"
-#~ msgid "EFI System Partition"
-#~ msgstr "EFI-käynnistysosio"
-
-#~ msgid "No EFI partition was found."
-#~ msgstr "Yhtään EFI-osiota ei löytynyt."
-
-#~ msgid "EFI-fat16"
-#~ msgstr "EFI-fat16"
-
-#, fuzzy
-#~| msgid ""
-#~| "EFI boot partitions on this architecture cannot be created with a size "
-#~| "less than 35 MB. Please make the EFI boot partition larger."
-#~ msgid ""
-#~ "EFI System Partitions on this architecture cannot be created with a size "
-#~ "less than 35 MB. Please make the EFI System Partition larger."
-#~ msgstr ""
-#~ "Tälle arkkitehtuurille ei voi luoda pienempiä kuin 35 MB kokoisia EFI-"
-#~ "käynnistysosioita. Tee EFI-käynnistysosiosta suurempi."
-
-#, fuzzy
-#~| msgid "Abort the installation"
-#~ msgid "Force UEFI installation?"
-#~ msgstr "Keskeytä asennus"
 
 #~ msgid "Installing quik"
 #~ msgstr "Asennetaan quik"

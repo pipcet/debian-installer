@@ -4384,6 +4384,61 @@ msgstr "配置逻辑卷管理器"
 msgid "Guided - use entire disk and set up LVM"
 msgstr "向导 - 使用整个磁盘并配置 LVM"
 
+#~ msgid "Install the Arcboot boot loader on a hard disk"
+#~ msgstr "将 Arcboot 启动引导器安装至硬盘"
+
+#~ msgid "Disk for boot loader installation:"
+#~ msgstr "安装启动引导器的磁盘："
+
+#~ msgid ""
+#~ "Arcboot must be installed into the volume header of a disk with a SGI "
+#~ "disklabel. Usually the volume header of /dev/sda is used. Please give the "
+#~ "device name of the disk on which to put arcboot."
+#~ msgstr ""
+#~ "Arcboot 必须安装在具有 SGI 磁盘卷标的磁盘卷首部。通常被使用的是 /dev/sda。"
+#~ "请给出要安装 arcboot 的磁盘的设备名。"
+
+#~ msgid "Arcboot configured to use a serial console"
+#~ msgstr "Arcboot 被配置为使用串行控制台"
+
+#~ msgid ""
+#~ "Arcboot is configured to use the serial port ${PORT} as the console. The "
+#~ "serial port speed is set to ${SPEED}."
+#~ msgstr ""
+#~ "Arcboot 被配置为使用串行端口 ${PORT} 作为控制台。串行端口速度被设为 "
+#~ "${SPEED}。"
+
+#~ msgid "Arcboot installation failed.  Continue anyway?"
+#~ msgstr "Arcboot 安装失败。仍然继续吗？"
+
+#~ msgid ""
+#~ "The arcboot package failed to install into /target/.  Installing Arcboot "
+#~ "as a boot loader is a required step.  The install problem might however "
+#~ "be unrelated to Arcboot, so continuing the installation may be possible."
+#~ msgstr ""
+#~ "无法将 arcboot 软件包安装到 /target/ 中。安装 Arcboot 作为启动引导器是一个"
+#~ "必要步骤。此安装问题可能并非直接由 Arcboot 引起，因此继续进行安装也许是可"
+#~ "行的。"
+
+#~ msgid "Setting PROM variables for Arcboot"
+#~ msgstr "正在为 Arcboot 设置 PROM 变量"
+
+#~ msgid ""
+#~ "If this is the first Linux installation on this machine, or if the hard "
+#~ "drives have been repartitioned, some variables need to be set in the PROM "
+#~ "before the system is able to boot normally."
+#~ msgstr ""
+#~ "如果这是第一次在这台机器上安装 Linux，或者对硬盘进行了重新分区，那么在系统"
+#~ "能正常启动前，您需要在 PROM 中设置一些变量。"
+
+#~ msgid ""
+#~ "At the end of this installation stage, the system will reboot.  After "
+#~ "this, enter the command monitor from the \"Stop for Maintenance\" option, "
+#~ "and enter the following commands:"
+#~ msgstr ""
+#~ "在此安装阶段结束时，系统将被重启。然后，请通过“Stop for Maintenance”选项进"
+#~ "入 command monitor，并输入以下命令："
+
 #~ msgid "Continue the install without loading kernel modules?"
 #~ msgstr "未加载内核模块，继续安装吗？"
 
@@ -4544,9 +4599,6 @@ msgstr "向导 - 使用整个磁盘并配置 LVM"
 
 #~ msgid "NewWorld boot partition"
 #~ msgstr "NewWorld 启动分区"
-
-#~ msgid "Go back to the menu and resume partitioning?"
-#~ msgstr "返回菜单并恢复分区进程吗？"
 
 #~ msgid ""
 #~ "No NewWorld boot partition was found. The yaboot boot loader requires an "
@@ -4931,60 +4983,6 @@ msgstr "向导 - 使用整个磁盘并配置 LVM"
 
 #~ msgid "Loading ZFS module..."
 #~ msgstr "正在加载 ZFS 模块..."
-
-#~ msgid ""
-#~ "In order to start your new system, the firmware on your Itanium system "
-#~ "loads the boot loader from its private EFI partition on the hard disk.  "
-#~ "The boot loader then loads the operating system from that same "
-#~ "partition.  An EFI partition has a FAT16 file system formatted on it and "
-#~ "the bootable flag set. Most installations place the EFI partition on the "
-#~ "first primary partition of the same hard disk that holds the root file "
-#~ "system."
-#~ msgstr ""
-#~ "为了启动新系统，您的安腾系统上的固件会从硬盘上其私有的 EFI 分区中装载启动"
-#~ "引导程序。然后由启动引导程序装载同一分区上的操作系统。EFI 分区包含一个 "
-#~ "FAT16 格式的文件系统和可启动标志。绝大多数安装程序都将 EFI 分区设为与根文"
-#~ "件系统同一硬盘的第一主分区。"
-
-#~ msgid "EFI System Partition"
-#~ msgstr "EFI 系统分区"
-
-#~ msgid "No EFI partition was found."
-#~ msgstr "未找到 EFI 启动分区。"
-
-#~ msgid "ESP"
-#~ msgstr "系统分区"
-
-#~ msgid "EFI-fat16"
-#~ msgstr "EFI-fat16"
-
-#~ msgid ""
-#~ "EFI System Partitions on this architecture cannot be created with a size "
-#~ "less than 35 MB. Please make the EFI System Partition larger."
-#~ msgstr "此架构上的 EFI 系统分区不可小于 35MB。请扩大 EFI 系统分区。"
-
-#~ msgid "Force UEFI installation?"
-#~ msgstr "强制 UEFI 安装？"
-
-#~ msgid ""
-#~ "This machine's firmware has started the installer in UEFI mode but it "
-#~ "looks like there may be existing operating systems already installed "
-#~ "using \"BIOS compatibility mode\". If you continue to install Debian in "
-#~ "UEFI mode, it might be difficult to reboot the machine into any BIOS-mode "
-#~ "operating systems later."
-#~ msgstr ""
-#~ "机器以 UEFI 模式启动了安装器，但是似乎已经存在使用 BIOS 兼容模式安装的系"
-#~ "统。如果继续以 UEFI 模式安装 Debian，可能非常难以重启进入其他 BIOS 模式的"
-#~ "系统。"
-
-#~ msgid ""
-#~ "If you wish to install in UEFI mode and don't care about keeping the "
-#~ "ability to boot one of the existing systems, you have the option to force "
-#~ "that here. If you wish to keep the option to boot an existing operating "
-#~ "system, you should choose NOT to force UEFI installation here."
-#~ msgstr ""
-#~ "如果希望以 UEFI 模式安装且无意再启动现有的系统，此处有强制选项。如果要保持"
-#~ "现有系统可启动，不要选择强制 UEFI 安装。"
 
 #~ msgid "Installing quik"
 #~ msgstr "正在安装 quik"

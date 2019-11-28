@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-26 22:05+0000\n"
+"POT-Creation-Date: 2019-11-24 22:59+0100\n"
 "PO-Revision-Date: 2017-06-11 11:40+0800\n"
 "Last-Translator: Yangfl <mmyangfl@gmail.com>\n"
 "Language-Team:  <debian-l10n-chinese@lists.debian.org>\n"
@@ -88,6 +88,115 @@ msgid ""
 msgstr ""
 "您的启动分区并非位于硬盘的第一分区上。为了启动您的计算机必须如此。请返回并使"
 "用第一主分区作为启动分区。"
+
+#. Type: text
+#. Description
+#. :sl5:
+#: ../partman-efi.templates:1001
+msgid ""
+"In order to start your new system, the firmware on your Itanium system loads "
+"the boot loader from its private EFI partition on the hard disk.  The boot "
+"loader then loads the operating system from that same partition.  An EFI "
+"partition has a FAT16 file system formatted on it and the bootable flag set. "
+"Most installations place the EFI partition on the first primary partition of "
+"the same hard disk that holds the root file system."
+msgstr ""
+"为了启动新系统，您的安腾系统上的固件会从硬盘上其私有的 EFI 分区中装载启动引导"
+"程序。然后由启动引导程序装载同一分区上的操作系统。EFI 分区包含一个 FAT16 格式"
+"的文件系统和可启动标志。绝大多数安装程序都将 EFI 分区设为与根文件系统同一硬盘"
+"的第一主分区。"
+
+#. Type: text
+#. Description
+#. :sl5:
+#. Type: text
+#. Description
+#. :sl5:
+#: ../partman-efi.templates:2001 ../partman-efi.templates:4001
+msgid "EFI System Partition"
+msgstr "EFI 系统分区"
+
+#. Type: boolean
+#. Description
+#. :sl5:
+#: ../partman-efi.templates:3001
+msgid "Go back to the menu and resume partitioning?"
+msgstr "返回菜单并恢复分区进程吗？"
+
+#. Type: boolean
+#. Description
+#. :sl5:
+#: ../partman-efi.templates:3001
+msgid "No EFI partition was found."
+msgstr "未找到 EFI 启动分区。"
+
+#. Type: text
+#. Description
+#. :sl5:
+#. short variant of 'EFI System Partition'
+#. Up to 10 character positions
+#: ../partman-efi.templates:5001
+msgid "ESP"
+msgstr "系统分区"
+
+#. Type: text
+#. Description
+#. :sl5:
+#: ../partman-efi.templates:7001
+msgid "EFI-fat16"
+msgstr "EFI-fat16"
+
+#. Type: error
+#. Description
+#. :sl5:
+#: ../partman-efi.templates:8001
+#, fuzzy
+#| msgid "Partitions to assemble:"
+msgid "EFI partition too small"
+msgstr "要装配的分区："
+
+#. Type: error
+#. Description
+#. :sl5:
+#: ../partman-efi.templates:8001
+msgid ""
+"EFI System Partitions on this architecture cannot be created with a size "
+"less than 35 MB. Please make the EFI System Partition larger."
+msgstr "此架构上的 EFI 系统分区不可小于 35MB。请扩大 EFI 系统分区。"
+
+#. Type: boolean
+#. Description
+#. :sl5:
+#: ../partman-efi.templates:9001
+msgid "Force UEFI installation?"
+msgstr "强制 UEFI 安装？"
+
+#. Type: boolean
+#. Description
+#. :sl5:
+#: ../partman-efi.templates:9001
+msgid ""
+"This machine's firmware has started the installer in UEFI mode but it looks "
+"like there may be existing operating systems already installed using \"BIOS "
+"compatibility mode\". If you continue to install Debian in UEFI mode, it "
+"might be difficult to reboot the machine into any BIOS-mode operating "
+"systems later."
+msgstr ""
+"机器以 UEFI 模式启动了安装器，但是似乎已经存在使用 BIOS 兼容模式安装的系统。"
+"如果继续以 UEFI 模式安装 Debian，可能非常难以重启进入其他 BIOS 模式的系统。"
+
+#. Type: boolean
+#. Description
+#. :sl5:
+#: ../partman-efi.templates:9001
+msgid ""
+"If you wish to install in UEFI mode and don't care about keeping the ability "
+"to boot one of the existing systems, you have the option to force that here. "
+"If you wish to keep the option to boot an existing operating system, you "
+"should choose NOT to force UEFI installation here."
+msgstr ""
+"如果希望以 UEFI 模式安装且无意再启动现有的系统，此处有强制选项。如果要保持现"
+"有系统可启动，不要选择强制 UEFI 安装。"
 
 #. Type: select
 #. Choices

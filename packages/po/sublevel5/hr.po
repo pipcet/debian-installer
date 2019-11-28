@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Debian-installer 1st-stage master file HR\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-26 22:05+0000\n"
+"POT-Creation-Date: 2019-11-24 22:59+0100\n"
 "PO-Revision-Date: 2019-07-04 17:02+0000\n"
 "Last-Translator: gogogogi <trebelnik2@gmail.com>\n"
 "Language-Team: Croatian <lokalizacija@linux.hr>\n"
@@ -87,6 +87,123 @@ msgstr ""
 "Vaša particija pokretanja nije prva particija vašeg čvrstog diska. Vašem "
 "računalu je to potrebno za pokretanje sustava.  Vratite se natrag i "
 "upotrijebite ext2 datotečni sustav."
+
+#. Type: text
+#. Description
+#. :sl5:
+#: ../partman-efi.templates:1001
+msgid ""
+"In order to start your new system, the firmware on your Itanium system loads "
+"the boot loader from its private EFI partition on the hard disk.  The boot "
+"loader then loads the operating system from that same partition.  An EFI "
+"partition has a FAT16 file system formatted on it and the bootable flag set. "
+"Most installations place the EFI partition on the first primary partition of "
+"the same hard disk that holds the root file system."
+msgstr ""
+"Kako bi pokrenuo vaš novi sustav, firmware vašeg Itanium računala učitava "
+"boot učitavač s njegove privatne EFI particije na tvrdome disku. Boot "
+"učitavač tada učitava operacijski sustav s te iste particije. EFI particija "
+"formatirana je kao FAT16 datotečni sustav i označena bootable zastavicom. "
+"Većina instalacija smješta EFI particiju na prvu primarnu particiju istoga "
+"tvrdog diska koji sadrži i korijenski datotečni sustav."
+
+#. Type: text
+#. Description
+#. :sl5:
+#. Type: text
+#. Description
+#. :sl5:
+#: ../partman-efi.templates:2001 ../partman-efi.templates:4001
+msgid "EFI System Partition"
+msgstr "EFI sistemska particija"
+
+#. Type: boolean
+#. Description
+#. :sl5:
+#: ../partman-efi.templates:3001
+msgid "Go back to the menu and resume partitioning?"
+msgstr "Vrati se u izbornik i nastavi particioniranje?"
+
+#. Type: boolean
+#. Description
+#. :sl5:
+#: ../partman-efi.templates:3001
+msgid "No EFI partition was found."
+msgstr "Nije pronađena EFI particija."
+
+#. Type: text
+#. Description
+#. :sl5:
+#. short variant of 'EFI System Partition'
+#. Up to 10 character positions
+#: ../partman-efi.templates:5001
+msgid "ESP"
+msgstr "ESP"
+
+#. Type: text
+#. Description
+#. :sl5:
+#: ../partman-efi.templates:7001
+msgid "EFI-fat16"
+msgstr "EFI-fat16"
+
+#. Type: error
+#. Description
+#. :sl5:
+#: ../partman-efi.templates:8001
+#, fuzzy
+#| msgid "Partitions to assemble:"
+msgid "EFI partition too small"
+msgstr "Particije za sastavljanje:"
+
+#. Type: error
+#. Description
+#. :sl5:
+#: ../partman-efi.templates:8001
+msgid ""
+"EFI System Partitions on this architecture cannot be created with a size "
+"less than 35 MB. Please make the EFI System Partition larger."
+msgstr ""
+"Nije moguće napraviti EFI sistemske particije za ovu arhitekturu manje od 35 "
+"MB. Molim napravite veću EFI sistemsku particiju."
+
+#. Type: boolean
+#. Description
+#. :sl5:
+#: ../partman-efi.templates:9001
+msgid "Force UEFI installation?"
+msgstr "Prisilno izvrši UEFI instalaciju?"
+
+#. Type: boolean
+#. Description
+#. :sl5:
+#: ../partman-efi.templates:9001
+msgid ""
+"This machine's firmware has started the installer in UEFI mode but it looks "
+"like there may be existing operating systems already installed using \"BIOS "
+"compatibility mode\". If you continue to install Debian in UEFI mode, it "
+"might be difficult to reboot the machine into any BIOS-mode operating "
+"systems later."
+msgstr ""
+"Firmware ovog računala je započeo instalaciju u UEFI načinu, ali vjerojatno "
+"postoje operacijski sustavi instalirani korištenjem \"BIOS kompatibilnog "
+"načina\". Ako želite instalirati Debian u UEFI načinu, možda ćete imati "
+"poteškoće prilikom startanja operacijskih sustava koji koriste BIOS način."
+
+#. Type: boolean
+#. Description
+#. :sl5:
+#: ../partman-efi.templates:9001
+msgid ""
+"If you wish to install in UEFI mode and don't care about keeping the ability "
+"to boot one of the existing systems, you have the option to force that here. "
+"If you wish to keep the option to boot an existing operating system, you "
+"should choose NOT to force UEFI installation here."
+msgstr ""
+"Ako želite instalirati u UEFI načinu i ne treba vam mogućnost učitavanja već "
+"postojećih sustava, možete ovdje prisilno izvršiti instalaciju. Ako vam "
+"treba navedena mogućnost, ovdje biste trebali izabrati da NE želite prisilno "
+"izvršiti UEFI instalaciju."
 
 #. Type: select
 #. Choices

@@ -4434,6 +4434,65 @@ msgstr "Stilla Rökeintakastjórann"
 msgid "Guided - use entire disk and set up LVM"
 msgstr "Leiðbeint - nota allan diskinn og setja upp rökeintakastjóra (LVM)"
 
+#~ msgid "Install the Arcboot boot loader on a hard disk"
+#~ msgstr "Setja Arcboot ræsistjórann upp á harðan disk"
+
+#~ msgid "Disk for boot loader installation:"
+#~ msgstr "Diskur þar sem setja á upp ræsistjóra:"
+
+#~ msgid ""
+#~ "Arcboot must be installed into the volume header of a disk with a SGI "
+#~ "disklabel. Usually the volume header of /dev/sda is used. Please give the "
+#~ "device name of the disk on which to put arcboot."
+#~ msgstr ""
+#~ "Arcboot verður að vera sett upp inn í diskhaus (volume header) á diski "
+#~ "með SGI diskmerkingu (disklabel). Venjulega er diskhausinn á /dev/sda "
+#~ "notaður. Gefðu upp heiti disksins þar sem setja á upp arcboot."
+
+#~ msgid "Arcboot configured to use a serial console"
+#~ msgstr ""
+#~ "Arcboot er stillt til þess að nota raðbundna skipanalínu (serial console)"
+
+#~ msgid ""
+#~ "Arcboot is configured to use the serial port ${PORT} as the console. The "
+#~ "serial port speed is set to ${SPEED}."
+#~ msgstr ""
+#~ "Arcboot er stillt til þess að nota raðtengið ${PORT} sem skipanalínu. "
+#~ "Hraði raðtengisins er ${SPEED}."
+
+#~ msgid "Arcboot installation failed.  Continue anyway?"
+#~ msgstr "Uppsetning á Arcboot mistókst. Halda samt áfram?"
+
+#~ msgid ""
+#~ "The arcboot package failed to install into /target/.  Installing Arcboot "
+#~ "as a boot loader is a required step.  The install problem might however "
+#~ "be unrelated to Arcboot, so continuing the installation may be possible."
+#~ msgstr ""
+#~ "Uppsetning á Arcboot pakkanum í /target/ mistókst. Það er nauðsynlegt að "
+#~ "setja Yaboot upp sem ræsistjóra. Vandamálið gæti þó verið óskylt Arcboot, "
+#~ "þannig að það gæti verið hægt að halda áfram með uppsetningu."
+
+#~ msgid "Setting PROM variables for Arcboot"
+#~ msgstr "Set PROM breytur fyrir Arcboot"
+
+#~ msgid ""
+#~ "If this is the first Linux installation on this machine, or if the hard "
+#~ "drives have been repartitioned, some variables need to be set in the PROM "
+#~ "before the system is able to boot normally."
+#~ msgstr ""
+#~ "Ef þetta er fyrsta Linux-uppsetningin á þessari vél, eða ef að diskar "
+#~ "hafa verið endursneiddir, þá gæti þurft að endurstilla einhverjar breytur "
+#~ "í PROM áður en kerfið getur ræst eðlilega."
+
+#~ msgid ""
+#~ "At the end of this installation stage, the system will reboot.  After "
+#~ "this, enter the command monitor from the \"Stop for Maintenance\" option, "
+#~ "and enter the following commands:"
+#~ msgstr ""
+#~ "Við lok þessa uppsetningarferlis mun kerfið verða endurræst. Eftir það "
+#~ "ættirðu að opna skipanalínu úr \"Stöðva fyrir viðhald\" valmöguleikanum "
+#~ "og setja inn eftirfarandi skipanir:"
+
 #~ msgid "Continue the install without loading kernel modules?"
 #~ msgstr "Halda uppsetningu áfram án þess að hlaða inn kjarnaeiningum?"
 
@@ -4607,9 +4666,6 @@ msgstr "Leiðbeint - nota allan diskinn og setja upp rökeintakastjóra (LVM)"
 
 #~ msgid "NewWorld boot partition"
 #~ msgstr "Ræsanleg NewWorld sneið"
-
-#~ msgid "Go back to the menu and resume partitioning?"
-#~ msgstr "Fara aftur í valmynd og halda áfram með sneiðingu?"
 
 #~ msgid ""
 #~ "No NewWorld boot partition was found. The yaboot boot loader requires an "
@@ -4964,49 +5020,6 @@ msgstr "Leiðbeint - nota allan diskinn og setja upp rökeintakastjóra (LVM)"
 #~| msgid "Registering modules..."
 #~ msgid "Loading ZFS module..."
 #~ msgstr "Skrái kjarnaeiningar..."
-
-#~ msgid ""
-#~ "In order to start your new system, the firmware on your Itanium system "
-#~ "loads the boot loader from its private EFI partition on the hard disk.  "
-#~ "The boot loader then loads the operating system from that same "
-#~ "partition.  An EFI partition has a FAT16 file system formatted on it and "
-#~ "the bootable flag set. Most installations place the EFI partition on the "
-#~ "first primary partition of the same hard disk that holds the root file "
-#~ "system."
-#~ msgstr ""
-#~ "Til þess að ræsa kerfið þitt mun fastbúnaður Itanium kerfisins hlaða "
-#~ "ræsihleðsluforrit frá sinni einka EFI sneið á harða disknum. "
-#~ "Ræsihleðsluforritið mun síða hlaða stýrikerfinu frá sömu sneið. EFI sneið "
-#~ "er forsniðin með FAT16 forsniði og er ræsanlegt flaggið sett. Flestar "
-#~ "uppsetningar koma EFI sneiðinni fyrir á fyrstu aðalsneiðinni á sama harða "
-#~ "disk og hefur að geyma rótar skráarkerfið."
-
-#, fuzzy
-#~| msgid "EFI boot partition"
-#~ msgid "EFI System Partition"
-#~ msgstr "EFI ræsisneið"
-
-#~ msgid "No EFI partition was found."
-#~ msgstr "Engin EFI disksneið fannst."
-
-#~ msgid "EFI-fat16"
-#~ msgstr "EFI-fat16"
-
-#, fuzzy
-#~| msgid ""
-#~| "EFI boot partitions on this architecture cannot be created with a size "
-#~| "less than 35 MB. Please make the EFI boot partition larger."
-#~ msgid ""
-#~ "EFI System Partitions on this architecture cannot be created with a size "
-#~ "less than 35 MB. Please make the EFI System Partition larger."
-#~ msgstr ""
-#~ "EFI ræsidisksneiðar minni en 35 MB er ekki hægt að búa til á þessari "
-#~ "tegund kerfis. Endilega stækkaðu EFI disksneiðina."
-
-#, fuzzy
-#~| msgid "Abort the installation"
-#~ msgid "Force UEFI installation?"
-#~ msgstr "Hætta við uppsetninguna"
 
 #~ msgid "Installing quik"
 #~ msgstr "Set upp quik"

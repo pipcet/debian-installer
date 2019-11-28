@@ -4522,6 +4522,65 @@ msgstr "Konfiguratu bolumen logikoen kudeatzailea"
 msgid "Guided - use entire disk and set up LVM"
 msgstr "Gidatua - erabili disko osoa eta konfiguratu LVM"
 
+#~ msgid "Install the Arcboot boot loader on a hard disk"
+#~ msgstr "Instalatu Arcboot abioko kargatzailea disko gogorrean"
+
+#~ msgid "Disk for boot loader installation:"
+#~ msgstr "Abioko kargatzailea instalatzeko diskoa:"
+
+#~ msgid ""
+#~ "Arcboot must be installed into the volume header of a disk with a SGI "
+#~ "disklabel. Usually the volume header of /dev/sda is used. Please give the "
+#~ "device name of the disk on which to put arcboot."
+#~ msgstr ""
+#~ "Arcboot SGI disko-etiketa duen diskoaren goiburuko bolumenean instalatu "
+#~ "behar da. Normalean /dev/sda-ren goiburuko bolumena erabiltzen da. Eman "
+#~ "arcboot jartzeko diskoaren gailu-izena."
+
+#~ msgid "Arcboot configured to use a serial console"
+#~ msgstr "Arcboot serieko kontsola erabiltzeko konfiguratuta"
+
+#~ msgid ""
+#~ "Arcboot is configured to use the serial port ${PORT} as the console. The "
+#~ "serial port speed is set to ${SPEED}."
+#~ msgstr ""
+#~ "Arcboot kontsola gisa serieko ${PORT} ataka erabiltzeko konfiguratu da. "
+#~ "Serieko atakaren abiaduraren ezarpena ${SPEED} da."
+
+#~ msgid "Arcboot installation failed.  Continue anyway?"
+#~ msgstr "Ezin izan da Arcboot instalatu. Jarraitu nahi duzu hala ere?"
+
+#~ msgid ""
+#~ "The arcboot package failed to install into /target/.  Installing Arcboot "
+#~ "as a boot loader is a required step.  The install problem might however "
+#~ "be unrelated to Arcboot, so continuing the installation may be possible."
+#~ msgstr ""
+#~ "Huts egin du arcboot paketea /target/-en instalatzean. Arcboot abioko "
+#~ "kargatzaile gisa instalatzea ezinbesteko urratsa da. Instalatzeko arazoa, "
+#~ "ordea, baliteke Arcboot-ekin zerikusirik ez izatea; beraz, agian "
+#~ "instalatzen jarrai daiteke."
+
+#~ msgid "Setting PROM variables for Arcboot"
+#~ msgstr "PROM aldagaiak ezartzea Arcboot-erako"
+
+#~ msgid ""
+#~ "If this is the first Linux installation on this machine, or if the hard "
+#~ "drives have been repartitioned, some variables need to be set in the PROM "
+#~ "before the system is able to boot normally."
+#~ msgstr ""
+#~ "Hau makina honetako lehen Linux instalazioa bada, edo disko gogorrean "
+#~ "berriro partizioak egin badira, aldagai batzuk ezarri behar dira PROMen "
+#~ "sistema modu arruntean abiarazteko gai izan baino lehen."
+
+#~ msgid ""
+#~ "At the end of this installation stage, the system will reboot.  After "
+#~ "this, enter the command monitor from the \"Stop for Maintenance\" option, "
+#~ "and enter the following commands:"
+#~ msgstr ""
+#~ "Instalazioko atal honen bukaeran, sistema berrabiarazi egingo da. "
+#~ "Ondoren, sartu komando-monitorea \"Gelditu mantentze-lanetarako\" "
+#~ "aukeran, eta sartu honako komandoa:"
+
 #~ msgid "Continue the install without loading kernel modules?"
 #~ msgstr "Instalatzen jarraitu nahi duzu nukleo moduluak kargatu gabe?"
 
@@ -4693,9 +4752,6 @@ msgstr "Gidatua - erabili disko osoa eta konfiguratu LVM"
 
 #~ msgid "NewWorld boot partition"
 #~ msgstr "NewWorld abioko partizioa"
-
-#~ msgid "Go back to the menu and resume partitioning?"
-#~ msgstr "Menura itzuli eta partizioak egiten jarraitu nahi duzu?"
 
 #~ msgid ""
 #~ "No NewWorld boot partition was found. The yaboot boot loader requires an "
@@ -5142,50 +5198,6 @@ msgstr "Gidatua - erabili disko osoa eta konfiguratu LVM"
 #~| msgid "Registering modules..."
 #~ msgid "Loading ZFS module..."
 #~ msgstr "Moduluak erregistratzen..."
-
-#~ msgid ""
-#~ "In order to start your new system, the firmware on your Itanium system "
-#~ "loads the boot loader from its private EFI partition on the hard disk.  "
-#~ "The boot loader then loads the operating system from that same "
-#~ "partition.  An EFI partition has a FAT16 file system formatted on it and "
-#~ "the bootable flag set. Most installations place the EFI partition on the "
-#~ "first primary partition of the same hard disk that holds the root file "
-#~ "system."
-#~ msgstr ""
-#~ "Debian sistema berria abiarazteko, Itanium sistemako firmwareak abioko "
-#~ "kargatzailea kargatzen du disko gogorreko EFI partizio pribatutik. "
-#~ "Ondoren, abioko kargatzaileak sistema eragilea kargatzen du partizio "
-#~ "horretatik. EFI partizioak FAT16 fitxategi sistema formateatuta du eta "
-#~ "abiagarriaren bandera ezarrita du. Instalazio gehienetan EFI partizioa "
-#~ "erroko fitxategi-sistema eusten duen disko gogorraren lehen mailako "
-#~ "partizioan jartzen da."
-
-#, fuzzy
-#~| msgid "EFI boot partition"
-#~ msgid "EFI System Partition"
-#~ msgstr "EFI abioko partizioa"
-
-#~ msgid "No EFI partition was found."
-#~ msgstr "Ez da EFI partiziorik aurkitu."
-
-#~ msgid "EFI-fat16"
-#~ msgstr "EFI-fat16"
-
-#, fuzzy
-#~| msgid ""
-#~| "EFI boot partitions on this architecture cannot be created with a size "
-#~| "less than 35 MB. Please make the EFI boot partition larger."
-#~ msgid ""
-#~ "EFI System Partitions on this architecture cannot be created with a size "
-#~ "less than 35 MB. Please make the EFI System Partition larger."
-#~ msgstr ""
-#~ "Arkitektura honetan ezin da 25 MB baino txikiagoak direEFI abio "
-#~ "partiziorik sortu. Mesedez EFI abio partizioa handitu ezazu."
-
-#, fuzzy
-#~| msgid "Abort the installation"
-#~ msgid "Force UEFI installation?"
-#~ msgstr "Utzi bertan behera instalazioa"
 
 #~ msgid "Installing quik"
 #~ msgstr "quik instalatzen"
