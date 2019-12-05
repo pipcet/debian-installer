@@ -14,16 +14,16 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-29 20:02+0000\n"
-"PO-Revision-Date: 2018-02-07 21:39+0000\n"
-"Last-Translator: Слободан Симић(Slobodan Simić) <slsimic@gmail.com>\n"
+"PO-Revision-Date: 2019-12-05 21:45+0000\n"
+"Last-Translator: Filipovic Dragan <filipovic@tutanota.com>\n"
 "Language-Team: Serbian <debian-l10n-serbian@lists.debian.org>\n"
 "Language: sr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 2.19-dev\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
+"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 3.10-dev\n"
 
 #. Type: error
 #. Description
@@ -242,10 +242,8 @@ msgstr "Учитавање ${PACKAGE} неуспешно из непознати
 #. Description
 #. :sl2:
 #: ../anna.templates:8001
-#, fuzzy
-#| msgid "No disk found"
 msgid "No kernel modules found"
-msgstr "Није пронађен ниједан диск"
+msgstr "Није пронађен модул језгра"
 
 #. Type: error
 #. Description
@@ -267,6 +265,8 @@ msgid ""
 "You should make sure that your installation image is up-to-date, or - if "
 "that's the case - try a different mirror, preferably deb.debian.org."
 msgstr ""
+"Проверите да ли је ваша инсталациона слика ажурирана или - ако је то случај -"
+" покушајте са другим сервером, по могућности са deb.debian.org."
 
 #. Type: select
 #. Description
@@ -489,68 +489,50 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:1001
-#, fuzzy
-#| msgid "Load drivers from removable media"
 msgid "Load drivers from removable media?"
-msgstr "Учитај драјвере са изменљивог медијума"
+msgstr "Учитај драјвере са изменљивог медија?"
 
 #. Type: boolean
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:1001
 msgid "No device for installation media was detected."
-msgstr ""
+msgstr "Није откривен уређај са инсталационим медијем."
 
 #. Type: boolean
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:1001
-#, fuzzy
-#| msgid ""
-#| "You may need to load additional CD-ROM drivers from removable media, such "
-#| "as a driver floppy. If you have such media available now, insert it, and "
-#| "continue. Otherwise, you will be given the option to manually select CD-"
-#| "ROM modules."
 msgid ""
 "You may need to load additional drivers from removable media, such as a "
 "driver floppy or a USB stick. If you have these available now, insert the "
 "media, and continue. Otherwise, you will be given the option to manually "
 "select some modules."
 msgstr ""
-"Можда ћете морати учитати додатне драјвере за CD-ROM са изменљивих медија "
-"као што је флопи диск. Ако имате такве медијуме, убаците их и наставите са "
-"инсталацијом. У супротном, пружиће вам се опција да ручно изаберете CD-ROM "
+"Можда ћете морати учитати додатне драјвере са изменљивих медија као што је "
+"флопи или УСБ диск. Ако имате такве медијуме, убаците их и наставите са "
+"инсталацијом. У супротном, пружиће вам се опција да ручно изаберете поједине "
 "модуле."
 
 #. Type: boolean
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:3001
-#, fuzzy
-#| msgid "Manually select a CD-ROM module and device?"
 msgid "Manually select a module and device for installation media?"
-msgstr "Ручно изабери CD-ROM модул и уређај?"
+msgstr "Ручно изабери модул и уређај за инсталациони медиј?"
 
 #. Type: boolean
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:3001
-#, fuzzy
-#| msgid "No common CD-ROM drive was detected."
 msgid "No device for installation media (like a CD-ROM device) was detected."
-msgstr "Није пронађен ниједан уобичајени CD-ROM уређај."
+msgstr ""
+"Није откривен ниједан уређај за инсталациони медиј (попут ЦД-РОМ уређаја)."
 
 #. Type: boolean
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:3001
-#, fuzzy
-#| msgid ""
-#| "Your CD-ROM drive may be an old Mitsumi or another non-IDE, non-SCSI CD-"
-#| "ROM drive. In that case you should choose which module to load and the "
-#| "device to use. If you don't know which module and device are needed, look "
-#| "for some documentation or try a network installation instead of a CD-ROM "
-#| "installation."
 msgid ""
 "If your CD-ROM drive is an old Mitsumi or another non-IDE, non-SCSI CD-ROM "
 "drive, you should choose which module to load and the device to use. If you "
@@ -558,87 +540,69 @@ msgid ""
 "or try a network installation."
 msgstr ""
 "Могуће да је ваш CD-ROM стари Mitsumi или други не-IDE, не-SCSI CD-ROM "
-"уређај. У том случају изаберите који модул учитати и који уређај користити. "
-"Ако не знате који модули и уређаји су потребни погледајте документацију или "
-"пробајте инсталацију преко мреже уместо CD-ROM инсталације."
+"уређај, треба да изаберите који модул учитати и који уређај користити. Ако "
+"не знате који модули и уређаји су потребни погледајте документацију или "
+"пробајте инсталацију преко мреже."
 
 #. Type: boolean
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:4001
-#, fuzzy
-#| msgid "Remote installation password:"
 msgid "Retry mounting installation media?"
-msgstr "Лозинка за удаљену инсталацију:"
+msgstr "Желите поново монтирати инсталациони медиј?"
 
 #. Type: boolean
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:4001
-#, fuzzy
-#| msgid ""
-#| "Your installation CD-ROM couldn't be mounted. This probably means that "
-#| "the CD-ROM was not in the drive. If so you can insert it and try again."
 msgid ""
 "Your installation media couldn't be mounted. When installing from CD-ROM, "
 "this probably means that the disk was not in the drive. If so you can insert "
 "it and try again."
 msgstr ""
-"Ваш инсталациони CD-ROM није могао бити монтиран. Највероватније CD-ROM није "
-"у погону. У том случају, убаците CD-ROM и покушајте поново."
+"Ваш инсталациони медиј није могао бити монтиран. Када инсталирате са CD-ROM, "
+"највероватније значи да није у погону. Ако је тако, убаците и покушајте "
+"поново."
 
 #. Type: select
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:5001
-#, fuzzy
-#| msgid "Module needed for accessing the CD-ROM:"
 msgid "Module needed for accessing the installation media:"
-msgstr "Модул потребан за приступ CD-ROM-у:"
+msgstr "Модул потребан за приступ инсталационом медију:"
 
 #. Type: select
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:5001
-#, fuzzy
-#| msgid ""
-#| "The automatic detection didn't find a CD-ROM drive. You can try to load a "
-#| "specific module if you have an unusual CD-ROM drive (that is neither IDE "
-#| "nor SCSI)."
 msgid ""
 "The automatic detection didn't find a drive for installation media. When "
 "installing from CD-ROM and you have an unusual CD-ROM drive (that is neither "
 "IDE nor SCSI), you can try to load a specific module."
 msgstr ""
-"Аутоматска претрага није пронашла CD-ROM погон. Ако имате необичан CD-ROM "
-"(нити IDE, нити SCSI), можете покушати учитати одговарајући модул."
+"Аутоматска претрага није пронашла управљач за инсталациони медиј. Ако "
+"инсталирате са CD-ROM и имате необичан уређај (нити IDE, нити SCSI), можете "
+"покушати учитати одговарајући модул."
 
 #. Type: string
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:6001
-#, fuzzy
-#| msgid "Device file for accessing the CD-ROM:"
 msgid "Device file for accessing the installation media:"
-msgstr "Фајл уређаја за приступ CD-ROM-у:"
+msgstr "Фајл уређаја за приступ инсталационом медију:"
 
 #. Type: string
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:6001
-#, fuzzy
-#| msgid ""
-#| "In order to access your CD-ROM drive, please enter the device file that "
-#| "should be used. Non-standard CD-ROM drives use non-standard device files "
-#| "(such as /dev/mcdx)."
 msgid ""
 "In order to access your installation media (like your CD-ROM), please enter "
 "the device file that should be used. Non-standard CD-ROM drives use non-"
 "standard device files (such as /dev/mcdx)."
 msgstr ""
-"Унесите фајл уређаја који ће се користити за приступ вашем CD-ROM-у. "
-"Неуобичајени CD-ROM погони користе неуобичајене фајлове уређаја (нпр. /dev/"
-"mcdx)."
+"Унесите фајл уређаја који ће се користити за приступ вашем инсталационом "
+"медију (као CD-ROM). Неуобичајени CD-ROM погони користе неуобичајене фајлове "
+"уређаја (нпр. /dev/mcdx)."
 
 #. Type: string
 #. Description
@@ -657,54 +621,40 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:12001
-#, fuzzy
-#| msgid "UNetbootin media detected"
 msgid "Installation media detected"
-msgstr "UNetbootin медиј је откривен"
+msgstr "Инсталациони медиј је откривен"
 
 #. Type: note
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:12001
-#, fuzzy
-#| msgid ""
-#| "The CD-ROM autodetection was successful. A CD-ROM drive has been found "
-#| "and it currently contains the CD ${cdname}. The installation will now "
-#| "continue."
 msgid ""
 "Autodetection of the installation media was successful. A drive has been "
 "found that contains '${cdname}'. The installation will now continue."
 msgstr ""
-"Аутоматско тражење CD-ROM-а је било успешно. CD-ROM уређај је пронађен и "
-"садржи CD ${cdname}. Инсталација ће се наставити."
+"Аутоматско тражење инсталационог медија је било успешно. Уређај је пронађен "
+"и садржи CD ${cdname}. Инсталација ће се наставити."
 
 #. Type: error
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:14001
-#, fuzzy
-#| msgid "UNetbootin media detected"
 msgid "Incorrect installation media detected"
-msgstr "UNetbootin медиј је откривен"
+msgstr "Неисправан инсталациони медиј је откривен"
 
 #. Type: error
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:14001
-#, fuzzy
-#| msgid ""
-#| "The CD-ROM drive contains a CD which cannot be used for installation."
 msgid "The detected media cannot be used for installation."
-msgstr "У CD-ROM уређају је CD који не може бити коришћен за инсталацију."
+msgstr "Откривени медиј не може бити коришћен за инсталацију."
 
 #. Type: error
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:14001
-#, fuzzy
-#| msgid "Please insert a suitable CD to continue with the installation."
 msgid "Please provide suitable media to continue with the installation."
-msgstr "Убаците одговарајући CD за наставак инсталације."
+msgstr "Убаците одговарајући медиј за наставак инсталације."
 
 #. Type: error
 #. Description
@@ -719,32 +669,24 @@ msgstr "Грешка при учитавању „Release'“ фајла"
 #. Translators: DO NOT TRANSLATE "Release". This is the name of a file.
 #. :sl2:
 #: ../cdrom-detect.templates:15001
-#, fuzzy
-#| msgid ""
-#| "The CD-ROM does not seem to contain a valid 'Release' file, or that file "
-#| "could not be read correctly."
 msgid ""
 "The installation media do not seem to contain a valid 'Release' file, or "
 "that file could not be read correctly."
 msgstr ""
-"Чини се да CD-ROM не садржи исправан „Release“ фајл, или се тај фајл не може "
-"исправно учитати."
+"Чини се да инсталациони медиј не садржи исправан „Release“ фајл, или се тај "
+"фајл не може исправно учитати."
 
 #. Type: error
 #. Description
 #. Translators: DO NOT TRANSLATE "Release". This is the name of a file.
 #. :sl2:
 #: ../cdrom-detect.templates:15001
-#, fuzzy
-#| msgid ""
-#| "You may try to repeat CD-ROM detection but, even if it does succeed the "
-#| "second time, you may experience problems later in the installation."
 msgid ""
 "You may try to repeat the media detection, but even if it does succeed the "
 "second time, you may experience problems later in the installation."
 msgstr ""
-"Можете покушати да поновите детекцију CD-ROM уређаја, али чак ако то и успе "
-"из другог покушаја, могли бисте наићи на проблеме касније у инсталацији."
+"Можете покушати да поновите детекцију медија, али чак ако то и успе из "
+"другог покушаја, могли бисте наићи на проблеме касније у инсталацији."
 
 #. Type: text
 #. Description
@@ -752,10 +694,8 @@ msgstr ""
 #. Translators: keep below 55 columns.
 #. :sl2:
 #: ../cdrom-detect.templates:20001
-#, fuzzy
-#| msgid "Use the \"exit\" command to return to the installation menu."
 msgid "Detect and mount installation media"
-msgstr "Користите команду „exit“ да се вратите у мени за инсталацију."
+msgstr "Откриј и монтирај инсталациони медиј"
 
 #. Type: select
 #. Choices
@@ -1470,6 +1410,8 @@ msgid ""
 "No DHCP client was found. Please make sure, that a dhcp installer component "
 "is installed."
 msgstr ""
+"Није пронађен DHCP клијент. Молимо вас проверите је ли инсталирана "
+"одговарајућа компонента."
 
 #. Type: error
 #. Description
@@ -1489,13 +1431,6 @@ msgstr "Наставити без подразумевајуће руте?"
 #. Description
 #. :sl2:
 #: ../netcfg-dhcp.templates:8001
-#, fuzzy
-#| msgid ""
-#| "The network autoconfiguration was successful. However, no default route "
-#| "was set: the system does not know how to communicate with hosts on the "
-#| "Internet. This will make it impossible to continue with the installation "
-#| "unless you have the first installation CD-ROM, a 'Netinst' CD-ROM, or "
-#| "packages available on the local network."
 msgid ""
 "The network autoconfiguration was successful. However, no default route was "
 "set: the system does not know how to communicate with hosts on the Internet. "
@@ -1504,7 +1439,7 @@ msgid ""
 "packages available on the local network."
 msgstr ""
 "Самоподешавање мреже је успело. Додуше, ниједна подразумевана рута није "
-"подешена: систем не зна како да комуницира са рачунарима на Интернету. Ово "
+"подешена: систем не зна како да комуницира са рачунарима на интернету. Ово "
 "ће онемогућити наставак инсталције осим ако имате први инсталациони диск, "
 "„Netinst“ диск, или доступне пакете на локалној мрежи."
 
@@ -1894,28 +1829,22 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../cdrom-retriever.templates:1001
-#, fuzzy
-#| msgid "Failed to copy file from CD-ROM. Retry?"
 msgid "Failed to copy file from installation media. Retry?"
-msgstr "Грешка у копирању фајла са CD-а. Покушати поново?"
+msgstr "Грешка у копирању фајла са инсталационог медија. Покушати поново?"
 
 #. Type: boolean
 #. Description
 #. :sl2:
 #: ../cdrom-retriever.templates:1001
-#, fuzzy
-#| msgid ""
-#| "There was a problem reading data from the CD-ROM. Please make sure it is "
-#| "in the drive. If retrying does not work, you should check the integrity "
-#| "of your CD-ROM."
 msgid ""
 "There was a problem reading data. Please make sure you have inserted the "
 "installation media correctly. If retrying does not work, you should check "
 "the integrity of your installation media (there is an associated entry in "
 "the main menu for that)."
 msgstr ""
-"Настао је проблем у читању података са CD-а. Проверите да ли је у уређају. "
-"Ако поновни покушај не успе, требало би да проверите интегритет CD-а."
+"Настао је проблем у читању података. Проверите да ли инсталациони медиј "
+"исправан. Ако поновни покушај не успе, требало би да проверите интегритет "
+"инсталационог медија(преко ставке у менију)."
 
 #. Type: text
 #. Description
@@ -2238,7 +2167,7 @@ msgstr "Сними информације о партицији у %s"
 #. Type: error
 #. Description
 #. :sl2:
-#. #-#-#-#-#  templates.pot (partman-auto-lvm)  #-#-#-#-#
+#. #-#-#-#-#  templates.pot (PACKAGE VERSION)  #-#-#-#-#
 #. Type: error
 #. Description
 #. :sl3:
@@ -2429,7 +2358,7 @@ msgstr "Из непознатог разлога мењање величине �
 #. Type: error
 #. Description
 #. :sl4:
-#. #-#-#-#-#  templates.pot (network-console)  #-#-#-#-#
+#. #-#-#-#-#  templates.pot (PACKAGE VERSION)  #-#-#-#-#
 #. Type: error
 #. Description
 #. :sl3:
@@ -2463,11 +2392,11 @@ msgstr "Из непознатог разлога мењање величине �
 #. Type: error
 #. Description
 #. :sl3:
-#. #-#-#-#-#  templates.pot (partman-auto-lvm)  #-#-#-#-#
+#. #-#-#-#-#  templates.pot (PACKAGE VERSION)  #-#-#-#-#
 #. Type: error
 #. Description
 #. :sl3:
-#. #-#-#-#-#  templates.pot (partman-auto-raid)  #-#-#-#-#
+#. #-#-#-#-#  templates.pot (PACKAGE VERSION)  #-#-#-#-#
 #. Type: error
 #. Description
 #. :sl3:
@@ -2546,7 +2475,7 @@ msgstr ""
 #. Type: string
 #. Description
 #. :sl2:
-#. #-#-#-#-#  templates.pot (partman-auto-lvm)  #-#-#-#-#
+#. #-#-#-#-#  templates.pot (PACKAGE VERSION)  #-#-#-#-#
 #. Type: string
 #. Description
 #. :sl3:
@@ -2624,7 +2553,7 @@ msgstr "Грешка при мењању величине партиције"
 #. Type: error
 #. Description
 #. :sl2:
-#. #-#-#-#-#  templates.pot (partman-md)  #-#-#-#-#
+#. #-#-#-#-#  templates.pot (PACKAGE VERSION)  #-#-#-#-#
 #. Type: error
 #. Description
 #. :sl3:
@@ -2960,7 +2889,7 @@ msgstr ""
 #. Type: boolean
 #. Description
 #. :sl2:
-#. #-#-#-#-#  templates.pot (partman-ext3)  #-#-#-#-#
+#. #-#-#-#-#  templates.pot (PACKAGE VERSION)  #-#-#-#-#
 #. Type: boolean
 #. Description
 #. :sl2:
@@ -3578,7 +3507,7 @@ msgstr "discard - ослободи блокове који се више не к
 #. Type: boolean
 #. Description
 #. :sl5:
-#. #-#-#-#-#  templates.pot (partman-ext3)  #-#-#-#-#
+#. #-#-#-#-#  templates.pot (PACKAGE VERSION)  #-#-#-#-#
 #. Type: boolean
 #. Description
 #. :sl2:
@@ -3598,7 +3527,7 @@ msgstr "Вратити се назад у мени и исправити про�
 #. Type: boolean
 #. Description
 #. :sl5:
-#. #-#-#-#-#  templates.pot (partman-ext3)  #-#-#-#-#
+#. #-#-#-#-#  templates.pot (PACKAGE VERSION)  #-#-#-#-#
 #. Type: boolean
 #. Description
 #. :sl2:
@@ -4009,10 +3938,8 @@ msgstr "Ниједна EFI партиција није нађена."
 #. Description
 #. :sl2:
 #: ../partman-efi.templates:8001
-#, fuzzy
-#| msgid "Partitions to assemble:"
 msgid "EFI partition too small"
-msgstr "Партиције за састављање:"
+msgstr "EFI партиција је премала"
 
 #. Type: error
 #. Description
@@ -4030,7 +3957,7 @@ msgstr ""
 #. :sl2:
 #: ../partman-efi.templates:9001
 msgid "Force UEFI installation?"
-msgstr "Присили  UEFI инсталацију?"
+msgstr "Присили UEFI инсталацију?"
 
 #. Type: boolean
 #. Description
@@ -4074,16 +4001,12 @@ msgstr "Подесити часонвник користећи NTP?"
 #. Description
 #. :sl2:
 #: ../clock-setup.templates:5001
-#, fuzzy
-#| msgid ""
-#| "The Network Time Protocol (NTP) can be used to set the system's clock. "
-#| "The installation process works best with a correctly set clock."
 msgid ""
 "The Network Time Protocol (NTP) can be used to set the system's clock. Your "
 "system works best with a correctly set clock."
 msgstr ""
 "Протокол мрежног времена (NTP) се може користити за подешавање системског "
-"часовника. Процес инсталације најбоље ради са правилно подешеним часовником."
+"часовника. Ваш систем најбоље ради са правилно подешеним часовником."
 
 #. Type: string
 #. Description
@@ -4208,16 +4131,12 @@ msgstr "Немогућа инсталација основног система"
 #. See http://www.debian.org/doc/debian-policy/ch-binary.html#s3.7
 #. :sl2:
 #: ../bootstrap-base.templates:2001
-#, fuzzy
-#| msgid ""
-#| "The installer cannot figure out how to install the base system. No "
-#| "installable CD-ROM was found and no valid mirror was configured."
 msgid ""
 "The installer cannot figure out how to install the base system. It found no "
 "installable image, and no valid mirror was configured."
 msgstr ""
 "Програм за инсталацију не може да инсталира основни систем. Није пронађен ни "
-"један CD-ROM са инсталацијом и ниједан валидан мирор није конфигурисан."
+"једна слика са инсталацијом и ниједан валидан мирор није конфигурисан."
 
 #. Type: error
 #. Description
@@ -4467,16 +4386,12 @@ msgstr "Неисправан „Release“ фајл: нема ставке за 
 #. SUBST0 is a filename or package name
 #. Debootstrap is a program name: should not be translated
 #: ../bootstrap-base.templates:22001
-#, fuzzy
-#| msgid ""
-#| "Couldn't retrieve ${SUBST0}. This may be due to a network problem or a "
-#| "bad CD, depending on your installation method."
 msgid ""
 "Couldn't retrieve ${SUBST0}. This may be due to a network problem or bad "
 "media, depending on your installation method."
 msgstr ""
 "Неуспело преузимање ${SUBST0}. Разлог може бити проблем са мрежом или лош "
-"CD, зависно од изабраног метода инсталације."
+"медиј, зависно од изабраног метода инсталације."
 
 #. Type: error
 #. Description
@@ -4833,11 +4748,11 @@ msgstr "Грешка при уносу лозинке"
 msgid "The two passwords you entered were not the same. Please try again."
 msgstr "Две лозинке које сте унели се разликују. Пробајте поново."
 
-#. #-#-#-#-#  templates.pot (user-setup)  #-#-#-#-#
+#. #-#-#-#-#  templates.pot (PACKAGE VERSION)  #-#-#-#-#
 #. Type: error
 #. Description
 #. :sl2:
-#. #-#-#-#-#  templates.pot (network-console)  #-#-#-#-#
+#. #-#-#-#-#  templates.pot (PACKAGE VERSION)  #-#-#-#-#
 #. Type: error
 #. Description
 #. :sl3:
@@ -4850,11 +4765,11 @@ msgstr "Две лозинке које сте унели се разликују
 msgid "Empty password"
 msgstr "Празна лозинка"
 
-#. #-#-#-#-#  templates.pot (user-setup)  #-#-#-#-#
+#. #-#-#-#-#  templates.pot (PACKAGE VERSION)  #-#-#-#-#
 #. Type: error
 #. Description
 #. :sl2:
-#. #-#-#-#-#  templates.pot (network-console)  #-#-#-#-#
+#. #-#-#-#-#  templates.pot (PACKAGE VERSION)  #-#-#-#-#
 #. Type: error
 #. Description
 #. :sl3:
@@ -5416,7 +5331,5 @@ msgstr ""
 #. Translators: keep it under 65 columns
 #. :sl2:
 #: ../cdrom-checker.templates:12001
-#, fuzzy
-#| msgid "Check the integrity of another CD-ROM?"
 msgid "Check the integrity of installation media"
-msgstr "Проверити исправност другог диска?"
+msgstr "Проверити исправност инсталационог медија"
