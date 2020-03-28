@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Debian-installer 1st-stage master file HR\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-10 20:01+0000\n"
+"POT-Creation-Date: 2020-03-28 20:02+0000\n"
 "PO-Revision-Date: 2019-12-28 16:21+0000\n"
 "Last-Translator: Milo Ivir <mail@milotype.de>\n"
 "Language-Team: Croatian <lokalizacija@linux.hr>\n"
@@ -4210,8 +4210,10 @@ msgstr "Nastavak bez učitača pokretanja"
 #. Description
 #. :sl1:
 #: ../grub-installer.templates:1001 ../grub-installer.templates:2001
-msgid "Install the GRUB boot loader to the master boot record?"
-msgstr "Instaliraj GRUB učitač pokretanja u glavni zapis pokretanja?"
+#, fuzzy
+#| msgid "Install the GRUB boot loader on a hard disk"
+msgid "Install the GRUB boot loader to your primary drive?"
+msgstr "Instalacija GRUB učitača pokretanja na čvrsti disk"
 
 #. Type: boolean
 #. Description
@@ -4226,9 +4228,15 @@ msgstr "Na ovom računalu pronađeni su sljedeći operativni sustavi: ${OS_LIST}
 #. Description
 #. :sl1:
 #: ../grub-installer.templates:1001
+#, fuzzy
+#| msgid ""
+#| "If all of your operating systems are listed above, then it should be safe "
+#| "to install the boot loader to the master boot record of your first hard "
+#| "drive. When your computer boots, you will be able to choose to load one "
+#| "of these operating systems or the newly installed Debian system."
 msgid ""
 "If all of your operating systems are listed above, then it should be safe to "
-"install the boot loader to the master boot record of your first hard drive. "
+"install the boot loader to your primary drive (UEFI partition/boot record). "
 "When your computer boots, you will be able to choose to load one of these "
 "operating systems or the newly installed Debian system."
 msgstr ""
@@ -4241,10 +4249,15 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../grub-installer.templates:2001
+#, fuzzy
+#| msgid ""
+#| "It seems that this new installation is the only operating system on this "
+#| "computer. If so, it should be safe to install the GRUB boot loader to the "
+#| "master boot record of your first hard drive."
 msgid ""
 "It seems that this new installation is the only operating system on this "
-"computer. If so, it should be safe to install the GRUB boot loader to the "
-"master boot record of your first hard drive."
+"computer. If so, it should be safe to install the GRUB boot loader to your "
+"primary drive (UEFI partition/boot record)."
 msgstr ""
 "Izgleda kako je nova instalacija jedini operativni sustav na ovom računalu. "
 "Ako je tako, najsigurnije bi vam bilo instalirati GRUB učitač pokretanja u "
@@ -4254,11 +4267,16 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../grub-installer.templates:2001
+#, fuzzy
+#| msgid ""
+#| "Warning: If the installer failed to detect another operating system that "
+#| "is present on your computer, modifying the master boot record will make "
+#| "that operating system temporarily unbootable, though GRUB can be manually "
+#| "configured later to boot it."
 msgid ""
-"Warning: If the installer failed to detect another operating system that is "
-"present on your computer, modifying the master boot record will make that "
-"operating system temporarily unbootable, though GRUB can be manually "
-"configured later to boot it."
+"Warning: If your computer has another operating system that the installer "
+"failed to detect, this will make that operating system temporarily "
+"unbootable, though GRUB can be manually configured later to boot it."
 msgstr ""
 "Upozorenje: ako instalacijski program nije pronašao druge prisutne "
 "operativne sustave na vašem računalu, promjena glavnog zapisa pokretanja "
@@ -4341,8 +4359,10 @@ msgstr "Podešavanje grub-efi za buduće korištenje uklonjivih medija"
 #. Translators: keep below 55 columns
 #. :sl1:
 #: ../grub-installer.templates:28001
-msgid "Install the GRUB boot loader on a hard disk"
-msgstr "Instalacija GRUB učitača pokretanja na čvrsti disk"
+#, fuzzy
+#| msgid "Installing GRUB boot loader"
+msgid "Install the GRUB boot loader"
+msgstr "Instalacija GRUB učitača pokretanja"
 
 #. Type: boolean
 #. Description
@@ -4466,6 +4486,9 @@ msgstr "Podešavanje Upravitelja logičkim uređajima"
 #: ../partman-auto-lvm.templates:1001
 msgid "Guided - use entire disk and set up LVM"
 msgstr "Navođeno - koristi cijeli disk i podesi ULU"
+
+#~ msgid "Install the GRUB boot loader to the master boot record?"
+#~ msgstr "Instaliraj GRUB učitač pokretanja u glavni zapis pokretanja?"
 
 #~ msgid ""
 #~ "The IP address you provided is malformed. It should be in the form x.x.x."

@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-10 20:01+0000\n"
+"POT-Creation-Date: 2020-03-28 20:02+0000\n"
 "PO-Revision-Date: 2020-02-16 17:50+0000\n"
 "Last-Translator: Tautvydas Zukauskas <tautzuk@tutanota.com>\n"
 "Language-Team: Lithuanian <komp_lt@konferencijos.lt>\n"
@@ -4223,8 +4223,10 @@ msgstr "Tęsti be paleidyklės"
 #. Description
 #. :sl1:
 #: ../grub-installer.templates:1001 ../grub-installer.templates:2001
-msgid "Install the GRUB boot loader to the master boot record?"
-msgstr "Ar įdiegti „GRUB“ paleidyklę į paleidimo įrašą?"
+#, fuzzy
+#| msgid "Install the GRUB boot loader on a hard disk"
+msgid "Install the GRUB boot loader to your primary drive?"
+msgstr "Paleidyklės „GRUB“ diegimas į standųjį diską"
 
 #. Type: boolean
 #. Description
@@ -4240,9 +4242,15 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../grub-installer.templates:1001
+#, fuzzy
+#| msgid ""
+#| "If all of your operating systems are listed above, then it should be safe "
+#| "to install the boot loader to the master boot record of your first hard "
+#| "drive. When your computer boots, you will be able to choose to load one "
+#| "of these operating systems or the newly installed Debian system."
 msgid ""
 "If all of your operating systems are listed above, then it should be safe to "
-"install the boot loader to the master boot record of your first hard drive. "
+"install the boot loader to your primary drive (UEFI partition/boot record). "
 "When your computer boots, you will be able to choose to load one of these "
 "operating systems or the newly installed Debian system."
 msgstr ""
@@ -4255,10 +4263,15 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../grub-installer.templates:2001
+#, fuzzy
+#| msgid ""
+#| "It seems that this new installation is the only operating system on this "
+#| "computer. If so, it should be safe to install the GRUB boot loader to the "
+#| "master boot record of your first hard drive."
 msgid ""
 "It seems that this new installation is the only operating system on this "
-"computer. If so, it should be safe to install the GRUB boot loader to the "
-"master boot record of your first hard drive."
+"computer. If so, it should be safe to install the GRUB boot loader to your "
+"primary drive (UEFI partition/boot record)."
 msgstr ""
 "Atrodo, kad ši naujai diegiama ir yra vienintelė operacinė sistema šiame "
 "kompiuteryje. Jei taip, tuomet bus saugu įdiegti paleidyklę „GRUB“ į pirmojo "
@@ -4268,11 +4281,16 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../grub-installer.templates:2001
+#, fuzzy
+#| msgid ""
+#| "Warning: If the installer failed to detect another operating system that "
+#| "is present on your computer, modifying the master boot record will make "
+#| "that operating system temporarily unbootable, though GRUB can be manually "
+#| "configured later to boot it."
 msgid ""
-"Warning: If the installer failed to detect another operating system that is "
-"present on your computer, modifying the master boot record will make that "
-"operating system temporarily unbootable, though GRUB can be manually "
-"configured later to boot it."
+"Warning: If your computer has another operating system that the installer "
+"failed to detect, this will make that operating system temporarily "
+"unbootable, though GRUB can be manually configured later to boot it."
 msgstr ""
 "Įspėjimas: jei įdiegikliui nepavyko aptikti kompiuteryje esančios kitos "
 "operacinės sistemos, pakeitus paleidimo įrašą (master boot record), tos "
@@ -4355,8 +4373,10 @@ msgstr "„grub-efi“ konfigūruojamas ateityje naudoti keičiamųjų laikmenų
 #. Translators: keep below 55 columns
 #. :sl1:
 #: ../grub-installer.templates:28001
-msgid "Install the GRUB boot loader on a hard disk"
-msgstr "Paleidyklės „GRUB“ diegimas į standųjį diską"
+#, fuzzy
+#| msgid "Installing GRUB boot loader"
+msgid "Install the GRUB boot loader"
+msgstr "Diegiama paleidyklė „GRUB“"
 
 #. Type: boolean
 #. Description
@@ -4480,6 +4500,9 @@ msgstr "Loginių tomų tvarkyklės (LVM) konfigūracija"
 #: ../partman-auto-lvm.templates:1001
 msgid "Guided - use entire disk and set up LVM"
 msgstr "Auto – naudoti visą diską ir nustatyti LVM"
+
+#~ msgid "Install the GRUB boot loader to the master boot record?"
+#~ msgstr "Ar įdiegti „GRUB“ paleidyklę į paleidimo įrašą?"
 
 #~ msgid ""
 #~ "The IP address you provided is malformed. It should be in the form x.x.x."

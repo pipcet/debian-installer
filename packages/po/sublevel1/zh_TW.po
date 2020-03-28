@@ -27,7 +27,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-10 20:01+0000\n"
+"POT-Creation-Date: 2020-03-28 20:02+0000\n"
 "PO-Revision-Date: 2019-09-27 13:59+0000\n"
 "Last-Translator: Walter Cheuk <wwycheuk@gmail.com>\n"
 "Language-Team: Debian-user in Chinese [Big5] <debian-chinese-big5@lists."
@@ -4157,8 +4157,10 @@ msgstr "不安裝開機程式，繼續進行"
 #. Description
 #. :sl1:
 #: ../grub-installer.templates:1001 ../grub-installer.templates:2001
-msgid "Install the GRUB boot loader to the master boot record?"
-msgstr "是否要將 GRUB 開機程式安裝至主要開機記錄 (MBR) 上？"
+#, fuzzy
+#| msgid "Install the GRUB boot loader on a hard disk"
+msgid "Install the GRUB boot loader to your primary drive?"
+msgstr "將 GRUB 開機程式安裝至硬碟上"
 
 #. Type: boolean
 #. Description
@@ -4181,7 +4183,7 @@ msgstr "以下列出的是在這台電腦上所偵測到的其它作業系統: $
 #| "of these operating systems or your new system."
 msgid ""
 "If all of your operating systems are listed above, then it should be safe to "
-"install the boot loader to the master boot record of your first hard drive. "
+"install the boot loader to your primary drive (UEFI partition/boot record). "
 "When your computer boots, you will be able to choose to load one of these "
 "operating systems or the newly installed Debian system."
 msgstr ""
@@ -4193,10 +4195,15 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../grub-installer.templates:2001
+#, fuzzy
+#| msgid ""
+#| "It seems that this new installation is the only operating system on this "
+#| "computer. If so, it should be safe to install the GRUB boot loader to the "
+#| "master boot record of your first hard drive."
 msgid ""
 "It seems that this new installation is the only operating system on this "
-"computer. If so, it should be safe to install the GRUB boot loader to the "
-"master boot record of your first hard drive."
+"computer. If so, it should be safe to install the GRUB boot loader to your "
+"primary drive (UEFI partition/boot record)."
 msgstr ""
 "看來目前所安裝的新系統是這台電腦中唯一的作業系統。若確是如此，那麼您應該可以"
 "放心得把開機程式安裝在第一個硬碟的主要開機記錄 (MBR) 上。"
@@ -4205,11 +4212,16 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../grub-installer.templates:2001
+#, fuzzy
+#| msgid ""
+#| "Warning: If the installer failed to detect another operating system that "
+#| "is present on your computer, modifying the master boot record will make "
+#| "that operating system temporarily unbootable, though GRUB can be manually "
+#| "configured later to boot it."
 msgid ""
-"Warning: If the installer failed to detect another operating system that is "
-"present on your computer, modifying the master boot record will make that "
-"operating system temporarily unbootable, though GRUB can be manually "
-"configured later to boot it."
+"Warning: If your computer has another operating system that the installer "
+"failed to detect, this will make that operating system temporarily "
+"unbootable, though GRUB can be manually configured later to boot it."
 msgstr ""
 "警告: 如果安裝程式無法偵測到您的電腦上已存在的其它作業系統，修改主要開機記錄 "
 "(MBR) 將會使得該作業系統暫時無法開機。然而，在事後還是可以藉由手動設定 GRUB "
@@ -4291,8 +4303,10 @@ msgstr "設定 grub-efi 以在未來使用可移除式媒體路徑"
 #. Translators: keep below 55 columns
 #. :sl1:
 #: ../grub-installer.templates:28001
-msgid "Install the GRUB boot loader on a hard disk"
-msgstr "將 GRUB 開機程式安裝至硬碟上"
+#, fuzzy
+#| msgid "Installing GRUB boot loader"
+msgid "Install the GRUB boot loader"
+msgstr "安裝 GRUB 開機程式"
 
 #. Type: boolean
 #. Description
@@ -4411,6 +4425,9 @@ msgstr "設定 Logical Volume Manager"
 #: ../partman-auto-lvm.templates:1001
 msgid "Guided - use entire disk and set up LVM"
 msgstr "導引 - 使用整顆磁碟並設定 LVM"
+
+#~ msgid "Install the GRUB boot loader to the master boot record?"
+#~ msgstr "是否要將 GRUB 開機程式安裝至主要開機記錄 (MBR) 上？"
 
 #~ msgid ""
 #~ "The IP address you provided is malformed. It should be in the form x.x.x."

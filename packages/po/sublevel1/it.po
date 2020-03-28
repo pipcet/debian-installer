@@ -34,7 +34,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-10 20:01+0000\n"
+"POT-Creation-Date: 2020-03-28 20:02+0000\n"
 "PO-Revision-Date: 2018-08-27 10:27+0200\n"
 "Last-Translator: Milo Casagrande <milo@milo.name>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
@@ -4306,8 +4306,10 @@ msgstr "Continuare senza un boot loader"
 #. Description
 #. :sl1:
 #: ../grub-installer.templates:1001 ../grub-installer.templates:2001
-msgid "Install the GRUB boot loader to the master boot record?"
-msgstr "Installare il boot loader GRUB nel master boot record?"
+#, fuzzy
+#| msgid "Install the GRUB boot loader on a hard disk"
+msgid "Install the GRUB boot loader to your primary drive?"
+msgstr "Installare il boot loader GRUB su un disco fisso"
 
 #. Type: boolean
 #. Description
@@ -4332,7 +4334,7 @@ msgstr ""
 #| "of these operating systems or your new system."
 msgid ""
 "If all of your operating systems are listed above, then it should be safe to "
-"install the boot loader to the master boot record of your first hard drive. "
+"install the boot loader to your primary drive (UEFI partition/boot record). "
 "When your computer boots, you will be able to choose to load one of these "
 "operating systems or the newly installed Debian system."
 msgstr ""
@@ -4345,10 +4347,15 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../grub-installer.templates:2001
+#, fuzzy
+#| msgid ""
+#| "It seems that this new installation is the only operating system on this "
+#| "computer. If so, it should be safe to install the GRUB boot loader to the "
+#| "master boot record of your first hard drive."
 msgid ""
 "It seems that this new installation is the only operating system on this "
-"computer. If so, it should be safe to install the GRUB boot loader to the "
-"master boot record of your first hard drive."
+"computer. If so, it should be safe to install the GRUB boot loader to your "
+"primary drive (UEFI partition/boot record)."
 msgstr ""
 "Sembra che questa nuova installazione sia l'unico sistema operativo presente "
 "su questo computer. Se così fosse, è buona norma installare il boot loader "
@@ -4358,11 +4365,16 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../grub-installer.templates:2001
+#, fuzzy
+#| msgid ""
+#| "Warning: If the installer failed to detect another operating system that "
+#| "is present on your computer, modifying the master boot record will make "
+#| "that operating system temporarily unbootable, though GRUB can be manually "
+#| "configured later to boot it."
 msgid ""
-"Warning: If the installer failed to detect another operating system that is "
-"present on your computer, modifying the master boot record will make that "
-"operating system temporarily unbootable, though GRUB can be manually "
-"configured later to boot it."
+"Warning: If your computer has another operating system that the installer "
+"failed to detect, this will make that operating system temporarily "
+"unbootable, though GRUB can be manually configured later to boot it."
 msgstr ""
 "Attenzione: se il programma d'installazione non riesce a riconoscere un "
 "altro sistema operativo presente su questo computer, la modifica del master "
@@ -4447,8 +4459,10 @@ msgstr ""
 #. Translators: keep below 55 columns
 #. :sl1:
 #: ../grub-installer.templates:28001
-msgid "Install the GRUB boot loader on a hard disk"
-msgstr "Installare il boot loader GRUB su un disco fisso"
+#, fuzzy
+#| msgid "Installing GRUB boot loader"
+msgid "Install the GRUB boot loader"
+msgstr "Installazione del boot loader GRUB"
 
 #. Type: boolean
 #. Description
@@ -4574,6 +4588,9 @@ msgstr "Configurare il Logical Volume Manager"
 #: ../partman-auto-lvm.templates:1001
 msgid "Guided - use entire disk and set up LVM"
 msgstr "Guidato - usa l'intero disco e imposta LVM"
+
+#~ msgid "Install the GRUB boot loader to the master boot record?"
+#~ msgstr "Installare il boot loader GRUB nel master boot record?"
 
 #~ msgid ""
 #~ "The IP address you provided is malformed. It should be in the form x.x.x."

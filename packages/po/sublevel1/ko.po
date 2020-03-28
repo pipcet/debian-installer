@@ -22,7 +22,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-10 20:01+0000\n"
+"POT-Creation-Date: 2020-03-28 20:02+0000\n"
 "PO-Revision-Date: 2018-07-25 18:21+0800\n"
 "Last-Translator: Changwoo Ryu <cwryu@debian.org>\n"
 "Language-Team:  Korean <debian-l10n-korean@lists.debian.org>\n"
@@ -4237,8 +4237,10 @@ msgstr "부트로더 없이 계속"
 #. Description
 #. :sl1:
 #: ../grub-installer.templates:1001 ../grub-installer.templates:2001
-msgid "Install the GRUB boot loader to the master boot record?"
-msgstr "마스터 부트 레코드에 GRUB 부트로더를 설치하시겠습니까?"
+#, fuzzy
+#| msgid "Install the GRUB boot loader on a hard disk"
+msgid "Install the GRUB boot loader to your primary drive?"
+msgstr "하드 디스크에 GRUB 부트로더 설치"
 
 #. Type: boolean
 #. Description
@@ -4262,7 +4264,7 @@ msgstr ""
 #| "of these operating systems or your new system."
 msgid ""
 "If all of your operating systems are listed above, then it should be safe to "
-"install the boot loader to the master boot record of your first hard drive. "
+"install the boot loader to your primary drive (UEFI partition/boot record). "
 "When your computer boots, you will be able to choose to load one of these "
 "operating systems or the newly installed Debian system."
 msgstr ""
@@ -4275,10 +4277,15 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../grub-installer.templates:2001
+#, fuzzy
+#| msgid ""
+#| "It seems that this new installation is the only operating system on this "
+#| "computer. If so, it should be safe to install the GRUB boot loader to the "
+#| "master boot record of your first hard drive."
 msgid ""
 "It seems that this new installation is the only operating system on this "
-"computer. If so, it should be safe to install the GRUB boot loader to the "
-"master boot record of your first hard drive."
+"computer. If so, it should be safe to install the GRUB boot loader to your "
+"primary drive (UEFI partition/boot record)."
 msgstr ""
 "이 컴퓨터에 설치한 운영체제는 지금 설치하고 있는 데비안뿐인 것 같습니다. 그"
 "게 맞다면, 첫 번째 하드 드라이브의 마스터 부트 레코드에 부트로더를 설치해도 "
@@ -4288,11 +4295,16 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../grub-installer.templates:2001
+#, fuzzy
+#| msgid ""
+#| "Warning: If the installer failed to detect another operating system that "
+#| "is present on your computer, modifying the master boot record will make "
+#| "that operating system temporarily unbootable, though GRUB can be manually "
+#| "configured later to boot it."
 msgid ""
-"Warning: If the installer failed to detect another operating system that is "
-"present on your computer, modifying the master boot record will make that "
-"operating system temporarily unbootable, though GRUB can be manually "
-"configured later to boot it."
+"Warning: If your computer has another operating system that the installer "
+"failed to detect, this will make that operating system temporarily "
+"unbootable, though GRUB can be manually configured later to boot it."
 msgstr ""
 "경고: 이 컴퓨터에 들어 있는 운영 체제중에 이 설치 프로그램에서 찾아내지 못한 "
 "운영 체제가 있는 경우, 마스터 부트 레코드를 수정하면 일시적으로 그 운영 체제"
@@ -4375,8 +4387,10 @@ msgstr "이동식 미디어 경로 사용 강제하도록 grub-efi 설정"
 #. Translators: keep below 55 columns
 #. :sl1:
 #: ../grub-installer.templates:28001
-msgid "Install the GRUB boot loader on a hard disk"
-msgstr "하드 디스크에 GRUB 부트로더 설치"
+#, fuzzy
+#| msgid "Installing GRUB boot loader"
+msgid "Install the GRUB boot loader"
+msgstr "GRUB 부트로더 설치"
 
 #. Type: boolean
 #. Description
@@ -4497,6 +4511,9 @@ msgstr "LVM (논리 볼륨 관리자) 설정"
 #: ../partman-auto-lvm.templates:1001
 msgid "Guided - use entire disk and set up LVM"
 msgstr "자동 - 디스크 전체 사용하고 LVM 설정"
+
+#~ msgid "Install the GRUB boot loader to the master boot record?"
+#~ msgstr "마스터 부트 레코드에 GRUB 부트로더를 설치하시겠습니까?"
 
 #~ msgid ""
 #~ "The IP address you provided is malformed. It should be in the form x.x.x."

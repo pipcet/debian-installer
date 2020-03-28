@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-10 20:01+0000\n"
+"POT-Creation-Date: 2020-03-28 20:02+0000\n"
 "PO-Revision-Date: 2017-09-04 19:14+0200\n"
 "Last-Translator: Silva Arapi <silva.arapi@gmail.com>\n"
 "Language-Team: Albanian <debian-l10n-albanian@lists.debian.org>\n"
@@ -4276,8 +4276,10 @@ msgstr "Vazhdo pa ngarkues nisjeje"
 #. Description
 #. :sl1:
 #: ../grub-installer.templates:1001 ../grub-installer.templates:2001
-msgid "Install the GRUB boot loader to the master boot record?"
-msgstr "Ta instaloj ngarkuesin e nisjes GRUB në master boot record?"
+#, fuzzy
+#| msgid "Install the GRUB boot loader on a hard disk"
+msgid "Install the GRUB boot loader to your primary drive?"
+msgstr "Instalo ngarkuesin e nisjes GRUB në një hard disk"
 
 #. Type: boolean
 #. Description
@@ -4300,7 +4302,7 @@ msgstr "Sistemet e tjerë operativë që u gjetën në këtë kompjuter: ${OS_LI
 #| "of these operating systems or your new system."
 msgid ""
 "If all of your operating systems are listed above, then it should be safe to "
-"install the boot loader to the master boot record of your first hard drive. "
+"install the boot loader to your primary drive (UEFI partition/boot record). "
 "When your computer boots, you will be able to choose to load one of these "
 "operating systems or the newly installed Debian system."
 msgstr ""
@@ -4313,10 +4315,15 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../grub-installer.templates:2001
+#, fuzzy
+#| msgid ""
+#| "It seems that this new installation is the only operating system on this "
+#| "computer. If so, it should be safe to install the GRUB boot loader to the "
+#| "master boot record of your first hard drive."
 msgid ""
 "It seems that this new installation is the only operating system on this "
-"computer. If so, it should be safe to install the GRUB boot loader to the "
-"master boot record of your first hard drive."
+"computer. If so, it should be safe to install the GRUB boot loader to your "
+"primary drive (UEFI partition/boot record)."
 msgstr ""
 "Mesa duket ky instalim i ri është sistemi i vetëm operativ në këtë "
 "kompjuter. Nëse është kështu, do ishte mirë që ngarkuesi i nisjes GRUB të "
@@ -4326,11 +4333,16 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../grub-installer.templates:2001
+#, fuzzy
+#| msgid ""
+#| "Warning: If the installer failed to detect another operating system that "
+#| "is present on your computer, modifying the master boot record will make "
+#| "that operating system temporarily unbootable, though GRUB can be manually "
+#| "configured later to boot it."
 msgid ""
-"Warning: If the installer failed to detect another operating system that is "
-"present on your computer, modifying the master boot record will make that "
-"operating system temporarily unbootable, though GRUB can be manually "
-"configured later to boot it."
+"Warning: If your computer has another operating system that the installer "
+"failed to detect, this will make that operating system temporarily "
+"unbootable, though GRUB can be manually configured later to boot it."
 msgstr ""
 "Kujdes: Nëse instaluesi dështoi në gjetjen e një sistemi tjetër operativ që "
 "ndodhet në kompjuter, duke ndryshuar MBR(master boot record) do ta bëjë atë "
@@ -4416,8 +4428,10 @@ msgstr ""
 #. Translators: keep below 55 columns
 #. :sl1:
 #: ../grub-installer.templates:28001
-msgid "Install the GRUB boot loader on a hard disk"
-msgstr "Instalo ngarkuesin e nisjes GRUB në një hard disk"
+#, fuzzy
+#| msgid "Installing GRUB boot loader"
+msgid "Install the GRUB boot loader"
+msgstr "Duke instaluar ngarkuesin e nisjes GRUB"
 
 #. Type: boolean
 #. Description
@@ -4541,6 +4555,9 @@ msgstr "Konfiguro Organizuesin e Volumit Logjik"
 #: ../partman-auto-lvm.templates:1001
 msgid "Guided - use entire disk and set up LVM"
 msgstr "E drejtuar - përdor tërë diskun dhe cakto LVM"
+
+#~ msgid "Install the GRUB boot loader to the master boot record?"
+#~ msgstr "Ta instaloj ngarkuesin e nisjes GRUB në master boot record?"
 
 #~ msgid ""
 #~ "The IP address you provided is malformed. It should be in the form x.x.x."
