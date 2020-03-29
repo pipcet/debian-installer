@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-03-28 20:02+0000\n"
-"PO-Revision-Date: 2020-01-25 10:21+0000\n"
+"PO-Revision-Date: 2020-03-29 11:12+0100\n"
 "Last-Translator:  Miguel Figueiredo <elmig@debianpt.org>\n"
 "Language-Team:  Portuguese <traduz@debianpt.org>\n"
 "Language: pt\n"
@@ -5035,7 +5035,6 @@ msgstr "Dispositivo para a instalação do gestor de arranque:"
 #. Description
 #. :sl2:
 #: ../grub-installer.templates:7001 ../grub-installer.templates:8002
-#, fuzzy
 #| msgid ""
 #| "You need to make the newly installed system bootable, by installing the "
 #| "GRUB boot loader on a bootable device. The usual way to do this is to "
@@ -5050,14 +5049,13 @@ msgid ""
 msgstr ""
 "Necessita fazer com que a nova instalação do sistema arranque, instalando o "
 "gestor de arranque GRUB num dispositivo de arranque. Normalmente instala-se "
-"o GRUB no master boot record do disco primário. Se preferir, pode instalar o "
-"GRUB noutro local do disco, ou noutro disco, ou mesmo numa disquete."
+"o GRUB no disco primário (partição UEFI/boot record). Se preferir, pode em "
+"vez disso, instalar o GRUB noutro disco (ou partição), ou em meio amovível."
 
 #. Type: string
 #. Description
 #. :sl2:
 #: ../grub-installer.templates:7001
-#, fuzzy
 #| msgid ""
 #| "The device should be specified as a device in /dev. Below are some "
 #| "examples:\n"
@@ -5079,15 +5077,11 @@ msgid ""
 "   be a thumbdrive);\n"
 " - \"/dev/fd0\" will install GRUB to a floppy."
 msgstr ""
-"O dispositivo pode ser especificado como um dispositivo em /dev. Abaixo "
-"estão alguns exemplos:\n"
-" - \"/dev/sda\" irá instalar o GRUB no master boot record do primeiro\n"
-"   disco rígido;\n"
-" - \"/dev/sda2\" irá utilizar a segunda partição do seu primeiro disco "
-"rígido;\n"
-" - \"/dev/sdc5\" irá utilizar a primeira partição estendida do seu\n"
-"   terceiro disco rígido;\n"
-" - \"(fd0)\" ou \"/dev/fd0\" irá instalar o GRUB numa disquete."
+"A notação do dispositivo deve ser especificada como um dispositivo em /dev. "
+"Abaixo estão alguns exemplos:\n"
+" - \"/dev/sda\" irá instalar o GRUB no seu disco primário (partição UEFI/boot record);\n"
+" - \"/dev/sdb\" irá instalar o GRUB no disco secundário (que pode ser por exemplo uma pen);\n"
+" - \"/dev/fd0\" irá instalar o GRUB numa disquete."
 
 #. Type: password
 #. Description
