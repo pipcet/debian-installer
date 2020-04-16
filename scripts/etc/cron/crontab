@@ -25,11 +25,12 @@ DAILY_LOGS_DIR=/home/d-i/daily-build-logs.git
 
 0 20 * * * cd $DI; mr -q up ; nice -n 19 $DI/scripts/l10n/l10n-sync --levels=5 --online --commit $DI
 
-#0 23 * * * cd $DI/installation-guide && git pull ; cd build && destination=$WWW/manual ./build.sh >/dev/null ; ~/bin/push-www
+# d-i Installation guide
 0 23 * * * cd $DI_MANUAL_DAILY ; nice -n 19 bin/build-manual ; ~/bin/push-www
 
-55 2 * * * cd $DI_MANUAL_DAILY ; bin/build-di-int >/dev/null
-58 2 * * * cd $DI_MANUAL_DAILY ; bin/build-di-i18n >/dev/null ; ~/bin/push-www
+# d-i Internal and i18n-l10n-guide - to be activated as needed.
+#55 2 * * * cd $DI_MANUAL_DAILY ; bin/build-di-int >/dev/null
+#58 2 * * * cd $DI_MANUAL_DAILY ; bin/build-di-i18n >/dev/null ; ~/bin/push-www
 
 # Let the last */4 entry call push-www:
 10 */4 * * * cd $DI; mr -q up; cd scripts; ./git-summary > $WWW/git-summary.html
