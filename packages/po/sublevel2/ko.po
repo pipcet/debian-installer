@@ -2,14 +2,14 @@
 # Copyright (C) 2003,2004,2005,2008 Software in the Public Interest, Inc.
 # This file is distributed under the same license as debian-installer.
 #
-# Changwoo Ryu <cwryu@debian.org>, 2010-2012, 2014-2015, 2017.
+# Changwoo Ryu <cwryu@debian.org>, 2010-2012, 2014-2015, 2017, 2020.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: bugs.debian.org\n"
 "POT-Creation-Date: 2020-03-31 20:02+0000\n"
-"PO-Revision-Date: 2017-02-11 11:59+0900\n"
+"PO-Revision-Date: 2020-04-21 05:16+0900\n"
 "Last-Translator: Changwoo Ryu <cwryu@debian.org>\n"
 "Language-Team:  Korean <debian-l10n-korean@lists.debian.org>\n"
 "Language: ko \n"
@@ -230,10 +230,8 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../anna.templates:8001
-#, fuzzy
-#| msgid "No disk found"
 msgid "No kernel modules found"
-msgstr "디스크를 찾을 수 없습니다"
+msgstr "커널 모듈이 없습니다"
 
 #. Type: error
 #. Description
@@ -255,6 +253,8 @@ msgid ""
 "You should make sure that your installation image is up-to-date, or - if "
 "that's the case - try a different mirror, preferably deb.debian.org."
 msgstr ""
+"최신 버전의 설치 이미지를 사용해야 합니다. 최신의 설치 이미지에서도 문제가 생"
+"길 경우, 다른 미러 사이트를 (deb.debian.org 추천) 사용해 보십시오."
 
 #. Type: select
 #. Description
@@ -471,67 +471,48 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:1001
-#, fuzzy
-#| msgid "Load drivers from removable media"
 msgid "Load drivers from removable media?"
-msgstr "이동식 미디어에서 드라이버 읽어들이기"
+msgstr "이동식 미디어에서 드라이버를 읽어들이시겠습니까?"
 
 #. Type: boolean
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:1001
 msgid "No device for installation media was detected."
-msgstr ""
+msgstr "설치 미디어에 사용할 장치를 찾지 못했습니다."
 
 #. Type: boolean
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:1001
-#, fuzzy
-#| msgid ""
-#| "You may need to load additional CD-ROM drivers from removable media, such "
-#| "as a driver floppy. If you have such media available now, insert it, and "
-#| "continue. Otherwise, you will be given the option to manually select CD-"
-#| "ROM modules."
 msgid ""
 "You may need to load additional drivers from removable media, such as a "
 "driver floppy or a USB stick. If you have these available now, insert the "
 "media, and continue. Otherwise, you will be given the option to manually "
 "select some modules."
 msgstr ""
-"이동식 미디어에서 (드라이버 플로피 등) CD-ROM 드라이버를 추가로 읽어들여야 "
-"할 수 있습니다. 그런 미디어가 있다면, 바로 그 미디어를 넣고 계속 하십시오. 그"
-"렇지 않은 경우 수동으로 CD-ROM 모듈을 선택하는 옵션이 나옵니다."
+"이동식 미디어에서 (드라이버 플로피 또는 USB 메모리 등) 드라이버를 추가로 읽어"
+"들여야 할 수 있습니다. 그런 미디어가 있다면, 바로 그 미디어를 넣고 계속 하십"
+"시오. 그렇지 않은 경우 수동으로 모듈을 선택하는 옵션이 나옵니다."
 
 #. Type: boolean
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:3001
-#, fuzzy
-#| msgid "Manually select a CD-ROM module and device?"
 msgid "Manually select a module and device for installation media?"
-msgstr "수동으로 CD-ROM 모듈과 장치를 선택하시겠습니까?"
+msgstr "수동으로 설치 미디어에 필요한 모듈과 장치를 선택하시겠습니까?"
 
 #. Type: boolean
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:3001
-#, fuzzy
-#| msgid "No common CD-ROM drive was detected."
 msgid "No device for installation media (like a CD-ROM device) was detected."
-msgstr "일반적인 CD-ROM 드라이브를 찾을 수 없습니다."
+msgstr "설치 미디어에 사용할 장치를 (CD-ROM 장치 등) 찾을 수 없습니다."
 
 #. Type: boolean
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:3001
-#, fuzzy
-#| msgid ""
-#| "Your CD-ROM drive may be an old Mitsumi or another non-IDE, non-SCSI CD-"
-#| "ROM drive. In that case you should choose which module to load and the "
-#| "device to use. If you don't know which module and device are needed, look "
-#| "for some documentation or try a network installation instead of a CD-ROM "
-#| "installation."
 msgid ""
 "If your CD-ROM drive is an old Mitsumi or another non-IDE, non-SCSI CD-ROM "
 "drive, you should choose which module to load and the device to use. If you "
@@ -539,87 +520,68 @@ msgid ""
 "or try a network installation."
 msgstr ""
 "CD-ROM 드라이브가 과거의 Mitsumi 혹은 기타 IDE가 아니고, SCSI도 아닌 CD-ROM "
-"드라이브일 수도 있습니다. 이 경우 이 장치를 사용하기 위해 어떤 모듈을 읽어들"
-"일 지 선택해야 합니다. 어떤 모듈이 필요하고 어떤 장치 파일을 사용해야 하는 "
-"지 알지 못한다면, 관련 문서를 찾아 보시거나 CD-ROM 설치 대신에 네트워크 설치"
-"를 시도해 보십시오."
+"드라이브일 경우, 이 장치를 사용하려면 어떤 모듈을 읽어들이고 어떤 장치를 사용"
+"할지 선택해야 합니다. 어떤 모듈과 어떤 장치 파일이 필요한지 알지 못한다면, 관"
+"련 문서를 찾아 보시거나 네트워크 설치를 시도해 보십시오."
 
 #. Type: boolean
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:4001
-#, fuzzy
-#| msgid "Remote installation password:"
 msgid "Retry mounting installation media?"
-msgstr "원격 설치 암호:"
+msgstr "설치 미디어 마운트를 다시 시도하시겠습니까?"
 
 #. Type: boolean
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:4001
-#, fuzzy
-#| msgid ""
-#| "Your installation CD-ROM couldn't be mounted. This probably means that "
-#| "the CD-ROM was not in the drive. If so you can insert it and try again."
 msgid ""
 "Your installation media couldn't be mounted. When installing from CD-ROM, "
 "this probably means that the disk was not in the drive. If so you can insert "
 "it and try again."
 msgstr ""
-"설치 CD-ROM을 마운트할 수 없습니다. CD-ROM이 드라이브 안에 없는 경우일 것입니"
-"다. 그 경우 CD-ROM을 넣고 다시 시도할 수 있습니다."
+"설치 미디어를 마운트할 수 없습니다. CD-ROM에서 설치하는 경우, 디스크가 드라이"
+"브 안에 없는 경우일 것입니다. 그 경우 디스크를 넣고 다시 시도할 수 있습니다."
 
 #. Type: select
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:5001
-#, fuzzy
-#| msgid "Module needed for accessing the CD-ROM:"
 msgid "Module needed for accessing the installation media:"
-msgstr "CD-ROM을 읽는데 필요한 모듈:"
+msgstr "설치 미디어를 읽는데 필요한 모듈:"
 
 #. Type: select
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:5001
-#, fuzzy
-#| msgid ""
-#| "The automatic detection didn't find a CD-ROM drive. You can try to load a "
-#| "specific module if you have an unusual CD-ROM drive (that is neither IDE "
-#| "nor SCSI)."
 msgid ""
 "The automatic detection didn't find a drive for installation media. When "
 "installing from CD-ROM and you have an unusual CD-ROM drive (that is neither "
 "IDE nor SCSI), you can try to load a specific module."
 msgstr ""
-"자동 찾기에서 CD-ROM 드라이브를 찾지 못했습니다. 일반적이지 않은 (IDE도 SCSI"
-"도 아닌) CD-ROM 드라이브의 경우에는 특정 모듈을 직접 읽어들일 수 있습니다."
+"자동 검색에서 설치 미디어에 사용할 드라이브를 찾지 못했습니다. CD-ROM에서 설"
+"치하면서 일반적이지 않은 (IDE도 SCSI도 아닌) CD-ROM 드라이브를 사용하는 경우"
+"에는 특정 모듈을 직접 읽어들일 수 있습니다."
 
 #. Type: string
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:6001
-#, fuzzy
-#| msgid "Device file for accessing the CD-ROM:"
 msgid "Device file for accessing the installation media:"
-msgstr "CD-ROM에 접근할 때 사용할 장치 파일:"
+msgstr "설치 미디어에 접근할 때 사용할 장치 파일:"
 
 #. Type: string
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:6001
-#, fuzzy
-#| msgid ""
-#| "In order to access your CD-ROM drive, please enter the device file that "
-#| "should be used. Non-standard CD-ROM drives use non-standard device files "
-#| "(such as /dev/mcdx)."
 msgid ""
 "In order to access your installation media (like your CD-ROM), please enter "
 "the device file that should be used. Non-standard CD-ROM drives use non-"
 "standard device files (such as /dev/mcdx)."
 msgstr ""
-"CD-ROM 드라이브를 사용하려면, 그 장치 파일 이름을 입력하십시오. 표준이 아닌 "
-"CD-ROM 드라이브는 표준이 아닌 장치 파일 이름을 사용합니다. (/dev/mcdx 따위)"
+"설치 미디어를 (CD-ROM 등) 읽으려면, 사용할 장치 파일 이름을 입력하십시오. 표"
+"준이 아닌 CD-ROM 드라이브는 표준이 아닌 장치 파일 이름을 사용합니다. (/dev/"
+"mcdx 등)"
 
 #. Type: string
 #. Description
@@ -637,54 +599,40 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:12001
-#, fuzzy
-#| msgid "UNetbootin media detected"
 msgid "Installation media detected"
-msgstr "UNetbootin 미디어를 사용합니다"
+msgstr "설치 미디어를 찾았습니다"
 
 #. Type: note
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:12001
-#, fuzzy
-#| msgid ""
-#| "The CD-ROM autodetection was successful. A CD-ROM drive has been found "
-#| "and it currently contains the CD ${cdname}. The installation will now "
-#| "continue."
 msgid ""
 "Autodetection of the installation media was successful. A drive has been "
 "found that contains '${cdname}'. The installation will now continue."
 msgstr ""
-"CD-ROM 자동 찾기가 성공했습니다. CD-ROM 드라이브를 찾았고 현재 ${cdname} CD"
-"가 들어 있습니다. 설치를 계속 진행합니다."
+"설치 미디어 자동 찾기가 성공했습니다. 드라이브를 찾았고 현재 '${cdname}' 미디"
+"어가 들어 있습니다. 설치를 계속 진행합니다."
 
 #. Type: error
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:14001
-#, fuzzy
-#| msgid "UNetbootin media detected"
 msgid "Incorrect installation media detected"
-msgstr "UNetbootin 미디어를 사용합니다"
+msgstr "잘못된 설치 미디어를 찾았습니다"
 
 #. Type: error
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:14001
-#, fuzzy
-#| msgid ""
-#| "The CD-ROM drive contains a CD which cannot be used for installation."
 msgid "The detected media cannot be used for installation."
-msgstr "설치에 사용할 수 없는 CD가 CD-ROM에 들어 있습니다."
+msgstr "찾은 미디어는 설치에 사용할 수 없습니다."
 
 #. Type: error
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:14001
-#, fuzzy
-#| msgid "Please insert a suitable CD to continue with the installation."
 msgid "Please provide suitable media to continue with the installation."
-msgstr "설치를 계속 진행하시려면 올바른 CD를 넣으십시오."
+msgstr "설치를 계속 진행하시려면 올바른 미디어가 필요합니다."
 
 #. Type: error
 #. Description
@@ -699,31 +647,23 @@ msgstr "Release 파일을 읽는데 오류"
 #. Translators: DO NOT TRANSLATE "Release". This is the name of a file.
 #. :sl2:
 #: ../cdrom-detect.templates:15001
-#, fuzzy
-#| msgid ""
-#| "The CD-ROM does not seem to contain a valid 'Release' file, or that file "
-#| "could not be read correctly."
 msgid ""
 "The installation media do not seem to contain a valid 'Release' file, or "
 "that file could not be read correctly."
 msgstr ""
-"CD-ROM에 올바른 'Release' 파일이 들어 있지 않거나 파일을 제대로 읽어들일 수 "
-"없습니다."
+"설치 미디어에 올바른 'Release' 파일이 들어 있지 않거나 파일을 제대로 읽어들"
+"일 수 없습니다."
 
 #. Type: error
 #. Description
 #. Translators: DO NOT TRANSLATE "Release". This is the name of a file.
 #. :sl2:
 #: ../cdrom-detect.templates:15001
-#, fuzzy
-#| msgid ""
-#| "You may try to repeat CD-ROM detection but, even if it does succeed the "
-#| "second time, you may experience problems later in the installation."
 msgid ""
 "You may try to repeat the media detection, but even if it does succeed the "
 "second time, you may experience problems later in the installation."
 msgstr ""
-"CD-ROM 검색을 다시 시도하면 성공할 수도 있지만, 두 번째에서 성공하더라도 설"
+"미디어 검색을 다시 시도하면 성공할 수도 있지만, 두 번째에서 성공하더라도 설"
 "치 뒤쪽에서 문제가 다시 발생할 수도 있습니다."
 
 #. Type: text
@@ -732,10 +672,8 @@ msgstr ""
 #. Translators: keep below 55 columns.
 #. :sl2:
 #: ../cdrom-detect.templates:20001
-#, fuzzy
-#| msgid "Use the \"exit\" command to return to the installation menu."
 msgid "Detect and mount installation media"
-msgstr "설치 메뉴로 다시 돌아오려면 \"exit\" 명령을 사용하십시오."
+msgstr "설치 미디어 검색 및 마운트"
 
 #. Type: select
 #. Choices
@@ -1440,6 +1378,8 @@ msgid ""
 "No DHCP client was found. Please make sure, that a DHCP installer component "
 "is installed."
 msgstr ""
+"DHCP 클라이언트가 없습니다. 설치 프로그램 DHCP 구성 요소를 설치했는지 확인하"
+"십시오."
 
 #. Type: error
 #. Description
@@ -1459,13 +1399,6 @@ msgstr "기본 라우팅 없이 계속 하시겠습니까?"
 #. Description
 #. :sl2:
 #: ../netcfg-dhcp.templates:8001
-#, fuzzy
-#| msgid ""
-#| "The network autoconfiguration was successful. However, no default route "
-#| "was set: the system does not know how to communicate with hosts on the "
-#| "Internet. This will make it impossible to continue with the installation "
-#| "unless you have the first installation CD-ROM, a 'Netinst' CD-ROM, or "
-#| "packages available on the local network."
 msgid ""
 "The network autoconfiguration was successful. However, no default route was "
 "set: the system does not know how to communicate with hosts on the Internet. "
@@ -1475,8 +1408,8 @@ msgid ""
 msgstr ""
 "네트워크 자동 설정이 성공했습니다. 하지만 기본 라우팅이 설정되어 있지 않습니"
 "다: 즉, 현재 이 시스템은 인터넷에 있는 호스트와 통신할 수 없습니다. 이 경우 "
-"데비안 공식 설치 CD-ROM 첫번째 장이나 'Netinst' CD-ROM이 있거나 로컬 네트워크"
-"에서 패키지를 설치할 수 있어야 설치를 계속할 수 있습니다."
+"데비안 공식 설치 미디어 모음의 첫번째 이미지나, 'Netinst' 이미지가 있거나, 로"
+"컬 네트워크에서 패키지를 설치할 수 있어야 설치를 계속할 수 있습니다."
 
 #. Type: boolean
 #. Description
@@ -1533,6 +1466,8 @@ msgid ""
 "The value you provided is not a usable IPv4 or IPv6 address. Please consult "
 "your network administrator and try again."
 msgstr ""
+"입력한 값이 사용할 수 있는 IPv4 또는 IPv6 주소가 아닙니다. 네트워크 관리자에"
+"게 문의해 보고 다시 시도하십시오."
 
 #. Type: string
 #. Description
@@ -1851,28 +1786,22 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../cdrom-retriever.templates:1001
-#, fuzzy
-#| msgid "Failed to copy file from CD-ROM. Retry?"
 msgid "Failed to copy file from installation media. Retry?"
-msgstr "CD-ROM에서 파일을 복사하는데 실패했습니다. 다시 시도하시겠습니까?"
+msgstr "설치 미디어에서 파일을 복사하는데 실패했습니다. 다시 시도하시겠습니까?"
 
 #. Type: boolean
 #. Description
 #. :sl2:
 #: ../cdrom-retriever.templates:1001
-#, fuzzy
-#| msgid ""
-#| "There was a problem reading data from the CD-ROM. Please make sure it is "
-#| "in the drive. If retrying does not work, you should check the integrity "
-#| "of your CD-ROM."
 msgid ""
 "There was a problem reading data. Please make sure you have inserted the "
 "installation media correctly. If retrying does not work, you should check "
 "the integrity of your installation media (there is an associated entry in "
 "the main menu for that)."
 msgstr ""
-"CD-ROM에서 데이터를 읽는데 문제가 있습니다. 드라이브에 CD-ROM이 들어 있는 지 "
-"확인하십시오. 그래도 동작하지 않으면 CD-ROM 내용이 올바른지 확인하십시오."
+"데이터를 읽는데 문제가 있었습니다. 설치미디어를 제대로 넣었는지 확인하십시"
+"오. 다시 시대해도 동작하지 않으면 설치 미디어 내용이 올바른지 확인하십시오. "
+"(주 메뉴에 미디어 내용을 확인하는 관련 항목이 있습니다.)"
 
 #. Type: text
 #. Description
@@ -3946,10 +3875,8 @@ msgstr "EFI 파티션이 없습니다."
 #. Description
 #. :sl2:
 #: ../partman-efi.templates:8001
-#, fuzzy
-#| msgid "Partitions to assemble:"
 msgid "EFI partition too small"
-msgstr "결합할 파티션:"
+msgstr "EFI 파티션이 너무 작습니다"
 
 #. Type: error
 #. Description
@@ -4009,16 +3936,12 @@ msgstr "NTP를 이용해 시계를 맞추시겠습니까?"
 #. Description
 #. :sl2:
 #: ../clock-setup.templates:5001
-#, fuzzy
-#| msgid ""
-#| "The Network Time Protocol (NTP) can be used to set the system's clock. "
-#| "The installation process works best with a correctly set clock."
 msgid ""
 "The Network Time Protocol (NTP) can be used to set the system's clock. Your "
 "system works best with a correctly set clock."
 msgstr ""
 "NTP(Network Time Protocol, 네트워크 시각 프로토콜)를 사용해 시스템 시계를 맞"
-"출 수 있습니다. 시각을 정확하게 맞춰야 설치 프로그램이 잘 동작합니다."
+"출 수 있습니다. 시각을 정확하게 맞춰야 시스템이 잘 동작합니다."
 
 #. Type: string
 #. Description
@@ -4142,15 +4065,11 @@ msgstr "베이스 시스템을 설치하는데 실패했습니다"
 #. See http://www.debian.org/doc/debian-policy/ch-binary.html#s3.7
 #. :sl2:
 #: ../bootstrap-base.templates:2001
-#, fuzzy
-#| msgid ""
-#| "The installer cannot figure out how to install the base system. No "
-#| "installable CD-ROM was found and no valid mirror was configured."
 msgid ""
 "The installer cannot figure out how to install the base system. It found no "
 "installable image, and no valid mirror was configured."
 msgstr ""
-"설치 프로그램이 베이스 시스템을 설치할 방법이 없습니다. 설치 CD-ROM이 없고, "
+"설치 프로그램이 베이스 시스템을 설치할 방법이 없습니다. 설치 이미지가 없고, "
 "올바른 미러 사이트를 설정하지도 않았습니다."
 
 #. Type: error
@@ -4397,16 +4316,12 @@ msgstr "Release 파일이 잘못되었습니다: ${SUBST0}에 대한 항목이 �
 #. SUBST0 is a filename or package name
 #. Debootstrap is a program name: should not be translated
 #: ../bootstrap-base.templates:22001
-#, fuzzy
-#| msgid ""
-#| "Couldn't retrieve ${SUBST0}. This may be due to a network problem or a "
-#| "bad CD, depending on your installation method."
 msgid ""
 "Couldn't retrieve ${SUBST0}. This may be due to a network problem or bad "
 "media, depending on your installation method."
 msgstr ""
 "${SUBST0} 파일을 가져올 수 없습니다. (어떤 설치 방법을 사용했느냐에 따라) 네"
-"트워크 문제가 있거나 CD가 잘못되었을 것입니다."
+"트워크 문제가 있거나 미디어가 잘못되었을 것입니다."
 
 #. Type: error
 #. Description
@@ -4511,7 +4426,7 @@ msgid ""
 "made available to you at this time. You should investigate this later."
 msgstr ""
 "${HOST}에 있는 저장소에 접근할 수 없기 때문에 해당 업데이트를 적용할 수 없습"
-"니다. 나중에 이 문제를 검토하시기 바랍니다."
+"니다. 나중에 이 문제를 검토하십시오."
 
 #. Type: error
 #. Description
@@ -4648,8 +4563,8 @@ msgid ""
 "and the respective vendors as a service to Ubuntu users."
 msgstr ""
 "캐노니컬의 \"파트너\" 저장고에 추가 소프트웨어가 일부 들어 있습니다. 이 소프"
-"트웨어는 우분투의 일부가 아니지만 캐노니컬 및 여러 회사들이 우분투 사용자에 "
-"대한 서비스로 제공합니다."
+"트웨어는 우분투의 일부가 아니지만 캐노니컬 및 여러 회사가 우분투 사용자에 대"
+"한 서비스로 제공합니다."
 
 #. Type: boolean
 #. Description
@@ -4863,8 +4778,8 @@ msgid ""
 "shown to you; all less important questions are skipped."
 msgstr ""
 "debconf를 사용하는 패키지에서는 물어보는 질문에 우선 순위를 매깁니다. 지정한 "
-"우선 순위 혹은 그보다 높은 우선 순위의 질문들만 나타납니다. 더 낮은 질문들은 "
-"건너 뜁니다."
+"우선 순위 혹은 그보다 높은 우선 순위의 질문만 나타납니다. 더 낮은 질문은 건"
+"너 뜁니다."
 
 #. Type: select
 #. Description
@@ -4922,7 +4837,7 @@ msgstr "보안 업데이트를 자동으로 설치"
 #. :sl2:
 #: ../pkgsel.templates:10002
 msgid "Updates management on this system:"
-msgstr "이 시스템의 업데이트 관리"
+msgstr "이 시스템의 업데이트 관리:"
 
 #. Type: select
 #. Description
@@ -4994,13 +4909,6 @@ msgstr "부트로더를 설치할 장치:"
 #. Description
 #. :sl2:
 #: ../grub-installer.templates:7001 ../grub-installer.templates:8002
-#, fuzzy
-#| msgid ""
-#| "You need to make the newly installed system bootable, by installing the "
-#| "GRUB boot loader on a bootable device. The usual way to do this is to "
-#| "install GRUB on the master boot record of your first hard drive. If you "
-#| "prefer, you can install GRUB elsewhere on the drive, or to another drive, "
-#| "or even to a floppy."
 msgid ""
 "You need to make the newly installed system bootable, by installing the GRUB "
 "boot loader on a bootable device. The usual way to do this is to install "
@@ -5008,26 +4916,14 @@ msgid ""
 "install GRUB to a different drive (or partition), or to removable media."
 msgstr ""
 "새로 설치한 데비안 시스템을 부팅 가능하게 만들 차례입니다. GRUB 부트로더를 부"
-"팅 가능한 장치에 설치합니다. 보통 GRUB을 첫 번째 하드 드라이브의 마스터 부트 "
-"레코드에 설치합니다. 원한다면 GRUB을 드라이브의 다른 위치나, 다른 하드 드라이"
-"브, 심지어 플로피에라도 설치할 수 있습니다."
+"팅 가능한 장치에 설치합니다. 보통 GRUB을 주 드라이브에 (UEFI 파티션/부트 레코"
+"드) 설치합니다. 아니면 GRUB을 다른 드라이브 (또는 파티션), 또는 이동식 미디어"
+"에 설치할 수도 있습니다."
 
 #. Type: string
 #. Description
 #. :sl2:
 #: ../grub-installer.templates:7001
-#, fuzzy
-#| msgid ""
-#| "The device should be specified as a device in /dev. Below are some "
-#| "examples:\n"
-#| " - \"/dev/sda\" will install GRUB to the master boot record of your "
-#| "first\n"
-#| "   hard drive;\n"
-#| " - \"/dev/sda2\" will use the second partition of your first hard drive;\n"
-#| " - \"/dev/sdc5\" will use the first extended partition of your third "
-#| "hard\n"
-#| "   drive;\n"
-#| " - \"/dev/fd0\" will install GRUB to a floppy."
 msgid ""
 "The device notation should be specified as a device in /dev. Below are some "
 "examples:\n"
@@ -5040,10 +4936,9 @@ msgid ""
 " - \"/dev/fd0\" will install GRUB to a floppy."
 msgstr ""
 "장치는 /dev 안에 들어 있는 장치로 지정해야 합니다. 예를 들어:\n"
-" - \"/dev/sda\"는 첫 번째 하드 드라이브의 마스터 부트 레코드에 GRUB을\n"
-"   설치합니다.\n"
-" - \"/dev/sda2\"는 첫 번째 하드 드라이브의 두 번째 파티션을 사용합니다.\n"
-" - \"/dev/sdc5\"는 세 번째 하드 드라이브의 첫 번째 확장 파티션을 사용합니"
+" - \"/dev/sda\"는 주 드라이브에 (UEFI 파티션/부트 레코드) GRUB을 설치합니"
+"다.\n"
+" - \"/dev/sdb\"는 두번째 드라이브에 (예를 들어 USB 메모리) GRUB을 설치합니"
 "다.\n"
 " - \"/dev/fd0\"은 GRUB을 플로피에 설치합니다."
 
@@ -5086,7 +4981,7 @@ msgstr "GRUB 암호를 설정하지 않으려면, 이 필드를 비워 두십시
 msgid ""
 "Please enter the same GRUB password again to verify that you have typed it "
 "correctly."
-msgstr "제대로 입력했는지 확인하기 위해 같은 GRUB 암호를 한번 더 입력하십시오."
+msgstr "제대로 입력했는지 확인하려면 같은 GRUB 암호를 한번 더 입력하십시오."
 
 #. Type: error
 #. Description
@@ -5350,7 +5245,5 @@ msgstr "이 정보는 최종 설치한 시스템의 /var/log/installer/에도 �
 #. Translators: keep it under 65 columns
 #. :sl2:
 #: ../cdrom-checker.templates:12001
-#, fuzzy
-#| msgid "Check the integrity of another CD-ROM?"
 msgid "Check the integrity of installation media"
-msgstr "또 다른 CD-ROM의 내용을 확인하시겠습니까?"
+msgstr "설치 미디어의 내용이 올바른지 확인"
