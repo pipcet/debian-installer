@@ -60,11 +60,6 @@ build_link_table () {
 
 # MAINLINE
 
-# No longer calculate statistics for xml-based languages here, to avoid xml statistics
-# for po-based languages. Is now in build-manual line 360. holgerw
-#echo "- calculating translation statistics for XML-based translations..." >>$mainlog
-#$ROOT/bin/translation-stats | sort -k 2,2nr >$logdir/tr-stats
-
 echo "- calculating translation statistics for PO-based translations..." >>$mainlog
 $ROOT/bin/po_stats/gen &>$logdir/po-stats.log
 
@@ -111,22 +106,6 @@ if [ -f $logdir/tr-stats ] ; then
     echo "    <th class=\"t2\">Files needing update</th>" >>$pagefile
     echo "    <th class=\"t2\">Missing files</th>" >>$pagefile
     echo "  </tr>" >>$pagefile
-
-    # Statistics for XML-based translations
-    for lang in $(egrep -v "^en" $logdir/tr-stats | cut -f 1) ; do
-        # XML-based if language dir has been committed to GIT
-        if [ -d "$source/$lang/" ] ; then
-            langname=$(egrep "^$lang[[:space:]]" $ROOT/bin/langlist | cut -f 7)
-            echo "  <tr>" >>$pagefile
-            echo "    <td class=\"col1\">$langname</td>" >>$pagefile
-
-            for col in 2 4 6 9 8 ; do
-                value=$(egrep "^$lang[[:space:]]" $logdir/tr-stats | cut -f $col)
-                echo "    <td class=\"stats\">$value</td>" >>$pagefile
-            done
-            echo "  </tr>" >>$pagefile
-        fi
-    done
 
     echo "" >>$pagefile
     echo "</table>" >>$pagefile
