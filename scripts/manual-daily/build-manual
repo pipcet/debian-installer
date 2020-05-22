@@ -484,4 +484,8 @@ echo >>$mainlog
 echo "Done -- $(date -u)" >>$mainlog
 rm -f $ROOT/lockfile
 
+# Copy logfiles to www dir
+mkdir -p $DILLON_MANUAL_PATH/logs
+cp -u $logdir/* $DILLON_MANUAL_PATH/logs
+
 exit 0
