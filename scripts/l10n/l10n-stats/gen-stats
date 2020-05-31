@@ -341,7 +341,8 @@ done
 
 fancy_output
 
-wget -q -O $WD/material/spellcheck${LEVEL}.txt http://d-i.debian.org/l10n-spellcheck/level${LEVEL}/latest/stats.txt || echo "Could not fetch spellcheck stats file for level $I."
+# spellcheck is no longer used.
+#wget -q -O $WD/material/spellcheck${LEVEL}.txt http://d-i.debian.org/l10n-spellcheck/level${LEVEL}/latest/stats.txt || echo "Could not fetch spellcheck stats file for level $I."
 
 mkdir $TARGET_DIR/files
 rm -f $TARGET_DIR/.rank.txt$LEVEL
@@ -488,30 +489,31 @@ done # for dist...
 
 fancy_output
 
-echo "Generating spellcheck information..."
+# spellcheck is no longer used.
+#echo "Generating spellcheck information..."
 # echo -n "  "
 # Add spellcheck info to the unstable files
-for lang in `cat $WD/config/languages`; do #run for every language
-	if [ "$dist" = "unstable" ] ; then
-		ext=""
-	else
-		ext=".$dist"
-	fi
-	SPELLCHECK=`grep "$lang" $WD/material/spellcheck${LEVEL}.txt | sed "s/$lang //g"`
-	if [ "$SPELLCHECK" != "" ]; then
-		printf  "Spellcheck:
-   %3s unknown words (-1 if no wordlist available)
-   %3s wrong variables
-   %3s codepoints
-   %3s level-specific wrong msgstrs
-" $SPELLCHECK >> $TARGET_DIR/$lang.txt
-#		echo -n "$lang "
-	else
-		echo "No spellcheck available."  >>$TARGET_DIR/$lang.txt
-	fi
-  	print_text
-done
-echo ""
+#for lang in `cat $WD/config/languages`; do #run for every language
+#	if [ "$dist" = "unstable" ] ; then
+#		ext=""
+#	else
+#		ext=".$dist"
+#	fi
+#	SPELLCHECK=`grep "$lang" $WD/material/spellcheck${LEVEL}.txt | sed "s/$lang //g"`
+#	if [ "$SPELLCHECK" != "" ]; then
+#		printf  "Spellcheck:
+#   %3s unknown words (-1 if no wordlist available)
+#   %3s wrong variables
+#   %3s codepoints
+#   %3s level-specific wrong msgstrs
+#" $SPELLCHECK >> $TARGET_DIR/$lang.txt
+##		echo -n "$lang "
+#	else
+#		echo "No spellcheck available."  >>$TARGET_DIR/$lang.txt
+#	fi
+#  	print_text
+#done
+#echo ""
 
 	
 # done
@@ -554,7 +556,7 @@ fi
 echo -n "Cleanup..."
 
 rm -rf $COPY_TO_DIR
-rm $WD/material/spellcheck${LEVEL}.txt
+# rm $WD/material/spellcheck${LEVEL}.txt
 cp -r $TARGET_DIR $COPY_TO_DIR
 
 rm -f $LOCKFILE
