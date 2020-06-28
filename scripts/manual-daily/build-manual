@@ -140,7 +140,7 @@ commit_to_git() {
         echo "Committing changed po files:" >>$logdir/git_push.log
            git add */*.po
            git commit -m "[SILENT_COMMIT] Update of POT and PO files for the installation-guide" >>$logdir/git_push.log 2>&1
-           git push
+           git push -q
 
 ###        checkfatal "$?" "committing POT/PO files to SVN"
 
