@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-15 20:03+0300\n"
-"PO-Revision-Date: 2020-05-01 13:11+0000\n"
+"PO-Revision-Date: 2020-07-26 03:41+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew (https://www.transifex.com/yaron/teams/79473/he/)\n"
 "Language: he\n"
@@ -25,7 +25,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Weblate 4.0.2\n"
+"X-Generator: Weblate 4.2-dev\n"
 
 #. Type: text
 #. Description
@@ -304,16 +304,10 @@ msgstr ""
 #. Description
 #. :sl3:
 #: ../console-setup.templates:8001
-#, fuzzy
-#| msgid ""
-#| "Please select the size of the font for the console. For reference, the "
-#| "font used when the computer boots has size 8x16."
 msgid ""
 "Please select the size of the font for the console.  Some font sizes require "
 "framebuffer."
-msgstr ""
-"נא לבחור בגודל הגופן עבור המסוף. לשם השוואה, בזמן אתחול המחשב, גודל הגופן הוא"
-" ‎8×16."
+msgstr "נא לבחור בגודל הגופן עבור המסוף.  חלק מגדלי הגופן דורשים framebuffer."
 
 #. Type: select
 #. Description
@@ -1818,7 +1812,7 @@ msgid ""
 "RAID disk. It is also assumed that disk is listed as the first hard disk in "
 "the boot order defined in the system's BIOS setup."
 msgstr ""
-"GRUB תמיד מותקן ל־MBR של כונן  ה־ATA RAID הטורי. בנוסף ההנחה היא שהכונן הוא "
+"GRUB תמיד מותקן ל־MBR של כונן ה־ATA RAID הטורי. בנוסף ההנחה היא שהכונן הוא "
 "הכונן הקשיח הראשון בסדר האתחול שמוגדר ב־BIOS של המערכת."
 
 #. Type: boolean
@@ -1936,7 +1930,7 @@ msgid ""
 msgstr ""
 "זה יכול להיות פשוט כמו שם המכונה שבה קובצי הזריעה שלך נמצאים ועד לכתובת "
 "מלאה. כל אחד מהבאים יכול לעבוד:\n"
-"  [שלוש האפשרויות להלן שוות ערך עבור example.com]  intra\n"
+"  intra [עבור example.com שלוש האפשרויות להלן שוות ערך] \n"
 "  intra.example.com\n"
 "  http://intra.example.com/d-i/./lenny/preseed.cfg\n"
 "  http://192.168.0.1/~phil/test47.txt\n"
@@ -1988,10 +1982,10 @@ msgid ""
 "be unpartitioned. If you wish, you may investigate this from a shell in the "
 "installer environment."
 msgstr ""
-"מנהל ההתקנה לא יכל למצוא אף מחיצה, כך שלא תוכל לעגון שורש מערכת קבצים.  "
-"סיבות אפשריות לכך הן, שהליבה לא גילתה את הדיסק הקשיח שלך, או לא הצליחה לקרוא "
-"את טבלת המחיצות, או שהדיסק לא חולק למחיצות. אם הינך רוצה בכך, הינך יכול "
-"לחקור את זה משורת הפקודה בסביבת מנהל ההתקנה."
+"מנהל ההתקנה לא הצליח למצוא אף מחיצה, כך שלא ניתן לעגון שורש מערכת קבצים. "
+"סיבות אפשריות לכך הן, שהליבה לא גילתה את הכונן הקשיח שלך או לא הצליחה לקרוא "
+"את טבלת המחיצות או שהכונן לא חולק למחיצות. לרשותך מסוף בסביבת ההתקנה אם יש "
+"לך עניין לחקור את הנושא הזה."
 
 #. Type: select
 #. Choices
@@ -3382,7 +3376,7 @@ msgid ""
 msgstr ""
 "המערך מסוג RAID${LEVEL} יהיה מורכב ממחיצות פעילות ומחיצות עתודה. המחיצות "
 "הפעילות הן אלה שבשימוש, בעוד שמחיצות העתודה תהיינה בשימוש רק אם אחת המחיצות "
-"הפעילות תיכשלנה.  הכמות המזערית של התקנים פעילים הנדרשת היא ${MINIMUM}."
+"הפעילות תיכשלנה. הכמות המזערית של ההתקנים הפעילים הנדרשת היא ${MINIMUM}."
 
 #. Type: string
 #. Description
@@ -3472,7 +3466,7 @@ msgid ""
 "to the number of active devices."
 msgstr ""
 "הפריסה חייבת להיות n,‏ o או f (סידור ההעתקים) שאחריו יבוא מספר (מספר העותקים "
-"של כל גוש).  המספר חייב להיות קטן או שווה למספר ההתקנים הפעילים."
+"של כל גוש). המספר חייב להיות קטן או שווה למספר ההתקנים הפעילים."
 
 #. Type: string
 #. Description
@@ -5485,7 +5479,7 @@ msgid ""
 "There are not enough RAID partitions specified for your preseeded "
 "configuration. You need at least 3 devices for a RAID5 array."
 msgstr ""
-"לא צוינו מספיק מספיק מחיצות RAID בשביל ההגדרות שהוזנו מראש. צריך לפחות שלושה "
+"לא צוינו מספיק מחיצות RAID בשביל ההגדרות שהוזנו מראש. נדרשים לפחות שלושה "
 "התקנים עבור מערך מסוג RAID5."
 
 #. Type: text
