@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: fr\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-03-31 20:02+0000\n"
-"PO-Revision-Date: 2020-01-20 16:09+0100\n"
+"PO-Revision-Date: 2020-08-17 10:12+0100\n"
 "Last-Translator: Baptiste Jammet <baptiste@mailoo.org>\n"
 "Language-Team: French <debian-l10n-french@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -5106,7 +5106,6 @@ msgstr "Périphérique où sera installé le programme de démarrage :"
 #. Description
 #. :sl2:
 #: ../grub-installer.templates:7001 ../grub-installer.templates:8002
-#, fuzzy
 #| msgid ""
 #| "You need to make the newly installed system bootable, by installing the "
 #| "GRUB boot loader on a bootable device. The usual way to do this is to "
@@ -5121,16 +5120,15 @@ msgid ""
 msgstr ""
 "Le système nouvellement installé doit pouvoir être démarré. Cette opération "
 "consiste à installer le programme de démarrage GRUB sur un périphérique de "
-"démarrage. La méthode habituelle pour cela est de l'installer sur le secteur "
-"d'amorçage principal du premier disque dur. Vous pouvez, si vous le "
-"souhaitez, l'installer ailleurs sur le disque, sur un autre disque ou même "
-"sur une disquette."
+"démarrage. La méthode habituelle pour cela est de l'installer sur le disque "
+"principal (partition UEFI ou secteur d'amorçage). Vous pouvez, si vous le "
+"souhaitez, l'installer ailleurs sur un autre disque, une autre partition, ou "
+"même sur un support amovible."
 
 #. Type: string
 #. Description
 #. :sl2:
 #: ../grub-installer.templates:7001
-#, fuzzy
 #| msgid ""
 #| "The device should be specified as a device in /dev. Below are some "
 #| "examples:\n"
@@ -5155,12 +5153,10 @@ msgid ""
 msgstr ""
 "Le périphérique doit être indiqué avec un nom d'un périphérique dans /dev. "
 "Quelques exemples :\n"
-" - « /dev/sda » utilisera le secteur principal d'amorçage du\n"
-"   premier disque dur ;\n"
-" - « /dev/sda2 » utilisera la deuxième partition du premier\n"
-"   disque dur ;\n"
-" - « /dev/sdc5 » utilisera la première partition étendue\n"
-"   du troisième disque ;\n"
+" - « /dev/sda » utilisera le disque principal\n"
+"    (partition UEFI ou secteur d'amorçage) ;\n"
+" - « /dev/sdb » utilisera un disque secondaire\n"
+"    (qui peut être amovible) ;\n"
 " - « /dev/fd0 » installera GRUB sur une disquette."
 
 #. Type: password
