@@ -1,7 +1,7 @@
 # Traditional Chinese messages for debian-installer.
 # Copyright (C) 2003 Software in the Public Interest, Inc.
 # Louies <louies0623@gmail.com>, 2019.
-# Walter Cheuk <wwycheuk@gmail.com>, 2019.
+# Walter Cheuk <wwycheuk@gmail.com>, 2019, 2020.
 # This file is distributed under the same license as debian-installer.
 #
 msgid ""
@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-05 20:01+0000\n"
-"PO-Revision-Date: 2019-09-26 08:54+0000\n"
+"PO-Revision-Date: 2020-10-22 09:29+0000\n"
 "Last-Translator: Walter Cheuk <wwycheuk@gmail.com>\n"
 "Language-Team: Debian-user in Chinese [Big5] <debian-chinese-big5@lists."
 "debian.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.9-dev\n"
+"X-Generator: Weblate 4.3.1\n"
 
 #. Type: error
 #. Description
@@ -224,10 +224,8 @@ msgstr "因不明原因導致無法載入 ${PACKAGE}。程序中止。"
 #. Description
 #. :sl2:
 #: ../anna.templates:8001
-#, fuzzy
-#| msgid "No disk found"
 msgid "No kernel modules found"
-msgstr "未能找到磁碟"
+msgstr "找不到內核模組"
 
 #. Type: error
 #. Description
@@ -1760,19 +1758,12 @@ msgstr "無法由安裝媒體複製檔案。是否重新嘗試？"
 #. Description
 #. :sl2:
 #: ../cdrom-retriever.templates:1001
-#, fuzzy
-#| msgid ""
-#| "There was a problem reading data. Please make sure you have inserted the "
-#| "installation media correctly. If retrying does not work, you should check "
-#| "the integrity of your installation media."
 msgid ""
 "There was a problem reading data. Please make sure you have inserted the "
 "installation media correctly. If retrying does not work, you should check "
 "the integrity of your installation media (there is an associated entry in "
 "the main menu for that)."
-msgstr ""
-"讀取資料時發生了問題，請確認是否已確實放置安裝媒體。如果一再重試卻無法解決問"
-"題，您應該檢查這片安裝媒體的完整性。"
+msgstr "讀取資料時發生了問題，請確認是否已確實放置安裝媒體。如果一再重試卻無法解決問題，您應該檢查這片安裝媒體的完整性 (主選單有相關的項目)。"
 
 #. Type: text
 #. Description
@@ -2110,7 +2101,7 @@ msgstr ""
 msgid ""
 "This probably happened because there are too many (primary) partitions in "
 "the partition table."
-msgstr "這或許是因為在磁碟分割表中有過多的 (主) 分割區。"
+msgstr "這或許是因為在磁碟分割表有過多的 (主) 分割區。"
 
 #. Type: error
 #. Description
@@ -2126,9 +2117,7 @@ msgstr "無法使用的未使用空間"
 msgid ""
 "Partitioning failed because the chosen free space may not be used. There are "
 "probably too many (primary) partitions in the partition table."
-msgstr ""
-"也許是因為所指定的未使用空間無法使用，以致於無法分割該磁碟。在磁碟分割表中可"
-"能有過多的 (主) 分割區。"
+msgstr "也許是因為所指定的未使用空間無法使用，以致於無法分割該磁碟。磁碟分割表可能有過多的 (主) 分割區。"
 
 #. Type: text
 #. Description
@@ -2654,9 +2643,8 @@ msgid ""
 "logical partitions is normally discouraged. Some BIOS versions are known to "
 "fail to boot if there is no bootable primary partition."
 msgstr ""
-"您正試著將某個邏輯分割區設定為可開機。但可開機設定一般只能用於主分割區，通常"
-"並不會在邏輯分割區上如此設定。已知有些版本的 BIOS 若找不到可開機的主分割區的"
-"話將會無法開機。"
+"您正試著將某個邏輯分割區設定為可開機。但可開機設定一般只能用於主分割區，通常並不會在邏輯分割區如此設定。已知有些版本的 BIOS "
+"若找不到可開機的主分割區的話，會無法開機。"
 
 #. Type: boolean
 #. Description
@@ -3468,9 +3456,7 @@ msgid ""
 "Your boot partition is not located on the first primary partition of your "
 "hard disk. This is needed by your machine in order to boot.  Please go back "
 "and use your first primary partition as a boot partition."
-msgstr ""
-"您的啟動分割區並未位於硬碟的第一個主要分割區。但您必須如此設定，您的機器才能"
-"夠開機。請返回並將您的第一個主要分割區設定為啟動分割區。"
+msgstr "您的啟動分割區並未位於硬碟的第一個主要分割區。但您必須如此設定，您的電腦才能夠開機。請返回並將您的第一個主要分割區設定為開機分割區。"
 
 #. Type: boolean
 #. Description
@@ -3868,16 +3854,10 @@ msgstr "是否使用 NTP 來設定時鐘？"
 #. Description
 #. :sl2:
 #: ../clock-setup.templates:5001
-#, fuzzy
-#| msgid ""
-#| "The Network Time Protocol (NTP) can be used to set the system's clock. "
-#| "The installation process works best with a correctly set clock."
 msgid ""
 "The Network Time Protocol (NTP) can be used to set the system's clock. Your "
 "system works best with a correctly set clock."
-msgstr ""
-"可以使用網路時間協定 (NTP) 來設定系統時鐘。若能搭配正確的時鐘設定，安裝程序將"
-"會運作得更好。"
+msgstr "可以使用網路時間協定 (NTP) 來設定系統時鐘。若能搭配正確的時鐘設定，您的電腦會運作得更好。"
 
 #. Type: string
 #. Description
@@ -4827,40 +4807,19 @@ msgstr "用來安裝開機程式的裝置:"
 #. Description
 #. :sl2:
 #: ../grub-installer.templates:7001 ../grub-installer.templates:8002
-#, fuzzy
-#| msgid ""
-#| "You need to make the newly installed system bootable, by installing the "
-#| "GRUB boot loader on a bootable device. The usual way to do this is to "
-#| "install GRUB on the master boot record of your first hard drive. If you "
-#| "prefer, you can install GRUB elsewhere on the drive, or to another drive, "
-#| "or even to a floppy."
 msgid ""
 "You need to make the newly installed system bootable, by installing the GRUB "
 "boot loader on a bootable device. The usual way to do this is to install "
 "GRUB to your primary drive (UEFI partition/boot record). You may instead "
 "install GRUB to a different drive (or partition), or to removable media."
 msgstr ""
-"必須把 GRUB 開機程式安裝至可開機裝置上，才能讓這個新安裝的系統能夠開機。一般"
-"作法是將 GRUB 安裝至您第一顆硬碟的主要開機記錄 (MBR) 上。而或者，也可以依您喜"
-"好將 GRUB 安裝至磁碟的其它地方，或安裝至另一顆磁碟上，或甚至也可以將它安裝至"
-"磁碟片上。"
+"必須把 GRUB 開機程式安裝至可開機裝置，才能令這個新安裝的系統能夠開機。通常做法是將 GRUB 安裝至您的主要硬碟 (UEFI 分割區或開機記錄)。"
+"您也可以將 GRUB 安裝至其他硬碟 (或分割區)，又或安裝至其他移除式媒體 (磁碟)。"
 
 #. Type: string
 #. Description
 #. :sl2:
 #: ../grub-installer.templates:7001
-#, fuzzy
-#| msgid ""
-#| "The device should be specified as a device in /dev. Below are some "
-#| "examples:\n"
-#| " - \"/dev/sda\" will install GRUB to the master boot record of your "
-#| "first\n"
-#| "   hard drive;\n"
-#| " - \"/dev/sda2\" will use the second partition of your first hard drive;\n"
-#| " - \"/dev/sdc5\" will use the first extended partition of your third "
-#| "hard\n"
-#| "   drive;\n"
-#| " - \"/dev/fd0\" will install GRUB to a floppy."
 msgid ""
 "The device notation should be specified as a device in /dev. Below are some "
 "examples:\n"
@@ -4872,11 +4831,10 @@ msgid ""
 "   be a thumbdrive);\n"
 " - \"/dev/fd0\" will install GRUB to a floppy."
 msgstr ""
-"請以 /dev 裡的裝置來指定磁碟。範例如下:\n"
-" - /dev/sda 將會把 GRUB 安裝至第一顆硬碟的主要開機記錄 (MBR) 上。\n"
-" - /dev/sda2 將安裝至第一顆硬碟的第二個分割區。\n"
-" - /dev/sdc5 將安裝至第三顆硬碟的第一個延伸分割區。\n"
-" - /dev/fd0 則會將 GRUB 安裝至磁碟片上。"
+"請以 /dev 裡的裝置稱呼來指定磁碟。範例如下：\n"
+" - /dev/sda 會將 GRUB 安裝至主要硬碟 (UEFI 分割區或開機記錄)；\n"
+" - /dev/sdb 會將 GRUB 安裝至次要硬碟 (有可能是 USB 隨身碟)；\n"
+" - /dev/fd0 則會將 GRUB 安裝至軟碟片。"
 
 #. Type: password
 #. Description
