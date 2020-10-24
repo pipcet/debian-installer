@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: bg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-15 20:03+0300\n"
-"PO-Revision-Date: 2020-10-24 09:42+0300\n"
+"PO-Revision-Date: 2020-10-24 09:53+0300\n"
 "Last-Translator: Damyan Ivanov <dmn@debian.org>\n"
 "Language-Team: Български <dict@fsa-bg.org>\n"
 "Language: bg\n"
@@ -3715,8 +3715,8 @@ msgid ""
 "${COUNT} existing volume groups have been found. Please indicate whether you "
 "want to activate them."
 msgstr ""
-"Намерени са ${COUNT} съществуващи групи от томове. Моля, посочете дали "
-"искате да ги активирате."
+"Намерени са ${COUNT} съществуващи групи от томове. Посочете дали искате да "
+"ги активирате."
 
 #. Type: select
 #. Choices
@@ -3983,7 +3983,7 @@ msgstr "Не е въведено име за група от томове"
 #. :sl3:
 #: ../lvmcfg-utils.templates:8001
 msgid "No name for the volume group has been entered.  Please enter a name."
-msgstr "Не е въведено име за група от томове. Моля, въведете име."
+msgstr "Не е въведено име за групата от томове. Моля, въведете име."
 
 #. Type: error
 #. Description
@@ -4257,8 +4257,9 @@ msgid ""
 "The selected volume group (${VG}) could not be reduced. There is only one "
 "physical volume attached. Please delete the volume group instead."
 msgstr ""
-"Избраната група от томове (${VG}) не може да бъде смалена. Има прикачен само "
-"един физически том. Моля, вместо това изтрийте тази група от томове."
+"Избраната група от томове (${VG}) не може да бъде смалена, защото е "
+"съставена само от един физически том. Единственият начин за смаляване е на "
+"групата от томове е изтриването ѝ."
 
 #. Type: error
 #. Description
@@ -4279,8 +4280,8 @@ msgid ""
 "No volume groups were found for creating a new logical volume.  Please "
 "create more physical volumes and volume groups."
 msgstr ""
-"Не бяха намерени групи от томове за създаване на нов логически том. Моля, "
-"създайте повече физически томове или групи от томове."
+"Не бяха намерени групи от томове за създаване на нов логически том. "
+"Необходимо е да бъдат създадени нови физически томове и групи от томове."
 
 #. Type: error
 #. Description
@@ -4291,9 +4292,9 @@ msgid ""
 "create more physical volumes and volume groups, or reduce an existing volume "
 "group."
 msgstr ""
-"Не бяха намерени групи от томове за създаване на нов логически том. Моля, "
-"създайте повече физически томове или групи от томове, или смалете "
-"съществуваща група от томове."
+"Не бяха намерени групи от томове за създаване на нов логически том. "
+"Необходимо е да бъдат създадени нови физически томове и групи от томове или "
+"да бъде смалена съществуваща група от томове."
 
 #. Type: string
 #. Description
@@ -4433,7 +4434,7 @@ msgstr "Не е намерен логически том"
 #: ../lvmcfg-utils.templates:35001
 msgid ""
 "No logical volume has been found.  Please create a logical volume first."
-msgstr "Не е намерен логически том. Моля, първо създайте логически том."
+msgstr "Не са намерени логически томове."
 
 #. Type: select
 #. Description
@@ -4447,7 +4448,7 @@ msgstr "Логически том:"
 #. :sl3:
 #: ../lvmcfg-utils.templates:36001
 msgid "Please select the logical volume to be deleted on ${VG}."
-msgstr "Изберете логически том, който да бъде изтрит от ${VG}."
+msgstr "Изберете логически том, който да бъде изтрит от групата ${VG}."
 
 #. Type: error
 #. Description
@@ -4461,7 +4462,7 @@ msgstr "Грешка при изтриване на логически том"
 #. :sl3:
 #: ../lvmcfg-utils.templates:37001
 msgid "The logical volume (${LV}) on ${VG} could not be deleted."
-msgstr "Логическият том ${LV} в ${VG} не може да бъде изтрит."
+msgstr "Логическият том ${LV} от групата ${VG} не може да бъде изтрит."
 
 #. Type: error
 #. Description
@@ -4479,16 +4480,16 @@ msgid ""
 "physical volumes may already be in use. You may also need to load some "
 "required kernel modules or re-partition the hard drives."
 msgstr ""
-"Не може да бъде намерен физически том (дял) във вашата система.  Всички "
-"физически томове вече се използват. Може би трябва да заредите някои модули "
-"или да разделите твърдите дискове отново."
+"В системата няма свободни физически томове (дялове). Или всички физически "
+"томове вече се използват, или е необходимо да се заредят драйвери или да се "
+"извърши повторно разделяне на твърдите дискове на дялове."
 
 #. Type: error
 #. Description
 #. :sl3:
 #: ../lvmcfg-utils.templates:39001 ../partman-lvm.templates:59001
 msgid "Logical Volume Manager not available"
-msgstr "Няма достъпен Logical Volume Manager"
+msgstr "Logical Volume Manager не е достъпен"
 
 #. Type: error
 #. Description
@@ -4498,8 +4499,8 @@ msgid ""
 "The current kernel doesn't support the Logical Volume Manager. You may need "
 "to load the lvm-mod module."
 msgstr ""
-"Текущото ядро не поддържа Logical Volume Manager. Може би се нуждаете от "
-"зареждане на модула lvm-mod."
+"Текущото ядро не поддържа Logical Volume Manager. Вероятно е необходимо да "
+"бъде зареден модула lvm-mod."
 
 #. Type: text
 #. Description
@@ -4588,9 +4589,9 @@ msgid ""
 "Please create such a partition, or delete an already used software RAID "
 "device to free its partitions."
 msgstr ""
-"Няма неизползвани дялове от тип „Linux RAID Autodetect“. Моля, създайте "
-"такъв дял или изтрийте вече използвано RAID-устройство, за да освободите "
-"дяловете му."
+"Не са открити свободни дялове от тип „Linux RAID Autodetect“. Създайте такъв "
+"дял или изтрийте вече използвано RAID-устройство, за да освободите дяловете "
+"му."
 
 #. Type: multiselect
 #. Description
@@ -4759,16 +4760,15 @@ msgid ""
 "disks containing physical volumes are allowed.  Please convince yourself "
 "that you are satisfied with the current partitioning scheme in these disks."
 msgstr ""
-"Когато RAID е настроен, не са позволени допълнителни промени в дяловете на "
-"дисковете, съдържащи физически томове. Моля, уверете се, че текущата схема "
-"на разделяне на тези дискове ви задоволява."
+"След настройването на RAID не са позволени промени в разделяне на дисковете. "
+"Потвърдете, че текущата схема на разделяне отговаря на очакванията."
 
 #. Type: boolean
 #. Description
 #. :sl3:
 #: ../partman-md.templates:20001
 msgid "Keep current partition layout and configure RAID?"
-msgstr "Записване на текущото разположение на дяловете и настройване на RAID?"
+msgstr "Записване на текущото разделения на дялове и настройване на RAID?"
 
 #. Type: error
 #. Description
@@ -5001,10 +5001,9 @@ msgid ""
 "the installation. Please decide if you are satisfied with the current "
 "partitioning scheme before continuing."
 msgstr ""
-"След като Logical Volume Manager е вече настроен, не са позволени "
-"допълнителни промени на дяловете на дисковете, съдържащи физически томове. "
-"Моля, решете дали текущата схема на разделянето е задоволителна преди да "
-"продължите."
+"След настройването на Logical Volume Manager не са позволени промени в "
+"разделянето на дисковете. Потвърдете, че текущата схема на разделяне "
+"отговаря на очакванията."
 
 #. Type: boolean
 #. Description
@@ -5023,10 +5022,9 @@ msgid ""
 "decide if you are satisfied with the current partitioning scheme in these "
 "disks before continuing."
 msgstr ""
-"След като Logical Volume Manager е вече настроен, не са позволени "
-"допълнителни промени на дяловете в дисковете, съдържащи физически томове. "
-"Моля, решете дали текущата схема на разделянето е задоволителна преди да "
-"продължите."
+"След настройването на Logical Volume Manager не са позволени промени в "
+"разделянето на дисковете. Потвърдете, че текущата схема на разделяне на "
+"участващите дискове отговаря на очакванията."
 
 #. Type: error
 #. Description
@@ -5193,7 +5191,9 @@ msgstr "Не е въведено име за логически том. Моля
 #. :sl3:
 #: ../partman-lvm.templates:54001
 msgid "No logical volume has been found. Please create a logical volume first."
-msgstr "Не е намерен логически том. Моля, първо създайте логически том."
+msgstr ""
+"Не са открити логически томове. Необходимо е създаването на поне един "
+"логически том."
 
 #. Type: select
 #. Description
@@ -5536,7 +5536,7 @@ msgstr ""
 #: ../partman-auto-lvm.templates:11001
 msgid "Amount of volume group to use for guided partitioning:"
 msgstr ""
-"Количество от група топ, което ще се използва за ръководено разделяне на "
+"Обем от групата томове, който ще се използва за автоматично разделяне на "
 "дялове:"
 
 #. Type: string
@@ -5549,11 +5549,12 @@ msgid ""
 "able to grow logical volumes later using the LVM tools, so using a smaller "
 "part of the volume group at installation time may offer more flexibility."
 msgstr ""
-"Можете да използвате цяла група том за ръководено разделяне на дялове или "
-"част от него. Ако използвате само част от него или добавите още дискове по-"
-"късно, тогава ще можете да уголемите логическите томове с помощта на LVM "
-"инструменти, така че, ако използвате по-малка група том ще ви предостави "
-"повече гъвкавост."
+"Може да използвате цялата или само част от групата томове за автоматично "
+"разделяне на дялове. Използването само на част от обема на групата томове по "
+"време на инсталацията може предостави повече гъвкавост в бъдеще. "
+"Уголемяването на логическите томове (ако сега се задели само част от обема "
+"на групата или при по-късно добавяне на допълнителни дискове) е възможно и "
+"по-късно с помощта на инструментите на LVM."
 
 #. Type: string
 #. Description
@@ -5564,16 +5565,16 @@ msgid ""
 "${PERCENT}); please note that the packages you choose to install may require "
 "more space than this. The maximum available size is ${MAXSIZE}."
 msgstr ""
-"Минималния размер на избрания дял е ${MINSIZE} (или ${PERCENT}); моля, "
-"знайте че пакетите, които избирате за инсталация може да изискват повече "
-"място от, това което сте избрали. Максималното налично място е ${MAXSIZE}."
+"Минималния размер на избрания дял е ${MINSIZE} (или ${PERCENT}); имайте "
+"предвид, че пакетите, които избирате за инсталация може да изискват повече "
+"място. Максималното налично място е ${MAXSIZE}."
 
 #. Type: error
 #. Description
 #. :sl3:
 #: ../partman-auto-lvm.templates:12001
 msgid "Invalid input"
-msgstr "Невалиден вход"
+msgstr "Невалидна стойност"
 
 #. Type: error
 #. Description
@@ -5988,8 +5989,8 @@ msgid ""
 "This build of debian-installer does not include one or more programs that "
 "are required for partman-crypto to function correctly."
 msgstr ""
-"Това издание на debian-installer не включва една или повече програми, които "
-"са необходими на partman-crypto за правилно функциониране."
+"Това издание на инсталатора на Дебиан не включва всички програми, които са "
+"необходими за правилното функциониране на partman-crypto."
 
 #. Type: error
 #. Description
@@ -6279,8 +6280,7 @@ msgstr "Грешка при въвеждане на парола"
 #. :sl3:
 #: ../partman-crypto.templates:48001
 msgid "The two passphrases you entered were not the same. Please try again."
-msgstr ""
-"Двете пароли, които въведохте, не са едни и същи. Моля, опитайте отново."
+msgstr "Двете пароли, които въведохте, не съвпадат. Моля, опитайте отново."
 
 #. Type: error
 #. Description
@@ -6296,16 +6296,14 @@ msgstr "Празна парола"
 msgid ""
 "You entered an empty passphrase, which is not allowed. Please choose a non-"
 "empty passphrase."
-msgstr ""
-"Въведохте празна парола, което не е позволено. Моля, изберете непразна "
-"парола."
+msgstr "Въведохте празна парола, което не е позволено. Моля, въведете парола."
 
 #. Type: boolean
 #. Description
 #. :sl3:
 #: ../partman-crypto.templates:50001
 msgid "Use weak passphrase?"
-msgstr "Използване на празна парола?"
+msgstr "Използване на слаба парола?"
 
 #. Type: boolean
 #. Description
@@ -6318,8 +6316,8 @@ msgid ""
 "You entered a passphrase that consists of less than ${MINIMUM} characters, "
 "which is considered too weak. You should choose a stronger passphrase."
 msgstr ""
-"Въведохте парола, която се състои от по-малко от ${MINIMUM} знака, което се "
-"счита за твърде слаба парола. Трябва да изберете по-силна парола."
+"Въведохте парола, която се състои от по-малко от ${MINIMUM} знака, което я "
+"прави твърде слаба. Препоръчва се използването по по-сложна парола."
 
 #. Type: entropy
 #. Description
@@ -6423,8 +6421,8 @@ msgid ""
 "You have chosen a random key type for ${DEVICE} but requested the "
 "partitioner to create a file system on it."
 msgstr ""
-"Избрахте използване на случаен ключ за ${DEVICE}, но поискахте "
-"манипулирането на дялове да създаде файлова система там."
+"Избрано е използването на случаен ключ за ${DEVICE}, но е указано и "
+"създаване на файлова система."
 
 #. Type: boolean
 #. Description
@@ -6436,7 +6434,7 @@ msgid ""
 msgstr ""
 "Използването на случаен ключ означава, че данните в дяла ще бъдат "
 "унищожавани при всяко рестартиране. Тази възможност трябва да се използва "
-"само за места за виртуална памет."
+"само за дяловете, предназначени за виртуална памет."
 
 #. Type: error
 #. Description
@@ -6561,7 +6559,7 @@ msgstr ""
 #. :sl3:
 #: ../cdebconf-gtk-entropy.templates:1001
 msgid "Enter random characters or make random movements with the mouse"
-msgstr "Въвеждайте случайни знаци или мърдайте мишката хаотично"
+msgstr "Въвеждайте случайни знаци или движете мишката хаотично"
 
 #. Type: text
 #. Description
@@ -6572,4 +6570,4 @@ msgid ""
 "keyboard or by making random movements with the mouse."
 msgstr ""
 "Може да ускорите процеса чрез въвеждане на случайни знаци по клавиатурата "
-"или като местите хаотично мишката."
+"или като движите хаотично мишката."
