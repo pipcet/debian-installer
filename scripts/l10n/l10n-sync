@@ -392,6 +392,9 @@ if [ -f $LOCKFILE ] ; then
 	exit 1
 else
 	touch $LOCKFILE
+	# Save logfiles to .old for further inspection:
+	cp -a $LOG $LOG.old
+	cp -a $DI_COPY/l10n-sync_commit.log $DI_COPY/l10n-sync_commit.log.old
 fi
 
 # First, update the copy of D-I repository
