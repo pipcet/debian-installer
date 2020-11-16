@@ -28,14 +28,14 @@
 # Marcello Raffa <mrooth@tiscalinet.it>, 2001
 # Tobias Toedter <t.toedter@gmx.net>, 2007.
 # Translations taken from ICU SVN on 2007-09-09
-# Milo Casagrande <milo@milo.name>, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2017, 2018.
+# Milo Casagrande <milo@milo.name>, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2017, 2018, 2020.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-05 20:01+0000\n"
-"PO-Revision-Date: 2018-08-27 10:27+0200\n"
+"POT-Creation-Date: 2020-10-28 20:01+0000\n"
+"PO-Revision-Date: 2020-10-22 13:37+0200\n"
 "Last-Translator: Milo Casagrande <milo@milo.name>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
 "Language: it\n"
@@ -43,7 +43,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
-"X-Generator: Poedit 2.0.4\n"
+"X-Generator: Poedit 2.4.1\n"
 
 #: ../../mktemplates.continents:15
 msgid "Africa"
@@ -804,6 +804,13 @@ msgstr "Belga"
 #. Choices
 #. :sl1:
 #: ../keyboard-configuration.templates:16001
+msgid "Berber (Latin)"
+msgstr ""
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:16001
 msgid "Bosnian"
 msgstr "Bosniaco"
 
@@ -1329,19 +1336,15 @@ msgstr "Vietnamita"
 #. Description
 #. :sl1:
 #: ../cdrom-detect.templates:2001
-#, fuzzy
-#| msgid "Detecting hardware to find hard drives"
 msgid "Detecting hardware to find installation media"
-msgstr "Ricerca dei dischi fissi nel sistema"
+msgstr "Rilevamento dell'hardware per trovare i supporti di installazione"
 
 #. Type: text
 #. Description
 #. :sl1:
 #: ../cdrom-detect.templates:10001
-#, fuzzy
-#| msgid "SILO installation failed"
 msgid "Scanning installation media"
-msgstr "Installazione di Silo non riuscita"
+msgstr "Analisi dei supporti di installazione"
 
 #. Type: text
 #. Description
@@ -1356,7 +1359,7 @@ msgstr "Analisi di ${DIR}..."
 #. :sl1:
 #: ../cdrom-detect.templates:19001
 msgid "Unmounting/ejecting installation media..."
-msgstr ""
+msgstr "Smontaggio/Espulsione del supporto di installazione..."
 
 #. Type: text
 #. Description
@@ -2107,10 +2110,10 @@ msgstr "Annulla"
 #. Translators: keep below 55 columns
 #. :sl1:
 #: ../load-cdrom.templates:1001
-#, fuzzy
-#| msgid "Load installer components from an installer ISO"
 msgid "Load installer components from installation media"
-msgstr "Caricare i componenti del programma d'installazione da un'immagine ISO"
+msgstr ""
+"Caricare i componenti del programma d'installazione dal supporto di "
+"installazione"
 
 #. Type: text
 #. Description
@@ -3477,10 +3480,8 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:1001
-#, fuzzy
-#| msgid "Finishing the installation"
 msgid "Scanning the installation media..."
-msgstr "Completamento dell'installazione"
+msgstr "Analisi del supporto di installazione..."
 
 #. Type: error
 #. Description
@@ -3489,16 +3490,12 @@ msgstr "Completamento dell'installazione"
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:2001 ../apt-cdrom-setup.templates:6001
-#, fuzzy
-#| msgid ""
-#| "An attempt to configure apt to install additional packages from the CD "
-#| "failed."
 msgid ""
 "An attempt to configure apt to install additional packages from the media "
 "failed."
 msgstr ""
-"Il tentativo di configurare APT per installare ulteriori pacchetti dal CD-"
-"ROM non è riuscito."
+"Il tentativo di configurare apt per installare ulteriori pacchetti dal "
+"supporto non è riuscito."
 
 #. Type: boolean
 #. Description
@@ -3514,38 +3511,30 @@ msgstr ""
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001 ../apt-cdrom-setup.templates:4001
 #: ../apt-cdrom-setup.templates:5001 ../apt-cdrom-setup.templates:6001
-#, fuzzy
-#| msgid "SILO installation failed"
 msgid "Scan extra installation media?"
-msgstr "Installazione di Silo non riuscita"
+msgstr "Eseguire l'analisi di supporti di installazione aggiuntivi?"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001
 msgid "Scanning your installation media finds the label:"
-msgstr ""
+msgstr "L'analisi del supporto di installazione ha trovato l'etichetta:"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001
-#, fuzzy
-#| msgid ""
-#| "You now have the option to scan additional CDs or DVDs for use by the "
-#| "package manager (apt). Normally these should be from the same set as the "
-#| "installation CD/DVD. If you do not have any additional CDs or DVDs "
-#| "available, this step can just be skipped."
 msgid ""
 "You now have the option of scanning additional media for use by the package "
 "manager (apt). Normally these should be from the same set as the one you "
 "booted from. If you do not have any additional media, this step can just be "
 "skipped."
 msgstr ""
-"È ora possibile analizzare altri CD o DVD per farli usare al gestore dei "
-"pacchetti (apt). Normalmente questo andrebbe fatto usando CD/DVD "
-"appartenenti allo stesso insieme. Se non si hanno CD o DVD addizionali a "
-"disposizione questo passo può essere saltato."
+"È ora possibile analizzare altri supporti per l'utilizzo da parte del "
+"gestore dei pacchetti (apt). Normalmente tali supporti dovrebbero far parte "
+"dello stesso insieme di supporti da cui è stato eseguito l'avvio. Se non si "
+"dispone di alcun supporto aggiuntivo, questo passo può essere saltato."
 
 #. Type: boolean
 #. Description
@@ -3554,46 +3543,36 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001 ../apt-cdrom-setup.templates:4001
-#, fuzzy
-#| msgid "If you wish to scan another CD or DVD, please insert it now."
 msgid "If you wish to scan more media, please insert another one now."
-msgstr "Per analizzare un altro CD o DVD inserirlo ora."
+msgstr "Per analizzare altri supporti, inserirne uno ora."
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:4001
-#, fuzzy
-#| msgid "The CD or DVD with the following label has been scanned:"
 msgid "The image with the following label has been scanned:"
-msgstr "Il CD o DVD con la seguente etichetta è stato analizzato:"
+msgstr "L'immagine con la seguente etichetta è stata analizzata:"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:5001
-#, fuzzy
-#| msgid "The CD or DVD with the following label has already been scanned:"
 msgid "The image with the following label has already been scanned:"
-msgstr "Il CD o DVD con la seguente etichetta è già stato analizzato:"
+msgstr "L'immagine con la seguente etichetta è già stata analizzata:"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:5001
-#, fuzzy
-#| msgid "Please replace it now if you wish to scan another CD or DVD."
 msgid "Please replace it now, if you wish to scan another."
-msgstr "Sostituirlo ora per analizzare un altro CD o DVD."
+msgstr "Sostituire il supporto ora per analizzare un altro."
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:6001
-#, fuzzy
-#| msgid "Please check that the CD/DVD has been inserted correctly."
 msgid "Please check that the media has been inserted correctly."
-msgstr "Verificare che il CD/DVD sia stato inserito correttamente."
+msgstr "Verificare che il supporto sia stato inserito correttamente."
 
 #. Type: text
 #. Description
@@ -3606,14 +3585,8 @@ msgstr "Supporto cambiato"
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:7001
-#, fuzzy
-#| msgid ""
-#| "/cdrom/: Please insert the disc labeled '${LABEL}' in the drive '/cdrom/' "
-#| "and press enter."
 msgid "Please insert the media labeled '${LABEL}' and press enter."
-msgstr ""
-"/cdrom/: inserire il disco etichettato «${LABEL}» nel drive «/cdrom/» e "
-"premere Invio."
+msgstr "Inserire il supporto etichettato «${LABEL}» e premere Invio."
 
 #. Type: text
 #. Description
@@ -3630,82 +3603,64 @@ msgstr "Disabilitazione del CD di netinst da sources.list..."
 #. Description
 #. :sl2:
 #: ../apt-cdrom-setup.templates:9001 ../apt-mirror-setup.templates:6001
-#, fuzzy
-#| msgid ""
-#| "If you are installing from a netinst CD and choose not to use a mirror, "
-#| "you will end up with only a very minimal base system."
 msgid ""
 "If you are installing from a netinst CD image and choose not to use a "
 "mirror, you will end up with only a very minimal base system."
 msgstr ""
-"Se si sta installando da un CD netinst e si sceglie di non usare un mirror "
-"ci si troverà solo con un sistema base minimale."
+"Se si sta installando da un'immagine CD netinst e si sceglie di non usare un "
+"mirror ci si troverà solo con un sistema base minimale."
 
 #. Type: text
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:10001
-#, fuzzy
-#| msgid ""
-#| "You are installing from a netinst CD, which by itself only allows "
-#| "installation of a very minimal base system. Use a mirror to install a "
-#| "more complete system."
 msgid ""
 "You are installing from a netinst CD image, which by itself only allows "
 "installation of a very minimal base system. Use a mirror to install a more "
 "complete system."
 msgstr ""
-"Si sta installando dal CD netinst, che permette solo l'installazione di un "
-"sistema minimale. Usare un mirror per installare un sistema più completo."
+"Si sta installando da un'immagine CD netinst, che permette solo "
+"l'installazione di un sistema minimale. Usare un mirror per installare un "
+"sistema più completo."
 
 #. Type: text
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:11001
-#, fuzzy
-#| msgid ""
-#| "You are installing from a CD, which contains a limited selection of "
-#| "packages."
 msgid ""
 "You are installing from an image which contains a limited selection of "
 "packages."
 msgstr ""
-"Si sta installando da un CD che contiene una selezione limitata di pacchetti."
+"Si sta installando da un'immagine che contiene una selezione limitata di "
+"pacchetti."
 
 #. Type: text
 #. Description
 #. :sl1:
 #. The value of %i can be 2 or 3
 #: ../apt-cdrom-setup.templates:12001
-#, fuzzy, no-c-format
-#| msgid ""
-#| "You have scanned %i CDs. Even though these contain a fair selection of "
-#| "packages, some may be missing (notably some packages needed to support "
-#| "languages other than English)."
+#, no-c-format
 msgid ""
 "You have scanned %i images. Even though these contain a fair selection of "
 "packages, some may be missing (notably some packages needed to support "
 "languages other than English)."
 msgstr ""
-"Sono stati analizzati %i CD. Sebbene questi contengano una grande quantità "
-"di pacchetti, alcuni potrebbero mancare (in particolare alcuni pacchetti "
-"necessari per il supporto di lingue diverse dall'inglese)."
+"Sono state analizzate %i immagini. Anche se queste contengono una grande "
+"quantità di pacchetti, alcuni potrebbero mancare (in particolare alcuni "
+"pacchetti necessari per il supporto di lingue diverse dall'inglese)."
 
 #. Type: text
 #. Description
 #. :sl1:
 #. The value of %i can be from 4 to 8
 #: ../apt-cdrom-setup.templates:13001
-#, fuzzy, no-c-format
-#| msgid ""
-#| "You have scanned %i CDs. Even though these contain a large selection of "
-#| "packages, some may be missing."
+#, no-c-format
 msgid ""
 "You have scanned %i images. Even though these contain a large selection of "
 "packages, some may be missing."
 msgstr ""
-"Sono stati analizzati %i CD. Anche se questi contengono una grande quantità "
-"di pacchetti, alcuni potrebbero mancare."
+"Sono state analizzate %i immagine. Anche se queste contengono una grande "
+"quantità di pacchetti, alcuni potrebbero mancare."
 
 #. Type: text
 #. Description
@@ -3722,16 +3677,12 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:15001
-#, fuzzy
-#| msgid ""
-#| "You are installing from a DVD. Even though the DVD contains a large "
-#| "selection of packages, some may be missing."
 msgid ""
 "You are installing from a DVD image. Even though it contains a large "
 "selection of packages, some may be missing."
 msgstr ""
-"Si sta installando da DVD. Anche se il DVD contiene una grande quantità di "
-"pacchetti, alcuni potrebbe mancare"
+"Si sta installando da un'immagine DVD. Anche se questa contiene una grande "
+"quantità di pacchetti, alcuni potrebbe mancare"
 
 #. Type: text
 #. Description
@@ -3859,18 +3810,14 @@ msgstr "Usare un mirror di rete?"
 #. Description
 #. :sl1:
 #: ../apt-mirror-setup.templates:5001
-#, fuzzy
-#| msgid ""
-#| "A network mirror can be used to supplement the software that is included "
-#| "on the CD-ROM. This may also make newer versions of software available."
 msgid ""
 "A network mirror can be used to supplement the software that is included on "
 "the installation media. This may also make newer versions of software "
 "available."
 msgstr ""
 "È possibile usare un mirror di rete come supplemento al software incluso nel "
-"CD-ROM. Questo può servire a rendere disponibili versioni più aggiornate del "
-"software."
+"supporto di installazione. Questo può servire a rendere disponibili versioni "
+"più aggiornate del software."
 
 #. Type: boolean
 #. Description
@@ -4306,10 +4253,8 @@ msgstr "Continuare senza un boot loader"
 #. Description
 #. :sl1:
 #: ../grub-installer.templates:1001 ../grub-installer.templates:2001
-#, fuzzy
-#| msgid "Install the GRUB boot loader on a hard disk"
 msgid "Install the GRUB boot loader to your primary drive?"
-msgstr "Installare il boot loader GRUB su un disco fisso"
+msgstr "Installare il boot loader GRUB sul disco primario?"
 
 #. Type: boolean
 #. Description
@@ -4326,32 +4271,21 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../grub-installer.templates:1001
-#, fuzzy
-#| msgid ""
-#| "If all of your operating systems are listed above, then it should be safe "
-#| "to install the boot loader to the master boot record of your first hard "
-#| "drive. When your computer boots, you will be able to choose to load one "
-#| "of these operating systems or your new system."
 msgid ""
 "If all of your operating systems are listed above, then it should be safe to "
 "install the boot loader to your primary drive (UEFI partition/boot record). "
 "When your computer boots, you will be able to choose to load one of these "
 "operating systems or the newly installed Debian system."
 msgstr ""
-"Se tutti i sistemi operativi sono elencati sopra, allora si può installare "
-"il boot loader nel master boot record del primo disco fisso in sicurezza. "
-"All'avvio del computer, sarà possibile caricare uno di questi sistemi "
-"operativi oppure il nuovo sistema."
+"Se tutti i sistemi operativi sono elencati sopra, è allora possibile "
+"installare in sicurezza il boot loader sul disco primario (partizione/boot "
+"record UEFI). All'avvio del computer, sarà possibile caricare uno di questi "
+"sistemi operativi oppure il nuovo sistema Debian."
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../grub-installer.templates:2001
-#, fuzzy
-#| msgid ""
-#| "It seems that this new installation is the only operating system on this "
-#| "computer. If so, it should be safe to install the GRUB boot loader to the "
-#| "master boot record of your first hard drive."
 msgid ""
 "It seems that this new installation is the only operating system on this "
 "computer. If so, it should be safe to install the GRUB boot loader to your "
@@ -4359,27 +4293,21 @@ msgid ""
 msgstr ""
 "Sembra che questa nuova installazione sia l'unico sistema operativo presente "
 "su questo computer. Se così fosse, è buona norma installare il boot loader "
-"GRUB sul master boot record del primo disco fisso."
+"GRUB sul disco primario (partizione/boot record UEFI)."
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../grub-installer.templates:2001
-#, fuzzy
-#| msgid ""
-#| "Warning: If the installer failed to detect another operating system that "
-#| "is present on your computer, modifying the master boot record will make "
-#| "that operating system temporarily unbootable, though GRUB can be manually "
-#| "configured later to boot it."
 msgid ""
 "Warning: If your computer has another operating system that the installer "
 "failed to detect, this will make that operating system temporarily "
 "unbootable, though GRUB can be manually configured later to boot it."
 msgstr ""
-"Attenzione: se il programma d'installazione non riesce a riconoscere un "
-"altro sistema operativo presente su questo computer, la modifica del master "
-"boot record renderà il sistema operativo temporaneamente non avviabile, "
-"sebbene GRUB possa essere configurato successivamente per avviarlo."
+"Attenzione: se il computer dispone di un altro sistema operativo che il "
+"programma di installazione non è riuscito a rilevare, tale sistema non sarà "
+"temporaneamente disponibile. Successivamente, modificare GRUB manualmente "
+"per poterlo avviare."
 
 #. Type: text
 #. Description
@@ -4459,10 +4387,8 @@ msgstr ""
 #. Translators: keep below 55 columns
 #. :sl1:
 #: ../grub-installer.templates:28001
-#, fuzzy
-#| msgid "Installing GRUB boot loader"
 msgid "Install the GRUB boot loader"
-msgstr "Installazione del boot loader GRUB"
+msgstr "Installare il boot loader GRUB"
 
 #. Type: boolean
 #. Description
@@ -4588,1600 +4514,3 @@ msgstr "Configurare il Logical Volume Manager"
 #: ../partman-auto-lvm.templates:1001
 msgid "Guided - use entire disk and set up LVM"
 msgstr "Guidato - usa l'intero disco e imposta LVM"
-
-#~ msgid ""
-#~ "Please select the size of the font for the console.  For reference, the "
-#~ "font used when the computer boots has size 8x16.  Some font sizes require "
-#~ "the kbd console package (not console-tools) plus framebuffer."
-#~ msgstr ""
-#~ "Selezionare la dimensione del carattere per la consolle. Per riferimento, "
-#~ "il carattere usato all'avvio del computer ha una dimensione di 8×16. "
-#~ "Alcune dimensioni necessitano del pacchetto per la consolle kbd (non "
-#~ "console-tools) più il framebuffer."
-
-#~ msgid "${disc}: Master Boot Record"
-#~ msgstr "${disc}: Master Boot Record"
-
-#~ msgid "${part}: new Debian partition"
-#~ msgstr "${part}: nuova partizione Debian"
-
-#~ msgid "Other choice (Advanced)"
-#~ msgstr "Altra scelta (avanzato)"
-
-#~ msgid "LILO installation target:"
-#~ msgstr "Destinazione dell'installazione di LILO:"
-
-#~ msgid ""
-#~ "The LILO program needs to be installed to make your new system bootable. "
-#~ "By installing it onto your disk's Master Boot Record, LILO will take "
-#~ "complete control of the boot process, but if you want to use a different "
-#~ "boot manager, just install LILO on the new Debian partition instead."
-#~ msgstr ""
-#~ "Il programma LILO deve essere installato per rendere avviabile il nuovo "
-#~ "sistema. Installandolo sul Master Boot Record del vostro disco, LILO "
-#~ "prenderà il controllo del processo di avvio, ma se si vuole usare un "
-#~ "differente gestore di avvio, basterà installare LILO sulla nuova "
-#~ "partizione Debian."
-
-#~ msgid "If unsure, install LILO into the Master Boot Record."
-#~ msgstr "Se incerti, installare LILO sul Master Boot Record."
-
-#~ msgid "${disc}: software RAID array"
-#~ msgstr "${disc}: software RAID array"
-
-#~ msgid ""
-#~ "The LILO program needs to be installed to make your new system bootable. "
-#~ "You may choose to install it onto a software RAID array or another device."
-#~ msgstr ""
-#~ "Il programma LILO deve essere installato per rendere il sistema "
-#~ "avviabile. Si può scegliere di installarlo su un array software RAID o su "
-#~ "un altro device."
-
-#~ msgid ""
-#~ "Please enter the device name of the partition or disk onto which LILO "
-#~ "should be installed, such as /dev/hda or /dev/sda1."
-#~ msgstr ""
-#~ "Inserire un nome del dispositivo della partizione o disco sul quale dovrà "
-#~ "essere installato LILO, per esempio: /dev/hda o /dev/sda1."
-
-#~ msgid "Invalid partition name"
-#~ msgstr "Nome di partizione non valido"
-
-#~ msgid ""
-#~ "The path ${path} does not represent a partition or hard disk device. "
-#~ "Please try again."
-#~ msgstr ""
-#~ "Il percorso ${path} non rappresenta una partizione o un disco fisso. "
-#~ "Riprovare nuovamente."
-
-#~ msgid "Installing LILO..."
-#~ msgstr "Installazione di LILO..."
-
-#~ msgid "Activating partition ${bootdev}"
-#~ msgstr "Attivazione della partizione ${bootdev}"
-
-#~ msgid "Creating lilo.conf"
-#~ msgstr "Creazione di lilo.conf"
-
-#~ msgid "Installing the LILO package"
-#~ msgstr "Installazione del pacchetto LILO"
-
-#~ msgid "Running LILO for ${bootdev}"
-#~ msgstr "Esecuzione di LILO per ${bootdev}"
-
-#~ msgid "LILO configured to use a serial console"
-#~ msgstr "LILO è stato configurato per usare una console seriale"
-
-#~ msgid ""
-#~ "LILO is configured to use serial port ${PORT} as the console. "
-#~ "${PORT_SPEED}"
-#~ msgstr ""
-#~ "LILO è stato configurato per usare la porta seriale ${PORT} come console. "
-#~ "${PORT_SPEED}"
-
-#~ msgid "The serial port speed is set to ${SPEED}."
-#~ msgstr "La velocità della porta seriale e impostata a ${SPEED}."
-
-#~ msgid "Would you like to make this partition active?"
-#~ msgstr "Rendere attiva questa partizione?"
-
-#~ msgid ""
-#~ "You have chosen to install LILO on a partition that is not the active "
-#~ "one. If this partition is not marked active, then LILO will not be loaded "
-#~ "by the boot loader. This may cause you to be unable to boot into the "
-#~ "system that is being installed."
-#~ msgstr ""
-#~ "È stato scelto di installare LILO su una partizione che non è attiva. Se "
-#~ "questa partizione non viene segnata come attiva, LILO non sarà caricato "
-#~ "dal boot loader. Questo può rendere non avviabile il sistema che si sta "
-#~ "installando."
-
-#~ msgid ""
-#~ "You should make this partition active unless you have another boot loader "
-#~ "that will allow you to access your new Linux installation."
-#~ msgstr ""
-#~ "Si dovrebbe rendere attiva questa partizione a meno che non sia presente "
-#~ "un altro boot loader che consenta di accedere alla nuova installazione di "
-#~ "Linux."
-
-#~ msgid "LILO installation failed. Continue anyway?"
-#~ msgstr "Installazione di LILO non riuscita. Continuare comunque?"
-
-#~ msgid ""
-#~ "The lilo package failed to install into /target/. Installing LILO as a "
-#~ "boot loader is a required step. The install problem might however be "
-#~ "unrelated to LILO, so continuing the installation may be possible."
-#~ msgstr ""
-#~ "L'installazione del pacchetto lilo in /target/ non è riuscita. "
-#~ "L'installazione di LILO come boot loader è un passo richiesto. Tuttavia, "
-#~ "il problema d'installazione, potrebbe non essere in relazione con LILO e "
-#~ "l'installazione potrebbe continuare."
-
-#~ msgid "LILO installation failed"
-#~ msgstr "Installazione di LILO non riuscita"
-
-#~ msgid "Running \"/sbin/lilo\" failed with error code \"${ERRCODE}\"."
-#~ msgstr "Esecuzione di «/sbin/lilo» non riuscita, errore «${ERRCODE}»."
-
-#~ msgid "Install the LILO boot loader on a hard disk"
-#~ msgstr "Installare il boot loader LILO su un disco fisso"
-
-#~ msgid "Install the GRUB boot loader to the master boot record?"
-#~ msgstr "Installare il boot loader GRUB nel master boot record?"
-
-#~ msgid ""
-#~ "The IP address you provided is malformed. It should be in the form x.x.x."
-#~ "x where each 'x' is no larger than 255 (an IPv4 address), or a sequence "
-#~ "of blocks of hexadecimal digits separated by colons (an IPv6 address). "
-#~ "Please try again."
-#~ msgstr ""
-#~ "L'indirizzo IP fornito non è corretto. Dovrebbe essere nella forma x.x.x."
-#~ "x dove ogni «x» non è maggiore di 255 (un indirizzo IPv4) o una sequenza "
-#~ "di blocchi esadecimali separati dal simbolo dei due punti (un indirizzo "
-#~ "IPv6) Riprovare."
-
-#~ msgid ""
-#~ "In order to start your new system, the firmware on your Itanium system "
-#~ "loads the boot loader from its private EFI partition on the hard disk.  "
-#~ "The boot loader then loads the operating system from that same "
-#~ "partition.  An EFI partition has a FAT16 file system formatted on it and "
-#~ "the bootable flag set. Most installations place the EFI partition on the "
-#~ "first primary partition of the same hard disk that holds the root file "
-#~ "system."
-#~ msgstr ""
-#~ "Per poter avviare il nuovo sistema, il firmware del sistema Itanium "
-#~ "carica il programma di avvio dalla sua partizione EFI privata sul disco "
-#~ "fisso. Il programma di avvio quindi carica il sistema operativo da quella "
-#~ "stessa partizione. Una partizione EFI ha un file system formattato con "
-#~ "FAT16 e il flag avviabile abilitato. La maggior parte delle installazioni "
-#~ "mettono la partizione EFI sulla prima partizione primaria dello stesso "
-#~ "disco che contiene il file system root."
-
-#~ msgid "Install the Arcboot boot loader on a hard disk"
-#~ msgstr "Installare il boot loader Arcboot in un disco fisso"
-
-#~ msgid "Disk for boot loader installation:"
-#~ msgstr "Disco per l'installazione del boot loader:"
-
-#~ msgid ""
-#~ "Arcboot must be installed into the volume header of a disk with a SGI "
-#~ "disklabel. Usually the volume header of /dev/sda is used. Please give the "
-#~ "device name of the disk on which to put arcboot."
-#~ msgstr ""
-#~ "Arcboot deve essere installato nella testata del volume di un disco fisso "
-#~ "con un'etichetta SGI. Solitamente si usa la testata del volume /dev/sda. "
-#~ "Inserire il nome del device del disco in cui installare Arcboot."
-
-#~ msgid "Arcboot configured to use a serial console"
-#~ msgstr "Arcboot è configurato per usare una console seriale"
-
-#~ msgid ""
-#~ "Arcboot is configured to use the serial port ${PORT} as the console. The "
-#~ "serial port speed is set to ${SPEED}."
-#~ msgstr ""
-#~ "Arcboot è configurato per usare la porta seriale ${PORT} come console, la "
-#~ "velocità della porta è impostata a ${SPEED}."
-
-#~ msgid "Arcboot installation failed.  Continue anyway?"
-#~ msgstr "Installazione di Arcboot non riuscita. Continuare comunque?"
-
-#~ msgid ""
-#~ "The arcboot package failed to install into /target/.  Installing Arcboot "
-#~ "as a boot loader is a required step.  The install problem might however "
-#~ "be unrelated to Arcboot, so continuing the installation may be possible."
-#~ msgstr ""
-#~ "L'installazione del pacchetto arcboot in /target/ non è riuscita. "
-#~ "L'installazione di Arcboot come boot loader è un passo richiesto. "
-#~ "Tuttavia, il problema d'installazione potrebbe non essere in relazione "
-#~ "con Arcboot e l'installazione potrebbe continuare."
-
-#~ msgid "Setting PROM variables for Arcboot"
-#~ msgstr "Configurazione delle variabili PROM per Arcboot"
-
-#~ msgid ""
-#~ "If this is the first Linux installation on this machine, or if the hard "
-#~ "drives have been repartitioned, some variables need to be set in the PROM "
-#~ "before the system is able to boot normally."
-#~ msgstr ""
-#~ "Se questa è la prima installazione di Linux su questo computer, oppure se "
-#~ "il disco fisso è stato ripartizionato, alcune variabili devono essere "
-#~ "configurate nel PROM prima che il sistema possa avviarsi normalmente."
-
-#~ msgid ""
-#~ "At the end of this installation stage, the system will reboot.  After "
-#~ "this, enter the command monitor from the \"Stop for Maintenance\" option, "
-#~ "and enter the following commands:"
-#~ msgstr ""
-#~ "Al termine di questo passo dell'installazione il sistema verrà riavviato. "
-#~ "Dopodiché, entrare nel monitor di comandi dall'opzione «Termina per "
-#~ "manutenzione» digitare i seguenti comandi:"
-
-#~ msgid "Continue the install without loading kernel modules?"
-#~ msgstr "Continuare l'installazione senza caricare i moduli del kernel?"
-
-#~ msgid ""
-#~ "If you're installing from a mirror, you can work around this problem by "
-#~ "choosing to install a different version of Debian. The install will "
-#~ "probably fail to work if you continue without kernel modules."
-#~ msgstr ""
-#~ "Se si sta installando da un mirror, è possibile aggirare questo problema "
-#~ "scegliendo di installare una versione diversa di Debian. L'installazione "
-#~ "probabilmente non potrà essere completata se si continua senza i moduli "
-#~ "del kernel."
-
-#~ msgid "Load installer components from CD"
-#~ msgstr "Caricare i componenti del programma d'installazione dal CD"
-
-#~ msgid "Detecting hardware to find CD-ROM drives"
-#~ msgstr "Rilevamento hardware alla ricerca di unità CD-ROM"
-
-#~ msgid "Scanning CD-ROM"
-#~ msgstr "Analisi del CD-ROM"
-
-#~ msgid "Unmounting and ejecting CD-ROM..."
-#~ msgstr "Smontaggio ed espulsione del CD-ROM..."
-
-#~ msgid "Scanning the CD-ROM..."
-#~ msgstr "Analisi del CD-ROM..."
-
-#~ msgid "Scan another CD or DVD?"
-#~ msgstr "Analizzare un altro CD o DVD?"
-
-#~ msgid "Your installation CD or DVD has been scanned; its label is:"
-#~ msgstr "Il CD o DVD d'installazione è stato analizzato; la sua etichetta è:"
-
-#~ msgid ""
-#~ "An attempt to configure apt to install additional packages from the CD/"
-#~ "DVD failed."
-#~ msgstr ""
-#~ "Un tentativo di configurare apt per installare ulteriori pacchetti dal CD-"
-#~ "ROM non è riuscito."
-
-#~ msgid "Load CD-ROM drivers from removable media?"
-#~ msgstr "Caricare i driver del CD-ROM dal dispositivo rimovibile?"
-
-#~ msgid "Retry mounting the CD-ROM?"
-#~ msgstr "Tentare nuovamente di montare il CD-ROM?"
-
-#~ msgid "CD-ROM detected"
-#~ msgstr "Rilevato CD-ROM"
-
-#~ msgid "Incorrect CD-ROM detected"
-#~ msgstr "Rilevato CD-ROM non corretto"
-
-#~ msgid "Detect and mount CD-ROM"
-#~ msgstr "Rilevare e montare il CD-ROM"
-
-#~ msgid "Check the CD-ROM(s) integrity"
-#~ msgstr "Verificare integrità CD-ROM"
-
-#~ msgid "Check CD-ROM integrity?"
-#~ msgstr "Verificare l'integrità del CD-ROM?"
-
-#~ msgid "Insert a Debian CD-ROM"
-#~ msgstr "Inserire un CD-ROM Debian"
-
-#~ msgid "Failed to mount CD-ROM"
-#~ msgstr "Montaggio del CD-ROM non riuscito"
-
-#~ msgid "No valid Debian CD-ROM"
-#~ msgstr "Nessun CD-ROM Debian valido"
-
-#~ msgid "Checking CD-ROM integrity"
-#~ msgstr "Verifica integrità del CD-ROM"
-
-#~ msgid "No DHCP client was found. This package requires pump or dhcp-client."
-#~ msgstr ""
-#~ "Non è stato trovato alcun client DHCP. Questo pacchetto richiede pump o "
-#~ "dhcp-client."
-
-#~ msgid "Partition for boot loader installation:"
-#~ msgstr "Partizione per l'installazione del boot loader:"
-
-#~ msgid ""
-#~ "Partitions currently available in your system are listed. Please choose "
-#~ "the one you want elilo to use to boot your new system."
-#~ msgstr ""
-#~ "Vengono elencate le partizioni al momento disponibili sul sistema. "
-#~ "Scegliere quella da fare usare a Elilo per avviare il nuovo sistema."
-
-#~ msgid "No boot partitions detected"
-#~ msgstr "Nessuna partizione di avvio trovata"
-
-#~ msgid ""
-#~ "There were no suitable partitions found for elilo to use.  Elilo needs a "
-#~ "partition with a FAT file system, and the boot flag set."
-#~ msgstr ""
-#~ "Non è stata trovata alcuna partizione utilizzabile da Elilo. Elilo "
-#~ "necessita di una partizione con un file system FAT impostata come "
-#~ "avviabile."
-
-#~ msgid "Install the elilo boot loader on a hard disk"
-#~ msgstr "Installare il boot loader elilo su un disco fisso"
-
-#~ msgid "Installing the ELILO package"
-#~ msgstr "Installazione del pacchetto Elilo"
-
-#~ msgid "Running ELILO for ${bootdev}"
-#~ msgstr "Esecuzione di Elilo per ${bootdev}"
-
-#~ msgid "ELILO installation failed.  Continue anyway?"
-#~ msgstr "Installazione di Elilo non riuscita. Continuare comunque?"
-
-#~ msgid ""
-#~ "The elilo package failed to install into /target/.  Installing ELILO as a "
-#~ "boot loader is a required step.  The install problem might however be "
-#~ "unrelated to ELILO, so continuing the installation may be possible."
-#~ msgstr ""
-#~ "L'installazione del pacchetto elilo in /target/ non è riuscita. "
-#~ "L'installazione di ELILO come boot loader è un passo richiesto. Tuttavia, "
-#~ "il problema d'installazione potrebbe non essere in relazione con ELILO e "
-#~ "l'installazione potrebbe continuare."
-
-#~ msgid "ELILO installation failed"
-#~ msgstr "Installazione di Elilo non riuscita"
-
-#~ msgid "Running \"/usr/sbin/elilo\" failed with error code \"${ERRCODE}\"."
-#~ msgstr ""
-#~ "L'esecuzione di «/usr/sbin/elilo» non è riuscita e ha restituito il "
-#~ "codice d'errore «${ERRCODE}»."
-
-#~ msgid "Install the system"
-#~ msgstr "Installare il sistema"
-
-#~ msgid "Installing the system..."
-#~ msgstr "Installazione del sistema..."
-
-#~ msgid "Copying data to disk..."
-#~ msgstr "Copia dei dati sul disco..."
-
-#~ msgid "Cleaning up network settings..."
-#~ msgstr "Pulizia delle impostazioni di rete..."
-
-#~ msgid "Removing packages specific to the live system..."
-#~ msgstr "Rimozione dei pacchetti specifici dal sistema live..."
-
-#~ msgid "Reconfiguring X.org..."
-#~ msgstr "Riconfigurazione di X.org..."
-
-#~ msgid "normal"
-#~ msgstr "normale"
-
-#~ msgid "live"
-#~ msgstr "live"
-
-#~ msgid "Type of installation:"
-#~ msgstr "Tipo d'installazione:"
-
-#~ msgid ""
-#~ "The live system can be installed to hard disk using one of the following "
-#~ "options."
-#~ msgstr ""
-#~ "Il sistema «live» può essere installato sul disco fisso usando una delle "
-#~ "seguenti opzioni."
-
-#~ msgid ""
-#~ "If you choose 'normal', the system will be installed as a regular system. "
-#~ "If you choose 'live', the installed system will continue to act as a live "
-#~ "system but it can then be launched directly from the hard disk."
-#~ msgstr ""
-#~ "Scegliendo «normale» il sistema viene installato come un sistema "
-#~ "regolare, scegliendo «live» il sistema si comporterà come quello live, ma "
-#~ "può essere in seguito avviato direttamente dal disco fisso."
-
-#~ msgid "NewWorld boot partition"
-#~ msgstr "Partizione di boot NewWorld"
-
-#~ msgid ""
-#~ "No NewWorld boot partition was found. The yaboot boot loader requires an "
-#~ "Apple_Bootstrap partition at least 819200 bytes in size, using the HFS "
-#~ "Macintosh file system."
-#~ msgstr ""
-#~ "Non è stata trovata alcun partizione NewWorld. Il boot loader yaboot ha "
-#~ "bisogno di una partizione Apple_Bootstrap di almeno 819200 byte quando si "
-#~ "usa un file system Macintosh HFS."
-
-#~ msgid "The NewWorld boot partition must be at least 819200 bytes in size."
-#~ msgstr "La partizione di boot NewWorld deve essere di almeno 819200 byte."
-
-#~ msgid "boot"
-#~ msgstr "boot"
-
-#~ msgid "HFS Macintosh file system"
-#~ msgstr "file system HFS Macintosh"
-
-#~ msgid "hfs"
-#~ msgstr "hfs"
-
-#~ msgid "Use the partition as a PowerPC PReP boot partition"
-#~ msgstr "Usare la partizione come una partizione di avvio PowerPC PReP"
-
-#~ msgid "PowerPC PReP boot partition"
-#~ msgstr "Partizione di avvio di PowerPC PReP"
-
-#~ msgid "No PowerPC PReP boot partition is found."
-#~ msgstr "Nessuna partizione PowerPC PReP trovata."
-
-#~ msgid "The PowerPC PReP boot partition must be in the first 8MB."
-#~ msgstr "La partizione di PowerPC PReP deve essere nei primi 8MB."
-
-#~ msgid "zfs"
-#~ msgstr "zfs"
-
-#~ msgid "ZFS file system"
-#~ msgstr "File system ZFS"
-
-#~ msgid "Separate /boot and /lib/modules mandatory for this ZFS configuration"
-#~ msgstr ""
-#~ "Partizioni /boot e /lib/modules separate obbligatorie per questa "
-#~ "configurazione ZFS"
-
-#~ msgid ""
-#~ "Your root file system is on a ZFS pool that uses more than one physical "
-#~ "volume."
-#~ msgstr ""
-#~ "Il file system root si trova su un pool ZFS che utilizza più di un volume "
-#~ "fisico."
-
-#~ msgid ""
-#~ "The boot loader only supports this configuration for pools in Mirror or "
-#~ "Striped modes, but not RAID-Z mode."
-#~ msgstr ""
-#~ "Il boot loader supporta questo tipo di configurazione solo per pool in "
-#~ "modalità «Mirror» o «Striped», ma non «RAID-Z»."
-
-#~ msgid ""
-#~ "Make sure /boot and /lib/modules are on a partition using a supported ZFS "
-#~ "pool configuration, or a different file system such as UFS."
-#~ msgstr ""
-#~ "Assicurarsi che /boot e /lib/modules siano su una partizione che utilizza "
-#~ "una configurazione di pool ZFS supportata o un diverso file system come "
-#~ "UFS."
-
-#~ msgid "Unsupported multiple volume ZFS for ${MNT}"
-#~ msgstr "Volumi multipli ZFS non supportati per ${MNT}"
-
-#~ msgid ""
-#~ "Your ${MNT} partition is on a ZFS pool that uses more than one physical "
-#~ "volume."
-#~ msgstr ""
-#~ "La partizione ${MNT} si trova su un pool ZFS che utilizza più di un "
-#~ "volume fisico."
-
-#~ msgid ""
-#~ "Make sure ${MNT} is on a partition using a supported ZFS pool "
-#~ "configuration, or a different file system such as UFS."
-#~ msgstr ""
-#~ "Assicurarsi che ${MNT} sia su una partizione che utilizza una "
-#~ "configurazione di pool ZFS supportata o un diverso file system come UFS."
-
-#~ msgid ""
-#~ "You have configured one or more partitions with the ZFS file system. "
-#~ "Although ZFS is supported on 32-bit i386, using it without special tuning "
-#~ "may lead to performance or stability problems due to limitations of this "
-#~ "architecture."
-#~ msgstr ""
-#~ "Una o più partizioni sono state configurate con il file system ZFS. "
-#~ "Benché ZFS sia supportato su architetture a 32 bit (i386), utilizzarlo "
-#~ "senza alcuna configurazione particolare potrebbe portare a problemi di "
-#~ "prestazioni o di stabilità dovute alle limitazioni di questa architettura."
-
-#~ msgid ""
-#~ "You should either use the 64-bit (amd64) version of this installer (if "
-#~ "your hardware supports this), or go back to the partitioning menu and "
-#~ "configure the partitions to use another file system."
-#~ msgstr ""
-#~ "È consigliato usare la versione a 64 bit (amd64) di questo programma "
-#~ "d'installazione (se il proprio hardware la supporta) o tornare al menù di "
-#~ "partizionamento e configurare le partizioni con un altro file system."
-
-#~ msgid ""
-#~ "You have configured one or more partitions with the ZFS file system. "
-#~ "Using ZFS on a computer with less than 512 MB of memory may lead to "
-#~ "stability problems and is not recommended."
-#~ msgstr ""
-#~ "Una o più partizioni sono state configurate con il file system ZFS. "
-#~ "L'utilizzo di ZFS su un computer con meno di 512 MB di memoria potrebbe "
-#~ "portare problemi di stabilità e non è consigliato."
-
-#~ msgid ""
-#~ "You should go back to the partitioning menu and configure the partitions "
-#~ "to use another file system."
-#~ msgstr ""
-#~ "Tornare al menù di partizionamento e configurare le partizioni con un "
-#~ "altro file system."
-
-#~ msgid "Configure ZFS"
-#~ msgstr "Configurare ZFS"
-
-#~ msgid "In use by ZFS pool ${VG}"
-#~ msgstr "In uso da parte del pool ZFS ${VG}"
-
-#~ msgid "Create ZFS pool"
-#~ msgstr "Crea pool ZFS"
-
-#~ msgid "Delete ZFS pool"
-#~ msgstr "Elimina pool ZFS"
-
-#~ msgid "Create root file system"
-#~ msgstr "Creare il file system di root"
-
-#~ msgid "Write the changes to disk and configure ZFS?"
-#~ msgstr "Scrivere le modifiche sui dischi e configurare ZFS?"
-
-#~ msgid ""
-#~ "Before ZFS can be configured, the current partitioning scheme has to be "
-#~ "written to disk. These changes cannot be undone."
-#~ msgstr ""
-#~ "Prima di poter configurare ZFS, l'attuale schema di partizionamento deve "
-#~ "essere scritto sul disco. Queste modifiche non possono essere annullate."
-
-#~ msgid ""
-#~ "After ZFS is configured, no additional changes to the partitioning scheme "
-#~ "of disks containing physical volumes are allowed during the installation. "
-#~ "Please decide if you are satisfied with the current partitioning scheme "
-#~ "before continuing."
-#~ msgstr ""
-#~ "Dopo la configurazione di ZFS, non è permessa alcuna modifica allo schema "
-#~ "di partizionamento dei dischi che contengono volumi fisici durante "
-#~ "l'installazione. Verificare che l'attuale schema di partizionamento "
-#~ "soddisfi le proprie esigenze prima di proseguire."
-
-#~ msgid "ZFS configuration failure"
-#~ msgstr "Configurazione di ZFS non riuscita"
-
-#~ msgid "ZFS configuration has been aborted."
-#~ msgstr "La configurazione di ZFS è stata interrotta."
-
-#~ msgid "physical volume for ZFS"
-#~ msgstr "volume fisico per ZFS"
-
-#~ msgid "ZFS configuration action:"
-#~ msgstr "Passo di configurazione di ZFS:"
-
-#~ msgid "Summary of current ZFS configuration:"
-#~ msgstr "Riassunto della configurazione attuale di ZFS:"
-
-#~ msgid ""
-#~ " Free physical volumes:  ${FREE_PVS}\n"
-#~ " Used physical volumes:  ${USED_PVS}\n"
-#~ " ZFS pools:              ${VGS}\n"
-#~ " ZFS logical volumes:    ${LVS}\n"
-#~ " ${BOOTFS}"
-#~ msgstr ""
-#~ " Volumi fisici liberi:   ${FREE_PVS}\n"
-#~ " Volumi fisici usati:    ${USED_PVS}\n"
-#~ " Pool ZFS:               ${VGS}\n"
-#~ " Volumi logici ZFS:      ${LVS}\n"
-#~ " ${BOOTFS}"
-
-#~ msgid "Current ZFS configuration:"
-#~ msgstr "Configurazione attuale di ZFS:"
-
-#~ msgid "Devices for the new ZFS pool:"
-#~ msgstr "Device per il nuovo gruppo pool ZFS:"
-
-#~ msgid "Please select devices for the new ZFS pool."
-#~ msgstr "Selezionare i device per il nuovo pool ZFS."
-
-#~ msgid "Multidisk mode for this ZFS pool:"
-#~ msgstr "Modalità multidisk per questo pool ZFS:"
-
-#~ msgid ""
-#~ "Please choose the mode for multidisk operations for this ZFS pool:\n"
-#~ " * Striped: similar to RAID 0 (default) - data is spread across the\n"
-#~ "            physical volumes;\n"
-#~ " * Mirror:  similar to RAID 1 - data is replicated to each physical\n"
-#~ "            volume;\n"
-#~ " * RAID-Z:  similar to RAID 5 or RAID 6 - some physical volumes\n"
-#~ "            store parity bits and data is spread across others."
-#~ msgstr ""
-#~ "Scegliere la modalità per le operazioni multidisk di questo pool ZFS:\n"
-#~ " * Striped: simile a RAID 0 (predefinito), i dati sono distribuiti tra\n"
-#~ "            i volumi fisici;\n"
-#~ " * Mirror:  simile a RAID 1, i dati sono replicati su ogni volume\n"
-#~ "            fisico,\n"
-#~ " * RAID-Z:  simile a RAID 5 o RAID 6, alcuni volumi fisici archiviano\n"
-#~ "            i bit di parità e i dati sono distribuiti tra gli altri."
-
-#~ msgid "Parity level for RAID-Z:"
-#~ msgstr "Livello di parità per RAID-Z:"
-
-#~ msgid ""
-#~ "Please choose the number of physical volumes that will be used to store "
-#~ "parity bits."
-#~ msgstr ""
-#~ "Scegliere il numero di volumi fisici utilizzati per archiviare i bit di "
-#~ "parità."
-
-#~ msgid "ZFS pool name:"
-#~ msgstr "Nome pool ZFS:"
-
-#~ msgid "Please enter the name you would like to use for the new ZFS pool."
-#~ msgstr "Indicare il nome da usare per il nuovo pool ZFS."
-
-#~ msgid ""
-#~ "No physical volumes were selected. The creation of a new ZFS pool has "
-#~ "been aborted."
-#~ msgstr ""
-#~ "Non sono stati selezionati volumi fisici. La creazione di un nuovo pool "
-#~ "ZFS è stata annullata."
-
-#~ msgid "No ZFS pool name"
-#~ msgstr "Nessun nome per il pool ZFS"
-
-#~ msgid "No name for the ZFS pool has been entered. Please enter a name."
-#~ msgstr "Non è stato inserito alcun nome per il pool ZFS. Sceglierne uno."
-
-#~ msgid "ZFS pool name already in use"
-#~ msgstr "Nome del pool ZFS già in uso"
-
-#~ msgid ""
-#~ "The selected ZFS pool name is already in use. Please choose a different "
-#~ "name."
-#~ msgstr "Il nome selezionato del pool ZFS è già in uso. Sceglierne un altro."
-
-#~ msgid "Error while creating ZFS pool"
-#~ msgstr "Errore durante la creazione del nuovo pool ZFS"
-
-#~ msgid "The ZFS pool ${VG} could not be created."
-#~ msgstr "Non è stato possibile creare il pool ZFS ${VG}."
-
-#~ msgid "ZFS pool to delete:"
-#~ msgstr "Pool ZFS da eliminare:"
-
-#~ msgid "Please select the ZFS pool you wish to delete."
-#~ msgstr "Selezionare il pool ZFS da eliminare."
-
-#~ msgid "No ZFS pool"
-#~ msgstr "Nessun pool ZFS"
-
-#~ msgid "No ZFS pool has been found."
-#~ msgstr "Non è stato trovato alcun pool ZFS."
-
-#~ msgid "The ZFS pool may have already been deleted."
-#~ msgstr "Il pool ZFS potrebbe essere già stato eliminato."
-
-#~ msgid "Really delete the ZFS pool?"
-#~ msgstr "Eliminare veramente il pool ZFS?"
-
-#~ msgid "Please confirm the removal of the ZFS pool ${VG}."
-#~ msgstr "Confermare l'eliminazione del pool ZFS ${VG}."
-
-#~ msgid "Error while deleting ZFS pool"
-#~ msgstr "Errore durante l'eliminazione del pool ZFS"
-
-#~ msgid ""
-#~ "The selected ZFS pool could not be deleted. One or more logical volumes "
-#~ "may currently be in use."
-#~ msgstr ""
-#~ "Il pool ZFS selezionato non può essere eliminato perché uno o più volumi "
-#~ "logici sono lo stanno usando."
-
-#~ msgid "No ZFS pool found"
-#~ msgstr "Nessuna pool ZFS trovato"
-
-#~ msgid ""
-#~ "No free ZFS pools were found for creating a new logical volume. Please "
-#~ "create another ZFS pool, or free space in an existing ZFS pool."
-#~ msgstr ""
-#~ "Non è stato trovato alcun pool ZFS libero per creare un nuovo volume "
-#~ "logico. Creare un altro pool ZFS o liberare dello spazio in un pool "
-#~ "esistente."
-
-#~ msgid "ZFS pool:"
-#~ msgstr "Pool ZFS:"
-
-#~ msgid ""
-#~ "Please select the ZFS pool where the new logical volume should be created."
-#~ msgstr "Selezionare il pool ZFS dove creare il nuovo volume logico."
-
-#~ msgid ""
-#~ "The name ${LV} is already in use by another logical volume on the same "
-#~ "ZFS pool (${VG})."
-#~ msgstr ""
-#~ "Il nome ${LV} è già in uso da un altro volume logico nello stesso pool "
-#~ "ZFS (${VG})."
-
-#~ msgid ""
-#~ "No physical volumes (i.e. partitions) were found in this system. All "
-#~ "physical volumes may already be in use. You may also need to load some "
-#~ "required kernel modules or re-partition the hard drives."
-#~ msgstr ""
-#~ "Non è stato trovato alcun volume fisico (ossia le partizioni) sul "
-#~ "sistema. Tutti i volumi fisici potrebbero essere già in uso. Potrebbe "
-#~ "essere necessario caricare qualche modulo del kernel richiesto o "
-#~ "ripartizionare i dischi fissi."
-
-#~ msgid "ZFS not available"
-#~ msgstr "ZFS non disponibile"
-
-#~ msgid ""
-#~ "The current kernel doesn't support ZFS. You may need to load the zfs "
-#~ "module."
-#~ msgstr ""
-#~ "Il kernel in uso non supporta il ZFS. Potrebbe essere necessario caricare "
-#~ "il modulo zfs."
-
-#~ msgid "Invalid logical volume, ZFS pool name or ZFS file system name"
-#~ msgstr "Volume logico, nome del pool o del file system ZFS non valido"
-
-#~ msgid ""
-#~ "Logical volumes, ZFS pool names and ZFS file systems may only contain "
-#~ "alphanumeric characters, hyphen, colon, period, and underscore. They must "
-#~ "be 255 characters or less and must begin with an alphanumeric character. "
-#~ "The names \"mirror\", \"raidz\", \"spare\", and \"log\" are not allowed."
-#~ msgstr ""
-#~ "Volumi logici, i nomi dei pool ZFS e i file system ZFS possono contenere "
-#~ "solo caratteri alfanumerici, il trattino, i due punti, il punto e "
-#~ "l'underscore; devono essere lunghi al massimo 255 caratteri e iniziare "
-#~ "con un carattere alfanumerico. I nomi «mirror», «raidz», «spare» e «log» "
-#~ "non sono permessi."
-
-#~ msgid ""
-#~ "The selected device already contains the following ZFS logical volumes "
-#~ "and ZFS pools which are about to be removed:"
-#~ msgstr ""
-#~ "Il dispositivo selezionato contiene già i seguenti volumi logici ZFS e "
-#~ "pool ZFS che stanno per essere rimossi:"
-
-#~ msgid "Logical volume(s): ${LVTARGETS}"
-#~ msgstr "Volumi logici: ${LVTARGETS}"
-
-#~ msgid "ZFS pool(s): ${VGTARGETS}"
-#~ msgstr "Pool ZFS: ${VGTARGETS}"
-
-#~ msgid "ZFS"
-#~ msgstr "ZFS"
-
-#~ msgid ""
-#~ "A common situation for system administrators is to find that some disk "
-#~ "partition (usually the most important one) is short on space, while some "
-#~ "other partition is underused. ZFS can help with this."
-#~ msgstr ""
-#~ "Molto spesso capita che alcune partizioni (solitamente quelle più "
-#~ "importanti) non abbiano abbastanza spazio, mentre altre risultino non "
-#~ "usate. ZFS può essere d'aiuto in questi casi."
-
-#~ msgid ""
-#~ "ZFS allows combining disk or partition devices (\"physical volumes\") to "
-#~ "form a virtual disk (\"ZFS pool\"), which can then be divided into "
-#~ "virtual partitions (\"logical volumes\"). ZFS pools and logical volumes "
-#~ "may span across several physical disks. New physical volumes may be added "
-#~ "to a ZFS pool at any time, and logical volumes have no size limit other "
-#~ "than the total size of the ZFS pool."
-#~ msgstr ""
-#~ "ZFS consente di gestire dischi o dispositivi di partizioni (\"volumi "
-#~ "fisici\") come un disco virtuale (\"pool ZFS\") che può essere "
-#~ "ulteriormente suddiviso in partizioni virtuali (\"volumi logici\"). I "
-#~ "pool ZFS e i volumi logici possono utilizzare diversi dischi fisici, "
-#~ "nuovi volumi fisici possono essere aggiunti a un pool ZFS in qualsiasi "
-#~ "momento e i volumi logici non hanno limite di dimensione oltre la "
-#~ "capacità totale del pool ZFS."
-
-#~ msgid ""
-#~ "The items on the ZFS configuration menu can be used to edit ZFS pools and "
-#~ "logical volumes. After you return to the main partition manager screen, "
-#~ "logical volumes will be displayed in the same way as ordinary partitions, "
-#~ "and should be treated as such."
-#~ msgstr ""
-#~ "Gli elementi nel menù di configurazione di ZFS possono essere utilizzati "
-#~ "per modificare i pool ZFS e i volumi logici. Nel menù principale di "
-#~ "partizionamento, i volumi logici verranno visualizzati come delle normali "
-#~ "partizioni e come tali possono essere considerati."
-
-#~ msgid "Pool to modify:"
-#~ msgstr "Pool da modificare:"
-
-#~ msgid "ZFS boot file system name:"
-#~ msgstr "Nome file system di boot ZFS:"
-
-#~ msgid "Please enter the name of the boot file system among the following:"
-#~ msgstr "Inserire il nome del file system di boot tra i seguenti:"
-
-#~ msgid ""
-#~ "This will be prefixed by ${VG}/ROOT and mounted as the root file system."
-#~ msgstr ""
-#~ "Verrà aggiunto il prefisso ${VG}/ROOT e sarà montato come file system di "
-#~ "root."
-
-#~ msgid "No file system name entered"
-#~ msgstr "Non è stato inserito alcun nome per il file system"
-
-#~ msgid ""
-#~ "No name has been entered for the root file system. Please enter a name."
-#~ msgstr ""
-#~ "Non è stato inserito alcun nome per il file system di root. Sceglierne "
-#~ "uno."
-
-#~ msgid "ZFS boot"
-#~ msgstr "Boot ZFS"
-
-#~ msgid "Loading ZFS module..."
-#~ msgstr "Caricamento modulo ZFS..."
-
-#~ msgid "Installing quik"
-#~ msgstr "Installazione di quik"
-
-#~ msgid "Installing quik boot loader"
-#~ msgstr "Installazione del boot loader quik"
-
-#~ msgid "quik installation failed. Continue anyway?"
-#~ msgstr "L'installazione di quik non è riuscita. Continuare comunque?"
-
-#~ msgid ""
-#~ "The quik package failed to install into /target/.  Installing quik as a "
-#~ "boot loader is a required step.  The install problem might however be "
-#~ "unrelated to quik, so continuing the installation may be possible."
-#~ msgstr ""
-#~ "L'installazione del pacchetto quik in /target/ non è riuscita. "
-#~ "L'installazione di quik come boot loader è un passo richiesto. Tuttavia, "
-#~ "il problema d'installazione potrebbe non essere in relazione con quik e "
-#~ "l'installazione potrebbe continuare."
-
-#~ msgid "Checking partitions"
-#~ msgstr "Verifica delle partizioni"
-
-#~ msgid "No root partition found"
-#~ msgstr "Non è stata trovata alcuna partizione di root"
-
-#~ msgid ""
-#~ "No partition is mounted as your new root partition. You must mount a root "
-#~ "partition first."
-#~ msgstr ""
-#~ "Non c'è alcuna partizione montata come nuova partizione di root. È "
-#~ "necessario montare una partizione di root per prima cosa."
-
-#~ msgid "Boot partition not on first disk"
-#~ msgstr "La partizione di avvio non è sul primo disco"
-
-#~ msgid ""
-#~ "The quik boot loader requires partition that holds /boot to be on the "
-#~ "first disk. Please return to the partitioning step."
-#~ msgstr ""
-#~ "Il boot loader «quik» necessita della presenza della partizione /boot sul "
-#~ "primo disco. Tornare alla fase di partizionamento."
-
-#~ msgid "Boot partition must be on ext2"
-#~ msgstr "La partizione di avvio deve essere di tipo ext2"
-
-#~ msgid ""
-#~ "The quik boot loader requires the partition that holds /boot to be "
-#~ "formatted using the ext2 file system. Please return to the partitioning "
-#~ "step."
-#~ msgstr ""
-#~ "Il boot loader «quik» necessita che la partizione /boot sia formattata "
-#~ "con il file system ext2. Tornare alla fase di partizionamento."
-
-#~ msgid "Do you really want to install the quik boot loader?"
-#~ msgstr "Installare veramente il boot loader quik?"
-
-#~ msgid ""
-#~ "You have chosen to install the quik boot loader. You will not be able to "
-#~ "boot any other operating system from this disk. Furthermore, your machine "
-#~ "may not be bootable in any manner after this process completes. If you "
-#~ "are left with a blank screen, you may need to try a cold boot and hold "
-#~ "down Command-Option-P-R."
-#~ msgstr ""
-#~ "È stato scelto di installare il boot loader quik, perciò non si sarà in "
-#~ "grado di avviare alcun altro sistema operativo da questo disco. Inoltre, "
-#~ "il computer potrebbe non essere avviabile terminata questa operazione. Se "
-#~ "appare uno schermo bianco, potrebbe essere necessario provare un avvio a "
-#~ "freddo e premere Command-Option-P-R."
-
-#~ msgid "Be aware that this code has not been thoroughly tested."
-#~ msgstr ""
-#~ "Tenere presente che questo codice non è stato testato approfonditamente."
-
-#~ msgid ""
-#~ "You have chosen to install the quik boot loader. You will not be able to "
-#~ "boot any other operating system from this disk. Furthermore, your machine "
-#~ "may not be bootable in any manner after this process completes."
-#~ msgstr ""
-#~ "È stato scelto di installare il boot loader quik, perciò non si sarà in "
-#~ "grado di avviare alcun altro sistema operativo da questo disco. Inoltre, "
-#~ "il computer potrebbe non essere avviabile terminata questa operazione."
-
-#~ msgid "Creating quik configuration"
-#~ msgstr "Creazione della configurazione di quik"
-
-#~ msgid "Failed to create quik configuration"
-#~ msgstr "Creazione della configurazione di quik non riuscita"
-
-#~ msgid "The creation of the main quik configuration file failed."
-#~ msgstr ""
-#~ "La creazione del file principale di configurazione di quik non è riuscita."
-
-#~ msgid "Installing quik into bootstrap partition"
-#~ msgstr "Installazione di quik nella partizione di avvio"
-
-#~ msgid "Failed to install boot loader"
-#~ msgstr "Installazione del boot loader non riuscita"
-
-#~ msgid "The installation of the quik boot loader failed."
-#~ msgstr "L'installazione del boot loader quik non è riuscita."
-
-#~ msgid "Warning: your system may be unbootable!"
-#~ msgstr "Attenzione: il sistema potrebbe non essere avviabile."
-
-#~ msgid "Setting up OpenFirmware"
-#~ msgstr "Impostazione di OpenFirmware"
-
-#~ msgid "Unable to configure OpenFirmware"
-#~ msgstr "Impossibile configurare OpenFirmware"
-
-#~ msgid ""
-#~ "Setting the OpenFirmware boot-device variable failed. You will have to "
-#~ "configure OpenFirmware yourself to boot."
-#~ msgstr ""
-#~ "La configurazione della variabile «boot-device» di OpenFirmware non è "
-#~ "riuscita. È necessario configurare da soli l'OpenFirmware per avviare il "
-#~ "sistema."
-
-#~ msgid "Problem configuring OpenFirmware"
-#~ msgstr "Problemi nella configurazione di OpenFirmware"
-
-#~ msgid ""
-#~ "Setting the OpenFirmware boot-command variable failed. You may have "
-#~ "intermittent boot failures."
-#~ msgstr ""
-#~ "La configurazione della variabile «boot-command» di OpenFirmware non è "
-#~ "riuscita. È possibile si verifichino problemi di avvio."
-
-#~ msgid "Install quik on a hard disk"
-#~ msgstr "Installare quik su un disco fisso"
-
-#~ msgid "Installing Yaboot"
-#~ msgstr "Installazione di Yaboot"
-
-#~ msgid "Installing Yaboot boot loader"
-#~ msgstr "Installazione del boot loader yaboot"
-
-#~ msgid "Yaboot installation failed.  Continue anyway?"
-#~ msgstr "Installazione di Yaboot non riuscita. Continuare comunque?"
-
-#~ msgid ""
-#~ "The yaboot package failed to install into /target/.  Installing Yaboot as "
-#~ "a boot loader is a required step.  The install problem might however be "
-#~ "unrelated to Yaboot, so continuing the installation may be possible."
-#~ msgstr ""
-#~ "L'installazione del pacchetto yaboot in /target/ non è riuscita. "
-#~ "L'installazione di Yaboot come boot loader è un passo richiesto. "
-#~ "Tuttavia, il problema d'installazione potrebbe non essere in relazione "
-#~ "con Yaboot e l'installazione potrebbe continuare."
-
-#~ msgid "Looking for bootstrap partitions"
-#~ msgstr "Ricerca delle partizioni di bootstrap"
-
-#~ msgid "No bootstrap partition found"
-#~ msgstr "Nessuna partizione di bootstrap trovata"
-
-#~ msgid ""
-#~ "No hard disks were found which have an \"Apple_Bootstrap\" partition.  "
-#~ "You must create an 819200-byte partition with type \"Apple_Bootstrap\"."
-#~ msgstr ""
-#~ "Non è stato trovato alcun disco fisso dove sia presente una partizione "
-#~ "«Apple_Bootstrap». Creare una partizione di 819200 byte di tipo "
-#~ "«Apple_Bootstrap»."
-
-#~ msgid "Looking for root partition"
-#~ msgstr "Ricerca della partizione di root"
-
-#~ msgid "Looking for other operating systems"
-#~ msgstr "Ricerca di altri sistemi operativi"
-
-#~ msgid ""
-#~ "Yaboot (the Linux boot loader) needs to be installed on a hard disk "
-#~ "partition in order for your system to be bootable.  Please choose the "
-#~ "destination partition from among these partitions that have the bootable "
-#~ "flag set."
-#~ msgstr ""
-#~ "Yaboot (il boot loader di Linux) deve essere installato su una partizione "
-#~ "del disco fisso al fine di rendere il sistema avviabile. Scegliere la "
-#~ "partizione di destinazione tra quelle che hanno il flag avviabile attivo."
-
-#~ msgid "Warning: this will erase all data on the selected partition!"
-#~ msgstr ""
-#~ "Attenzione: questo cancellerà tutti i dati sulle partizioni selezionate."
-
-#~ msgid "Creating yaboot configuration"
-#~ msgstr "Creazione della configurazione di yaboot"
-
-#~ msgid "Failed to create yaboot configuration"
-#~ msgstr "Creazione della configurazione di yaboot non riuscita"
-
-#~ msgid "The creation of the main yaboot configuration file failed."
-#~ msgstr ""
-#~ "La creazione del file principale di configurazione di yaboot non è "
-#~ "riuscita."
-
-#~ msgid "Installing yaboot into bootstrap partition"
-#~ msgstr "Installazione di yaboot nella partizione di avvio"
-
-#~ msgid "The installation of the yaboot boot loader failed."
-#~ msgstr "L'installazione del boot loader yaboot non è riuscita."
-
-#~ msgid "Install yaboot on a hard disk"
-#~ msgstr "Installare yaboot su un disco fisso"
-
-#~ msgid "Reinstall yaboot boot loader"
-#~ msgstr "Re-installare il boot loader yaboot"
-
-#~ msgid "Install the kernel on a PReP boot partition"
-#~ msgstr "Installare il kernel nella partizione di avvio PReP"
-
-#~ msgid "Copying the kernel to the PReP boot partition"
-#~ msgstr "Copia del kernel nella partizione PReP di avvio"
-
-#~ msgid "Looking for PReP boot partitions"
-#~ msgstr "Ricerca delle partizioni PReP di avvio"
-
-#~ msgid "No PReP boot partitions"
-#~ msgstr "Nessuna partizione PReP di avvio trovata"
-
-#~ msgid ""
-#~ "No PReP boot partitions were found. You must create a PReP boot partition "
-#~ "within the first 8MB of your hard disk."
-#~ msgstr ""
-#~ "Non sono state trovate partizioni PReP di avvio. È necessario creare una "
-#~ "partizione PReP di avvio nei primi 8MB del disco fisso."
-
-#~ msgid "Looking for the root partition"
-#~ msgstr "Ricerca della partizione di root"
-
-#~ msgid "Successfully installed PReP"
-#~ msgstr "Installazione di PReP completata"
-
-#~ msgid "The kernel was properly copied to the PReP boot partition."
-#~ msgstr ""
-#~ "Il kernel è stato copiato correttamente nella partizione PReP di avvio"
-
-#~ msgid "The new system is now ready to boot."
-#~ msgstr "Il nuovo sistema è pronto per essere avviato."
-
-#~ msgid "Disk to partition:"
-#~ msgstr "Disco da partizionare:"
-
-#~ msgid "Please choose one of the listed disks to create partitions on it."
-#~ msgstr "Scegliere uno dei dischi elencati per crearvi delle partizioni."
-
-#~ msgid ""
-#~ "Unable to find any disk in your system. Maybe some kernel modules need to "
-#~ "be loaded."
-#~ msgstr ""
-#~ "Impossibile trovare dischi nel sistema. Potrebbe essere necessario "
-#~ "caricare dei moduli del kernel."
-
-#~ msgid "Partitioning error"
-#~ msgstr "Errore nel partizionamento"
-
-#~ msgid "Failed to partition the disk ${DISC}."
-#~ msgstr "Il partizionamento del disco ${DISC} non è riuscito."
-
-#~ msgid "Partition a hard drive"
-#~ msgstr "Partizionare un disco"
-
-#~ msgid "Select a partition"
-#~ msgstr "Selezionare una partizione"
-
-#~ msgid ""
-#~ "These are the partitions that were detected in your system. Please select "
-#~ "a partition to configure. No actual changes will be made until you select "
-#~ "\"Finish\". If you select \"Abort\", no changes will be made."
-#~ msgstr ""
-#~ "Selezionare la partizione da configurare tra quelle trovate nel sistema. "
-#~ "Nessuna modifica verrà effettuata fino a quando non verrà scelto «Fine», "
-#~ "selezionando «Annulla» tutte le modifiche verranno annullate."
-
-#~ msgid ""
-#~ "The information shown is, in order: device name, size, file system, and "
-#~ "mount point."
-#~ msgstr ""
-#~ "Le informazioni mostrate sono rispettivamente: nome del device, "
-#~ "dimensione, file system, punto di mount."
-
-#~ msgid ""
-#~ "No partitions were found in your system. You may need to partition your "
-#~ "hard drives or load additional kernel modules."
-#~ msgstr ""
-#~ "Non è stata trovata alcuna partizione nel sistema. Potrebbe essere "
-#~ "necessario partizionare il disco o caricare ulteriori moduli del kernel."
-
-#~ msgid "No file systems found"
-#~ msgstr "Nessun file system trovato"
-
-#~ msgid ""
-#~ "No usable file systems were found. You may need to load additional kernel "
-#~ "modules."
-#~ msgstr ""
-#~ "Non è stato trovato alcun file system utilizzabile. Potrebbe essere "
-#~ "necessario caricare moduli aggiuntivi."
-
-#~ msgid "Abort"
-#~ msgstr "Annulla"
-
-#~ msgid "Leave the file system intact"
-#~ msgstr "Lasciare il file system intatto"
-
-#~ msgid "Create swap space"
-#~ msgstr "Creare un'area di swap"
-
-#~ msgid "Action on ${PARTITION}:"
-#~ msgstr "Azioni su ${PARTITION}:"
-
-#~ msgid ""
-#~ "This partition seems to already have a file system (${FSTYPE}). You can "
-#~ "choose to leave this file system intact, create a new file system, or "
-#~ "create swap space."
-#~ msgstr ""
-#~ "Questa partizione sembra avere già un file system (${FSTYPE}). È "
-#~ "possibile scegliere di lasciarlo intatto, di crearne uno nuovo oppure di "
-#~ "creare un'area di swap."
-
-#~ msgid ""
-#~ "This partition does not seem to have a file system. You can create a file "
-#~ "system or swap space on it."
-#~ msgstr ""
-#~ "Sembra che questa partizione non contenga un file system. È possibile "
-#~ "crearne uno oppure utilizzarla come area di swap."
-
-#~ msgid "Don't mount it"
-#~ msgstr "Non montare"
-
-#~ msgid "Mount point for ${PARTITION}:"
-#~ msgstr "Punto di mount per ${PARTITION}:"
-
-#~ msgid ""
-#~ "When a partition is mounted, it is available to the users of the system. "
-#~ "You always need a root (\"/\") partition, and it's often good to have a "
-#~ "separate partition for /home."
-#~ msgstr ""
-#~ "Una volta montata, una partizione è disponibile per gli utenti del "
-#~ "sistema. Una partizione di root («/») è sempre necessaria ed è spesso "
-#~ "comodo avere una partizione separata per /home."
-
-#~ msgid "Please enter where the partition should be mounted."
-#~ msgstr "Specificare dove si vuole montare la partizione."
-
-#~ msgid "Do you want to unmount the partitions so you can make changes?"
-#~ msgstr "Smontare le partizioni in modo da poterle cambiare?"
-
-#~ msgid ""
-#~ "Since the partitions have already been mounted, you cannot do any changes."
-#~ msgstr ""
-#~ "Non è possibile apportare modifiche poiché le partizioni sono già montate."
-
-#~ msgid "An unexpected error occurred while unmounting the partitions."
-#~ msgstr "Si è verificato un errore inatteso nello smontare le partizioni."
-
-#~ msgid "The partition configuration process has been aborted."
-#~ msgstr "La configurazione della partizione è stata interrotta."
-
-#~ msgid "Create %s file system"
-#~ msgstr "Creare il file system %s"
-
-#~ msgid "No root partition (/)"
-#~ msgstr "Non esiste la partizione root (/)"
-
-#~ msgid ""
-#~ "You need a root partition. Please assign a partition to the root mount "
-#~ "point before continuing."
-#~ msgstr ""
-#~ "La partizione di root è necessaria. Assegnare una partizione alla "
-#~ "directory root (/) prima di continuare."
-
-#~ msgid "Partition assigned to ${MOUNT}"
-#~ msgstr "Partizione assegnata a ${MOUNT}"
-
-#~ msgid "Mounting a partition on ${MOUNT} makes no sense. Please change this."
-#~ msgstr ""
-#~ "Non è possibile montare una partizione su ${MOUNT}. Cambiare tale "
-#~ "impostazione."
-
-#~ msgid "Several partitions assigned to ${MOUNT}"
-#~ msgstr "Sono state assegnate varie partizioni a ${MOUNT}"
-
-#~ msgid ""
-#~ "You cannot assign several partitions to the same mount point. Please "
-#~ "change all but one of them."
-#~ msgstr ""
-#~ "Non è possibile montare più partizioni sullo stesso punto di mount. È "
-#~ "necessario spostarle tutte tranne una."
-
-#~ msgid "Ready to create file systems and mount partitions?"
-#~ msgstr "Creare i file system e montare le partizioni?"
-
-#~ msgid "File systems will be created and partitions mounted."
-#~ msgstr "I file system verranno creati e le partizioni montate."
-
-#~ msgid ""
-#~ "WARNING: This will destroy all data on the partitions you have assigned "
-#~ "file systems to."
-#~ msgstr ""
-#~ "Attenzione: Questa procedura distruggerà tutti i dati presenti sulle "
-#~ "partizioni a cui sono stati assegnati i nuovi file system."
-
-#~ msgid "Failed to create swap space on ${PARTITION}"
-#~ msgstr "Creazione dell'area di swap su ${PARTITION} non riuscita"
-
-#~ msgid "An error occurred when the swap space was created on ${PARTITION}."
-#~ msgstr ""
-#~ "Si è verificato un errore durante la creazione dell'area di swap su "
-#~ "${PARTITION}."
-
-#~ msgid ""
-#~ "Please check the error log on the third console or /var/log/messages for "
-#~ "more information."
-#~ msgstr ""
-#~ "Verificare il registro degli errori sulla terza console o /var/log/"
-#~ "messages per maggiori informazioni."
-
-#~ msgid "Failed to activate the swap space on ${PARTITION}"
-#~ msgstr "Attivazione dell'area di swap su ${PARTITION} non riuscita"
-
-#~ msgid "An error occurred when the swap space on ${PARTITION} was activated."
-#~ msgstr ""
-#~ "Si è verificato un errore durante l'attivazione dell'area di swap su "
-#~ "${PARTITION}."
-
-#~ msgid "Failed to create ${FS} file system on ${PARTITION}"
-#~ msgstr "Creazione del file system ${FS} su ${PARTITION} non riuscita"
-
-#~ msgid ""
-#~ "An error occurred when the ${FS} file system was created on ${PARTITION}."
-#~ msgstr ""
-#~ "Si è verificato un errore durante la creazione del file system ${FS} su "
-#~ "${PARTITION}."
-
-#~ msgid "Failed to mount ${PARTITION} on ${MOUNT}"
-#~ msgstr "Montaggio di ${PARTITION} su ${MOUNT} non riuscito"
-
-#~ msgid "An error occurred when ${PARTITION} was mounted on ${MOUNT}."
-#~ msgstr ""
-#~ "Si è verificato un errore durante il montaggio di ${PARTITION} su "
-#~ "${MOUNT}."
-
-#~ msgid "Configure and mount partitions"
-#~ msgstr "Configurare e montare partizioni"
-
-#~ msgid "Bulgarian"
-#~ msgstr "Bulgara"
-
-#~ msgid ""
-#~ "If you are sure the device has already been correctly formatted, you "
-#~ "don't need to do so again."
-#~ msgstr ""
-#~ "Se si è sicuri che il dispositivo sia già partizionato correttamente, non "
-#~ "è necessario ripetere tale operazione."
-
-#~ msgid "SiByl boot loader installation failed.  Continue anyway?"
-#~ msgstr ""
-#~ "Installazione del boot loader SiByl non riuscita. Continuare comunque?"
-
-#~ msgid ""
-#~ "The SiByl package failed to install into /target/.  Installing SiByl as a "
-#~ "boot loader is a required step.  The install problem might however be "
-#~ "unrelated to SiByl, so continuing the installation may be possible."
-#~ msgstr ""
-#~ "L'installazione del pacchetto SiByl in /target/ non è riuscita. "
-#~ "L'installazione di SiByl come boot loader è un passo richiesto. Tuttavia, "
-#~ "il problema d'installazione potrebbe non essere in relazione con SiByl e "
-#~ "l'installazione potrebbe continuare."
-
-#~ msgid "Installing the SiByl boot loader"
-#~ msgstr "Installazione del boot loader SiByl"
-
-#~ msgid "Installing the SiByl package"
-#~ msgstr "Installazione del pacchetto SiByl"
-
-#~ msgid "Creating SiByl configuration"
-#~ msgstr "Creazione della configurazione di SiByl"
-
-#~ msgid "Install the SiByl boot loader on a hard disk"
-#~ msgstr "Installare il boot loader SyBil su un disco fisso"
-
-#~ msgid "SiByl boot partition"
-#~ msgstr "Partizione di avvio SiByl"
-
-#~ msgid "Portname:"
-#~ msgstr "Nome della porta:"
-
-#~ msgid ""
-#~ "Please enter the portname of your OSA-Express card. This name must be 1 "
-#~ "to 8 characters long and must be equal on all systems accessing the same "
-#~ "card."
-#~ msgstr ""
-#~ "Inserire il nome della porta della scheda OSA-Express. Questo nome deve "
-#~ "essere lungo da 1 a 8 caratteri e deve essere lo stesso in tutti i "
-#~ "sistemi che utilizzano la scheda."
-
-#~ msgid ""
-#~ "Leave it empty if you want to use HiperSockets. This parameter is "
-#~ "required for cards with microcode level 2.10 or later or when you want to "
-#~ "share a card."
-#~ msgstr ""
-#~ "Lasciarlo vuoto se si intende usare HyperSockets. Questo parametro è "
-#~ "richiesto per schede con microcodice di livello 2.10 o successivo, oppure "
-#~ "se si intende condividere la scheda."
-
-#~ msgid "The name will automatically be converted to uppercase."
-#~ msgstr "Il nome sarà automaticamente convertito in maiuscolo."
-
-#~ msgid "Berlin"
-#~ msgstr "Berlino"
-
-#~ msgid "Busingen"
-#~ msgstr "Büsingen"
-
-#~ msgid "Network Block Device port or name:"
-#~ msgstr "Porta o nome di Network Block Device:"
-
-#~ msgid ""
-#~ "Please enter the port on which the nbd-server is running. In case the "
-#~ "entered data contains a non-digit character, a name-based export will be "
-#~ "assumed."
-#~ msgstr ""
-#~ "Inserire la porta su cui nbd-server è in esecuzione. Nel caso in cui i "
-#~ "dati inseriti contengano caratteri non numerici, verrà considerato come "
-#~ "un nome."
-
-#~ msgid "SILO installation failed.  Continue anyway?"
-#~ msgstr "Installazione di Silo non riuscita. Continuare comunque?"
-
-#~ msgid ""
-#~ "The 'silo' package failed to install into /target/.  Installing SILO as a "
-#~ "boot loader is a required step.  The install problem might however be "
-#~ "unrelated to SILO, so continuing the installation may be possible."
-#~ msgstr ""
-#~ "L'installazione del pacchetto silo in /target/ non è riuscita. "
-#~ "L'installazione di SILO come boot loader è un passo richiesto. Tuttavia, "
-#~ "il problema d'installazione potrebbe non essere in relazione con SILO e "
-#~ "l'installazione potrebbe continuare."
-
-#~ msgid "Running \"/sbin/silo\" failed with error code \"${ERRCODE}\"."
-#~ msgstr ""
-#~ "Esecuzione di «/sbin/silo» non riuscita, codice di errore «${ERRCODE}»."
-
-#~ msgid "SILO installation successful"
-#~ msgstr "Installazione di Silo completata"
-
-#~ msgid ""
-#~ "The SILO boot loader has been successfully installed on your new boot "
-#~ "partition, and your system should now be able to boot itself."
-#~ msgstr ""
-#~ "Il boot loader Silo è stato installato correttamente sulla nuova "
-#~ "partizione di avvio. Il sistema dovrebbe essere in grado di avviarsi."
-
-#~ msgid "Install the SILO boot loader on a hard disk"
-#~ msgstr "Installazione del boot loader SILO su un disco fisso"
-
-#~ msgid "Unsupported boot file system type"
-#~ msgstr "Tipo di file system di avvio non supportato"
-
-#~ msgid ""
-#~ "In order to be successfully loaded by SILO (Sparc Linux Loader), the "
-#~ "kernel must reside on an ext2, ext3 or ufs formatted partition. In the "
-#~ "current partitioning scheme the kernel is going to be installed on the "
-#~ "${SILO_PART} partition of type ${SILO_TYPE}."
-#~ msgstr ""
-#~ "Affinché sia caricato con successo da SILO (Sparc Linux Loader), il "
-#~ "kernel deve risiedere in una partizione formattata con ext2, ext3 o ufs. "
-#~ "Nello schema di partizionamento attuale il kernel sarà installato nella "
-#~ "partizione ${SILO_PART} di tipo ${SILO_TYPE}."
-
-#~ msgid ""
-#~ "It is strongly recommended that you go back to partitioning and correct "
-#~ "this problem. Keeping the current configuration may result in an "
-#~ "unbootable system."
-#~ msgstr ""
-#~ "È raccomandato tornare indietro al partizionamento e correggere il "
-#~ "problema. Mantenere la configurazione attuale potrebbe portare a un "
-#~ "sistema non avviabile."
-
-#~ msgid "Boot partition may cause problems with SILO"
-#~ msgstr "La partizione di boot potrebbe causare problemi con SILO."
-
-#~ msgid ""
-#~ "This machine is likely to suffer from a firmware bug, which makes it "
-#~ "impossible for SILO (Sparc Linux Loader) to boot a kernel placed farther "
-#~ "than 1 GB from the beginning of the disk."
-#~ msgstr ""
-#~ "Questo computer sembra soffrire di un bug del firmware che non permette a "
-#~ "SILO (Sparc Linux Loader) di avviare un kernel registrato oltre il primo "
-#~ "gigabyte dall'inizio del disco."
-
-#~ msgid ""
-#~ "To avoid problems it is strongly recommended to install the kernel into a "
-#~ "partition which fits entirely within the first GB of the disk (by "
-#~ "creating a small /boot partition in the beginning of the disk, for "
-#~ "example). In the current partitioning scheme it is going to be installed "
-#~ "onto the ${SILO_PART} partition which extends up to ${SILO_OFF} mark. "
-#~ "Keeping this configuration may result in an unbootable system."
-#~ msgstr ""
-#~ "Per evitare problemi è raccomandato installare il kernel in una "
-#~ "partizione che rientri interamente nel primo GB di disco (creando una "
-#~ "piccola partizione /boot all'inizio del disco, per esempio). Nell'attuale "
-#~ "schema di partizionamento sarà installato sulla partizione ${SILO_PART} "
-#~ "che si estende fino a ${SILO_OFF}. Mantenere questa configurazione "
-#~ "potrebbe rendere il sistema non avviabile."
-
-#~ msgid "Unsupported partition table on the boot disk"
-#~ msgstr "Tabella della partizioni non supportata sul disco di avvio"
-
-#~ msgid ""
-#~ "SILO (Sparc Linux Loader) can only boot the kernel off a disk with the "
-#~ "\"sun\" partition table. In the current partitioning scheme the kernel is "
-#~ "going to be installed on the ${SILO_PART} partition located on a disk "
-#~ "with the partition table of type \"${SILO_DISK}\"."
-#~ msgstr ""
-#~ "SILO (Sparc Linux Loader) può solo avviare il kernel da un disco con "
-#~ "tabella di partizione «sun». Nell'attuale schema di partizionamento il "
-#~ "kernel sarà installato sulla partizione ${SILO_PART} che si trova su un "
-#~ "disco con tabella delle partizioni di tipo «${SILO_DISK}»."
-
-#~ msgid "EFIboot"
-#~ msgstr "EFIboot"
-
-#~ msgid "Copying partition..."
-#~ msgstr "Copia della partizione..."
-
-#~ msgid ""
-#~ "Before you can select a partition to copy, any previous changes have to "
-#~ "be written to disk."
-#~ msgstr ""
-#~ "Prima di poter selezionare una partizione da copiare, le modifiche devono "
-#~ "essere scritte sui dischi."
-
-#~ msgid "Please note that the copy operation may take a long time."
-#~ msgstr "L'operazione di copia potrebbe durare a lungo."
-
-#~ msgid "Source partition:"
-#~ msgstr "Partizione sorgente:"
-
-#~ msgid ""
-#~ "Please choose the partition which contains the data you want to copy."
-#~ msgstr "Scegliere la partizione che contiene i dati da copiare."
-
-#~ msgid "Copy operation failure"
-#~ msgstr "Operazione di copia non riuscita"
-
-#~ msgid "The copy operation has been aborted."
-#~ msgstr "Operazione di copia interrotta."
-
-#~ msgid "Copy data from another partition"
-#~ msgstr "Copiare i dati da un'altra partizione"
-
-#~ msgid ""
-#~ "Checking the ext2 (revision 0) file system in partition #${PARTITION} of "
-#~ "${DEVICE}..."
-#~ msgstr ""
-#~ "Verifica del file system ext2 (revisione 0) nella partizione n° "
-#~ "${PARTITION} di ${DEVICE}..."
-
-#~ msgid ""
-#~ "The test of the file system with type ext2 (revision 0) in partition #"
-#~ "${PARTITION} of ${DEVICE} found uncorrected errors."
-#~ msgstr ""
-#~ "Trovati errori durante la verifica del file system di tipo ext2 "
-#~ "(revisione 0) nella partizione n° ${PARTITION} di ${DEVICE}."
-
-#~ msgid ""
-#~ "If you do not go back to the partitioning menu and correct these errors, "
-#~ "the partition will not be used at all."
-#~ msgstr ""
-#~ "Se non si torna al menù di partizionamento per correggere questi errori "
-#~ "la partizione non verrà utilizzata."
-
-#~ msgid ""
-#~ "The ext2 (revision 0) file system creation in partition #${PARTITION} of "
-#~ "${DEVICE} failed."
-#~ msgstr ""
-#~ "Creazione del file system ext2 (revisione 0) nella partizione n° "
-#~ "${PARTITION} di ${DEVICE} non riuscita."
-
-#~ msgid ""
-#~ "No mount point is assigned for the ext2 (revision 0) file system in "
-#~ "partition #${PARTITION} of ${DEVICE}."
-#~ msgstr ""
-#~ "Nessun punto di mount assegnato per il file system ext2 (revisione 0) "
-#~ "nella partizione n° ${PARTITION} di ${DEVICE}."
-
-#~ msgid "ext2r0"
-#~ msgstr "ext2r0"
-
-#~ msgid "old Ext2 (revision 0) file system"
-#~ msgstr "vecchio file system ext2 (versione 0)"
-
-#~ msgid ""
-#~ "Your boot partition has not been configured with the old ext2 (revision "
-#~ "0) file system.  This is needed by your machine in order to boot.  Please "
-#~ "go back and use the old ext2 (revision 0) file system."
-#~ msgstr ""
-#~ "La partizione di avvio non è stata configurata con il vecchio file system "
-#~ "ext2 (revisione 0). Questo è necessario affinché il computer si avvii. "
-#~ "Tornare indietro e usare il vecchio file system ext2 (revisione 0)."
-
-#~ msgid ""
-#~ "If you do not go back to the partitioning menu and correct this error, "
-#~ "the partition will be used as is.  This means that you may not be able to "
-#~ "boot from your hard disk."
-#~ msgstr ""
-#~ "Se non si torna al menù di partizionamento per correggere questo errore, "
-#~ "la partizione verrà utilizzata così come è. Questo vuol dire che potrebbe "
-#~ "essere impossibile avviare da questo disco fisso."
-
-#~ msgid ""
-#~ "Your boot partition is not located on the first primary partition of your "
-#~ "hard disk.  This is needed by your machine in order to boot.  Please go "
-#~ "back and use your first primary partition as a boot partition."
-#~ msgstr ""
-#~ "La partizione di avvio non è nella prima partizione primaria del disco "
-#~ "fisso. Questo è necessario affinché il computer si avvii. Tornare "
-#~ "indietro e usare la prima partizione primaria come partizione di avvio."
-
-#~ msgid ""
-#~ "Your root partition is not a primary partition of your hard disk.  This "
-#~ "is needed by your machine in order to boot.  Please go back and use a "
-#~ "primary partition for your root partition."
-#~ msgstr ""
-#~ "La partizione root non è una partizione primaria del disco fisso. Questo "
-#~ "è necessario affinché il computer si avvii. Tornare indietro e usare una "
-#~ "partizione primaria come partizione root."
-
-#~ msgid "Successfully installed quik"
-#~ msgstr "Installazione di quik completata"
-
-#~ msgid "The quik boot loader was successfully installed."
-#~ msgstr "Il boot loader quik è stato installato con successo."
-
-#~ msgid "Successfully installed yaboot"
-#~ msgstr "Installazione di Yaboot completata"
-
-#~ msgid "The yaboot boot loader was successfully installed."
-#~ msgstr "Il boot loader yaboot è stato installato con successo."
-
-#~ msgid "Cobalt boot loader installation failed.  Continue anyway?"
-#~ msgstr ""
-#~ "Installazione del boot loader Cobalt non riuscita. Continuare comunque?"
-
-#~ msgid ""
-#~ "The CoLo package failed to install into /target/.  Installing CoLo as a "
-#~ "boot loader is a required step.  The install problem might however be "
-#~ "unrelated to CoLo, so continuing the installation may be possible."
-#~ msgstr ""
-#~ "L'installazione del pacchetto CoLo in /target/ non è riuscita. "
-#~ "L'installazione di CoLo come boot loader è un passo richiesto. Tuttavia, "
-#~ "il problema d'installazione potrebbe non essere in relazione con CoLo e "
-#~ "l'installazione potrebbe continuare."
-
-#~ msgid "Installing the Cobalt boot loader"
-#~ msgstr "Installazione del boot loader Cobalt"
-
-#~ msgid "Installing the CoLo package"
-#~ msgstr "Installazione del pacchetto CoLo"
-
-#~ msgid "Creating CoLo configuration"
-#~ msgstr "Creazione della configurazione di CoLo"
-
-#~ msgid "Install the Cobalt boot loader on a hard disk"
-#~ msgstr "Installare il boot loader Cobalt in un disco fisso"

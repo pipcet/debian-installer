@@ -37,6 +37,10 @@ else
 	LOG="$(pwd)/l10n-sync.log"
 fi
 
+# Save logfiles to .old for further inspection:
+cp -a $LOG $LOG.old
+cp -a l10n-sync_commit.log l10n-sync_commit.log.old
+
 usage() {
 echo  "Usage:"
 echo  "$0 [--online] [--keep-revision lang] [--atomic] [--atomic-updates] [--commit] [--levels="number_of_levels"] [--git="path_to_git"] [--debconf-updatepo="debconf-updatepo command"] [--quiet|--nolog] <D-I repository path>"
