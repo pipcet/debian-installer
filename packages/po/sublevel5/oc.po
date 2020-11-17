@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: debian-installer sublevel5\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-29 20:02+0000\n"
-"PO-Revision-Date: 2020-10-29 17:30+0000\n"
+"PO-Revision-Date: 2020-11-15 18:28+0000\n"
 "Last-Translator: Quentin PAGÈS <quentinantonin@free.fr>\n"
 "Language-Team: Occitan (post 1500) <ubuntu-l10n-oci@lists.ubuntu.com>\n"
 "Language: oc\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.3.2-dev\n"
+"X-Generator: Weblate 4.4-dev\n"
 
 #. Type: text
 #. Description
@@ -66,29 +66,27 @@ msgstr "biosgrub"
 #. Description
 #. :sl5:
 #: ../partman-basicfilesystems.templates:60001
-#, fuzzy
 msgid ""
 "Your boot partition has not been configured with the ext2 file system. This "
 "is needed by your machine in order to boot. Please go back and use the ext2 "
 "file system."
 msgstr ""
-"Vòstra particion d'aviada (/boot) es pas estada configurada amb lo sistèma "
-"de fichièr u-boot. Aquò's necessari per l'aviada de vòstra maquina. Tornatz "
-"en arrièr e utilizatz lo sistèma de fichièr u-boot."
+"Vòstra particion d'aviada es pas estada configurada amb lo sistèma de "
+"fichièr ext2. Aquò's necessari per l'aviada de vòstra maquina. Tornatz en "
+"arrièr e utilizatz lo sistèma de fichièr ext2."
 
 #. Type: boolean
 #. Description
 #. :sl5:
 #: ../partman-basicfilesystems.templates:61001
-#, fuzzy
 msgid ""
 "Your boot partition is not located on the first partition of your hard disk. "
 "This is needed by your machine in order to boot.  Please go back and use "
 "your first partition as a boot partition."
 msgstr ""
-"La particion d'aviada es pas la primièra particion primària del disc. Aquò's "
-"indispensable per l'aviada de la maquina. Recomençatz e utilizatz la "
-"primièra particion primària coma particion d'aviada."
+"La particion d'aviada es pas dins la primièra particion primària del disc. "
+"Aquò's necessari per l'aviada de la maquina. Tornatz en arrièr e utilizatz "
+"la primièra particion primària coma particion d'aviada."
 
 #. Type: select
 #. Choices
@@ -119,6 +117,8 @@ msgstr "qeth : OSA-Express en mòde QDIO / HiperSockets"
 #: ../s390-netdevice.templates:1001
 msgid "iucv: Inter-User Communication Vehicle - available for VM guests only"
 msgstr ""
+"iucv : Inter-User Communication Vehicle - sonque disponible pels convidats "
+"en VM"
 
 #. Type: select
 #. Choices
@@ -134,9 +134,8 @@ msgstr "virtio : KVM VirtIO"
 #. Description
 #. :sl5:
 #: ../s390-netdevice.templates:1002
-#, fuzzy
 msgid "Network device type:"
-msgstr "Tipe de periferic en RAID logicial :"
+msgstr "Tipe de periferic ret :"
 
 #. Type: select
 #. Description
@@ -147,6 +146,9 @@ msgid ""
 "for installing the Debian system (via NFS or HTTP). Only the listed devices "
 "are supported."
 msgstr ""
+"Mercés de causir lo tipe de l’interfàcia de ret primària que vos farà "
+"mestièr per installar lo sistèma Debian (via NFS o HTTP). Solament los "
+"periferics listats son preses en carga."
 
 #. Type: select
 #. Description
@@ -164,14 +166,15 @@ msgstr "Crear un periferic multidisc :"
 #: ../s390-netdevice.templates:2001 ../s390-netdevice.templates:3001
 msgid "The following device numbers might belong to CTC or ESCON connections."
 msgstr ""
+"Los numèro de periferics seguents poirián aperténer al CTC o a las "
+"connexions ESCON."
 
 #. Type: select
 #. Description
 #. :sl5:
 #: ../s390-netdevice.templates:3001
-#, fuzzy
 msgid "CTC write device:"
-msgstr "Crear un periferic multidisc"
+msgstr "Periferic d’escritura CTC :"
 
 #. Type: boolean
 #. Description
@@ -197,6 +200,10 @@ msgid ""
 " write channel = ${device_write}\n"
 " protocol      = ${protocol}"
 msgstr ""
+"Los paramètres configurats son :\n"
+" canal de lectura = ${device_read}\n"
+" canal d’escritura = ${device_write}\n"
+" protocòl      = ${protocol}"
 
 #. Type: error
 #. Description
@@ -209,34 +216,29 @@ msgstr "Cap de connexion CTC o ESCON"
 #. Description
 #. :sl5:
 #: ../s390-netdevice.templates:5001
-#, fuzzy
 msgid "Please make sure that you have set them up correctly."
-msgstr ""
-"Picatz tornamai la frasa secreta, pr'amor de verificar que vòstra picada es "
-"corrècta."
+msgstr "Asseguratz-vos que los avètz corrèctament configurats."
 
 #. Type: select
 #. Description
 #. :sl5:
 #: ../s390-netdevice.templates:6001
-#, fuzzy
 msgid "Protocol for this connection:"
-msgstr "Protocòl de telecargament dels fichièrs :"
+msgstr "Protocòl per aquesta connexion :"
 
 #. Type: select
 #. Description
 #. :sl5:
 #: ../s390-netdevice.templates:7001
-#, fuzzy
 msgid "Device:"
-msgstr "Periferic :"
+msgstr "Periferic :"
 
 #. Type: select
 #. Description
 #. :sl5:
 #: ../s390-netdevice.templates:7001
 msgid "Please select the OSA-Express QDIO / HiperSockets device."
-msgstr ""
+msgstr "Mercés de seleccionar lo periferic OSA-Express QDIO / HiperSockets."
 
 #. Type: boolean
 #. Description
@@ -248,13 +250,17 @@ msgid ""
 " port     = ${port}\n"
 " layer2   = ${layer2}"
 msgstr ""
+"Los paramètres configurats son :\n"
+" canals = ${device0}, ${device1}, ${device2}\n"
+" pòrt     = ${port}\n"
+" layer2   = ${layer2}"
 
 #. Type: error
 #. Description
 #. :sl5:
 #: ../s390-netdevice.templates:9001
 msgid "No OSA-Express QDIO cards / HiperSockets"
-msgstr ""
+msgstr "Cap d’OSA-Express QDIO cards / HiperSockets"
 
 #. Type: error
 #. Description
@@ -264,6 +270,8 @@ msgid ""
 "No OSA-Express QDIO cards / HiperSockets were detected. If you are running "
 "VM please make sure that your card is attached to this guest."
 msgstr ""
+"Cap d’OSA-Express QDIO cards / HiperSockets pas detectada. S’utilizatz una "
+"VM mercés de vos assegurar que la carta es ben junta a aqueste convidat."
 
 #. Type: string
 #. Description
@@ -276,16 +284,15 @@ msgstr "Pòrt :"
 #. Description
 #. :sl5:
 #: ../s390-netdevice.templates:10001
-#, fuzzy
 msgid "Please enter a relative port for this connection."
-msgstr "Picatz lo nom d'òste d'aqueste sistèma."
+msgstr "Picar lo nom d'òste d'aqueste sistèma."
 
 #. Type: boolean
 #. Description
 #. :sl5:
 #: ../s390-netdevice.templates:11001
 msgid "Use this device in layer2 mode?"
-msgstr ""
+msgstr "Utilizar aqueste periferic en mòde layer2 ?"
 
 #. Type: boolean
 #. Description
@@ -296,6 +303,9 @@ msgid ""
 "removed from incoming IPv4 packets. Using the card in layer2 mode will make "
 "it keep the MAC addresses of IPv4 packets."
 msgstr ""
+"Per defaut las OSA-Express QDIO utilizan lo mòde layer3. Dins aqueste mòde "
+"las entèstas LLC son levadas dels paquets IPv4 dintrants. L’utilizacion de "
+"la carta en mòde layer2 la farà gardar l’adreça MAC dels paquets IPv4."
 
 #. Type: boolean
 #. Description
@@ -305,21 +315,22 @@ msgid ""
 "The configured parameter is:\n"
 " peer  = ${peer}"
 msgstr ""
+"Lo paramètre configurat es :\n"
+" par  = ${peer}"
 
 #. Type: string
 #. Description
 #. :sl5:
 #: ../s390-netdevice.templates:13001
 msgid "VM peer:"
-msgstr ""
+msgstr "Par VM :"
 
 #. Type: string
 #. Description
 #. :sl5:
 #: ../s390-netdevice.templates:13001
-#, fuzzy
 msgid "Please enter the name of the VM peer you want to connect to."
-msgstr "Picatz lo meteis senhal per verificar que l'avètz picat corrèctament."
+msgstr "Picatz lo nom de la VM en fàcia ont volètz vos connectar."
 
 #. Type: string
 #. Description
@@ -329,6 +340,8 @@ msgid ""
 "If you want to connect to multiple peers, separate the names by colons, e."
 "g.  tcpip:linux1."
 msgstr ""
+"Se volètz vos connectar a mantun pars, separatz los noms amb de dos-punts, "
+"ex : tcpip:linux1."
 
 #. Type: string
 #. Description
@@ -339,6 +352,10 @@ msgid ""
 "IUCV must be enabled in the VM user directory for this driver to work and it "
 "must be set up on both ends of the communication."
 msgstr ""
+"Lo nom estandard del servidor TCP/IP sus una VM es TCPIP ; sus VIF es $"
+"TCPIP. Nòta : IUCV deu èsser activat sul repertòri utilizaire de la VM per "
+"qu’aqueste pilòt foncione e deu èsser configurat suls dos costats de la "
+"comunicacion."
 
 #. Type: text
 #. Description
@@ -346,9 +363,8 @@ msgstr ""
 #. Translators: keep below 55 columns
 #. :sl5:
 #: ../s390-netdevice.templates:14001
-#, fuzzy
 msgid "Configure the network device"
-msgstr "Configurar la ret"
+msgstr "Configurar lo periferic ret"
 
 #. Type: select
 #. Description
@@ -365,6 +381,8 @@ msgid ""
 "The following direct access storage devices (DASD) are available. Please "
 "select each device you want to use one at a time."
 msgstr ""
+"Los periferics dirèctes d’accès a l’emmagazinatge (DASD) seguents son "
+"disponibles. Mercés de causir cada periferic que volètz utilizar, un al còp."
 
 #. Type: select
 #. Description
@@ -388,14 +406,15 @@ msgid ""
 "Please choose a device. You have to specify the complete device number, "
 "including leading zeros."
 msgstr ""
+"Mercés de causir un periferic. Vos cal especificar lo numèro de periferic "
+"complèt, lo zèro de la debuta inclutz."
 
 #. Type: error
 #. Description
 #. :sl5:
 #: ../s390-dasd.templates:3001
-#, fuzzy
 msgid "Invalid device"
-msgstr "Talha pas valabla"
+msgstr "Periferic invalid"
 
 #. Type: error
 #. Description
@@ -420,6 +439,7 @@ msgstr "Formatar lo periferic ?"
 #: ../s390-dasd.templates:4001
 msgid "The DASD ${device} is already low-level formatted."
 msgstr ""
+"Aqueste periferic DASD ${device} possedís ja un formatatge de bas nivèl."
 
 #. Type: boolean
 #. Description
@@ -429,6 +449,8 @@ msgid ""
 "Please choose whether you want to format again and remove any data on the "
 "DASD. Note that formatting a DASD might take a long time."
 msgstr ""
+"Causissètz se volètz tornar formatar e suprimir tota donada del DASD. Notatz "
+"que lo formatatge d’un DASD pòt trigar."
 
 #. Type: boolean
 #. Description
@@ -438,14 +460,15 @@ msgid ""
 "The DASD ${device} is not low-level formatted. DASD devices must be "
 "formatted before you can create partitions."
 msgstr ""
+"Lo DASD ${device} possedís pas un formatatge de bas nivèl. Los periferics "
+"DASD deu èsser formatat abans de crear las particions."
 
 #. Type: error
 #. Description
 #. :sl5:
 #: ../s390-dasd.templates:6001
-#, fuzzy
 msgid "The DASD ${device} is in use"
-msgstr "Periferic  ocupat"
+msgstr "Lo periferic DASD ${device} es utilizat"
 
 #. Type: error
 #. Description
@@ -456,6 +479,9 @@ msgid ""
 "For example, the DASD could be a member of a mapped device in an LVM volume "
 "group."
 msgstr ""
+"Formatatge de bas nivèl impossible de DASD ${device} perque lo DASD es "
+"utilizat.  Per exemple, lo DASD poiriá pas èsser un membre d’un periferic "
+"mapat dins un grop de volum LVM."
 
 #. Type: text
 #. Description
@@ -470,7 +496,7 @@ msgstr "Formatatge de ${device}..."
 #. :sl5:
 #: ../s390-dasd.templates:8001
 msgid "Configure direct access storage devices (DASD)"
-msgstr ""
+msgstr "Configurar los periferics dirèctes d’accès a l’emmagazinatge (DASD)"
 
 #. Type: text
 #. Description
@@ -478,6 +504,5 @@ msgstr ""
 #. Translators: keep below 55 columns
 #. :sl5:
 #: ../zipl-installer.templates:1001
-#, fuzzy
 msgid "Install the ZIPL boot loader on a hard disk"
-msgstr "Installar lo gestionari d'aviada LILO sus un disc dur"
+msgstr "Installar lo gestionari d'aviada ZIPL sus un disc dur"
