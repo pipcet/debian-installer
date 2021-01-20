@@ -8,20 +8,22 @@
 # Nishant Sharma <me@nishants.net>, 2005, 2006.
 # Kumar Appaiah <akumar@ee.iitm.ac.in>, 2008.
 # Kumar Appaiah <a.kumar@alumni.iitm.ac.in>, 2010, 2011, 2012.
+# KushagraKarira <kushagrakarira@gmail.com>, 2021.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer_packages_po_sublevel5_hi\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-29 20:02+0000\n"
-"PO-Revision-Date: 2018-10-06 15:28+0000\n"
-"Last-Translator: Kumar Appaiah\n"
+"PO-Revision-Date: 2021-01-17 12:32+0000\n"
+"Last-Translator: KushagraKarira <kushagrakarira@gmail.com>\n"
 "Language-Team: \n"
 "Language: hi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.2\n"
+"X-Generator: Weblate 4.5-dev\n"
 
 #. Type: text
 #. Description
@@ -69,36 +71,27 @@ msgstr "बायोसग्रब"
 #. Description
 #. :sl5:
 #: ../partman-basicfilesystems.templates:60001
-#, fuzzy
-#| msgid ""
-#| "Your boot partition has not been configured with the ext2 or ext3 file "
-#| "system. This is needed by your machine in order to boot. Please go back "
-#| "and use either the ext2 or ext3 file system."
 msgid ""
 "Your boot partition has not been configured with the ext2 file system. This "
 "is needed by your machine in order to boot. Please go back and use the ext2 "
 "file system."
 msgstr ""
-"आपका बूट पार्टिशन ईएक्सटी२ या ईएक्सटी३ फाइलसिस्टम में नहीं बना है. आपके यंत्र को बूट करने "
-"के लिए यह आवश्यक है. कृपया वापस जा कर ईएक्सटी२ या ईएक्सटी३ फाइलसिस्टम चुनिए."
+"आपका बूट विभाजन ext2 फाइल सिस्टम से कॉन्फ़िगर नहीं किया गया है। बूट करने के "
+"लिए यह आपकी मशीन द्वारा आवश्यक है। कृपया वापस जाएं और ext2 फ़ाइल सिस्टम का "
+"उपयोग करें।"
 
 #. Type: boolean
 #. Description
 #. :sl5:
 #: ../partman-basicfilesystems.templates:61001
-#, fuzzy
-#| msgid ""
-#| "Your boot partition is not located on the first primary partition of your "
-#| "hard disk. This is needed by your machine in order to boot.  Please go "
-#| "back and use your first primary partition as a boot partition."
 msgid ""
 "Your boot partition is not located on the first partition of your hard disk. "
 "This is needed by your machine in order to boot.  Please go back and use "
 "your first partition as a boot partition."
 msgstr ""
-"आपका बूट पार्टिशन आपके हार्ड डिस्क के प्राथमिक पार्टिशन पर स्थित नहीं है. यह आपके तंत्र को "
-"बूट करने के लिए आवश्यक है. कृपया वापस जा कर अपने प्राथमिक पार्टिशन को बूट पार्टिशन के रूप "
-"में उपयोग करें."
+"आपका बूट पार्टिशन आपके हार्ड डिस्क के प्रथम पार्टिशन पर स्थित नहीं है. यह "
+"आपके तंत्र को बूट करने के लिए आवश्यक है. कृपया वापस जा कर अपने प्रथम पार्टि"
+"शन को बूट पार्टिशन के रूप में उपयोग करें."
 
 #. Type: select
 #. Choices
@@ -310,9 +303,9 @@ msgid ""
 "removed from incoming IPv4 packets. Using the card in layer2 mode will make "
 "it keep the MAC addresses of IPv4 packets."
 msgstr ""
-"सेटिंग को बदले बिना ओ.एस.ए.-एक्सप्रेस कार्ड लेयर-३ मोड का उपयोग करते हैं. इस मोड में एल."
-"एल.सी. हेडरआनेवाली आई.पी.वी.-४ पैकेट से निकाली जाती है. कार्ड का उपयोग लेयर-२ मोड में "
-"करने सेआनेवाली आई.पी.वी.-४ पैकेट की मैक अड्रैस कायम रखी जाती है."
+"डिफ़ॉल्ट रूप से OSA- एक्सप्रेस कार्ड लेयर 3 मोड का उपयोग करते हैं। उस मोड में"
+" एलएलसी हेडर आने वाले आईपीवी 4 पैकेट से हटा दिए जाते हैं। लेयर 2 मोड में कार्"
+"ड का उपयोग करने से यह आईपीवी 4 पैकेट के मैक पते को बनाए रखेगा।"
 
 #. Type: boolean
 #. Description
@@ -443,7 +436,7 @@ msgstr "उपकरण को फ़ॉर्मेट करें?"
 #. :sl5:
 #: ../s390-dasd.templates:4001
 msgid "The DASD ${device} is already low-level formatted."
-msgstr ""
+msgstr "DASD ${device} पहले से ही निम्न-स्तरीय स्वरूपित है।"
 
 #. Type: boolean
 #. Description
@@ -453,31 +446,26 @@ msgid ""
 "Please choose whether you want to format again and remove any data on the "
 "DASD. Note that formatting a DASD might take a long time."
 msgstr ""
+"कृपया चुनें कि क्या आप फिर से प्रारूपित करना चाहते हैं और DASD पर कोई डेटा "
+"हटा सकते हैं। ध्यान दें कि DASD को फ़ॉर्मेट करने में लंबा समय लग सकता है।"
 
 #. Type: boolean
 #. Description
 #. :sl5:
 #: ../s390-dasd.templates:5001
-#, fuzzy
-#| msgid ""
-#| "The installer is unable to detect if the device ${device} has already "
-#| "been formatted or not. Devices need to be formatted before you can create "
-#| "partitions."
 msgid ""
 "The DASD ${device} is not low-level formatted. DASD devices must be "
 "formatted before you can create partitions."
 msgstr ""
-"संस्थापक यह ज्ञात करने में असफल रहा कि उपकरण ${device} पहले से ही फॉर्मेट है या नहीं."
-"पार्टिशन बनाने से पहले उपकरणों को फॉर्मेट करना आवश्यक है."
+"DASD ${device} निम्न-स्तरीय स्वरूपित नहीं है। विभाजन बनाने से पहले DASD "
+"उपकरणों को स्वरूपित किया जाना चाहिए।"
 
 #. Type: error
 #. Description
 #. :sl5:
 #: ../s390-dasd.templates:6001
-#, fuzzy
-#| msgid "Device in use"
 msgid "The DASD ${device} is in use"
-msgstr "उपकरण प्रयोग में"
+msgstr "DASD ${device} उपयोग में है"
 
 #. Type: error
 #. Description
@@ -488,6 +476,9 @@ msgid ""
 "For example, the DASD could be a member of a mapped device in an LVM volume "
 "group."
 msgstr ""
+"DASD ${device} को निम्न-स्तरीय स्वरूप नहीं दे सका क्योंकि DASD उपयोग में है।"
+" उदाहरण के लिए, DASD LVM वॉल्यूम समूह में मैप किए गए डिवाइस का सदस्य हो सकता "
+"है।"
 
 #. Type: text
 #. Description
