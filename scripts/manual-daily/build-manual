@@ -12,10 +12,10 @@ DILLON_MANUAL_PATH=/srv/d-i.debian.org/www/doc/installation-guide
 # They will later be freshly generated anyway.
 # 
 # ! Include all po-based languages here !
-rm -fR $source/ca $source/de $source/it $source/cs
-rm -fR $source/da $source/el $source/es $source/fi $source/fr $source/hu $source/ja
-rm -fR $source/ko $source/nl $source/nn $source/pt $source/ro $source/ru $source/sv
-rm -fR $source/tl $source/vi $source/zh_CN $source/zh_TW
+rm -fR $source/ca $source/cs $source/da $source/de $source/el $source/es $source/fi
+rm -fR $source/fr $source/hu $source/it $source/ja $source/kab $source/ko $source/nb
+rm -fR $source/nl $source/nn $source/pt $source/ro $source/ru $source/sv $source/tl
+rm -fR $source/uk $source/vi $source/zh_CN $source/zh_TW
 
 usage() {
     if [ "$@" ]; then
@@ -133,22 +133,10 @@ commit_to_git() {
         echo "Adding new POT files..." >>$logdir/git_push.log
             git add */*.pot
 
-###           checkfatal "$?" "running 'svn add' on $SVN_NEW"
-#       echo "Actual commit disabled, showing svn st:" >>$logdir/git_push.log
-#       svn st po/ 2>/dev/null >>$logdir/git_push.log 2>&1
-
         echo "Committing changed po files:" >>$logdir/git_push.log
            git add */*.po
            git commit -m "[SILENT_COMMIT] Update of POT and PO files for the installation-guide" >>$logdir/git_push.log 2>&1
            git push -q
-
-###        checkfatal "$?" "committing POT/PO files to SVN"
-
-###        checkfatal "checking for conflicts in manual/po after 'git push'"
-#        fi
-#    else
-#        echo "  No updates to commit" >>$mainlog
-#    fi
 }
 
 build_lang() {
@@ -248,16 +236,6 @@ build_lang() {
 
         rm $langlog.arch
         [ $BUILDRESULT = 0 ] && echo >>$mainlog
-
-###        if [ "$DI_LOCAL_BUILD" != 1 ]; then
-###            # Upload logfiles
-###            NO NEED TO UPLOAD LOGFILES TO SOMEWHERE
-###            if [ $? = 0 ]; then
-###                echo "  Upload of $lang.log success" >>$mainlog
-###            else
-###                echo "  Upload of $lang.log failed" >>$mainlog
-###            fi
-###	fi
 
         # Check if any architectures have actually been built
         if ls $destination | grep -q "$lang\."; then
@@ -411,27 +389,6 @@ for lang in $translations; do
         echo >>$langlog
     fi
 done
-
-# Here we refresh po files for languages, that are currently not actively maintained.
-# I want to keep that po files up-to-date (english-wise) nevertheless.
-   if is_updated en || global_build_options_changed; then
-            echo "Info: updating PO files for unmaintained languages (nn, ro, tl)" >>$mainlog
-            echo "Info: updating PO files for nn" >$logdir/nn.log
-            update_po nn >>$logdir/nn.log 2>&1
-            checkfatal "$?" "updating po for nn"
-   fi
-
-   if is_updated en || global_build_options_changed; then
-            echo "Info: updating PO files for ro" >$logdir/ro.log
-            update_po ro >>$logdir/ro.log 2>&1
-            checkfatal "$?" "updating po for ro"
-   fi
-
-   if is_updated en || global_build_options_changed; then
-            echo "Info: updating PO files for tl" >$logdir/tl.log
-            update_po tl >>$logdir/tl.log 2>&1
-            checkfatal "$?" "updating po for tl"
-   fi
 
 echo >>$mainlog
 # Commit updates to POT and PO files to GIT
