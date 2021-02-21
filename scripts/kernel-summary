@@ -89,7 +89,13 @@ sub build_status {
   my %builds;
   if ($response->is_success) {
     # Avoid hardcoding column id:
-    my $xml = XML::LibXML->load_html(string => $response->content);
+    my $xml = XML::LibXML->load_html(
+      string          => $response->content,
+      # Gross hack since LibXML is suddenly unhappy about some links
+      # (February 2021):
+      recover         => 1,
+      suppress_errors => 1,
+    );
     my @columns = $xml->findnodes('//table[@class="data"]/tr/th/text()');
     my %col_lookup;
     foreach my $i (0 .. $#columns) {
