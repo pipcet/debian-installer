@@ -2,9 +2,6 @@
 export PATH=${HOME}/trunk/scripts/l10n/l10n-spellcheck:$PATH
 
 case "$1" in
-man)
-	l10n-spellcheck.sh ~/trunk/scripts/l10n/l10n-spellcheck/cfg/manual_d-i
-	;;
 l1)
 	l10n-spellcheck.sh ~/trunk/scripts/l10n/l10n-spellcheck/cfg/level1
 	;;
@@ -15,7 +12,6 @@ l3)
 	l10n-spellcheck.sh ~/trunk/scripts/l10n/l10n-spellcheck/cfg/level3
 	;;
 all)
-	l10n-spellcheck.sh ~/trunk/scripts/l10n/l10n-spellcheck/cfg/manual_d-i
 	l10n-spellcheck.sh ~/trunk/scripts/l10n/l10n-spellcheck/cfg/level1
 	l10n-spellcheck.sh ~/trunk/scripts/l10n/l10n-spellcheck/cfg/level2
 	l10n-spellcheck.sh ~/trunk/scripts/l10n/l10n-spellcheck/cfg/level3
@@ -24,7 +20,6 @@ all)
 	echo "Unknown parameter. Here's the list of known parameters:"
 	echo ""
 	echo "all - useful to force a re-run of the spellcheck"
-	echo "man"
 	echo "l1"
 	echo "l2"
 	echo "l3"
