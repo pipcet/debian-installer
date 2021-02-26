@@ -114,4 +114,5 @@ else
 fi
 
 mv ${WORK_DIR} ${OUT_DIR}/${NEW}
-ln -s ${OUT_DIR}/${NEW}  ${OUT_DIR}/latest
+cd ${OUT_DIR}
+ln -s ${NEW} latest
