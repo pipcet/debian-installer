@@ -5,13 +5,15 @@
 # Kenshi Muto <kmuto@debian.org>, 2006-2018
 # Kentaro Hayashi <kenhys@gmail.com>, 2021.
 # YOSHINO Yoshihito <yy.y.ja.jp@gmail.com>, 2021.
+# Norimitsu SUGIMOTO <dictoss@live.jp>, 2021.
+# Nozomu KURASAWA <nabetaro@caldron.jp>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-05 20:01+0000\n"
-"PO-Revision-Date: 2021-04-29 17:54+0000\n"
-"Last-Translator: YOSHINO Yoshihito <yy.y.ja.jp@gmail.com>\n"
+"PO-Revision-Date: 2021-05-06 03:32+0000\n"
+"Last-Translator: Nozomu KURASAWA <nabetaro@caldron.jp>\n"
 "Language-Team: Debian L10n Japanese <debian-japanese@lists.debian.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
@@ -262,6 +264,8 @@ msgid ""
 "You should make sure that your installation image is up-to-date, or - if "
 "that's the case - try a different mirror, preferably deb.debian.org."
 msgstr ""
+"あなたのインストールイメージが最新であることを確認してください、もし最新であ"
+"るならば異なるミラー、できれば deb.debian.org を試してみてください。"
 
 #. Type: select
 #. Description
@@ -1406,6 +1410,8 @@ msgid ""
 "No DHCP client was found. Please make sure, that a DHCP installer component "
 "is installed."
 msgstr ""
+"DHCP クライアントが見つかりません。DHCP インストーラコンポーネントをインス"
+"トールしていることを確認してください。"
 
 #. Type: error
 #. Description
@@ -1425,13 +1431,6 @@ msgstr "デフォルトルートなしに続けますか?"
 #. Description
 #. :sl2:
 #: ../netcfg-dhcp.templates:8001
-#, fuzzy
-#| msgid ""
-#| "The network autoconfiguration was successful. However, no default route "
-#| "was set: the system does not know how to communicate with hosts on the "
-#| "Internet. This will make it impossible to continue with the installation "
-#| "unless you have the first installation CD-ROM, a 'Netinst' CD-ROM, or "
-#| "packages available on the local network."
 msgid ""
 "The network autoconfiguration was successful. However, no default route was "
 "set: the system does not know how to communicate with hosts on the Internet. "
@@ -1441,9 +1440,9 @@ msgid ""
 msgstr ""
 "ネットワークの自動設定に成功しました。ただ、デフォルトルートが設定されていな"
 "いようです。システムは、インターネット上のホストとやり取りする方法を知りませ"
-"ん。これは、1 枚目のインストール CD-ROM、'ネットワークインストール' CD-ROM、"
-"あるいはローカルネットワークにある利用可能なパッケージがない限り、インストー"
-"ルの継続ができないということです。"
+"ん。そのため、インストール メディアのセットの 1 枚目のイメージ、'ネットワーク"
+"インストール' イメージ、あるいはローカルネットワークにある利用可能なパッケー"
+"ジがない限り、インストールの継続ができません。"
 
 #. Type: boolean
 #. Description
@@ -1500,6 +1499,8 @@ msgid ""
 "The value you provided is not a usable IPv4 or IPv6 address. Please consult "
 "your network administrator and try again."
 msgstr ""
+"あなたが指定した IPv4 または IPv6 アドレスは利用できません。 ネットワーク管理"
+"者へ問い合わせるか、再度試してみてください。"
 
 #. Type: string
 #. Description
@@ -1834,20 +1835,16 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../cdrom-retriever.templates:1001
-#, fuzzy
-#| msgid ""
-#| "There was a problem reading data from the CD-ROM. Please make sure it is "
-#| "in the drive. If retrying does not work, you should check the integrity "
-#| "of your CD-ROM."
 msgid ""
 "There was a problem reading data. Please make sure you have inserted the "
 "installation media correctly. If retrying does not work, you should check "
 "the integrity of your installation media (there is an associated entry in "
 "the main menu for that)."
 msgstr ""
-"CD-ROM からのデータの読み込み中に問題が発生しました。ドライブに CD-ROM がある"
-"ことを確認してください。再試行でうまくいかないようであれば、あなたの CD-ROM "
-"の完全性チェックを行ってください。"
+"データの読み込み中に問題が発生しました。インストールメディアが正しく挿入され"
+"ていることを確認してください。再試行でうまくいかないようであれば、あなたのイ"
+"ンストールメディアの完全性をチェックしてください (メインメニューにそのための"
+"関連するエントリがあります)。"
 
 #. Type: text
 #. Description
@@ -3936,10 +3933,8 @@ msgstr "利用方法:"
 #. Description
 #. :sl2:
 #: ../partman-efi.templates:3001
-#, fuzzy
-#| msgid "Go back to the menu and correct errors?"
 msgid "Go back to the menu and resume partitioning?"
-msgstr "メニューに戻ってエラーを修正しますか?"
+msgstr "メニューに戻ってパーティショニングを再開しますか?"
 
 #. Type: boolean
 #. Description
@@ -3952,10 +3947,8 @@ msgstr "EFIパーティションが見つかりませんでした。"
 #. Description
 #. :sl2:
 #: ../partman-efi.templates:8001
-#, fuzzy
-#| msgid "Partitions to assemble:"
 msgid "EFI partition too small"
-msgstr "組み合わせるパーティション:"
+msgstr "EFI パーティションが小さすぎます"
 
 #. Type: error
 #. Description
@@ -3965,6 +3958,8 @@ msgid ""
 "EFI System Partitions on this architecture cannot be created with a size "
 "less than 35 MB. Please make the EFI System Partition larger."
 msgstr ""
+"このアーキテクチャの EFI システムパーティションは 35 MB より小さいサイズでは"
+"作成できません。EFI システムパーティションを大きくしてください。"
 
 #. Type: boolean
 #. Description
@@ -3984,6 +3979,11 @@ msgid ""
 "might be difficult to reboot the machine into any BIOS-mode operating "
 "systems later."
 msgstr ""
+"このマシンのファームウェアは UEFI モードでインストーラが開始されました、しか"
+"し \"BIOS 互換モード\" を使ってインストールされたオペレーティングシステムが存"
+"在しているように見えます。もし UEFI モードで Debian のインストールを続けるの"
+"であれば、後で BIOS モードのオペレーティングシステムを再起動するのは難しいか"
+"もしれません。"
 
 #. Type: boolean
 #. Description
@@ -3995,6 +3995,10 @@ msgid ""
 "If you wish to keep the option to boot an existing operating system, you "
 "should choose NOT to force UEFI installation here."
 msgstr ""
+"もし UEFI モードでインストールをしたいかつ既存のシステムを起動する機能がなく"
+"なってもよいのであれば、ここでそれを強制する選択ができます。もし既存のオペ"
+"レーティングシステムを起動する選択を維持したいのであれば、ここで UEFI のイン"
+"ストールを強制しないことを選択すべきです。"
 
 #. Type: boolean
 #. Description
@@ -4007,16 +4011,12 @@ msgstr "NTP を使って時刻を設定しますか?"
 #. Description
 #. :sl2:
 #: ../clock-setup.templates:5001
-#, fuzzy
-#| msgid ""
-#| "The Network Time Protocol (NTP) can be used to set the system's clock. "
-#| "The installation process works best with a correctly set clock."
 msgid ""
 "The Network Time Protocol (NTP) can be used to set the system's clock. Your "
 "system works best with a correctly set clock."
 msgstr ""
 "Network Time Protocol (NTP) を、システムの時刻を設定するのに使えます。時刻を"
-"正しく設定することで、インストールプロセスは安全に動作します。"
+"正しく設定することで、あなたのシステムは安全に動作します。"
 
 #. Type: string
 #. Description
@@ -4883,10 +4883,12 @@ msgid ""
 "   the vast majority of cases."
 msgstr ""
 "提示したい質問の最低の優先度を選択できます:\n"
-" - '重要' は、ユーザの介在なしにはおそらくシステムが立ち行かない項目です。\n"
-" - '高' は、妥当なデフォルトのない項目です。\n"
-" - '中' は、妥当なデフォルトを持つ通常の項目です。\n"
-" - '低' は、大多数の場面では稼働するデフォルトを持つ些細な項目です。"
+" - '重要' は、ユーザの介在なしには、おそらくシステムが\n"
+"    立ち行かない項目です。\n"
+" - '高' は、妥当なデフォルト値のない項目です。\n"
+" - '中' は、妥当なデフォルト値を持つ通常の項目です。\n"
+" - '低' は、大多数の場面では稼働するデフォルト値を持つ\n"
+"    些細な項目です。"
 
 #. Type: select
 #. Description
@@ -4998,13 +5000,6 @@ msgstr "ブートローダをインストールするデバイス:"
 #. Description
 #. :sl2:
 #: ../grub-installer.templates:7001 ../grub-installer.templates:8002
-#, fuzzy
-#| msgid ""
-#| "You need to make the newly installed system bootable, by installing the "
-#| "GRUB boot loader on a bootable device. The usual way to do this is to "
-#| "install GRUB on the master boot record of your first hard drive. If you "
-#| "prefer, you can install GRUB elsewhere on the drive, or to another drive, "
-#| "or even to a floppy."
 msgid ""
 "You need to make the newly installed system bootable, by installing the GRUB "
 "boot loader on a bootable device. The usual way to do this is to install "
@@ -5012,27 +5007,15 @@ msgid ""
 "install GRUB to a different drive (or partition), or to removable media."
 msgstr ""
 "GRUB ブートローダを起動可能デバイスにインストールして、新しくインストールされ"
-"たシステムを起動可能にするときがきました。通常のやり方は、GRUB をあなたの 1 "
-"番目のハードドライブのマスターブートレコードにインストールするというもので"
-"す。望むなら、GRUB をドライブの別の場所や別のドライブ、あるいはフロッピーにイ"
-"ンストールすることもできます。"
+"たシステムを起動可能にするときがきました。通常のやり方は、GRUB をプライマリド"
+"ライブにインストールするというものです (UEFI パーティション/ブートレコード)。"
+"代わりに GRUB を別のドライブ (またはパーティション)、あるいはリムーバブルメ"
+"ディアにインストールすることができます。"
 
 #. Type: string
 #. Description
 #. :sl2:
 #: ../grub-installer.templates:7001
-#, fuzzy
-#| msgid ""
-#| "The device should be specified as a device in /dev. Below are some "
-#| "examples:\n"
-#| " - \"/dev/sda\" will install GRUB to the master boot record of your "
-#| "first\n"
-#| "   hard drive;\n"
-#| " - \"/dev/sda2\" will use the second partition of your first hard drive;\n"
-#| " - \"/dev/sdc5\" will use the first extended partition of your third "
-#| "hard\n"
-#| "   drive;\n"
-#| " - \"/dev/fd0\" will install GRUB to a floppy."
 msgid ""
 "The device notation should be specified as a device in /dev. Below are some "
 "examples:\n"
@@ -5044,13 +5027,14 @@ msgid ""
 "   be a thumbdrive);\n"
 " - \"/dev/fd0\" will install GRUB to a floppy."
 msgstr ""
-"デバイスは、/dev のデバイスとして指定します。例を以下に示します:\n"
-" - \"/dev/sda\" は GRUB を 1 番目のハードドライブのマスターブートレコードにイ"
-"ンストールします。\n"
-" - \"/dev/sda2\" は 1 番目のハードドライブの 2 番目のパーティションを使いま"
-"す。\n"
-" - \"/dev/sdc5\" は 3 番目のハードドライブの最初の拡張パーティションを使いま"
-"す。\n"
+"デバイス記法は、/dev 以下のデバイスとして指定してください。例を以下に示しま"
+"す:\n"
+" - \"/dev/sda\" は GRUB を プライマリドライブ (UEFIパーティション/ブートレ"
+"コード) に\n"
+"   インストールします。\n"
+" - \"/dev/sdb\" は GRUB を セカンダリドライブ (例えばUSBフラッシュメモリな"
+"ど) に\n"
+"   インストールします。\n"
 " - \"/dev/fd0\" は GRUB をフロッピーにインストールします。"
 
 #. Type: password
@@ -5360,4 +5344,4 @@ msgstr ""
 #. :sl2:
 #: ../cdrom-checker.templates:12001
 msgid "Check the integrity of installation media"
-msgstr "インストールメディアの完全性も確認しますか?"
+msgstr "インストールメディアの完全性を確認"
