@@ -217,8 +217,6 @@ print $changelogs $header;
 
 my $ua = LWP::UserAgent->new();
 foreach my $source (sort keys %sources) {
-    next if $source eq 'kfreebsd-10';
-
   print Dumper($sources{$source});
 
   if (not exists $sources{$source}{max}) {
@@ -322,7 +320,6 @@ if (! -f $template_filename) {
 foreach my $source (sort keys %sources) {
   # Skip error'd packages:
   next if $source eq '__error__';
-  next if $source eq 'kfreebsd-10';
 
   if (not exists $sources{$source}{max}) {
       print "$source vanished\n";
