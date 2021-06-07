@@ -36,8 +36,10 @@ sub get_sources {
 	print "E: use psql service=projectb on respighi to get the most recent list of udebs\n";
 	exit 1;
     }
-    my @udebs = map { chomp; $_ } read_file($udeb_list);
-    #print "udebs:", @udebs, "\n";
+
+    # Drop all whitespaces:
+    my @udebs = map { my $a = $_; $a =~ s/\s*//g; $a } read_file($udeb_list);
+
     my ($p, $v, $s);
     my $sources_file = $path;
     my $buf_out = '';
