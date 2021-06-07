@@ -178,30 +178,6 @@ if ($old_linux_abi and $new_linux_abi) {
 
 =cut
 
-=head
-
-# Same thing for freebsd kernels, assuming no d-i uploader will upload
-# from !linux:
-if ($old_freebsd_abi and $new_freebsd_abi) {
-    # @renamed isn't actually used later, but keeping it around
-    # doesn't hurt. Can be useful for later debugging.
-    my @renamed;
-    my @maybe_renamed = @removed;
-    foreach my $p (@maybe_renamed) {
-        if ($p =~ /-${old_freebsd_abi}-/) {
-            my $rp = $p;
-            $rp =~ s/-${old_freebsd_abi}-/-${new_freebsd_abi}-/;
-            if (grep { $_ eq $rp } @added) {
-                @removed = grep { $_ ne $p } @removed;
-                @added = grep { $_ ne $rp } @added;
-                push @renamed, "$p → $rp (freebsd)";
-            }
-        }
-    }
-}
-
-=cut
-
 
 ### Display modified, then removed, then added packages:
 print $report $vtb->render, "\n\n";
