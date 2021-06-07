@@ -86,13 +86,13 @@ chdir $workdir;
     if ! -f "${ts2}_Sources.gz";
 
 if (! -f "${ts1}_udebs.db") {
-    my ($x_ref, $y_ref) = get_sources "${ts1}_Sources.gz", 'udebs';
+    my ($x_ref, $y_ref) = get_sources "${ts1}_Sources.gz", '../udebs';
     my @a = @{$x_ref};
     store \@a, "${ts1}_udebs.db";
 }
 # XXX: storing sources only once
 if (! -f "${ts2}_udebs.db") {
-    my ($x_ref, $y_ref) = get_sources "${ts2}_Sources.gz", 'udebs';
+    my ($x_ref, $y_ref) = get_sources "${ts2}_Sources.gz", '../udebs';
     my @b = @{$x_ref};
     my %sources = %{$y_ref};
     store \@b, "${ts2}_udebs.db";
