@@ -145,38 +145,6 @@ foreach my $package (sort keys %versions) {
   }
 }
 
-=head
-
-# Try and detect renamed packages, based on a linux ABI bump:
-if ($old_linux_abi and $new_linux_abi) {
-    # @renamed isn't actually used later, but keeping it around
-    # doesn't hurt. Can be useful for later debugging.
-    my @renamed;
-    my @maybe_renamed = @removed;
-    foreach my $p (@maybe_renamed) {
-        if ($p =~ /-${old_linux_abi}-/) {
-            my $rp = $p;
-            $rp =~ s/-${old_linux_abi}-/-${new_linux_abi}-/;
-            if (grep { $_ eq $rp } @added) {
-                @removed = grep { $_ ne $p } @removed;
-                @added = grep { $_ ne $rp } @added;
-                push @renamed, "$p → $rp (linux)";
-            }
-        }
-    }
-
-    # Additionally, if archs for the maintainer uploads were
-    # different, massage a bit more:
-    if ($old_linux_arch and $new_linux_arch) {
-        @removed = grep { $_ !~ /-${old_linux_abi}-${old_linux_arch}-/ } @removed;
-        @removed = grep { $_ !~ /-${old_linux_abi}-${new_linux_arch}-/ } @removed;
-        @added   = grep { $_ !~ /-${new_linux_abi}-${new_linux_arch}-/ } @added;
-        @added   = grep { $_ !~ /-${new_linux_abi}-${old_linux_arch}-/ } @added;
-    }
-}
-
-=cut
-
 
 ### Display modified, then removed, then added packages:
 
