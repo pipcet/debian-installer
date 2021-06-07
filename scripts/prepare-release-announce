@@ -23,8 +23,6 @@ use Text::TabularDisplay;
 my $workdir = 'release-announce.tmp';
 my $report_filename = 'report.txt';
 my $changelogs_filename = 'changelogs.html';
-open my $report, '>', $report_filename
-    or die "Unable to write to $report_filename";
 my $mirror = 'http://ftp.fr.debian.org/debian';
 
 
@@ -181,6 +179,10 @@ if ($old_linux_abi and $new_linux_abi) {
 
 
 ### Display modified, then removed, then added packages:
+
+open my $report, '>', $report_filename
+    or die "Unable to write to $report_filename";
+
 print $report $vtb->render, "\n\n";
 
 my $removed_tb = Text::TabularDisplay->new("Removed package", "Version");
@@ -252,7 +254,7 @@ EOF
   # Skip error'd packages:
   next if $source eq '__error__';
 
-  my $source_filename = "$workdir/$source.txt";
+  my $source_filename = "$source.txt";
   if (not -f $source_filename) {
     # FIXME: This is assuming everything comes from main:
     my $location;
@@ -305,7 +307,7 @@ print $changelogs "</table>\n";
 
 
 ### Extract template:
-my $template_filename = "$workdir/default.tmpl";
+my $template_filename = "default.tmpl";
 if (! -f $template_filename) {
     open my $template, '>', $template_filename
         or die "Unable to write to $template_filename";
@@ -331,7 +333,7 @@ foreach my $source (sort keys %sources) {
       next;
   }
 
-  my $source_filename = "$workdir/$source.txt";
+  my $source_filename = "$source.txt";
   my $chglog = Parse::DebianChangelog->init( { infile => $source_filename } );
   # "since foo to bar" means "foo is excluded, bar is included":
   my $changes = $chglog->html_str( { since => $sources{$source}{min},
