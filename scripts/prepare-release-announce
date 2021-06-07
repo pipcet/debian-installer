@@ -16,7 +16,7 @@ use File::Slurp;
 use IO::Uncompress::Gunzip qw(gunzip $GunzipError);
 use Storable;
 
-### Carried over
+# XXX: this requires a Debian (<= 10) environment for now
 use Parse::DebianChangelog;
 use LWP::UserAgent;
 use Text::TabularDisplay;
@@ -26,7 +26,6 @@ my $changelogs_filename = 'changelogs.html';
 open my $report, '>', $report_filename
     or die "Unable to write to $report_filename";
 my $mirror = 'http://ftp.fr.debian.org/debian';
-###
 
 
 sub get_sources {
