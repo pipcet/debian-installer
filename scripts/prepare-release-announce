@@ -1,201 +1,134 @@
-#!/usr/bin/perl -w
-# © 2012 Cyril Brulebois <kibi@debian.org>
+#!/usr/bin/perl
+# © 2012-2021 Cyril Brulebois <kibi@debian.org>
 #
-# Take two debian-installer versions as parameters, get the build logs
-# on all relevant architectures, and compare the packages. From there,
-# display removed/added packages, as well as updated packages.
-#
-# Examples:
-#
-#   ./prepare-release-announce         \
-#     --old-linux-abi 3.2.0-2          \
-#     --new-linux-abi 3.2.0-3          \
-#     --old-linux-arch '(486|686-pae)' \
-#     --new-linux-arch 'amd64'         \
-#     20120508 20120712
-#
-#   ./prepare-release-announce         \
-#     --ignore-logs=20120930+b1/amd64  \
-#     20120828 20120930+b1
+# Help the release manager prepare a release announcement for the
+# Debian Installer. Compare the state of the Debian archive between
+# old and new debian-installer uploads (and debian-cd builds), and
+# extract interesting changelog entries, to be massaged into a
+# possibly comprehensive release announcement.
 
 use strict;
-use File::Temp qw(tempdir);
-use Text::TabularDisplay;
-use Dpkg::Version;
-use Getopt::Long;
-use Storable;
-use File::Path qw(make_path);
-use LWP::UserAgent;
-use Parse::DebianChangelog;
-use JSON;
+use warnings;
 
-### Parameter handling:
+use Data::Dumper;
+use Dpkg::Control;
+use File::Slurp;
+use IO::Uncompress::Gunzip qw(gunzip $GunzipError);
+use Storable;
+
+# XXX: this requires a Debian (<= 10) environment for now
+use Parse::DebianChangelog;
+use LWP::UserAgent;
+use Text::TabularDisplay;
 my $workdir = 'release-announce.tmp';
 my $report_filename = 'report.txt';
 my $changelogs_filename = 'changelogs.html';
-my $old_freebsd_abi;
-my $new_freebsd_abi;
-my $old_linux_abi;
-my $new_linux_abi;
-my $old_linux_arch;
-my $new_linux_arch;
-my $ignore_logs;
-my $mirror;
+my $mirror = 'http://ftp.fr.debian.org/debian';
 
-GetOptions(
-    'workdir=s'        => \$workdir,
-    'old-freebsd-abi=s'=> \$old_freebsd_abi,
-    'new-freebsd-abi=s'=> \$new_freebsd_abi,
-    'old-linux-abi=s'  => \$old_linux_abi,
-    'new-linux-abi=s'  => \$new_linux_abi,
-    'old-linux-arch=s' => \$old_linux_arch,
-    'new-linux-arch=s' => \$new_linux_arch,
-    'report=s'         => \$report_filename,
-    'changelogs=s'     => \$changelogs_filename,
-    'ignore-logs=s'    => \$ignore_logs,
-    'mirror=s'         => \$mirror,
+
+sub get_sources {
+    my $path = shift;
+    my $udeb_list = shift;
+    my @results;
+    my %sources;
+
+    if (! -f $udeb_list) {
+        # The following command (cargo-culted for years) seems to do
+        # the trick:
+        #
+        #     psql service=projectb -t -c "SELECT DISTINCT src.source FROM binaries AS b LEFT JOIN source AS src ON b.source=src.id LEFT JOIN bin_associations AS ba ON b.id=ba.bin LEFT JOIN suite AS s ON ba.suite=s.id WHERE type='udeb' AND s.suite_name IN ('testing','unstable');" > udebs
+        print "E: use psql service=projectb on respighi to get the most recent list of udebs (see comments)\n";
+        exit 1;
+    }
+
+    # Drop all whitespaces:
+    my @udebs = map { my $a = $_; $a =~ s/\s*//g; $a } read_file($udeb_list);
+
+    my ($p, $v, $s);
+    my $sources_file = $path;
+    my $buf_out = '';
+    open my $buf_fh, '+<', \$buf_out or die $!;
+    my $status = gunzip $sources_file => \$buf_out
+        or die "gunzip failed: $GunzipError";
+    while (not $buf_fh->eof()) {
+        my $c = Dpkg::Control->new( type => CTRL_INDEX_SRC );
+        my $item = $c->parse($buf_fh, $sources_file);
+        my ($p, $v, $eso) = ($c->{Package}, $c->{Version}, $c->{'Extra-Source-Only'});
+        next
+            if $eso;
+        if (grep { $p eq $_ } @udebs) {
+            push @results, "$p/$v";
+            $sources{$p}{binaries} = [sort split /, /, $c->{Binary}];
+        }
+    }
+    return (\@results, \%sources);
+}
+
+# Remember those triplets as that information can be reused in other
+# contexts:
+my @VERSIONS = (
+  # Snapshot TS        D-I vers.   D-I release name
+  ['20190411T084713Z', '20190410', 'Buster RC 1'     ],
+  ['20190624T091546Z', '20190623', 'Buster RC 2'     ],
+  ['20190702T085226Z', '20190702', 'Buster RC 3'     ],
+  ['20191130T031031Z', '20191129', 'Bullseye Alpha 1'],
+  ['20200315T090339Z', '20200314', 'Bullseye Alpha 2'],
+  ['20201203T092240Z', '20201202', 'Bullseye Alpha 3'],
+  ['20210415T151642Z', '20210415', 'Bullseye RC 1'   ],
 );
 
-my ($old, $new) = @ARGV;
+# Compare the last two:
+my $ts1 = $VERSIONS[-2]->[0];
+my $ts2 = $VERSIONS[-1]->[0];
 
-die "Usage: $0 [options] old-release-date new-release-date\n"
-    if not $old or not $new;
+mkdir $workdir;
+chdir $workdir;
 
-die "old-release-date ($old) should be less than new-release-date ($new)"
-    if $old ge $new;
+`wget http://snapshot.debian.org/archive/debian/${ts1}/dists/bullseye/main/source/Sources.gz -O ${ts1}_Sources.gz`
+    if ! -f "${ts1}_Sources.gz";
+`wget http://snapshot.debian.org/archive/debian/${ts2}/dists/bullseye/main/source/Sources.gz -O ${ts2}_Sources.gz`
+    if ! -f "${ts2}_Sources.gz";
 
-
-### Prepare working directory:
-print STDERR "DEBUG: working directory: $workdir\n";
-if (! -d $workdir) {
-    make_path($workdir)
-        or die "Unable to create working directory: $!";
+if (! -f "${ts1}_udebs.db") {
+    my ($x_ref, $y_ref) = get_sources "${ts1}_Sources.gz", '../udebs';
+    my @a = @{$x_ref};
+    store \@a, "${ts1}_udebs.db";
+}
+# XXX: storing sources only once
+if (! -f "${ts2}_udebs.db") {
+    my ($x_ref, $y_ref) = get_sources "${ts2}_Sources.gz", '../udebs';
+    my @b = @{$x_ref};
+    my %sources = %{$y_ref};
+    store \@b, "${ts2}_udebs.db";
+    store \%sources, "sources.db";
 }
 
-open my $report, '>', $report_filename
-    or die "Unable to write to $report_filename";
+### Compatibility layer
 
-
-### Determine release architectures:
-sub get_release_archs {
-    my $ua = LWP::UserAgent->new;
-    my $response = $ua->get('https://api.ftp-master.debian.org/suite/testing');
-    die $response->status_line
-        if not $response->is_success;
-    my $json = JSON->new;
-    my $data = $json->decode( $response->decoded_content );
-    return grep { $_ ne 'all' and $_ ne 'source' } @{ $data->{architectures} };
-}
-
-my @ra = get_release_archs;
-print STDERR "DEBUG: release architectures: @ra\n";
-
-
-### Download build logs:
-my $download_stamp = "$workdir/all-downloaded";
-my $source = 'debian-installer';
-my $status;
-my @archs;
-my $status_dump = "$workdir/.status";
-my $archs_dump = "$workdir/.archs";
-if ((! -f $status_dump) or (! -f $archs_dump)) {
-    # Only download logs if needed:
-    print STDERR "DEBUG: downloading logs\n";
-    for my $v ($old, $new) {
-        for my $a (@ra) {
-            # Skip source…
-            next if $a eq 'source';
-
-            # Skip unwanted logs. Typical use case: when a binNMU happens
-            # for the uploader's architecture.
-            next if $ignore_logs && index($ignore_logs, "$v/$a") != -1;
-
-            # Plus signs want to be escaped for getbuildlog:
-            (my $version = "'$v'") =~ s/[+]/\\+/g;
-            print STDERR "DEBUG: downloading log: $source $version $a\n";
-            # One can't use the return code for now (#681779). Also,
-            # multiple logs = FAIL (#683231).
-            `cd $workdir && getbuildlog $source $version $a >/dev/null 2>&1`;
-            my $filename = "$workdir/${source}_${v}_${a}.log";
-            $status->{$v}->{$a} = (-f $filename ? "$filename" : undef);
-            push @archs, $a;
-        }
-    }
-    # Remember for later use:
-    store $status, $status_dump;
-    store \@archs, $archs_dump;
-}
-else {
-    # Reload status/archs:
-    print STDERR "DEBUG: reloading cached data\n";
-    $status = retrieve($status_dump);
-    @archs = @{retrieve($archs_dump)};
-}
-
-# Uniquify:
-my %seen = ();
-@archs = grep { ! $seen{$_}++ } @archs;
-
-# Avoid long arch names:
-s/^kfreebsd-/kf-/ for (@archs);
-s/^powerpc/ppc/   for (@archs);
-
-# Build table for information only:
-my $tb = Text::TabularDisplay->new('', @archs);
-
-# Package versions:
 my %versions;
-for my $v (sort keys %{$status}) {
-    my @tb_line = ("$v");
-    for my $a (sort keys %{$status->{$v}}) {
-        push @tb_line, ($status->{$v}->{$a} ? '********' : ' no log ');
-        if ($status->{$v}->{$a}) {
-            open my $log, '<', $status->{$v}->{$a}
-                or die "Unable to open log file $status->{$v}->{$a}";
-            while (my $line = <$log>) {
-                next if $line !~ /^Get:/;
-                next if $line =~ /\b(?:InRelease|Sources|Packages|TranslationIndex|Release\.gpg|Release)\b/;
-                next if $line =~ /\(dsc|tar\)/;
-                next if $line =~ /\.pdiff\b/;
-                next if $line =~ /\bTranslation-/;
+my @a = @{ retrieve "${ts1}_udebs.db" };
+my @b = @{ retrieve "${ts2}_udebs.db" };
+my %sources = %{ retrieve "sources.db" };
 
-                my ($package, $arch, $version);
-                if ($line =~ /(\S+)\s+(\S+)\s+(\S+)\s+\[.*?\]$/) {
-                    ($package, $arch, $version) = ($1, $2, $3);
-                }
-                else {
-                    die "oops, unable to parse $line";
-                }
-
-                # Make sure to include linux's changelog:
-                $package = 'linux'
-                    if $package =~ /^kernel-image-/;
-
-                # FIXME: Decide whether not caring about binNMUs is ok:
-                $version =~ s/\+b\d+$//;
-
-                #print "$package $arch $version detected\n";
-                my $which = $v eq $old ? 'old' : 'new';
-                if (not defined $versions{$package}{$which}) {
-                    $versions{$package}{$which} = $version;
-                }
-                elsif ($versions{$package}{$which} ne $version) {
-                    $versions{$package}{$which} = $version
-                        if $which eq 'old' && version_compare($versions{$package}{$which}, $version) >= 0;
-                    $versions{$package}{$which} = $version
-                        if $which eq 'new' && version_compare($versions{$package}{$which}, $version) <= 0;
-                }
-            }
-
-            close $log
-                or die "Unable to close log file $status->{$v}->{$a}";
-        }
-    }
-    $tb->add( @tb_line );
+foreach my $pkg (@a) {
+    my ($source, $version) = $pkg =~ m{(.+)/(.+)};
+    print "(a) found $source :: $version\n";
+    $versions{$source}{old} = $version;
+    $sources{$source}{min} = $version;
+}
+foreach my $pkg (@b) {
+    my ($source, $version) = $pkg =~ m{(.+)/(.+)};
+    print "(b) found $source :: $version\n";
+    $versions{$source}{new} = $version;
+    $sources{$source}{max} = $version;
 }
 
-print $report $tb->render, "\n\n";
+print "Versions:\n", Dumper(\%versions);
+print "Sources:\n", Dumper(\%sources);
 
+
+
+### Start of the old script
 
 # Diff old/new to build updated/removed/added lists:
 my $vtb = Text::TabularDisplay->new('Updated package', 'Old version', 'New version');
@@ -218,56 +151,12 @@ foreach my $package (sort keys %versions) {
   }
 }
 
-# Try and detect renamed packages, based on a linux ABI bump:
-if ($old_linux_abi and $new_linux_abi) {
-    # @renamed isn't actually used later, but keeping it around
-    # doesn't hurt. Can be useful for later debugging.
-    my @renamed;
-    my @maybe_renamed = @removed;
-    foreach my $p (@maybe_renamed) {
-        if ($p =~ /-${old_linux_abi}-/) {
-            my $rp = $p;
-            $rp =~ s/-${old_linux_abi}-/-${new_linux_abi}-/;
-            if (grep { $_ eq $rp } @added) {
-                @removed = grep { $_ ne $p } @removed;
-                @added = grep { $_ ne $rp } @added;
-                push @renamed, "$p → $rp (linux)";
-            }
-        }
-    }
-
-    # Additionally, if archs for the maintainer uploads were
-    # different, massage a bit more:
-    if ($old_linux_arch and $new_linux_arch) {
-        @removed = grep { $_ !~ /-${old_linux_abi}-${old_linux_arch}-/ } @removed;
-        @removed = grep { $_ !~ /-${old_linux_abi}-${new_linux_arch}-/ } @removed;
-        @added   = grep { $_ !~ /-${new_linux_abi}-${new_linux_arch}-/ } @added;
-        @added   = grep { $_ !~ /-${new_linux_abi}-${old_linux_arch}-/ } @added;
-    }
-}
-
-# Same thing for freebsd kernels, assuming no d-i uploader will upload
-# from !linux:
-if ($old_freebsd_abi and $new_freebsd_abi) {
-    # @renamed isn't actually used later, but keeping it around
-    # doesn't hurt. Can be useful for later debugging.
-    my @renamed;
-    my @maybe_renamed = @removed;
-    foreach my $p (@maybe_renamed) {
-        if ($p =~ /-${old_freebsd_abi}-/) {
-            my $rp = $p;
-            $rp =~ s/-${old_freebsd_abi}-/-${new_freebsd_abi}-/;
-            if (grep { $_ eq $rp } @added) {
-                @removed = grep { $_ ne $p } @removed;
-                @added = grep { $_ ne $rp } @added;
-                push @renamed, "$p → $rp (freebsd)";
-            }
-        }
-    }
-}
-
 
 ### Display modified, then removed, then added packages:
+
+open my $report, '>', $report_filename
+    or die "Unable to write to $report_filename";
+
 print $report $vtb->render, "\n\n";
 
 my $removed_tb = Text::TabularDisplay->new("Removed package", "Version");
@@ -279,40 +168,10 @@ foreach my $p (@added) {$added_tb->add($p, $versions{$p}{new});}
 print $report $added_tb->render, "\n\n";
 
 
-### Establish binary to source mapping:
-my $ua = LWP::UserAgent->new();
-my %sources;
-my $sources_dump = "$workdir/.sources";
-if (! -f $sources_dump) {
-    print STDERR "DEBUG: looking up sources from binaries\n";
-    foreach my $line (@modified) {
-        my ($package, $old, $new) = @{$line};
-        print STDERR "DEBUG: lookup: $package ($old to $new)\n";
-        my $ping = $ua->head("https://tracker.debian.org/pkg/$package");
-        if ($ping->is_success) {
-            my $source = $ping->request->uri;
-            $source =~ s{.*/(.*)$}{$1};
-            push @{$sources{$source}{binaries}}, "$package";
-            $sources{$source}{min} = $old
-                if not $sources{$source}{min} or
-                version_compare($sources{$source}{min}, $old) > 0;
-            $sources{$source}{max} = $new
-                if not $sources{$source}{max} or
-                version_compare($sources{$source}{max}, $new) < 0;
-        }
-        else {
-            push @{$sources{__error__}{binaries}}, "$package";
-        }
-    }
-    store \%sources, $sources_dump;
-}
-else {
-    print STDERR "DEBUG: reload binary to source mapping\n";
-    %sources = %{retrieve $sources_dump};
-}
+my $old = $ts1;
+my $new = $ts2;
 
-
-### Grab needed changelogs from packages.qa.d.o:
+### Grab needed changelogs from https://metadata.ftp-master.debian.org:
 open my $changelogs, '>', $changelogs_filename
     or die "Unable to write to $changelogs_filename";
 
@@ -333,14 +192,33 @@ my $header = << "EOF";
 EOF
 print $changelogs $header;
 
+my $ua = LWP::UserAgent->new();
 foreach my $source (sort keys %sources) {
+  print Dumper($sources{$source});
+
+  if (not exists $sources{$source}{max}) {
+    print "$source vanished\n";
+    next;
+  }
+
+  if ($sources{$source}{min} eq $sources{$source}{max}) {
+      print "$source didn't change, skipping\n";
+      next;
+  }
+
   my $name = $source ne '__error__' ? "<a href=\"#$source\">$source</a>" : "No source/changelog match";
 
-  my $binaries = "<li>" . join("</li><li>", @{$sources{$source}{binaries}}) . "</li>";
+  my $binaries = join(", ", @{$sources{$source}{binaries}});
+  # This list is awful and likely not very interesting anyway;
+  # linux-signed-* source packages might get the same treatment
+  # at some point:
+  $binaries = '[redacted, long list]'
+    if $source eq 'linux';
+
   my $entry = << "EOF";
   <tr>
-  <td>$name</td>
-  <td><ul>$binaries</ul></td>
+  <td style="white-space: nowrap">$name</td>
+  <td>$binaries</td>
   <td>$sources{$source}{min}</td>
   <td>$sources{$source}{max}</td>
   </tr>
@@ -350,7 +228,7 @@ EOF
   # Skip error'd packages:
   next if $source eq '__error__';
 
-  my $source_filename = "$workdir/$source.txt";
+  my $source_filename = "$source.txt";
   if (not -f $source_filename) {
     # FIXME: This is assuming everything comes from main:
     my $location;
@@ -366,12 +244,12 @@ EOF
     # The 'current' symlink seems to point to the highest version
     # available, meaning experimental in a bunch of cases, so use the
     # 'max' version for each package:
-    my $url = "http://metadata.ftp-master.debian.org/changelogs/main/$location/unstable_changelog";
+    my $url = "https://metadata.ftp-master.debian.org/changelogs/main/$location/unstable_changelog";
     my $response = $ua->get($url);
     if ($response->is_success) {
-      print STDERR "DEBUG: downloaded changelog: $source\n";
+      print STDERR "DEBUG: downloaded changelog: $source ($url)\n";
       open my $file, '>', $source_filename
-        or die "Unable to open $source_filename";
+          or die "Unable to open $source_filename";
       print $file $response->content;
       close $file
         or die "Unable to close $source_filename";
@@ -403,7 +281,7 @@ print $changelogs "</table>\n";
 
 
 ### Extract template:
-my $template_filename = "$workdir/default.tmpl";
+my $template_filename = "default.tmpl";
 if (! -f $template_filename) {
     open my $template, '>', $template_filename
         or die "Unable to write to $template_filename";
@@ -420,7 +298,16 @@ foreach my $source (sort keys %sources) {
   # Skip error'd packages:
   next if $source eq '__error__';
 
-  my $source_filename = "$workdir/$source.txt";
+  if (not exists $sources{$source}{max}) {
+      print "$source vanished\n";
+      next;
+  }
+  if ($sources{$source}{min} eq $sources{$source}{max}) {
+      print "$source didn't change, skipping\n";
+      next;
+  }
+
+  my $source_filename = "$source.txt";
   my $chglog = Parse::DebianChangelog->init( { infile => $source_filename } );
   # "since foo to bar" means "foo is excluded, bar is included":
   my $changes = $chglog->html_str( { since => $sources{$source}{min},
