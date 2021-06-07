@@ -60,14 +60,22 @@ sub get_sources {
     return (\@results, \%sources);
 }
 
-# my $ts0 = '20181206T232234Z'; # 2018120604 # previous release
-#my $ts1 = '20190410T205042Z'; # 2019041004 presubmably Buster RC 1
-#my $ts1 = '20190624T043600Z'; # d-i version 20190623 (Buster RC 2)
-#my $ts1 = '20190702T025819Z'; # d-i version 20190702 (Buster RC 3)
-#my $ts1 = '20191129T150627Z'; # d-i version 20191129 (Bullseye Alpha 1)
-#my $ts1 = '20200315T090339Z'; # d-i version 20200314 (Bullseye Alpha 2)
-my $ts1 = '20201203T092240Z'; # d-i version 20201202 (Bullseye Alpha 3)
-my $ts2 = '20210415T151642Z'; # d-i version 20210415 (Bullseye RC 1)
+# Remember those triplets as that information can be reused in other
+# contexts:
+my @VERSIONS = (
+  # Snapshot TS        D-I vers.   D-I release name
+  ['20190411T084713Z', '20190410', 'Buster RC 1'     ],
+  ['20190624T091546Z', '20190623', 'Buster RC 2'     ],
+  ['20190702T085226Z', '20190702', 'Buster RC 3'     ],
+  ['20191130T031031Z', '20191129', 'Bullseye Alpha 1'],
+  ['20200315T090339Z', '20200314', 'Bullseye Alpha 2'],
+  ['20201203T092240Z', '20201202', 'Bullseye Alpha 3'],
+  ['20210415T151642Z', '20210415', 'Bullseye RC 1'   ],
+);
+
+# Compare the last two:
+my $ts1 = $VERSIONS[-2]->[0];
+my $ts2 = $VERSIONS[-1]->[0];
 
 `wget http://snapshot.debian.org/archive/debian/${ts1}/dists/bullseye/main/source/Sources.gz -O ${ts1}_Sources.gz`
     if ! -f "${ts1}_Sources.gz";
