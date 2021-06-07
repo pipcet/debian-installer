@@ -234,6 +234,12 @@ foreach my $source (sort keys %sources) {
   my $name = $source ne '__error__' ? "<a href=\"#$source\">$source</a>" : "No source/changelog match";
 
   my $binaries = join(", ", @{$sources{$source}{binaries}});
+  # This list is awful and likely not very interesting anyway;
+  # linux-signed-* source packages might get the same treatment
+  # at some point:
+  $binaries = '[redacted, long list]'
+    if $source eq 'linux';
+
   my $entry = << "EOF";
   <tr>
   <td style="white-space: nowrap">$name</td>
