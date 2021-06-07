@@ -165,7 +165,7 @@ print $report $added_tb->render, "\n\n";
 my $old = $ts1;
 my $new = $ts2;
 
-### Grab needed changelogs from packages.qa.d.o:
+### Grab needed changelogs from https://metadata.ftp-master.debian.org:
 open my $changelogs, '>', $changelogs_filename
     or die "Unable to write to $changelogs_filename";
 
@@ -238,7 +238,7 @@ EOF
     # The 'current' symlink seems to point to the highest version
     # available, meaning experimental in a bunch of cases, so use the
     # 'max' version for each package:
-    my $url = "http://metadata.ftp-master.debian.org/changelogs/main/$location/unstable_changelog";
+    my $url = "https://metadata.ftp-master.debian.org/changelogs/main/$location/unstable_changelog";
     my $response = $ua->get($url);
     if ($response->is_success) {
       print STDERR "DEBUG: downloaded changelog: $source ($url)\n";
