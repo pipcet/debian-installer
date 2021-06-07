@@ -33,8 +33,12 @@ sub get_sources {
     my %sources;
 
     if (! -f $udeb_list) {
-	print "E: use psql service=projectb on respighi to get the most recent list of udebs\n";
-	exit 1;
+        # The following command (cargo-culted for years) seems to do
+        # the trick:
+        #
+        #     psql service=projectb -t -c "SELECT DISTINCT src.source FROM binaries AS b LEFT JOIN source AS src ON b.source=src.id LEFT JOIN bin_associations AS ba ON b.id=ba.bin LEFT JOIN suite AS s ON ba.suite=s.id WHERE type='udeb' AND s.suite_name IN ('testing','unstable');" > udebs
+        print "E: use psql service=projectb on respighi to get the most recent list of udebs (see comments)\n";
+        exit 1;
     }
 
     # Drop all whitespaces:
