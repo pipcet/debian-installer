@@ -77,6 +77,9 @@ my @VERSIONS = (
 my $ts1 = $VERSIONS[-2]->[0];
 my $ts2 = $VERSIONS[-1]->[0];
 
+mkdir $workdir;
+chdir $workdir;
+
 `wget http://snapshot.debian.org/archive/debian/${ts1}/dists/bullseye/main/source/Sources.gz -O ${ts1}_Sources.gz`
     if ! -f "${ts1}_Sources.gz";
 `wget http://snapshot.debian.org/archive/debian/${ts2}/dists/bullseye/main/source/Sources.gz -O ${ts2}_Sources.gz`
@@ -95,8 +98,6 @@ if (! -f "${ts2}_udebs.db") {
     store \@b, "${ts2}_udebs.db";
     store \%sources, "sources.db";
 }
-
-mkdir $workdir;
 
 ### Compatibility layer
 
