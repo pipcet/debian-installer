@@ -350,7 +350,8 @@ if is_updated en || [ ! -d "$source/integrated/en" ] || global_build_options_cha
     cd $source/build
     PRESEED="../en/appendix/preseed.xml"
     if [ -f $PRESEED ] && [ -x preseed.pl ]; then
-        ./preseed.pl -r $manual_release $PRESEED >$destination/example-preseed.txt
+        echo '#_preseed_V1' >$destination/example-preseed.txt
+        ./preseed.pl -r $manual_release $PRESEED >>$destination/example-preseed.txt
         echo "Extracting example-preseed.txt for $manual_release from installation-guide" >>$mainlog
         echo >>$mainlog
     fi
