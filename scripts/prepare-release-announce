@@ -205,7 +205,8 @@ foreach my $source (sort keys %sources) {
       next;
   }
 
-  my $name = $source ne '__error__' ? "<a href=\"#$source\">$source</a>" : "No source/changelog match";
+  my $href = ($source =~ /^linux-signed-/) ? 'linux' : $source;
+  my $name = $source ne '__error__' ? "<a href=\"#$href\">$source</a>" : "No source/changelog match";
 
   my $binaries = join(", ", @{$sources{$source}{binaries}});
   # This list is awful and likely not very interesting anyway:
