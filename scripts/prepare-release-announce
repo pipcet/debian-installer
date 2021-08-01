@@ -314,7 +314,7 @@ foreach my $source (sort keys %sources) {
   # between source packages; uploads to experimental getting in the
   # way and shadowing unstable's changelogs; maybe others. Warn in
   # those cases.
-  print $changelogs "<h2 name=\"$source\">Changes for $source ($sources{$source}{min} → $sources{$source}{max})</h2>\n";
+  print $changelogs "<h2><a name=\"$source\">Changes for $source ($sources{$source}{min} → $sources{$source}{max})</a></h2>\n";
   if (@$selection) {
     print $changelogs "<hr>\n";
     foreach my $entry (@${selection}) {
@@ -336,6 +336,10 @@ foreach my $source (sort keys %sources) {
         }
 
         $line =~ s{#(\d{6,7})}{<a href="https://bugs.debian.org/$1">#$1</a>}g;
+        if ($line =~ /^ -- /) {
+          $line =~ s{<}{&lt;};
+          $line =~ s{>}{&gt;};
+        }
 
         $line = '&nbsp;' if $line eq '';
         print $changelogs ("<pre style=\"opacity: $opacity%\" class=\"$class\">$line</pre>\n");
