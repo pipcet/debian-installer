@@ -283,19 +283,6 @@ EOF
 print $changelogs "</table>\n";
 
 
-### Extract template:
-my $template_filename = "default.tmpl";
-if (! -f $template_filename) {
-    open my $template, '>', $template_filename
-        or die "Unable to write to $template_filename";
-    print $template $_ while (<DATA>);
-    close $template
-        or die "Unable to close $template_filename";
-    close DATA
-        or die "Unable to close DATA";
-}
-
-
 ### Detect wanted changelogs excerpts:
 foreach my $source (sort keys %sources) {
   # Skip error'd packages and signed packages for linux:
