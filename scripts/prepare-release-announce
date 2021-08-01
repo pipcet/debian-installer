@@ -324,7 +324,19 @@ foreach my $source (sort keys %sources) {
   if (@$selection) {
     print $changelogs "<hr>\n";
     foreach my $entry (@${selection}) {
-      print $changelogs ('<pre>' . $entry . '</pre>' . "\n");
+      foreach my $line (split /\n/, $entry) {
+        my $opacity = 100;
+        if ($line =~ /^\S/ or $line =~ /^\ -- /) {
+          $opacity = 50;
+        }
+        elsif ($line =~ /Team [Uu]pload|Updated translations/) {
+          $opacity = 50;
+        }
+        elsif ($line =~ /^  [*] .* \(.*\.po\) by/) {
+          $opacity = 50;
+        }
+        print $changelogs ("<pre style=\"opacity: $opacity%\">$line</pre>\n");
+      }
     }
   }
   else {
