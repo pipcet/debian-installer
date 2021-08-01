@@ -181,6 +181,13 @@ my $header = << "EOF";
         PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
          "http://www.w3.org/TR/html4/loose.dtd">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+  <style>
+pre { margin: 0; }
+  </style>
+</head
+
+<body>
 <h1>Changelogs which might be relevant between $old and $new</h1>
 
 <table border="1" style="border-collapse: collapse; border: 1px solid;">
@@ -335,8 +342,10 @@ foreach my $source (sort keys %sources) {
         elsif ($line =~ /^  [*] .* \(.*\.po\) by/) {
           $opacity = 50;
         }
+        $line = '&nbsp;' if $line eq '';
         print $changelogs ("<pre style=\"opacity: $opacity%\">$line</pre>\n");
       }
+      print $changelogs "<br>\n";
     }
   }
   else {
@@ -345,7 +354,7 @@ foreach my $source (sort keys %sources) {
 
 }
 
-print $changelogs "</html>\n";
+print $changelogs "</body></html>\n";
 
 close $changelogs
     or die "Unable to close $changelogs_filename";
