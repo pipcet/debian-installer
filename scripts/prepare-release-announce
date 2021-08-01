@@ -79,8 +79,8 @@ my @VERSIONS = (
 );
 
 # Compare the last two:
-my $ts1 = $VERSIONS[-2]->[0];
-my $ts2 = $VERSIONS[-1]->[0];
+my ($ts1, $old_di, $old) = @{$VERSIONS[-2]};
+my ($ts2, $new_di, $new) = @{$VERSIONS[-1]};
 
 mkdir $workdir;
 chdir $workdir;
@@ -168,10 +168,6 @@ my $added_tb = Text::TabularDisplay->new("Added package", "Version");
 foreach my $p (@added) {$added_tb->add($p, $versions{$p}{new});}
 print $report $added_tb->render, "\n\n";
 
-
-my $old = $ts1;
-my $new = $ts2;
-
 ### Grab needed changelogs from https://metadata.ftp-master.debian.org:
 open my $changelogs, '>', $changelogs_filename
     or die "Unable to write to $changelogs_filename";
@@ -190,7 +186,7 @@ pre { margin: 0; }
 </head
 
 <body>
-<h1>Changelogs which might be relevant between $old and $new</h1>
+<h1>Changelogs between $old ($old_di) and $new ($new_di)</h1>
 
 <table border="1" style="border-collapse: collapse; border: 1px solid;">
 <tr>
@@ -329,7 +325,7 @@ foreach my $source (sort keys %sources) {
   # between source packages; uploads to experimental getting in the
   # way and shadowing unstable's changelogs; maybe others. Warn in
   # those cases.
-  print $changelogs "<h1 name=\"$source\">Changes for $source (since $sources{$source}{min}, to $sources{$source}{max})</h1>\n";
+  print $changelogs "<h2 name=\"$source\">Changes for $source ($sources{$source}{min} → $sources{$source}{max})</h2>\n";
   if (@$selection) {
     print $changelogs "<hr>\n";
     foreach my $entry (@${selection}) {
