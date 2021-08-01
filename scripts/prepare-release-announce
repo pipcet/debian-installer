@@ -294,8 +294,9 @@ if (! -f $template_filename) {
 
 ### Detect wanted changelogs excerpts:
 foreach my $source (sort keys %sources) {
-  # Skip error'd packages:
+  # Skip error'd packages and signed packages for linux:
   next if $source eq '__error__';
+  next if $source =~ /^linux-signed-/;
 
   if (not exists $sources{$source}{max}) {
       print "$source vanished\n";
