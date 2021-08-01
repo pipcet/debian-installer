@@ -184,6 +184,8 @@ my $header = << "EOF";
 <head>
   <style>
 pre { margin: 0; }
+
+.important { font-weight: bold; color: magenta; }
   </style>
 </head
 
@@ -342,8 +344,14 @@ foreach my $source (sort keys %sources) {
         elsif ($line =~ /^  [*] .* \(.*\.po\) by/) {
           $opacity = 50;
         }
+
+        my $class = 'normal';
+        if ($line =~ /^  .*(udeb|installer|d-i)/i) {
+          $class = 'important';
+        }
+
         $line = '&nbsp;' if $line eq '';
-        print $changelogs ("<pre style=\"opacity: $opacity%\">$line</pre>\n");
+        print $changelogs ("<pre style=\"opacity: $opacity%\" class=\"$class\">$line</pre>\n");
       }
       print $changelogs "<br>\n";
     }
