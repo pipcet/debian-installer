@@ -208,11 +208,9 @@ foreach my $source (sort keys %sources) {
   my $name = $source ne '__error__' ? "<a href=\"#$source\">$source</a>" : "No source/changelog match";
 
   my $binaries = join(", ", @{$sources{$source}{binaries}});
-  # This list is awful and likely not very interesting anyway;
-  # linux-signed-* source packages might get the same treatment
-  # at some point:
+  # This list is awful and likely not very interesting anyway:
   $binaries = '[redacted, long list]'
-    if $source eq 'linux';
+    if $source eq 'linux' or $source =~ /^linux-signed-/;
 
   my $entry = << "EOF";
   <tr>
