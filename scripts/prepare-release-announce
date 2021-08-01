@@ -320,7 +320,7 @@ foreach my $source (sort keys %sources) {
   # between source packages; uploads to experimental getting in the
   # way and shadowing unstable's changelogs; maybe others. Warn in
   # those cases.
-  print $changelogs "<h1 name=\"$source\">Changes for $source (from $sources{$source}{min} to $sources{$source}{max})</h1>\n";
+  print $changelogs "<h1 name=\"$source\">Changes for $source (since $sources{$source}{min}, to $sources{$source}{max})</h1>\n";
   if (@$selection) {
     print $changelogs "<hr>\n";
     foreach my $entry (@${selection}) {
@@ -328,7 +328,7 @@ foreach my $source (sort keys %sources) {
     }
   }
   else {
-    print $changelogs ("<hr>\n" . "<b>warning:</b> no changelog available for $source (from $sources{$source}{min} to $sources{$source}{max})". "\n");
+    print $changelogs ("<hr>\n" . "<b>warning:</b> no changelog available for $source (since $sources{$source}{min}, to $sources{$source}{max})". "\n");
   }
 
 }
