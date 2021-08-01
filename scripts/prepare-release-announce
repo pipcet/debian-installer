@@ -196,8 +196,6 @@ print $changelogs $header;
 
 my $ua = LWP::UserAgent->new();
 foreach my $source (sort keys %sources) {
-  print Dumper($sources{$source});
-
   if (not exists $sources{$source}{max}) {
     print "$source vanished\n";
     next;
