@@ -17,6 +17,7 @@ use IO::Uncompress::Gunzip qw(gunzip $GunzipError);
 use Storable;
 
 use Dpkg::Changelog::Debian;
+use HTML::Escape qw/escape_html/;
 use LWP::UserAgent;
 use Text::TabularDisplay;
 my $workdir = 'release-announce.tmp';
@@ -335,11 +336,8 @@ foreach my $source (sort keys %sources) {
           $class = 'important';
         }
 
+        $line = escape_html($line);
         $line =~ s{#(\d{6,7})}{<a href="https://bugs.debian.org/$1">#$1</a>}g;
-        if ($line =~ /^ -- /) {
-          $line =~ s{<}{&lt;};
-          $line =~ s{>}{&gt;};
-        }
 
         $line = '&nbsp;' if $line eq '';
         print $changelogs ("<pre style=\"opacity: $opacity%\" class=\"$class\">$line</pre>\n");
