@@ -350,6 +350,8 @@ foreach my $source (sort keys %sources) {
           $class = 'important';
         }
 
+        $line =~ s{#(\d{6,7})}{<a href="https://bugs.debian.org/$1">#$1</a>}g;
+
         $line = '&nbsp;' if $line eq '';
         print $changelogs ("<pre style=\"opacity: $opacity%\" class=\"$class\">$line</pre>\n");
       }
