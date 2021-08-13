@@ -16,8 +16,8 @@ use File::Slurp;
 use IO::Uncompress::Gunzip qw(gunzip $GunzipError);
 use Storable;
 
-# XXX: this requires a Debian (<= 10) environment for now
-use Parse::DebianChangelog;
+use Dpkg::Changelog::Debian;
+use HTML::Escape qw/escape_html/;
 use LWP::UserAgent;
 use Text::TabularDisplay;
 my $workdir = 'release-announce.tmp';
@@ -76,11 +76,12 @@ my @VERSIONS = (
   ['20201203T092240Z', '20201202', 'Bullseye Alpha 3'],
   ['20210415T151642Z', '20210415', 'Bullseye RC 1'   ],
   ['20210607T150724Z', '20210606', 'Bullseye RC 2'   ],
+  ['20210731T143510Z', '20210731', 'Bullseye RC 3'   ],
 );
 
 # Compare the last two:
-my $ts1 = $VERSIONS[-2]->[0];
-my $ts2 = $VERSIONS[-1]->[0];
+my ($ts1, $old_di, $old) = @{$VERSIONS[-2]};
+my ($ts2, $new_di, $new) = @{$VERSIONS[-1]};
 
 mkdir $workdir;
 chdir $workdir;
@@ -168,10 +169,6 @@ my $added_tb = Text::TabularDisplay->new("Added package", "Version");
 foreach my $p (@added) {$added_tb->add($p, $versions{$p}{new});}
 print $report $added_tb->render, "\n\n";
 
-
-my $old = $ts1;
-my $new = $ts2;
-
 ### Grab needed changelogs from https://metadata.ftp-master.debian.org:
 open my $changelogs, '>', $changelogs_filename
     or die "Unable to write to $changelogs_filename";
@@ -180,10 +177,21 @@ my $header = << "EOF";
 <!DOCTYPE html
         PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
          "http://www.w3.org/TR/html4/loose.dtd">
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<h1>Changelogs which might be relevant between $old and $new</h1>
+<html>
+<head>
+  <title>Changelogs between $old ($old_di) and $new ($new_di)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <style>
+pre { margin: 0; }
 
-<table border="1" style="border-collapse: collapse; border: 1px solid;">
+.important { font-weight: bold; color: magenta; }
+  </style>
+</head>
+
+<body>
+<h1>Changelogs between $old ($old_di) and $new ($new_di)</h1>
+
+<table border="1" style="border-collapse: collapse; border: 1px solid;" summary="">
 <tr>
 <th>Source package</th>
 <th>Binary packages</th>
@@ -195,8 +203,6 @@ print $changelogs $header;
 
 my $ua = LWP::UserAgent->new();
 foreach my $source (sort keys %sources) {
-  print Dumper($sources{$source});
-
   if (not exists $sources{$source}{max}) {
     print "$source vanished\n";
     next;
@@ -207,14 +213,13 @@ foreach my $source (sort keys %sources) {
       next;
   }
 
-  my $name = $source ne '__error__' ? "<a href=\"#$source\">$source</a>" : "No source/changelog match";
+  my $href = ($source =~ /^linux-signed-/) ? 'linux' : $source;
+  my $name = $source ne '__error__' ? "<a href=\"#$href\">$source</a>" : "No source/changelog match";
 
   my $binaries = join(", ", @{$sources{$source}{binaries}});
-  # This list is awful and likely not very interesting anyway;
-  # linux-signed-* source packages might get the same treatment
-  # at some point:
+  # This list is awful and likely not very interesting anyway:
   $binaries = '[redacted, long list]'
-    if $source eq 'linux';
+    if $source eq 'linux' or $source =~ /^linux-signed-/;
 
   my $entry = << "EOF";
   <tr>
@@ -281,23 +286,11 @@ EOF
 print $changelogs "</table>\n";
 
 
-### Extract template:
-my $template_filename = "default.tmpl";
-if (! -f $template_filename) {
-    open my $template, '>', $template_filename
-        or die "Unable to write to $template_filename";
-    print $template $_ while (<DATA>);
-    close $template
-        or die "Unable to close $template_filename";
-    close DATA
-        or die "Unable to close DATA";
-}
-
-
 ### Detect wanted changelogs excerpts:
 foreach my $source (sort keys %sources) {
-  # Skip error'd packages:
+  # Skip error'd packages and signed packages for linux:
   next if $source eq '__error__';
+  next if $source =~ /^linux-signed-/;
 
   if (not exists $sources{$source}{max}) {
       print "$source vanished\n";
@@ -308,30 +301,57 @@ foreach my $source (sort keys %sources) {
       next;
   }
 
-  my $source_filename = "$source.txt";
-  my $chglog = Parse::DebianChangelog->init( { infile => $source_filename } );
   # "since foo to bar" means "foo is excluded, bar is included":
-  my $changes = $chglog->html_str( { since => $sources{$source}{min},
-                                     to    => $sources{$source}{max},
-                                     template => $template_filename,
-                                   });
+  my $source_filename = "$source.txt";
+  my $chglog = Dpkg::Changelog::Debian->new();
+  $chglog->load($source_filename)
+    or die "failed to parse $source_filename";
+  my $selection = $chglog->get_range({
+    'since' => $sources{$source}{min},
+    'to'    => $sources{$source}{max},
+  });
+
   # There are various reasons for having no entries: binaries moving
   # between source packages; uploads to experimental getting in the
   # way and shadowing unstable's changelogs; maybe others. Warn in
   # those cases.
-  my @data = $chglog->data( { since => $sources{$source}{min},
-                              to    => $sources{$source}{max}
-                            });
-  if (@data) {
-    print $changelogs ("<hr>\n" . $changes . "\n");
+  print $changelogs "<h2><a name=\"$source\">Changes for $source ($sources{$source}{min} → $sources{$source}{max})</a></h2>\n";
+  if (@$selection) {
+    print $changelogs "<hr>\n";
+    foreach my $entry (@${selection}) {
+      foreach my $line (split /\n/, $entry) {
+        my $opacity = 100;
+        if ($line =~ /^\S/ or $line =~ /^\ -- /) {
+          $opacity = 50;
+        }
+        elsif ($line =~ /Team [Uu]pload|Updated translations/) {
+          $opacity = 50;
+        }
+        elsif ($line =~ /^  [*] .* \(.*\.po\)($| by)/) {
+          $opacity = 50;
+        }
+
+        my $class = 'normal';
+        if ($line =~ /^  .*(udeb|installer|d-i)/i) {
+          $class = 'important';
+        }
+
+        $line = escape_html($line);
+        $line =~ s{#(\d{6,7})}{<a href="https://bugs.debian.org/$1">#$1</a>}g;
+
+        $line = '&nbsp;' if $line eq '';
+        print $changelogs ("<pre style=\"opacity: $opacity%\" class=\"$class\">$line</pre>\n");
+      }
+      print $changelogs "<br>\n";
+    }
   }
   else {
-    print $changelogs ("<hr>\n" . "<b>warning:</b> no changelog available for $source (from $sources{$source}{min} to $sources{$source}{max})". "\n");
+    print $changelogs ("<hr>\n" . "<b>warning:</b> no changelog available for $source (since $sources{$source}{min}, to $sources{$source}{max})". "\n");
   }
 
 }
 
-print $changelogs "</html>\n";
+print $changelogs "</body></html>\n";
 
 close $changelogs
     or die "Unable to close $changelogs_filename";
@@ -341,51 +361,3 @@ close $report
 
 print STDERR "Report saved as: $report_filename\n";
 print STDERR "Changelogs saved as: $changelogs_filename\n";
-
-### Explicit end:
-exit 0;
-
-# Populating the working directory with some template is needed, so
-# let's ship it in the DATA section:
-__END__
-<!-- BEGIN: header.tmpl -->
-<h1 class="document_header">
-<a name=<TMPL_VAR NAME="SOURCE_NEWEST">>
-  Debian Changelog for <TMPL_VAR NAME="SOURCE_NEWEST"> (up to <TMPL_VAR NAME="VERSION_NEWEST">)
-</a>
-</h1>
-<ul class="navbar">
-  <li>
-    <a href="http://packages.debian.org/src:<TMPL_VAR NAME="SOURCE_NEWEST">">Package Information</a>
-  </li>
-  <li>
-    <a href="http://tracker.debian.org/pkg/<TMPL_VAR NAME="SOURCE_NEWEST">">Package Developer Information</a>
-  </li>
-  <li>
-    <a href="http://bugs.debian.org/src:<TMPL_VAR NAME="SOURCE_NEWEST">">Bug Information</a>
-  </li>
-</ul>
-<!-- END: header.tmpl -->
-<!-- BEGIN: content.tmpl -->
-<div id="content">
-<TMPL_LOOP NAME="CONTENT_YEARS">
-<h2 class="year_header" id="year<TMPL_VAR NAME="CONTENT_YEAR">">
-<TMPL_VAR NAME="CONTENT_YEAR">
-</h2>
-<TMPL_LOOP NAME="CONTENT_VERSIONS">
-<h3 class="entry_header" id="<TMPL_VAR NAME="CONTENT_VERSION_ID">">
-  <a class="packagelink" href="http://packages.debian.org/src:<TMPL_VAR ESCAPE="URL" NAME="CONTENT_SOURCE">"><TMPL_VAR NAME="CONTENT_SOURCE"></a>
-   (<TMPL_VAR NAME="CONTENT_VERSION">)
-  <span class="<TMPL_VAR NAME="CONTENT_DISTRIBUTION_NORM">"><TMPL_VAR NAME="CONTENT_DISTRIBUTION"></span>;
-  urgency=<span class="<TMPL_VAR NAME="CONTENT_URGENCY_NORM">"><TMPL_VAR NAME="CONTENT_URGENCY"></span>
-</h3>
-<!-- NOTE: CONTENT_CHANGES can contain HTML -->
-<pre><TMPL_VAR NAME="CONTENT_CHANGES"></pre>
-<p class="trailer">&nbsp;-- <TMPL_VAR NAME="CONTENT_MAINTAINER_NAME"> &lt;<a href="http://qa.debian.org/developer.php?login=<TMPL_VAR NAME="CONTENT_MAINTAINER_EMAIL">"><TMPL_VAR NAME="CONTENT_MAINTAINER_EMAIL"></a>&gt;&nbsp;&nbsp;<TMPL_VAR NAME="CONTENT_DATE">
-</p>
-<!-- NOTE: CONTENT_PARSE_ERROR can contain HTML -->
-<TMPL_VAR NAME="CONTENT_PARSE_ERROR">
-</TMPL_LOOP>
-</TMPL_LOOP>
-</div>
-<!-- END: content.tmpl -->

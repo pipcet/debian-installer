@@ -10,20 +10,22 @@
 # Timo Jyrinki <timo.jyrinki@iki.fi>, 2012.
 # Juhani Numminen <juhaninumminen0@gmail.com>, 2018, 2019.
 # Arto Keiski <arto.keiski@iki.fi>, 2018.
+# Kimmo Kujansuu <mrkujansuu@gmail.com>, 2021.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-15 20:03+0300\n"
-"PO-Revision-Date: 2019-02-01 20:18+0000\n"
-"Last-Translator: Juhani Numminen <juhaninumminen0@gmail.com>\n"
+"PO-Revision-Date: 2021-07-12 20:33+0000\n"
+"Last-Translator: Kimmo Kujansuu <mrkujansuu@gmail.com>\n"
 "Language-Team: Finnish <debian-l10n-finnish@lists.debian.org>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.5-dev\n"
+"X-Generator: Weblate 4.7.2-dev\n"
 
 #. Type: text
 #. Description
@@ -304,16 +306,10 @@ msgstr ""
 #. Description
 #. :sl3:
 #: ../console-setup.templates:8001
-#, fuzzy
-#| msgid ""
-#| "Please select the size of the font for the console. For reference, the "
-#| "font used when the computer boots has size 8x16."
 msgid ""
 "Please select the size of the font for the console.  Some font sizes require "
 "framebuffer."
-msgstr ""
-"Valitse konsolissa käytettävän kirjasimen koko. Vertailukohtana voit käyttää "
-"tietokoneen käynnistyessä käytettävää koon 8x16 kirjasinta."
+msgstr "Valitse konsolin fonttikoko. Jotkin fonttikoot vaativat framebufferin."
 
 #. Type: select
 #. Description
@@ -2672,10 +2668,8 @@ msgstr "Joko levykelaitetta ei löydy tai asemassa ei ole alustettua levykettä.
 #. Description
 #. :sl3:
 #: ../cdrom-checker.templates:1001
-#, fuzzy
-#| msgid "Continue with the installation?"
 msgid "Check integrity of the installation media?"
-msgstr "Jatketaanko asennusta?"
+msgstr "Tarkista asennusmedian eheys?"
 
 #. Type: boolean
 #. Description
@@ -2689,69 +2683,51 @@ msgstr ""
 #. Description
 #. :sl3:
 #: ../cdrom-checker.templates:2001
-#, fuzzy
-#| msgid "Debian installer main menu"
 msgid "Insert Debian installation media"
-msgstr "Debianin asentimen päävalikko"
+msgstr "Aseta Debian asennusmedia"
 
 #. Type: note
 #. Description
 #. :sl3:
 #: ../cdrom-checker.templates:2001
-#, fuzzy
-#| msgid ""
-#| "Please insert one of the official Debian CD-ROMs into the drive before "
-#| "continuing."
 msgid ""
 "Please insert one of the official Debian installation media before "
 "continuing."
-msgstr "Laita yksi virallisista Debian-CD:istä asemaan ennen jatkamista."
+msgstr "Aseta jokin virallisista Debianin asennusmedioista ennen kuin jatkat."
 
 #. Type: error
 #. Description
 #. :sl3:
 #: ../cdrom-checker.templates:3001
-#, fuzzy
-#| msgid "Failed to unmount partitions"
 msgid "Failed to mount installation media"
-msgstr "Osioiden irrottaminen epäonnistui"
+msgstr "Asennusmedian liittäminen epäonnistui"
 
 #. Type: error
 #. Description
 #. :sl3:
 #: ../cdrom-checker.templates:3001
-#, fuzzy
-#| msgid ""
-#| "The CD-ROM ${CDROM} could not be mounted correctly. Please check the "
-#| "media and cables, and try it again."
 msgid ""
 "The device '${CDROM}' could not be mounted correctly. Please check the media "
 "and cables, and try it again."
 msgstr ""
-"CD-levyä ${CDROM} ei voitu liittää oikein. Tarkista taltio ja kaapelit ja "
-"yritä sen jälkeen uudelleen."
+"Laitetta \"${CDROM}\" ei voitu liittää oikein. Tarkista media sekä kaapelit "
+"ja yritä uudelleen."
 
 #. Type: error
 #. Description
 #. :sl3:
 #: ../cdrom-checker.templates:4001
-#, fuzzy
-#| msgid "Debian installer main menu"
 msgid "No valid Debian installation media"
-msgstr "Debianin asentimen päävalikko"
+msgstr "Debianin asennusmedia ei ole kelvollinen"
 
 #. Type: error
 #. Description
 #. :sl3:
 #: ../cdrom-checker.templates:4001
-#, fuzzy
-#| msgid ""
-#| "The CD-ROM you have inserted is not a valid Debian CD-ROM. Please change "
-#| "the disk."
 msgid ""
 "What you have inserted is no valid Debian installation media. Please try "
 "again."
-msgstr "Laittamasi CD-levy ei ole kelvollinen Debian-CD. Vaihda levy."
+msgstr "Lisäämäsi ei ole kelvollinen Debianin asennusmedia. Yritä uudelleen."
 
 #. Type: error
 #. Description
@@ -2766,16 +2742,12 @@ msgstr "Tarkistussummatiedoston avaus epäonnistui"
 #. TRANSLATORS: MD5 is a file name, don't translate it.
 #. :sl3:
 #: ../cdrom-checker.templates:5001
-#, fuzzy
-#| msgid ""
-#| "Opening the MD5 file on the CD-ROM failed. This file contains the "
-#| "checksums of the files located on the CD-ROM."
 msgid ""
 "Opening the MD5 file on the media failed. This file contains the checksums "
 "of the files located on the media."
 msgstr ""
-"MD5-tiedoston avaus CD-levyltä epäonnistui. Tiedosto sisältää "
-"tarkistussummat levyltä löytyville tiedostoille."
+"Median MD5-tiedoston avaaminen epäonnistui. Tämä tiedosto sisältää "
+"tietovälineessä olevien tiedostojen tarkistussummat."
 
 #. Type: note
 #. Description
@@ -2788,10 +2760,8 @@ msgstr "Eheystarkistus läpäisty"
 #. Description
 #. :sl3:
 #: ../cdrom-checker.templates:6001
-#, fuzzy
-#| msgid "The CD-ROM integrity test was successful. The CD-ROM is valid."
 msgid "The integrity test was successful. The installation image is valid."
-msgstr "CD-levyn eheystarkistus läpäistiin. Levy on kelvollinen."
+msgstr "Eheystesti onnistui. Asennuslevy on kelvollinen."
 
 #. Type: error
 #. Description
@@ -2804,57 +2774,44 @@ msgstr "Eheystarkistus hylätty"
 #. Description
 #. :sl3:
 #: ../cdrom-checker.templates:7001
-#, fuzzy
-#| msgid ""
-#| "The ${FILE} file failed the MD5 checksum verification. Your CD-ROM or "
-#| "this file may have been corrupted."
 msgid ""
 "The file ${FILE} failed the MD5 checksum verification. Your installation "
 "media or this file may have been corrupted."
 msgstr ""
-"Tiedoston ${FILE} MD5-tarkistussumma ei täsmää. CD-levy tai tämä tiedosto "
-"voi olla vioittunut."
+"Tiedosto ${FILE} MD5-tarkistussumma ei täsmää. Sinun asennusmedia tai tämä "
+"tiedosto voi olla vioittunut."
 
 #. Type: boolean
 #. Description
 #. :sl3:
 #: ../cdrom-checker.templates:8001
-#, fuzzy
-#| msgid "Check the integrity of another CD-ROM?"
 msgid "Check the integrity of another installation image?"
-msgstr "Tarkistetaanko toisen CD-levyn eheys?"
+msgstr "Tarkista toisen asennuslevyn eheys?"
 
 #. Type: note
 #. Description
 #. :sl3:
 #: ../cdrom-checker.templates:9001
-#, fuzzy
-#| msgid "Insert Debian boot CD-ROM"
 msgid "Insert Debian boot media"
-msgstr "Laita Debian-käynnistyslevy asemaan"
+msgstr "Aseta Debianin käynnistysmedia"
 
 #. Type: note
 #. Description
 #. :sl3:
 #: ../cdrom-checker.templates:9001
-#, fuzzy
-#| msgid ""
-#| "Please make sure you have inserted the Debian boot CD-ROM to continue "
-#| "with the installation."
 msgid ""
 "Please make sure you have inserted the Debian installation media you booted "
 "from, to continue with the installation."
 msgstr ""
-"Jatkaaksesi asennusta tarkista, että laitoit Debian-käynnistyslevyn asemaan."
+"Varmista, että olet asettanut Debianin asennusmedian, josta käynnistit "
+"koneen, jotta voit jatkaa asennusta."
 
 #. Type: text
 #. Description
 #. :sl3:
 #: ../cdrom-checker.templates:10001
-#, fuzzy
-#| msgid "Gathering information for installation report..."
 msgid "Checking integrity of installation image"
-msgstr "Kerätään tietoa asennusraporttia varten..."
+msgstr "Asennuslevyn eheyden tarkistus"
 
 #. Type: text
 #. Description
@@ -5259,7 +5216,7 @@ msgstr "Poistettavat loogiset taltiot: ${LVTARGETS}"
 #. :sl3:
 #: ../partman-lvm.templates:62001
 msgid "Volume group(s) to be removed: ${VGTARGETS}"
-msgstr "Poistettavat taltioryhmät:     ${VGTARGETS}"
+msgstr "Poistettavat taltioryhmät: ${VGTARGETS}"
 
 #. Type: boolean
 #. Description
