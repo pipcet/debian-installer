@@ -24,7 +24,7 @@ jobs:
     - run: sudo apt-get install device-tree-compiler
     - run: sudo apt-get install libtool-bin
     - run: tar cf self.tar .
-    - run: git checkout https://github.com/pipcet/pearl
+    - run: git clone https://github.com/pipcet/pearl
     - name: Set env variables
       uses: ./pearl/g/github/env/
     - run: (cd pearl; git submodule update --init --recursive -- debian)
