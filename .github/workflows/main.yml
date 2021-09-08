@@ -30,5 +30,6 @@ jobs:
     - name: Set env variables
       uses: ./pearl/g/github/env/
     - run: (cd pearl; git submodule update --init --recursive -- debian)
-    - run: make -C pearl -j13 build/netboot-initrd.cpio.gz
+    - run: echo 1 | sudo tee /proc/sys/vm/overcommit_memory
+    - run: make DIREPO=$(pwd) -C pearl -j13 build/netboot-initrd.cpio.gz
     - run: make -C pearl build/netboot-initrd.cpio.gz{artifact}
