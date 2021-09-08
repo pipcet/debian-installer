@@ -112,7 +112,7 @@ get_formats() {
 update_from_git() {
     echo >>$mainlog
     echo "Performing GIT update..." >>$mainlog
-    git pull origin master >>$logdir/git_pull.log 2>&1
+    git pull >>$logdir/git_pull.log 2>&1
     RESULT=$?
     if [ ! $RESULT = 0 ]; then
         echo "GIT pull failed with code $RESULT" >>$mainlog
