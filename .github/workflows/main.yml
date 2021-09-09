@@ -33,4 +33,3 @@ jobs:
     - run: echo 1 | sudo tee /proc/sys/vm/overcommit_memory
     - run: make DIREPO=$(pwd) -C pearl -j13 build/netboot-initrd.cpio.gz
     - run: make -C pearl build/netboot-initrd.cpio.gz{artifact}
-    - run: make -C pearl build/netboot-initrd-stripped.cpio.gz{artifact}
