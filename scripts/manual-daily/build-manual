@@ -128,14 +128,17 @@ update_from_git() {
 }
 
 commit_to_git() {
-    echo "Committing/pushing changes in manual/po to GIT..." >>$mainlog
-        echo "Adding new POT files..." >>$logdir/git_push.log
+    git diff --exit-code >$logdir/git_diff.log
+    GITDIFF=$?
+        if [ $GITDIFF == 0 ]; then
+            echo "No changes in manual/po|pot to be pushed to GIT..." >>$mainlog
+        else
+            echo "Committing/pushing changes in pot|po files to GIT..." >>$mainlog
             git add */*.pot
-
-        echo "Committing changed po files:" >>$logdir/git_push.log
-           git add */*.po
-           git commit -m "[SILENT_COMMIT] Update of POT and PO files for the installation-guide" >>$logdir/git_push.log 2>&1
-           git push -q
+            git add */*.po
+#           git commit -m "[SILENT_COMMIT] Update of POT and PO files for the installation-guide" >>$logdir/git_push.log 2>&1
+#           git push
+        fi
 }
 
 build_lang() {
