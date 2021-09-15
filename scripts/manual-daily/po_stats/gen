@@ -1,4 +1,8 @@
 #!/bin/bash
+
+[ -f ~/.d-i_manual_daily ] || exit 1
+. ~/.d-i_manual_daily
+
 # Copyright (c) 2004-2006 by Dennis Stampfer <seppy@debian.org>
 # Copyright (c) 2006 by Frans Pop <fjp@debian.org>
 # Licensed under the GNU General Public License
@@ -25,10 +29,10 @@
 #
 
 SCRIPTNAME="Installation Guide"
-ROOT="/srv/d-i.debian.org/home/d-i_manual.daily/"
+# $ROOT and $destination taken from ~/.d-i_manual_daily
 WD="$ROOT/bin/po_stats"
 TEMP_DIR="$WD/temp"
-TARGET_DIR="/srv/d-i.debian.org/home/tmp-daily/po_stats"
+TARGET_DIR="$destination/po_stats"
 PO_DIR="$ROOT/manual/po"
 
 # We want the manual files group writable

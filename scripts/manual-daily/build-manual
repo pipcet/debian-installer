@@ -12,10 +12,7 @@ DILLON_MANUAL_PATH=/srv/d-i.debian.org/www/doc/installation-guide
 # They will later be freshly generated anyway.
 # 
 # ! Include all po-based languages here !
-rm -fR $source/ca $source/cs $source/da $source/de $source/el $source/es $source/fi
-rm -fR $source/fr $source/hu $source/it $source/ja $source/kab $source/ko $source/nb
-rm -fR $source/nl $source/nn $source/pt $source/ro $source/ru $source/sv $source/tl
-rm -fR $source/uk $source/vi $source/zh_CN $source/zh_TW
+rm -fR $source/ca $source/cs $source/da $source/de $source/el $source/es $source/fi $source/fr $source/hu $source/it $source/ja $source/kab $source/ko $source/nb $source/nl $source/nn $source/pt $source/ro $source/ru $source/sv $source/tl $source/uk $source/vi $source/zh_CN $source/zh_TW
 
 usage() {
     if [ "$@" ]; then
@@ -28,15 +25,16 @@ usage() {
 }
 
 ## Function to check result of executed programs and exit on error
-checkfatal() {
-    if [ ! "$1" = "0" ]; then
-        echo "Unexpected error $1 while $2" >>$mainlog
-        touch $ROOT/do_not_build
-        echo "!!!! Autobuilding has been disabled !!!!" >>$mainlog
-        rm -f $ROOT/lockfile
-        exit 999
-    fi
-}
+##### DO NOT USE THIS ANYMORE. IN CASE OF ERRORS, SIMPLY WAIT FOR FIXES TO ARRIVE, AND THEN JUST TRY TO BUILD AGAIN.
+#####checkfatal() {
+#####    if [ ! "$1" = "0" ]; then
+#####        echo "Unexpected error $1 while $2" >>$mainlog
+#####        touch $ROOT/do_not_build
+#####        echo "!!!! Autobuilding has been disabled !!!!" >>$mainlog
+#####        rm -f $ROOT/lockfile
+#####        exit 999
+#####    fi
+#####}
 
 uses_po() {
     local lang=$1
@@ -124,19 +122,23 @@ update_from_git() {
         exit 1
     fi
     if [ -n "$(git status -s -uno .)" ] ; then
-        checkfatal "checking for conflicts after 'git pull'"
+#####        checkfatal "checking for conflicts after 'git pull'"
+        echo
     fi
 }
 
 commit_to_git() {
-    echo "Committing/pushing changes in manual/po to GIT..." >>$mainlog
-        echo "Adding new POT files..." >>$logdir/git_push.log
+    git diff --exit-code >$logdir/git_diff.log
+    GITDIFF=$?
+        if [ $GITDIFF == 0 ]; then
+            echo "No changes in manual/po|pot to be pushed to GIT..." >>$mainlog
+        else
+            echo "Committing/pushing changes in pot|po files to GIT..." >>$mainlog
             git add */*.pot
-
-        echo "Committing changed po files:" >>$logdir/git_push.log
-           git add */*.po
-           git commit -m "[SILENT_COMMIT] Update of POT and PO files for the installation-guide" >>$logdir/git_push.log 2>&1
-           git push -q
+            git add */*.po
+            git commit -m "[SILENT_COMMIT] Update of POT and PO files for the installation-guide" >>$logdir/git_push.log 2>&1
+            git push
+        fi
 }
 
 build_lang() {
@@ -335,7 +337,7 @@ if is_updated en || global_build_options_changed; then
     echo "Info: building installation-guide from XML files" >>$langlog
 
     build_lang en
-    checkfatal "$?" "build for English"
+#####    checkfatal "$?" "build for English"
     echo >>$mainlog
 fi
 
@@ -343,7 +345,7 @@ fi
 cd $source
 if is_updated en || [ ! -d "$source/integrated/en" ] || global_build_options_changed; then
     update_templates >>$mainlog 2>&1
-    checkfatal "$?" "updating templates"
+#####    checkfatal "$?" "updating templates"
     echo >>$mainlog
 
     # Extract preconfiguration example from the installation-guide
@@ -374,7 +376,7 @@ for lang in $translations; do
         if is_updated "$lang" || [ "$EN_UPDATED" ]; then
             echo "Info: updating PO files for $lang" >>$mainlog
             update_po $lang >>$langlog 2>&1
-            checkfatal "$?" "updating po for $lang"
+#####            checkfatal "$?" "updating po for $lang"
         fi
     fi
 
@@ -382,7 +384,7 @@ for lang in $translations; do
         if uses_po "$lang"; then
             echo "Info: building installation-guide from PO files" >>$langlog
             generate_xml $lang >>$langlog 2>&1
-            checkfatal "$?" "generating xml for $lang"
+#####            checkfatal "$?" "generating xml for $lang"
             echo "Info: generation of XML files complete" >>$langlog
         else
             echo "Info: building installation-guide from XML files" >>$langlog
