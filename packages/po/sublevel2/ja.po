@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-19 20:01+0000\n"
+"POT-Creation-Date: 2021-11-21 20:02+0000\n"
 "PO-Revision-Date: 2021-05-06 03:32+0000\n"
 "Last-Translator: Nozomu KURASAWA <nabetaro@caldron.jp>\n"
 "Language-Team: Debian L10n Japanese <debian-japanese@lists.debian.org>\n"
@@ -21,150 +21,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 4.7-dev\n"
-
-#. Type: error
-#. Description
-#. :sl2:
-#: ../main-menu.templates:3001
-msgid "Installation step failed"
-msgstr "インストールステップが失敗しました"
-
-#. Type: error
-#. Description
-#. :sl2:
-#: ../main-menu.templates:3001
-msgid ""
-"An installation step failed. You can try to run the failing item again from "
-"the menu, or skip it and choose something else. The failing step is: ${ITEM}"
-msgstr ""
-"インストールステップが失敗しました。メニューから失敗した項目を再度実行する"
-"か、スキップするか、別のものを選択するかできます。失敗したステップは次の項目"
-"です: ${ITEM}"
-
-#. Type: select
-#. Description
-#. :sl2:
-#: ../main-menu.templates:4001
-msgid "Choose an installation step:"
-msgstr "インストールステップの選択:"
-
-#. Type: select
-#. Description
-#. :sl2:
-#: ../main-menu.templates:4001
-msgid ""
-"This installation step depends on one or more other steps that have not yet "
-"been performed."
-msgstr ""
-"このインストールステップはまだ行われていない 1 つ以上のほかのステップを必要と"
-"します。"
-
-#. Type: note
-#. Description
-#. :sl2:
-#. Type: text
-#. Description
-#. :sl2:
-#: ../di-utils-shell.templates:1001 ../di-utils.templates:5001
-msgid "Interactive shell"
-msgstr "インタラクティブシェル"
-
-#. Type: note
-#. Description
-#. :sl2:
-#: ../di-utils-shell.templates:1001
-msgid "After this message, you will be running \"ash\", a Bourne-shell clone."
-msgstr "このメッセージのあと、Bourne シェルクローンの \"ash\" が実行されます。"
-
-#. Type: note
-#. Description
-#. :sl2:
-#: ../di-utils-shell.templates:1001
-msgid ""
-"The root file system is a RAM disk. The hard disk file systems are mounted "
-"on \"/target\". The editor available to you is nano. It's very small and "
-"easy to figure out. To get an idea of what Unix utilities are available to "
-"you, use the \"help\" command."
-msgstr ""
-"ルートファイルシステムは RAM ディスクです。ハードディスクファイルシステムは "
-"\"/target\" にマウントされています。利用できるエディタは nano です。これは非"
-"常に小さく理解するのが簡単なものです。利用可能な Unix ユーティリティが何か知"
-"りたいときは、\"help\" コマンドを使ってください。"
-
-#. Type: note
-#. Description
-#. :sl2:
-#: ../di-utils-shell.templates:1001
-msgid "Use the \"exit\" command to return to the installation menu."
-msgstr "インストールメニューに戻るには \"exit\" コマンドを使います。"
-
-#. Type: text
-#. Description
-#. Main menu item
-#. The translation should not exceed 55 columns except for languages
-#. that are only supported in the graphical version of the installer
-#. :sl2:
-#: ../di-utils-exit-installer.templates:1001
-msgid "Exit installer"
-msgstr "インストーラの終了"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../di-utils-reboot.templates:1001
-msgid "Are you sure you want to exit now?"
-msgstr "本当に今すぐ終了しますか?"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../di-utils-reboot.templates:1001
-msgid ""
-"If you have not finished the install, your system may be left in an unusable "
-"state."
-msgstr ""
-"インストールをまだ終えていないのであれば、あなたのシステムは不安定な状態に置"
-"かれている可能性があります。"
-
-#. Type: error
-#. Description
-#. :sl2:
-#: ../di-utils.templates:6001
-msgid "Terminal plugin not available"
-msgstr "端末プラグインは利用できません"
-
-#. Type: error
-#. Description
-#. :sl2:
-#: ../di-utils.templates:6001
-msgid ""
-"This build of the debian-installer requires the terminal plugin in order to "
-"display a shell. Unfortunately, this plugin is currently unavailable."
-msgstr ""
-"シェルを表示するためにこの debian-installer のビルドは端末プラグインを必要と"
-"します。しかし、このプラグインは現在利用できません。"
-
-#. Type: error
-#. Description
-#. :sl2:
-#: ../di-utils.templates:6001
-msgid ""
-"It should be available after reaching the \"Loading additional components\" "
-"installation step."
-msgstr ""
-"\"追加コンポーネントをロードしています\" のインストール段階に到達してから利用"
-"できるはずです。"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../di-utils.templates:7001
-msgid ""
-"Alternatively, you can open a shell by pressing Ctrl+Alt+F2. Use Alt+F5 to "
-"get back to the installer."
-msgstr ""
-"別の方法として、Ctrl+Alt+F2 を押してシェルを開くことができます。インストーラ"
-"に戻るには、Alt+F5 を使います。"
 
 #. Type: multiselect
 #. Description
@@ -267,68 +123,1043 @@ msgstr ""
 "あなたのインストールイメージが最新であることを確認してください、もし最新であ"
 "るならば異なるミラー、できれば deb.debian.org を試してみてください。"
 
+#. Type: text
+#. Description
+#. :sl2:
+#: ../apt-setup-udeb.templates:4001
+msgid "Scanning local repositories..."
+msgstr "ローカルリポジトリを検査しています..."
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../apt-setup-udeb.templates:5001
+msgid "Scanning the security updates repository..."
+msgstr "セキュリティアップデートリポジトリを検査しています..."
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../apt-setup-udeb.templates:6001
+msgid "Scanning the release updates repository..."
+msgstr "リリースアップデートリポジトリを検査しています..."
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../apt-setup-udeb.templates:7001
+msgid "Scanning the backports repository..."
+msgstr "バックポートリポジトリを検査しています..."
+
+#. #-#-#-#-#  templates.pot (apt-setup)  #-#-#-#-#
+#. Type: select
+#. Choices
+#. :sl2:
+#. These are choices of actions so this is, at least in English,
+#. an infinitive form
+#. #-#-#-#-#  templates.pot (net-retriever)  #-#-#-#-#
+#. Type: select
+#. Choices
+#. These are choices of actions so this is, at least in English,
+#. an infinitive form
+#. :sl2:
+#: ../apt-setup-udeb.templates:8001 ../apt-mirror-setup.templates:4001
+#: ../net-retriever.templates:1001
+msgid "Retry"
+msgstr "再試行"
+
+#. Type: select
+#. Choices
+#. :sl2:
+#. These are choices of actions so this is, at least in English,
+#. an infinitive form
+#: ../apt-setup-udeb.templates:8001 ../apt-mirror-setup.templates:4001
+msgid "Ignore"
+msgstr "無視"
+
+#. Type: select
+#. Description
+#. You should end this with a colon. A non-translatable variable
+#. follows with the mirror URL
+#. :sl2:
+#: ../apt-setup-udeb.templates:8002
+msgid ""
+"The installer failed to download the public key used to sign the local "
+"repository at ${MIRROR}:"
+msgstr ""
+"インストーラは、${MIRROR} にあるローカルリポジトリの署名に使われた公開鍵のダ"
+"ウンロードに失敗しました:"
+
+#. Type: error
+#. Description
+#. :sl2:
+#: ../apt-setup-udeb.templates:10001
+msgid "Cannot access repository"
+msgstr "リポジトリにアクセスできません"
+
+#. Type: error
+#. Description
+#. :sl2:
+#: ../apt-setup-udeb.templates:10001
+msgid ""
+"The repository on ${HOST} couldn't be accessed, so its updates will not be "
+"made available to you at this time. You should investigate this later."
+msgstr ""
+"${HOST} のリポジトリにアクセスできませんでした。そのため、これらのアップデー"
+"トは現時点では利用できるようになっていません。あとで調査してください。"
+
+#. Type: error
+#. Description
+#. :sl2:
+#: ../apt-setup-udeb.templates:10001
+msgid ""
+"Commented out entries for ${HOST} have been added to the /etc/apt/sources."
+"list file."
+msgstr ""
+"コメントアウトされた ${HOST} のエントリが /etc/apt/sources.list ファイルに追"
+"加されました。"
+
+#. Type: error
+#. Description
+#. :sl2:
+#: ../apt-cdrom-setup.templates:2001
+msgid "apt configuration problem"
+msgstr "apt の設定の問題"
+
+#. #-#-#-#-#  templates.pot (apt-setup)  #-#-#-#-#
+#. Type: select
+#. Choices
+#. :sl2:
+#. These are choices of actions so this is, at least in English,
+#. an infinitive form
+#. #-#-#-#-#  templates.pot (net-retriever)  #-#-#-#-#
+#. Type: select
+#. Choices
+#. These are choices of actions so this is, at least in English,
+#. an infinitive form
+#. :sl2:
+#: ../apt-mirror-setup.templates:4001 ../net-retriever.templates:1001
+msgid "Change mirror"
+msgstr "ミラーの変更"
+
 #. Type: select
 #. Description
 #. :sl2:
-#: ../localechooser.templates-in:4001
-msgid "System locale:"
-msgstr "システムロケール:"
+#: ../apt-mirror-setup.templates:4002 ../net-retriever.templates:1002
+msgid "Downloading a file failed:"
+msgstr "ファイルのダウンロード中に失敗しました:"
 
 #. Type: select
 #. Description
 #. :sl2:
-#: ../localechooser.templates-in:4001
-msgid "Select the default locale for the installed system."
-msgstr "インストールされるシステムのデフォルトのロケールを選択してください。"
-
-#. Type: multiselect
-#. Description
-#. :sl2:
-#: ../localechooser.templates-in:32001
-msgid "Additional locales:"
-msgstr "追加のロケール:"
-
-#. Type: multiselect
-#. Description
-#. :sl2:
-#: ../localechooser.templates-in:32001
+#: ../apt-mirror-setup.templates:4002
 msgid ""
-"Based on your previous choices, the default locale currently selected for "
-"the installed system is '${LOCALE}'."
+"The installer failed to access the mirror. This may be a problem with your "
+"network, or with the mirror. You can choose to retry the download, select a "
+"different mirror, or ignore the problem and continue without all the "
+"packages from this mirror."
 msgstr ""
-"前の選択に基づくと、インストールされるシステムの現在のデフォルトのロケールは "
-"'${LOCALE}' です。"
+"インストーラはミラーへのアクセスに失敗しました。これはあなたのネットワークま"
+"たはミラーに問題があるためでしょう。ダウンロードの再試行、別のミラーの選択、"
+"あるいは問題を無視してこのミラーからの全パッケージなしに継続、から選ぶことが"
+"できます。"
 
-#. Type: multiselect
+#. Type: boolean
 #. Description
 #. :sl2:
-#: ../localechooser.templates-in:32001
+#: ../apt-mirror-setup.templates:6001
+msgid "Continue without a network mirror?"
+msgstr "ネットワークミラーなしに続けますか?"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../apt-mirror-setup.templates:6001
+msgid "No network mirror was selected."
+msgstr "ネットワークミラーが選択されませんでした。"
+
+#. Type: boolean
+#. Description
+#. This template is used by the Ubuntu version of d-i.
+#. :sl2:
+#: ../apt-mirror-setup.templates-ubuntu:1001
+msgid "Use restricted software?"
+msgstr "制限されたソフトウェアを使いますか?"
+
+#. Type: boolean
+#. Description
+#. This template is used by the Ubuntu version of d-i.
+#. :sl2:
+#: ../apt-mirror-setup.templates-ubuntu:1001
 msgid ""
-"If you wish to use a different default or to also have other locales "
-"available, you may choose additional locales to be installed. If you are "
-"unsure it is best to just use the selected default."
+"Some non-free software is available in packaged form. Though this software "
+"is not a part of the main distribution, standard package management tools "
+"can be used to install it. This software has varying licenses which may "
+"prevent you from using, modifying, or sharing it."
 msgstr ""
-"異なるデフォルトを使いたいか、その他のロケールも利用可能にしたいなら、追加の"
-"ロケールのインストールを選ぶことができます。よくわからなければ、選択されたデ"
-"フォルトを単に利用するのが最適です。"
+"いくつかの non-free ソフトウェアがパッケージされた形で利用できます。これらの"
+"ソフトウェアは main ディストリビューションを構成するものではありませんが、標"
+"準のパッケージ管理ツールは、これらのソフトウェアをインストールするのに利用で"
+"きます。これらのソフトウェアは、利用・変更・共有を阻害するようなそれぞれ異な"
+"るライセンスを持っています。"
 
-#. Type: note
+#. Type: boolean
 #. Description
+#. This template is used by the Ubuntu version of d-i.
 #. :sl2:
-#: ../localechooser.templates-in:34001
-msgid "locale"
-msgstr "ロケール"
+#: ../apt-mirror-setup.templates-ubuntu:2001
+msgid "Use software from the \"universe\" component?"
+msgstr "\"universe\" コンポーネントからのソフトウェアを使いますか?"
 
-#. Type: note
+#. Type: boolean
 #. Description
+#. This template is used by the Ubuntu version of d-i.
 #. :sl2:
-#: ../localechooser.templates-in:34001
+#: ../apt-mirror-setup.templates-ubuntu:2001
 msgid ""
-"A locale determines character encoding and contains information on for "
-"example currency, date format and alphabetical sort order."
+"Some additional software is available in packaged form. This software is "
+"free and, though it is not a part of the main distribution, standard package "
+"management tools can be used to install it."
 msgstr ""
-"ロケールは文字エンコーディングを決定し、通貨、日付書式、文字の整列順序といっ"
-"た情報を含んでいます。"
+"いくつかの追加ソフトウェアがパッケージされた形で利用できます。これらのソフト"
+"ウェアはフリーで、main ディストリビューションを構成するものではありませんが、"
+"標準のパッケージ管理ツールは、これらのソフトウェアをインストールするのに利用"
+"できます。"
+
+#. Type: boolean
+#. Description
+#. This template is used by the Ubuntu version of d-i.
+#. :sl2:
+#: ../apt-mirror-setup.templates-ubuntu:3001
+msgid "Use software from the \"multiverse\" component?"
+msgstr "\"multiverse\" コンポーネントからのソフトウェアを使いますか?"
+
+#. Type: boolean
+#. Description
+#. This template is used by the Ubuntu version of d-i.
+#. :sl2:
+#: ../apt-mirror-setup.templates-ubuntu:3001
+msgid ""
+"Some non-free software is available in packaged form. Though this software "
+"is not a part of the main distribution, standard package management tools "
+"can be used to install it. This software has varying licenses and (in some "
+"cases) patent restrictions which may prevent you from using, modifying, or "
+"sharing it."
+msgstr ""
+"いくつかの non-free ソフトウェアがパッケージされた形で利用できます。これらの"
+"ソフトウェアは main ディストリビューションを構成するものではありませんが、標"
+"準のパッケージ管理ツールは、これらのソフトウェアをインストールするのに利用で"
+"きます。これらのソフトウェアは、種々のライセンスを持ち、(いくつかのものは) 利"
+"用・変更・共有を阻害するような特許制約を受けます。"
+
+#. Type: boolean
+#. Description
+#. This template is used by the Ubuntu version of d-i.
+#. :sl2:
+#: ../apt-mirror-setup.templates-ubuntu:4001
+msgid "Use software from the \"partner\" repository?"
+msgstr "\"partner\" リポジトリからのソフトウェアを使いますか?"
+
+#. Type: boolean
+#. Description
+#. This template is used by the Ubuntu version of d-i.
+#. :sl2:
+#: ../apt-mirror-setup.templates-ubuntu:4001
+msgid ""
+"Some additional software is available from Canonical's \"partner\" "
+"repository. This software is not part of Ubuntu, but is offered by Canonical "
+"and the respective vendors as a service to Ubuntu users."
+msgstr ""
+"いくつかの追加ソフトウェアを Canonical の \"partner\" リポジトリから利用でき"
+"ます。このソフトウェアは Ubuntu の一部ではありませんが、Canonical および各ベ"
+"ンダによって Ubuntu ユーザへのサービスとして提供されています。"
+
+#. Type: boolean
+#. Description
+#. This template is used by the Ubuntu version of d-i.
+#. :sl2:
+#: ../apt-mirror-setup.templates-ubuntu:5001
+msgid "Use backported software?"
+msgstr "バックポートされたソフトウェアを使いますか?"
+
+#. Type: boolean
+#. Description
+#. This template is used by the Ubuntu version of d-i.
+#. :sl2:
+#: ../apt-mirror-setup.templates-ubuntu:5001
+msgid ""
+"Some software has been backported from the development tree to work with "
+"this release. Although this software has not gone through such complete "
+"testing as that contained in the release, it includes newer versions of some "
+"applications which may provide useful features."
+msgstr ""
+"いくつかのソフトウェアは開発ツリーからこのリリースで動作するようにバックポー"
+"トされています。これらのソフトウェアはリリース版に含まれているほど完全にテス"
+"トされたものではありませんが、アプリケーションのより新しい (便利な機能を提供"
+"するかもしれない) バージョンを含んでいます。"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../base-installer.templates:1001
+msgid "Proceed with installation to unclean target?"
+msgstr "消去されていないターゲットにインストール処理を行いますか?"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../base-installer.templates:1001
+msgid ""
+"The target file system contains files from a past installation. These files "
+"could cause problems with the installation process, and if you proceed, some "
+"of the existing files may be overwritten."
+msgstr ""
+"ターゲットのファイルシステムには以前のインストールによるファイルが含まれてい"
+"ます。これらのファイルはインストール処理で問題を引き起こす可能性があり、この"
+"まま進めると既存のファイルのいくつかが上書きされることになります。"
+
+#. Type: error
+#. Description
+#. :sl2:
+#: ../base-installer.templates:2001
+msgid "No file system mounted on /target"
+msgstr "/target にマウントされたファイルシステムがありません"
+
+#. Type: error
+#. Description
+#. :sl2:
+#: ../base-installer.templates:2001
+msgid ""
+"Before the installation can proceed, a root file system must be mounted on /"
+"target. The partitioner and formatter should have done this for you."
+msgstr ""
+"インストールを進める前に、ルートファイルシステムを / ターゲットにマウントする"
+"必要があります。partitioner およびフォーマッタでこれを行っているべきです。"
+
+#. Type: error
+#. Description
+#. :sl2:
+#: ../base-installer.templates:3001
+msgid "Not installing to unclean target"
+msgstr "消去されていないターゲットにインストールできません"
+
+#. Type: error
+#. Description
+#. :sl2:
+#: ../base-installer.templates:3001
+msgid ""
+"The installation to the target file system has been canceled. You should go "
+"back and erase or format the target file system before proceeding with the "
+"install."
+msgstr ""
+"ターゲットファイルシステムへのインストールはキャンセルされました。インストー"
+"ルを進める前に、戻ってターゲットファイルシステムを削除するかフォーマットする"
+"ことをお勧めします。"
+
+#. Type: error
+#. Description
+#. The base system is the minimal Debian system
+#. See http://www.debian.org/doc/debian-policy/ch-binary.html#s3.7
+#. :sl2:
+#: ../bootstrap-base.templates:2001
+msgid "Cannot install base system"
+msgstr "ベースシステムをインストールできませんでした"
+
+#. Type: error
+#. Description
+#. The base system is the minimal Debian system
+#. See http://www.debian.org/doc/debian-policy/ch-binary.html#s3.7
+#. :sl2:
+#: ../bootstrap-base.templates:2001
+msgid ""
+"The installer cannot figure out how to install the base system. It found no "
+"installable image, and no valid mirror was configured."
+msgstr ""
+"インストーラはベースシステムをどのようにインストールしたらよいか理解できませ"
+"んでした。インストール可能なイメージが見つからず、また有効なミラーが設定され"
+"ていません。"
+
+#. Type: error
+#. Description
+#. :sl2:
+#. Type: error
+#. Description
+#. :sl2:
+#. Type: error
+#. Description
+#. :sl2:
+#. SUBST0 is a Release file name.
+#. Type: error
+#. Description
+#. :sl2:
+#. SUBST0 is a Release.gpg file name
+#. Type: error
+#. Description
+#. :sl2:
+#. SUBST0 is a gpg key ID
+#. Type: error
+#. Description
+#. :sl2:
+#. Type: error
+#. Description
+#. :sl2:
+#. SUBST0 is a filename
+#. Type: error
+#. Description
+#. :sl2:
+#. SUBST0 is a filename or package name
+#. Debootstrap is a program name: should not be translated
+#: ../bootstrap-base.templates:3001 ../bootstrap-base.templates:7001
+#: ../bootstrap-base.templates:17001 ../bootstrap-base.templates:18001
+#: ../bootstrap-base.templates:19001 ../bootstrap-base.templates:20001
+#: ../bootstrap-base.templates:21001 ../bootstrap-base.templates:22001
+msgid "Debootstrap Error"
+msgstr "Debootstrap エラー"
+
+#. Type: error
+#. Description
+#. :sl2:
+#: ../bootstrap-base.templates:3001
+msgid "Failed to determine the codename for the release."
+msgstr "リリースのコードネームの決定に失敗しました。"
+
+#. Type: error
+#. Description
+#. :sl2:
+#: ../bootstrap-base.templates:4001
+msgid "Failed to install the base system"
+msgstr "ベースシステムのインストールに失敗しました"
+
+#. Type: error
+#. Description
+#. :sl2:
+#: ../bootstrap-base.templates:4001
+msgid "The base system installation into /target/ failed."
+msgstr "/target/ へのベースシステムのインストールに失敗しました。"
+
+#. #-#-#-#-#  templates.pot (base-installer)  #-#-#-#-#
+#. Type: error
+#. Description
+#. :sl2:
+#. Type: error
+#. Description
+#. :sl2:
+#. Type: error
+#. Description
+#. :sl2:
+#. Type: error
+#. Description
+#. :sl2:
+#. Type: error
+#. Description
+#. :sl2:
+#. Type: error
+#. Description
+#. :sl2:
+#. #-#-#-#-#  templates.pot (clock-setup)  #-#-#-#-#
+#. Type: boolean
+#. Description
+#. :sl2:
+#. #-#-#-#-#  templates.pot (grub-installer)  #-#-#-#-#
+#. Type: error
+#. Description
+#. :sl4:
+#. #-#-#-#-#  templates.pot (lvmcfg)  #-#-#-#-#
+#. Type: error
+#. Description
+#. :sl3:
+#. Type: error
+#. Description
+#. :sl3:
+#. Type: error
+#. Description
+#. :sl3:
+#. #-#-#-#-#  templates.pot (network-console)  #-#-#-#-#
+#. Type: error
+#. Description
+#. :sl3:
+#. #-#-#-#-#  templates.pot (nobootloader)  #-#-#-#-#
+#. Type: error
+#. Description
+#. :sl4:
+#. #-#-#-#-#  templates.pot (partman-auto-lvm)  #-#-#-#-#
+#. Type: error
+#. Description
+#. :sl3:
+#. #-#-#-#-#  templates.pot (partman-auto-raid)  #-#-#-#-#
+#. Type: error
+#. Description
+#. :sl3:
+#. #-#-#-#-#  templates.pot (partman-iscsi)  #-#-#-#-#
+#. Type: error
+#. Description
+#. :sl3:
+#. #-#-#-#-#  templates.pot (partman-lvm)  #-#-#-#-#
+#. Type: error
+#. Description
+#. :sl3:
+#. Type: error
+#. Description
+#. :sl3:
+#. Type: error
+#. Description
+#. :sl3:
+#. Type: error
+#. Description
+#. :sl3:
+#. Type: error
+#. Description
+#. :sl3:
+#. #-#-#-#-#  templates.pot (partman-partitioning)  #-#-#-#-#
+#. Type: error
+#. Description
+#. :sl2:
+#: ../bootstrap-base.templates:4001 ../bootstrap-base.templates:5001
+#: ../bootstrap-base.templates:6001 ../bootstrap-base.templates:7001
+#: ../bootstrap-base.templates:11001 ../bootstrap-base.templates:16001
+#: ../clock-setup.templates:9001 ../grub-installer.templates:32001
+#: ../lvmcfg-utils.templates:24001 ../lvmcfg-utils.templates:32001
+#: ../lvmcfg-utils.templates:37001 ../network-console.templates:10001
+#: ../nobootloader.templates:2001 ../partman-auto-lvm.templates:7001
+#: ../partman-auto-raid.templates:1001 ../partman-iscsi.templates:12001
+#: ../partman-lvm.templates:32001 ../partman-lvm.templates:46001
+#: ../partman-lvm.templates:53001 ../partman-lvm.templates:57001
+#: ../partman-lvm.templates:60001 ../partman-partitioning.templates:3001
+msgid "Check /var/log/syslog or see virtual console 4 for the details."
+msgstr ""
+"詳細については、/var/log/syslog を確認するか、仮想コンソール 4 を見てくださ"
+"い。"
+
+#. Type: error
+#. Description
+#. :sl2:
+#. Type: error
+#. Description
+#. :sl2:
+#: ../bootstrap-base.templates:5001 ../bootstrap-base.templates:6001
+msgid "Base system installation error"
+msgstr "ベースシステムインストールエラー"
+
+#. Type: error
+#. Description
+#. :sl2:
+#: ../bootstrap-base.templates:5001
+msgid ""
+"The debootstrap program exited with an error (return value ${EXITCODE})."
+msgstr "debootstrap プログラムはエラーで終了しました (戻り値 ${EXITCODE})。"
+
+#. Type: error
+#. Description
+#. :sl2:
+#: ../bootstrap-base.templates:6001
+msgid "The debootstrap program exited abnormally."
+msgstr "debootstrap プログラムは異常終了しました。"
+
+#. Type: error
+#. Description
+#. :sl2:
+#: ../bootstrap-base.templates:7001
+msgid "The following error occurred:"
+msgstr "以下のエラーが発生しました:"
+
+#. Type: error
+#. Description
+#. :sl2:
+#: ../bootstrap-base.templates:11001
+msgid "Unable to install the selected kernel"
+msgstr "選択されたカーネルはインストールできません"
+
+#. Type: error
+#. Description
+#. :sl2:
+#: ../bootstrap-base.templates:11001
+msgid ""
+"An error was returned while trying to install the kernel into the target "
+"system."
+msgstr "カーネルを対象システムにインストール中にエラーが返されました。"
+
+#. Type: error
+#. Description
+#. :sl2:
+#: ../bootstrap-base.templates:11001
+msgid "Kernel package: '${KERNEL}'."
+msgstr "カーネルパッケージ: '${KERNEL}'"
+
+#. Type: select
+#. Choices
+#. :sl2:
+#: ../bootstrap-base.templates:12001
+msgid ""
+"none[ Do not translate what's inside the brackets and just put the "
+"translation for the word \"none\" in your language without any brackets. "
+"This \"none\" means \"no kernel\" ]"
+msgstr "なし"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../bootstrap-base.templates:12002
+msgid "Kernel to install:"
+msgstr "インストールするカーネル:"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../bootstrap-base.templates:12002
+msgid ""
+"The list shows the available kernels. Please choose one of them in order to "
+"make the system bootable from the hard drive."
+msgstr ""
+"リストは利用できるカーネルを示しています。ハードドライブからシステムをブート"
+"することができるよう、これらのうちの 1 つを選んでください。"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../bootstrap-base.templates:14001
+msgid "Continue without installing a kernel?"
+msgstr "カーネルをインストールせずに続けますか?"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../bootstrap-base.templates:14001
+msgid "No installable kernel was found in the defined APT sources."
+msgstr ""
+"定義された APT ソースにインストール可能なカーネルが見つかりませんでした。"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../bootstrap-base.templates:14001
+msgid ""
+"You may try to continue without a kernel, and manually install your own "
+"kernel later. This is only recommended for experts, otherwise you will "
+"likely end up with a machine that doesn't boot."
+msgstr ""
+"カーネルなしに続けて、独自のカーネルをあとで手動でインストールしてみることも"
+"できます。これは上級者向けのみに推奨されることで、さもないと、結局起動できな"
+"いマシンを作る結果になるかもしれません。"
+
+#. Type: error
+#. Description
+#. :sl2:
+#: ../bootstrap-base.templates:15001
+msgid "Cannot install kernel"
+msgstr "カーネルをインストールできませんでした"
+
+#. Type: error
+#. Description
+#. :sl2:
+#: ../bootstrap-base.templates:15001
+msgid "The installer cannot find a suitable kernel package to install."
+msgstr ""
+"インストーラはインストールする適切なカーネルパッケージを見つけられませんでし"
+"た。"
+
+#. Type: error
+#. Description
+#. :sl2:
+#: ../bootstrap-base.templates:16001
+msgid "Unable to install ${PACKAGE}"
+msgstr "${PACKAGE} をインストールできません"
+
+#. Type: error
+#. Description
+#. :sl2:
+#: ../bootstrap-base.templates:16001
+msgid ""
+"An error was returned while trying to install the ${PACKAGE} package onto "
+"the target system."
+msgstr ""
+"${PACKAGE} パッケージを対象システムにインストール中にエラーが返されました。"
+
+#. Type: error
+#. Description
+#. :sl2:
+#. SUBST0 is a Release file name.
+#: ../bootstrap-base.templates:17001
+msgid "Failed getting Release file ${SUBST0}."
+msgstr "Release ファイル ${SUBST0} の取得に失敗しました。"
+
+#. Type: error
+#. Description
+#. :sl2:
+#. SUBST0 is a Release.gpg file name
+#: ../bootstrap-base.templates:18001
+msgid "Failed getting Release signature file ${SUBST0}."
+msgstr "Release シグネチャファイル ${SUBST0} の取得に失敗しました。"
+
+#. Type: error
+#. Description
+#. :sl2:
+#. SUBST0 is a gpg key ID
+#: ../bootstrap-base.templates:19001
+msgid "Release file signed by unknown key (key id ${SUBST0})"
+msgstr "Release ファイルは未知のキー (キー ID ${SUBST0}) で署名されています"
+
+#. Type: error
+#. Description
+#. :sl2:
+#: ../bootstrap-base.templates:20001
+msgid "Invalid Release file: no valid components."
+msgstr "無効な Release ファイルです: 有効なコンポーネントがありません。"
+
+#. Type: error
+#. Description
+#. :sl2:
+#. SUBST0 is a filename
+#: ../bootstrap-base.templates:21001
+msgid "Invalid Release file: no entry for ${SUBST0}."
+msgstr "無効な Release ファイルです: ${SUBST0} のエントリがありません。"
+
+#. Type: error
+#. Description
+#. :sl2:
+#. SUBST0 is a filename or package name
+#. Debootstrap is a program name: should not be translated
+#: ../bootstrap-base.templates:22001
+msgid ""
+"Couldn't retrieve ${SUBST0}. This may be due to a network problem or bad "
+"media, depending on your installation method."
+msgstr ""
+"${SUBST0} を取得できません。これは、あなたのインストール方法に依存しますが、"
+"ネットワークの問題か、壊れたメディアといった原因によります。"
+
+#. Type: error
+#. Description
+#. :sl2:
+#. SUBST0 is a filename or package name
+#. Debootstrap is a program name: should not be translated
+#: ../bootstrap-base.templates:22001
+msgid ""
+"If you are installing from CD-R or CD-RW, burning the CD at a lower speed "
+"may help."
+msgstr ""
+"CD-R または CD-RW からインストールしているのであれば、より低速で CD を焼くこ"
+"とが助けになるかもしれません。"
+
+#. Type: error
+#. Description
+#. Debootstrap is a program name: should not be translated
+#. :sl2:
+#: ../bootstrap-base.templates:57001
+msgid "Debootstrap warning"
+msgstr "Debootstrap 警告"
+
+#. Type: error
+#. Description
+#. Debootstrap is a program name: should not be translated
+#. :sl2:
+#: ../bootstrap-base.templates:57001
+msgid "Warning: ${INFO}"
+msgstr "警告: ${INFO}"
+
+#. Type: text
+#. Description
+#. SUBST0 is an url
+#. :sl2:
+#: ../bootstrap-base.templates:58001
+msgid "Retrying failed download of ${SUBST0}"
+msgstr "ダウンロードに失敗した ${SUBST0} を再試行しています"
+
+#. Type: select
+#. Choices
+#. :sl2:
+#: ../cdebconf-udeb.templates:2001
+msgid "critical"
+msgstr "重要"
+
+#. Type: select
+#. Choices
+#. :sl2:
+#: ../cdebconf-udeb.templates:2001
+msgid "high"
+msgstr "高"
+
+#. Type: select
+#. Choices
+#. :sl2:
+#: ../cdebconf-udeb.templates:2001
+msgid "medium"
+msgstr "中"
+
+#. Type: select
+#. Choices
+#. :sl2:
+#: ../cdebconf-udeb.templates:2001
+msgid "low"
+msgstr "低"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../cdebconf-udeb.templates:2002
+msgid "Ignore questions with a priority less than:"
+msgstr "次のものより低い優先度の質問を無視:"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../cdebconf-udeb.templates:2002
+msgid ""
+"Packages that use debconf for configuration prioritize the questions they "
+"might ask you. Only questions with a certain priority or higher are actually "
+"shown to you; all less important questions are skipped."
+msgstr ""
+"設定に debconf を使うパッケージは、あなたに尋ねるべき質問に優先度を付けていま"
+"す。当該の優先度またはより高い優先度の質問のみが実際にあなたに提示されます。"
+"重要度の低い質問は飛ばされます。"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../cdebconf-udeb.templates:2002
+msgid ""
+"You can select the lowest priority of question you want to see:\n"
+" - 'critical' is for items that will probably break the system\n"
+"    without user intervention.\n"
+" - 'high' is for items that don't have reasonable defaults.\n"
+" - 'medium' is for normal items that have reasonable defaults.\n"
+" - 'low' is for trivial items that have defaults that will work in\n"
+"   the vast majority of cases."
+msgstr ""
+"提示したい質問の最低の優先度を選択できます:\n"
+" - '重要' は、ユーザの介在なしには、おそらくシステムが\n"
+"    立ち行かない項目です。\n"
+" - '高' は、妥当なデフォルト値のない項目です。\n"
+" - '中' は、妥当なデフォルト値を持つ通常の項目です。\n"
+" - '低' は、大多数の場面では稼働するデフォルト値を持つ\n"
+"    些細な項目です。"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../cdebconf-udeb.templates:2002
+msgid ""
+"For example, this question is of medium priority, and if your priority were "
+"already 'high' or 'critical', you wouldn't see this question."
+msgstr ""
+"たとえば、この質問は '中' の優先度ですが、もし優先度がすでに '高' あるいは "
+"'重要' になっていたとすると、この質問は目にしないことになります。"
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../cdebconf-priority.templates:1001
+msgid "Change debconf priority"
+msgstr "debconf 優先度の変更"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../choose-mirror-bin.templates-in:3001
+msgid "Debian version to install:"
+msgstr "インストールする Debian バージョン:"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../choose-mirror-bin.templates-in:3001
+msgid ""
+"Debian comes in several flavors. Stable is well-tested and rarely changes. "
+"Unstable is untested and frequently changing. Testing is a middle ground, "
+"that receives many of the new versions from unstable if they are not too "
+"buggy."
+msgstr ""
+"Debian にはいくつかのフレーバーがあります。安定版は十分にテストされ、変更され"
+"ることは滅多にありません。不安定版はテストされておらず、頻繁に更新されます。"
+"テスト版はその中間で、不安定版からバグのひどすぎない新しいバージョンの多くを"
+"取得します。"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../choose-mirror-bin.templates-in:3001
+msgid "Only flavors available on the selected mirror are listed."
+msgstr "選択されたミラーで利用可能なフレーバーのみがリストされます。"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../choose-mirror-bin.templates-in:7001
+msgid "Go back and try a different mirror?"
+msgstr "戻って別のミラーを試しますか?"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../choose-mirror-bin.templates-in:7001
+msgid ""
+"The specified (default) Debian version (${RELEASE}) is not available from "
+"the selected mirror. It is possible to continue and select a different "
+"release for your installation, but normally you should go back and select a "
+"different mirror that does support the correct version."
+msgstr ""
+"指定された (デフォルトの) Debian バージョン (${RELEASE}) は選択されたミラーで"
+"は利用できません。継続して、インストールのために別のリリースを選ぶことは可能"
+"ですが、通常は戻って正しいバージョンをサポートしている別のミラーを選ぶべきで"
+"す。"
+
+#. Type: error
+#. Description
+#. :sl2:
+#: ../choose-mirror-bin.templates-in:8001
+msgid "Bad archive mirror"
+msgstr "正しくないアーカイブミラーです"
+
+#. Type: error
+#. Description
+#. :sl2:
+#: ../choose-mirror-bin.templates-in:8001
+msgid ""
+"An error has been detected while trying to use the specified Debian archive "
+"mirror."
+msgstr ""
+"指定された Debian アーカイブミラー使用の試行中にエラーが検出されました。"
+
+#. Type: error
+#. Description
+#. :sl2:
+#: ../choose-mirror-bin.templates-in:8001
+msgid ""
+"Possible reasons for the error are: incorrect mirror specified; mirror is "
+"not available (possibly due to an unreliable network connection); mirror is "
+"broken (for example because an invalid Release file was found); mirror does "
+"not support the correct Debian version."
+msgstr ""
+"このエラーの考えられる原因は、不正なミラー指定、ミラーが利用できない状態 (お"
+"そらく不安定なネットワーク接続によるもの)、ミラーが壊れている (たとえば無効"
+"な Release ファイルが発見された)、ミラーが正しい Debian バージョンをサポート"
+"していない、といったものです。"
+
+#. Type: error
+#. Description
+#. :sl2:
+#: ../choose-mirror-bin.templates-in:8001
+msgid ""
+"Additional details may be available in /var/log/syslog or on virtual console "
+"4."
+msgstr ""
+"詳細については /var/log/syslog または仮想コンソール 4 が参考になるでしょう。"
+
+#. Type: error
+#. Description
+#. :sl2:
+#: ../choose-mirror-bin.templates-in:8001
+msgid "Please check the specified mirror or try a different one."
+msgstr "指定されたミラーを確認するか、別のミラーを試してください。"
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../choose-mirror-bin.templates-in:10001
+msgid "oldstable"
+msgstr "旧安定版"
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../choose-mirror-bin.templates-in:11001
+msgid "stable"
+msgstr "安定版"
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../choose-mirror-bin.templates-in:12001
+msgid "testing"
+msgstr "テスト版"
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../choose-mirror-bin.templates-in:13001
+msgid "unstable"
+msgstr "不安定版"
+
+#. Type: string
+#. Description
+#. :sl2:
+#: ../choose-mirror-bin.templates.http-in:5001
+#: ../choose-mirror-bin.templates.ftp.base-in:3001
+msgid "Debian archive mirror directory:"
+msgstr "Debian アーカイブミラーディレクトリ:"
+
+#. Type: string
+#. Description
+#. :sl2:
+#: ../choose-mirror-bin.templates.http-in:5001
+#: ../choose-mirror-bin.templates.ftp.base-in:3001
+msgid ""
+"Please enter the directory in which the mirror of the Debian archive is "
+"located."
+msgstr "Debian アーカイブミラーの置かれているディレクトリを入力してください。"
+
+#. Type: string
+#. Description
+#. :sl2:
+#: ../choose-mirror-bin.templates.ftp.base-in:4001
+msgid "FTP proxy information (blank for none):"
+msgstr "FTP プロキシの情報 (なければ空):"
+
+#. Type: string
+#. Description
+#. :sl2:
+#: ../choose-mirror-bin.templates.ftp.base-in:4001
+msgid ""
+"If you need to use a FTP proxy to access the outside world, enter the proxy "
+"information here. Otherwise, leave this blank."
+msgstr ""
+"外の世界にアクセスするのに FTP プロキシを使う必要があるなら、プロキシ情報をこ"
+"こに入力します。そうでないなら空のままにしておきます。"
+
+#. Type: select
+#. Default
+#. Translators, you should put here the ISO 3166 code of a country
+#. which you know hosts at least one Debian FTP mirror. Please check
+#. that the country really has a Debian FTP mirror before putting a
+#. random value here
+#.
+#. First check that the country you mention here is listed in
+#. https://salsa.debian.org/mirror-team/masterlist/-/blob/master/Mirrors.masterlist
+#.
+#. BE CAREFUL to use the TWO LETTER ISO-3166 CODE and not anything else
+#.
+#. You do not need to translate what's between the square brackets
+#. You should even NOT put square brackets in translations:
+#. msgid "US[ Default value for ftp]"
+#. msgstr "FR"
+#. :sl2:
+#: ../choose-mirror-bin.templates.ftp.sel-in:2002
+msgid "US[ Default value for ftp]"
+msgstr "JP"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../choose-mirror-bin.templates.ftp.sel-in:3001
+msgid "Usually, ftp.<your country code>.debian.org is a good choice."
+msgstr "通常、ftp.<あなたの国コード>.debian.org が良い選択です。"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../choose-mirror-bin.templates.both-in:2001
+msgid "Protocol for file downloads:"
+msgstr "ファイルをダウンロードするプロトコル:"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../choose-mirror-bin.templates.both-in:2001
+msgid ""
+"Please select the protocol to be used for downloading files. If unsure, "
+"select \"http\"; it is less prone to problems involving firewalls."
+msgstr ""
+"ファイルをダウンロードするのに使うプロトコルを選択してください。よくわからな"
+"いのであれば、\"http\" を選んでください。これは、ファイアウォールを伴ったとき"
+"に問題が比較的少ないものです。"
 
 #. Type: select
 #. Description
@@ -481,6 +1312,15 @@ msgstr ""
 "テキストコンソールでは、コンポーズキーは Unicode モードでは動作しません。"
 "Unicode モードでなければ、ここで何を選択するにせよ、Control + ピリオドの組み"
 "合わせをコンポーズキーのひとつとして常に利用できます。"
+
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep it under 65 columns
+#. :sl2:
+#: ../cdrom-checker.templates:12001
+msgid "Check the integrity of installation media"
+msgstr "インストールメディアの完全性を確認"
 
 #. Type: boolean
 #. Description
@@ -693,6 +1533,393 @@ msgstr ""
 #: ../cdrom-detect.templates:20001
 msgid "Detect and mount installation media"
 msgstr "インストールメディアの検出とマウント"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../cdrom-retriever.templates:1001
+msgid "Failed to copy file from installation media. Retry?"
+msgstr ""
+"インストールメディアからのファイルのコピーに失敗しました。再試行しますか?"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../cdrom-retriever.templates:1001
+msgid ""
+"There was a problem reading data. Please make sure you have inserted the "
+"installation media correctly. If retrying does not work, you should check "
+"the integrity of your installation media (there is an associated entry in "
+"the main menu for that)."
+msgstr ""
+"データの読み込み中に問題が発生しました。インストールメディアが正しく挿入され"
+"ていることを確認してください。再試行でうまくいかないようであれば、あなたのイ"
+"ンストールメディアの完全性をチェックしてください (メインメニューにそのための"
+"関連するエントリがあります)。"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../clock-setup.templates:5001
+msgid "Set the clock using NTP?"
+msgstr "NTP を使って時刻を設定しますか?"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../clock-setup.templates:5001
+msgid ""
+"The Network Time Protocol (NTP) can be used to set the system's clock. Your "
+"system works best with a correctly set clock."
+msgstr ""
+"Network Time Protocol (NTP) を、システムの時刻を設定するのに使えます。時刻を"
+"正しく設定することで、あなたのシステムは安全に動作します。"
+
+#. Type: string
+#. Description
+#. :sl2:
+#: ../clock-setup.templates:6001
+msgid "NTP server to use:"
+msgstr "利用する NTP サーバ:"
+
+#. Type: string
+#. Description
+#. :sl2:
+#: ../clock-setup.templates:6001
+msgid ""
+"The default NTP server is almost always a good choice, but if you prefer to "
+"use another NTP server, you can enter it here."
+msgstr ""
+"デフォルトの NTP サーバはほとんどの場合、最適な選択肢ですが、別の NTP サーバ"
+"を使いたいのであればそれをここで入力できます。"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../clock-setup.templates:9001
+msgid "Wait another 30 seconds for hwclock to set the clock?"
+msgstr "hwclock の時刻を設定するのにさらに 30 秒待ちますか?"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../clock-setup.templates:9001
+msgid ""
+"Setting the hardware clock is taking longer than expected. The 'hwclock' "
+"program used to set the clock may have problems talking to the hardware "
+"clock."
+msgstr ""
+"ハードウェア時刻の設定に、予想よりも長くかかっています。時刻を設定するのに使"
+"われる 'hwclock' プログラムがハードウェア時刻とやり取りする際に、問題が発生し"
+"ている可能性があります。"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../clock-setup.templates:9001
+msgid ""
+"If you choose to not wait for hwclock to finish setting the clock, this "
+"system's clock may not be set correctly."
+msgstr ""
+"時刻の設定が完了するまで hwclock を待たないように選択すると、このシステムの時"
+"刻はおそらく正しく設定されません。"
+
+#. Type: note
+#. Description
+#. :sl2:
+#. Type: text
+#. Description
+#. :sl2:
+#: ../di-utils-shell.templates:1001 ../di-utils.templates:5001
+msgid "Interactive shell"
+msgstr "インタラクティブシェル"
+
+#. Type: note
+#. Description
+#. :sl2:
+#: ../di-utils-shell.templates:1001
+msgid "After this message, you will be running \"ash\", a Bourne-shell clone."
+msgstr "このメッセージのあと、Bourne シェルクローンの \"ash\" が実行されます。"
+
+#. Type: note
+#. Description
+#. :sl2:
+#: ../di-utils-shell.templates:1001
+msgid ""
+"The root file system is a RAM disk. The hard disk file systems are mounted "
+"on \"/target\". The editor available to you is nano. It's very small and "
+"easy to figure out. To get an idea of what Unix utilities are available to "
+"you, use the \"help\" command."
+msgstr ""
+"ルートファイルシステムは RAM ディスクです。ハードディスクファイルシステムは "
+"\"/target\" にマウントされています。利用できるエディタは nano です。これは非"
+"常に小さく理解するのが簡単なものです。利用可能な Unix ユーティリティが何か知"
+"りたいときは、\"help\" コマンドを使ってください。"
+
+#. Type: note
+#. Description
+#. :sl2:
+#: ../di-utils-shell.templates:1001
+msgid "Use the \"exit\" command to return to the installation menu."
+msgstr "インストールメニューに戻るには \"exit\" コマンドを使います。"
+
+#. Type: text
+#. Description
+#. Main menu item
+#. The translation should not exceed 55 columns except for languages
+#. that are only supported in the graphical version of the installer
+#. :sl2:
+#: ../di-utils-exit-installer.templates:1001
+msgid "Exit installer"
+msgstr "インストーラの終了"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../di-utils-reboot.templates:1001
+msgid "Are you sure you want to exit now?"
+msgstr "本当に今すぐ終了しますか?"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../di-utils-reboot.templates:1001
+msgid ""
+"If you have not finished the install, your system may be left in an unusable "
+"state."
+msgstr ""
+"インストールをまだ終えていないのであれば、あなたのシステムは不安定な状態に置"
+"かれている可能性があります。"
+
+#. Type: error
+#. Description
+#. :sl2:
+#: ../di-utils.templates:6001
+msgid "Terminal plugin not available"
+msgstr "端末プラグインは利用できません"
+
+#. Type: error
+#. Description
+#. :sl2:
+#: ../di-utils.templates:6001
+msgid ""
+"This build of the debian-installer requires the terminal plugin in order to "
+"display a shell. Unfortunately, this plugin is currently unavailable."
+msgstr ""
+"シェルを表示するためにこの debian-installer のビルドは端末プラグインを必要と"
+"します。しかし、このプラグインは現在利用できません。"
+
+#. Type: error
+#. Description
+#. :sl2:
+#: ../di-utils.templates:6001
+msgid ""
+"It should be available after reaching the \"Loading additional components\" "
+"installation step."
+msgstr ""
+"\"追加コンポーネントをロードしています\" のインストール段階に到達してから利用"
+"できるはずです。"
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../di-utils.templates:7001
+msgid ""
+"Alternatively, you can open a shell by pressing Ctrl+Alt+F2. Use Alt+F5 to "
+"get back to the installer."
+msgstr ""
+"別の方法として、Ctrl+Alt+F2 を押してシェルを開くことができます。インストーラ"
+"に戻るには、Alt+F5 を使います。"
+
+#. Type: error
+#. Description
+#. :sl3:
+#. Type: error
+#. Description
+#. :sl3:
+#. Type: error
+#. Description
+#. :sl2:
+#: ../grub-installer.templates:4001 ../grub-installer.templates:6001
+#: ../grub-installer.templates:15001
+msgid "Unable to configure GRUB"
+msgstr "GRUB の設定ができません"
+
+#. Type: string
+#. Description
+#. :sl2:
+#. Type: select
+#. Description
+#. :sl2:
+#: ../grub-installer.templates:7001 ../grub-installer.templates:8002
+msgid "Device for boot loader installation:"
+msgstr "ブートローダをインストールするデバイス:"
+
+#. Type: string
+#. Description
+#. :sl2:
+#. Type: select
+#. Description
+#. :sl2:
+#: ../grub-installer.templates:7001 ../grub-installer.templates:8002
+msgid ""
+"You need to make the newly installed system bootable, by installing the GRUB "
+"boot loader on a bootable device. The usual way to do this is to install "
+"GRUB to your primary drive (UEFI partition/boot record). You may instead "
+"install GRUB to a different drive (or partition), or to removable media."
+msgstr ""
+"GRUB ブートローダを起動可能デバイスにインストールして、新しくインストールされ"
+"たシステムを起動可能にするときがきました。通常のやり方は、GRUB をプライマリド"
+"ライブにインストールするというものです (UEFI パーティション/ブートレコード)。"
+"代わりに GRUB を別のドライブ (またはパーティション)、あるいはリムーバブルメ"
+"ディアにインストールすることができます。"
+
+#. Type: string
+#. Description
+#. :sl2:
+#: ../grub-installer.templates:7001
+msgid ""
+"The device notation should be specified as a device in /dev. Below are some "
+"examples:\n"
+" - \"/dev/sda\" will install GRUB to your primary drive (UEFI partition/"
+"boot\n"
+"   record);\n"
+" - \"/dev/sdb\" will install GRUB to a secondary drive (which may for "
+"instance\n"
+"   be a thumbdrive);\n"
+" - \"/dev/fd0\" will install GRUB to a floppy."
+msgstr ""
+"デバイス記法は、/dev 以下のデバイスとして指定してください。例を以下に示しま"
+"す:\n"
+" - \"/dev/sda\" は GRUB を プライマリドライブ (UEFIパーティション/ブートレ"
+"コード) に\n"
+"   インストールします。\n"
+" - \"/dev/sdb\" は GRUB を セカンダリドライブ (例えばUSBフラッシュメモリな"
+"ど) に\n"
+"   インストールします。\n"
+" - \"/dev/fd0\" は GRUB をフロッピーにインストールします。"
+
+#. Type: password
+#. Description
+#. :sl2:
+#: ../grub-installer.templates:9001
+msgid "GRUB password:"
+msgstr "GRUB パスワード:"
+
+#. Type: password
+#. Description
+#. :sl2:
+#: ../grub-installer.templates:9001
+msgid ""
+"The GRUB boot loader offers many powerful interactive features, which could "
+"be used to compromise your system if unauthorized users have access to the "
+"machine when it is starting up. To defend against this, you may choose a "
+"password which will be required before editing menu entries or entering the "
+"GRUB command-line interface. By default, any user will still be able to "
+"start any menu entry without entering the password."
+msgstr ""
+"GRUB ブートローダは多くの強力なインタラクティブ機能を提供しますが、起動時に承"
+"認されていないユーザがマシンへのアクセスを持ったときにはあなたのシステムを侵"
+"害するのに使われかねません。これを防ぐために、メニューのエントリの編集やGRUB "
+"コマンドラインインターフェイスに入る前に必須とするパスワードを選択できます。"
+"デフォルトでは、すべてのユーザはパスワードの入力なしにどのメニューエントリで"
+"もまだ開始できます。"
+
+#. Type: password
+#. Description
+#. :sl2:
+#: ../grub-installer.templates:9001
+msgid "If you do not wish to set a GRUB password, leave this field blank."
+msgstr "GRUB パスワードを設定するつもりがなければ、空のままにしておきます。"
+
+#. Type: password
+#. Description
+#. :sl2:
+#: ../grub-installer.templates:10001
+msgid ""
+"Please enter the same GRUB password again to verify that you have typed it "
+"correctly."
+msgstr ""
+"確認のために、先ほど入力した同じ GRUB のパスワードを再度入力してください。"
+
+#. Type: error
+#. Description
+#. :sl2:
+#: ../grub-installer.templates:11001 ../user-setup-udeb.templates:15001
+msgid "Password input error"
+msgstr "パスワード入力エラー"
+
+#. Type: error
+#. Description
+#. :sl2:
+#: ../grub-installer.templates:11001 ../user-setup-udeb.templates:15001
+msgid "The two passwords you entered were not the same. Please try again."
+msgstr "2回入力されたパスワードは同じではありません。再度入力してください。"
+
+#. Type: error
+#. Description
+#. :sl2:
+#: ../grub-installer.templates:13001
+msgid "GRUB installation failed"
+msgstr "GRUB のインストールに失敗しました"
+
+#. Type: error
+#. Description
+#. :sl2:
+#: ../grub-installer.templates:13001
+msgid ""
+"The '${GRUB}' package failed to install into /target/. Without the GRUB boot "
+"loader, the installed system will not boot."
+msgstr ""
+"'${GRUB}' パッケージを /target/ にインストールするのに失敗しました。GRUB ブー"
+"トローダなしでは、インストールしたシステムは起動しません。"
+
+#. Type: error
+#. Description
+#. :sl2:
+#: ../grub-installer.templates:14001
+msgid "Unable to install GRUB in ${BOOTDEV}"
+msgstr "GRUB を ${BOOTDEV} にインストールできません"
+
+#. Type: error
+#. Description
+#. :sl2:
+#: ../grub-installer.templates:14001
+msgid "Executing 'grub-install ${BOOTDEV}' failed."
+msgstr "'grub-install ${BOOTDEV}' の実行に失敗しました。"
+
+#. Type: error
+#. Description
+#. :sl2:
+#. Type: error
+#. Description
+#. :sl2:
+#: ../grub-installer.templates:14001 ../grub-installer.templates:15001
+msgid "This is a fatal error."
+msgstr "これは致命的なエラーです。"
+
+#. Type: error
+#. Description
+#. :sl2:
+#: ../grub-installer.templates:15001
+msgid "Executing 'update-grub' failed."
+msgstr "'update-grub' の実行に失敗しました。"
+
+#. Type: text
+#. Description
+#. Rescue menu item
+#. :sl2:
+#: ../grub-installer.templates:29001
+msgid "Reinstall GRUB boot loader"
+msgstr "GRUB ブートローダの再インストール"
+
+#. Type: text
+#. Description
+#. Rescue menu item
+#. :sl2:
+#: ../grub-installer.templates:33001
+msgid "Force GRUB installation to the EFI removable media path"
+msgstr "EFI リムーバブルメディアパスへの強制 GRUB インストール"
 
 #. Type: select
 #. Choices
@@ -925,6 +2152,338 @@ msgstr ""
 #: ../hw-detect.templates:11001
 msgid "The missing firmware files are: ${FILES}"
 msgstr "見つからないファームウェアファイル: ${FILES}"
+
+#. Type: select
+#. Choices
+#. Possible locations for debug logs to be saved
+#. :sl2:
+#: ../save-logs.templates:2001
+msgid "floppy"
+msgstr "フロッピー"
+
+#. Type: select
+#. Choices
+#. Possible locations for debug logs to be saved
+#. :sl2:
+#: ../save-logs.templates:2001
+msgid "web"
+msgstr "Web"
+
+#. Type: select
+#. Choices
+#. Possible locations for debug logs to be saved
+#. :sl2:
+#: ../save-logs.templates:2001
+msgid "mounted file system"
+msgstr "マウント済みファイルシステム"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../save-logs.templates:2002
+msgid "How should the debug logs be saved or transferred?"
+msgstr "デバッグログをどのように保存または転送しますか?"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../save-logs.templates:2002
+msgid ""
+"Debugging log files for the installer can be saved to floppy, served up over "
+"the web, or saved to a mounted file system."
+msgstr ""
+"インストーラのデバッグログファイルは、フロッピーに保存するか、Web を経由して"
+"送るか、あるいはマウント済みファイルシステムに保存できます。"
+
+#. Type: string
+#. Description
+#. :sl2:
+#: ../save-logs.templates:3001
+msgid "Directory in which to save debug logs:"
+msgstr "デバッグログを保存するディレクトリ:"
+
+#. Type: string
+#. Description
+#. :sl2:
+#: ../save-logs.templates:3001
+msgid ""
+"Please make sure the file system you want to save debug logs on is mounted "
+"before you continue."
+msgstr ""
+"続ける前に、デバッグログを保存したいファイルシステムがマウントされていること"
+"を確認してください。"
+
+#. Type: error
+#. Description
+#. :sl2:
+#: ../save-logs.templates:4001
+msgid "Cannot save logs"
+msgstr "ログを保存できません"
+
+#. Type: error
+#. Description
+#. :sl2:
+#: ../save-logs.templates:4001
+msgid "The directory \"${DIR}\" does not exist."
+msgstr "ディレクトリ \"${DIR}\" は存在しません。"
+
+#. Type: note
+#. Description
+#. :sl2:
+#: ../save-logs.templates:7001
+msgid "Insert formatted floppy in drive"
+msgstr "ドライブにフォーマット済みのフロッピーを挿入してください"
+
+#. Type: note
+#. Description
+#. :sl2:
+#: ../save-logs.templates:7001
+msgid "Log files and debug info will be copied into this floppy."
+msgstr "ログファイルとデバッグ情報がこのフロッピーにコピーされます。"
+
+#. Type: note
+#. Description
+#. :sl2:
+#: ../save-logs.templates:7001
+msgid ""
+"The information will also be stored in /var/log/installer/ on the installed "
+"system."
+msgstr ""
+"情報はインストールされたシステムの /var/log/installer/ にも格納されます。"
+
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl2:
+#: ../load-iso.templates:1001
+msgid "Load installer components from an installer ISO"
+msgstr "インストーラ ISO イメージからインストーラコンポーネントをロード"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../localechooser.templates-in:4001
+msgid "System locale:"
+msgstr "システムロケール:"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../localechooser.templates-in:4001
+msgid "Select the default locale for the installed system."
+msgstr "インストールされるシステムのデフォルトのロケールを選択してください。"
+
+#. Type: multiselect
+#. Description
+#. :sl2:
+#: ../localechooser.templates-in:32001
+msgid "Additional locales:"
+msgstr "追加のロケール:"
+
+#. Type: multiselect
+#. Description
+#. :sl2:
+#: ../localechooser.templates-in:32001
+msgid ""
+"Based on your previous choices, the default locale currently selected for "
+"the installed system is '${LOCALE}'."
+msgstr ""
+"前の選択に基づくと、インストールされるシステムの現在のデフォルトのロケールは "
+"'${LOCALE}' です。"
+
+#. Type: multiselect
+#. Description
+#. :sl2:
+#: ../localechooser.templates-in:32001
+msgid ""
+"If you wish to use a different default or to also have other locales "
+"available, you may choose additional locales to be installed. If you are "
+"unsure it is best to just use the selected default."
+msgstr ""
+"異なるデフォルトを使いたいか、その他のロケールも利用可能にしたいなら、追加の"
+"ロケールのインストールを選ぶことができます。よくわからなければ、選択されたデ"
+"フォルトを単に利用するのが最適です。"
+
+#. Type: note
+#. Description
+#. :sl2:
+#: ../localechooser.templates-in:34001
+msgid "locale"
+msgstr "ロケール"
+
+#. Type: note
+#. Description
+#. :sl2:
+#: ../localechooser.templates-in:34001
+msgid ""
+"A locale determines character encoding and contains information on for "
+"example currency, date format and alphabetical sort order."
+msgstr ""
+"ロケールは文字エンコーディングを決定し、通貨、日付書式、文字の整列順序といっ"
+"た情報を含んでいます。"
+
+#. Type: error
+#. Description
+#. :sl2:
+#: ../main-menu.templates:3001
+msgid "Installation step failed"
+msgstr "インストールステップが失敗しました"
+
+#. Type: error
+#. Description
+#. :sl2:
+#: ../main-menu.templates:3001
+msgid ""
+"An installation step failed. You can try to run the failing item again from "
+"the menu, or skip it and choose something else. The failing step is: ${ITEM}"
+msgstr ""
+"インストールステップが失敗しました。メニューから失敗した項目を再度実行する"
+"か、スキップするか、別のものを選択するかできます。失敗したステップは次の項目"
+"です: ${ITEM}"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../main-menu.templates:4001
+msgid "Choose an installation step:"
+msgstr "インストールステップの選択:"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../main-menu.templates:4001
+msgid ""
+"This installation step depends on one or more other steps that have not yet "
+"been performed."
+msgstr ""
+"このインストールステップはまだ行われていない 1 つ以上のほかのステップを必要と"
+"します。"
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../media-retriever.templates:1001
+msgid "Scanning removable media"
+msgstr "リムーバブルメディアを走査しています"
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../media-retriever.templates:2001
+msgid "Cannot read removable media, or no drivers found."
+msgstr "リムーバブルメディアを読み取れないか、ドライバが見つかりません。"
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../media-retriever.templates:2001
+msgid ""
+"There was a problem reading data from the removable media. Please make sure "
+"that the right media is present. If you continue to have trouble, your "
+"removable media might be bad."
+msgstr ""
+"リムーバブルメディアからデータの読み込み中に問題が発生しました。正しいメディ"
+"アであることを確認してください。問題がまだ続くようなら、リムーバブルメディア"
+"がおかしいのでしょう。"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:1001
+msgid "Load drivers from removable media now?"
+msgstr "ドライバをリムーバブルメディアから今ロードしますか?"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:1001
+msgid ""
+"You probably need to load drivers from removable media before continuing "
+"with the installation. If you know that the install will work without extra "
+"drivers, you can skip this step."
+msgstr ""
+"インストールを続ける前に、おそらくリムーバブルメディアからドライバをロードす"
+"る必要があります。追加ドライバなしにインストールが動作するとわかっているとき"
+"には、このステップは省略できます。"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:1001
+msgid ""
+"If you do need to load drivers, insert the appropriate removable media, such "
+"as a driver floppy or USB stick before continuing."
+msgstr ""
+"ドライバのロードを選ぶ場合、続ける前に適切なリムーバブルメディア (ドライバフ"
+"ロッピーや USB メモリなど) を挿入してください。"
+
+#. Type: text
+#. Description
+#. main-menu item
+#. Translators: keep below 55 columns
+#. :sl2:
+#: ../load-media.templates:2001
+msgid "Load drivers from removable media"
+msgstr "ドライバをリムーバブルメディアからロード"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:3001
+msgid "Unknown removable media. Try to load anyway?"
+msgstr "未知のリムーバブルメディアです。それでもロードを試みますか?"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:3001
+msgid ""
+"Detected removable media that is not a known driver media. Please make sure "
+"that the correct media is inserted. You can still continue if you have an "
+"unofficial removable media you want to use."
+msgstr ""
+"リムーバブルメディアは既知のドライバメディアではありません。正しいメディアが"
+"挿入されていることを確認してください。非公式のリムーバブルメディアを利用した"
+"いのであれば、このまま継続できます。"
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../load-media.templates:4001
+msgid "Please insert ${DISK_LABEL} ('${DISK_NAME}') first."
+msgstr "${DISK_LABEL} ('${DISK_NAME}') を最初に挿入してください。"
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../load-media.templates:4001
+msgid ""
+"Due to dependencies between packages, drivers must be loaded in the correct "
+"order."
+msgstr ""
+"パッケージ間の依存関係のために、ドライバは正しい順序でロードされなければなり"
+"ません。"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:5001
+msgid "Load drivers from another removable media?"
+msgstr "ドライバを別のリムーバブルメディアからロードしますか?"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../load-media.templates:5001
+msgid ""
+"To load additional drivers from another removable media, please insert the "
+"appropriate removable media, such as a driver floppy or USB stick before "
+"continuing."
+msgstr ""
+"ほかのリムーバブルメディアから追加ドライバをロードするためには、続ける前に適"
+"切なリムーバブルメディア (ドライバフロッピーや USB メモリなど) を挿入してくだ"
+"さい。"
 
 #. Type: string
 #. Description
@@ -1548,217 +3107,6 @@ msgstr ""
 "入力された IP アドレス、ネットマスク、ゲートウェイのどこかにエラーがありま"
 "す。"
 
-#. Type: select
-#. Description
-#. :sl2:
-#: ../choose-mirror-bin.templates-in:3001
-msgid "Debian version to install:"
-msgstr "インストールする Debian バージョン:"
-
-#. Type: select
-#. Description
-#. :sl2:
-#: ../choose-mirror-bin.templates-in:3001
-msgid ""
-"Debian comes in several flavors. Stable is well-tested and rarely changes. "
-"Unstable is untested and frequently changing. Testing is a middle ground, "
-"that receives many of the new versions from unstable if they are not too "
-"buggy."
-msgstr ""
-"Debian にはいくつかのフレーバーがあります。安定版は十分にテストされ、変更され"
-"ることは滅多にありません。不安定版はテストされておらず、頻繁に更新されます。"
-"テスト版はその中間で、不安定版からバグのひどすぎない新しいバージョンの多くを"
-"取得します。"
-
-#. Type: select
-#. Description
-#. :sl2:
-#: ../choose-mirror-bin.templates-in:3001
-msgid "Only flavors available on the selected mirror are listed."
-msgstr "選択されたミラーで利用可能なフレーバーのみがリストされます。"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../choose-mirror-bin.templates-in:7001
-msgid "Go back and try a different mirror?"
-msgstr "戻って別のミラーを試しますか?"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../choose-mirror-bin.templates-in:7001
-msgid ""
-"The specified (default) Debian version (${RELEASE}) is not available from "
-"the selected mirror. It is possible to continue and select a different "
-"release for your installation, but normally you should go back and select a "
-"different mirror that does support the correct version."
-msgstr ""
-"指定された (デフォルトの) Debian バージョン (${RELEASE}) は選択されたミラーで"
-"は利用できません。継続して、インストールのために別のリリースを選ぶことは可能"
-"ですが、通常は戻って正しいバージョンをサポートしている別のミラーを選ぶべきで"
-"す。"
-
-#. Type: error
-#. Description
-#. :sl2:
-#: ../choose-mirror-bin.templates-in:8001
-msgid "Bad archive mirror"
-msgstr "正しくないアーカイブミラーです"
-
-#. Type: error
-#. Description
-#. :sl2:
-#: ../choose-mirror-bin.templates-in:8001
-msgid ""
-"An error has been detected while trying to use the specified Debian archive "
-"mirror."
-msgstr ""
-"指定された Debian アーカイブミラー使用の試行中にエラーが検出されました。"
-
-#. Type: error
-#. Description
-#. :sl2:
-#: ../choose-mirror-bin.templates-in:8001
-msgid ""
-"Possible reasons for the error are: incorrect mirror specified; mirror is "
-"not available (possibly due to an unreliable network connection); mirror is "
-"broken (for example because an invalid Release file was found); mirror does "
-"not support the correct Debian version."
-msgstr ""
-"このエラーの考えられる原因は、不正なミラー指定、ミラーが利用できない状態 (お"
-"そらく不安定なネットワーク接続によるもの)、ミラーが壊れている (たとえば無効"
-"な Release ファイルが発見された)、ミラーが正しい Debian バージョンをサポート"
-"していない、といったものです。"
-
-#. Type: error
-#. Description
-#. :sl2:
-#: ../choose-mirror-bin.templates-in:8001
-msgid ""
-"Additional details may be available in /var/log/syslog or on virtual console "
-"4."
-msgstr ""
-"詳細については /var/log/syslog または仮想コンソール 4 が参考になるでしょう。"
-
-#. Type: error
-#. Description
-#. :sl2:
-#: ../choose-mirror-bin.templates-in:8001
-msgid "Please check the specified mirror or try a different one."
-msgstr "指定されたミラーを確認するか、別のミラーを試してください。"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../choose-mirror-bin.templates-in:10001
-msgid "oldstable"
-msgstr "旧安定版"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../choose-mirror-bin.templates-in:11001
-msgid "stable"
-msgstr "安定版"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../choose-mirror-bin.templates-in:12001
-msgid "testing"
-msgstr "テスト版"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../choose-mirror-bin.templates-in:13001
-msgid "unstable"
-msgstr "不安定版"
-
-#. Type: string
-#. Description
-#. :sl2:
-#: ../choose-mirror-bin.templates.http-in:5001
-#: ../choose-mirror-bin.templates.ftp.base-in:3001
-msgid "Debian archive mirror directory:"
-msgstr "Debian アーカイブミラーディレクトリ:"
-
-#. Type: string
-#. Description
-#. :sl2:
-#: ../choose-mirror-bin.templates.http-in:5001
-#: ../choose-mirror-bin.templates.ftp.base-in:3001
-msgid ""
-"Please enter the directory in which the mirror of the Debian archive is "
-"located."
-msgstr "Debian アーカイブミラーの置かれているディレクトリを入力してください。"
-
-#. Type: string
-#. Description
-#. :sl2:
-#: ../choose-mirror-bin.templates.ftp.base-in:4001
-msgid "FTP proxy information (blank for none):"
-msgstr "FTP プロキシの情報 (なければ空):"
-
-#. Type: string
-#. Description
-#. :sl2:
-#: ../choose-mirror-bin.templates.ftp.base-in:4001
-msgid ""
-"If you need to use a FTP proxy to access the outside world, enter the proxy "
-"information here. Otherwise, leave this blank."
-msgstr ""
-"外の世界にアクセスするのに FTP プロキシを使う必要があるなら、プロキシ情報をこ"
-"こに入力します。そうでないなら空のままにしておきます。"
-
-#. Type: select
-#. Default
-#. Translators, you should put here the ISO 3166 code of a country
-#. which you know hosts at least one Debian FTP mirror. Please check
-#. that the country really has a Debian FTP mirror before putting a
-#. random value here
-#.
-#. First check that the country you mention here is listed in
-#. https://salsa.debian.org/mirror-team/masterlist/-/blob/master/Mirrors.masterlist
-#.
-#. BE CAREFUL to use the TWO LETTER ISO-3166 CODE and not anything else
-#.
-#. You do not need to translate what's between the square brackets
-#. You should even NOT put square brackets in translations:
-#. msgid "US[ Default value for ftp]"
-#. msgstr "FR"
-#. :sl2:
-#: ../choose-mirror-bin.templates.ftp.sel-in:2002
-msgid "US[ Default value for ftp]"
-msgstr "JP"
-
-#. Type: select
-#. Description
-#. :sl2:
-#: ../choose-mirror-bin.templates.ftp.sel-in:3001
-msgid "Usually, ftp.<your country code>.debian.org is a good choice."
-msgstr "通常、ftp.<あなたの国コード>.debian.org が良い選択です。"
-
-#. Type: select
-#. Description
-#. :sl2:
-#: ../choose-mirror-bin.templates.both-in:2001
-msgid "Protocol for file downloads:"
-msgstr "ファイルをダウンロードするプロトコル:"
-
-#. Type: select
-#. Description
-#. :sl2:
-#: ../choose-mirror-bin.templates.both-in:2001
-msgid ""
-"Please select the protocol to be used for downloading files. If unsure, "
-"select \"http\"; it is less prone to problems involving firewalls."
-msgstr ""
-"ファイルをダウンロードするのに使うプロトコルを選択してください。よくわからな"
-"いのであれば、\"http\" を選んでください。これは、ファイアウォールを伴ったとき"
-"に問題が比較的少ないものです。"
-
 #. Type: text
 #. Description
 #. Main menu item
@@ -1767,46 +3115,6 @@ msgstr ""
 #: ../download-installer.templates:1001
 msgid "Download installer components"
 msgstr "インストーラコンポーネントのダウンロード"
-
-#. #-#-#-#-#  templates.pot (net-retriever)  #-#-#-#-#
-#. Type: select
-#. Choices
-#. These are choices of actions so this is, at least in English,
-#. an infinitive form
-#. :sl2:
-#. #-#-#-#-#  templates.pot (apt-setup)  #-#-#-#-#
-#. Type: select
-#. Choices
-#. :sl2:
-#. These are choices of actions so this is, at least in English,
-#. an infinitive form
-#: ../net-retriever.templates:1001 ../apt-setup-udeb.templates:8001
-#: ../apt-mirror-setup.templates:4001
-msgid "Retry"
-msgstr "再試行"
-
-#. #-#-#-#-#  templates.pot (net-retriever)  #-#-#-#-#
-#. Type: select
-#. Choices
-#. These are choices of actions so this is, at least in English,
-#. an infinitive form
-#. :sl2:
-#. #-#-#-#-#  templates.pot (apt-setup)  #-#-#-#-#
-#. Type: select
-#. Choices
-#. :sl2:
-#. These are choices of actions so this is, at least in English,
-#. an infinitive form
-#: ../net-retriever.templates:1001 ../apt-mirror-setup.templates:4001
-msgid "Change mirror"
-msgstr "ミラーの変更"
-
-#. Type: select
-#. Description
-#. :sl2:
-#: ../net-retriever.templates:1002 ../apt-mirror-setup.templates:4002
-msgid "Downloading a file failed:"
-msgstr "ファイルのダウンロード中に失敗しました:"
 
 #. Type: select
 #. Description
@@ -1823,153 +3131,130 @@ msgstr ""
 "行、別のミラーの選択、あるいはキャンセルして別のインストール方法の選択から選"
 "ぶことができます。"
 
-#. Type: boolean
+#. #-#-#-#-#  templates.pot (network-console)  #-#-#-#-#
+#. Type: error
+#. Description
+#. :sl3:
+#. #-#-#-#-#  templates.pot (partman-iscsi)  #-#-#-#-#
+#. Type: error
+#. Description
+#. :sl3:
+#. #-#-#-#-#  templates.pot (user-setup)  #-#-#-#-#
+#. Type: error
 #. Description
 #. :sl2:
-#: ../cdrom-retriever.templates:1001
-msgid "Failed to copy file from installation media. Retry?"
-msgstr ""
-"インストールメディアからのファイルのコピーに失敗しました。再試行しますか?"
+#: ../network-console.templates:6001 ../partman-iscsi.templates:8001
+#: ../user-setup-udeb.templates:16001
+msgid "Empty password"
+msgstr "空のパスワード"
 
-#. Type: boolean
+#. #-#-#-#-#  templates.pot (network-console)  #-#-#-#-#
+#. Type: error
+#. Description
+#. :sl3:
+#. #-#-#-#-#  templates.pot (partman-iscsi)  #-#-#-#-#
+#. Type: error
+#. Description
+#. :sl3:
+#. #-#-#-#-#  templates.pot (user-setup)  #-#-#-#-#
+#. Type: error
 #. Description
 #. :sl2:
-#: ../cdrom-retriever.templates:1001
+#: ../network-console.templates:6001 ../partman-iscsi.templates:8001
+#: ../user-setup-udeb.templates:16001
 msgid ""
-"There was a problem reading data. Please make sure you have inserted the "
-"installation media correctly. If retrying does not work, you should check "
-"the integrity of your installation media (there is an associated entry in "
-"the main menu for that)."
+"You entered an empty password, which is not allowed. Please choose a non-"
+"empty password."
 msgstr ""
-"データの読み込み中に問題が発生しました。インストールメディアが正しく挿入され"
-"ていることを確認してください。再試行でうまくいかないようであれば、あなたのイ"
-"ンストールメディアの完全性をチェックしてください (メインメニューにそのための"
-"関連するエントリがあります)。"
+"許可されていない、空のパスワードが入力されました。空ではないパスワードを選ん"
+"でください。"
+
+#. #-#-#-#-#  templates.pot (partman-auto)  #-#-#-#-#
+#. Type: error
+#. Description
+#. :sl2:
+#. Type: error
+#. Description
+#. :sl2:
+#. #-#-#-#-#  templates.pot (partman-auto-lvm)  #-#-#-#-#
+#. Type: error
+#. Description
+#. :sl3:
+#: ../partman-auto.templates:3001 ../partman-auto.templates:4001
+#: ../partman-auto-lvm.templates:4001
+msgid "Failed to partition the selected disk"
+msgstr "選択されたディスクのパーティショニングに失敗しました"
+
+#. Type: error
+#. Description
+#. :sl2:
+#: ../partman-auto.templates:3001
+msgid ""
+"This probably happened because the selected disk or free space is too small "
+"to be automatically partitioned."
+msgstr ""
+"これはおそらく、選択されたディスクまたは空き領域が自動的にパーティショニング"
+"するには小さすぎるために起きたのでしょう。"
+
+#. Type: error
+#. Description
+#. :sl2:
+#: ../partman-auto.templates:4001
+msgid ""
+"This probably happened because there are too many (primary) partitions in "
+"the partition table."
+msgstr ""
+"おそらく、多すぎる (基本) パーティションがパーティションテーブルにあるために"
+"起きたのでしょう。"
+
+#. Type: error
+#. Description
+#. :sl2:
+#: ../partman-auto.templates:11001
+msgid "Unusable free space"
+msgstr "空き領域を利用できません"
+
+#. Type: error
+#. Description
+#. :sl2:
+#: ../partman-auto.templates:11001
+msgid ""
+"Partitioning failed because the chosen free space may not be used. There are "
+"probably too many (primary) partitions in the partition table."
+msgstr ""
+"選択された空き領域が利用できなかったため、パーティショニングに失敗しました。"
+"おそらく、多すぎる (基本) パーティションがパーティションテーブルにあるために"
+"起きたのでしょう。"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../media-retriever.templates:1001
-msgid "Scanning removable media"
-msgstr "リムーバブルメディアを走査しています"
+#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
+#: ../partman-auto.templates:23001
+msgid "Small-disk (< 1GB) partitioning scheme"
+msgstr "小さなディスク (< 1GB) のパーティショニング機構"
 
-#. Type: text
+#. #-#-#-#-#  templates.pot (partman-auto-lvm)  #-#-#-#-#
+#. Type: string
+#. Description
+#. :sl3:
+#. #-#-#-#-#  templates.pot (partman-partitioning)  #-#-#-#-#
+#. Type: string
 #. Description
 #. :sl2:
-#: ../media-retriever.templates:2001
-msgid "Cannot read removable media, or no drivers found."
-msgstr "リムーバブルメディアを読み取れないか、ドライバが見つかりません。"
-
-#. Type: text
+#. Type: string
 #. Description
 #. :sl2:
-#: ../media-retriever.templates:2001
+#: ../partman-auto-lvm.templates:11001 ../partman-partitioning.templates:5001
+#: ../partman-partitioning.templates:10001
+#, no-c-format
 msgid ""
-"There was a problem reading data from the removable media. Please make sure "
-"that the right media is present. If you continue to have trouble, your "
-"removable media might be bad."
+"Hint: \"max\" can be used as a shortcut to specify the maximum size, or "
+"enter a percentage (e.g. \"20%\") to use that percentage of the maximum size."
 msgstr ""
-"リムーバブルメディアからデータの読み込み中に問題が発生しました。正しいメディ"
-"アであることを確認してください。問題がまだ続くようなら、リムーバブルメディア"
-"がおかしいのでしょう。"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../load-media.templates:1001
-msgid "Load drivers from removable media now?"
-msgstr "ドライバをリムーバブルメディアから今ロードしますか?"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../load-media.templates:1001
-msgid ""
-"You probably need to load drivers from removable media before continuing "
-"with the installation. If you know that the install will work without extra "
-"drivers, you can skip this step."
-msgstr ""
-"インストールを続ける前に、おそらくリムーバブルメディアからドライバをロードす"
-"る必要があります。追加ドライバなしにインストールが動作するとわかっているとき"
-"には、このステップは省略できます。"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../load-media.templates:1001
-msgid ""
-"If you do need to load drivers, insert the appropriate removable media, such "
-"as a driver floppy or USB stick before continuing."
-msgstr ""
-"ドライバのロードを選ぶ場合、続ける前に適切なリムーバブルメディア (ドライバフ"
-"ロッピーや USB メモリなど) を挿入してください。"
-
-#. Type: text
-#. Description
-#. main-menu item
-#. Translators: keep below 55 columns
-#. :sl2:
-#: ../load-media.templates:2001
-msgid "Load drivers from removable media"
-msgstr "ドライバをリムーバブルメディアからロード"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../load-media.templates:3001
-msgid "Unknown removable media. Try to load anyway?"
-msgstr "未知のリムーバブルメディアです。それでもロードを試みますか?"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../load-media.templates:3001
-msgid ""
-"Detected removable media that is not a known driver media. Please make sure "
-"that the correct media is inserted. You can still continue if you have an "
-"unofficial removable media you want to use."
-msgstr ""
-"リムーバブルメディアは既知のドライバメディアではありません。正しいメディアが"
-"挿入されていることを確認してください。非公式のリムーバブルメディアを利用した"
-"いのであれば、このまま継続できます。"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../load-media.templates:4001
-msgid "Please insert ${DISK_LABEL} ('${DISK_NAME}') first."
-msgstr "${DISK_LABEL} ('${DISK_NAME}') を最初に挿入してください。"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../load-media.templates:4001
-msgid ""
-"Due to dependencies between packages, drivers must be loaded in the correct "
-"order."
-msgstr ""
-"パッケージ間の依存関係のために、ドライバは正しい順序でロードされなければなり"
-"ません。"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../load-media.templates:5001
-msgid "Load drivers from another removable media?"
-msgstr "ドライバを別のリムーバブルメディアからロードしますか?"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../load-media.templates:5001
-msgid ""
-"To load additional drivers from another removable media, please insert the "
-"appropriate removable media, such as a driver floppy or USB stick before "
-"continuing."
-msgstr ""
-"ほかのリムーバブルメディアから追加ドライバをロードするためには、続ける前に適"
-"切なリムーバブルメディア (ドライバフロッピーや USB メモリなど) を挿入してくだ"
-"さい。"
+"ヒント: 最大サイズを指定するショートカットとして、\"max\" を利用できます。ま"
+"た、利用する最大サイズの割合を指定するのにパーセンテージ (\"20%\" など) を入"
+"力できます。"
 
 #. Type: error
 #. Description
@@ -2159,71 +3444,6 @@ msgstr "パーティションのセットアップを終了"
 msgid "Dump partition info in %s"
 msgstr "パーティション情報を %s にダンプ"
 
-#. #-#-#-#-#  templates.pot (partman-auto)  #-#-#-#-#
-#. Type: error
-#. Description
-#. :sl2:
-#. Type: error
-#. Description
-#. :sl2:
-#. #-#-#-#-#  templates.pot (partman-auto-lvm)  #-#-#-#-#
-#. Type: error
-#. Description
-#. :sl3:
-#: ../partman-auto.templates:3001 ../partman-auto.templates:4001
-#: ../partman-auto-lvm.templates:4001
-msgid "Failed to partition the selected disk"
-msgstr "選択されたディスクのパーティショニングに失敗しました"
-
-#. Type: error
-#. Description
-#. :sl2:
-#: ../partman-auto.templates:3001
-msgid ""
-"This probably happened because the selected disk or free space is too small "
-"to be automatically partitioned."
-msgstr ""
-"これはおそらく、選択されたディスクまたは空き領域が自動的にパーティショニング"
-"するには小さすぎるために起きたのでしょう。"
-
-#. Type: error
-#. Description
-#. :sl2:
-#: ../partman-auto.templates:4001
-msgid ""
-"This probably happened because there are too many (primary) partitions in "
-"the partition table."
-msgstr ""
-"おそらく、多すぎる (基本) パーティションがパーティションテーブルにあるために"
-"起きたのでしょう。"
-
-#. Type: error
-#. Description
-#. :sl2:
-#: ../partman-auto.templates:11001
-msgid "Unusable free space"
-msgstr "空き領域を利用できません"
-
-#. Type: error
-#. Description
-#. :sl2:
-#: ../partman-auto.templates:11001
-msgid ""
-"Partitioning failed because the chosen free space may not be used. There are "
-"probably too many (primary) partitions in the partition table."
-msgstr ""
-"選択された空き領域が利用できなかったため、パーティショニングに失敗しました。"
-"おそらく、多すぎる (基本) パーティションがパーティションテーブルにあるために"
-"起きたのでしょう。"
-
-#. Type: text
-#. Description
-#. :sl2:
-#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
-#: ../partman-auto.templates:23001
-msgid "Small-disk (< 1GB) partitioning scheme"
-msgstr "小さなディスク (< 1GB) のパーティショニング機構"
-
 #. Type: boolean
 #. Description
 #. :sl2:
@@ -2300,545 +3520,6 @@ msgstr "パーティションの初期化"
 #: ../partman-basicmethods.templates:10001
 msgid "keep and use the existing data"
 msgstr "既存のデータをそのまま使う"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../partman-partitioning.templates:1001
-msgid "Resizing partition..."
-msgstr "パーティションのサイズ変更をしています..."
-
-#. Type: error
-#. Description
-#. :sl2:
-#: ../partman-partitioning.templates:3001
-msgid "The resize operation is impossible"
-msgstr "サイズ変更操作は不可能です"
-
-#. Type: error
-#. Description
-#. :sl2:
-#: ../partman-partitioning.templates:3001
-msgid "Because of an unknown reason it is impossible to resize this partition."
-msgstr "未知の理由でこのパーティションのサイズ変更操作は不可能です。"
-
-#. #-#-#-#-#  templates.pot (partman-partitioning)  #-#-#-#-#
-#. Type: error
-#. Description
-#. :sl2:
-#. #-#-#-#-#  templates.pot (clock-setup)  #-#-#-#-#
-#. Type: boolean
-#. Description
-#. :sl2:
-#. #-#-#-#-#  templates.pot (base-installer)  #-#-#-#-#
-#. Type: error
-#. Description
-#. :sl2:
-#. Type: error
-#. Description
-#. :sl2:
-#. Type: error
-#. Description
-#. :sl2:
-#. Type: error
-#. Description
-#. :sl2:
-#. Type: error
-#. Description
-#. :sl2:
-#. Type: error
-#. Description
-#. :sl2:
-#. #-#-#-#-#  templates.pot (nobootloader)  #-#-#-#-#
-#. Type: error
-#. Description
-#. :sl4:
-#. #-#-#-#-#  templates.pot (grub-installer)  #-#-#-#-#
-#. Type: error
-#. Description
-#. :sl4:
-#. #-#-#-#-#  templates.pot (network-console)  #-#-#-#-#
-#. Type: error
-#. Description
-#. :sl3:
-#. #-#-#-#-#  templates.pot (partman-iscsi)  #-#-#-#-#
-#. Type: error
-#. Description
-#. :sl3:
-#. #-#-#-#-#  templates.pot (lvmcfg)  #-#-#-#-#
-#. Type: error
-#. Description
-#. :sl3:
-#. Type: error
-#. Description
-#. :sl3:
-#. Type: error
-#. Description
-#. :sl3:
-#. #-#-#-#-#  templates.pot (partman-lvm)  #-#-#-#-#
-#. Type: error
-#. Description
-#. :sl3:
-#. Type: error
-#. Description
-#. :sl3:
-#. Type: error
-#. Description
-#. :sl3:
-#. Type: error
-#. Description
-#. :sl3:
-#. Type: error
-#. Description
-#. :sl3:
-#. #-#-#-#-#  templates.pot (partman-auto-lvm)  #-#-#-#-#
-#. Type: error
-#. Description
-#. :sl3:
-#. #-#-#-#-#  templates.pot (partman-auto-raid)  #-#-#-#-#
-#. Type: error
-#. Description
-#. :sl3:
-#: ../partman-partitioning.templates:3001 ../clock-setup.templates:9001
-#: ../bootstrap-base.templates:4001 ../bootstrap-base.templates:5001
-#: ../bootstrap-base.templates:6001 ../bootstrap-base.templates:7001
-#: ../bootstrap-base.templates:11001 ../bootstrap-base.templates:16001
-#: ../nobootloader.templates:2001 ../grub-installer.templates:32001
-#: ../network-console.templates:10001 ../partman-iscsi.templates:12001
-#: ../lvmcfg-utils.templates:24001 ../lvmcfg-utils.templates:32001
-#: ../lvmcfg-utils.templates:37001 ../partman-lvm.templates:32001
-#: ../partman-lvm.templates:46001 ../partman-lvm.templates:53001
-#: ../partman-lvm.templates:57001 ../partman-lvm.templates:60001
-#: ../partman-auto-lvm.templates:7001 ../partman-auto-raid.templates:1001
-msgid "Check /var/log/syslog or see virtual console 4 for the details."
-msgstr ""
-"詳細については、/var/log/syslog を確認するか、仮想コンソール 4 を見てくださ"
-"い。"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../partman-partitioning.templates:4001
-msgid "Write previous changes to disk and continue?"
-msgstr "ディスクへの変更を書き込み、継続しますか?"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../partman-partitioning.templates:4001
-msgid ""
-"Before you can select a new partition size, any previous changes have to be "
-"written to disk."
-msgstr ""
-"新しいパーティションサイズを選ぶ前に、変更をディスクに書き込んでおく必要があ"
-"ります。"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../partman-partitioning.templates:4001
-msgid "You cannot undo this operation."
-msgstr "この操作は元に戻せません。"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../partman-partitioning.templates:4001
-msgid "Please note that the resize operation may take a long time."
-msgstr ""
-"サイズ変更操作は長い時間を必要とするかもしれないことに注意してください。"
-
-#. Type: string
-#. Description
-#. :sl2:
-#. Type: string
-#. Description
-#. :sl2:
-#: ../partman-partitioning.templates:5001
-#: ../partman-partitioning.templates:10001
-msgid "New partition size:"
-msgstr "新しいパーティションのサイズ:"
-
-#. Type: string
-#. Description
-#. :sl2:
-#: ../partman-partitioning.templates:5001
-msgid ""
-"The minimum size for this partition is ${MINSIZE} (or ${PERCENT}) and its "
-"maximum size is ${MAXSIZE}."
-msgstr ""
-"このパーティションの最小サイズは ${MINSIZE} (または ${PERCENT})、最大サイズ"
-"は ${MAXSIZE} です。"
-
-#. #-#-#-#-#  templates.pot (partman-partitioning)  #-#-#-#-#
-#. Type: string
-#. Description
-#. :sl2:
-#. Type: string
-#. Description
-#. :sl2:
-#. #-#-#-#-#  templates.pot (partman-auto-lvm)  #-#-#-#-#
-#. Type: string
-#. Description
-#. :sl3:
-#: ../partman-partitioning.templates:5001
-#: ../partman-partitioning.templates:10001 ../partman-auto-lvm.templates:11001
-#, no-c-format
-msgid ""
-"Hint: \"max\" can be used as a shortcut to specify the maximum size, or "
-"enter a percentage (e.g. \"20%\") to use that percentage of the maximum size."
-msgstr ""
-"ヒント: 最大サイズを指定するショートカットとして、\"max\" を利用できます。ま"
-"た、利用する最大サイズの割合を指定するのにパーセンテージ (\"20%\" など) を入"
-"力できます。"
-
-#. Type: error
-#. Description
-#. :sl2:
-#: ../partman-partitioning.templates:6001
-msgid "The size entered is invalid"
-msgstr "入力されたサイズは無効です"
-
-#. Type: error
-#. Description
-#. :sl2:
-#: ../partman-partitioning.templates:6001
-msgid ""
-"The size you entered was not understood. Please enter a positive integer "
-"size followed by an optional unit of measure (e.g. \"200 GB\"). The default "
-"unit of measure is the megabyte."
-msgstr ""
-"入力されたサイズを解釈できませんでした。任意の尺度単位と共に正の整数でサイズ"
-"を入力してください (たとえば \"200 GB\")。デフォルトの尺度単位は MB です。"
-
-#. Type: error
-#. Description
-#. :sl2:
-#: ../partman-partitioning.templates:7001
-msgid "The size entered is too large"
-msgstr "入力されたサイズは大きすぎます"
-
-#. Type: error
-#. Description
-#. :sl2:
-#: ../partman-partitioning.templates:7001
-msgid ""
-"The size you entered is larger than the maximum size of the partition. "
-"Please enter a smaller size to continue."
-msgstr ""
-"入力されたサイズはパーティションの最大サイズより大きいです。続けるには、より"
-"小さなサイズを入力してください。"
-
-#. Type: error
-#. Description
-#. :sl2:
-#: ../partman-partitioning.templates:8001
-msgid "The size entered is too small"
-msgstr "入力されたサイズは小さすぎます"
-
-#. Type: error
-#. Description
-#. :sl2:
-#: ../partman-partitioning.templates:8001
-msgid ""
-"The size you entered is smaller than the minimum size of the partition. "
-"Please enter a larger size to continue."
-msgstr ""
-"入力されたサイズはパーティションの最小サイズより小さいです。続けるには、より"
-"大きなサイズを入力してください。"
-
-#. Type: error
-#. Description
-#. :sl2:
-#: ../partman-partitioning.templates:9001
-msgid "Resize operation failure"
-msgstr "サイズ変更操作に失敗しました"
-
-#. #-#-#-#-#  templates.pot (partman-partitioning)  #-#-#-#-#
-#. Type: error
-#. Description
-#. :sl2:
-#. #-#-#-#-#  templates.pot (partman-md)  #-#-#-#-#
-#. Type: error
-#. Description
-#. :sl3:
-#: ../partman-partitioning.templates:9001 ../partman-md.templates:21001
-msgid "An error occurred while writing the changes to the storage devices."
-msgstr "記憶デバイスへの変更の書き込み中にエラーが発生しました。"
-
-#. Type: error
-#. Description
-#. :sl2:
-#: ../partman-partitioning.templates:9001
-msgid "The resize operation has been aborted."
-msgstr "サイズ変更操作が中止されました。"
-
-#. Type: string
-#. Description
-#. :sl2:
-#: ../partman-partitioning.templates:10001
-msgid "The maximum size for this partition is ${MAXSIZE}."
-msgstr "このパーティションの最大サイズは ${MAXSIZE} です。"
-
-#. Type: error
-#. Description
-#. :sl2:
-#: ../partman-partitioning.templates:11001
-msgid "Invalid size"
-msgstr "無効なサイズ"
-
-#. Type: multiselect
-#. Description
-#. :sl2:
-#: ../partman-partitioning.templates:14001
-msgid "Flags for the new partition:"
-msgstr "新しいパーティションのフラグ:"
-
-#. Type: string
-#. Description
-#. :sl2:
-#: ../partman-partitioning.templates:15001
-msgid "Partition name:"
-msgstr "パーティション名:"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../partman-partitioning.templates:16001
-#: ../partman-partitioning.templates:17001
-msgid "Continue with partitioning?"
-msgstr "パーティショニングを続けますか?"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../partman-partitioning.templates:16001
-msgid ""
-"This partitioner doesn't have information about the default type of the "
-"partition tables on your architecture.  Please send an e-mail message to "
-"debian-boot@lists.debian.org with information."
-msgstr ""
-"この partitioner は、あなたのアーキテクチャでのパーティションテーブルのデフォ"
-"ルトタイプについて情報を持ちません。情報を電子メールのメッセージで debian-"
-"boot@lists.debian.org に送ってください。"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../partman-partitioning.templates:16001
-msgid ""
-"Please note that if the type of the partition table is unsupported by "
-"libparted, then this partitioner will not work properly."
-msgstr ""
-"パーティションテーブルのタイプが libparted によってサポートされていないと、こ"
-"の partitioner は正しく動作しないことに注意してください。"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../partman-partitioning.templates:17001
-msgid ""
-"This partitioner is based on the library libparted which doesn't have "
-"support for the partition tables used on your architecture.  It is strongly "
-"recommended that you exit this partitioner."
-msgstr ""
-"この partitioner は、あなたのアーキテクチャで使われているパーティションテーブ"
-"ルをサポートしていない libparted ライブラリに基づいています。この "
-"partitioner から抜けることを強く推奨します。"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../partman-partitioning.templates:17001
-msgid ""
-"If you can, please help to add support for your partition table type to "
-"libparted."
-msgstr ""
-"可能なら、libparted にあなたのパーティションテーブルのタイプのサポートの追加"
-"をするための支援をしてください。"
-
-#. Type: select
-#. Description
-#. :sl2:
-#: ../partman-partitioning.templates:19001
-msgid "Partition table type:"
-msgstr "パーティションテーブルタイプ:"
-
-#. Type: select
-#. Description
-#. :sl2:
-#: ../partman-partitioning.templates:19001
-msgid "Select the type of partition table to use."
-msgstr "利用するパーティションテーブルのタイプを選択してください。"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../partman-partitioning.templates:20001
-msgid "Create new empty partition table on this device?"
-msgstr "このデバイスに新しい空のパーティションテーブルを作成しますか?"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../partman-partitioning.templates:20001
-msgid ""
-"You have selected an entire device to partition. If you proceed with "
-"creating a new partition table on the device, then all current partitions "
-"will be removed."
-msgstr ""
-"すべてのデバイスのパーティションを選択しました。このデバイスに新しいパーティ"
-"ションテーブルを作成すると、現在のパーティションすべてが削除されます。"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../partman-partitioning.templates:20001
-msgid "Note that you will be able to undo this operation later if you wish."
-msgstr "望むならあとでこの操作は元に戻すことができることに注意してください。"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../partman-partitioning.templates:21001
-msgid "Write a new empty partition table?"
-msgstr "新しい空のパーティションテーブルを作成しますか?"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../partman-partitioning.templates:21001
-msgid ""
-"Because of limitations in the current implementation of the Sun partition "
-"tables in libparted, the newly created partition table has to be written to "
-"the disk immediately."
-msgstr ""
-"libparted の Sun パーティションテーブルについての現在の実装の制限で、新しく作"
-"成されたパーティションテーブルは、ディスクにすぐに書き込む必要があります。"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../partman-partitioning.templates:21001
-msgid ""
-"You will NOT be able to undo this operation later and all existing data on "
-"the disk will be irreversibly removed."
-msgstr ""
-"この操作をあとで元に戻すことはできず、ディスクにある既存のすべてのデータは元"
-"に戻せない状態で削除されます。"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../partman-partitioning.templates:21001
-msgid ""
-"Confirm whether you actually want to create a new partition table and write "
-"it to disk."
-msgstr ""
-"新しいパーティションテーブルを本当に作成し、それをディスクに書き込んでよいか"
-"確認してください。"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../partman-partitioning.templates:22001
-msgid "Are you sure you want a bootable logical partition?"
-msgstr "本当に論理パーティションをブート可能にしますか?"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../partman-partitioning.templates:22001
-msgid ""
-"You are trying to set the bootable flag on a logical partition. The bootable "
-"flag is generally only useful on primary partitions, so setting it on "
-"logical partitions is normally discouraged. Some BIOS versions are known to "
-"fail to boot if there is no bootable primary partition."
-msgstr ""
-"論理パーティションにブート可能フラグを設定しようとしています。ブート可能フラ"
-"グは一般に、プライマリパーティションにだけ通用するものなので、論理パーティ"
-"ションにこれを設定することは、通常、意味がありません。BIOS のバージョンによっ"
-"ては、ブート可能なプライマリパーティションが 1 つも存在しないと、起動に失敗す"
-"ることが知られています。"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../partman-partitioning.templates:22001
-msgid ""
-"However, if you are sure that your BIOS does not have this problem, or if "
-"you are using a custom boot manager that pays attention to bootable logical "
-"partitions, then setting this flag may make sense."
-msgstr ""
-"ただし、もしあなたの BIOS にこの問題がないという確信があるか、起動可能な論理"
-"パーティションに注意を払ってくれるカスタムブートマネージャを使っているのであ"
-"れば、このフラグを設定するのは理にかなっているでしょう。"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../partman-partitioning.templates:23001
-msgid "Set the partition flags"
-msgstr "パーティションフラグの設定"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../partman-partitioning.templates:24001
-msgid "Name:"
-msgstr "名前:"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../partman-partitioning.templates:25001
-msgid "Bootable flag:"
-msgstr "起動フラグ:"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../partman-partitioning.templates:26001
-msgid "on"
-msgstr "オン"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../partman-partitioning.templates:27001
-msgid "off"
-msgstr "オフ"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../partman-partitioning.templates:28001
-msgid "Resize the partition (currently ${SIZE})"
-msgstr "パーティションのリサイズ (現在 ${SIZE})"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../partman-partitioning.templates:29001
-msgid "Delete the partition"
-msgstr "パーティションの削除"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../partman-partitioning.templates:30001
-msgid "Create a new partition"
-msgstr "新しいパーティションの作成"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../partman-partitioning.templates:31001
-msgid "Create a new empty partition table on this device"
-msgstr "このデバイスに新しい空のパーティションテーブルを作成"
 
 #. Type: boolean
 #. Description
@@ -3556,6 +4237,143 @@ msgstr ""
 #. Description
 #. :sl2:
 #. File system name
+#: ../partman-btrfs.templates:2001
+msgid "btrfs journaling file system"
+msgstr "btrfs ジャーナリングファイルシステム"
+
+#. Type: error
+#. Description
+#. :sl2:
+#: ../partman-btrfs.templates:4001
+msgid "btrfs root file system not supported without separate /boot"
+msgstr ""
+"/boot を分離しない場合、btrfs ルートファイルシステムはサポートされません"
+
+#. Type: error
+#. Description
+#. :sl2:
+#: ../partman-btrfs.templates:4001
+msgid ""
+"Your root file system is a btrfs file system. This is not supported by the "
+"boot loader used by default by this installer."
+msgstr ""
+"あなたのルートファイルシステムは btrfs ファイルシステムです。このインストーラ"
+"のデフォルトで使われるブートローダではサポートされません。"
+
+#. Type: error
+#. Description
+#. :sl2:
+#: ../partman-btrfs.templates:4001
+msgid ""
+"You should use a small /boot partition with another file system, such as "
+"ext4."
+msgstr ""
+"ext4 のような別のファイルシステムの小さな /boot パーティションを使うことをお"
+"勧めします。"
+
+#. Type: error
+#. Description
+#. :sl2:
+#: ../partman-btrfs.templates:5001
+msgid "btrfs file system not supported for /boot"
+msgstr "/boot に btrfs ファイルシステムはサポートしていません"
+
+#. Type: error
+#. Description
+#. :sl2:
+#: ../partman-btrfs.templates:5001
+msgid ""
+"You have mounted a btrfs file system as /boot. This is not supported by the "
+"boot loader used by default by this installer."
+msgstr ""
+"/boot に btrfs ファイルシステムがマウントされています。このインストーラのデ"
+"フォルトで使われるブートローダではサポートされません。"
+
+#. Type: error
+#. Description
+#. :sl2:
+#: ../partman-btrfs.templates:5001
+msgid ""
+"You should use another file system, such as ext4, for the /boot partition."
+msgstr ""
+"/boot パーティションには、ext4 のような別のファイルシステムを使うことをお勧め"
+"します。"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../partman-efi.templates:3001
+msgid "Go back to the menu and resume partitioning?"
+msgstr "メニューに戻ってパーティショニングを再開しますか?"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../partman-efi.templates:3001
+msgid "No EFI partition was found."
+msgstr "EFIパーティションが見つかりませんでした。"
+
+#. Type: error
+#. Description
+#. :sl2:
+#: ../partman-efi.templates:8001
+msgid "EFI partition too small"
+msgstr "EFI パーティションが小さすぎます"
+
+#. Type: error
+#. Description
+#. :sl2:
+#: ../partman-efi.templates:8001
+msgid ""
+"EFI System Partitions on this architecture cannot be created with a size "
+"less than 35 MB. Please make the EFI System Partition larger."
+msgstr ""
+"このアーキテクチャの EFI システムパーティションは 35 MB より小さいサイズでは"
+"作成できません。EFI システムパーティションを大きくしてください。"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../partman-efi.templates:9001
+msgid "Force UEFI installation?"
+msgstr "強制的にUEFIをインストールしますか?"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../partman-efi.templates:9001
+msgid ""
+"This machine's firmware has started the installer in UEFI mode but it looks "
+"like there may be existing operating systems already installed using \"BIOS "
+"compatibility mode\". If you continue to install Debian in UEFI mode, it "
+"might be difficult to reboot the machine into any BIOS-mode operating "
+"systems later."
+msgstr ""
+"このマシンのファームウェアは UEFI モードでインストーラが開始されました、しか"
+"し \"BIOS 互換モード\" を使ってインストールされたオペレーティングシステムが存"
+"在しているように見えます。もし UEFI モードで Debian のインストールを続けるの"
+"であれば、後で BIOS モードのオペレーティングシステムを再起動するのは難しいか"
+"もしれません。"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../partman-efi.templates:9001
+msgid ""
+"If you wish to install in UEFI mode and don't care about keeping the ability "
+"to boot one of the existing systems, you have the option to force that here. "
+"If you wish to keep the option to boot an existing operating system, you "
+"should choose NOT to force UEFI installation here."
+msgstr ""
+"もし UEFI モードでインストールをしたいかつ既存のシステムを起動する機能がなく"
+"なってもよいのであれば、ここでそれを強制する選択ができます。もし既存のオペ"
+"レーティングシステムを起動する選択を維持したいのであれば、ここで UEFI のイン"
+"ストールを強制しないことを選択すべきです。"
+
+#. Type: text
+#. Description
+#. :sl2:
+#. File system name
 #: ../partman-ext3.templates:2001
 msgid "Ext3 journaling file system"
 msgstr "ext3 ジャーナリングファイルシステム"
@@ -3658,72 +4476,6 @@ msgstr ""
 
 #. Type: text
 #. Description
-#. :sl2:
-#. File system name
-#: ../partman-btrfs.templates:2001
-msgid "btrfs journaling file system"
-msgstr "btrfs ジャーナリングファイルシステム"
-
-#. Type: error
-#. Description
-#. :sl2:
-#: ../partman-btrfs.templates:4001
-msgid "btrfs root file system not supported without separate /boot"
-msgstr ""
-"/boot を分離しない場合、btrfs ルートファイルシステムはサポートされません"
-
-#. Type: error
-#. Description
-#. :sl2:
-#: ../partman-btrfs.templates:4001
-msgid ""
-"Your root file system is a btrfs file system. This is not supported by the "
-"boot loader used by default by this installer."
-msgstr ""
-"あなたのルートファイルシステムは btrfs ファイルシステムです。このインストーラ"
-"のデフォルトで使われるブートローダではサポートされません。"
-
-#. Type: error
-#. Description
-#. :sl2:
-#: ../partman-btrfs.templates:4001
-msgid ""
-"You should use a small /boot partition with another file system, such as "
-"ext4."
-msgstr ""
-"ext4 のような別のファイルシステムの小さな /boot パーティションを使うことをお"
-"勧めします。"
-
-#. Type: error
-#. Description
-#. :sl2:
-#: ../partman-btrfs.templates:5001
-msgid "btrfs file system not supported for /boot"
-msgstr "/boot に btrfs ファイルシステムはサポートしていません"
-
-#. Type: error
-#. Description
-#. :sl2:
-#: ../partman-btrfs.templates:5001
-msgid ""
-"You have mounted a btrfs file system as /boot. This is not supported by the "
-"boot loader used by default by this installer."
-msgstr ""
-"/boot に btrfs ファイルシステムがマウントされています。このインストーラのデ"
-"フォルトで使われるブートローダではサポートされません。"
-
-#. Type: error
-#. Description
-#. :sl2:
-#: ../partman-btrfs.templates:5001
-msgid ""
-"You should use another file system, such as ext4, for the /boot partition."
-msgstr ""
-"/boot パーティションには、ext4 のような別のファイルシステムを使うことをお勧め"
-"します。"
-
-#. Type: text
-#. Description
 #. File system name
 #. :sl2:
 #: ../partman-jfs.templates:2001
@@ -3788,13 +4540,429 @@ msgstr ""
 "/boot パーティションには、ext3 のような別のファイルシステムを使うことをお勧め"
 "します。"
 
+#. #-#-#-#-#  templates.pot (partman-md)  #-#-#-#-#
+#. Type: error
+#. Description
+#. :sl3:
+#. #-#-#-#-#  templates.pot (partman-partitioning)  #-#-#-#-#
+#. Type: error
+#. Description
+#. :sl2:
+#: ../partman-md.templates:21001 ../partman-partitioning.templates:9001
+msgid "An error occurred while writing the changes to the storage devices."
+msgstr "記憶デバイスへの変更の書き込み中にエラーが発生しました。"
+
 #. Type: text
 #. Description
 #. :sl2:
-#. File system name
-#: ../partman-xfs.templates:2001
-msgid "XFS journaling file system"
-msgstr "XFS ジャーナリングファイルシステム"
+#: ../partman-partitioning.templates:1001
+msgid "Resizing partition..."
+msgstr "パーティションのサイズ変更をしています..."
+
+#. Type: error
+#. Description
+#. :sl2:
+#: ../partman-partitioning.templates:3001
+msgid "The resize operation is impossible"
+msgstr "サイズ変更操作は不可能です"
+
+#. Type: error
+#. Description
+#. :sl2:
+#: ../partman-partitioning.templates:3001
+msgid "Because of an unknown reason it is impossible to resize this partition."
+msgstr "未知の理由でこのパーティションのサイズ変更操作は不可能です。"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../partman-partitioning.templates:4001
+msgid "Write previous changes to disk and continue?"
+msgstr "ディスクへの変更を書き込み、継続しますか?"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../partman-partitioning.templates:4001
+msgid ""
+"Before you can select a new partition size, any previous changes have to be "
+"written to disk."
+msgstr ""
+"新しいパーティションサイズを選ぶ前に、変更をディスクに書き込んでおく必要があ"
+"ります。"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../partman-partitioning.templates:4001
+msgid "You cannot undo this operation."
+msgstr "この操作は元に戻せません。"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../partman-partitioning.templates:4001
+msgid "Please note that the resize operation may take a long time."
+msgstr ""
+"サイズ変更操作は長い時間を必要とするかもしれないことに注意してください。"
+
+#. Type: string
+#. Description
+#. :sl2:
+#. Type: string
+#. Description
+#. :sl2:
+#: ../partman-partitioning.templates:5001
+#: ../partman-partitioning.templates:10001
+msgid "New partition size:"
+msgstr "新しいパーティションのサイズ:"
+
+#. Type: string
+#. Description
+#. :sl2:
+#: ../partman-partitioning.templates:5001
+msgid ""
+"The minimum size for this partition is ${MINSIZE} (or ${PERCENT}) and its "
+"maximum size is ${MAXSIZE}."
+msgstr ""
+"このパーティションの最小サイズは ${MINSIZE} (または ${PERCENT})、最大サイズ"
+"は ${MAXSIZE} です。"
+
+#. Type: error
+#. Description
+#. :sl2:
+#: ../partman-partitioning.templates:6001
+msgid "The size entered is invalid"
+msgstr "入力されたサイズは無効です"
+
+#. Type: error
+#. Description
+#. :sl2:
+#: ../partman-partitioning.templates:6001
+msgid ""
+"The size you entered was not understood. Please enter a positive integer "
+"size followed by an optional unit of measure (e.g. \"200 GB\"). The default "
+"unit of measure is the megabyte."
+msgstr ""
+"入力されたサイズを解釈できませんでした。任意の尺度単位と共に正の整数でサイズ"
+"を入力してください (たとえば \"200 GB\")。デフォルトの尺度単位は MB です。"
+
+#. Type: error
+#. Description
+#. :sl2:
+#: ../partman-partitioning.templates:7001
+msgid "The size entered is too large"
+msgstr "入力されたサイズは大きすぎます"
+
+#. Type: error
+#. Description
+#. :sl2:
+#: ../partman-partitioning.templates:7001
+msgid ""
+"The size you entered is larger than the maximum size of the partition. "
+"Please enter a smaller size to continue."
+msgstr ""
+"入力されたサイズはパーティションの最大サイズより大きいです。続けるには、より"
+"小さなサイズを入力してください。"
+
+#. Type: error
+#. Description
+#. :sl2:
+#: ../partman-partitioning.templates:8001
+msgid "The size entered is too small"
+msgstr "入力されたサイズは小さすぎます"
+
+#. Type: error
+#. Description
+#. :sl2:
+#: ../partman-partitioning.templates:8001
+msgid ""
+"The size you entered is smaller than the minimum size of the partition. "
+"Please enter a larger size to continue."
+msgstr ""
+"入力されたサイズはパーティションの最小サイズより小さいです。続けるには、より"
+"大きなサイズを入力してください。"
+
+#. Type: error
+#. Description
+#. :sl2:
+#: ../partman-partitioning.templates:9001
+msgid "Resize operation failure"
+msgstr "サイズ変更操作に失敗しました"
+
+#. Type: error
+#. Description
+#. :sl2:
+#: ../partman-partitioning.templates:9001
+msgid "The resize operation has been aborted."
+msgstr "サイズ変更操作が中止されました。"
+
+#. Type: string
+#. Description
+#. :sl2:
+#: ../partman-partitioning.templates:10001
+msgid "The maximum size for this partition is ${MAXSIZE}."
+msgstr "このパーティションの最大サイズは ${MAXSIZE} です。"
+
+#. Type: error
+#. Description
+#. :sl2:
+#: ../partman-partitioning.templates:11001
+msgid "Invalid size"
+msgstr "無効なサイズ"
+
+#. Type: multiselect
+#. Description
+#. :sl2:
+#: ../partman-partitioning.templates:14001
+msgid "Flags for the new partition:"
+msgstr "新しいパーティションのフラグ:"
+
+#. Type: string
+#. Description
+#. :sl2:
+#: ../partman-partitioning.templates:15001
+msgid "Partition name:"
+msgstr "パーティション名:"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../partman-partitioning.templates:16001
+#: ../partman-partitioning.templates:17001
+msgid "Continue with partitioning?"
+msgstr "パーティショニングを続けますか?"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../partman-partitioning.templates:16001
+msgid ""
+"This partitioner doesn't have information about the default type of the "
+"partition tables on your architecture.  Please send an e-mail message to "
+"debian-boot@lists.debian.org with information."
+msgstr ""
+"この partitioner は、あなたのアーキテクチャでのパーティションテーブルのデフォ"
+"ルトタイプについて情報を持ちません。情報を電子メールのメッセージで debian-"
+"boot@lists.debian.org に送ってください。"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../partman-partitioning.templates:16001
+msgid ""
+"Please note that if the type of the partition table is unsupported by "
+"libparted, then this partitioner will not work properly."
+msgstr ""
+"パーティションテーブルのタイプが libparted によってサポートされていないと、こ"
+"の partitioner は正しく動作しないことに注意してください。"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../partman-partitioning.templates:17001
+msgid ""
+"This partitioner is based on the library libparted which doesn't have "
+"support for the partition tables used on your architecture.  It is strongly "
+"recommended that you exit this partitioner."
+msgstr ""
+"この partitioner は、あなたのアーキテクチャで使われているパーティションテーブ"
+"ルをサポートしていない libparted ライブラリに基づいています。この "
+"partitioner から抜けることを強く推奨します。"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../partman-partitioning.templates:17001
+msgid ""
+"If you can, please help to add support for your partition table type to "
+"libparted."
+msgstr ""
+"可能なら、libparted にあなたのパーティションテーブルのタイプのサポートの追加"
+"をするための支援をしてください。"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../partman-partitioning.templates:19001
+msgid "Partition table type:"
+msgstr "パーティションテーブルタイプ:"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../partman-partitioning.templates:19001
+msgid "Select the type of partition table to use."
+msgstr "利用するパーティションテーブルのタイプを選択してください。"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../partman-partitioning.templates:20001
+msgid "Create new empty partition table on this device?"
+msgstr "このデバイスに新しい空のパーティションテーブルを作成しますか?"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../partman-partitioning.templates:20001
+msgid ""
+"You have selected an entire device to partition. If you proceed with "
+"creating a new partition table on the device, then all current partitions "
+"will be removed."
+msgstr ""
+"すべてのデバイスのパーティションを選択しました。このデバイスに新しいパーティ"
+"ションテーブルを作成すると、現在のパーティションすべてが削除されます。"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../partman-partitioning.templates:20001
+msgid "Note that you will be able to undo this operation later if you wish."
+msgstr "望むならあとでこの操作は元に戻すことができることに注意してください。"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../partman-partitioning.templates:21001
+msgid "Write a new empty partition table?"
+msgstr "新しい空のパーティションテーブルを作成しますか?"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../partman-partitioning.templates:21001
+msgid ""
+"Because of limitations in the current implementation of the Sun partition "
+"tables in libparted, the newly created partition table has to be written to "
+"the disk immediately."
+msgstr ""
+"libparted の Sun パーティションテーブルについての現在の実装の制限で、新しく作"
+"成されたパーティションテーブルは、ディスクにすぐに書き込む必要があります。"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../partman-partitioning.templates:21001
+msgid ""
+"You will NOT be able to undo this operation later and all existing data on "
+"the disk will be irreversibly removed."
+msgstr ""
+"この操作をあとで元に戻すことはできず、ディスクにある既存のすべてのデータは元"
+"に戻せない状態で削除されます。"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../partman-partitioning.templates:21001
+msgid ""
+"Confirm whether you actually want to create a new partition table and write "
+"it to disk."
+msgstr ""
+"新しいパーティションテーブルを本当に作成し、それをディスクに書き込んでよいか"
+"確認してください。"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../partman-partitioning.templates:22001
+msgid "Are you sure you want a bootable logical partition?"
+msgstr "本当に論理パーティションをブート可能にしますか?"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../partman-partitioning.templates:22001
+msgid ""
+"You are trying to set the bootable flag on a logical partition. The bootable "
+"flag is generally only useful on primary partitions, so setting it on "
+"logical partitions is normally discouraged. Some BIOS versions are known to "
+"fail to boot if there is no bootable primary partition."
+msgstr ""
+"論理パーティションにブート可能フラグを設定しようとしています。ブート可能フラ"
+"グは一般に、プライマリパーティションにだけ通用するものなので、論理パーティ"
+"ションにこれを設定することは、通常、意味がありません。BIOS のバージョンによっ"
+"ては、ブート可能なプライマリパーティションが 1 つも存在しないと、起動に失敗す"
+"ることが知られています。"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../partman-partitioning.templates:22001
+msgid ""
+"However, if you are sure that your BIOS does not have this problem, or if "
+"you are using a custom boot manager that pays attention to bootable logical "
+"partitions, then setting this flag may make sense."
+msgstr ""
+"ただし、もしあなたの BIOS にこの問題がないという確信があるか、起動可能な論理"
+"パーティションに注意を払ってくれるカスタムブートマネージャを使っているのであ"
+"れば、このフラグを設定するのは理にかなっているでしょう。"
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../partman-partitioning.templates:23001
+msgid "Set the partition flags"
+msgstr "パーティションフラグの設定"
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../partman-partitioning.templates:24001
+msgid "Name:"
+msgstr "名前:"
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../partman-partitioning.templates:25001
+msgid "Bootable flag:"
+msgstr "起動フラグ:"
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../partman-partitioning.templates:26001
+msgid "on"
+msgstr "オン"
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../partman-partitioning.templates:27001
+msgid "off"
+msgstr "オフ"
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../partman-partitioning.templates:28001
+msgid "Resize the partition (currently ${SIZE})"
+msgstr "パーティションのリサイズ (現在 ${SIZE})"
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../partman-partitioning.templates:29001
+msgid "Delete the partition"
+msgstr "パーティションの削除"
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../partman-partitioning.templates:30001
+msgid "Create a new partition"
+msgstr "新しいパーティションの作成"
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../partman-partitioning.templates:31001
+msgid "Create a new empty partition table on this device"
+msgstr "このデバイスに新しい空のパーティションテーブルを作成"
 
 #. Type: error
 #. Description
@@ -3929,984 +5097,13 @@ msgstr "このパーティションの利用方法:"
 msgid "Use as:"
 msgstr "利用方法:"
 
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../partman-efi.templates:3001
-msgid "Go back to the menu and resume partitioning?"
-msgstr "メニューに戻ってパーティショニングを再開しますか?"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../partman-efi.templates:3001
-msgid "No EFI partition was found."
-msgstr "EFIパーティションが見つかりませんでした。"
-
-#. Type: error
-#. Description
-#. :sl2:
-#: ../partman-efi.templates:8001
-msgid "EFI partition too small"
-msgstr "EFI パーティションが小さすぎます"
-
-#. Type: error
-#. Description
-#. :sl2:
-#: ../partman-efi.templates:8001
-msgid ""
-"EFI System Partitions on this architecture cannot be created with a size "
-"less than 35 MB. Please make the EFI System Partition larger."
-msgstr ""
-"このアーキテクチャの EFI システムパーティションは 35 MB より小さいサイズでは"
-"作成できません。EFI システムパーティションを大きくしてください。"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../partman-efi.templates:9001
-msgid "Force UEFI installation?"
-msgstr "強制的にUEFIをインストールしますか?"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../partman-efi.templates:9001
-msgid ""
-"This machine's firmware has started the installer in UEFI mode but it looks "
-"like there may be existing operating systems already installed using \"BIOS "
-"compatibility mode\". If you continue to install Debian in UEFI mode, it "
-"might be difficult to reboot the machine into any BIOS-mode operating "
-"systems later."
-msgstr ""
-"このマシンのファームウェアは UEFI モードでインストーラが開始されました、しか"
-"し \"BIOS 互換モード\" を使ってインストールされたオペレーティングシステムが存"
-"在しているように見えます。もし UEFI モードで Debian のインストールを続けるの"
-"であれば、後で BIOS モードのオペレーティングシステムを再起動するのは難しいか"
-"もしれません。"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../partman-efi.templates:9001
-msgid ""
-"If you wish to install in UEFI mode and don't care about keeping the ability "
-"to boot one of the existing systems, you have the option to force that here. "
-"If you wish to keep the option to boot an existing operating system, you "
-"should choose NOT to force UEFI installation here."
-msgstr ""
-"もし UEFI モードでインストールをしたいかつ既存のシステムを起動する機能がなく"
-"なってもよいのであれば、ここでそれを強制する選択ができます。もし既存のオペ"
-"レーティングシステムを起動する選択を維持したいのであれば、ここで UEFI のイン"
-"ストールを強制しないことを選択すべきです。"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../clock-setup.templates:5001
-msgid "Set the clock using NTP?"
-msgstr "NTP を使って時刻を設定しますか?"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../clock-setup.templates:5001
-msgid ""
-"The Network Time Protocol (NTP) can be used to set the system's clock. Your "
-"system works best with a correctly set clock."
-msgstr ""
-"Network Time Protocol (NTP) を、システムの時刻を設定するのに使えます。時刻を"
-"正しく設定することで、あなたのシステムは安全に動作します。"
-
-#. Type: string
-#. Description
-#. :sl2:
-#: ../clock-setup.templates:6001
-msgid "NTP server to use:"
-msgstr "利用する NTP サーバ:"
-
-#. Type: string
-#. Description
-#. :sl2:
-#: ../clock-setup.templates:6001
-msgid ""
-"The default NTP server is almost always a good choice, but if you prefer to "
-"use another NTP server, you can enter it here."
-msgstr ""
-"デフォルトの NTP サーバはほとんどの場合、最適な選択肢ですが、別の NTP サーバ"
-"を使いたいのであればそれをここで入力できます。"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../clock-setup.templates:9001
-msgid "Wait another 30 seconds for hwclock to set the clock?"
-msgstr "hwclock の時刻を設定するのにさらに 30 秒待ちますか?"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../clock-setup.templates:9001
-msgid ""
-"Setting the hardware clock is taking longer than expected. The 'hwclock' "
-"program used to set the clock may have problems talking to the hardware "
-"clock."
-msgstr ""
-"ハードウェア時刻の設定に、予想よりも長くかかっています。時刻を設定するのに使"
-"われる 'hwclock' プログラムがハードウェア時刻とやり取りする際に、問題が発生し"
-"ている可能性があります。"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../clock-setup.templates:9001
-msgid ""
-"If you choose to not wait for hwclock to finish setting the clock, this "
-"system's clock may not be set correctly."
-msgstr ""
-"時刻の設定が完了するまで hwclock を待たないように選択すると、このシステムの時"
-"刻はおそらく正しく設定されません。"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../base-installer.templates:1001
-msgid "Proceed with installation to unclean target?"
-msgstr "消去されていないターゲットにインストール処理を行いますか?"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../base-installer.templates:1001
-msgid ""
-"The target file system contains files from a past installation. These files "
-"could cause problems with the installation process, and if you proceed, some "
-"of the existing files may be overwritten."
-msgstr ""
-"ターゲットのファイルシステムには以前のインストールによるファイルが含まれてい"
-"ます。これらのファイルはインストール処理で問題を引き起こす可能性があり、この"
-"まま進めると既存のファイルのいくつかが上書きされることになります。"
-
-#. Type: error
-#. Description
-#. :sl2:
-#: ../base-installer.templates:2001
-msgid "No file system mounted on /target"
-msgstr "/target にマウントされたファイルシステムがありません"
-
-#. Type: error
-#. Description
-#. :sl2:
-#: ../base-installer.templates:2001
-msgid ""
-"Before the installation can proceed, a root file system must be mounted on /"
-"target. The partitioner and formatter should have done this for you."
-msgstr ""
-"インストールを進める前に、ルートファイルシステムを / ターゲットにマウントする"
-"必要があります。partitioner およびフォーマッタでこれを行っているべきです。"
-
-#. Type: error
-#. Description
-#. :sl2:
-#: ../base-installer.templates:3001
-msgid "Not installing to unclean target"
-msgstr "消去されていないターゲットにインストールできません"
-
-#. Type: error
-#. Description
-#. :sl2:
-#: ../base-installer.templates:3001
-msgid ""
-"The installation to the target file system has been canceled. You should go "
-"back and erase or format the target file system before proceeding with the "
-"install."
-msgstr ""
-"ターゲットファイルシステムへのインストールはキャンセルされました。インストー"
-"ルを進める前に、戻ってターゲットファイルシステムを削除するかフォーマットする"
-"ことをお勧めします。"
-
-#. Type: error
-#. Description
-#. The base system is the minimal Debian system
-#. See http://www.debian.org/doc/debian-policy/ch-binary.html#s3.7
-#. :sl2:
-#: ../bootstrap-base.templates:2001
-msgid "Cannot install base system"
-msgstr "ベースシステムをインストールできませんでした"
-
-#. Type: error
-#. Description
-#. The base system is the minimal Debian system
-#. See http://www.debian.org/doc/debian-policy/ch-binary.html#s3.7
-#. :sl2:
-#: ../bootstrap-base.templates:2001
-msgid ""
-"The installer cannot figure out how to install the base system. It found no "
-"installable image, and no valid mirror was configured."
-msgstr ""
-"インストーラはベースシステムをどのようにインストールしたらよいか理解できませ"
-"んでした。インストール可能なイメージが見つからず、また有効なミラーが設定され"
-"ていません。"
-
-#. Type: error
-#. Description
-#. :sl2:
-#. Type: error
-#. Description
-#. :sl2:
-#. Type: error
-#. Description
-#. :sl2:
-#. SUBST0 is a Release file name.
-#. Type: error
-#. Description
-#. :sl2:
-#. SUBST0 is a Release.gpg file name
-#. Type: error
-#. Description
-#. :sl2:
-#. SUBST0 is a gpg key ID
-#. Type: error
-#. Description
-#. :sl2:
-#. Type: error
-#. Description
-#. :sl2:
-#. SUBST0 is a filename
-#. Type: error
-#. Description
-#. :sl2:
-#. SUBST0 is a filename or package name
-#. Debootstrap is a program name: should not be translated
-#: ../bootstrap-base.templates:3001 ../bootstrap-base.templates:7001
-#: ../bootstrap-base.templates:17001 ../bootstrap-base.templates:18001
-#: ../bootstrap-base.templates:19001 ../bootstrap-base.templates:20001
-#: ../bootstrap-base.templates:21001 ../bootstrap-base.templates:22001
-msgid "Debootstrap Error"
-msgstr "Debootstrap エラー"
-
-#. Type: error
-#. Description
-#. :sl2:
-#: ../bootstrap-base.templates:3001
-msgid "Failed to determine the codename for the release."
-msgstr "リリースのコードネームの決定に失敗しました。"
-
-#. Type: error
-#. Description
-#. :sl2:
-#: ../bootstrap-base.templates:4001
-msgid "Failed to install the base system"
-msgstr "ベースシステムのインストールに失敗しました"
-
-#. Type: error
-#. Description
-#. :sl2:
-#: ../bootstrap-base.templates:4001
-msgid "The base system installation into /target/ failed."
-msgstr "/target/ へのベースシステムのインストールに失敗しました。"
-
-#. Type: error
-#. Description
-#. :sl2:
-#. Type: error
-#. Description
-#. :sl2:
-#: ../bootstrap-base.templates:5001 ../bootstrap-base.templates:6001
-msgid "Base system installation error"
-msgstr "ベースシステムインストールエラー"
-
-#. Type: error
-#. Description
-#. :sl2:
-#: ../bootstrap-base.templates:5001
-msgid ""
-"The debootstrap program exited with an error (return value ${EXITCODE})."
-msgstr "debootstrap プログラムはエラーで終了しました (戻り値 ${EXITCODE})。"
-
-#. Type: error
-#. Description
-#. :sl2:
-#: ../bootstrap-base.templates:6001
-msgid "The debootstrap program exited abnormally."
-msgstr "debootstrap プログラムは異常終了しました。"
-
-#. Type: error
-#. Description
-#. :sl2:
-#: ../bootstrap-base.templates:7001
-msgid "The following error occurred:"
-msgstr "以下のエラーが発生しました:"
-
-#. Type: error
-#. Description
-#. :sl2:
-#: ../bootstrap-base.templates:11001
-msgid "Unable to install the selected kernel"
-msgstr "選択されたカーネルはインストールできません"
-
-#. Type: error
-#. Description
-#. :sl2:
-#: ../bootstrap-base.templates:11001
-msgid ""
-"An error was returned while trying to install the kernel into the target "
-"system."
-msgstr "カーネルを対象システムにインストール中にエラーが返されました。"
-
-#. Type: error
-#. Description
-#. :sl2:
-#: ../bootstrap-base.templates:11001
-msgid "Kernel package: '${KERNEL}'."
-msgstr "カーネルパッケージ: '${KERNEL}'"
-
-#. Type: select
-#. Choices
-#. :sl2:
-#: ../bootstrap-base.templates:12001
-msgid ""
-"none[ Do not translate what's inside the brackets and just put the "
-"translation for the word \"none\" in your language without any brackets. "
-"This \"none\" means \"no kernel\" ]"
-msgstr "なし"
-
-#. Type: select
-#. Description
-#. :sl2:
-#: ../bootstrap-base.templates:12002
-msgid "Kernel to install:"
-msgstr "インストールするカーネル:"
-
-#. Type: select
-#. Description
-#. :sl2:
-#: ../bootstrap-base.templates:12002
-msgid ""
-"The list shows the available kernels. Please choose one of them in order to "
-"make the system bootable from the hard drive."
-msgstr ""
-"リストは利用できるカーネルを示しています。ハードドライブからシステムをブート"
-"することができるよう、これらのうちの 1 つを選んでください。"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../bootstrap-base.templates:14001
-msgid "Continue without installing a kernel?"
-msgstr "カーネルをインストールせずに続けますか?"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../bootstrap-base.templates:14001
-msgid "No installable kernel was found in the defined APT sources."
-msgstr ""
-"定義された APT ソースにインストール可能なカーネルが見つかりませんでした。"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../bootstrap-base.templates:14001
-msgid ""
-"You may try to continue without a kernel, and manually install your own "
-"kernel later. This is only recommended for experts, otherwise you will "
-"likely end up with a machine that doesn't boot."
-msgstr ""
-"カーネルなしに続けて、独自のカーネルをあとで手動でインストールしてみることも"
-"できます。これは上級者向けのみに推奨されることで、さもないと、結局起動できな"
-"いマシンを作る結果になるかもしれません。"
-
-#. Type: error
-#. Description
-#. :sl2:
-#: ../bootstrap-base.templates:15001
-msgid "Cannot install kernel"
-msgstr "カーネルをインストールできませんでした"
-
-#. Type: error
-#. Description
-#. :sl2:
-#: ../bootstrap-base.templates:15001
-msgid "The installer cannot find a suitable kernel package to install."
-msgstr ""
-"インストーラはインストールする適切なカーネルパッケージを見つけられませんでし"
-"た。"
-
-#. Type: error
-#. Description
-#. :sl2:
-#: ../bootstrap-base.templates:16001
-msgid "Unable to install ${PACKAGE}"
-msgstr "${PACKAGE} をインストールできません"
-
-#. Type: error
-#. Description
-#. :sl2:
-#: ../bootstrap-base.templates:16001
-msgid ""
-"An error was returned while trying to install the ${PACKAGE} package onto "
-"the target system."
-msgstr ""
-"${PACKAGE} パッケージを対象システムにインストール中にエラーが返されました。"
-
-#. Type: error
-#. Description
-#. :sl2:
-#. SUBST0 is a Release file name.
-#: ../bootstrap-base.templates:17001
-msgid "Failed getting Release file ${SUBST0}."
-msgstr "Release ファイル ${SUBST0} の取得に失敗しました。"
-
-#. Type: error
-#. Description
-#. :sl2:
-#. SUBST0 is a Release.gpg file name
-#: ../bootstrap-base.templates:18001
-msgid "Failed getting Release signature file ${SUBST0}."
-msgstr "Release シグネチャファイル ${SUBST0} の取得に失敗しました。"
-
-#. Type: error
-#. Description
-#. :sl2:
-#. SUBST0 is a gpg key ID
-#: ../bootstrap-base.templates:19001
-msgid "Release file signed by unknown key (key id ${SUBST0})"
-msgstr "Release ファイルは未知のキー (キー ID ${SUBST0}) で署名されています"
-
-#. Type: error
-#. Description
-#. :sl2:
-#: ../bootstrap-base.templates:20001
-msgid "Invalid Release file: no valid components."
-msgstr "無効な Release ファイルです: 有効なコンポーネントがありません。"
-
-#. Type: error
-#. Description
-#. :sl2:
-#. SUBST0 is a filename
-#: ../bootstrap-base.templates:21001
-msgid "Invalid Release file: no entry for ${SUBST0}."
-msgstr "無効な Release ファイルです: ${SUBST0} のエントリがありません。"
-
-#. Type: error
-#. Description
-#. :sl2:
-#. SUBST0 is a filename or package name
-#. Debootstrap is a program name: should not be translated
-#: ../bootstrap-base.templates:22001
-msgid ""
-"Couldn't retrieve ${SUBST0}. This may be due to a network problem or bad "
-"media, depending on your installation method."
-msgstr ""
-"${SUBST0} を取得できません。これは、あなたのインストール方法に依存しますが、"
-"ネットワークの問題か、壊れたメディアといった原因によります。"
-
-#. Type: error
-#. Description
-#. :sl2:
-#. SUBST0 is a filename or package name
-#. Debootstrap is a program name: should not be translated
-#: ../bootstrap-base.templates:22001
-msgid ""
-"If you are installing from CD-R or CD-RW, burning the CD at a lower speed "
-"may help."
-msgstr ""
-"CD-R または CD-RW からインストールしているのであれば、より低速で CD を焼くこ"
-"とが助けになるかもしれません。"
-
-#. Type: error
-#. Description
-#. Debootstrap is a program name: should not be translated
-#. :sl2:
-#: ../bootstrap-base.templates:57001
-msgid "Debootstrap warning"
-msgstr "Debootstrap 警告"
-
-#. Type: error
-#. Description
-#. Debootstrap is a program name: should not be translated
-#. :sl2:
-#: ../bootstrap-base.templates:57001
-msgid "Warning: ${INFO}"
-msgstr "警告: ${INFO}"
-
-#. Type: text
-#. Description
-#. SUBST0 is an url
-#. :sl2:
-#: ../bootstrap-base.templates:58001
-msgid "Retrying failed download of ${SUBST0}"
-msgstr "ダウンロードに失敗した ${SUBST0} を再試行しています"
-
 #. Type: text
 #. Description
 #. :sl2:
-#: ../apt-setup-udeb.templates:4001
-msgid "Scanning local repositories..."
-msgstr "ローカルリポジトリを検査しています..."
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../apt-setup-udeb.templates:5001
-msgid "Scanning the security updates repository..."
-msgstr "セキュリティアップデートリポジトリを検査しています..."
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../apt-setup-udeb.templates:6001
-msgid "Scanning the release updates repository..."
-msgstr "リリースアップデートリポジトリを検査しています..."
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../apt-setup-udeb.templates:7001
-msgid "Scanning the backports repository..."
-msgstr "バックポートリポジトリを検査しています..."
-
-#. Type: select
-#. Choices
-#. :sl2:
-#. These are choices of actions so this is, at least in English,
-#. an infinitive form
-#: ../apt-setup-udeb.templates:8001 ../apt-mirror-setup.templates:4001
-msgid "Ignore"
-msgstr "無視"
-
-#. Type: select
-#. Description
-#. You should end this with a colon. A non-translatable variable
-#. follows with the mirror URL
-#. :sl2:
-#: ../apt-setup-udeb.templates:8002
-msgid ""
-"The installer failed to download the public key used to sign the local "
-"repository at ${MIRROR}:"
-msgstr ""
-"インストーラは、${MIRROR} にあるローカルリポジトリの署名に使われた公開鍵のダ"
-"ウンロードに失敗しました:"
-
-#. Type: error
-#. Description
-#. :sl2:
-#: ../apt-setup-udeb.templates:10001
-msgid "Cannot access repository"
-msgstr "リポジトリにアクセスできません"
-
-#. Type: error
-#. Description
-#. :sl2:
-#: ../apt-setup-udeb.templates:10001
-msgid ""
-"The repository on ${HOST} couldn't be accessed, so its updates will not be "
-"made available to you at this time. You should investigate this later."
-msgstr ""
-"${HOST} のリポジトリにアクセスできませんでした。そのため、これらのアップデー"
-"トは現時点では利用できるようになっていません。あとで調査してください。"
-
-#. Type: error
-#. Description
-#. :sl2:
-#: ../apt-setup-udeb.templates:10001
-msgid ""
-"Commented out entries for ${HOST} have been added to the /etc/apt/sources."
-"list file."
-msgstr ""
-"コメントアウトされた ${HOST} のエントリが /etc/apt/sources.list ファイルに追"
-"加されました。"
-
-#. Type: error
-#. Description
-#. :sl2:
-#: ../apt-cdrom-setup.templates:2001
-msgid "apt configuration problem"
-msgstr "apt の設定の問題"
-
-#. Type: select
-#. Description
-#. :sl2:
-#: ../apt-mirror-setup.templates:4002
-msgid ""
-"The installer failed to access the mirror. This may be a problem with your "
-"network, or with the mirror. You can choose to retry the download, select a "
-"different mirror, or ignore the problem and continue without all the "
-"packages from this mirror."
-msgstr ""
-"インストーラはミラーへのアクセスに失敗しました。これはあなたのネットワークま"
-"たはミラーに問題があるためでしょう。ダウンロードの再試行、別のミラーの選択、"
-"あるいは問題を無視してこのミラーからの全パッケージなしに継続、から選ぶことが"
-"できます。"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../apt-mirror-setup.templates:6001
-msgid "Continue without a network mirror?"
-msgstr "ネットワークミラーなしに続けますか?"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../apt-mirror-setup.templates:6001
-msgid "No network mirror was selected."
-msgstr "ネットワークミラーが選択されませんでした。"
-
-#. Type: boolean
-#. Description
-#. This template is used by the Ubuntu version of d-i.
-#. :sl2:
-#: ../apt-mirror-setup.templates-ubuntu:1001
-msgid "Use restricted software?"
-msgstr "制限されたソフトウェアを使いますか?"
-
-#. Type: boolean
-#. Description
-#. This template is used by the Ubuntu version of d-i.
-#. :sl2:
-#: ../apt-mirror-setup.templates-ubuntu:1001
-msgid ""
-"Some non-free software is available in packaged form. Though this software "
-"is not a part of the main distribution, standard package management tools "
-"can be used to install it. This software has varying licenses which may "
-"prevent you from using, modifying, or sharing it."
-msgstr ""
-"いくつかの non-free ソフトウェアがパッケージされた形で利用できます。これらの"
-"ソフトウェアは main ディストリビューションを構成するものではありませんが、標"
-"準のパッケージ管理ツールは、これらのソフトウェアをインストールするのに利用で"
-"きます。これらのソフトウェアは、利用・変更・共有を阻害するようなそれぞれ異な"
-"るライセンスを持っています。"
-
-#. Type: boolean
-#. Description
-#. This template is used by the Ubuntu version of d-i.
-#. :sl2:
-#: ../apt-mirror-setup.templates-ubuntu:2001
-msgid "Use software from the \"universe\" component?"
-msgstr "\"universe\" コンポーネントからのソフトウェアを使いますか?"
-
-#. Type: boolean
-#. Description
-#. This template is used by the Ubuntu version of d-i.
-#. :sl2:
-#: ../apt-mirror-setup.templates-ubuntu:2001
-msgid ""
-"Some additional software is available in packaged form. This software is "
-"free and, though it is not a part of the main distribution, standard package "
-"management tools can be used to install it."
-msgstr ""
-"いくつかの追加ソフトウェアがパッケージされた形で利用できます。これらのソフト"
-"ウェアはフリーで、main ディストリビューションを構成するものではありませんが、"
-"標準のパッケージ管理ツールは、これらのソフトウェアをインストールするのに利用"
-"できます。"
-
-#. Type: boolean
-#. Description
-#. This template is used by the Ubuntu version of d-i.
-#. :sl2:
-#: ../apt-mirror-setup.templates-ubuntu:3001
-msgid "Use software from the \"multiverse\" component?"
-msgstr "\"multiverse\" コンポーネントからのソフトウェアを使いますか?"
-
-#. Type: boolean
-#. Description
-#. This template is used by the Ubuntu version of d-i.
-#. :sl2:
-#: ../apt-mirror-setup.templates-ubuntu:3001
-msgid ""
-"Some non-free software is available in packaged form. Though this software "
-"is not a part of the main distribution, standard package management tools "
-"can be used to install it. This software has varying licenses and (in some "
-"cases) patent restrictions which may prevent you from using, modifying, or "
-"sharing it."
-msgstr ""
-"いくつかの non-free ソフトウェアがパッケージされた形で利用できます。これらの"
-"ソフトウェアは main ディストリビューションを構成するものではありませんが、標"
-"準のパッケージ管理ツールは、これらのソフトウェアをインストールするのに利用で"
-"きます。これらのソフトウェアは、種々のライセンスを持ち、(いくつかのものは) 利"
-"用・変更・共有を阻害するような特許制約を受けます。"
-
-#. Type: boolean
-#. Description
-#. This template is used by the Ubuntu version of d-i.
-#. :sl2:
-#: ../apt-mirror-setup.templates-ubuntu:4001
-msgid "Use software from the \"partner\" repository?"
-msgstr "\"partner\" リポジトリからのソフトウェアを使いますか?"
-
-#. Type: boolean
-#. Description
-#. This template is used by the Ubuntu version of d-i.
-#. :sl2:
-#: ../apt-mirror-setup.templates-ubuntu:4001
-msgid ""
-"Some additional software is available from Canonical's \"partner\" "
-"repository. This software is not part of Ubuntu, but is offered by Canonical "
-"and the respective vendors as a service to Ubuntu users."
-msgstr ""
-"いくつかの追加ソフトウェアを Canonical の \"partner\" リポジトリから利用でき"
-"ます。このソフトウェアは Ubuntu の一部ではありませんが、Canonical および各ベ"
-"ンダによって Ubuntu ユーザへのサービスとして提供されています。"
-
-#. Type: boolean
-#. Description
-#. This template is used by the Ubuntu version of d-i.
-#. :sl2:
-#: ../apt-mirror-setup.templates-ubuntu:5001
-msgid "Use backported software?"
-msgstr "バックポートされたソフトウェアを使いますか?"
-
-#. Type: boolean
-#. Description
-#. This template is used by the Ubuntu version of d-i.
-#. :sl2:
-#: ../apt-mirror-setup.templates-ubuntu:5001
-msgid ""
-"Some software has been backported from the development tree to work with "
-"this release. Although this software has not gone through such complete "
-"testing as that contained in the release, it includes newer versions of some "
-"applications which may provide useful features."
-msgstr ""
-"いくつかのソフトウェアは開発ツリーからこのリリースで動作するようにバックポー"
-"トされています。これらのソフトウェアはリリース版に含まれているほど完全にテス"
-"トされたものではありませんが、アプリケーションのより新しい (便利な機能を提供"
-"するかもしれない) バージョンを含んでいます。"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../user-setup-udeb.templates:8001
-msgid "Create a normal user account now?"
-msgstr "ここで一般ユーザアカウントを作成しますか?"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../user-setup-udeb.templates:8001
-msgid ""
-"It's a bad idea to use the root account for normal day-to-day activities, "
-"such as the reading of electronic mail, because even a small mistake can "
-"result in disaster. You should create a normal user account to use for those "
-"day-to-day tasks."
-msgstr ""
-"root アカウントで電子メールのやりとりなどの日常業務を行うべきではありません。"
-"なぜなら、どんな小さなミスでも取り返しのつかない結果を招くからです。ここで、"
-"このような日常業務を行うための一般ユーザアカウントを作成しましょう。"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../user-setup-udeb.templates:8001
-msgid ""
-"Note that you may create it later (as well as any additional account) by "
-"typing 'adduser <username>' as root, where <username> is an username, like "
-"'imurdock' or 'rms'."
-msgstr ""
-"Debian システムのインストール後でも、(追加ユーザアカウントの作成と同様に) あ"
-"なたのユーザアカウントを作成することができます。root アカウントで 'adduser <"
-"ユーザ名>' と入力してください。<ユーザ名> は 'imurdock' や 'rms' のようなアカ"
-"ウントの名称です。"
-
-#. Type: error
-#. Description
-#. :sl2:
-#: ../user-setup-udeb.templates:11001
-msgid "Invalid username"
-msgstr "無効なユーザ名"
-
-#. Type: error
-#. Description
-#. :sl2:
-#: ../user-setup-udeb.templates:11001
-msgid ""
-"The username you entered is invalid. Note that usernames must start with a "
-"lower-case letter, which can be followed by any combination of numbers and "
-"more lower-case letters, and must be no more than 32 characters long."
-msgstr ""
-"入力されたユーザ名は無効です。 ユーザ名は数字・小文字アルファベットの任意の組"
-"合わせで構成されますが、ユーザ名の先頭はアルファベットの小文字でなければなら"
-"ず、32 文字以内の長さでなければなりません。"
-
-#. Type: error
-#. Description
-#. :sl2:
-#: ../user-setup-udeb.templates:12001
-msgid "Reserved username"
-msgstr "予約されたユーザ名"
-
-#. Type: error
-#. Description
-#. :sl2:
-#: ../user-setup-udeb.templates:12001
-msgid ""
-"The username you entered (${USERNAME}) is reserved for use by the system. "
-"Please select a different one."
-msgstr ""
-"入力したユーザ名 (${USERNAME}) は、システムでの利用のために予約されています。"
-"異なるものを選択してください。"
-
-#. Type: error
-#. Description
-#. :sl2:
-#: ../user-setup-udeb.templates:15001 ../grub-installer.templates:11001
-msgid "Password input error"
-msgstr "パスワード入力エラー"
-
-#. Type: error
-#. Description
-#. :sl2:
-#: ../user-setup-udeb.templates:15001 ../grub-installer.templates:11001
-msgid "The two passwords you entered were not the same. Please try again."
-msgstr "2回入力されたパスワードは同じではありません。再度入力してください。"
-
-#. #-#-#-#-#  templates.pot (user-setup)  #-#-#-#-#
-#. Type: error
-#. Description
-#. :sl2:
-#. #-#-#-#-#  templates.pot (network-console)  #-#-#-#-#
-#. Type: error
-#. Description
-#. :sl3:
-#. #-#-#-#-#  templates.pot (partman-iscsi)  #-#-#-#-#
-#. Type: error
-#. Description
-#. :sl3:
-#: ../user-setup-udeb.templates:16001 ../network-console.templates:6001
-#: ../partman-iscsi.templates:8001
-msgid "Empty password"
-msgstr "空のパスワード"
-
-#. #-#-#-#-#  templates.pot (user-setup)  #-#-#-#-#
-#. Type: error
-#. Description
-#. :sl2:
-#. #-#-#-#-#  templates.pot (network-console)  #-#-#-#-#
-#. Type: error
-#. Description
-#. :sl3:
-#. #-#-#-#-#  templates.pot (partman-iscsi)  #-#-#-#-#
-#. Type: error
-#. Description
-#. :sl3:
-#: ../user-setup-udeb.templates:16001 ../network-console.templates:6001
-#: ../partman-iscsi.templates:8001
-msgid ""
-"You entered an empty password, which is not allowed. Please choose a non-"
-"empty password."
-msgstr ""
-"許可されていない、空のパスワードが入力されました。空ではないパスワードを選ん"
-"でください。"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../user-setup-udeb.templates:17001
-msgid "Enable shadow passwords?"
-msgstr "シャドーパスワードを有効にしますか?"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../user-setup-udeb.templates:17001
-msgid ""
-"Shadow passwords make your system more secure because nobody is able to view "
-"even encrypted passwords. The passwords are stored in a separate file that "
-"can only be read by special programs. The use of shadow passwords is "
-"strongly recommended, except in a few cases such as NIS environments."
-msgstr ""
-"シャドーパスワードを使うと、暗号化されたパスワード情報さえ誰も見ることができ"
-"なくなり、システムがより安全になります。パスワード情報は、特別なプログラムし"
-"か参照できない別ファイルに保存されます。NIS 環境などのごく限られた場合を除"
-"き、シャドーパスワードの導入を強く推奨します。"
-
-#. Type: select
-#. Choices
-#. :sl2:
-#: ../cdebconf-udeb.templates:2001
-msgid "critical"
-msgstr "重要"
-
-#. Type: select
-#. Choices
-#. :sl2:
-#: ../cdebconf-udeb.templates:2001
-msgid "high"
-msgstr "高"
-
-#. Type: select
-#. Choices
-#. :sl2:
-#: ../cdebconf-udeb.templates:2001
-msgid "medium"
-msgstr "中"
-
-#. Type: select
-#. Choices
-#. :sl2:
-#: ../cdebconf-udeb.templates:2001
-msgid "low"
-msgstr "低"
-
-#. Type: select
-#. Description
-#. :sl2:
-#: ../cdebconf-udeb.templates:2002
-msgid "Ignore questions with a priority less than:"
-msgstr "次のものより低い優先度の質問を無視:"
-
-#. Type: select
-#. Description
-#. :sl2:
-#: ../cdebconf-udeb.templates:2002
-msgid ""
-"Packages that use debconf for configuration prioritize the questions they "
-"might ask you. Only questions with a certain priority or higher are actually "
-"shown to you; all less important questions are skipped."
-msgstr ""
-"設定に debconf を使うパッケージは、あなたに尋ねるべき質問に優先度を付けていま"
-"す。当該の優先度またはより高い優先度の質問のみが実際にあなたに提示されます。"
-"重要度の低い質問は飛ばされます。"
-
-#. Type: select
-#. Description
-#. :sl2:
-#: ../cdebconf-udeb.templates:2002
-msgid ""
-"You can select the lowest priority of question you want to see:\n"
-" - 'critical' is for items that will probably break the system\n"
-"    without user intervention.\n"
-" - 'high' is for items that don't have reasonable defaults.\n"
-" - 'medium' is for normal items that have reasonable defaults.\n"
-" - 'low' is for trivial items that have defaults that will work in\n"
-"   the vast majority of cases."
-msgstr ""
-"提示したい質問の最低の優先度を選択できます:\n"
-" - '重要' は、ユーザの介在なしには、おそらくシステムが\n"
-"    立ち行かない項目です。\n"
-" - '高' は、妥当なデフォルト値のない項目です。\n"
-" - '中' は、妥当なデフォルト値を持つ通常の項目です。\n"
-" - '低' は、大多数の場面では稼働するデフォルト値を持つ\n"
-"    些細な項目です。"
-
-#. Type: select
-#. Description
-#. :sl2:
-#: ../cdebconf-udeb.templates:2002
-msgid ""
-"For example, this question is of medium priority, and if your priority were "
-"already 'high' or 'critical', you wouldn't see this question."
-msgstr ""
-"たとえば、この質問は '中' の優先度ですが、もし優先度がすでに '高' あるいは "
-"'重要' になっていたとすると、この質問は目にしないことになります。"
-
-#. Type: text
-#. Description
-#. :sl2:
-#: ../cdebconf-priority.templates:1001
-msgid "Change debconf priority"
-msgstr "debconf 優先度の変更"
+#. File system name
+#: ../partman-xfs.templates:2001
+msgid "XFS journaling file system"
+msgstr "XFS ジャーナリングファイルシステム"
 
 #. Type: select
 #. Choices
@@ -4968,182 +5165,6 @@ msgstr ""
 "「更新が完全な後方互換性を持っていなかった」「セキュリティ勧告で管理者に何か"
 "別の手動操作をするよう要求していた」といったまれな場合に、このマシンで提供し"
 "ているサービスに、予期せぬ停止時間を引き起こすかもしれません。"
-
-#. Type: error
-#. Description
-#. :sl3:
-#. Type: error
-#. Description
-#. :sl3:
-#. Type: error
-#. Description
-#. :sl2:
-#: ../grub-installer.templates:4001 ../grub-installer.templates:6001
-#: ../grub-installer.templates:15001
-msgid "Unable to configure GRUB"
-msgstr "GRUB の設定ができません"
-
-#. Type: string
-#. Description
-#. :sl2:
-#. Type: select
-#. Description
-#. :sl2:
-#: ../grub-installer.templates:7001 ../grub-installer.templates:8002
-msgid "Device for boot loader installation:"
-msgstr "ブートローダをインストールするデバイス:"
-
-#. Type: string
-#. Description
-#. :sl2:
-#. Type: select
-#. Description
-#. :sl2:
-#: ../grub-installer.templates:7001 ../grub-installer.templates:8002
-msgid ""
-"You need to make the newly installed system bootable, by installing the GRUB "
-"boot loader on a bootable device. The usual way to do this is to install "
-"GRUB to your primary drive (UEFI partition/boot record). You may instead "
-"install GRUB to a different drive (or partition), or to removable media."
-msgstr ""
-"GRUB ブートローダを起動可能デバイスにインストールして、新しくインストールされ"
-"たシステムを起動可能にするときがきました。通常のやり方は、GRUB をプライマリド"
-"ライブにインストールするというものです (UEFI パーティション/ブートレコード)。"
-"代わりに GRUB を別のドライブ (またはパーティション)、あるいはリムーバブルメ"
-"ディアにインストールすることができます。"
-
-#. Type: string
-#. Description
-#. :sl2:
-#: ../grub-installer.templates:7001
-msgid ""
-"The device notation should be specified as a device in /dev. Below are some "
-"examples:\n"
-" - \"/dev/sda\" will install GRUB to your primary drive (UEFI partition/"
-"boot\n"
-"   record);\n"
-" - \"/dev/sdb\" will install GRUB to a secondary drive (which may for "
-"instance\n"
-"   be a thumbdrive);\n"
-" - \"/dev/fd0\" will install GRUB to a floppy."
-msgstr ""
-"デバイス記法は、/dev 以下のデバイスとして指定してください。例を以下に示しま"
-"す:\n"
-" - \"/dev/sda\" は GRUB を プライマリドライブ (UEFIパーティション/ブートレ"
-"コード) に\n"
-"   インストールします。\n"
-" - \"/dev/sdb\" は GRUB を セカンダリドライブ (例えばUSBフラッシュメモリな"
-"ど) に\n"
-"   インストールします。\n"
-" - \"/dev/fd0\" は GRUB をフロッピーにインストールします。"
-
-#. Type: password
-#. Description
-#. :sl2:
-#: ../grub-installer.templates:9001
-msgid "GRUB password:"
-msgstr "GRUB パスワード:"
-
-#. Type: password
-#. Description
-#. :sl2:
-#: ../grub-installer.templates:9001
-msgid ""
-"The GRUB boot loader offers many powerful interactive features, which could "
-"be used to compromise your system if unauthorized users have access to the "
-"machine when it is starting up. To defend against this, you may choose a "
-"password which will be required before editing menu entries or entering the "
-"GRUB command-line interface. By default, any user will still be able to "
-"start any menu entry without entering the password."
-msgstr ""
-"GRUB ブートローダは多くの強力なインタラクティブ機能を提供しますが、起動時に承"
-"認されていないユーザがマシンへのアクセスを持ったときにはあなたのシステムを侵"
-"害するのに使われかねません。これを防ぐために、メニューのエントリの編集やGRUB "
-"コマンドラインインターフェイスに入る前に必須とするパスワードを選択できます。"
-"デフォルトでは、すべてのユーザはパスワードの入力なしにどのメニューエントリで"
-"もまだ開始できます。"
-
-#. Type: password
-#. Description
-#. :sl2:
-#: ../grub-installer.templates:9001
-msgid "If you do not wish to set a GRUB password, leave this field blank."
-msgstr "GRUB パスワードを設定するつもりがなければ、空のままにしておきます。"
-
-#. Type: password
-#. Description
-#. :sl2:
-#: ../grub-installer.templates:10001
-msgid ""
-"Please enter the same GRUB password again to verify that you have typed it "
-"correctly."
-msgstr ""
-"確認のために、先ほど入力した同じ GRUB のパスワードを再度入力してください。"
-
-#. Type: error
-#. Description
-#. :sl2:
-#: ../grub-installer.templates:13001
-msgid "GRUB installation failed"
-msgstr "GRUB のインストールに失敗しました"
-
-#. Type: error
-#. Description
-#. :sl2:
-#: ../grub-installer.templates:13001
-msgid ""
-"The '${GRUB}' package failed to install into /target/. Without the GRUB boot "
-"loader, the installed system will not boot."
-msgstr ""
-"'${GRUB}' パッケージを /target/ にインストールするのに失敗しました。GRUB ブー"
-"トローダなしでは、インストールしたシステムは起動しません。"
-
-#. Type: error
-#. Description
-#. :sl2:
-#: ../grub-installer.templates:14001
-msgid "Unable to install GRUB in ${BOOTDEV}"
-msgstr "GRUB を ${BOOTDEV} にインストールできません"
-
-#. Type: error
-#. Description
-#. :sl2:
-#: ../grub-installer.templates:14001
-msgid "Executing 'grub-install ${BOOTDEV}' failed."
-msgstr "'grub-install ${BOOTDEV}' の実行に失敗しました。"
-
-#. Type: error
-#. Description
-#. :sl2:
-#. Type: error
-#. Description
-#. :sl2:
-#: ../grub-installer.templates:14001 ../grub-installer.templates:15001
-msgid "This is a fatal error."
-msgstr "これは致命的なエラーです。"
-
-#. Type: error
-#. Description
-#. :sl2:
-#: ../grub-installer.templates:15001
-msgid "Executing 'update-grub' failed."
-msgstr "'update-grub' の実行に失敗しました。"
-
-#. Type: text
-#. Description
-#. Rescue menu item
-#. :sl2:
-#: ../grub-installer.templates:29001
-msgid "Reinstall GRUB boot loader"
-msgstr "GRUB ブートローダの再インストール"
-
-#. Type: text
-#. Description
-#. Rescue menu item
-#. :sl2:
-#: ../grub-installer.templates:33001
-msgid "Force GRUB installation to the EFI removable media path"
-msgstr "EFI リムーバブルメディアパスへの強制 GRUB インストール"
 
 #. Type: error
 #. Description
@@ -5230,118 +5251,97 @@ msgstr ""
 msgid "Rescue mode"
 msgstr "レスキューモード"
 
-#. Type: text
-#. Description
-#. Main menu item
-#. Translators: keep below 55 columns
-#. :sl2:
-#: ../load-iso.templates:1001
-msgid "Load installer components from an installer ISO"
-msgstr "インストーラ ISO イメージからインストーラコンポーネントをロード"
-
-#. Type: select
-#. Choices
-#. Possible locations for debug logs to be saved
-#. :sl2:
-#: ../save-logs.templates:2001
-msgid "floppy"
-msgstr "フロッピー"
-
-#. Type: select
-#. Choices
-#. Possible locations for debug logs to be saved
-#. :sl2:
-#: ../save-logs.templates:2001
-msgid "web"
-msgstr "Web"
-
-#. Type: select
-#. Choices
-#. Possible locations for debug logs to be saved
-#. :sl2:
-#: ../save-logs.templates:2001
-msgid "mounted file system"
-msgstr "マウント済みファイルシステム"
-
-#. Type: select
+#. Type: boolean
 #. Description
 #. :sl2:
-#: ../save-logs.templates:2002
-msgid "How should the debug logs be saved or transferred?"
-msgstr "デバッグログをどのように保存または転送しますか?"
+#: ../user-setup-udeb.templates:8001
+msgid "Create a normal user account now?"
+msgstr "ここで一般ユーザアカウントを作成しますか?"
 
-#. Type: select
+#. Type: boolean
 #. Description
 #. :sl2:
-#: ../save-logs.templates:2002
+#: ../user-setup-udeb.templates:8001
 msgid ""
-"Debugging log files for the installer can be saved to floppy, served up over "
-"the web, or saved to a mounted file system."
+"It's a bad idea to use the root account for normal day-to-day activities, "
+"such as the reading of electronic mail, because even a small mistake can "
+"result in disaster. You should create a normal user account to use for those "
+"day-to-day tasks."
 msgstr ""
-"インストーラのデバッグログファイルは、フロッピーに保存するか、Web を経由して"
-"送るか、あるいはマウント済みファイルシステムに保存できます。"
+"root アカウントで電子メールのやりとりなどの日常業務を行うべきではありません。"
+"なぜなら、どんな小さなミスでも取り返しのつかない結果を招くからです。ここで、"
+"このような日常業務を行うための一般ユーザアカウントを作成しましょう。"
 
-#. Type: string
+#. Type: boolean
 #. Description
 #. :sl2:
-#: ../save-logs.templates:3001
-msgid "Directory in which to save debug logs:"
-msgstr "デバッグログを保存するディレクトリ:"
-
-#. Type: string
-#. Description
-#. :sl2:
-#: ../save-logs.templates:3001
+#: ../user-setup-udeb.templates:8001
 msgid ""
-"Please make sure the file system you want to save debug logs on is mounted "
-"before you continue."
+"Note that you may create it later (as well as any additional account) by "
+"typing 'adduser <username>' as root, where <username> is an username, like "
+"'imurdock' or 'rms'."
 msgstr ""
-"続ける前に、デバッグログを保存したいファイルシステムがマウントされていること"
-"を確認してください。"
+"Debian システムのインストール後でも、(追加ユーザアカウントの作成と同様に) あ"
+"なたのユーザアカウントを作成することができます。root アカウントで 'adduser <"
+"ユーザ名>' と入力してください。<ユーザ名> は 'imurdock' や 'rms' のようなアカ"
+"ウントの名称です。"
 
 #. Type: error
 #. Description
 #. :sl2:
-#: ../save-logs.templates:4001
-msgid "Cannot save logs"
-msgstr "ログを保存できません"
+#: ../user-setup-udeb.templates:11001
+msgid "Invalid username"
+msgstr "無効なユーザ名"
 
 #. Type: error
 #. Description
 #. :sl2:
-#: ../save-logs.templates:4001
-msgid "The directory \"${DIR}\" does not exist."
-msgstr "ディレクトリ \"${DIR}\" は存在しません。"
-
-#. Type: note
-#. Description
-#. :sl2:
-#: ../save-logs.templates:7001
-msgid "Insert formatted floppy in drive"
-msgstr "ドライブにフォーマット済みのフロッピーを挿入してください"
-
-#. Type: note
-#. Description
-#. :sl2:
-#: ../save-logs.templates:7001
-msgid "Log files and debug info will be copied into this floppy."
-msgstr "ログファイルとデバッグ情報がこのフロッピーにコピーされます。"
-
-#. Type: note
-#. Description
-#. :sl2:
-#: ../save-logs.templates:7001
+#: ../user-setup-udeb.templates:11001
 msgid ""
-"The information will also be stored in /var/log/installer/ on the installed "
-"system."
+"The username you entered is invalid. Note that usernames must start with a "
+"lower-case letter, which can be followed by any combination of numbers and "
+"more lower-case letters, and must be no more than 32 characters long."
 msgstr ""
-"情報はインストールされたシステムの /var/log/installer/ にも格納されます。"
+"入力されたユーザ名は無効です。 ユーザ名は数字・小文字アルファベットの任意の組"
+"合わせで構成されますが、ユーザ名の先頭はアルファベットの小文字でなければなら"
+"ず、32 文字以内の長さでなければなりません。"
 
-#. Type: text
+#. Type: error
 #. Description
-#. Main menu item
-#. Translators: keep it under 65 columns
 #. :sl2:
-#: ../cdrom-checker.templates:12001
-msgid "Check the integrity of installation media"
-msgstr "インストールメディアの完全性を確認"
+#: ../user-setup-udeb.templates:12001
+msgid "Reserved username"
+msgstr "予約されたユーザ名"
+
+#. Type: error
+#. Description
+#. :sl2:
+#: ../user-setup-udeb.templates:12001
+msgid ""
+"The username you entered (${USERNAME}) is reserved for use by the system. "
+"Please select a different one."
+msgstr ""
+"入力したユーザ名 (${USERNAME}) は、システムでの利用のために予約されています。"
+"異なるものを選択してください。"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../user-setup-udeb.templates:17001
+msgid "Enable shadow passwords?"
+msgstr "シャドーパスワードを有効にしますか?"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../user-setup-udeb.templates:17001
+msgid ""
+"Shadow passwords make your system more secure because nobody is able to view "
+"even encrypted passwords. The passwords are stored in a separate file that "
+"can only be read by special programs. The use of shadow passwords is "
+"strongly recommended, except in a few cases such as NIS environments."
+msgstr ""
+"シャドーパスワードを使うと、暗号化されたパスワード情報さえ誰も見ることができ"
+"なくなり、システムがより安全になります。パスワード情報は、特別なプログラムし"
+"か参照できない別ファイルに保存されます。NIS 環境などのごく限られた場合を除"
+"き、シャドーパスワードの導入を強く推奨します。"

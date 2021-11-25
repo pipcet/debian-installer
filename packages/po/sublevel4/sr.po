@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-24 22:59+0100\n"
+"POT-Creation-Date: 2021-11-21 20:02+0000\n"
 "PO-Revision-Date: 2020-09-07 19:36+0000\n"
 "Last-Translator: Filipovic Dragan <filipovic@tutanota.com>\n"
 "Language-Team: Serbian <debian-l10n-serbian@lists.debian.org>\n"
@@ -22,57 +22,6 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 4.3-dev\n"
-
-#. Type: text
-#. Description
-#. eg. Virtual disk 1 (xvda)
-#. :sl4:
-#: ../partman-base.templates:64001
-#, no-c-format
-msgid "Virtual disk %s (%s)"
-msgstr "Виртуелни диск %s (%s)"
-
-#. Type: text
-#. Description
-#. eg. Virtual disk 1, partition #1 (xvda1)
-#. :sl4:
-#: ../partman-base.templates:65001
-#, no-c-format
-msgid "Virtual disk %s, partition #%s (%s)"
-msgstr "Виртуелни диск %s, партиција #%s (%s)"
-
-#. Type: text
-#. Description
-#. :sl4:
-#. Note to translators: Please keep your translations of this string below
-#. a 65 columns limit (which means 65 characters in single-byte languages)
-#: ../partman-basicfilesystems.templates:58001
-msgid "acls - support POSIX.1e Access Control List"
-msgstr "acls - подршка за POSIX.1e Access Control List"
-
-#. Type: text
-#. Description
-#. :sl4:
-#. Note to translators: Please keep your translations of this string below
-#. a 65 columns limit (which means 65 characters in single-byte languages)
-#: ../partman-basicfilesystems.templates:59001
-msgid "shortnames - only use the old MS-DOS 8.3 style filenames"
-msgstr "кратки називи - користити старе MS-DOS 8.3 називе фајлова"
-
-#. Type: text
-#. Description
-#. :sl4:
-#: ../partman-target.templates:3001
-msgid ""
-"In order to start your new system, a so called boot loader is used.  It is "
-"installed in a boot partition.  You must set the bootable flag for the "
-"partition.  Such a partition will be marked with \"${BOOTABLE}\" in the main "
-"partitioning menu."
-msgstr ""
-"Да бисте покренули ваш нови систем, морате користити тзв. покретачки "
-"програм. Он је инсталиран на бут партицији. Морате поставити бутабилну "
-"заставицу за ту партицију. Таква партиција ће бити означена као "
-"„${BOOTABLE}“ у менију за партиционисање."
 
 #. Type: text
 #. Description
@@ -250,24 +199,115 @@ msgstr ""
 "„GTK“ је графички интерфејс који може да се користи у било ком графичком "
 "окружењу."
 
+#. Type: text
+#. Description
+#. This item is a progress bar heading when the system configures
+#. some flashable memory used by many embedded devices
+#. :sl4:
+#: ../flash-kernel-installer.templates:1001
+msgid "Configuring flash memory to boot the system"
+msgstr "Конфигурисање флеш меморије да покреће систем"
+
+#. Type: text
+#. Description
+#. This item is a progress bar heading when an embedded device is
+#. configured so it will boot from disk
+#. :sl4:
+#: ../flash-kernel-installer.templates:2001
+msgid "Making the system bootable"
+msgstr "Омогућавање стартовања система"
+
+#. Type: text
+#. Description
+#. This is "preparing the system" to flash the kernel and initrd
+#. on a flashable memory
+#. :sl4:
+#: ../flash-kernel-installer.templates:3001
+msgid "Preparing the system..."
+msgstr "Припремање система..."
+
+#. Type: text
+#. Description
+#. This is a progress bar showing up when the system
+#. write the kernel to the flashable memory of the embedded device
+#. :sl4:
+#: ../flash-kernel-installer.templates:4001
+msgid "Writing the kernel to flash memory..."
+msgstr "Копирање кернела на флеш меморију..."
+
+#. Type: text
+#. Description
+#. This is a progress bar showing up when the system generates a
+#. special boot image on disk for some embedded device so they
+#. can boot.
+#. :sl4:
+#: ../flash-kernel-installer.templates:5001
+msgid "Generating boot image on disk..."
+msgstr "Генерисање покретачке слике на диске..."
+
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. This item is a menu entry for a step where the system configures
+#. the flashable memory used by many embedded devices
+#. (writing the kernel and initrd to it)
+#. :sl4:
+#: ../flash-kernel-installer.templates:6001
+msgid "Make the system bootable"
+msgstr "Омогућавање покретања система"
+
+#. Type: boolean
+#. Description
+#. :sl4:
+#: ../grub-installer.templates:17001
+msgid "Install GRUB?"
+msgstr "Инсталирати GRUB?"
+
+#. Type: boolean
+#. Description
+#. :sl4:
+#: ../grub-installer.templates:17001
+msgid ""
+"GRUB 2 is the next generation of GNU GRUB, the boot loader that is commonly "
+"used on i386/amd64 PCs. It is now also available for ${ARCH}."
+msgstr ""
+"GRUB 2 је следећа генерација GNU GRUB-a, покретачки програм који се најчешће "
+"користи на i386/amd64 PC-јевима. Сада је такође доступан за ${ARCH}."
+
+#. Type: boolean
+#. Description
+#. :sl4:
+#: ../grub-installer.templates:17001
+msgid ""
+"It has interesting new features but is still experimental software for this "
+"architecture. If you choose to install it, you should be prepared for "
+"breakage, and have an idea on how to recover your system if it becomes "
+"unbootable. You're advised not to try this in production environments."
+msgstr ""
+"Има занимљиве карактеристике, али је још уввек експерименталан софтвер за "
+"ову архитектуру. Ако изаберете да га инсталирате, требате бити спремни за "
+"кварове, и знати како да повратите ваш систем ако постане небутабилан. "
+"Саветује се да ово не покушавате на окружењима која се користе за продукцију."
+
 #. Type: error
 #. Description
 #. :sl4:
-#: ../nobootloader.templates:2001 ../grub-installer.templates:32001
+#: ../grub-installer.templates:32001 ../nobootloader.templates:2001
 msgid "Failed to mount /target/proc"
 msgstr "Неуспело монтирање /target/proc"
 
 #. Type: error
 #. Description
 #. :sl4:
-#: ../nobootloader.templates:2001 ../grub-installer.templates:32001
+#: ../grub-installer.templates:32001 ../nobootloader.templates:2001
 msgid "Mounting the proc file system on /target/proc failed."
 msgstr "Монтирање proc фајл система на /target/proc није успело."
 
 #. Type: error
 #. Description
 #. :sl4:
-#: ../nobootloader.templates:2001 ../grub-installer.templates:32001
+#: ../grub-installer.templates:32001 ../nobootloader.templates:2001
 msgid "Warning: Your system may be unbootable!"
 msgstr "Упозорење: ваш систем можда неће моћи да се стартује!"
 
@@ -352,38 +392,41 @@ msgstr ""
 "Ако желите да се приликом сваког стартовања аутоматски покрене ваш Debian "
 "систем, можете поставити следећу променљиву поред горе наведених:"
 
-#. Type: boolean
+#. Type: text
 #. Description
+#. eg. Virtual disk 1 (xvda)
 #. :sl4:
-#: ../grub-installer.templates:17001
-msgid "Install GRUB?"
-msgstr "Инсталирати GRUB?"
+#: ../partman-base.templates:64001
+#, no-c-format
+msgid "Virtual disk %s (%s)"
+msgstr "Виртуелни диск %s (%s)"
 
-#. Type: boolean
+#. Type: text
 #. Description
+#. eg. Virtual disk 1, partition #1 (xvda1)
 #. :sl4:
-#: ../grub-installer.templates:17001
-msgid ""
-"GRUB 2 is the next generation of GNU GRUB, the boot loader that is commonly "
-"used on i386/amd64 PCs. It is now also available for ${ARCH}."
-msgstr ""
-"GRUB 2 је следећа генерација GNU GRUB-a, покретачки програм који се најчешће "
-"користи на i386/amd64 PC-јевима. Сада је такође доступан за ${ARCH}."
+#: ../partman-base.templates:65001
+#, no-c-format
+msgid "Virtual disk %s, partition #%s (%s)"
+msgstr "Виртуелни диск %s, партиција #%s (%s)"
 
-#. Type: boolean
+#. Type: text
 #. Description
 #. :sl4:
-#: ../grub-installer.templates:17001
-msgid ""
-"It has interesting new features but is still experimental software for this "
-"architecture. If you choose to install it, you should be prepared for "
-"breakage, and have an idea on how to recover your system if it becomes "
-"unbootable. You're advised not to try this in production environments."
-msgstr ""
-"Има занимљиве карактеристике, али је још уввек експерименталан софтвер за "
-"ову архитектуру. Ако изаберете да га инсталирате, требате бити спремни за "
-"кварове, и знати како да повратите ваш систем ако постане небутабилан. "
-"Саветује се да ово не покушавате на окружењима која се користе за продукцију."
+#. Note to translators: Please keep your translations of this string below
+#. a 65 columns limit (which means 65 characters in single-byte languages)
+#: ../partman-basicfilesystems.templates:58001
+msgid "acls - support POSIX.1e Access Control List"
+msgstr "acls - подршка за POSIX.1e Access Control List"
+
+#. Type: text
+#. Description
+#. :sl4:
+#. Note to translators: Please keep your translations of this string below
+#. a 65 columns limit (which means 65 characters in single-byte languages)
+#: ../partman-basicfilesystems.templates:59001
+msgid "shortnames - only use the old MS-DOS 8.3 style filenames"
+msgstr "кратки називи - користити старе MS-DOS 8.3 називе фајлова"
 
 #. Type: text
 #. Description
@@ -552,58 +595,15 @@ msgstr "Заврши и врати се на мени за партициони�
 
 #. Type: text
 #. Description
-#. This item is a progress bar heading when the system configures
-#. some flashable memory used by many embedded devices
 #. :sl4:
-#: ../flash-kernel-installer.templates:1001
-msgid "Configuring flash memory to boot the system"
-msgstr "Конфигурисање флеш меморије да покреће систем"
-
-#. Type: text
-#. Description
-#. This item is a progress bar heading when an embedded device is
-#. configured so it will boot from disk
-#. :sl4:
-#: ../flash-kernel-installer.templates:2001
-msgid "Making the system bootable"
-msgstr "Омогућавање стартовања система"
-
-#. Type: text
-#. Description
-#. This is "preparing the system" to flash the kernel and initrd
-#. on a flashable memory
-#. :sl4:
-#: ../flash-kernel-installer.templates:3001
-msgid "Preparing the system..."
-msgstr "Припремање система..."
-
-#. Type: text
-#. Description
-#. This is a progress bar showing up when the system
-#. write the kernel to the flashable memory of the embedded device
-#. :sl4:
-#: ../flash-kernel-installer.templates:4001
-msgid "Writing the kernel to flash memory..."
-msgstr "Копирање кернела на флеш меморију..."
-
-#. Type: text
-#. Description
-#. This is a progress bar showing up when the system generates a
-#. special boot image on disk for some embedded device so they
-#. can boot.
-#. :sl4:
-#: ../flash-kernel-installer.templates:5001
-msgid "Generating boot image on disk..."
-msgstr "Генерисање покретачке слике на диске..."
-
-#. Type: text
-#. Description
-#. Main menu item
-#. Translators: keep below 55 columns
-#. This item is a menu entry for a step where the system configures
-#. the flashable memory used by many embedded devices
-#. (writing the kernel and initrd to it)
-#. :sl4:
-#: ../flash-kernel-installer.templates:6001
-msgid "Make the system bootable"
-msgstr "Омогућавање покретања система"
+#: ../partman-target.templates:3001
+msgid ""
+"In order to start your new system, a so called boot loader is used.  It is "
+"installed in a boot partition.  You must set the bootable flag for the "
+"partition.  Such a partition will be marked with \"${BOOTABLE}\" in the main "
+"partitioning menu."
+msgstr ""
+"Да бисте покренули ваш нови систем, морате користити тзв. покретачки "
+"програм. Он је инсталиран на бут партицији. Морате поставити бутабилну "
+"заставицу за ту партицију. Таква партиција ће бити означена као "
+"„${BOOTABLE}“ у менију за партиционисање."

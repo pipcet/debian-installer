@@ -23,7 +23,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-28 20:01+0000\n"
+"POT-Creation-Date: 2021-11-21 20:02+0000\n"
 "PO-Revision-Date: 2021-04-29 17:54+0000\n"
 "Last-Translator: YOSHINO Yoshihito <yy.y.ja.jp@gmail.com>\n"
 "Language-Team: Debian L10n Japanese <debian-japanese@lists.debian.org>\n"
@@ -33,6 +33,30 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 4.7-dev\n"
+
+#. Type: select
+#. Description
+#: ../apt-setup-udeb.templates:8002
+msgid "Downloading local repository key failed:"
+msgstr "ローカルリポジトリのキーのダウンロード中に失敗しました:"
+
+#. Type: select
+#. Description
+#: ../apt-setup-udeb.templates:8002
+msgid ""
+"This may be a problem with your network, or with the server hosting this "
+"key. You can choose to retry the download, or ignore the problem and "
+"continue without all the packages from this repository."
+msgstr ""
+"これはあなたのネットワークまたはこの鍵を提供しているサーバに問題があるためで"
+"しょう。ダウンロードの再試行、あるいは問題を無視してこのミラーからの全パッ"
+"ケージなしに継続、から選ぶことができます。"
+
+#. Type: select
+#. Description
+#: ../keyboard-configuration.templates:16002
+msgid "Keymap to use:"
+msgstr "利用するキーマップ:"
 
 #: ../../mktemplates.continents:15
 msgid "Africa"
@@ -74,72 +98,6 @@ msgstr "オセアニア"
 msgid "South America"
 msgstr "南アメリカ"
 
-#. Type: select
-#. Description
-#: ../keyboard-configuration.templates:16002
-msgid "Keymap to use:"
-msgstr "利用するキーマップ:"
-
-#. Type: select
-#. Description
-#: ../apt-setup-udeb.templates:8002
-msgid "Downloading local repository key failed:"
-msgstr "ローカルリポジトリのキーのダウンロード中に失敗しました:"
-
-#. Type: select
-#. Description
-#: ../apt-setup-udeb.templates:8002
-msgid ""
-"This may be a problem with your network, or with the server hosting this "
-"key. You can choose to retry the download, or ignore the problem and "
-"continue without all the packages from this repository."
-msgstr ""
-"これはあなたのネットワークまたはこの鍵を提供しているサーバに問題があるためで"
-"しょう。ダウンロードの再試行、あるいは問題を無視してこのミラーからの全パッ"
-"ケージなしに継続、から選ぶことができます。"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../main-menu.templates:1001
-msgid "Debian installer main menu"
-msgstr "Debian インストーラメインメニュー"
-
-#. Type: select
-#. Description
-#. :sl1:
-#: ../main-menu.templates:2001
-msgid "Choose the next step in the install process:"
-msgstr "インストールプロセスの次のステップの選択:"
-
-#. Type: text
-#. Description
-#. Main menu item
-#. The translation should not exceed 55 columns except for languages
-#. that are only supported in the graphical version of the installer
-#. :sl1:
-#: ../di-utils-shell.templates:2001
-msgid "Execute a shell"
-msgstr "シェルの実行"
-
-#. Type: text
-#. Description
-#. Main menu item
-#. The translation should not exceed 55 columns except for languages
-#. that are only supported in the graphical version of the installer
-#. :sl1:
-#: ../di-utils-reboot.templates:2001
-msgid "Abort the installation"
-msgstr "インストールの中止"
-
-#. Type: text
-#. Description
-#. base-installer progress bar item
-#. :sl1:
-#: ../di-utils.templates:1001
-msgid "Registering modules..."
-msgstr "モジュールを登録しています..."
-
 #. Type: text
 #. Description
 #. (Progress bar) title displayed when loading udebs
@@ -169,286 +127,1150 @@ msgstr "${PACKAGE} を設定しています"
 
 #. Type: text
 #. Description
-#. This menu entry may be translated.
-#. However, translators are required to keep "Choose language"
-#. as an alternative separated by the "/" character
-#. Example (french): Choisir la langue/Choose language
+#. Main menu item
+#. MUST be kept below 55 characters/columns
 #. :sl1:
-#: ../localechooser.templates-in:1001
-msgid "Choose language"
-msgstr "言語の選択/Choose language"
+#: ../apt-setup-udeb.templates:1001
+msgid "Configure the package manager"
+msgstr "パッケージマネージャの設定"
 
 #. Type: text
 #. Description
+#. Translators, "apt" is the program name
+#. so please do NOT translate it
+#. :sl1:
+#: ../apt-setup-udeb.templates:2001
+msgid "Configuring apt"
+msgstr "apt を設定しています"
+
+#. #-#-#-#-#  templates.pot (apt-setup)  #-#-#-#-#
+#. Type: text
+#. Description
+#. :sl2:
+#. #-#-#-#-#  templates.pot (base-installer)  #-#-#-#-#
+#. Type: text
+#. Description
+#. :sl1:
+#. #-#-#-#-#  templates.pot (finish-install)  #-#-#-#-#
+#. Type: text
+#. Description
+#. :sl1:
+#. #-#-#-#-#  templates.pot (pkgsel)  #-#-#-#-#
+#. Type: text
+#. Description
+#. :sl2:
+#: ../apt-setup-udeb.templates:3001 ../base-installer.templates:6001
+#: ../finish-install.templates:3001 ../pkgsel.templates:9001
+msgid "Running ${SCRIPT}..."
+msgstr "${SCRIPT} を実行しています..."
+
+#. Type: multiselect
+#. Choices
+#. SEC_HOST is a host name (e.g. security.debian.org)
+#. Translators: the *entire* string should be under 55 columns
+#. including host name. In short, KEEP THIS SHORT and, yes, that's tricky
+#. :sl1:
+#: ../apt-setup-udeb.templates:11001
+msgid "security updates (from ${SEC_HOST})"
+msgstr "セキュリティアップデート (${SEC_HOST} から)"
+
+#. Type: multiselect
+#. Choices
+#. SEC_HOST is a host name (e.g. security.debian.org)
+#. Translators: the *entire* string should be under 55 columns
+#. including host name. In short, KEEP THIS SHORT and, yes, that's tricky
+#. :sl1:
+#: ../apt-setup-udeb.templates:11001
+msgid "release updates"
+msgstr "リリースアップデート"
+
+#. Type: multiselect
+#. Choices
+#. SEC_HOST is a host name (e.g. security.debian.org)
+#. Translators: the *entire* string should be under 55 columns
+#. including host name. In short, KEEP THIS SHORT and, yes, that's tricky
+#. :sl1:
+#: ../apt-setup-udeb.templates:11001
+msgid "backported software"
+msgstr "バックポートされたソフトウェア"
+
+#. Type: multiselect
+#. Description
+#. :sl1:
+#: ../apt-setup-udeb.templates:11002
+msgid "Services to use:"
+msgstr "利用するサービス:"
+
+#. Type: multiselect
+#. Description
+#. :sl1:
+#: ../apt-setup-udeb.templates:11002
+msgid ""
+"Debian has two services that provide updates to releases: security and "
+"release updates."
+msgstr ""
+"Debian には、リリース版の更新を提供する 2 つのサービスがあります: セキュリ"
+"ティとリリースアップデートです。"
+
+#. Type: multiselect
+#. Description
+#. :sl1:
+#: ../apt-setup-udeb.templates:11002
+msgid ""
+"Security updates help to keep your system secured against attacks. Enabling "
+"this service is strongly recommended."
+msgstr ""
+"セキュリティアップデートは、あなたのシステムを攻撃から安全に保つのに役立ちま"
+"す。このサービスを有効にすることを強くお勧めします。"
+
+#. Type: multiselect
+#. Description
+#. :sl1:
+#: ../apt-setup-udeb.templates:11002
+msgid ""
+"Release updates provide more current versions for software that changes "
+"relatively frequently and where not having the latest version could reduce "
+"the usability of the software. It also provides regression fixes. This "
+"service is only available for stable and oldstable releases."
+msgstr ""
+"リリースアップデートは、比較的頻繁に変化し、また新しいバージョンがソフトウェ"
+"アの利便性を低下させることはないソフトウェアの、最新のバージョンを提供しま"
+"す。また、機能退行の修正も提供します。このサービスは、安定版および旧安定版の"
+"リリースのみで利用できます。"
+
+#. Type: multiselect
+#. Description
+#. :sl1:
+#: ../apt-setup-udeb.templates:11002
+msgid ""
+"Backported software are adapted from the development version to work with "
+"this release. Although this software has not gone through such complete "
+"testing as that contained in the release, it includes newer versions of some "
+"applications which may provide useful features. Enabling backports here does "
+"not cause any of them to be installed by default; it only allows you to "
+"manually select backports to use."
+msgstr ""
+"バックポートされているソフトウェアは、このリリースで動作するように開発版から"
+"適応させたものです。これらのソフトウェアはリリース版に含まれているほど完全に"
+"テストされたものではありませんが、アプリケーションのより新しい (便利な機能を"
+"提供するかもしれない) バージョンを含んでいます。バックポートを有効化しても、"
+"そこに収録されているものはデフォルトでインストールされることはありません。利"
+"用するバックポート版を手作業により選択できるようになるだけです。"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:1001
+msgid "Scanning the installation media..."
+msgstr "インストールメディアを検査しています..."
+
+#. Type: error
+#. Description
+#. :sl2:
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:2001 ../apt-cdrom-setup.templates:6001
+msgid ""
+"An attempt to configure apt to install additional packages from the media "
+"failed."
+msgstr ""
+"メディアから追加パッケージをインストールするための apt 設定の試行に失敗しまし"
+"た。"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#. Type: boolean
+#. Description
+#. :sl1:
+#. Type: boolean
+#. Description
+#. :sl1:
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:3001 ../apt-cdrom-setup.templates:4001
+#: ../apt-cdrom-setup.templates:5001 ../apt-cdrom-setup.templates:6001
+msgid "Scan extra installation media?"
+msgstr "別のインストールメディアを検査しますか?"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:3001
+msgid "Scanning your installation media finds the label:"
+msgstr "インストールメディアをスキャンして見つけたラベル:"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:3001
+msgid ""
+"You now have the option of scanning additional media for use by the package "
+"manager (apt). Normally these should be from the same set as the one you "
+"booted from. If you do not have any additional media, this step can just be "
+"skipped."
+msgstr ""
+"ここで、パッケージマネージャ (apt) によって使われる追加のメディアの検査を選択"
+"できます。通常、これらは起動時に使用したものと同じセットになっているもので"
+"す。利用可能な追加のメディアを持っていないのであれば、この手順は単に飛ばすこ"
+"とができます。"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:3001 ../apt-cdrom-setup.templates:4001
+msgid "If you wish to scan more media, please insert another one now."
+msgstr "別のメディアを検査したければ、それを今挿入してください。"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:4001
+msgid "The image with the following label has been scanned:"
+msgstr "以下のラベルを持つイメージを検査済みです:"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:5001
+msgid "The image with the following label has already been scanned:"
+msgstr "以下のラベルを持つイメージを検査済みです:"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:5001
+msgid "Please replace it now, if you wish to scan another."
+msgstr "別のメディアを検査したければ、それに今交換してください。"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:6001
+msgid "Please check that the media has been inserted correctly."
+msgstr "正しくメディアが挿入されていることを確認してください。"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:7001
+msgid "Media change"
+msgstr "メディアの変更"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:7001
+msgid "Please insert the media labeled '${LABEL}' and press enter."
+msgstr "ラベル '${LABEL}' のメディアを挿入し、Enter キーを押してください。"
+
+#. Type: text
+#. Description
+#. :sl1:
 #. finish-install progress bar item
-#. :sl1:
-#: ../localechooser.templates-in:6001
-msgid "Storing language..."
-msgstr "言語を保存しています..."
+#: ../apt-cdrom-setup.templates:8001
+msgid "Disabling netinst CD in sources.list..."
+msgstr "sources.list 内の netinst CD 行を無効にしています..."
 
-#. Type: title
-#. Description
-#. Displayed as dialog title during language selection
-#. :sl1:
-#: ../localechooser.templates-in:7001
-msgid "Select a language"
-msgstr "言語の選択"
-
-#. Type: title
-#. Description
-#. Displayed as dialog title during country selection
-#. :sl1:
-#: ../localechooser.templates-in:8001
-msgid "Select your location"
-msgstr "場所の選択"
-
-#. Type: title
-#. Description
-#. Displayed as dialog title during locale selection
-#. :sl1:
-#: ../localechooser.templates-in:9001
-msgid "Configure locales"
-msgstr "ロケールの設定"
-
-#. Type: note
+#. Type: text
 #. Description
 #. :sl1:
-#: ../localechooser.templates-in:12001
-msgid "Language selection no longer possible"
-msgstr "言語選択はもう利用できません"
-
-#. Type: note
+#. Type: boolean
 #. Description
-#. :sl1:
-#: ../localechooser.templates-in:12001
+#. :sl2:
+#: ../apt-cdrom-setup.templates:9001 ../apt-mirror-setup.templates:6001
 msgid ""
-"At this point it is no longer possible to change the language for the "
-"installation, but you can still change the country or locale."
+"If you are installing from a netinst CD image and choose not to use a "
+"mirror, you will end up with only a very minimal base system."
 msgstr ""
-"この時点では、インストールの言語選択はもうできませんが、国やロケールを変更す"
-"ることはまだ可能です。"
+"netinst CD イメージからインストールしており、ミラーを使うことを選ばない場合に"
+"は、非常に小さな基本システムのみという形で終わることになります。"
 
-#. Type: note
+#. Type: text
 #. Description
 #. :sl1:
-#: ../localechooser.templates-in:12001
+#: ../apt-cdrom-setup.templates:10001
 msgid ""
-"To select a different language you will need to abort this installation and "
-"reboot the installer."
+"You are installing from a netinst CD image, which by itself only allows "
+"installation of a very minimal base system. Use a mirror to install a more "
+"complete system."
 msgstr ""
-"異なる言語を選択するには、インストールを中止し、インストーラを再起動する必要"
-"があります。"
+"あなたは、単体では非常に小さな基本システムのインストールだけしかできない "
+"netinst CD イメージからインストールしています。より完全なシステムをインストー"
+"ルするために、ミラーを利用してください。"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:11001
+msgid ""
+"You are installing from an image which contains a limited selection of "
+"packages."
+msgstr "限られたパッケージ群を収録しているイメージからインストールしています。"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. The value of %i can be 2 or 3
+#: ../apt-cdrom-setup.templates:12001
+#, no-c-format
+msgid ""
+"You have scanned %i images. Even though these contain a fair selection of "
+"packages, some may be missing (notably some packages needed to support "
+"languages other than English)."
+msgstr ""
+"%i 枚のイメージを検査しました。これらは十分な量のパッケージ群を収録しています"
+"が、それでもいくつかは入っていない可能性があります (特に英語以外の言語をサ"
+"ポートするのに必要ないくつかのパッケージ)。"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. The value of %i can be from 4 to 8
+#: ../apt-cdrom-setup.templates:13001
+#, no-c-format
+msgid ""
+"You have scanned %i images. Even though these contain a large selection of "
+"packages, some may be missing."
+msgstr ""
+"%i 枚のイメージを検査しました。これらはたくさんのパッケージを収録しています"
+"が、それでもいくつかは入っていない可能性があります。"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:14001
+msgid ""
+"Note that using a mirror can result in a large amount of data being "
+"downloaded during the next step of the installation."
+msgstr ""
+"ミラーの利用は、インストールの次のステップで大量のデータがダウンロードされる"
+"ことになることに注意してください。"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:15001
+msgid ""
+"You are installing from a DVD image. Even though it contains a large "
+"selection of packages, some may be missing."
+msgstr ""
+"DVD からインストールしています。これはたくさんのパッケージを収録しています"
+"が、それでもいくつかは入っていない可能性があります。"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:16001
+msgid ""
+"Unless you don't have a good Internet connection, use of a mirror is "
+"recommended, especially if you plan to install a graphical desktop "
+"environment."
+msgstr ""
+"良好なインターネット接続がないというわけでなければ、(特にグラフィカルデスク"
+"トップ環境をインストールすることを計画しているなら) ミラーを利用することをお"
+"勧めします。"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:17001
+msgid ""
+"If you have a reasonably good Internet connection, use of a mirror is "
+"suggested if you plan to install a graphical desktop environment."
+msgstr ""
+"良好なインターネット接続があるなら、グラフィカルデスクトップ環境をインストー"
+"ルすることを計画している場合にはミラーを利用することを提案します。"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../apt-mirror-setup.templates:1001
+msgid "Scanning the mirror..."
+msgstr "ミラーを検査しています..."
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-mirror-setup.templates:2001
+msgid "Use non-free software?"
+msgstr "non-free のソフトウェアを使用しますか?"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-mirror-setup.templates:2001
+msgid ""
+"Some non-free software has been made to work with Debian. Though this "
+"software is not at all a part of Debian, standard Debian tools can be used "
+"to install it. This software has varying licenses which may prevent you from "
+"using, modifying, or sharing it."
+msgstr ""
+"Debian ではいくつかの non-free ソフトウェアが利用可能になっています。たとえこ"
+"れらのソフトウェアが正しい Debian の一部ではないにせよ、標準的な Debian の"
+"ツールを利用してインストールすることができます。これらのソフトウェアは配布や"
+"修正、使用に関して制限があります。"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #. Type: boolean
 #. Description
-#. :sl1:
-#: ../localechooser.templates-in:13001 ../localechooser.templates-in:14001
-msgid "Continue the installation in the selected language?"
-msgstr "選択された言語でインストールを続けますか?"
+#. This template is used by the Ubuntu version of d-i.
+#. :sl2:
+#: ../apt-mirror-setup.templates:2001 ../apt-mirror-setup.templates-ubuntu:1001
+msgid "Please choose whether you want to have it available anyway."
+msgstr "利用できるようにしたいかどうかを選んでください。"
 
 #. Type: boolean
 #. Description
 #. :sl1:
-#: ../localechooser.templates-in:13001
-msgid ""
-"The translation of the installer is incomplete for the selected language."
-msgstr "インストーラの翻訳は、選択された言語では不完全です。"
+#: ../apt-mirror-setup.templates:3001
+msgid "Use contrib software?"
+msgstr "contrib ソフトウェアを使用しますか?"
 
 #. Type: boolean
 #. Description
 #. :sl1:
-#: ../localechooser.templates-in:14001
+#: ../apt-mirror-setup.templates:3001
 msgid ""
-"The translation of the installer is not fully complete for the selected "
-"language."
-msgstr "インストーラの翻訳は、選択された言語では完全ではありません。"
+"Some additional software has been made to work with Debian. Though this "
+"software is free, it depends on non-free software for its operation. This "
+"software is not a part of Debian, but standard Debian tools can be used to "
+"install it."
+msgstr ""
+"いくつかの追加ソフトウェアが Debian で動くようになっています。これらのソフト"
+"ウェアはフリーですが、その動作は non-free ソフトウェアに依存しています。これ"
+"らのソフトウェアは正しい Debian の 一部ではありませんが、標準的な Debian の"
+"ツールを利用してインストールすることができます。"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#. Type: boolean
+#. Description
+#. This template is used by the Ubuntu version of d-i.
+#. :sl2:
+#. Type: boolean
+#. Description
+#. This template is used by the Ubuntu version of d-i.
+#. :sl2:
+#. Type: boolean
+#. Description
+#. This template is used by the Ubuntu version of d-i.
+#. :sl2:
+#. Type: boolean
+#. Description
+#. This template is used by the Ubuntu version of d-i.
+#. :sl2:
+#: ../apt-mirror-setup.templates:3001 ../apt-mirror-setup.templates-ubuntu:2001
+#: ../apt-mirror-setup.templates-ubuntu:3001
+#: ../apt-mirror-setup.templates-ubuntu:4001
+#: ../apt-mirror-setup.templates-ubuntu:5001
+msgid ""
+"Please choose whether you want this software to be made available to you."
+msgstr "このソフトウェアを利用できるようにしたいかどうかを選んでください。"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-mirror-setup.templates:5001
+msgid "Use a network mirror?"
+msgstr "ネットワークミラーを使いますか?"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-mirror-setup.templates:5001
+msgid ""
+"A network mirror can be used to supplement the software that is included on "
+"the installation media. This may also make newer versions of software "
+"available."
+msgstr ""
+"ネットワークミラーはインストールメディアに収録されているソフトウェアを補完す"
+"るのに利用できます。これは利用可能なソフトウェアのより新しいバージョンとなる"
+"こともあります。"
 
 #. Type: text
 #. Description
 #. :sl1:
-#: ../localechooser.templates-in:15001
-msgid ""
-"This means that there is a significant chance that some dialogs will be "
-"displayed in English instead."
-msgstr ""
-"これは、いくつかのダイアログについて代替として英語で表示されることがあるとい"
-"う意味です。"
+#: ../base-installer.templates:4001
+msgid "Preparing to install the base system..."
+msgstr "ベースシステムのインストールを準備しています..."
 
 #. Type: text
 #. Description
 #. :sl1:
-#: ../localechooser.templates-in:16001
-msgid ""
-"If you do anything other than a purely default installation, there is a real "
-"chance that some dialogs will be displayed in English instead."
-msgstr ""
-"デフォルトインストールそのまま以上のことを行うのであれば、いくつかのダイアロ"
-"グが代替として英語で表示される可能性は実際にあります。"
+#: ../base-installer.templates:5001 ../bootstrap-base.templates:30001
+msgid "Installing the base system"
+msgstr "ベースシステムをインストールしています"
 
 #. Type: text
 #. Description
 #. :sl1:
-#: ../localechooser.templates-in:17001
-msgid ""
-"If you continue the installation in the selected language, most dialogs "
-"should be displayed correctly but - especially if you use the more advanced "
-"options of the installer - some may be displayed in English instead."
-msgstr ""
-"選択された言語でインストールを続けると、ほとんどのダイアログは正しく表示され"
-"るはずですが、(特にインストーラの上級オプションを使う場合には) いくつかについ"
-"ては代替として英語で表示されるかもしれません。"
+#: ../base-installer.templates:7001
+msgid "Setting up the base system..."
+msgstr "ベースシステムをセットアップしています..."
 
 #. Type: text
 #. Description
 #. :sl1:
-#: ../localechooser.templates-in:18001
-msgid ""
-"If you continue the installation in the selected language, dialogs should "
-"normally be displayed correctly but - especially if you use the more "
-"advanced options of the installer - there is a slight chance some may be "
-"displayed in English instead."
-msgstr ""
-"選択された言語でインストールを続けると、ダイアログは通常正しく表示されるはず"
-"ですが、(特にインストーラの上級オプションを使う場合には) ごく一部については代"
-"替として英語で表示されるかもしれません。"
+#: ../base-installer.templates:8001 ../bootstrap-base.templates:59001
+msgid "Configuring APT sources..."
+msgstr "APT ソースを設定しています..."
 
 #. Type: text
 #. Description
 #. :sl1:
-#: ../localechooser.templates-in:19001
-msgid ""
-"The chance that you will actually encounter a dialog that is not translated "
-"into the selected language is extremely small, but it cannot be ruled out "
-"completely."
-msgstr ""
-"選択された言語に翻訳されていないダイアログに実際に出会うことは極めて少ないで"
-"すが、完全だとは言い切れません。"
+#: ../base-installer.templates:9001
+msgid "Updating the list of available packages..."
+msgstr "利用可能なパッケージのリストを更新しています..."
 
 #. Type: text
 #. Description
 #. :sl1:
-#: ../localechooser.templates-in:20001
-msgid ""
-"Unless you have a good understanding of the alternative language, it is "
-"recommended to either select a different language or abort the installation."
+#: ../base-installer.templates:10001
+msgid "Installing extra packages..."
+msgstr "特別パッケージをインストールしています..."
+
+#. Type: text
+#. Description
+#. SUBST0 is a package name
+#. :sl1:
+#: ../base-installer.templates:11001
+msgid "Installing extra packages - retrieving and installing ${SUBST0}..."
 msgstr ""
-"代替の言語について十分な理解がなければ、異なる言語を選択するか、インストール"
-"を中止することをお勧めします。"
+"特別パッケージをインストールしています - ${SUBST0} を取得・インストールしてい"
+"ます..."
+
+#. Type: text
+#. Description
+#. Item in the main menu to select this package
+#. TRANSLATORS: <65 columns
+#. :sl1:
+#: ../bootstrap-base.templates:1001
+msgid "Install the base system"
+msgstr "ベースシステムのインストール"
 
 #. Type: text
 #. Description
 #. :sl1:
-#: ../localechooser.templates-in:21001
-msgid ""
-"If you choose not to continue, you will be given the option of selecting a "
-"different language, or you can abort the installation."
+#. Release is a filename which should not be translated
+#: ../bootstrap-base.templates:23001
+msgid "Retrieving Release file"
+msgstr "Release ファイルを取得しています"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Release is a filename which should not be translated
+#: ../bootstrap-base.templates:24001
+msgid "Retrieving Release file signature"
+msgstr "Release ファイルのシグネチャを取得しています"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. "packages" here can be translated
+#: ../bootstrap-base.templates:25001
+msgid "Finding package sizes"
+msgstr "パッケージサイズを調べています"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Packages is a filename which should not be translated
+#: ../bootstrap-base.templates:26001
+msgid "Retrieving Packages files"
+msgstr "Packages ファイルを取得しています"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Packages is a filename which should not be translated
+#: ../bootstrap-base.templates:27001
+msgid "Retrieving Packages file"
+msgstr "Packages ファイルを取得しています"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. "packages" here can be translated
+#: ../bootstrap-base.templates:28001
+msgid "Retrieving packages"
+msgstr "パッケージを取得しています"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. "packages" here can be translated
+#: ../bootstrap-base.templates:29001
+msgid "Extracting packages"
+msgstr "パッケージを展開しています"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Core packages are packages that are part of the Debian base system
+#. The "core" packages are indeed packages that are specifically
+#. recorded as part of the base system. Other packages may
+#. be installed on the base system because of dependency resolution
+#: ../bootstrap-base.templates:31001
+msgid "Installing core packages"
+msgstr "コアパッケージをインストールしています"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Required packages are packages which installation is triggered
+#. by the dependency chain of core packages
+#. In short, they are "required" because at least one of the
+#. packages from the core packages depends on them
+#: ../bootstrap-base.templates:32001
+msgid "Unpacking required packages"
+msgstr "必須パッケージを展開しています"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../bootstrap-base.templates:33001
+msgid "Configuring required packages"
+msgstr "必須パッケージを設定しています"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. The base system is the minimal Debian system
+#. See http://www.debian.org/doc/debian-policy/ch-binary.html#s3.7
+#: ../bootstrap-base.templates:34001
+msgid "Unpacking the base system"
+msgstr "ベースシステムを展開しています"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. The base system is the minimal Debian system
+#. See http://www.debian.org/doc/debian-policy/ch-binary.html#s3.7
+#: ../bootstrap-base.templates:35001
+msgid "Configuring the base system"
+msgstr "ベースシステムを設定しています"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../bootstrap-base.templates:36001
+msgid "${SECTION}: ${INFO}..."
+msgstr "${SECTION}: ${INFO}..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. SUBST0 is a package name
+#: ../bootstrap-base.templates:37001
+msgid "Validating ${SUBST0}..."
+msgstr "${SUBST0} を検査しています..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. SUBST0 is a package name
+#: ../bootstrap-base.templates:38001
+msgid "Retrieving ${SUBST0}..."
+msgstr "${SUBST0} を取得しています..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. SUBST0 is a package name
+#: ../bootstrap-base.templates:39001
+msgid "Extracting ${SUBST0}..."
+msgstr "${SUBST0} を展開しています..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. SUBST0 is a package name
+#: ../bootstrap-base.templates:40001
+msgid "Unpacking ${SUBST0}..."
+msgstr "${SUBST0} を展開しています..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. SUBST0 is a package name
+#: ../bootstrap-base.templates:41001
+msgid "Configuring ${SUBST0}..."
+msgstr "${SUBST0} を設定しています..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Release is a filename which should not be translated
+#: ../bootstrap-base.templates:42001
+msgid "Checking Release signature"
+msgstr "Release シグネチャをチェックしています"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. SUBST0 is a gpg key id
+#. Release is a filename which should not be translated
+#: ../bootstrap-base.templates:43001
+msgid "Valid Release signature (key id ${SUBST0})"
+msgstr "有効な Release シグネチャです (キーID ${SUBST0})"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../bootstrap-base.templates:44001
+msgid "Resolving dependencies of base packages..."
+msgstr "ベースパッケージの依存関係を解決しています..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. SUBST0 is a list of packages
+#: ../bootstrap-base.templates:45001
+msgid "Found additional base dependencies: ${SUBST0}"
+msgstr "追加の依存関係を発見しました: ${SUBST0}"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. SUBST0 is a list of packages
+#: ../bootstrap-base.templates:46001
+msgid "Found additional required dependencies: ${SUBST0}"
+msgstr "追加の必須関係を発見しました: ${SUBST0}"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. SUBST0 is a list of packages
+#: ../bootstrap-base.templates:47001
+msgid "Found packages in base already in required: ${SUBST0}"
+msgstr "ベースにあるパッケージはすでに必須としてあります: ${SUBST0}"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../bootstrap-base.templates:48001
+msgid "Resolving dependencies of required packages..."
+msgstr "必須パッケージの依存関係を解決しています..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. SUBST0 is an archive component (main, etc)
+#. SUBST1 is a mirror
+#: ../bootstrap-base.templates:49001
+msgid "Checking component ${SUBST0} on ${SUBST1}..."
+msgstr "${SUBST1} のコンポーネント ${SUBST0} をチェックしています..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Core packages are packages that are part of the Debian base system
+#. The "core" packages are indeed packages that are specifically
+#. recorded as part of the base system. Other packages may
+#. be installed on the base system because of dependency resolution
+#: ../bootstrap-base.templates:50001
+msgid "Installing core packages..."
+msgstr "コアパッケージをインストールしています..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Required packages are packages which installation is triggered
+#. by the dependency chain of core packages
+#. In short, they are "required" because at least one of the
+#. packages from the core packages depends on them
+#: ../bootstrap-base.templates:51001
+msgid "Unpacking required packages..."
+msgstr "必須パッケージを展開しています..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Required packages are packages which installation is triggered
+#. by the dependency chain of core packages
+#. In short, they are "required" because at least one of the
+#. packages from the core packages depends on them
+#: ../bootstrap-base.templates:52001
+msgid "Configuring required packages..."
+msgstr "必須パッケージを設定しています..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../bootstrap-base.templates:53001
+msgid "Installing base packages..."
+msgstr "ベースパッケージをインストールしています..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../bootstrap-base.templates:54001
+msgid "Unpacking the base system..."
+msgstr "ベースシステムを展開しています..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../bootstrap-base.templates:55001
+msgid "Configuring the base system..."
+msgstr "ベースシステムを設定しています..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../bootstrap-base.templates:56001
+msgid "Base system installed successfully."
+msgstr "ベースシステムのインストールに成功しました。"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../bootstrap-base.templates:60001
+msgid "Selecting the kernel to install..."
+msgstr "インストールするカーネルを選択しています..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../bootstrap-base.templates:61001
+msgid "Installing the kernel..."
+msgstr "カーネルをインストールしています..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. SUBST0 is a package name
+#: ../bootstrap-base.templates:62001
+msgid "Installing the kernel - retrieving and installing ${SUBST0}..."
 msgstr ""
-"続けることを選ばない場合、異なる言語を選択するか、インストールを中止するかの"
-"選択肢が与えられます。"
+"カーネルをインストールしています - ${SUBST0} を取得・インストールしていま"
+"す..."
+
+#. Type: text
+#. Description
+#. Translators, this text will appear on a button, so KEEP IT SHORT
+#. :sl1:
+#: ../cdebconf-newt-udeb.templates:1001 ../cdebconf-gtk-udeb.templates:1001
+msgid "Continue"
+msgstr "続ける"
+
+#. Type: text
+#. Description
+#. Translators, this text will appear on a button, so KEEP IT SHORT
+#. :sl1:
+#: ../cdebconf-newt-udeb.templates:2001 ../cdebconf-gtk-udeb.templates:2001
+msgid "Go Back"
+msgstr "戻る"
+
+#. Type: text
+#. Description
+#. Translators, this text will appear on a button, so KEEP IT SHORT
+#. :sl1:
+#. Type: text
+#. Description
+#. :sl4:
+#: ../cdebconf-newt-udeb.templates:3001 ../cdebconf-gtk-udeb.templates:3001
+#: ../cdebconf-slang-udeb.templates:1001 ../cdebconf-text-udeb.templates:10001
+msgid "Yes"
+msgstr "はい"
+
+#. Type: text
+#. Description
+#. Translators, this text will appear on a button, so KEEP IT SHORT
+#. :sl1:
+#. Type: text
+#. Description
+#. :sl4:
+#: ../cdebconf-newt-udeb.templates:4001 ../cdebconf-gtk-udeb.templates:4001
+#: ../cdebconf-slang-udeb.templates:2001 ../cdebconf-text-udeb.templates:11001
+msgid "No"
+msgstr "いいえ"
+
+#. #-#-#-#-#  templates.pot (cdebconf)  #-#-#-#-#
+#. Type: text
+#. Description
+#. Translators, this text will appear on a button, so KEEP IT SHORT
+#. :sl1:
+#. #-#-#-#-#  templates.pot (mdcfg)  #-#-#-#-#
+#. Type: select
+#. Choices
+#. :sl3:
+#. Type: select
+#. Choices
+#. :sl3:
+#. #-#-#-#-#  templates.pot (net-retriever)  #-#-#-#-#
+#. Type: select
+#. Choices
+#. These are choices of actions so this is, at least in English,
+#. an infinitive form
+#. :sl2:
+#: ../cdebconf-newt-udeb.templates:5001 ../mdcfg-utils.templates:6001
+#: ../mdcfg-utils.templates:13001 ../net-retriever.templates:1001
+msgid "Cancel"
+msgstr "キャンセル"
+
+#. Type: text
+#. Description
+#. Help line displayed at the bottom of the cdebconf newt interface.
+#. Translators: must fit within 80 characters.
+#. :sl1:
+#: ../cdebconf-newt-udeb.templates:6001
+msgid "<Tab> moves; <Space> selects; <Enter> activates buttons"
+msgstr "<Tab> 移動; <スペース> 選択; <Enter> ボタンを実行"
+
+#. Type: text
+#. Description
+#. Help line displayed at the bottom of the cdebconf newt interface.
+#. Translators: must fit within 80 characters.
+#. :sl1:
+#: ../cdebconf-newt-udeb.templates:7001
+msgid "<F1> for help; <Tab> moves; <Space> selects; <Enter> activates buttons"
+msgstr "<F1> ヘルプ; <Tab> 移動; <スペース> 選択; <Enter> ボタンを実行"
+
+#. Type: text
+#. Description
+#. Appears as a checkbox in the newt and GTK interfaces.
+#. :sl1:
+#: ../cdebconf-newt-udeb.templates:8001 ../cdebconf-gtk-udeb.templates:9001
+msgid "Show Password in Clear"
+msgstr "パスワードを表示"
+
+#. Type: text
+#. Description
+#. Translators, this text will appear on a button, so KEEP IT SHORT
+#. :sl1:
+#: ../cdebconf-gtk-udeb.templates:5001
+msgid "Help"
+msgstr "ヘルプ"
+
+#. Type: text
+#. Description
+#. TRANSLATORS: This should be "translated" to "RTL" or "LTR" depending of
+#. default text direction of your language
+#. LTR: Left to Right (Latin, Cyrillic, CJK, Indic...)
+#. RTL: Right To Left (Arabic, Hebrew, Persian...)
+#. DO NOT USE ANYTHING ELSE
+#. :sl1:
+#: ../cdebconf-gtk-udeb.templates:6001
+msgid "LTR"
+msgstr "LTR"
+
+#. Type: text
+#. Description
+#. Translators, this text will appear on a button, so KEEP IT SHORT
+#. This button will allow users to virtually "shoot a picture"
+#. of the screen
+#. :sl1:
+#: ../cdebconf-gtk-udeb.templates:7001
+msgid "Screenshot"
+msgstr "スクリーンショット"
+
+#. Type: text
+#. Description
+#. Text that will appear in a dialog box mentioning which file
+#. the screenshot has been saved to. "%s" is a file name here
+#. :sl1:
+#: ../cdebconf-gtk-udeb.templates:8001
+#, no-c-format
+msgid "Screenshot saved as %s"
+msgstr "%s という名前でスクリーンショットを保存"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../choose-mirror-bin.templates-in:5001
+msgid "Checking the Debian archive mirror"
+msgstr "Debian アーカイブミラーを確認しています"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../choose-mirror-bin.templates-in:6001
+msgid "Downloading Release files..."
+msgstr "Release ファイルをダウンロードしています..."
+
+#. Type: text
+#. Description
+#. main-menu item
+#. Translators: keep below 55 columns
+#. :sl1:
+#: ../choose-mirror-bin.templates-in:14001
+msgid "Choose a mirror of the Debian archive"
+msgstr "Debian アーカイブのミラーを選択"
 
 #. Type: select
 #. Choices
-#. "other", here, is added to the list of countries that will be displayed
-#. for users to choose among them
-#. For instance, choosing "Italian" will show:
-#. Italy, Switzerland, other
 #. :sl1:
-#: ../localechooser.templates-in:22001 ../../mktemplates.continents:26
-msgid "other"
-msgstr "その他"
+#. Type: select
+#. Choices
+#. :sl2:
+#: ../choose-mirror-bin.templates.http-in:2001
+#: ../choose-mirror-bin.templates.ftp.sel-in:2001
+msgid "enter information manually"
+msgstr "情報を手動で入力"
 
-#. Type: text
-#. Description
+#. Type: select
+#. Default
+#. Translators, you should put here the ISO 3166 code of a country
+#. which you know hosts at least one Debian HTTP mirror. Please check
+#. that the country really has a Debian HTTP mirror before putting a
+#. random value here
+#.
+#. First check that the country you mention here is listed in
+#. https://salsa.debian.org/mirror-team/masterlist/-/blob/master/Mirrors.masterlist
+#.
+#. BE CAREFUL to use the TWO LETTER ISO-3166 CODE and not anything else
+#.
+#. You do not need to translate what's between the square brackets
+#. You should even NOT put square brackets in translations:
+#. msgid "US[ Default value for http]"
+#. msgstr "FR"
 #. :sl1:
-#: ../localechooser.templates-in:23001
-msgid "Country, territory or area:"
-msgstr "国・領土・地域:"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../localechooser.templates-in:24001
-msgid "Continent or region:"
-msgstr "大陸または地域:"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../localechooser.templates-in:25001
-msgid ""
-"The selected location will be used to set your time zone and also for "
-"example to help select the system locale. Normally this should be the "
-"country where you live."
-msgstr ""
-"ここで選択された場所は、時間帯の設定のほか、システムロケールの選択の支援など"
-"に使われます。通常これはあなたの居住する国であるはずです。"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../localechooser.templates-in:26001
-msgid ""
-"This is a shortlist of locations based on the language you selected. Choose "
-"\"other\" if your location is not listed."
-msgstr ""
-"これはあなたの選択した言語に基づく場所の短い一覧です。あなたの場所が一覧にな"
-"いなら、\"その他\" を選んでください。"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../localechooser.templates-in:27001
-msgid "Select the continent or region to which your location belongs."
-msgstr "あなたの場所が位置する大陸または地域を選択してください。"
-
-#. Type: text
-#. Description
-#. '%s' will be replaced with the name of the currently selected continent/region
-#. :sl1:
-#: ../localechooser.templates-in:28001
-#, no-c-format
-msgid ""
-"Listed are locations for: %s. Use the <Go Back> option to select a different "
-"continent or region if your location is not listed."
-msgstr ""
-"%s についての場所を一覧表示しています。一覧にあなたの場所がないときには、別の"
-"大陸または地域を選ぶために <戻る> を選択してください。"
+#: ../choose-mirror-bin.templates.http-in:2002
+msgid "US[ Default value for http]"
+msgstr "JP"
 
 #. Type: select
 #. Description
 #. :sl1:
-#: ../localechooser.templates-in:29001
-msgid "Country to base default locale settings on:"
-msgstr "デフォルトのロケール設定に基づく国:"
+#. Type: select
+#. Description
+#. :sl2:
+#: ../choose-mirror-bin.templates.http-in:2003
+#: ../choose-mirror-bin.templates.ftp.sel-in:2003
+msgid "Debian archive mirror country:"
+msgstr "Debian アーカイブミラーの国:"
 
-#. Type: text
+#. Type: select
 #. Description
 #. :sl1:
-#: ../localechooser.templates-in:30001
+#. Type: select
+#. Description
+#. :sl2:
+#: ../choose-mirror-bin.templates.http-in:2003
+#: ../choose-mirror-bin.templates.ftp.sel-in:2003
 msgid ""
-"There is no locale defined for the combination of language and country you "
-"have selected. You can now select your preference from the locales available "
-"for the selected language. The locale that will be used is listed in the "
-"second column."
+"The goal is to find a mirror of the Debian archive that is close to you on "
+"the network -- be aware that nearby countries, or even your own, may not be "
+"the best choice."
 msgstr ""
-"あなたの選択した言語と国の組み合わせに対して定義されたロケールがありません。"
-"選択された言語に対して利用可能なロケールから好きなものをここで選択できます。"
-"使われるロケールは2列目にリストされます。"
+"ネットワーク上あなたに最も近い Debian アーカイブミラーを見つけることが最終目"
+"標です。近隣国はもちろん自国でさえ最適の選択とは限らないことに注意しましょ"
+"う。"
 
-#. Type: text
+#. Type: select
 #. Description
 #. :sl1:
-#: ../localechooser.templates-in:31001
+#. Type: select
+#. Description
+#. :sl2:
+#: ../choose-mirror-bin.templates.http-in:3001
+#: ../choose-mirror-bin.templates.ftp.sel-in:3001
+msgid "Debian archive mirror:"
+msgstr "Debian アーカイブミラー:"
+
+#. Type: select
+#. Description
+#. :sl1:
+#. Type: select
+#. Description
+#. :sl2:
+#: ../choose-mirror-bin.templates.http-in:3001
+#: ../choose-mirror-bin.templates.ftp.sel-in:3001
 msgid ""
-"There are multiple locales defined for the language you have selected. You "
-"can now select your preference from those locales. The locale that will be "
-"used is listed in the second column."
+"Please select a Debian archive mirror. You should use a mirror in your "
+"country or region if you do not know which mirror has the best Internet "
+"connection to you."
 msgstr ""
-"あなたの選択した言語に対して複数のロケールが定義されています。これらのロケー"
-"ルから好きなものを今選択できます。使われるロケールは2列目にリストされます。"
+"Debian アーカイブミラーを選んでください。最適なインターネット接続となるミラー"
+"がわからなければ、あなたの国または地域にあるミラーを利用するのがよいでしょ"
+"う。"
+
+#. Type: select
+#. Description
+#. :sl1:
+#: ../choose-mirror-bin.templates.http-in:3001
+msgid "Usually, deb.debian.org is a good choice."
+msgstr "通常、deb.debian.org が良い選択です。"
+
+#. Type: string
+#. Description
+#. :sl1:
+#. Type: string
+#. Description
+#. :sl2:
+#: ../choose-mirror-bin.templates.http-in:4001
+#: ../choose-mirror-bin.templates.ftp.base-in:2001
+msgid "Debian archive mirror hostname:"
+msgstr "Debian アーカイブミラーホスト名:"
+
+#. Type: string
+#. Description
+#. :sl1:
+#. Type: string
+#. Description
+#. :sl2:
+#: ../choose-mirror-bin.templates.http-in:4001
+#: ../choose-mirror-bin.templates.ftp.base-in:2001
+msgid ""
+"Please enter the hostname of the mirror from which Debian will be downloaded."
+msgstr "Debian をダウンロードするミラーホスト名を入力してください。"
+
+#. Type: string
+#. Description
+#. :sl1:
+#. Type: string
+#. Description
+#. :sl2:
+#: ../choose-mirror-bin.templates.http-in:4001
+#: ../choose-mirror-bin.templates.ftp.base-in:2001
+msgid ""
+"An alternate port can be specified using the standard [hostname]:[port] "
+"format."
+msgstr "標準の [hostname]:[port] 形式を使って別のポートも指定できます。"
+
+#. Type: string
+#. Description
+#. :sl1:
+#: ../choose-mirror-bin.templates.http-in:6001
+msgid "HTTP proxy information (blank for none):"
+msgstr "HTTP プロキシの情報 (なければ空):"
+
+#. Type: string
+#. Description
+#. :sl1:
+#: ../choose-mirror-bin.templates.http-in:6001
+msgid ""
+"If you need to use a HTTP proxy to access the outside world, enter the proxy "
+"information here. Otherwise, leave this blank."
+msgstr ""
+"外の世界にアクセスするのに HTTP プロキシを使う必要があるなら、プロキシ情報を"
+"ここに入力します。そうでないなら空のままにしておきます。"
+
+#. Type: string
+#. Description
+#. :sl1:
+#. Type: string
+#. Description
+#. :sl2:
+#: ../choose-mirror-bin.templates.http-in:6001
+#: ../choose-mirror-bin.templates.ftp.base-in:4001
+msgid ""
+"The proxy information should be given in the standard form of \"http://"
+"[[user][:pass]@]host[:port]/\"."
+msgstr ""
+"プロキシ情報は、\"http://[[user][:pass]@]host[:port]/\" の標準形式で指定して"
+"ください。"
 
 #. Type: text
 #. Description
@@ -1381,6 +2203,384 @@ msgstr "インストールメディアをアンマウント/取り出してい�
 
 #. Type: text
 #. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl1:
+#: ../load-cdrom.templates:1001
+msgid "Load installer components from installation media"
+msgstr "インストールメディアからインストーラコンポーネントをロード"
+
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl1:
+#: ../clock-setup.templates:1001
+msgid "Configure the clock"
+msgstr "時間の設定"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../clock-setup.templates:2001
+msgid "Is the system clock set to UTC?"
+msgstr "システム時間を UTC に設定していますか?"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../clock-setup.templates:2001
+msgid ""
+"System clocks are generally set to Coordinated Universal Time (UTC). The "
+"operating system uses your time zone to convert system time into local time. "
+"This is recommended unless you also use another operating system that "
+"expects the clock to be set to local time."
+msgstr ""
+"システムの時計は一般に世界協定時 (UTC) にセットされています。オペレーティング"
+"システムは、システム時刻を地方時刻に変換するのにあなたの時間帯を使います。時"
+"計が地方時刻に設定されているものと期待しているほかのオペレーティングシステム"
+"も使っているというわけではない場合には、「はい」と答えるのがよいでしょう。"
+
+#. Type: text
+#. Description
+#. progress bar item
+#. :sl1:
+#: ../clock-setup.templates:3001
+msgid "Configuring clock settings..."
+msgstr "時刻を設定しています..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../clock-setup.templates:4001
+msgid "Setting up the clock"
+msgstr "時刻を設定しています"
+
+#. Type: text
+#. Description
+#. progress bar item
+#. :sl1:
+#: ../clock-setup.templates:7001
+msgid "Getting the time from a network time server..."
+msgstr "ネットワーク時刻サーバから時刻を取得しています..."
+
+#. Type: text
+#. Description
+#. progress bar item
+#. :sl1:
+#: ../clock-setup.templates:8001
+msgid "Setting the hardware clock..."
+msgstr "ハードウェア時刻を設定しています..."
+
+#. Type: text
+#. Description
+#. Main menu item
+#. The translation should not exceed 55 columns except for languages
+#. that are only supported in the graphical version of the installer
+#. :sl1:
+#: ../di-utils-shell.templates:2001
+msgid "Execute a shell"
+msgstr "シェルの実行"
+
+#. Type: text
+#. Description
+#. Main menu item
+#. The translation should not exceed 55 columns except for languages
+#. that are only supported in the graphical version of the installer
+#. :sl1:
+#: ../di-utils-reboot.templates:2001
+msgid "Abort the installation"
+msgstr "インストールの中止"
+
+#. Type: text
+#. Description
+#. base-installer progress bar item
+#. :sl1:
+#: ../di-utils.templates:1001
+msgid "Registering modules..."
+msgstr "モジュールを登録しています..."
+
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl1:
+#: ../finish-install.templates:1001
+msgid "Finish the installation"
+msgstr "インストールの完了"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../finish-install.templates:2001
+msgid "Finishing the installation"
+msgstr "インストールを終了しています"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../finish-install.templates:4001
+msgid "Configuring network..."
+msgstr "ネットワークを設定しています..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../finish-install.templates:5001
+msgid "Setting up frame buffer..."
+msgstr "フレームバッファを設定しています..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../finish-install.templates:6001
+msgid "Unmounting file systems..."
+msgstr "ファイルシステムをアンマウントしています..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../finish-install.templates:7001
+msgid "Rebooting into your new system..."
+msgstr "あなたの新しいシステムへと再起動しています..."
+
+#. Type: note
+#. Description
+#. :sl1:
+#: ../finish-install.templates:8001
+msgid "Installation complete"
+msgstr "インストール完了"
+
+#. Type: note
+#. Description
+#. :sl1:
+#: ../finish-install.templates:8001
+msgid ""
+"Installation is complete, so it is time to boot into your new system. Make "
+"sure to remove the installation media, so that you boot into the new system "
+"rather than restarting the installation."
+msgstr ""
+"インストールは完了し、新しいシステムを起動する時となりました。あなたのシステ"
+"ムが新しいシステムをインストールしたディスクから起動するよう、インストールメ"
+"ディアが取り除かれていることを確認してください。"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:1001 ../grub-installer.templates:2001
+msgid "Install the GRUB boot loader to your primary drive?"
+msgstr "起動ドライブへ GRUB ブートローダをインストールしますか?"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:1001
+msgid ""
+"The following other operating systems have been detected on this computer: "
+"${OS_LIST}"
+msgstr ""
+"以下のようなほかのオペレーティングシステムがこのコンピュータに検出されまし"
+"た: ${OS_LIST}"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:1001
+msgid ""
+"If all of your operating systems are listed above, then it should be safe to "
+"install the boot loader to your primary drive (UEFI partition/boot record). "
+"When your computer boots, you will be able to choose to load one of these "
+"operating systems or the newly installed Debian system."
+msgstr ""
+"もしあなたのオペレーティングシステムのすべてが上のリストにあるようであれば、"
+"あなたの 起動ドライブ (UEFI パーティション/ブートレコード) にブートローダをイ"
+"ンストールするのが無難でしょう。コンピュータを起動すると、これらのオペーレ"
+"ティングシステムの 1 つまたはあなたの新しいシステムのロードを選ぶことができま"
+"す。"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:2001
+msgid ""
+"It seems that this new installation is the only operating system on this "
+"computer. If so, it should be safe to install the GRUB boot loader to your "
+"primary drive (UEFI partition/boot record)."
+msgstr ""
+"ここでインストールされるものは、このコンピュータの唯一のオペレーティングシス"
+"テムのように見えます。もしそうであれば、あなたの 起動ドライブ (UEFI パーティ"
+"ション/ブートレコード) にブートローダをインストールするのが無難でしょう。"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:2001
+msgid ""
+"Warning: If your computer has another operating system that the installer "
+"failed to detect, this will make that operating system temporarily "
+"unbootable, though GRUB can be manually configured later to boot it."
+msgstr ""
+"警告: インストーラがあなたのコンピュータに存在するほかのオペレーティングシス"
+"テムを検出するのに失敗すると、(ブートできるようにあとで GRUB を手動で変更でき"
+"るものの) そのオペレーティングシステムを一時的に起動不可能にすることになりま"
+"す。"
+
+#. #-#-#-#-#  templates.pot (grub-installer)  #-#-#-#-#
+#. Type: password
+#. Description
+#. :sl2:
+#. #-#-#-#-#  templates.pot (network-console)  #-#-#-#-#
+#. Type: password
+#. Description
+#. :sl3:
+#. #-#-#-#-#  templates.pot (user-setup)  #-#-#-#-#
+#. Type: password
+#. Description
+#. :sl1:
+#. Type: password
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:10001 ../network-console.templates:5001
+#: ../user-setup-udeb.templates:7001 ../user-setup-udeb.templates:14001
+msgid "Re-enter password to verify:"
+msgstr "確認のため、再度パスワードを入力してください:"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:18001
+msgid "Installing GRUB boot loader"
+msgstr "GRUB ブートローダをインストールしています"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:19001
+msgid "Looking for other operating systems..."
+msgstr "ほかのオペレーティングシステムを探しています..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:20001
+msgid "Installing the '${GRUB}' package..."
+msgstr "'${GRUB}' パッケージをインストールしています..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:21001
+msgid "Determining GRUB boot device..."
+msgstr "GRUB のブートデバイスを決めています..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:22001
+msgid "Running \"grub-install ${BOOTDEV}\"..."
+msgstr "\"grub-install ${BOOTDEV}\" を実行しています..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:23001
+msgid "Running \"update-grub\"..."
+msgstr "\"update-grub\" を実行しています..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:24001
+msgid "Updating /etc/kernel-img.conf..."
+msgstr "/etc/kernel-img.conf を更新しています..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:25001
+msgid "Checking whether to force usage of the removable media path"
+msgstr "リムーバブルメディアパスの利用を強制するかどうかを確認しています"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:26001
+msgid "Mounting filesystems"
+msgstr "ファイルシステムをマウントしています"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:27001
+msgid "Configuring grub-efi for future usage of the removable media path"
+msgstr "リムーバブルメディアパスの将来の利用のために grub-efi を設定しています"
+
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl1:
+#: ../grub-installer.templates:28001
+msgid "Install the GRUB boot loader"
+msgstr "GRUB ブートローダをインストールします"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:34001
+msgid "Force GRUB installation to the EFI removable media path?"
+msgstr "EFI リムーバブルメディアパスに GRUB インストールを強行しますか?"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:34001
+msgid ""
+"It seems that this computer is configured to boot via EFI, but maybe that "
+"configuration will not work for booting from the hard drive. Some EFI "
+"firmware implementations do not meet the EFI specification (i.e. they are "
+"buggy!) and do not support proper configuration of boot options from system "
+"hard drives."
+msgstr ""
+"このコンピュータは EFI 経由でブートするよう設定されているようですが、おそらく"
+"この設定ではハードドライブからのブートはうまく動きません。いくつかの EFI "
+"ファームウェア実装は EFI 仕様に適合しておらず (これはバグです!)、システムの"
+"ハードドライブからの適切なブートオプション設定をサポートしていません。"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:34001
+msgid ""
+"A workaround for this problem is to install an extra copy of the EFI version "
+"of the GRUB boot loader to a fallback location, the \"removable media path"
+"\". Almost all EFI systems, no matter how buggy, will boot GRUB that way."
+msgstr ""
+"この問題の回避策は、GRUB ブートローダの EFI バージョンの別のコピーを、フォー"
+"ルバックされる場所、つまり \"リムーバブルメディアパス\" にインストールするこ"
+"とです。ほぼすべての EFI システムは (いかにバグがあっても) このやり方で GRUB "
+"はブートします。"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:34001
+msgid ""
+"Warning: If the installer failed to detect another operating system that is "
+"present on your computer that also depends on this fallback, installing GRUB "
+"there will make that operating system temporarily unbootable. GRUB can be "
+"manually configured later to boot it if necessary."
+msgstr ""
+"警告: インストーラが、このフォールバックを採用しているあなたのコンピュータに"
+"存在するほかのオペレーティングシステムの検出に失敗すると、GRUB のインストール"
+"は、そのオペレーティングシステムを一時的に起動不可能にすることになります。必"
+"要であれば、それをブートできるよう GRUB をあとで手動で設定できます。"
+
+#. Type: text
+#. Description
 #. :sl1:
 #: ../ethdetect.templates:4001
 msgid "Detecting network hardware"
@@ -1445,6 +2645,358 @@ msgstr "ハードウェアの初期化を待っています..."
 #: ../hw-detect.templates:12001
 msgid "Checking for firmware..."
 msgstr "ファームウェアを確認しています..."
+
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl1:
+#: ../save-logs.templates:1001
+msgid "Save debug logs"
+msgstr "デバッグログを保存"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. finish-install progress bar item
+#: ../save-logs.templates:9001
+msgid "Gathering information for installation report..."
+msgstr "インストールレポートの情報を集めています..."
+
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl1:
+#: ../iso-scan.templates:1001
+msgid "Scan hard drives for an installer ISO image"
+msgstr "インストーラ ISO イメージをハードドライブから検索"
+
+#. Type: text
+#. Description
+#. This menu entry may be translated.
+#. However, translators are required to keep "Choose language"
+#. as an alternative separated by the "/" character
+#. Example (french): Choisir la langue/Choose language
+#. :sl1:
+#: ../localechooser.templates-in:1001
+msgid "Choose language"
+msgstr "言語の選択/Choose language"
+
+#. Type: text
+#. Description
+#. finish-install progress bar item
+#. :sl1:
+#: ../localechooser.templates-in:6001
+msgid "Storing language..."
+msgstr "言語を保存しています..."
+
+#. Type: title
+#. Description
+#. Displayed as dialog title during language selection
+#. :sl1:
+#: ../localechooser.templates-in:7001
+msgid "Select a language"
+msgstr "言語の選択"
+
+#. Type: title
+#. Description
+#. Displayed as dialog title during country selection
+#. :sl1:
+#: ../localechooser.templates-in:8001
+msgid "Select your location"
+msgstr "場所の選択"
+
+#. Type: title
+#. Description
+#. Displayed as dialog title during locale selection
+#. :sl1:
+#: ../localechooser.templates-in:9001
+msgid "Configure locales"
+msgstr "ロケールの設定"
+
+#. Type: note
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:12001
+msgid "Language selection no longer possible"
+msgstr "言語選択はもう利用できません"
+
+#. Type: note
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:12001
+msgid ""
+"At this point it is no longer possible to change the language for the "
+"installation, but you can still change the country or locale."
+msgstr ""
+"この時点では、インストールの言語選択はもうできませんが、国やロケールを変更す"
+"ることはまだ可能です。"
+
+#. Type: note
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:12001
+msgid ""
+"To select a different language you will need to abort this installation and "
+"reboot the installer."
+msgstr ""
+"異なる言語を選択するには、インストールを中止し、インストーラを再起動する必要"
+"があります。"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:13001 ../localechooser.templates-in:14001
+msgid "Continue the installation in the selected language?"
+msgstr "選択された言語でインストールを続けますか?"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:13001
+msgid ""
+"The translation of the installer is incomplete for the selected language."
+msgstr "インストーラの翻訳は、選択された言語では不完全です。"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:14001
+msgid ""
+"The translation of the installer is not fully complete for the selected "
+"language."
+msgstr "インストーラの翻訳は、選択された言語では完全ではありません。"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:15001
+msgid ""
+"This means that there is a significant chance that some dialogs will be "
+"displayed in English instead."
+msgstr ""
+"これは、いくつかのダイアログについて代替として英語で表示されることがあるとい"
+"う意味です。"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:16001
+msgid ""
+"If you do anything other than a purely default installation, there is a real "
+"chance that some dialogs will be displayed in English instead."
+msgstr ""
+"デフォルトインストールそのまま以上のことを行うのであれば、いくつかのダイアロ"
+"グが代替として英語で表示される可能性は実際にあります。"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:17001
+msgid ""
+"If you continue the installation in the selected language, most dialogs "
+"should be displayed correctly but - especially if you use the more advanced "
+"options of the installer - some may be displayed in English instead."
+msgstr ""
+"選択された言語でインストールを続けると、ほとんどのダイアログは正しく表示され"
+"るはずですが、(特にインストーラの上級オプションを使う場合には) いくつかについ"
+"ては代替として英語で表示されるかもしれません。"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:18001
+msgid ""
+"If you continue the installation in the selected language, dialogs should "
+"normally be displayed correctly but - especially if you use the more "
+"advanced options of the installer - there is a slight chance some may be "
+"displayed in English instead."
+msgstr ""
+"選択された言語でインストールを続けると、ダイアログは通常正しく表示されるはず"
+"ですが、(特にインストーラの上級オプションを使う場合には) ごく一部については代"
+"替として英語で表示されるかもしれません。"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:19001
+msgid ""
+"The chance that you will actually encounter a dialog that is not translated "
+"into the selected language is extremely small, but it cannot be ruled out "
+"completely."
+msgstr ""
+"選択された言語に翻訳されていないダイアログに実際に出会うことは極めて少ないで"
+"すが、完全だとは言い切れません。"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:20001
+msgid ""
+"Unless you have a good understanding of the alternative language, it is "
+"recommended to either select a different language or abort the installation."
+msgstr ""
+"代替の言語について十分な理解がなければ、異なる言語を選択するか、インストール"
+"を中止することをお勧めします。"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:21001
+msgid ""
+"If you choose not to continue, you will be given the option of selecting a "
+"different language, or you can abort the installation."
+msgstr ""
+"続けることを選ばない場合、異なる言語を選択するか、インストールを中止するかの"
+"選択肢が与えられます。"
+
+#. Type: select
+#. Choices
+#. "other", here, is added to the list of countries that will be displayed
+#. for users to choose among them
+#. For instance, choosing "Italian" will show:
+#. Italy, Switzerland, other
+#. :sl1:
+#: ../localechooser.templates-in:22001 ../../mktemplates.continents:26
+msgid "other"
+msgstr "その他"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:23001
+msgid "Country, territory or area:"
+msgstr "国・領土・地域:"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:24001
+msgid "Continent or region:"
+msgstr "大陸または地域:"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:25001
+msgid ""
+"The selected location will be used to set your time zone and also for "
+"example to help select the system locale. Normally this should be the "
+"country where you live."
+msgstr ""
+"ここで選択された場所は、時間帯の設定のほか、システムロケールの選択の支援など"
+"に使われます。通常これはあなたの居住する国であるはずです。"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:26001
+msgid ""
+"This is a shortlist of locations based on the language you selected. Choose "
+"\"other\" if your location is not listed."
+msgstr ""
+"これはあなたの選択した言語に基づく場所の短い一覧です。あなたの場所が一覧にな"
+"いなら、\"その他\" を選んでください。"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:27001
+msgid "Select the continent or region to which your location belongs."
+msgstr "あなたの場所が位置する大陸または地域を選択してください。"
+
+#. Type: text
+#. Description
+#. '%s' will be replaced with the name of the currently selected continent/region
+#. :sl1:
+#: ../localechooser.templates-in:28001
+#, no-c-format
+msgid ""
+"Listed are locations for: %s. Use the <Go Back> option to select a different "
+"continent or region if your location is not listed."
+msgstr ""
+"%s についての場所を一覧表示しています。一覧にあなたの場所がないときには、別の"
+"大陸または地域を選ぶために <戻る> を選択してください。"
+
+#. Type: select
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:29001
+msgid "Country to base default locale settings on:"
+msgstr "デフォルトのロケール設定に基づく国:"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:30001
+msgid ""
+"There is no locale defined for the combination of language and country you "
+"have selected. You can now select your preference from the locales available "
+"for the selected language. The locale that will be used is listed in the "
+"second column."
+msgstr ""
+"あなたの選択した言語と国の組み合わせに対して定義されたロケールがありません。"
+"選択された言語に対して利用可能なロケールから好きなものをここで選択できます。"
+"使われるロケールは2列目にリストされます。"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:31001
+msgid ""
+"There are multiple locales defined for the language you have selected. You "
+"can now select your preference from those locales. The locale that will be "
+"used is listed in the second column."
+msgstr ""
+"あなたの選択した言語に対して複数のロケールが定義されています。これらのロケー"
+"ルから好きなものを今選択できます。使われるロケールは2列目にリストされます。"
+
+#. #-#-#-#-#  templates.pot (lvmcfg)  #-#-#-#-#
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl1:
+#. #-#-#-#-#  templates.pot (partman-lvm)  #-#-#-#-#
+#. Type: text
+#. Description
+#. Type: text
+#. Description
+#. :sl3:
+#. Main menu item
+#. Translators: keep below 55 columns
+#. Use infinitive form
+#: ../lvmcfg.templates:1001 ../partman-lvm.templates:7001
+#: ../partman-lvm.templates:23001
+msgid "Configure the Logical Volume Manager"
+msgstr "論理ボリュームマネージャの設定"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../main-menu.templates:1001
+msgid "Debian installer main menu"
+msgstr "Debian インストーラメインメニュー"
+
+#. Type: select
+#. Description
+#. :sl1:
+#: ../main-menu.templates:2001
+msgid "Choose the next step in the install process:"
+msgstr "インストールプロセスの次のステップの選択:"
+
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl1:
+#: ../mdcfg-utils.templates:1001
+msgid "Configure MD devices"
+msgstr "MD デバイスの設定"
 
 #. Type: boolean
 #. Description
@@ -1911,230 +3463,17 @@ msgstr "静的アドレスを使ってネットワークを設定"
 
 #. Type: text
 #. Description
-#. :sl1:
-#: ../choose-mirror-bin.templates-in:5001
-msgid "Checking the Debian archive mirror"
-msgstr "Debian アーカイブミラーを確認しています"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../choose-mirror-bin.templates-in:6001
-msgid "Downloading Release files..."
-msgstr "Release ファイルをダウンロードしています..."
-
-#. Type: text
-#. Description
-#. main-menu item
-#. Translators: keep below 55 columns
-#. :sl1:
-#: ../choose-mirror-bin.templates-in:14001
-msgid "Choose a mirror of the Debian archive"
-msgstr "Debian アーカイブのミラーを選択"
-
-#. Type: select
-#. Choices
-#. :sl1:
-#. Type: select
-#. Choices
-#. :sl2:
-#: ../choose-mirror-bin.templates.http-in:2001
-#: ../choose-mirror-bin.templates.ftp.sel-in:2001
-msgid "enter information manually"
-msgstr "情報を手動で入力"
-
-#. Type: select
-#. Default
-#. Translators, you should put here the ISO 3166 code of a country
-#. which you know hosts at least one Debian HTTP mirror. Please check
-#. that the country really has a Debian HTTP mirror before putting a
-#. random value here
-#.
-#. First check that the country you mention here is listed in
-#. https://salsa.debian.org/mirror-team/masterlist/-/blob/master/Mirrors.masterlist
-#.
-#. BE CAREFUL to use the TWO LETTER ISO-3166 CODE and not anything else
-#.
-#. You do not need to translate what's between the square brackets
-#. You should even NOT put square brackets in translations:
-#. msgid "US[ Default value for http]"
-#. msgstr "FR"
-#. :sl1:
-#: ../choose-mirror-bin.templates.http-in:2002
-msgid "US[ Default value for http]"
-msgstr "JP"
-
-#. Type: select
-#. Description
-#. :sl1:
-#. Type: select
-#. Description
-#. :sl2:
-#: ../choose-mirror-bin.templates.http-in:2003
-#: ../choose-mirror-bin.templates.ftp.sel-in:2003
-msgid "Debian archive mirror country:"
-msgstr "Debian アーカイブミラーの国:"
-
-#. Type: select
-#. Description
-#. :sl1:
-#. Type: select
-#. Description
-#. :sl2:
-#: ../choose-mirror-bin.templates.http-in:2003
-#: ../choose-mirror-bin.templates.ftp.sel-in:2003
-msgid ""
-"The goal is to find a mirror of the Debian archive that is close to you on "
-"the network -- be aware that nearby countries, or even your own, may not be "
-"the best choice."
-msgstr ""
-"ネットワーク上あなたに最も近い Debian アーカイブミラーを見つけることが最終目"
-"標です。近隣国はもちろん自国でさえ最適の選択とは限らないことに注意しましょ"
-"う。"
-
-#. Type: select
-#. Description
-#. :sl1:
-#. Type: select
-#. Description
-#. :sl2:
-#: ../choose-mirror-bin.templates.http-in:3001
-#: ../choose-mirror-bin.templates.ftp.sel-in:3001
-msgid "Debian archive mirror:"
-msgstr "Debian アーカイブミラー:"
-
-#. Type: select
-#. Description
-#. :sl1:
-#. Type: select
-#. Description
-#. :sl2:
-#: ../choose-mirror-bin.templates.http-in:3001
-#: ../choose-mirror-bin.templates.ftp.sel-in:3001
-msgid ""
-"Please select a Debian archive mirror. You should use a mirror in your "
-"country or region if you do not know which mirror has the best Internet "
-"connection to you."
-msgstr ""
-"Debian アーカイブミラーを選んでください。最適なインターネット接続となるミラー"
-"がわからなければ、あなたの国または地域にあるミラーを利用するのがよいでしょ"
-"う。"
-
-#. Type: select
-#. Description
-#. :sl1:
-#: ../choose-mirror-bin.templates.http-in:3001
-msgid "Usually, deb.debian.org is a good choice."
-msgstr "通常、deb.debian.org が良い選択です。"
-
-#. Type: string
-#. Description
-#. :sl1:
-#. Type: string
-#. Description
-#. :sl2:
-#: ../choose-mirror-bin.templates.http-in:4001
-#: ../choose-mirror-bin.templates.ftp.base-in:2001
-msgid "Debian archive mirror hostname:"
-msgstr "Debian アーカイブミラーホスト名:"
-
-#. Type: string
-#. Description
-#. :sl1:
-#. Type: string
-#. Description
-#. :sl2:
-#: ../choose-mirror-bin.templates.http-in:4001
-#: ../choose-mirror-bin.templates.ftp.base-in:2001
-msgid ""
-"Please enter the hostname of the mirror from which Debian will be downloaded."
-msgstr "Debian をダウンロードするミラーホスト名を入力してください。"
-
-#. Type: string
-#. Description
-#. :sl1:
-#. Type: string
-#. Description
-#. :sl2:
-#: ../choose-mirror-bin.templates.http-in:4001
-#: ../choose-mirror-bin.templates.ftp.base-in:2001
-msgid ""
-"An alternate port can be specified using the standard [hostname]:[port] "
-"format."
-msgstr "標準の [hostname]:[port] 形式を使って別のポートも指定できます。"
-
-#. Type: string
-#. Description
-#. :sl1:
-#: ../choose-mirror-bin.templates.http-in:6001
-msgid "HTTP proxy information (blank for none):"
-msgstr "HTTP プロキシの情報 (なければ空):"
-
-#. Type: string
-#. Description
-#. :sl1:
-#: ../choose-mirror-bin.templates.http-in:6001
-msgid ""
-"If you need to use a HTTP proxy to access the outside world, enter the proxy "
-"information here. Otherwise, leave this blank."
-msgstr ""
-"外の世界にアクセスするのに HTTP プロキシを使う必要があるなら、プロキシ情報を"
-"ここに入力します。そうでないなら空のままにしておきます。"
-
-#. Type: string
-#. Description
-#. :sl1:
-#. Type: string
-#. Description
-#. :sl2:
-#: ../choose-mirror-bin.templates.http-in:6001
-#: ../choose-mirror-bin.templates.ftp.base-in:4001
-msgid ""
-"The proxy information should be given in the standard form of \"http://"
-"[[user][:pass]@]host[:port]/\"."
-msgstr ""
-"プロキシ情報は、\"http://[[user][:pass]@]host[:port]/\" の標準形式で指定して"
-"ください。"
-
-#. #-#-#-#-#  templates.pot (net-retriever)  #-#-#-#-#
-#. Type: select
-#. Choices
-#. These are choices of actions so this is, at least in English,
-#. an infinitive form
-#. :sl2:
-#. #-#-#-#-#  templates.pot (cdebconf)  #-#-#-#-#
-#. Type: text
-#. Description
-#. Translators, this text will appear on a button, so KEEP IT SHORT
-#. :sl1:
-#. #-#-#-#-#  templates.pot (mdcfg)  #-#-#-#-#
-#. Type: select
-#. Choices
-#. :sl3:
-#. Type: select
-#. Choices
-#. :sl3:
-#: ../net-retriever.templates:1001 ../cdebconf-newt-udeb.templates:5001
-#: ../mdcfg-utils.templates:6001 ../mdcfg-utils.templates:13001
-msgid "Cancel"
-msgstr "キャンセル"
-
-#. Type: text
-#. Description
 #. Main menu item
 #. Translators: keep below 55 columns
 #. :sl1:
-#: ../load-cdrom.templates:1001
-msgid "Load installer components from installation media"
-msgstr "インストールメディアからインストーラコンポーネントをロード"
+#: ../nobootloader.templates:1001
+msgid "Continue without boot loader"
+msgstr "ブートローダなしで続ける"
 
+#. #-#-#-#-#  templates.pot (partman-auto)  #-#-#-#-#
 #. Type: text
 #. Description
 #. :sl1:
-#: ../partman-base.templates:1001
-msgid "Starting up the partitioner"
-msgstr "partitioner を開始しています"
-
 #. #-#-#-#-#  templates.pot (partman-base)  #-#-#-#-#
 #. Type: text
 #. Description
@@ -2142,14 +3481,184 @@ msgstr "partitioner を開始しています"
 #. Type: text
 #. Description
 #. :sl2:
-#. #-#-#-#-#  templates.pot (partman-auto)  #-#-#-#-#
+#: ../partman-auto.templates:1001 ../partman-base.templates:2001
+#: ../partman-base.templates:25001
+msgid "Please wait..."
+msgstr "しばらくお待ちください..."
+
 #. Type: text
 #. Description
 #. :sl1:
-#: ../partman-base.templates:2001 ../partman-base.templates:25001
-#: ../partman-auto.templates:1001
-msgid "Please wait..."
-msgstr "しばらくお待ちください..."
+#: ../partman-auto.templates:2001
+msgid "Computing the new partitions..."
+msgstr "新しいパーティションを計算しています..."
+
+#. Type: select
+#. Description
+#. :sl1:
+#. Type: select
+#. Description
+#. :sl1:
+#: ../partman-auto.templates:5001 ../partman-auto.templates:9001
+msgid "Partitioning method:"
+msgstr "パーティショニングの方法:"
+
+#. Type: select
+#. Description
+#. :sl1:
+#: ../partman-auto.templates:5001
+msgid ""
+"The installer can guide you through partitioning a disk (using different "
+"standard schemes) or, if you prefer, you can do it manually. With guided "
+"partitioning you will still have a chance later to review and customise the "
+"results."
+msgstr ""
+"このインストーラはディスクをパーティショニングするのを (種々の標準スキームを"
+"使って) ガイドし、望むなら手動でもできます。ガイドに従ったパーティショニング"
+"でも、あとでその結果を見たりカスタマイズしたりする機会があります。"
+
+#. Type: select
+#. Description
+#. :sl1:
+#. Type: select
+#. Description
+#. :sl1:
+#: ../partman-auto.templates:5001 ../partman-auto.templates:9001
+msgid ""
+"If you choose guided partitioning for an entire disk, you will next be asked "
+"which disk should be used."
+msgstr ""
+"ディスク全体に対してガイドによるパーティショニングを選ぶと、続いてディスクを"
+"どのように使うか尋ねられます。"
+
+#. Type: select
+#. Description
+#. :sl1:
+#: ../partman-auto.templates:10001
+msgid "Partitioning scheme:"
+msgstr "パーティショニング機構:"
+
+#. Type: select
+#. Description
+#. :sl1:
+#. "Selected for partitioning" can be either an entire disk
+#. of "the largest continuous free space" on an existing disk
+#. TRANSLATORS, please take care to choose something appropriate for both
+#.
+#. It is followed by a variable giving the chosen disk, hence the colon
+#. at the end of the sentence. Please keep it.
+#: ../partman-auto.templates:10001
+msgid "Selected for partitioning:"
+msgstr "選択されたパーティショニング:"
+
+#. Type: select
+#. Description
+#. :sl1:
+#: ../partman-auto.templates:10001
+msgid ""
+"The disk can be partitioned using one of several different schemes. If you "
+"are unsure, choose the first one."
+msgstr ""
+"ディスクは、いくつかの異なる機構のうちの 1 つでパーティショニングされます。よ"
+"くわからなければ、最初の選択肢を選んでください。"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
+#: ../partman-auto.templates:14001
+msgid "Guided partitioning"
+msgstr "ガイドによるパーティショニング"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
+#: ../partman-auto.templates:15001
+msgid "Guided - use the largest continuous free space"
+msgstr "ガイド - 最大の連続空き領域を使う"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
+#: ../partman-auto.templates:16001
+msgid "Guided - use entire disk"
+msgstr "ガイド - ディスク全体を使う"
+
+#. Type: select
+#. Description
+#. :sl1:
+#: ../partman-auto.templates:17001
+msgid "Select disk to partition:"
+msgstr "パーティショニングするディスクの選択:"
+
+#. Type: select
+#. Description
+#. :sl1:
+#: ../partman-auto.templates:17001
+msgid ""
+"Note that all data on the disk you select will be erased, but not before you "
+"have confirmed that you really want to make the changes."
+msgstr ""
+"選択したディスク内のすべてのデータは失われます。ただし、変更を本当に行うこと"
+"を確認するまでは、実際にはこの処理は行われません。"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
+#. This is a method for partioning - as in guided (automatic) versus manual
+#: ../partman-auto.templates:18001
+msgid "Manual"
+msgstr "手動"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
+#: ../partman-auto.templates:19001
+msgid "Automatically partition the free space"
+msgstr "ガイドによるパーティショニング"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
+#: ../partman-auto.templates:20001
+msgid "All files in one partition (recommended for new users)"
+msgstr "すべてのファイルを 1 つのパーティションに (初心者ユーザには推奨)"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
+#: ../partman-auto.templates:21001
+msgid "Separate /home partition"
+msgstr "/home パーティションの分割"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
+#: ../partman-auto.templates:22001
+msgid "Separate /home, /var, and /tmp partitions"
+msgstr "/home, /var, /tmp パーティションを分割"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
+#: ../partman-auto-lvm.templates:1001
+msgid "Guided - use entire disk and set up LVM"
+msgstr "ガイド - ディスク全体を使い LVM をセットアップする"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../partman-base.templates:1001
+msgid "Starting up the partitioner"
+msgstr "partitioner を開始しています"
 
 #. Type: text
 #. Description
@@ -2400,165 +3909,6 @@ msgstr "ディスクのパーティショニング"
 
 #. Type: text
 #. Description
-#. :sl1:
-#: ../partman-auto.templates:2001
-msgid "Computing the new partitions..."
-msgstr "新しいパーティションを計算しています..."
-
-#. Type: select
-#. Description
-#. :sl1:
-#. Type: select
-#. Description
-#. :sl1:
-#: ../partman-auto.templates:5001 ../partman-auto.templates:9001
-msgid "Partitioning method:"
-msgstr "パーティショニングの方法:"
-
-#. Type: select
-#. Description
-#. :sl1:
-#: ../partman-auto.templates:5001
-msgid ""
-"The installer can guide you through partitioning a disk (using different "
-"standard schemes) or, if you prefer, you can do it manually. With guided "
-"partitioning you will still have a chance later to review and customise the "
-"results."
-msgstr ""
-"このインストーラはディスクをパーティショニングするのを (種々の標準スキームを"
-"使って) ガイドし、望むなら手動でもできます。ガイドに従ったパーティショニング"
-"でも、あとでその結果を見たりカスタマイズしたりする機会があります。"
-
-#. Type: select
-#. Description
-#. :sl1:
-#. Type: select
-#. Description
-#. :sl1:
-#: ../partman-auto.templates:5001 ../partman-auto.templates:9001
-msgid ""
-"If you choose guided partitioning for an entire disk, you will next be asked "
-"which disk should be used."
-msgstr ""
-"ディスク全体に対してガイドによるパーティショニングを選ぶと、続いてディスクを"
-"どのように使うか尋ねられます。"
-
-#. Type: select
-#. Description
-#. :sl1:
-#: ../partman-auto.templates:10001
-msgid "Partitioning scheme:"
-msgstr "パーティショニング機構:"
-
-#. Type: select
-#. Description
-#. :sl1:
-#. "Selected for partitioning" can be either an entire disk
-#. of "the largest continuous free space" on an existing disk
-#. TRANSLATORS, please take care to choose something appropriate for both
-#.
-#. It is followed by a variable giving the chosen disk, hence the colon
-#. at the end of the sentence. Please keep it.
-#: ../partman-auto.templates:10001
-msgid "Selected for partitioning:"
-msgstr "選択されたパーティショニング:"
-
-#. Type: select
-#. Description
-#. :sl1:
-#: ../partman-auto.templates:10001
-msgid ""
-"The disk can be partitioned using one of several different schemes. If you "
-"are unsure, choose the first one."
-msgstr ""
-"ディスクは、いくつかの異なる機構のうちの 1 つでパーティショニングされます。よ"
-"くわからなければ、最初の選択肢を選んでください。"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
-#: ../partman-auto.templates:14001
-msgid "Guided partitioning"
-msgstr "ガイドによるパーティショニング"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
-#: ../partman-auto.templates:15001
-msgid "Guided - use the largest continuous free space"
-msgstr "ガイド - 最大の連続空き領域を使う"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
-#: ../partman-auto.templates:16001
-msgid "Guided - use entire disk"
-msgstr "ガイド - ディスク全体を使う"
-
-#. Type: select
-#. Description
-#. :sl1:
-#: ../partman-auto.templates:17001
-msgid "Select disk to partition:"
-msgstr "パーティショニングするディスクの選択:"
-
-#. Type: select
-#. Description
-#. :sl1:
-#: ../partman-auto.templates:17001
-msgid ""
-"Note that all data on the disk you select will be erased, but not before you "
-"have confirmed that you really want to make the changes."
-msgstr ""
-"選択したディスク内のすべてのデータは失われます。ただし、変更を本当に行うこと"
-"を確認するまでは、実際にはこの処理は行われません。"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
-#. This is a method for partioning - as in guided (automatic) versus manual
-#: ../partman-auto.templates:18001
-msgid "Manual"
-msgstr "手動"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
-#: ../partman-auto.templates:19001
-msgid "Automatically partition the free space"
-msgstr "ガイドによるパーティショニング"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
-#: ../partman-auto.templates:20001
-msgid "All files in one partition (recommended for new users)"
-msgstr "すべてのファイルを 1 つのパーティションに (初心者ユーザには推奨)"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
-#: ../partman-auto.templates:21001
-msgid "Separate /home partition"
-msgstr "/home パーティションの分割"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
-#: ../partman-auto.templates:22001
-msgid "Separate /home, /var, and /tmp partitions"
-msgstr "/home, /var, /tmp パーティションを分割"
-
-#. Type: text
-#. Description
 #. short variant of `do not use the partition'
 #. :sl1:
 #: ../partman-basicmethods.templates:7001
@@ -2580,66 +3930,6 @@ msgstr "初期化"
 #: ../partman-basicmethods.templates:11001
 msgid "keep"
 msgstr "保持"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../partman-partitioning.templates:2001
-msgid "Computing the new state of the partition table..."
-msgstr "パーティションテーブルの新しい状態を計算しています..."
-
-#. Type: select
-#. Choices
-#. :sl1:
-#: ../partman-partitioning.templates:12001
-msgid "Beginning"
-msgstr "先頭"
-
-#. Type: select
-#. Choices
-#. :sl1:
-#: ../partman-partitioning.templates:12001
-msgid "End"
-msgstr "末尾"
-
-#. Type: select
-#. Description
-#. :sl1:
-#: ../partman-partitioning.templates:12002
-msgid "Location for the new partition:"
-msgstr "新しいパーティションの場所:"
-
-#. Type: select
-#. Description
-#. :sl1:
-#: ../partman-partitioning.templates:12002
-msgid ""
-"Please choose whether you want the new partition to be created at the "
-"beginning or at the end of the available space."
-msgstr ""
-"新しいパーティションを空き領域の先頭または末尾のいずれに作成したいか選択して"
-"ください。"
-
-#. Type: select
-#. Choices
-#. :sl1:
-#: ../partman-partitioning.templates:13001
-msgid "Primary"
-msgstr "基本パーティション"
-
-#. Type: select
-#. Choices
-#. :sl1:
-#: ../partman-partitioning.templates:13001
-msgid "Logical"
-msgstr "論理パーティション"
-
-#. Type: select
-#. Description
-#. :sl1:
-#: ../partman-partitioning.templates:13002
-msgid "Type for the new partition:"
-msgstr "新しいパーティションのタイプ:"
 
 #. Type: text
 #. Description
@@ -2735,6 +4025,44 @@ msgstr "スワップ"
 
 #. Type: text
 #. Description
+#. :sl2:
+#. File system name (untranslatable in many languages)
+#. Type: text
+#. Description
+#. :sl1:
+#. Short file system name (untranslatable in many languages)
+#: ../partman-btrfs.templates:1001 ../partman-btrfs.templates:3001
+msgid "btrfs"
+msgstr "btrfs"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Type: text
+#. Description
+#. :sl1:
+#: ../partman-efi.templates:2001 ../partman-efi.templates:4001
+msgid "EFI System Partition"
+msgstr "EFI システムパーティション"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. short variant of 'EFI System Partition'
+#. Up to 10 character positions
+#: ../partman-efi.templates:5001
+msgid "ESP"
+msgstr "ESP"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../partman-efi.templates:7001
+msgid "EFI-fat16"
+msgstr "EFI-fat16"
+
+#. Type: text
+#. Description
 #. :sl1:
 #. File system name (untranslatable in many languages)
 #. Type: text
@@ -2759,18 +4087,6 @@ msgstr "ext4"
 
 #. Type: text
 #. Description
-#. :sl2:
-#. File system name (untranslatable in many languages)
-#. Type: text
-#. Description
-#. :sl1:
-#. Short file system name (untranslatable in many languages)
-#: ../partman-btrfs.templates:1001 ../partman-btrfs.templates:3001
-msgid "btrfs"
-msgstr "btrfs"
-
-#. Type: text
-#. Description
 #. :sl1:
 #. File system name (untranslatable in many languages)
 #. Type: text
@@ -2783,15 +4099,63 @@ msgstr "jfs"
 
 #. Type: text
 #. Description
-#. :sl2:
-#. File system name (untranslatable in many languages)
-#. Type: text
+#. :sl1:
+#: ../partman-partitioning.templates:2001
+msgid "Computing the new state of the partition table..."
+msgstr "パーティションテーブルの新しい状態を計算しています..."
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../partman-partitioning.templates:12001
+msgid "Beginning"
+msgstr "先頭"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../partman-partitioning.templates:12001
+msgid "End"
+msgstr "末尾"
+
+#. Type: select
 #. Description
 #. :sl1:
-#. Short file system name (untranslatable in many languages)
-#: ../partman-xfs.templates:1001 ../partman-xfs.templates:3001
-msgid "xfs"
-msgstr "xfs"
+#: ../partman-partitioning.templates:12002
+msgid "Location for the new partition:"
+msgstr "新しいパーティションの場所:"
+
+#. Type: select
+#. Description
+#. :sl1:
+#: ../partman-partitioning.templates:12002
+msgid ""
+"Please choose whether you want the new partition to be created at the "
+"beginning or at the end of the available space."
+msgstr ""
+"新しいパーティションを空き領域の先頭または末尾のいずれに作成したいか選択して"
+"ください。"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../partman-partitioning.templates:13001
+msgid "Primary"
+msgstr "基本パーティション"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../partman-partitioning.templates:13001
+msgid "Logical"
+msgstr "論理パーティション"
+
+#. Type: select
+#. Description
+#. :sl1:
+#: ../partman-partitioning.templates:13002
+msgid "Type for the new partition:"
+msgstr "新しいパーティションのタイプ:"
 
 #. Type: note
 #. Description
@@ -2903,29 +4267,72 @@ msgstr ""
 
 #. Type: text
 #. Description
-#. :sl1:
+#. :sl2:
+#. File system name (untranslatable in many languages)
 #. Type: text
 #. Description
 #. :sl1:
-#: ../partman-efi.templates:2001 ../partman-efi.templates:4001
-msgid "EFI System Partition"
-msgstr "EFI システムパーティション"
+#. Short file system name (untranslatable in many languages)
+#: ../partman-xfs.templates:1001 ../partman-xfs.templates:3001
+msgid "xfs"
+msgstr "xfs"
+
+#. Type: text
+#. Description
+#. Main menu item
+#. should not be more than 55 columns
+#. pkgsel is the module that installs packages by running tasksel to
+#. select "tasks". Please use "install *software*" and not
+#. "install *packages*" which is less adapted for non technical users
+#. :sl1:
+#: ../pkgsel.templates:1001
+msgid "Select and install software"
+msgstr "ソフトウェアの選択とインストール"
+
+#. Type: text
+#. Description
+#. This appears in a progress bar when running pkgsel
+#. The text is used when pkgsel is launched, before it installs packages
+#. :sl1:
+#: ../pkgsel.templates:2001
+msgid "Setting up..."
+msgstr "設定しています..."
+
+#. Type: text
+#. Description
+#. This appears in a progress bar when running pkgsel
+#. The text is used when upgrading already installed packages.
+#. :sl1:
+#: ../pkgsel.templates:5001
+msgid "Upgrading software..."
+msgstr "ソフトウェアを更新しています..."
+
+#. Type: text
+#. Description
+#. This appears in a progress bar when running pkgsel
+#. The text is used when running tasksel to allow selecting packages
+#. Tasksel will then display its own screens
+#. :sl1:
+#: ../pkgsel.templates:6001
+msgid "Running tasksel..."
+msgstr "tasksel を実行しています..."
+
+#. Type: text
+#. Description
+#. This appears in a progress bar when running pkgsel
+#. The text is used at the end of the installation phase while
+#. cleaning up pkgsel's stuff
+#. :sl1:
+#: ../pkgsel.templates:7001
+msgid "Cleaning up..."
+msgstr "クリーニング中です..."
 
 #. Type: text
 #. Description
 #. :sl1:
-#. short variant of 'EFI System Partition'
-#. Up to 10 character positions
-#: ../partman-efi.templates:5001
-msgid "ESP"
-msgstr "ESP"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../partman-efi.templates:7001
-msgid "EFI-fat16"
-msgstr "EFI-fat16"
+#: ../rescue-mode.templates:1001
+msgid "Enter rescue mode"
+msgstr "レスキューモードに移行"
 
 #. Type: text
 #. Description
@@ -2934,899 +4341,6 @@ msgstr "EFI-fat16"
 #: ../tzsetup-udeb.templates:1001
 msgid "Saving the time zone..."
 msgstr "時間帯を保存しています..."
-
-#. Type: text
-#. Description
-#. Main menu item
-#. Translators: keep below 55 columns
-#. :sl1:
-#: ../clock-setup.templates:1001
-msgid "Configure the clock"
-msgstr "時間の設定"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../clock-setup.templates:2001
-msgid "Is the system clock set to UTC?"
-msgstr "システム時間を UTC に設定していますか?"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../clock-setup.templates:2001
-msgid ""
-"System clocks are generally set to Coordinated Universal Time (UTC). The "
-"operating system uses your time zone to convert system time into local time. "
-"This is recommended unless you also use another operating system that "
-"expects the clock to be set to local time."
-msgstr ""
-"システムの時計は一般に世界協定時 (UTC) にセットされています。オペレーティング"
-"システムは、システム時刻を地方時刻に変換するのにあなたの時間帯を使います。時"
-"計が地方時刻に設定されているものと期待しているほかのオペレーティングシステム"
-"も使っているというわけではない場合には、「はい」と答えるのがよいでしょう。"
-
-#. Type: text
-#. Description
-#. progress bar item
-#. :sl1:
-#: ../clock-setup.templates:3001
-msgid "Configuring clock settings..."
-msgstr "時刻を設定しています..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../clock-setup.templates:4001
-msgid "Setting up the clock"
-msgstr "時刻を設定しています"
-
-#. Type: text
-#. Description
-#. progress bar item
-#. :sl1:
-#: ../clock-setup.templates:7001
-msgid "Getting the time from a network time server..."
-msgstr "ネットワーク時刻サーバから時刻を取得しています..."
-
-#. Type: text
-#. Description
-#. progress bar item
-#. :sl1:
-#: ../clock-setup.templates:8001
-msgid "Setting the hardware clock..."
-msgstr "ハードウェア時刻を設定しています..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../base-installer.templates:4001
-msgid "Preparing to install the base system..."
-msgstr "ベースシステムのインストールを準備しています..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../base-installer.templates:5001 ../bootstrap-base.templates:30001
-msgid "Installing the base system"
-msgstr "ベースシステムをインストールしています"
-
-#. #-#-#-#-#  templates.pot (base-installer)  #-#-#-#-#
-#. Type: text
-#. Description
-#. :sl1:
-#. #-#-#-#-#  templates.pot (apt-setup)  #-#-#-#-#
-#. Type: text
-#. Description
-#. :sl2:
-#. #-#-#-#-#  templates.pot (pkgsel)  #-#-#-#-#
-#. Type: text
-#. Description
-#. :sl2:
-#. #-#-#-#-#  templates.pot (finish-install)  #-#-#-#-#
-#. Type: text
-#. Description
-#. :sl1:
-#: ../base-installer.templates:6001 ../apt-setup-udeb.templates:3001
-#: ../pkgsel.templates:9001 ../finish-install.templates:3001
-msgid "Running ${SCRIPT}..."
-msgstr "${SCRIPT} を実行しています..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../base-installer.templates:7001
-msgid "Setting up the base system..."
-msgstr "ベースシステムをセットアップしています..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../base-installer.templates:8001 ../bootstrap-base.templates:59001
-msgid "Configuring APT sources..."
-msgstr "APT ソースを設定しています..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../base-installer.templates:9001
-msgid "Updating the list of available packages..."
-msgstr "利用可能なパッケージのリストを更新しています..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../base-installer.templates:10001
-msgid "Installing extra packages..."
-msgstr "特別パッケージをインストールしています..."
-
-#. Type: text
-#. Description
-#. SUBST0 is a package name
-#. :sl1:
-#: ../base-installer.templates:11001
-msgid "Installing extra packages - retrieving and installing ${SUBST0}..."
-msgstr ""
-"特別パッケージをインストールしています - ${SUBST0} を取得・インストールしてい"
-"ます..."
-
-#. Type: text
-#. Description
-#. Item in the main menu to select this package
-#. TRANSLATORS: <65 columns
-#. :sl1:
-#: ../bootstrap-base.templates:1001
-msgid "Install the base system"
-msgstr "ベースシステムのインストール"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. Release is a filename which should not be translated
-#: ../bootstrap-base.templates:23001
-msgid "Retrieving Release file"
-msgstr "Release ファイルを取得しています"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. Release is a filename which should not be translated
-#: ../bootstrap-base.templates:24001
-msgid "Retrieving Release file signature"
-msgstr "Release ファイルのシグネチャを取得しています"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. "packages" here can be translated
-#: ../bootstrap-base.templates:25001
-msgid "Finding package sizes"
-msgstr "パッケージサイズを調べています"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. Packages is a filename which should not be translated
-#: ../bootstrap-base.templates:26001
-msgid "Retrieving Packages files"
-msgstr "Packages ファイルを取得しています"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. Packages is a filename which should not be translated
-#: ../bootstrap-base.templates:27001
-msgid "Retrieving Packages file"
-msgstr "Packages ファイルを取得しています"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. "packages" here can be translated
-#: ../bootstrap-base.templates:28001
-msgid "Retrieving packages"
-msgstr "パッケージを取得しています"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. "packages" here can be translated
-#: ../bootstrap-base.templates:29001
-msgid "Extracting packages"
-msgstr "パッケージを展開しています"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. Core packages are packages that are part of the Debian base system
-#. The "core" packages are indeed packages that are specifically
-#. recorded as part of the base system. Other packages may
-#. be installed on the base system because of dependency resolution
-#: ../bootstrap-base.templates:31001
-msgid "Installing core packages"
-msgstr "コアパッケージをインストールしています"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. Required packages are packages which installation is triggered
-#. by the dependency chain of core packages
-#. In short, they are "required" because at least one of the
-#. packages from the core packages depends on them
-#: ../bootstrap-base.templates:32001
-msgid "Unpacking required packages"
-msgstr "必須パッケージを展開しています"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../bootstrap-base.templates:33001
-msgid "Configuring required packages"
-msgstr "必須パッケージを設定しています"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. The base system is the minimal Debian system
-#. See http://www.debian.org/doc/debian-policy/ch-binary.html#s3.7
-#: ../bootstrap-base.templates:34001
-msgid "Unpacking the base system"
-msgstr "ベースシステムを展開しています"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. The base system is the minimal Debian system
-#. See http://www.debian.org/doc/debian-policy/ch-binary.html#s3.7
-#: ../bootstrap-base.templates:35001
-msgid "Configuring the base system"
-msgstr "ベースシステムを設定しています"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../bootstrap-base.templates:36001
-msgid "${SECTION}: ${INFO}..."
-msgstr "${SECTION}: ${INFO}..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. SUBST0 is a package name
-#: ../bootstrap-base.templates:37001
-msgid "Validating ${SUBST0}..."
-msgstr "${SUBST0} を検査しています..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. SUBST0 is a package name
-#: ../bootstrap-base.templates:38001
-msgid "Retrieving ${SUBST0}..."
-msgstr "${SUBST0} を取得しています..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. SUBST0 is a package name
-#: ../bootstrap-base.templates:39001
-msgid "Extracting ${SUBST0}..."
-msgstr "${SUBST0} を展開しています..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. SUBST0 is a package name
-#: ../bootstrap-base.templates:40001
-msgid "Unpacking ${SUBST0}..."
-msgstr "${SUBST0} を展開しています..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. SUBST0 is a package name
-#: ../bootstrap-base.templates:41001
-msgid "Configuring ${SUBST0}..."
-msgstr "${SUBST0} を設定しています..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. Release is a filename which should not be translated
-#: ../bootstrap-base.templates:42001
-msgid "Checking Release signature"
-msgstr "Release シグネチャをチェックしています"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. SUBST0 is a gpg key id
-#. Release is a filename which should not be translated
-#: ../bootstrap-base.templates:43001
-msgid "Valid Release signature (key id ${SUBST0})"
-msgstr "有効な Release シグネチャです (キーID ${SUBST0})"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../bootstrap-base.templates:44001
-msgid "Resolving dependencies of base packages..."
-msgstr "ベースパッケージの依存関係を解決しています..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. SUBST0 is a list of packages
-#: ../bootstrap-base.templates:45001
-msgid "Found additional base dependencies: ${SUBST0}"
-msgstr "追加の依存関係を発見しました: ${SUBST0}"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. SUBST0 is a list of packages
-#: ../bootstrap-base.templates:46001
-msgid "Found additional required dependencies: ${SUBST0}"
-msgstr "追加の必須関係を発見しました: ${SUBST0}"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. SUBST0 is a list of packages
-#: ../bootstrap-base.templates:47001
-msgid "Found packages in base already in required: ${SUBST0}"
-msgstr "ベースにあるパッケージはすでに必須としてあります: ${SUBST0}"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../bootstrap-base.templates:48001
-msgid "Resolving dependencies of required packages..."
-msgstr "必須パッケージの依存関係を解決しています..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. SUBST0 is an archive component (main, etc)
-#. SUBST1 is a mirror
-#: ../bootstrap-base.templates:49001
-msgid "Checking component ${SUBST0} on ${SUBST1}..."
-msgstr "${SUBST1} のコンポーネント ${SUBST0} をチェックしています..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. Core packages are packages that are part of the Debian base system
-#. The "core" packages are indeed packages that are specifically
-#. recorded as part of the base system. Other packages may
-#. be installed on the base system because of dependency resolution
-#: ../bootstrap-base.templates:50001
-msgid "Installing core packages..."
-msgstr "コアパッケージをインストールしています..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. Required packages are packages which installation is triggered
-#. by the dependency chain of core packages
-#. In short, they are "required" because at least one of the
-#. packages from the core packages depends on them
-#: ../bootstrap-base.templates:51001
-msgid "Unpacking required packages..."
-msgstr "必須パッケージを展開しています..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. Required packages are packages which installation is triggered
-#. by the dependency chain of core packages
-#. In short, they are "required" because at least one of the
-#. packages from the core packages depends on them
-#: ../bootstrap-base.templates:52001
-msgid "Configuring required packages..."
-msgstr "必須パッケージを設定しています..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../bootstrap-base.templates:53001
-msgid "Installing base packages..."
-msgstr "ベースパッケージをインストールしています..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../bootstrap-base.templates:54001
-msgid "Unpacking the base system..."
-msgstr "ベースシステムを展開しています..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../bootstrap-base.templates:55001
-msgid "Configuring the base system..."
-msgstr "ベースシステムを設定しています..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../bootstrap-base.templates:56001
-msgid "Base system installed successfully."
-msgstr "ベースシステムのインストールに成功しました。"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../bootstrap-base.templates:60001
-msgid "Selecting the kernel to install..."
-msgstr "インストールするカーネルを選択しています..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../bootstrap-base.templates:61001
-msgid "Installing the kernel..."
-msgstr "カーネルをインストールしています..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. SUBST0 is a package name
-#: ../bootstrap-base.templates:62001
-msgid "Installing the kernel - retrieving and installing ${SUBST0}..."
-msgstr ""
-"カーネルをインストールしています - ${SUBST0} を取得・インストールしていま"
-"す..."
-
-#. Type: text
-#. Description
-#. Main menu item
-#. MUST be kept below 55 characters/columns
-#. :sl1:
-#: ../apt-setup-udeb.templates:1001
-msgid "Configure the package manager"
-msgstr "パッケージマネージャの設定"
-
-#. Type: text
-#. Description
-#. Translators, "apt" is the program name
-#. so please do NOT translate it
-#. :sl1:
-#: ../apt-setup-udeb.templates:2001
-msgid "Configuring apt"
-msgstr "apt を設定しています"
-
-#. Type: multiselect
-#. Choices
-#. SEC_HOST is a host name (e.g. security.debian.org)
-#. Translators: the *entire* string should be under 55 columns
-#. including host name. In short, KEEP THIS SHORT and, yes, that's tricky
-#. :sl1:
-#: ../apt-setup-udeb.templates:11001
-msgid "security updates (from ${SEC_HOST})"
-msgstr "セキュリティアップデート (${SEC_HOST} から)"
-
-#. Type: multiselect
-#. Choices
-#. SEC_HOST is a host name (e.g. security.debian.org)
-#. Translators: the *entire* string should be under 55 columns
-#. including host name. In short, KEEP THIS SHORT and, yes, that's tricky
-#. :sl1:
-#: ../apt-setup-udeb.templates:11001
-msgid "release updates"
-msgstr "リリースアップデート"
-
-#. Type: multiselect
-#. Choices
-#. SEC_HOST is a host name (e.g. security.debian.org)
-#. Translators: the *entire* string should be under 55 columns
-#. including host name. In short, KEEP THIS SHORT and, yes, that's tricky
-#. :sl1:
-#: ../apt-setup-udeb.templates:11001
-msgid "backported software"
-msgstr "バックポートされたソフトウェア"
-
-#. Type: multiselect
-#. Description
-#. :sl1:
-#: ../apt-setup-udeb.templates:11002
-msgid "Services to use:"
-msgstr "利用するサービス:"
-
-#. Type: multiselect
-#. Description
-#. :sl1:
-#: ../apt-setup-udeb.templates:11002
-msgid ""
-"Debian has two services that provide updates to releases: security and "
-"release updates."
-msgstr ""
-"Debian には、リリース版の更新を提供する 2 つのサービスがあります: セキュリ"
-"ティとリリースアップデートです。"
-
-#. Type: multiselect
-#. Description
-#. :sl1:
-#: ../apt-setup-udeb.templates:11002
-msgid ""
-"Security updates help to keep your system secured against attacks. Enabling "
-"this service is strongly recommended."
-msgstr ""
-"セキュリティアップデートは、あなたのシステムを攻撃から安全に保つのに役立ちま"
-"す。このサービスを有効にすることを強くお勧めします。"
-
-#. Type: multiselect
-#. Description
-#. :sl1:
-#: ../apt-setup-udeb.templates:11002
-msgid ""
-"Release updates provide more current versions for software that changes "
-"relatively frequently and where not having the latest version could reduce "
-"the usability of the software. It also provides regression fixes. This "
-"service is only available for stable and oldstable releases."
-msgstr ""
-"リリースアップデートは、比較的頻繁に変化し、また新しいバージョンがソフトウェ"
-"アの利便性を低下させることはないソフトウェアの、最新のバージョンを提供しま"
-"す。また、機能退行の修正も提供します。このサービスは、安定版および旧安定版の"
-"リリースのみで利用できます。"
-
-#. Type: multiselect
-#. Description
-#. :sl1:
-#: ../apt-setup-udeb.templates:11002
-msgid ""
-"Backported software are adapted from the development version to work with "
-"this release. Although this software has not gone through such complete "
-"testing as that contained in the release, it includes newer versions of some "
-"applications which may provide useful features. Enabling backports here does "
-"not cause any of them to be installed by default; it only allows you to "
-"manually select backports to use."
-msgstr ""
-"バックポートされているソフトウェアは、このリリースで動作するように開発版から"
-"適応させたものです。これらのソフトウェアはリリース版に含まれているほど完全に"
-"テストされたものではありませんが、アプリケーションのより新しい (便利な機能を"
-"提供するかもしれない) バージョンを含んでいます。バックポートを有効化しても、"
-"そこに収録されているものはデフォルトでインストールされることはありません。利"
-"用するバックポート版を手作業により選択できるようになるだけです。"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:1001
-msgid "Scanning the installation media..."
-msgstr "インストールメディアを検査しています..."
-
-#. Type: error
-#. Description
-#. :sl2:
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:2001 ../apt-cdrom-setup.templates:6001
-msgid ""
-"An attempt to configure apt to install additional packages from the media "
-"failed."
-msgstr ""
-"メディアから追加パッケージをインストールするための apt 設定の試行に失敗しまし"
-"た。"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#. Type: boolean
-#. Description
-#. :sl1:
-#. Type: boolean
-#. Description
-#. :sl1:
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:3001 ../apt-cdrom-setup.templates:4001
-#: ../apt-cdrom-setup.templates:5001 ../apt-cdrom-setup.templates:6001
-msgid "Scan extra installation media?"
-msgstr "別のインストールメディアを検査しますか?"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:3001
-msgid "Scanning your installation media finds the label:"
-msgstr "インストールメディアをスキャンして見つけたラベル:"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:3001
-msgid ""
-"You now have the option of scanning additional media for use by the package "
-"manager (apt). Normally these should be from the same set as the one you "
-"booted from. If you do not have any additional media, this step can just be "
-"skipped."
-msgstr ""
-"ここで、パッケージマネージャ (apt) によって使われる追加のメディアの検査を選択"
-"できます。通常、これらは起動時に使用したものと同じセットになっているもので"
-"す。利用可能な追加のメディアを持っていないのであれば、この手順は単に飛ばすこ"
-"とができます。"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:3001 ../apt-cdrom-setup.templates:4001
-msgid "If you wish to scan more media, please insert another one now."
-msgstr "別のメディアを検査したければ、それを今挿入してください。"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:4001
-msgid "The image with the following label has been scanned:"
-msgstr "以下のラベルを持つイメージを検査済みです:"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:5001
-msgid "The image with the following label has already been scanned:"
-msgstr "以下のラベルを持つイメージを検査済みです:"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:5001
-msgid "Please replace it now, if you wish to scan another."
-msgstr "別のメディアを検査したければ、それに今交換してください。"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:6001
-msgid "Please check that the media has been inserted correctly."
-msgstr "正しくメディアが挿入されていることを確認してください。"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:7001
-msgid "Media change"
-msgstr "メディアの変更"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:7001
-msgid "Please insert the media labeled '${LABEL}' and press enter."
-msgstr "ラベル '${LABEL}' のメディアを挿入し、Enter キーを押してください。"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. finish-install progress bar item
-#: ../apt-cdrom-setup.templates:8001
-msgid "Disabling netinst CD in sources.list..."
-msgstr "sources.list 内の netinst CD 行を無効にしています..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../apt-cdrom-setup.templates:9001 ../apt-mirror-setup.templates:6001
-msgid ""
-"If you are installing from a netinst CD image and choose not to use a "
-"mirror, you will end up with only a very minimal base system."
-msgstr ""
-"netinst CD イメージからインストールしており、ミラーを使うことを選ばない場合に"
-"は、非常に小さな基本システムのみという形で終わることになります。"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:10001
-msgid ""
-"You are installing from a netinst CD image, which by itself only allows "
-"installation of a very minimal base system. Use a mirror to install a more "
-"complete system."
-msgstr ""
-"あなたは、単体では非常に小さな基本システムのインストールだけしかできない "
-"netinst CD イメージからインストールしています。より完全なシステムをインストー"
-"ルするために、ミラーを利用してください。"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:11001
-msgid ""
-"You are installing from an image which contains a limited selection of "
-"packages."
-msgstr "限られたパッケージ群を収録しているイメージからインストールしています。"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. The value of %i can be 2 or 3
-#: ../apt-cdrom-setup.templates:12001
-#, no-c-format
-msgid ""
-"You have scanned %i images. Even though these contain a fair selection of "
-"packages, some may be missing (notably some packages needed to support "
-"languages other than English)."
-msgstr ""
-"%i 枚のイメージを検査しました。これらは十分な量のパッケージ群を収録しています"
-"が、それでもいくつかは入っていない可能性があります (特に英語以外の言語をサ"
-"ポートするのに必要ないくつかのパッケージ)。"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. The value of %i can be from 4 to 8
-#: ../apt-cdrom-setup.templates:13001
-#, no-c-format
-msgid ""
-"You have scanned %i images. Even though these contain a large selection of "
-"packages, some may be missing."
-msgstr ""
-"%i 枚のイメージを検査しました。これらはたくさんのパッケージを収録しています"
-"が、それでもいくつかは入っていない可能性があります。"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:14001
-msgid ""
-"Note that using a mirror can result in a large amount of data being "
-"downloaded during the next step of the installation."
-msgstr ""
-"ミラーの利用は、インストールの次のステップで大量のデータがダウンロードされる"
-"ことになることに注意してください。"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:15001
-msgid ""
-"You are installing from a DVD image. Even though it contains a large "
-"selection of packages, some may be missing."
-msgstr ""
-"DVD からインストールしています。これはたくさんのパッケージを収録しています"
-"が、それでもいくつかは入っていない可能性があります。"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:16001
-msgid ""
-"Unless you don't have a good Internet connection, use of a mirror is "
-"recommended, especially if you plan to install a graphical desktop "
-"environment."
-msgstr ""
-"良好なインターネット接続がないというわけでなければ、(特にグラフィカルデスク"
-"トップ環境をインストールすることを計画しているなら) ミラーを利用することをお"
-"勧めします。"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:17001
-msgid ""
-"If you have a reasonably good Internet connection, use of a mirror is "
-"suggested if you plan to install a graphical desktop environment."
-msgstr ""
-"良好なインターネット接続があるなら、グラフィカルデスクトップ環境をインストー"
-"ルすることを計画している場合にはミラーを利用することを提案します。"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../apt-mirror-setup.templates:1001
-msgid "Scanning the mirror..."
-msgstr "ミラーを検査しています..."
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-mirror-setup.templates:2001
-msgid "Use non-free software?"
-msgstr "non-free のソフトウェアを使用しますか?"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-mirror-setup.templates:2001
-msgid ""
-"Some non-free software has been made to work with Debian. Though this "
-"software is not at all a part of Debian, standard Debian tools can be used "
-"to install it. This software has varying licenses which may prevent you from "
-"using, modifying, or sharing it."
-msgstr ""
-"Debian ではいくつかの non-free ソフトウェアが利用可能になっています。たとえこ"
-"れらのソフトウェアが正しい Debian の一部ではないにせよ、標準的な Debian の"
-"ツールを利用してインストールすることができます。これらのソフトウェアは配布や"
-"修正、使用に関して制限があります。"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#. Type: boolean
-#. Description
-#. This template is used by the Ubuntu version of d-i.
-#. :sl2:
-#: ../apt-mirror-setup.templates:2001 ../apt-mirror-setup.templates-ubuntu:1001
-msgid "Please choose whether you want to have it available anyway."
-msgstr "利用できるようにしたいかどうかを選んでください。"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-mirror-setup.templates:3001
-msgid "Use contrib software?"
-msgstr "contrib ソフトウェアを使用しますか?"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-mirror-setup.templates:3001
-msgid ""
-"Some additional software has been made to work with Debian. Though this "
-"software is free, it depends on non-free software for its operation. This "
-"software is not a part of Debian, but standard Debian tools can be used to "
-"install it."
-msgstr ""
-"いくつかの追加ソフトウェアが Debian で動くようになっています。これらのソフト"
-"ウェアはフリーですが、その動作は non-free ソフトウェアに依存しています。これ"
-"らのソフトウェアは正しい Debian の 一部ではありませんが、標準的な Debian の"
-"ツールを利用してインストールすることができます。"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#. Type: boolean
-#. Description
-#. This template is used by the Ubuntu version of d-i.
-#. :sl2:
-#. Type: boolean
-#. Description
-#. This template is used by the Ubuntu version of d-i.
-#. :sl2:
-#. Type: boolean
-#. Description
-#. This template is used by the Ubuntu version of d-i.
-#. :sl2:
-#. Type: boolean
-#. Description
-#. This template is used by the Ubuntu version of d-i.
-#. :sl2:
-#: ../apt-mirror-setup.templates:3001 ../apt-mirror-setup.templates-ubuntu:2001
-#: ../apt-mirror-setup.templates-ubuntu:3001
-#: ../apt-mirror-setup.templates-ubuntu:4001
-#: ../apt-mirror-setup.templates-ubuntu:5001
-msgid ""
-"Please choose whether you want this software to be made available to you."
-msgstr "このソフトウェアを利用できるようにしたいかどうかを選んでください。"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-mirror-setup.templates:5001
-msgid "Use a network mirror?"
-msgstr "ネットワークミラーを使いますか?"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-mirror-setup.templates:5001
-msgid ""
-"A network mirror can be used to supplement the software that is included on "
-"the installation media. This may also make newer versions of software "
-"available."
-msgstr ""
-"ネットワークミラーはインストールメディアに収録されているソフトウェアを補完す"
-"るのに利用できます。これは利用可能なソフトウェアのより新しいバージョンとなる"
-"こともあります。"
 
 #. Type: boolean
 #. Description
@@ -3903,26 +4417,6 @@ msgstr ""
 #: ../user-setup-udeb.templates:6001
 msgid "Note that you will not be able to see the password as you type it."
 msgstr "パスワードの入力時はパスワードが表示されないことに注意してください。"
-
-#. #-#-#-#-#  templates.pot (user-setup)  #-#-#-#-#
-#. Type: password
-#. Description
-#. :sl1:
-#. Type: password
-#. Description
-#. :sl1:
-#. #-#-#-#-#  templates.pot (grub-installer)  #-#-#-#-#
-#. Type: password
-#. Description
-#. :sl2:
-#. #-#-#-#-#  templates.pot (network-console)  #-#-#-#-#
-#. Type: password
-#. Description
-#. :sl3:
-#: ../user-setup-udeb.templates:7001 ../user-setup-udeb.templates:14001
-#: ../grub-installer.templates:10001 ../network-console.templates:5001
-msgid "Re-enter password to verify:"
-msgstr "確認のため、再度パスワードを入力してください:"
 
 #. Type: password
 #. Description
@@ -4018,500 +4512,6 @@ msgstr "ユーザとパスワードのセットアップ"
 #: ../user-setup-udeb.templates:19001
 msgid "Setting users and passwords..."
 msgstr "ユーザとパスワードをセットアップ中..."
-
-#. Type: text
-#. Description
-#. Translators, this text will appear on a button, so KEEP IT SHORT
-#. :sl1:
-#: ../cdebconf-newt-udeb.templates:1001 ../cdebconf-gtk-udeb.templates:1001
-msgid "Continue"
-msgstr "続ける"
-
-#. Type: text
-#. Description
-#. Translators, this text will appear on a button, so KEEP IT SHORT
-#. :sl1:
-#: ../cdebconf-newt-udeb.templates:2001 ../cdebconf-gtk-udeb.templates:2001
-msgid "Go Back"
-msgstr "戻る"
-
-#. Type: text
-#. Description
-#. Translators, this text will appear on a button, so KEEP IT SHORT
-#. :sl1:
-#. Type: text
-#. Description
-#. :sl4:
-#: ../cdebconf-newt-udeb.templates:3001 ../cdebconf-gtk-udeb.templates:3001
-#: ../cdebconf-slang-udeb.templates:1001 ../cdebconf-text-udeb.templates:10001
-msgid "Yes"
-msgstr "はい"
-
-#. Type: text
-#. Description
-#. Translators, this text will appear on a button, so KEEP IT SHORT
-#. :sl1:
-#. Type: text
-#. Description
-#. :sl4:
-#: ../cdebconf-newt-udeb.templates:4001 ../cdebconf-gtk-udeb.templates:4001
-#: ../cdebconf-slang-udeb.templates:2001 ../cdebconf-text-udeb.templates:11001
-msgid "No"
-msgstr "いいえ"
-
-#. Type: text
-#. Description
-#. Help line displayed at the bottom of the cdebconf newt interface.
-#. Translators: must fit within 80 characters.
-#. :sl1:
-#: ../cdebconf-newt-udeb.templates:6001
-msgid "<Tab> moves; <Space> selects; <Enter> activates buttons"
-msgstr "<Tab> 移動; <スペース> 選択; <Enter> ボタンを実行"
-
-#. Type: text
-#. Description
-#. Help line displayed at the bottom of the cdebconf newt interface.
-#. Translators: must fit within 80 characters.
-#. :sl1:
-#: ../cdebconf-newt-udeb.templates:7001
-msgid "<F1> for help; <Tab> moves; <Space> selects; <Enter> activates buttons"
-msgstr "<F1> ヘルプ; <Tab> 移動; <スペース> 選択; <Enter> ボタンを実行"
-
-#. Type: text
-#. Description
-#. Appears as a checkbox in the newt and GTK interfaces.
-#. :sl1:
-#: ../cdebconf-newt-udeb.templates:8001 ../cdebconf-gtk-udeb.templates:9001
-msgid "Show Password in Clear"
-msgstr "パスワードを表示"
-
-#. Type: text
-#. Description
-#. Translators, this text will appear on a button, so KEEP IT SHORT
-#. :sl1:
-#: ../cdebconf-gtk-udeb.templates:5001
-msgid "Help"
-msgstr "ヘルプ"
-
-#. Type: text
-#. Description
-#. TRANSLATORS: This should be "translated" to "RTL" or "LTR" depending of
-#. default text direction of your language
-#. LTR: Left to Right (Latin, Cyrillic, CJK, Indic...)
-#. RTL: Right To Left (Arabic, Hebrew, Persian...)
-#. DO NOT USE ANYTHING ELSE
-#. :sl1:
-#: ../cdebconf-gtk-udeb.templates:6001
-msgid "LTR"
-msgstr "LTR"
-
-#. Type: text
-#. Description
-#. Translators, this text will appear on a button, so KEEP IT SHORT
-#. This button will allow users to virtually "shoot a picture"
-#. of the screen
-#. :sl1:
-#: ../cdebconf-gtk-udeb.templates:7001
-msgid "Screenshot"
-msgstr "スクリーンショット"
-
-#. Type: text
-#. Description
-#. Text that will appear in a dialog box mentioning which file
-#. the screenshot has been saved to. "%s" is a file name here
-#. :sl1:
-#: ../cdebconf-gtk-udeb.templates:8001
-#, no-c-format
-msgid "Screenshot saved as %s"
-msgstr "%s という名前でスクリーンショットを保存"
-
-#. Type: text
-#. Description
-#. Main menu item
-#. should not be more than 55 columns
-#. pkgsel is the module that installs packages by running tasksel to
-#. select "tasks". Please use "install *software*" and not
-#. "install *packages*" which is less adapted for non technical users
-#. :sl1:
-#: ../pkgsel.templates:1001
-msgid "Select and install software"
-msgstr "ソフトウェアの選択とインストール"
-
-#. Type: text
-#. Description
-#. This appears in a progress bar when running pkgsel
-#. The text is used when pkgsel is launched, before it installs packages
-#. :sl1:
-#: ../pkgsel.templates:2001
-msgid "Setting up..."
-msgstr "設定しています..."
-
-#. Type: text
-#. Description
-#. This appears in a progress bar when running pkgsel
-#. The text is used when upgrading already installed packages.
-#. :sl1:
-#: ../pkgsel.templates:5001
-msgid "Upgrading software..."
-msgstr "ソフトウェアを更新しています..."
-
-#. Type: text
-#. Description
-#. This appears in a progress bar when running pkgsel
-#. The text is used when running tasksel to allow selecting packages
-#. Tasksel will then display its own screens
-#. :sl1:
-#: ../pkgsel.templates:6001
-msgid "Running tasksel..."
-msgstr "tasksel を実行しています..."
-
-#. Type: text
-#. Description
-#. This appears in a progress bar when running pkgsel
-#. The text is used at the end of the installation phase while
-#. cleaning up pkgsel's stuff
-#. :sl1:
-#: ../pkgsel.templates:7001
-msgid "Cleaning up..."
-msgstr "クリーニング中です..."
-
-#. Type: text
-#. Description
-#. Main menu item
-#. Translators: keep below 55 columns
-#. :sl1:
-#: ../finish-install.templates:1001
-msgid "Finish the installation"
-msgstr "インストールの完了"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../finish-install.templates:2001
-msgid "Finishing the installation"
-msgstr "インストールを終了しています"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../finish-install.templates:4001
-msgid "Configuring network..."
-msgstr "ネットワークを設定しています..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../finish-install.templates:5001
-msgid "Setting up frame buffer..."
-msgstr "フレームバッファを設定しています..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../finish-install.templates:6001
-msgid "Unmounting file systems..."
-msgstr "ファイルシステムをアンマウントしています..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../finish-install.templates:7001
-msgid "Rebooting into your new system..."
-msgstr "あなたの新しいシステムへと再起動しています..."
-
-#. Type: note
-#. Description
-#. :sl1:
-#: ../finish-install.templates:8001
-msgid "Installation complete"
-msgstr "インストール完了"
-
-#. Type: note
-#. Description
-#. :sl1:
-#: ../finish-install.templates:8001
-msgid ""
-"Installation is complete, so it is time to boot into your new system. Make "
-"sure to remove the installation media, so that you boot into the new system "
-"rather than restarting the installation."
-msgstr ""
-"インストールは完了し、新しいシステムを起動する時となりました。あなたのシステ"
-"ムが新しいシステムをインストールしたディスクから起動するよう、インストールメ"
-"ディアが取り除かれていることを確認してください。"
-
-#. Type: text
-#. Description
-#. Main menu item
-#. Translators: keep below 55 columns
-#. :sl1:
-#: ../nobootloader.templates:1001
-msgid "Continue without boot loader"
-msgstr "ブートローダなしで続ける"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:1001 ../grub-installer.templates:2001
-msgid "Install the GRUB boot loader to your primary drive?"
-msgstr "起動ドライブへ GRUB ブートローダをインストールしますか?"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:1001
-msgid ""
-"The following other operating systems have been detected on this computer: "
-"${OS_LIST}"
-msgstr ""
-"以下のようなほかのオペレーティングシステムがこのコンピュータに検出されまし"
-"た: ${OS_LIST}"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:1001
-msgid ""
-"If all of your operating systems are listed above, then it should be safe to "
-"install the boot loader to your primary drive (UEFI partition/boot record). "
-"When your computer boots, you will be able to choose to load one of these "
-"operating systems or the newly installed Debian system."
-msgstr ""
-"もしあなたのオペレーティングシステムのすべてが上のリストにあるようであれば、"
-"あなたの 起動ドライブ (UEFI パーティション/ブートレコード) にブートローダをイ"
-"ンストールするのが無難でしょう。コンピュータを起動すると、これらのオペーレ"
-"ティングシステムの 1 つまたはあなたの新しいシステムのロードを選ぶことができま"
-"す。"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:2001
-msgid ""
-"It seems that this new installation is the only operating system on this "
-"computer. If so, it should be safe to install the GRUB boot loader to your "
-"primary drive (UEFI partition/boot record)."
-msgstr ""
-"ここでインストールされるものは、このコンピュータの唯一のオペレーティングシス"
-"テムのように見えます。もしそうであれば、あなたの 起動ドライブ (UEFI パーティ"
-"ション/ブートレコード) にブートローダをインストールするのが無難でしょう。"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:2001
-msgid ""
-"Warning: If your computer has another operating system that the installer "
-"failed to detect, this will make that operating system temporarily "
-"unbootable, though GRUB can be manually configured later to boot it."
-msgstr ""
-"警告: インストーラがあなたのコンピュータに存在するほかのオペレーティングシス"
-"テムを検出するのに失敗すると、(ブートできるようにあとで GRUB を手動で変更でき"
-"るものの) そのオペレーティングシステムを一時的に起動不可能にすることになりま"
-"す。"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:18001
-msgid "Installing GRUB boot loader"
-msgstr "GRUB ブートローダをインストールしています"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:19001
-msgid "Looking for other operating systems..."
-msgstr "ほかのオペレーティングシステムを探しています..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:20001
-msgid "Installing the '${GRUB}' package..."
-msgstr "'${GRUB}' パッケージをインストールしています..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:21001
-msgid "Determining GRUB boot device..."
-msgstr "GRUB のブートデバイスを決めています..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:22001
-msgid "Running \"grub-install ${BOOTDEV}\"..."
-msgstr "\"grub-install ${BOOTDEV}\" を実行しています..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:23001
-msgid "Running \"update-grub\"..."
-msgstr "\"update-grub\" を実行しています..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:24001
-msgid "Updating /etc/kernel-img.conf..."
-msgstr "/etc/kernel-img.conf を更新しています..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:25001
-msgid "Checking whether to force usage of the removable media path"
-msgstr "リムーバブルメディアパスの利用を強制するかどうかを確認しています"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:26001
-msgid "Mounting filesystems"
-msgstr "ファイルシステムをマウントしています"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:27001
-msgid "Configuring grub-efi for future usage of the removable media path"
-msgstr "リムーバブルメディアパスの将来の利用のために grub-efi を設定しています"
-
-#. Type: text
-#. Description
-#. Main menu item
-#. Translators: keep below 55 columns
-#. :sl1:
-#: ../grub-installer.templates:28001
-msgid "Install the GRUB boot loader"
-msgstr "GRUB ブートローダをインストールします"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:34001
-msgid "Force GRUB installation to the EFI removable media path?"
-msgstr "EFI リムーバブルメディアパスに GRUB インストールを強行しますか?"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:34001
-msgid ""
-"It seems that this computer is configured to boot via EFI, but maybe that "
-"configuration will not work for booting from the hard drive. Some EFI "
-"firmware implementations do not meet the EFI specification (i.e. they are "
-"buggy!) and do not support proper configuration of boot options from system "
-"hard drives."
-msgstr ""
-"このコンピュータは EFI 経由でブートするよう設定されているようですが、おそらく"
-"この設定ではハードドライブからのブートはうまく動きません。いくつかの EFI "
-"ファームウェア実装は EFI 仕様に適合しておらず (これはバグです!)、システムの"
-"ハードドライブからの適切なブートオプション設定をサポートしていません。"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:34001
-msgid ""
-"A workaround for this problem is to install an extra copy of the EFI version "
-"of the GRUB boot loader to a fallback location, the \"removable media path"
-"\". Almost all EFI systems, no matter how buggy, will boot GRUB that way."
-msgstr ""
-"この問題の回避策は、GRUB ブートローダの EFI バージョンの別のコピーを、フォー"
-"ルバックされる場所、つまり \"リムーバブルメディアパス\" にインストールするこ"
-"とです。ほぼすべての EFI システムは (いかにバグがあっても) このやり方で GRUB "
-"はブートします。"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:34001
-msgid ""
-"Warning: If the installer failed to detect another operating system that is "
-"present on your computer that also depends on this fallback, installing GRUB "
-"there will make that operating system temporarily unbootable. GRUB can be "
-"manually configured later to boot it if necessary."
-msgstr ""
-"警告: インストーラが、このフォールバックを採用しているあなたのコンピュータに"
-"存在するほかのオペレーティングシステムの検出に失敗すると、GRUB のインストール"
-"は、そのオペレーティングシステムを一時的に起動不可能にすることになります。必"
-"要であれば、それをブートできるよう GRUB をあとで手動で設定できます。"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../rescue-mode.templates:1001
-msgid "Enter rescue mode"
-msgstr "レスキューモードに移行"
-
-#. Type: text
-#. Description
-#. Main menu item
-#. Translators: keep below 55 columns
-#. :sl1:
-#: ../iso-scan.templates:1001
-msgid "Scan hard drives for an installer ISO image"
-msgstr "インストーラ ISO イメージをハードドライブから検索"
-
-#. Type: text
-#. Description
-#. Main menu item
-#. Translators: keep below 55 columns
-#. :sl1:
-#: ../save-logs.templates:1001
-msgid "Save debug logs"
-msgstr "デバッグログを保存"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. finish-install progress bar item
-#: ../save-logs.templates:9001
-msgid "Gathering information for installation report..."
-msgstr "インストールレポートの情報を集めています..."
-
-#. Type: text
-#. Description
-#. Main menu item
-#. Translators: keep below 55 columns
-#. :sl1:
-#: ../mdcfg-utils.templates:1001
-msgid "Configure MD devices"
-msgstr "MD デバイスの設定"
-
-#. #-#-#-#-#  templates.pot (lvmcfg)  #-#-#-#-#
-#. Type: text
-#. Description
-#. Main menu item
-#. Translators: keep below 55 columns
-#. :sl1:
-#. #-#-#-#-#  templates.pot (partman-lvm)  #-#-#-#-#
-#. Type: text
-#. Description
-#. Type: text
-#. Description
-#. :sl3:
-#. Main menu item
-#. Translators: keep below 55 columns
-#. Use infinitive form
-#: ../lvmcfg.templates:1001 ../partman-lvm.templates:7001
-#: ../partman-lvm.templates:23001
-msgid "Configure the Logical Volume Manager"
-msgstr "論理ボリュームマネージャの設定"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
-#: ../partman-auto-lvm.templates:1001
-msgid "Guided - use entire disk and set up LVM"
-msgstr "ガイド - ディスク全体を使い LVM をセットアップする"
 
 #~ msgid ""
 #~ "Please select the size of the font for the console.  For reference, the "

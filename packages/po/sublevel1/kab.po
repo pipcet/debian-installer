@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer sublevel1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-28 20:01+0000\n"
+"POT-Creation-Date: 2021-11-21 20:02+0000\n"
 "PO-Revision-Date: 2021-01-22 00:39+0000\n"
 "Last-Translator: Selyan Sliman Amiri <selyan.kab@gmail.com>\n"
 "Language-Team: Kabyle <kab@li.org>\n"
@@ -17,6 +17,30 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 4.5-dev\n"
+
+#. Type: select
+#. Description
+#: ../apt-setup-udeb.templates:8002
+msgid "Downloading local repository key failed:"
+msgstr "Asader n tsarut n ukufi adigan yecceḍ:"
+
+#. Type: select
+#. Description
+#: ../apt-setup-udeb.templates:8002
+msgid ""
+"This may be a problem with your network, or with the server hosting this "
+"key. You can choose to retry the download, or ignore the problem and "
+"continue without all the packages from this repository."
+msgstr ""
+"Ahat yella wugur akked uzeṭṭa-inek·inem, neɣ akked tnezduɣt n uqeddac n "
+"tsarut-a. Tzemreḍ ad tferneḍ i wakken ad talseḍ asader, neɣ zgel ugur syen "
+"kemmel s war meṛṛa ikemmusen seg ukufi-a."
+
+#. Type: select
+#. Description
+#: ../keyboard-configuration.templates:16002
+msgid "Keymap to use:"
+msgstr "Takarḍa n tsura i useqdec:"
 
 #: ../../mktemplates.continents:15
 msgid "Africa"
@@ -58,72 +82,6 @@ msgstr "Usyanya"
 msgid "South America"
 msgstr "Marikan n Unẓul"
 
-#. Type: select
-#. Description
-#: ../keyboard-configuration.templates:16002
-msgid "Keymap to use:"
-msgstr "Takarḍa n tsura i useqdec:"
-
-#. Type: select
-#. Description
-#: ../apt-setup-udeb.templates:8002
-msgid "Downloading local repository key failed:"
-msgstr "Asader n tsarut n ukufi adigan yecceḍ:"
-
-#. Type: select
-#. Description
-#: ../apt-setup-udeb.templates:8002
-msgid ""
-"This may be a problem with your network, or with the server hosting this "
-"key. You can choose to retry the download, or ignore the problem and "
-"continue without all the packages from this repository."
-msgstr ""
-"Ahat yella wugur akked uzeṭṭa-inek·inem, neɣ akked tnezduɣt n uqeddac n "
-"tsarut-a. Tzemreḍ ad tferneḍ i wakken ad talseḍ asader, neɣ zgel ugur syen "
-"kemmel s war meṛṛa ikemmusen seg ukufi-a."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../main-menu.templates:1001
-msgid "Debian installer main menu"
-msgstr "Umuɣ agejdan n usebded n Debian"
-
-#. Type: select
-#. Description
-#. :sl1:
-#: ../main-menu.templates:2001
-msgid "Choose the next step in the install process:"
-msgstr "Fren taseddart id-iteddun deg ukala n usebded:"
-
-#. Type: text
-#. Description
-#. Main menu item
-#. The translation should not exceed 55 columns except for languages
-#. that are only supported in the graphical version of the installer
-#. :sl1:
-#: ../di-utils-shell.templates:2001
-msgid "Execute a shell"
-msgstr "Selkem shell"
-
-#. Type: text
-#. Description
-#. Main menu item
-#. The translation should not exceed 55 columns except for languages
-#. that are only supported in the graphical version of the installer
-#. :sl1:
-#: ../di-utils-reboot.templates:2001
-msgid "Abort the installation"
-msgstr "Sefsex asbeddi"
-
-#. Type: text
-#. Description
-#. base-installer progress bar item
-#. :sl1:
-#: ../di-utils.templates:1001
-msgid "Registering modules..."
-msgstr "Asekles n yizegrar..."
-
 #. Type: text
 #. Description
 #. (Progress bar) title displayed when loading udebs
@@ -153,290 +111,1148 @@ msgstr "Tawila ${PACKAGE}"
 
 #. Type: text
 #. Description
-#. This menu entry may be translated.
-#. However, translators are required to keep "Choose language"
-#. as an alternative separated by the "/" character
-#. Example (french): Choisir la langue/Choose language
+#. Main menu item
+#. MUST be kept below 55 characters/columns
 #. :sl1:
-#: ../localechooser.templates-in:1001
-msgid "Choose language"
-msgstr "Fren tutlayt/Choose language"
+#: ../apt-setup-udeb.templates:1001
+msgid "Configure the package manager"
+msgstr "Wwel amsefrak n yikemmusen"
 
 #. Type: text
 #. Description
+#. Translators, "apt" is the program name
+#. so please do NOT translate it
+#. :sl1:
+#: ../apt-setup-udeb.templates:2001
+msgid "Configuring apt"
+msgstr "Aswel n apt"
+
+#. #-#-#-#-#  templates.pot (apt-setup)  #-#-#-#-#
+#. Type: text
+#. Description
+#. :sl2:
+#. #-#-#-#-#  templates.pot (base-installer)  #-#-#-#-#
+#. Type: text
+#. Description
+#. :sl1:
+#. #-#-#-#-#  templates.pot (finish-install)  #-#-#-#-#
+#. Type: text
+#. Description
+#. :sl1:
+#. #-#-#-#-#  templates.pot (pkgsel)  #-#-#-#-#
+#. Type: text
+#. Description
+#. :sl2:
+#: ../apt-setup-udeb.templates:3001 ../base-installer.templates:6001
+#: ../finish-install.templates:3001 ../pkgsel.templates:9001
+msgid "Running ${SCRIPT}..."
+msgstr "Aselkem n ${SCRIPT}..."
+
+#. Type: multiselect
+#. Choices
+#. SEC_HOST is a host name (e.g. security.debian.org)
+#. Translators: the *entire* string should be under 55 columns
+#. including host name. In short, KEEP THIS SHORT and, yes, that's tricky
+#. :sl1:
+#: ../apt-setup-udeb.templates:11001
+msgid "security updates (from ${SEC_HOST})"
+msgstr "ileqman n tɣellist (seg ${SEC_HOST})"
+
+#. Type: multiselect
+#. Choices
+#. SEC_HOST is a host name (e.g. security.debian.org)
+#. Translators: the *entire* string should be under 55 columns
+#. including host name. In short, KEEP THIS SHORT and, yes, that's tricky
+#. :sl1:
+#: ../apt-setup-udeb.templates:11001
+msgid "release updates"
+msgstr "ileqqman n lqem"
+
+#. Type: multiselect
+#. Choices
+#. SEC_HOST is a host name (e.g. security.debian.org)
+#. Translators: the *entire* string should be under 55 columns
+#. including host name. In short, KEEP THIS SHORT and, yes, that's tricky
+#. :sl1:
+#: ../apt-setup-udeb.templates:11001
+msgid "backported software"
+msgstr "Ittwabdel lqem yezrin n useɣẓan"
+
+#. Type: multiselect
+#. Description
+#. :sl1:
+#: ../apt-setup-udeb.templates:11002
+msgid "Services to use:"
+msgstr "Imeẓla i useqdec:"
+
+#. Type: multiselect
+#. Description
+#. :sl1:
+#: ../apt-setup-udeb.templates:11002
+msgid ""
+"Debian has two services that provide updates to releases: security and "
+"release updates."
+msgstr ""
+"Debian ɣur-s sin yibenkan i yettmuddun ileqman i lqem: taɣellist d yileqman "
+"n lqem."
+
+#. Type: multiselect
+#. Description
+#. :sl1:
+#: ../apt-setup-udeb.templates:11002
+msgid ""
+"Security updates help to keep your system secured against attacks. Enabling "
+"this service is strongly recommended."
+msgstr ""
+"Ileqman n tɣellist ttɛawanen ad yeqqim unagraw-inek·inem d aɣellsan mgal "
+"aẓdam. Armad n umeẓlu-a yettuwelleh-d fell-as s waṭas."
+
+#. Type: multiselect
+#. Description
+#. :sl1:
+#: ../apt-setup-udeb.templates:11002
+msgid ""
+"Release updates provide more current versions for software that changes "
+"relatively frequently and where not having the latest version could reduce "
+"the usability of the software. It also provides regression fixes. This "
+"service is only available for stable and oldstable releases."
+msgstr ""
+"Ileqman n lqem ttmuddun-d ileqman ineggura akk i yiseɣẓanen i yettbeddilen s "
+"waṭas sya ɣer da, syen ma yella ulac lqem aneggaru akk izmer ad isenqes deg "
+"tezmert n useqdec yelhan n useɣzan. Yettmuddu-d daɣen tifrat n ukaray. "
+"Aqeddac-a yella kan i yileqman urkiden d yiqburen."
+
+#. Type: multiselect
+#. Description
+#. :sl1:
+#: ../apt-setup-udeb.templates:11002
+msgid ""
+"Backported software are adapted from the development version to work with "
+"this release. Although this software has not gone through such complete "
+"testing as that contained in the release, it includes newer versions of some "
+"applications which may provide useful features. Enabling backports here does "
+"not cause any of them to be installed by default; it only allows you to "
+"manually select backports to use."
+msgstr ""
+"Iseɣẓan ibedlen lqem yezrin ttuleqmen seg lqem n usnefli i wakken ad ddun d "
+"lqem-a. Ɣas akken aseɣẓan-a ur yettusekyed ara s wudem ummid am tid yellan "
+"deg lqem, llan deg-s ileqman imaynuten ineggura n kra n yisnasen i izemren "
+"ad d-mudden timahlin inefɛen. Armad n backports dagi ur d-igellu ara s "
+"usebded ula n yiwen deg-sen s wudem amezwer; ad ak·akem-yeǧǧ ad tferneḍ s "
+"ufus backports ara tesqedceḍ."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:1001
+msgid "Scanning the installation media..."
+msgstr "Asmiḍen n umidya n usebded..."
+
+#. Type: error
+#. Description
+#. :sl2:
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:2001 ../apt-cdrom-setup.templates:6001
+msgid ""
+"An attempt to configure apt to install additional packages from the media "
+"failed."
+msgstr ""
+"Aneɣruḍ n uswel n apt i usebded n yikemmusen-nniḍen seg umidyat yecceḍ."
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#. Type: boolean
+#. Description
+#. :sl1:
+#. Type: boolean
+#. Description
+#. :sl1:
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:3001 ../apt-cdrom-setup.templates:4001
+#: ../apt-cdrom-setup.templates:5001 ../apt-cdrom-setup.templates:6001
+msgid "Scan extra installation media?"
+msgstr "Smiḍen amidyat n usebded wayeḍ?"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:3001
+msgid "Scanning your installation media finds the label:"
+msgstr "Asiḍen n umidyat-inek·inem n usebded yufa tabzimt:"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:3001
+msgid ""
+"You now have the option of scanning additional media for use by the package "
+"manager (apt). Normally these should be from the same set as the one you "
+"booted from. If you do not have any additional media, this step can just be "
+"skipped."
+msgstr ""
+"Tura tesɛiḍ taxtiṛit n usmiḍen n umidyat-nniḍen i useqdec n umsefrak n "
+"ukemmus (apt). Yewwi-d ad ilin seg widen yettusbadun iseg tesnekreḍ tazwara. "
+"Ma yella ur tesɛiḍ ara akk amidyat-nniḍen, amecwar-a tzemreḍ ad as-tanfeḍ."
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:3001 ../apt-cdrom-setup.templates:4001
+msgid "If you wish to scan more media, please insert another one now."
+msgstr ""
+"Ma yella tebɣiḍ ad tsiminḍeḍ ugar n yimidyaten, ttxil-k·m err wayeḍ-nniḍen "
+"tura."
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:4001
+msgid "The image with the following label has been scanned:"
+msgstr "Tugna s tebzimt-a tettusmiḍen:"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:5001
+msgid "The image with the following label has already been scanned:"
+msgstr "Tugna s tebzimt-a tettusmiḍen yakan:"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:5001
+msgid "Please replace it now, if you wish to scan another."
+msgstr "Ttxil-k·m beddel-it tura, ma yella tebɣiḍ ad tesmiḍneḍ wayeḍ."
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:6001
+msgid "Please check that the media has been inserted correctly."
+msgstr "Ttxil-k·m senqed ma yella amidyat yettwarr akken iwata."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:7001
+msgid "Media change"
+msgstr "Asenfel n umidyat"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:7001
+msgid "Please insert the media labeled '${LABEL}' and press enter."
+msgstr "Ttxil-k·m err amidyat i yesɛan tabzimt '${LABEL}' syen sit ɣef Enter."
+
+#. Type: text
+#. Description
+#. :sl1:
 #. finish-install progress bar item
-#. :sl1:
-#: ../localechooser.templates-in:6001
-msgid "Storing language..."
-msgstr "Aḥraz n tutlayt..."
+#: ../apt-cdrom-setup.templates:8001
+msgid "Disabling netinst CD in sources.list..."
+msgstr "Asensi n CD netinst deg sources.list..."
 
-#. Type: title
-#. Description
-#. Displayed as dialog title during language selection
-#. :sl1:
-#: ../localechooser.templates-in:7001
-msgid "Select a language"
-msgstr "Fren tutlayt"
-
-#. Type: title
-#. Description
-#. Displayed as dialog title during country selection
-#. :sl1:
-#: ../localechooser.templates-in:8001
-msgid "Select your location"
-msgstr "Fren anda telliḍ"
-
-#. Type: title
-#. Description
-#. Displayed as dialog title during locale selection
-#. :sl1:
-#: ../localechooser.templates-in:9001
-msgid "Configure locales"
-msgstr "Sbadu tutlayin"
-
-#. Type: note
+#. Type: text
 #. Description
 #. :sl1:
-#: ../localechooser.templates-in:12001
-msgid "Language selection no longer possible"
-msgstr "Afran n tutlayt yuɣal d awezɣi"
-
-#. Type: note
+#. Type: boolean
 #. Description
-#. :sl1:
-#: ../localechooser.templates-in:12001
+#. :sl2:
+#: ../apt-cdrom-setup.templates:9001 ../apt-mirror-setup.templates:6001
 msgid ""
-"At this point it is no longer possible to change the language for the "
-"installation, but you can still change the country or locale."
+"If you are installing from a netinst CD image and choose not to use a "
+"mirror, you will end up with only a very minimal base system."
 msgstr ""
-"Di tseddart-agi deg telliḍ d awezɣi ad yizmir ad d-yili ubeddel n tutlayt n "
-"usebded, maca mazal tzemreḍ ad tbedleḍ tamurt neɣ iɣewwaṛen idiganen."
+"Ma yella tsebdadeḍ seg tugna n CD netinst yerna tferneḍ ur tseqdaceḍ ara "
+"tisit, deg taggara ad d-tafeḍ iman-ik·im s unagraw n taffa adday maḍi."
 
-#. Type: note
+#. Type: text
 #. Description
 #. :sl1:
-#: ../localechooser.templates-in:12001
+#: ../apt-cdrom-setup.templates:10001
 msgid ""
-"To select a different language you will need to abort this installation and "
-"reboot the installer."
+"You are installing from a netinst CD image, which by itself only allows "
+"installation of a very minimal base system. Use a mirror to install a more "
+"complete system."
 msgstr ""
-"Iwakken ad tferneḍ tutlayt-nniḍen ilaq ad teǧǧeḍ asebded-agi sakin ad "
-"tsekreḍ tikelt-nniḍen aseɣẓan n usebded."
+"Tsebdadeḍ seg tugna n CD netinst, i yettaǧǧan s timmad-is ala asebded n "
+"unagraw n taffa adday maḍi. Seqdec tisit i usebded n ungraw yemmden ugar."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:11001
+msgid ""
+"You are installing from an image which contains a limited selection of "
+"packages."
+msgstr "La tsebdadeḍ seg tugna i yesɛan tafrant n yikemmusen yesɛan talast."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. The value of %i can be 2 or 3
+#: ../apt-cdrom-setup.templates:12001
+#, no-c-format
+msgid ""
+"You have scanned %i images. Even though these contain a fair selection of "
+"packages, some may be missing (notably some packages needed to support "
+"languages other than English)."
+msgstr ""
+"Tesmiḍneḍ %i. Ɣas akken deg-sent tafrant meqqren n yikemmusen, zemren ad "
+"xaṣṣen kra ( ula d kra n yikemmusen i ilaqen i usefrek n tutlayin-nniḍen ur "
+"nelli d taglizt)."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. The value of %i can be from 4 to 8
+#: ../apt-cdrom-setup.templates:13001
+#, no-c-format
+msgid ""
+"You have scanned %i images. Even though these contain a large selection of "
+"packages, some may be missing."
+msgstr ""
+"Tesmiḍneḍ %i n tugniwin. Ɣas akken deg-sent tafrant meqqren n yikemmusen, "
+"zemren ad xaṣṣen kra."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:14001
+msgid ""
+"Note that using a mirror can result in a large amount of data being "
+"downloaded during the next step of the installation."
+msgstr ""
+"Ẓer belli aseqdec n tisit yezmer ad d-yeglu s usader n waṭas n yisefka deg "
+"umecwar i d-iteddun n usebded."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:15001
+msgid ""
+"You are installing from a DVD image. Even though it contains a large "
+"selection of packages, some may be missing."
+msgstr ""
+"Tsebdadeḍ seg tugna n DVD. Ɣas akken deg-s tafrant meqqren n yikemmusen, "
+"zemren ad xaṣṣen kra."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:16001
+msgid ""
+"Unless you don't have a good Internet connection, use of a mirror is "
+"recommended, especially if you plan to install a graphical desktop "
+"environment."
+msgstr ""
+"Ma yella ur tesɛiḍ ara tuqqna n internet igerrzen, aseqdec n tisit ilaq, "
+"aṭas ma yella teheyyaḍ ad tesbeddeḍ tawennaḍt n tnarit tudlift."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:17001
+msgid ""
+"If you have a reasonably good Internet connection, use of a mirror is "
+"suggested if you plan to install a graphical desktop environment."
+msgstr ""
+"Ma yella tesɛiḍ tuqqna n internet igerrzen, aseqdec n tisit yettwasumer ma "
+"yella tettheyyiḍ ad tesbeddeḍ tawennaḍt n tnarit tudlift."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../apt-mirror-setup.templates:1001
+msgid "Scanning the mirror..."
+msgstr "Asmiḍen n tisit..."
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-mirror-setup.templates:2001
+msgid "Use non-free software?"
+msgstr "Seqdec aseɣẓan ur nelli d ilelli?"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-mirror-setup.templates:2001
+msgid ""
+"Some non-free software has been made to work with Debian. Though this "
+"software is not at all a part of Debian, standard Debian tools can be used "
+"to install it. This software has varying licenses which may prevent you from "
+"using, modifying, or sharing it."
+msgstr ""
+"Kra n yiseɣẓan ur nelli d ilelliyen ttufeṣlen i wakken ad ddun akked Debian. "
+"Ɣas akken aseɣẓan-a mačči d amur seg Debian, ifecka n Debian isluganen "
+"zemren ad ttusqedcen i usebded-ines. Aseɣẓan-a yesɛa turagin yemgarraden i "
+"izemren ur ak·akem-ttaǧǧant ara ad t-tesqedceḍ, ad t-tbeddleḍ neɣ ad t-"
+"tebduḍ."
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #. Type: boolean
 #. Description
-#. :sl1:
-#: ../localechooser.templates-in:13001 ../localechooser.templates-in:14001
-msgid "Continue the installation in the selected language?"
-msgstr "Ad tkemmeleḍ asbeddi s tutlayt yettwafernen?"
+#. This template is used by the Ubuntu version of d-i.
+#. :sl2:
+#: ../apt-mirror-setup.templates:2001 ../apt-mirror-setup.templates-ubuntu:1001
+msgid "Please choose whether you want to have it available anyway."
+msgstr "Ttxil-k·m fren ma yella tebɣiḍ ad yili ɣas akken."
 
 #. Type: boolean
 #. Description
 #. :sl1:
-#: ../localechooser.templates-in:13001
-msgid ""
-"The translation of the installer is incomplete for the selected language."
-msgstr "Tasuqilt n useɣẓan n usebded ur temmid ara i tutlayt yettwafernen."
+#: ../apt-mirror-setup.templates:3001
+msgid "Use contrib software?"
+msgstr "Seqdec aseɣẓan contrib ?"
 
 #. Type: boolean
 #. Description
 #. :sl1:
-#: ../localechooser.templates-in:14001
+#: ../apt-mirror-setup.templates:3001
 msgid ""
-"The translation of the installer is not fully complete for the selected "
-"language."
-msgstr "Tasuqilt n useɣẓan n usebded ur tfuk ara maḍi i tutlayt yettwafernen."
+"Some additional software has been made to work with Debian. Though this "
+"software is free, it depends on non-free software for its operation. This "
+"software is not a part of Debian, but standard Debian tools can be used to "
+"install it."
+msgstr ""
+"Kra n yiseɣẓan-nniḍen ttufeṣlen i wakken ad ddun d Debian. Ɣas akken aseɣẓan-"
+"a d ilelli, maca yesra aseɣẓan ur nelli d ilelli i wakken ad yeddu. Aseɣzan-"
+"a mačči d amur seg Debian maca ifecka n Debian isluganen zemren ad "
+"ttusqedcen i usebded-ines."
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#. Type: boolean
+#. Description
+#. This template is used by the Ubuntu version of d-i.
+#. :sl2:
+#. Type: boolean
+#. Description
+#. This template is used by the Ubuntu version of d-i.
+#. :sl2:
+#. Type: boolean
+#. Description
+#. This template is used by the Ubuntu version of d-i.
+#. :sl2:
+#. Type: boolean
+#. Description
+#. This template is used by the Ubuntu version of d-i.
+#. :sl2:
+#: ../apt-mirror-setup.templates:3001 ../apt-mirror-setup.templates-ubuntu:2001
+#: ../apt-mirror-setup.templates-ubuntu:3001
+#: ../apt-mirror-setup.templates-ubuntu:4001
+#: ../apt-mirror-setup.templates-ubuntu:5001
+msgid ""
+"Please choose whether you want this software to be made available to you."
+msgstr "Ttxil-k·m fren ma yella tebɣiḍ aseɣẓan-a ad yili ilmendad-inek·inem."
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-mirror-setup.templates:5001
+msgid "Use a network mirror?"
+msgstr "Seqdec tisit n uzeṭṭa?"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-mirror-setup.templates:5001
+msgid ""
+"A network mirror can be used to supplement the software that is included on "
+"the installation media. This may also make newer versions of software "
+"available."
+msgstr ""
+"Tisit n uzeṭṭa tezmer ad tettuseqdec i wakken ad iɛɛar aseɣẓan i d-yeddan "
+"deg umidyat n usebded. Aya yezmer ad yerr ileqman imaynuten ineggura n "
+"useɣẓan ad ttilin."
 
 #. Type: text
 #. Description
 #. :sl1:
-#: ../localechooser.templates-in:15001
-msgid ""
-"This means that there is a significant chance that some dialogs will be "
-"displayed in English instead."
-msgstr ""
-"Ayagi yebɣa ad d-yini tella tegnit meqqren ad d-ttwaseknent kra n tbewwaḍin "
-"n udiwenni s teglizit deg ubdil n wayen."
+#: ../base-installer.templates:4001
+msgid "Preparing to install the base system..."
+msgstr "Aheyyi i usebded n unagraw n taffa..."
 
 #. Type: text
 #. Description
 #. :sl1:
-#: ../localechooser.templates-in:16001
-msgid ""
-"If you do anything other than a purely default installation, there is a real "
-"chance that some dialogs will be displayed in English instead."
-msgstr ""
-"Ma yella tgiḍ ayen-nniḍen ɣef usebded amezwer, tella tegnit meqqren ad d-"
-"ttwaseknent kra n tbewwaḍin n udiwenni s teglizit deg ubdil n wayen."
+#: ../base-installer.templates:5001 ../bootstrap-base.templates:30001
+msgid "Installing the base system"
+msgstr "Asebded n unagraw n taffa"
 
 #. Type: text
 #. Description
 #. :sl1:
-#: ../localechooser.templates-in:17001
-msgid ""
-"If you continue the installation in the selected language, most dialogs "
-"should be displayed correctly but - especially if you use the more advanced "
-"options of the installer - some may be displayed in English instead."
-msgstr ""
-"Ma yella tkemmled asebded deg tutlayt i yettwafernen, tuget n tbawwaḍin n "
-"udiwenni ilaq ad d-banent akken iwata maca - aṭas ma tesqedceḍ aṭas n "
-"textiṛiyin leqqyen n usebdad - kra seg-sent ad d-banent s tgelizit deg ubdil-"
-"is."
+#: ../base-installer.templates:7001
+msgid "Setting up the base system..."
+msgstr "Aswel n unagraw n taffa..."
 
 #. Type: text
 #. Description
 #. :sl1:
-#: ../localechooser.templates-in:18001
-msgid ""
-"If you continue the installation in the selected language, dialogs should "
-"normally be displayed correctly but - especially if you use the more "
-"advanced options of the installer - there is a slight chance some may be "
-"displayed in English instead."
-msgstr ""
-"Ma yella tkemmleḍ asebded deg tutlayt i yettwafernen, tibewwaḍin n udiwenni "
-"ilaq ad d-banent akken iwata maca - aṭas ma yella tesqedceḍ aṭas n "
-"textiṛiyin leqqayen n usebdad - llant kra ad d-banent s teglizit deg ubdil-"
-"is."
+#: ../base-installer.templates:8001 ../bootstrap-base.templates:59001
+msgid "Configuring APT sources..."
+msgstr "Tiɣbula n uswel n APT..."
 
 #. Type: text
 #. Description
 #. :sl1:
-#: ../localechooser.templates-in:19001
-msgid ""
-"The chance that you will actually encounter a dialog that is not translated "
-"into the selected language is extremely small, but it cannot be ruled out "
-"completely."
-msgstr ""
-"Ur d-tettemliliḍ ara s waṭas n yidiwenniyen ur nettusuqel ara ɣer tutlayt i "
-"yettwafernen, maca llan kra i yellan."
+#: ../base-installer.templates:9001
+msgid "Updating the list of available packages..."
+msgstr "Aleqqem tabdart n yikemmusen i yellan..."
 
 #. Type: text
 #. Description
 #. :sl1:
-#: ../localechooser.templates-in:20001
-msgid ""
-"Unless you have a good understanding of the alternative language, it is "
-"recommended to either select a different language or abort the installation."
-msgstr ""
-"Ala ma yella tfehhmeḍ akken ilaq tutlayt-nniḍen, yelha ad tferneḍ tutlayt "
-"tayeḍ neɣ anef i usebded."
+#: ../base-installer.templates:10001
+msgid "Installing extra packages..."
+msgstr "Asebded n yikemmusen-nniḍen..."
+
+#. Type: text
+#. Description
+#. SUBST0 is a package name
+#. :sl1:
+#: ../base-installer.templates:11001
+msgid "Installing extra packages - retrieving and installing ${SUBST0}..."
+msgstr "Asebded n yikemmusen-nniḍen - tiririt d usebded ${SUBST0}..."
+
+#. Type: text
+#. Description
+#. Item in the main menu to select this package
+#. TRANSLATORS: <65 columns
+#. :sl1:
+#: ../bootstrap-base.templates:1001
+msgid "Install the base system"
+msgstr "Sebded n unagraw n taffa"
 
 #. Type: text
 #. Description
 #. :sl1:
-#: ../localechooser.templates-in:21001
-msgid ""
-"If you choose not to continue, you will be given the option of selecting a "
-"different language, or you can abort the installation."
-msgstr ""
-"Ma tferneḍ ad tkemmleḍ, ad tizmireḍ ad tferneḍ tutlayt-nniḍen deg "
-"yiɣawwaren, neɣ ad tesfesxeḍ asebded."
+#. Release is a filename which should not be translated
+#: ../bootstrap-base.templates:23001
+msgid "Retrieving Release file"
+msgstr "Tiririt n ufaylu n lqem"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Release is a filename which should not be translated
+#: ../bootstrap-base.templates:24001
+msgid "Retrieving Release file signature"
+msgstr "Tiririt n uzmul n ufaylu n lqem"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. "packages" here can be translated
+#: ../bootstrap-base.templates:25001
+msgid "Finding package sizes"
+msgstr "Tifin n tiddiwin n yikemmusen"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Packages is a filename which should not be translated
+#: ../bootstrap-base.templates:26001
+msgid "Retrieving Packages files"
+msgstr "Tiririt n yifuyla n yikemmusen"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Packages is a filename which should not be translated
+#: ../bootstrap-base.templates:27001
+msgid "Retrieving Packages file"
+msgstr "Tiririt n ufaylu n yikemmusen"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. "packages" here can be translated
+#: ../bootstrap-base.templates:28001
+msgid "Retrieving packages"
+msgstr "Tiririt n yikemmusen"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. "packages" here can be translated
+#: ../bootstrap-base.templates:29001
+msgid "Extracting packages"
+msgstr "Asuffeɣ n yikemmusen"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Core packages are packages that are part of the Debian base system
+#. The "core" packages are indeed packages that are specifically
+#. recorded as part of the base system. Other packages may
+#. be installed on the base system because of dependency resolution
+#: ../bootstrap-base.templates:31001
+msgid "Installing core packages"
+msgstr "Asebded n yikemmusen igejdanen"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Required packages are packages which installation is triggered
+#. by the dependency chain of core packages
+#. In short, they are "required" because at least one of the
+#. packages from the core packages depends on them
+#: ../bootstrap-base.templates:32001
+msgid "Unpacking required packages"
+msgstr "Asefruri n yikemmusen yettusran"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../bootstrap-base.templates:33001
+msgid "Configuring required packages"
+msgstr "Aswel n yikemmusen yettusran"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. The base system is the minimal Debian system
+#. See http://www.debian.org/doc/debian-policy/ch-binary.html#s3.7
+#: ../bootstrap-base.templates:34001
+msgid "Unpacking the base system"
+msgstr "Asefruri n unagraw n taffa"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. The base system is the minimal Debian system
+#. See http://www.debian.org/doc/debian-policy/ch-binary.html#s3.7
+#: ../bootstrap-base.templates:35001
+msgid "Configuring the base system"
+msgstr "Aswel n unagraw n taffa"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../bootstrap-base.templates:36001
+msgid "${SECTION}: ${INFO}..."
+msgstr "${SECTION}: ${INFO}..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. SUBST0 is a package name
+#: ../bootstrap-base.templates:37001
+msgid "Validating ${SUBST0}..."
+msgstr "Aseɣbel ${SUBST0}..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. SUBST0 is a package name
+#: ../bootstrap-base.templates:38001
+msgid "Retrieving ${SUBST0}..."
+msgstr "Tiririt ${SUBST0}..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. SUBST0 is a package name
+#: ../bootstrap-base.templates:39001
+msgid "Extracting ${SUBST0}..."
+msgstr "Asuffeɣ ${SUBST0}..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. SUBST0 is a package name
+#: ../bootstrap-base.templates:40001
+msgid "Unpacking ${SUBST0}..."
+msgstr "Asefruri ${SUBST0}..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. SUBST0 is a package name
+#: ../bootstrap-base.templates:41001
+msgid "Configuring ${SUBST0}..."
+msgstr "Aswel ${SUBST0}..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Release is a filename which should not be translated
+#: ../bootstrap-base.templates:42001
+msgid "Checking Release signature"
+msgstr "Asenqed n uzmul n lqem"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. SUBST0 is a gpg key id
+#. Release is a filename which should not be translated
+#: ../bootstrap-base.templates:43001
+msgid "Valid Release signature (key id ${SUBST0})"
+msgstr "Azmul n lqem ameɣtu (asulay n tsarut ${SUBST0})"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../bootstrap-base.templates:44001
+msgid "Resolving dependencies of base packages..."
+msgstr "Ferru n tugal n yikemmusen n taffa..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. SUBST0 is a list of packages
+#: ../bootstrap-base.templates:45001
+msgid "Found additional base dependencies: ${SUBST0}"
+msgstr "Af-d tugal-nniḍen n taffa: ${SUBST0}"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. SUBST0 is a list of packages
+#: ../bootstrap-base.templates:46001
+msgid "Found additional required dependencies: ${SUBST0}"
+msgstr "Af-d tugal-nniḍen yettusran: ${SUBST0}"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. SUBST0 is a list of packages
+#: ../bootstrap-base.templates:47001
+msgid "Found packages in base already in required: ${SUBST0}"
+msgstr "Ikemmusen yettwafen yakan deg taffa ttusran: ${SUBST0}"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../bootstrap-base.templates:48001
+msgid "Resolving dependencies of required packages..."
+msgstr "Ferru n tugal n yikemmusen yettusran..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. SUBST0 is an archive component (main, etc)
+#. SUBST1 is a mirror
+#: ../bootstrap-base.templates:49001
+msgid "Checking component ${SUBST0} on ${SUBST1}..."
+msgstr "Asenqed n usuddis ${SUBST0} ɣef ${SUBST1}..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Core packages are packages that are part of the Debian base system
+#. The "core" packages are indeed packages that are specifically
+#. recorded as part of the base system. Other packages may
+#. be installed on the base system because of dependency resolution
+#: ../bootstrap-base.templates:50001
+msgid "Installing core packages..."
+msgstr "Asebded n yikemmusen igejdanen..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Required packages are packages which installation is triggered
+#. by the dependency chain of core packages
+#. In short, they are "required" because at least one of the
+#. packages from the core packages depends on them
+#: ../bootstrap-base.templates:51001
+msgid "Unpacking required packages..."
+msgstr "Asefruri n yikemmusen yettusran..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Required packages are packages which installation is triggered
+#. by the dependency chain of core packages
+#. In short, they are "required" because at least one of the
+#. packages from the core packages depends on them
+#: ../bootstrap-base.templates:52001
+msgid "Configuring required packages..."
+msgstr "Aswel n yikemmusen yettusran..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../bootstrap-base.templates:53001
+msgid "Installing base packages..."
+msgstr "Asebded n yikemmusen n taffa..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../bootstrap-base.templates:54001
+msgid "Unpacking the base system..."
+msgstr "Asefruri n unagraw n taffa..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../bootstrap-base.templates:55001
+msgid "Configuring the base system..."
+msgstr "Aswel n unagraw n taffa..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../bootstrap-base.templates:56001
+msgid "Base system installed successfully."
+msgstr "Anagraw n taffa yettusebded akken iwata."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../bootstrap-base.templates:60001
+msgid "Selecting the kernel to install..."
+msgstr "Fren iɣes i usebded..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../bootstrap-base.templates:61001
+msgid "Installing the kernel..."
+msgstr "Asebded n yiɣes..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. SUBST0 is a package name
+#: ../bootstrap-base.templates:62001
+msgid "Installing the kernel - retrieving and installing ${SUBST0}..."
+msgstr "Asebded n kernel - tiririt d usebded ${SUBST0}..."
+
+#. Type: text
+#. Description
+#. Translators, this text will appear on a button, so KEEP IT SHORT
+#. :sl1:
+#: ../cdebconf-newt-udeb.templates:1001 ../cdebconf-gtk-udeb.templates:1001
+msgid "Continue"
+msgstr "Kemmel"
+
+#. Type: text
+#. Description
+#. Translators, this text will appear on a button, so KEEP IT SHORT
+#. :sl1:
+#: ../cdebconf-newt-udeb.templates:2001 ../cdebconf-gtk-udeb.templates:2001
+msgid "Go Back"
+msgstr "Uɣal ɣer deffir"
+
+#. Type: text
+#. Description
+#. Translators, this text will appear on a button, so KEEP IT SHORT
+#. :sl1:
+#. Type: text
+#. Description
+#. :sl4:
+#: ../cdebconf-newt-udeb.templates:3001 ../cdebconf-gtk-udeb.templates:3001
+#: ../cdebconf-slang-udeb.templates:1001 ../cdebconf-text-udeb.templates:10001
+msgid "Yes"
+msgstr "Ih"
+
+#. Type: text
+#. Description
+#. Translators, this text will appear on a button, so KEEP IT SHORT
+#. :sl1:
+#. Type: text
+#. Description
+#. :sl4:
+#: ../cdebconf-newt-udeb.templates:4001 ../cdebconf-gtk-udeb.templates:4001
+#: ../cdebconf-slang-udeb.templates:2001 ../cdebconf-text-udeb.templates:11001
+msgid "No"
+msgstr "Ala"
+
+#. #-#-#-#-#  templates.pot (cdebconf)  #-#-#-#-#
+#. Type: text
+#. Description
+#. Translators, this text will appear on a button, so KEEP IT SHORT
+#. :sl1:
+#. #-#-#-#-#  templates.pot (mdcfg)  #-#-#-#-#
+#. Type: select
+#. Choices
+#. :sl3:
+#. Type: select
+#. Choices
+#. :sl3:
+#. #-#-#-#-#  templates.pot (net-retriever)  #-#-#-#-#
+#. Type: select
+#. Choices
+#. These are choices of actions so this is, at least in English,
+#. an infinitive form
+#. :sl2:
+#: ../cdebconf-newt-udeb.templates:5001 ../mdcfg-utils.templates:6001
+#: ../mdcfg-utils.templates:13001 ../net-retriever.templates:1001
+msgid "Cancel"
+msgstr "Sefsex"
+
+#. Type: text
+#. Description
+#. Help line displayed at the bottom of the cdebconf newt interface.
+#. Translators: must fit within 80 characters.
+#. :sl1:
+#: ../cdebconf-newt-udeb.templates:6001
+msgid "<Tab> moves; <Space> selects; <Enter> activates buttons"
+msgstr "<Tab> tilḥin; <Space> afran; <Enter> armad tiqeffalin"
+
+#. Type: text
+#. Description
+#. Help line displayed at the bottom of the cdebconf newt interface.
+#. Translators: must fit within 80 characters.
+#. :sl1:
+#: ../cdebconf-newt-udeb.templates:7001
+msgid "<F1> for help; <Tab> moves; <Space> selects; <Enter> activates buttons"
+msgstr "<F1> i tallelt; <Tab> tilḥin; <Space> afran; <Enter> armad tiqeffalin"
+
+#. Type: text
+#. Description
+#. Appears as a checkbox in the newt and GTK interfaces.
+#. :sl1:
+#: ../cdebconf-newt-udeb.templates:8001 ../cdebconf-gtk-udeb.templates:9001
+msgid "Show Password in Clear"
+msgstr "Sken awal n uɛeddi ufriẓ"
+
+#. Type: text
+#. Description
+#. Translators, this text will appear on a button, so KEEP IT SHORT
+#. :sl1:
+#: ../cdebconf-gtk-udeb.templates:5001
+msgid "Help"
+msgstr "Tallelt"
+
+#. Type: text
+#. Description
+#. TRANSLATORS: This should be "translated" to "RTL" or "LTR" depending of
+#. default text direction of your language
+#. LTR: Left to Right (Latin, Cyrillic, CJK, Indic...)
+#. RTL: Right To Left (Arabic, Hebrew, Persian...)
+#. DO NOT USE ANYTHING ELSE
+#. :sl1:
+#: ../cdebconf-gtk-udeb.templates:6001
+msgid "LTR"
+msgstr "LTR"
+
+#. Type: text
+#. Description
+#. Translators, this text will appear on a button, so KEEP IT SHORT
+#. This button will allow users to virtually "shoot a picture"
+#. of the screen
+#. :sl1:
+#: ../cdebconf-gtk-udeb.templates:7001
+msgid "Screenshot"
+msgstr "Tuṭṭfa n ugdil"
+
+#. Type: text
+#. Description
+#. Text that will appear in a dialog box mentioning which file
+#. the screenshot has been saved to. "%s" is a file name here
+#. :sl1:
+#: ../cdebconf-gtk-udeb.templates:8001
+#, no-c-format
+msgid "Screenshot saved as %s"
+msgstr "Tuṭṭfa n ugdil tettwasekles am %s"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../choose-mirror-bin.templates-in:5001
+msgid "Checking the Debian archive mirror"
+msgstr "Asenqed n tisit n uɣbalu n Debian"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../choose-mirror-bin.templates-in:6001
+msgid "Downloading Release files..."
+msgstr "Asider n yifuyla n lqem..."
+
+#. Type: text
+#. Description
+#. main-menu item
+#. Translators: keep below 55 columns
+#. :sl1:
+#: ../choose-mirror-bin.templates-in:14001
+msgid "Choose a mirror of the Debian archive"
+msgstr "Fren tisit i uɣbalu n Debian"
 
 #. Type: select
 #. Choices
-#. "other", here, is added to the list of countries that will be displayed
-#. for users to choose among them
-#. For instance, choosing "Italian" will show:
-#. Italy, Switzerland, other
 #. :sl1:
-#: ../localechooser.templates-in:22001 ../../mktemplates.continents:26
-msgid "other"
-msgstr "tayeḍ"
+#. Type: select
+#. Choices
+#. :sl2:
+#: ../choose-mirror-bin.templates.http-in:2001
+#: ../choose-mirror-bin.templates.ftp.sel-in:2001
+msgid "enter information manually"
+msgstr "sekcem talɣut s ufus"
 
-#. Type: text
-#. Description
+#. Type: select
+#. Default
+#. Translators, you should put here the ISO 3166 code of a country
+#. which you know hosts at least one Debian HTTP mirror. Please check
+#. that the country really has a Debian HTTP mirror before putting a
+#. random value here
+#.
+#. First check that the country you mention here is listed in
+#. https://salsa.debian.org/mirror-team/masterlist/-/blob/master/Mirrors.masterlist
+#.
+#. BE CAREFUL to use the TWO LETTER ISO-3166 CODE and not anything else
+#.
+#. You do not need to translate what's between the square brackets
+#. You should even NOT put square brackets in translations:
+#. msgid "US[ Default value for http]"
+#. msgstr "FR"
 #. :sl1:
-#: ../localechooser.templates-in:23001
-msgid "Country, territory or area:"
-msgstr "Tamurt, tamnaḍt neɣ adeg:"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../localechooser.templates-in:24001
-msgid "Continent or region:"
-msgstr "Amenẓaw neɣ tamnaḍt:"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../localechooser.templates-in:25001
-msgid ""
-"The selected location will be used to set your time zone and also for "
-"example to help select the system locale. Normally this should be the "
-"country where you live."
-msgstr ""
-"Ideg i yettufernen ad yettuseqdec i usbadu n temnaḍt-inek·inem takudant "
-"akked daɣen, d amedya, i tallalt n ufran n yiɣewwaren idiganen n unagraw. "
-"Ilaq, wagi ad yili d tamurt anida i tettidireḍ."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../localechooser.templates-in:26001
-msgid ""
-"This is a shortlist of locations based on the language you selected. Choose "
-"\"other\" if your location is not listed."
-msgstr ""
-"Tagi d tabdart tamecṭuḥt n yidgen i yellan s tutlayt i tferneḍ. Fren \"tayeḍ"
-"\" ma yella ideg-inek·inem ur d-yettwabder ara."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../localechooser.templates-in:27001
-msgid "Select the continent or region to which your location belongs."
-msgstr "Fren amenẓaw neɣ tamnaḍt n wanida yella wadig-inek·inem."
-
-#. Type: text
-#. Description
-#. '%s' will be replaced with the name of the currently selected continent/region
-#. :sl1:
-#: ../localechooser.templates-in:28001
-#, no-c-format
-msgid ""
-"Listed are locations for: %s. Use the <Go Back> option to select a different "
-"continent or region if your location is not listed."
-msgstr ""
-"Tabdart n yidgen i: %s. Seqdec taxtiṛit <Uɣal> i wakken ad tferneḍ amenẓaw "
-"neɣ tamnaḍt yemgarraden ma yella ideg-inek·inem ur d-yettwabder ara."
+#: ../choose-mirror-bin.templates.http-in:2002
+msgid "US[ Default value for http]"
+msgstr "FR"
 
 #. Type: select
 #. Description
 #. :sl1:
-#: ../localechooser.templates-in:29001
-msgid "Country to base default locale settings on:"
-msgstr "Tamurt iɣef rsen iɣewwaren imezwer idiganen:"
+#. Type: select
+#. Description
+#. :sl2:
+#: ../choose-mirror-bin.templates.http-in:2003
+#: ../choose-mirror-bin.templates.ftp.sel-in:2003
+msgid "Debian archive mirror country:"
+msgstr "Tamurt n tisit n uɣbalu n Debian:"
 
-#. Type: text
+#. Type: select
 #. Description
 #. :sl1:
-#: ../localechooser.templates-in:30001
+#. Type: select
+#. Description
+#. :sl2:
+#: ../choose-mirror-bin.templates.http-in:2003
+#: ../choose-mirror-bin.templates.ftp.sel-in:2003
 msgid ""
-"There is no locale defined for the combination of language and country you "
-"have selected. You can now select your preference from the locales available "
-"for the selected language. The locale that will be used is listed in the "
-"second column."
+"The goal is to find a mirror of the Debian archive that is close to you on "
+"the network -- be aware that nearby countries, or even your own, may not be "
+"the best choice."
 msgstr ""
-"Ulac tutlayt tadigant i yettusbadun i tuddsa n tutlayin akked tmura i "
-"tferneḍ. Tzemreḍ tura ad tferneḍ seg textiṛiyin i yellan i tutlayt "
-"yettwafernen. Iɣewwaren idiganen ad ttusqedcen deg tgejdit tis snat."
+"Iswi d tifin n tisit n uɣbalu n Debian i iqerben ɣur-k·m ɣef uzeṭṭa -- ẓer "
+"belli timura i iqerben, neɣ ula d tamurt-ik·im, zemrent ad ilint mačči d "
+"afrin igerrzen."
 
-#. Type: text
+#. Type: select
 #. Description
 #. :sl1:
-#: ../localechooser.templates-in:31001
+#. Type: select
+#. Description
+#. :sl2:
+#: ../choose-mirror-bin.templates.http-in:3001
+#: ../choose-mirror-bin.templates.ftp.sel-in:3001
+msgid "Debian archive mirror:"
+msgstr "Tisit n uɣbalu n Debian:"
+
+#. Type: select
+#. Description
+#. :sl1:
+#. Type: select
+#. Description
+#. :sl2:
+#: ../choose-mirror-bin.templates.http-in:3001
+#: ../choose-mirror-bin.templates.ftp.sel-in:3001
 msgid ""
-"There are multiple locales defined for the language you have selected. You "
-"can now select your preference from those locales. The locale that will be "
-"used is listed in the second column."
+"Please select a Debian archive mirror. You should use a mirror in your "
+"country or region if you do not know which mirror has the best Internet "
+"connection to you."
 msgstr ""
-"Llant aṭas n tutlayin tidiganin ttusbadunt i tutlayin i textareḍ. Tzemreḍ ad "
-"tferned tura tixtiṛiyin-inek·inem seg tutlayin-a tidiganin. Tutlayt tadigant "
-"ara yettusqedcen tettwabder-d deg tgejdit tis snat."
+"Ttxil-k·m fren tisit n uɣbalu n Debian. Ilaq-ak·am ad tesqedceḍ tisit deg "
+"tmurt-ik·im neɣ deg temnaḍt-ik·im ma yella ur teẓriḍ ara anta tisit ara "
+"ak·am-d-imudden tuqqna n Internet i igerrzen."
+
+#. Type: select
+#. Description
+#. :sl1:
+#: ../choose-mirror-bin.templates.http-in:3001
+msgid "Usually, deb.debian.org is a good choice."
+msgstr "S umata, deb.debian.org is a good choice."
+
+#. Type: string
+#. Description
+#. :sl1:
+#. Type: string
+#. Description
+#. :sl2:
+#: ../choose-mirror-bin.templates.http-in:4001
+#: ../choose-mirror-bin.templates.ftp.base-in:2001
+msgid "Debian archive mirror hostname:"
+msgstr "Isem n usenneftaɣ n tisit n uɣbalu n Debian:"
+
+#. Type: string
+#. Description
+#. :sl1:
+#. Type: string
+#. Description
+#. :sl2:
+#: ../choose-mirror-bin.templates.http-in:4001
+#: ../choose-mirror-bin.templates.ftp.base-in:2001
+msgid ""
+"Please enter the hostname of the mirror from which Debian will be downloaded."
+msgstr ""
+"Ttxil-k·m sekcem isem n usenneftaɣ n tisit seg wanda i d-yettusader Debian."
+
+#. Type: string
+#. Description
+#. :sl1:
+#. Type: string
+#. Description
+#. :sl2:
+#: ../choose-mirror-bin.templates.http-in:4001
+#: ../choose-mirror-bin.templates.ftp.base-in:2001
+msgid ""
+"An alternate port can be specified using the standard [hostname]:[port] "
+"format."
+msgstr ""
+"Tawwurt-nniḍen yezmer ad yettufren s useqdec n umasal alugen [hostname]:"
+"[port]."
+
+#. Type: string
+#. Description
+#. :sl1:
+#: ../choose-mirror-bin.templates.http-in:6001
+msgid "HTTP proxy information (blank for none):"
+msgstr "Talɣut ɣef upṛuksi n HTTP (d lem i ulac):"
+
+#. Type: string
+#. Description
+#. :sl1:
+#: ../choose-mirror-bin.templates.http-in:6001
+msgid ""
+"If you need to use a HTTP proxy to access the outside world, enter the proxy "
+"information here. Otherwise, leave this blank."
+msgstr ""
+"Ma yella ilaq ad tesqedceḍ apṛuksi HTTP i unekcum ɣer umaḍal n beṛṛa, sekcem "
+"talɣut n upṛuksi dagi. Neɣ ma ulac, eǧǧ urti-a d ilem."
+
+#. Type: string
+#. Description
+#. :sl1:
+#. Type: string
+#. Description
+#. :sl2:
+#: ../choose-mirror-bin.templates.http-in:6001
+#: ../choose-mirror-bin.templates.ftp.base-in:4001
+msgid ""
+"The proxy information should be given in the standard form of \"http://"
+"[[user][:pass]@]host[:port]/\"."
+msgstr ""
+"Talɣut n upṛuksi ilaq ad ttunefken s talɣa taslugant n \"http://[[user][:"
+"pass]@]host[:port]/\"."
 
 #. Type: text
 #. Description
@@ -1329,6 +2145,381 @@ msgstr "Afsay/asufeɣ n umidyat n userkeb..."
 
 #. Type: text
 #. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl1:
+#: ../load-cdrom.templates:1001
+msgid "Load installer components from installation media"
+msgstr "Sali-d isuddas n usebdad seg umidyat n usebded"
+
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl1:
+#: ../clock-setup.templates:1001
+msgid "Configure the clock"
+msgstr "Swel amasrag"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../clock-setup.templates:2001
+msgid "Is the system clock set to UTC?"
+msgstr "Anagraw n umasrag yettusbadu ɣer UTC?"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../clock-setup.templates:2001
+msgid ""
+"System clocks are generally set to Coordinated Universal Time (UTC). The "
+"operating system uses your time zone to convert system time into local time. "
+"This is recommended unless you also use another operating system that "
+"expects the clock to be set to local time."
+msgstr ""
+"Imasragen n unagraw ttusbadun s umata ɣer wakud agreɣlan amsideg (UTC). "
+"Anagraw n wammud iseqdac tamnaḍt-inek·inem takudant i wakken ad iselket akud "
+"n unagraw ɣer wakud adigan. Aya yettuwelleh-d, ala ma yella tseqdaceḍ "
+"anagraw-nniḍen n wammud ara yeṛǧun asbadu n umasrag ɣer wakud adigan."
+
+#. Type: text
+#. Description
+#. progress bar item
+#. :sl1:
+#: ../clock-setup.templates:3001
+msgid "Configuring clock settings..."
+msgstr "Aswel n yiɣewwaren n umasrag..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../clock-setup.templates:4001
+msgid "Setting up the clock"
+msgstr "Aswel n umasrag"
+
+#. Type: text
+#. Description
+#. progress bar item
+#. :sl1:
+#: ../clock-setup.templates:7001
+msgid "Getting the time from a network time server..."
+msgstr "Awway n wakuf seg uqeddac n wakud n uzeṭṭa..."
+
+#. Type: text
+#. Description
+#. progress bar item
+#. :sl1:
+#: ../clock-setup.templates:8001
+msgid "Setting the hardware clock..."
+msgstr "Iɣewwaren n umasrag n warrum..."
+
+#. Type: text
+#. Description
+#. Main menu item
+#. The translation should not exceed 55 columns except for languages
+#. that are only supported in the graphical version of the installer
+#. :sl1:
+#: ../di-utils-shell.templates:2001
+msgid "Execute a shell"
+msgstr "Selkem shell"
+
+#. Type: text
+#. Description
+#. Main menu item
+#. The translation should not exceed 55 columns except for languages
+#. that are only supported in the graphical version of the installer
+#. :sl1:
+#: ../di-utils-reboot.templates:2001
+msgid "Abort the installation"
+msgstr "Sefsex asbeddi"
+
+#. Type: text
+#. Description
+#. base-installer progress bar item
+#. :sl1:
+#: ../di-utils.templates:1001
+msgid "Registering modules..."
+msgstr "Asekles n yizegrar..."
+
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl1:
+#: ../finish-install.templates:1001
+msgid "Finish the installation"
+msgstr "Kemmel akked usebded"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../finish-install.templates:2001
+msgid "Finishing the installation"
+msgstr "Kemmel akked usebded"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../finish-install.templates:4001
+msgid "Configuring network..."
+msgstr "Swel azeṭṭa..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../finish-install.templates:5001
+msgid "Setting up frame buffer..."
+msgstr "Asebded n tkatut tilmi..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../finish-install.templates:6001
+msgid "Unmounting file systems..."
+msgstr "Tukksa n userkeb n yinagrawen n yifuyla..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../finish-install.templates:7001
+msgid "Rebooting into your new system..."
+msgstr "Ales tanekra s ugraw-inek·inem amaynut..."
+
+#. Type: note
+#. Description
+#. :sl1:
+#: ../finish-install.templates:8001
+msgid "Installation complete"
+msgstr "Asebded immed"
+
+#. Type: note
+#. Description
+#. :sl1:
+#: ../finish-install.templates:8001
+msgid ""
+"Installation is complete, so it is time to boot into your new system. Make "
+"sure to remove the installation media, so that you boot into the new system "
+"rather than restarting the installation."
+msgstr ""
+"Asebded yemmed, ihi d lawan ad tesnekkreḍ deg unagraw-inek·inem amaynut. "
+"Ḍmen tekkseḍ-d amidyat n usebded i wakken ad tesnekreḍ deg unagraw amaynut "
+"anawlu ad talseḍ asenker n usebded."
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:1001 ../grub-installer.templates:2001
+msgid "Install the GRUB boot loader to your primary drive?"
+msgstr "Sebded amsalay n usenker GRUB ɣef uḍebsi ameqqran?"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:1001
+msgid ""
+"The following other operating systems have been detected on this computer: "
+"${OS_LIST}"
+msgstr "Inagrawen-a-nniḍen n wammud ttwafen ɣef uselkim-a: ${OS_LIST}"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:1001
+msgid ""
+"If all of your operating systems are listed above, then it should be safe to "
+"install the boot loader to your primary drive (UEFI partition/boot record). "
+"When your computer boots, you will be able to choose to load one of these "
+"operating systems or the newly installed Debian system."
+msgstr ""
+"Ma yella meṛṛa inagrawen-inek·inem n wammud ttwabdaren-d ddaw-a, ilqa ad "
+"tḍemneḍ asebded n usalay n usenker ɣef yimeɣri-inek·inem agejdan (aḥric UEFI/"
+"asekles n usenker). Mi ara yekker uselkim-inek·inem, tzemreḍ ad tferneḍ ad d-"
+"tsaliḍ yiwen se yinagrawen-a n wammud neɣ anagraw n Debian i yettusbedden "
+"melmi kan."
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:2001
+msgid ""
+"It seems that this new installation is the only operating system on this "
+"computer. If so, it should be safe to install the GRUB boot loader to your "
+"primary drive (UEFI partition/boot record)."
+msgstr ""
+"Asebdad amaynut yettban d netta kan i d anagraw n wammud i yellan deg "
+"uselkim-a. Ma yella d tidet waya, ilaq ad yettusebded usebdad n usenkar n "
+"GRUB s ttawil ɣef umeɣri-inek·inem agejdan (aḥric UEFI/asekles n usenker)."
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:2001
+msgid ""
+"Warning: If your computer has another operating system that the installer "
+"failed to detect, this will make that operating system temporarily "
+"unbootable, though GRUB can be manually configured later to boot it."
+msgstr ""
+"Ɣur-k·m: Ma yella aselkim-inek·inem deg-s anagraw-nniḍen n wammud win ideg "
+"yecceḍ usebdad ad t-id-yaf, aya ad yerr anagraw-nni n wammud mačči n usekker "
+"i kra n wakud. GRUB yezmer ad yettuswel mbeɛd i wakken ad yettusenker."
+
+#. #-#-#-#-#  templates.pot (grub-installer)  #-#-#-#-#
+#. Type: password
+#. Description
+#. :sl2:
+#. #-#-#-#-#  templates.pot (network-console)  #-#-#-#-#
+#. Type: password
+#. Description
+#. :sl3:
+#. #-#-#-#-#  templates.pot (user-setup)  #-#-#-#-#
+#. Type: password
+#. Description
+#. :sl1:
+#. Type: password
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:10001 ../network-console.templates:5001
+#: ../user-setup-udeb.templates:7001 ../user-setup-udeb.templates:14001
+msgid "Re-enter password to verify:"
+msgstr "Ales asekcem n wawal n uɛeddi i usenqed:"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:18001
+msgid "Installing GRUB boot loader"
+msgstr "Asebded amsalay n usenker GRUB"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:19001
+msgid "Looking for other operating systems..."
+msgstr "Tamuɣli ɣef yinagrawen-nniḍen n wammud..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:20001
+msgid "Installing the '${GRUB}' package..."
+msgstr "Asebded n ukemmus '${GRUB}'..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:21001
+msgid "Determining GRUB boot device..."
+msgstr "Aguccel n yibenk n usenker n GRUB..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:22001
+msgid "Running \"grub-install ${BOOTDEV}\"..."
+msgstr "Aseddu n \"grub-install ${BOOTDEV}\"..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:23001
+msgid "Running \"update-grub\"..."
+msgstr "Aseddu \"update-grub\"..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:24001
+msgid "Updating /etc/kernel-img.conf..."
+msgstr "Aleqqem /etc/kernel-img.conf..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:25001
+msgid "Checking whether to force usage of the removable media path"
+msgstr "Asenqed ma yella ad nḥettem aseqdec n ubrid n umidyat aziraz"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:26001
+msgid "Mounting filesystems"
+msgstr "Aserkeb n unagraw n yifuyla"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:27001
+msgid "Configuring grub-efi for future usage of the removable media path"
+msgstr "Aswel n grub-efi i useqdec i d-iteddun n ubrid n umidyat aziraz"
+
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl1:
+#: ../grub-installer.templates:28001
+msgid "Install the GRUB boot loader"
+msgstr "Asebded amsalay n usenker GRUB"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:34001
+msgid "Force GRUB installation to the EFI removable media path?"
+msgstr "Ḥettem asebded n GRUB ɣef ubrid n umidya aziraz EFI?"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:34001
+msgid ""
+"It seems that this computer is configured to boot via EFI, but maybe that "
+"configuration will not work for booting from the hard drive. Some EFI "
+"firmware implementations do not meet the EFI specification (i.e. they are "
+"buggy!) and do not support proper configuration of boot options from system "
+"hard drives."
+msgstr ""
+"Yettban uselkim-a yettuswel i wakken ad yekker s EFI, maca ahat tawila-a ur "
+"tetteddu ara i usenkar seg yibenk aqquran. Kra seg yisebdaden n ufreɣẓan EFI "
+"ur d-ttarrant ara i ilugan n EFI (anamek-is ttwabugin!) Yerna ur sefraken "
+"ara tawila tameɣtut n textiṛiyin n usenker seg yinuḍaf iqquranen n unagraw."
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:34001
+msgid ""
+"A workaround for this problem is to install an extra copy of the EFI version "
+"of the GRUB boot loader to a fallback location, the \"removable media path"
+"\". Almost all EFI systems, no matter how buggy, will boot GRUB that way."
+msgstr ""
+"Tifrat-nniḍen i wugur-a tettezzi deg usebded n unɣal-nniḍen n lqem EFI n "
+"usalay n usenker deg yideg n usellek, d \"abrid n umidyat aziraz\". Tuget n "
+"yinagrawen EFI, ɣas akken llant tucḍiwin deg-sen, senkarayen GRUB s tarrayt-"
+"a."
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:34001
+msgid ""
+"Warning: If the installer failed to detect another operating system that is "
+"present on your computer that also depends on this fallback, installing GRUB "
+"there will make that operating system temporarily unbootable. GRUB can be "
+"manually configured later to boot it if necessary."
+msgstr ""
+"Ɣur-k·m: Ma yella asebdad yecceḍ deg tifin n unagraw-nniḍen n wammud i "
+"yellan deg uselkim-inek·inem i ibedden ɣef tifrat-a n usellek, asebded n "
+"GRUB dinna ad yerr anagraw-nni n wammud mačči n usekker i kra n wakud. GRUB "
+"yezmer ad yettuswel mbeɛd i wakken ad yettusenker ma yella ilaq."
+
+#. Type: text
+#. Description
 #. :sl1:
 #: ../ethdetect.templates:4001
 msgid "Detecting network hardware"
@@ -1393,6 +2584,362 @@ msgstr "Aṛaǧu n uwennez n warrum..."
 #: ../hw-detect.templates:12001
 msgid "Checking for firmware..."
 msgstr "Asenqed n ufreɣẓan..."
+
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl1:
+#: ../save-logs.templates:1001
+msgid "Save debug logs"
+msgstr "Sekles iɣmisen n temseɣtayt"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. finish-install progress bar item
+#: ../save-logs.templates:9001
+msgid "Gathering information for installation report..."
+msgstr "Alqaḍ n telɣut i uneqqis n usebded..."
+
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl1:
+#: ../iso-scan.templates:1001
+msgid "Scan hard drives for an installer ISO image"
+msgstr "Freḍ ibenkan iqquranen i tugna IOS n usebdad"
+
+#. Type: text
+#. Description
+#. This menu entry may be translated.
+#. However, translators are required to keep "Choose language"
+#. as an alternative separated by the "/" character
+#. Example (french): Choisir la langue/Choose language
+#. :sl1:
+#: ../localechooser.templates-in:1001
+msgid "Choose language"
+msgstr "Fren tutlayt/Choose language"
+
+#. Type: text
+#. Description
+#. finish-install progress bar item
+#. :sl1:
+#: ../localechooser.templates-in:6001
+msgid "Storing language..."
+msgstr "Aḥraz n tutlayt..."
+
+#. Type: title
+#. Description
+#. Displayed as dialog title during language selection
+#. :sl1:
+#: ../localechooser.templates-in:7001
+msgid "Select a language"
+msgstr "Fren tutlayt"
+
+#. Type: title
+#. Description
+#. Displayed as dialog title during country selection
+#. :sl1:
+#: ../localechooser.templates-in:8001
+msgid "Select your location"
+msgstr "Fren anda telliḍ"
+
+#. Type: title
+#. Description
+#. Displayed as dialog title during locale selection
+#. :sl1:
+#: ../localechooser.templates-in:9001
+msgid "Configure locales"
+msgstr "Sbadu tutlayin"
+
+#. Type: note
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:12001
+msgid "Language selection no longer possible"
+msgstr "Afran n tutlayt yuɣal d awezɣi"
+
+#. Type: note
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:12001
+msgid ""
+"At this point it is no longer possible to change the language for the "
+"installation, but you can still change the country or locale."
+msgstr ""
+"Di tseddart-agi deg telliḍ d awezɣi ad yizmir ad d-yili ubeddel n tutlayt n "
+"usebded, maca mazal tzemreḍ ad tbedleḍ tamurt neɣ iɣewwaṛen idiganen."
+
+#. Type: note
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:12001
+msgid ""
+"To select a different language you will need to abort this installation and "
+"reboot the installer."
+msgstr ""
+"Iwakken ad tferneḍ tutlayt-nniḍen ilaq ad teǧǧeḍ asebded-agi sakin ad "
+"tsekreḍ tikelt-nniḍen aseɣẓan n usebded."
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:13001 ../localechooser.templates-in:14001
+msgid "Continue the installation in the selected language?"
+msgstr "Ad tkemmeleḍ asbeddi s tutlayt yettwafernen?"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:13001
+msgid ""
+"The translation of the installer is incomplete for the selected language."
+msgstr "Tasuqilt n useɣẓan n usebded ur temmid ara i tutlayt yettwafernen."
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:14001
+msgid ""
+"The translation of the installer is not fully complete for the selected "
+"language."
+msgstr "Tasuqilt n useɣẓan n usebded ur tfuk ara maḍi i tutlayt yettwafernen."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:15001
+msgid ""
+"This means that there is a significant chance that some dialogs will be "
+"displayed in English instead."
+msgstr ""
+"Ayagi yebɣa ad d-yini tella tegnit meqqren ad d-ttwaseknent kra n tbewwaḍin "
+"n udiwenni s teglizit deg ubdil n wayen."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:16001
+msgid ""
+"If you do anything other than a purely default installation, there is a real "
+"chance that some dialogs will be displayed in English instead."
+msgstr ""
+"Ma yella tgiḍ ayen-nniḍen ɣef usebded amezwer, tella tegnit meqqren ad d-"
+"ttwaseknent kra n tbewwaḍin n udiwenni s teglizit deg ubdil n wayen."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:17001
+msgid ""
+"If you continue the installation in the selected language, most dialogs "
+"should be displayed correctly but - especially if you use the more advanced "
+"options of the installer - some may be displayed in English instead."
+msgstr ""
+"Ma yella tkemmled asebded deg tutlayt i yettwafernen, tuget n tbawwaḍin n "
+"udiwenni ilaq ad d-banent akken iwata maca - aṭas ma tesqedceḍ aṭas n "
+"textiṛiyin leqqyen n usebdad - kra seg-sent ad d-banent s tgelizit deg ubdil-"
+"is."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:18001
+msgid ""
+"If you continue the installation in the selected language, dialogs should "
+"normally be displayed correctly but - especially if you use the more "
+"advanced options of the installer - there is a slight chance some may be "
+"displayed in English instead."
+msgstr ""
+"Ma yella tkemmleḍ asebded deg tutlayt i yettwafernen, tibewwaḍin n udiwenni "
+"ilaq ad d-banent akken iwata maca - aṭas ma yella tesqedceḍ aṭas n "
+"textiṛiyin leqqayen n usebdad - llant kra ad d-banent s teglizit deg ubdil-"
+"is."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:19001
+msgid ""
+"The chance that you will actually encounter a dialog that is not translated "
+"into the selected language is extremely small, but it cannot be ruled out "
+"completely."
+msgstr ""
+"Ur d-tettemliliḍ ara s waṭas n yidiwenniyen ur nettusuqel ara ɣer tutlayt i "
+"yettwafernen, maca llan kra i yellan."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:20001
+msgid ""
+"Unless you have a good understanding of the alternative language, it is "
+"recommended to either select a different language or abort the installation."
+msgstr ""
+"Ala ma yella tfehhmeḍ akken ilaq tutlayt-nniḍen, yelha ad tferneḍ tutlayt "
+"tayeḍ neɣ anef i usebded."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:21001
+msgid ""
+"If you choose not to continue, you will be given the option of selecting a "
+"different language, or you can abort the installation."
+msgstr ""
+"Ma tferneḍ ad tkemmleḍ, ad tizmireḍ ad tferneḍ tutlayt-nniḍen deg "
+"yiɣawwaren, neɣ ad tesfesxeḍ asebded."
+
+#. Type: select
+#. Choices
+#. "other", here, is added to the list of countries that will be displayed
+#. for users to choose among them
+#. For instance, choosing "Italian" will show:
+#. Italy, Switzerland, other
+#. :sl1:
+#: ../localechooser.templates-in:22001 ../../mktemplates.continents:26
+msgid "other"
+msgstr "tayeḍ"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:23001
+msgid "Country, territory or area:"
+msgstr "Tamurt, tamnaḍt neɣ adeg:"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:24001
+msgid "Continent or region:"
+msgstr "Amenẓaw neɣ tamnaḍt:"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:25001
+msgid ""
+"The selected location will be used to set your time zone and also for "
+"example to help select the system locale. Normally this should be the "
+"country where you live."
+msgstr ""
+"Ideg i yettufernen ad yettuseqdec i usbadu n temnaḍt-inek·inem takudant "
+"akked daɣen, d amedya, i tallalt n ufran n yiɣewwaren idiganen n unagraw. "
+"Ilaq, wagi ad yili d tamurt anida i tettidireḍ."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:26001
+msgid ""
+"This is a shortlist of locations based on the language you selected. Choose "
+"\"other\" if your location is not listed."
+msgstr ""
+"Tagi d tabdart tamecṭuḥt n yidgen i yellan s tutlayt i tferneḍ. Fren \"tayeḍ"
+"\" ma yella ideg-inek·inem ur d-yettwabder ara."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:27001
+msgid "Select the continent or region to which your location belongs."
+msgstr "Fren amenẓaw neɣ tamnaḍt n wanida yella wadig-inek·inem."
+
+#. Type: text
+#. Description
+#. '%s' will be replaced with the name of the currently selected continent/region
+#. :sl1:
+#: ../localechooser.templates-in:28001
+#, no-c-format
+msgid ""
+"Listed are locations for: %s. Use the <Go Back> option to select a different "
+"continent or region if your location is not listed."
+msgstr ""
+"Tabdart n yidgen i: %s. Seqdec taxtiṛit <Uɣal> i wakken ad tferneḍ amenẓaw "
+"neɣ tamnaḍt yemgarraden ma yella ideg-inek·inem ur d-yettwabder ara."
+
+#. Type: select
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:29001
+msgid "Country to base default locale settings on:"
+msgstr "Tamurt iɣef rsen iɣewwaren imezwer idiganen:"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:30001
+msgid ""
+"There is no locale defined for the combination of language and country you "
+"have selected. You can now select your preference from the locales available "
+"for the selected language. The locale that will be used is listed in the "
+"second column."
+msgstr ""
+"Ulac tutlayt tadigant i yettusbadun i tuddsa n tutlayin akked tmura i "
+"tferneḍ. Tzemreḍ tura ad tferneḍ seg textiṛiyin i yellan i tutlayt "
+"yettwafernen. Iɣewwaren idiganen ad ttusqedcen deg tgejdit tis snat."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:31001
+msgid ""
+"There are multiple locales defined for the language you have selected. You "
+"can now select your preference from those locales. The locale that will be "
+"used is listed in the second column."
+msgstr ""
+"Llant aṭas n tutlayin tidiganin ttusbadunt i tutlayin i textareḍ. Tzemreḍ ad "
+"tferned tura tixtiṛiyin-inek·inem seg tutlayin-a tidiganin. Tutlayt tadigant "
+"ara yettusqedcen tettwabder-d deg tgejdit tis snat."
+
+#. #-#-#-#-#  templates.pot (lvmcfg)  #-#-#-#-#
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl1:
+#. #-#-#-#-#  templates.pot (partman-lvm)  #-#-#-#-#
+#. Type: text
+#. Description
+#. Type: text
+#. Description
+#. :sl3:
+#. Main menu item
+#. Translators: keep below 55 columns
+#. Use infinitive form
+#: ../lvmcfg.templates:1001 ../partman-lvm.templates:7001
+#: ../partman-lvm.templates:23001
+msgid "Configure the Logical Volume Manager"
+msgstr "Swel amsefrak n ubleɣ ameẓẓul"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../main-menu.templates:1001
+msgid "Debian installer main menu"
+msgstr "Umuɣ agejdan n usebded n Debian"
+
+#. Type: select
+#. Description
+#. :sl1:
+#: ../main-menu.templates:2001
+msgid "Choose the next step in the install process:"
+msgstr "Fren taseddart id-iteddun deg ukala n usebded:"
+
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl1:
+#: ../mdcfg-utils.templates:1001
+msgid "Configure MD devices"
+msgstr "Swel ibenkan MD"
 
 #. Type: boolean
 #. Description
@@ -1858,233 +3405,17 @@ msgstr "Swel azeṭṭa s useqdec n usenki udmis"
 
 #. Type: text
 #. Description
-#. :sl1:
-#: ../choose-mirror-bin.templates-in:5001
-msgid "Checking the Debian archive mirror"
-msgstr "Asenqed n tisit n uɣbalu n Debian"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../choose-mirror-bin.templates-in:6001
-msgid "Downloading Release files..."
-msgstr "Asider n yifuyla n lqem..."
-
-#. Type: text
-#. Description
-#. main-menu item
-#. Translators: keep below 55 columns
-#. :sl1:
-#: ../choose-mirror-bin.templates-in:14001
-msgid "Choose a mirror of the Debian archive"
-msgstr "Fren tisit i uɣbalu n Debian"
-
-#. Type: select
-#. Choices
-#. :sl1:
-#. Type: select
-#. Choices
-#. :sl2:
-#: ../choose-mirror-bin.templates.http-in:2001
-#: ../choose-mirror-bin.templates.ftp.sel-in:2001
-msgid "enter information manually"
-msgstr "sekcem talɣut s ufus"
-
-#. Type: select
-#. Default
-#. Translators, you should put here the ISO 3166 code of a country
-#. which you know hosts at least one Debian HTTP mirror. Please check
-#. that the country really has a Debian HTTP mirror before putting a
-#. random value here
-#.
-#. First check that the country you mention here is listed in
-#. https://salsa.debian.org/mirror-team/masterlist/-/blob/master/Mirrors.masterlist
-#.
-#. BE CAREFUL to use the TWO LETTER ISO-3166 CODE and not anything else
-#.
-#. You do not need to translate what's between the square brackets
-#. You should even NOT put square brackets in translations:
-#. msgid "US[ Default value for http]"
-#. msgstr "FR"
-#. :sl1:
-#: ../choose-mirror-bin.templates.http-in:2002
-msgid "US[ Default value for http]"
-msgstr "FR"
-
-#. Type: select
-#. Description
-#. :sl1:
-#. Type: select
-#. Description
-#. :sl2:
-#: ../choose-mirror-bin.templates.http-in:2003
-#: ../choose-mirror-bin.templates.ftp.sel-in:2003
-msgid "Debian archive mirror country:"
-msgstr "Tamurt n tisit n uɣbalu n Debian:"
-
-#. Type: select
-#. Description
-#. :sl1:
-#. Type: select
-#. Description
-#. :sl2:
-#: ../choose-mirror-bin.templates.http-in:2003
-#: ../choose-mirror-bin.templates.ftp.sel-in:2003
-msgid ""
-"The goal is to find a mirror of the Debian archive that is close to you on "
-"the network -- be aware that nearby countries, or even your own, may not be "
-"the best choice."
-msgstr ""
-"Iswi d tifin n tisit n uɣbalu n Debian i iqerben ɣur-k·m ɣef uzeṭṭa -- ẓer "
-"belli timura i iqerben, neɣ ula d tamurt-ik·im, zemrent ad ilint mačči d "
-"afrin igerrzen."
-
-#. Type: select
-#. Description
-#. :sl1:
-#. Type: select
-#. Description
-#. :sl2:
-#: ../choose-mirror-bin.templates.http-in:3001
-#: ../choose-mirror-bin.templates.ftp.sel-in:3001
-msgid "Debian archive mirror:"
-msgstr "Tisit n uɣbalu n Debian:"
-
-#. Type: select
-#. Description
-#. :sl1:
-#. Type: select
-#. Description
-#. :sl2:
-#: ../choose-mirror-bin.templates.http-in:3001
-#: ../choose-mirror-bin.templates.ftp.sel-in:3001
-msgid ""
-"Please select a Debian archive mirror. You should use a mirror in your "
-"country or region if you do not know which mirror has the best Internet "
-"connection to you."
-msgstr ""
-"Ttxil-k·m fren tisit n uɣbalu n Debian. Ilaq-ak·am ad tesqedceḍ tisit deg "
-"tmurt-ik·im neɣ deg temnaḍt-ik·im ma yella ur teẓriḍ ara anta tisit ara "
-"ak·am-d-imudden tuqqna n Internet i igerrzen."
-
-#. Type: select
-#. Description
-#. :sl1:
-#: ../choose-mirror-bin.templates.http-in:3001
-msgid "Usually, deb.debian.org is a good choice."
-msgstr "S umata, deb.debian.org is a good choice."
-
-#. Type: string
-#. Description
-#. :sl1:
-#. Type: string
-#. Description
-#. :sl2:
-#: ../choose-mirror-bin.templates.http-in:4001
-#: ../choose-mirror-bin.templates.ftp.base-in:2001
-msgid "Debian archive mirror hostname:"
-msgstr "Isem n usenneftaɣ n tisit n uɣbalu n Debian:"
-
-#. Type: string
-#. Description
-#. :sl1:
-#. Type: string
-#. Description
-#. :sl2:
-#: ../choose-mirror-bin.templates.http-in:4001
-#: ../choose-mirror-bin.templates.ftp.base-in:2001
-msgid ""
-"Please enter the hostname of the mirror from which Debian will be downloaded."
-msgstr ""
-"Ttxil-k·m sekcem isem n usenneftaɣ n tisit seg wanda i d-yettusader Debian."
-
-#. Type: string
-#. Description
-#. :sl1:
-#. Type: string
-#. Description
-#. :sl2:
-#: ../choose-mirror-bin.templates.http-in:4001
-#: ../choose-mirror-bin.templates.ftp.base-in:2001
-msgid ""
-"An alternate port can be specified using the standard [hostname]:[port] "
-"format."
-msgstr ""
-"Tawwurt-nniḍen yezmer ad yettufren s useqdec n umasal alugen [hostname]:"
-"[port]."
-
-#. Type: string
-#. Description
-#. :sl1:
-#: ../choose-mirror-bin.templates.http-in:6001
-msgid "HTTP proxy information (blank for none):"
-msgstr "Talɣut ɣef upṛuksi n HTTP (d lem i ulac):"
-
-#. Type: string
-#. Description
-#. :sl1:
-#: ../choose-mirror-bin.templates.http-in:6001
-msgid ""
-"If you need to use a HTTP proxy to access the outside world, enter the proxy "
-"information here. Otherwise, leave this blank."
-msgstr ""
-"Ma yella ilaq ad tesqedceḍ apṛuksi HTTP i unekcum ɣer umaḍal n beṛṛa, sekcem "
-"talɣut n upṛuksi dagi. Neɣ ma ulac, eǧǧ urti-a d ilem."
-
-#. Type: string
-#. Description
-#. :sl1:
-#. Type: string
-#. Description
-#. :sl2:
-#: ../choose-mirror-bin.templates.http-in:6001
-#: ../choose-mirror-bin.templates.ftp.base-in:4001
-msgid ""
-"The proxy information should be given in the standard form of \"http://"
-"[[user][:pass]@]host[:port]/\"."
-msgstr ""
-"Talɣut n upṛuksi ilaq ad ttunefken s talɣa taslugant n \"http://[[user][:"
-"pass]@]host[:port]/\"."
-
-#. #-#-#-#-#  templates.pot (net-retriever)  #-#-#-#-#
-#. Type: select
-#. Choices
-#. These are choices of actions so this is, at least in English,
-#. an infinitive form
-#. :sl2:
-#. #-#-#-#-#  templates.pot (cdebconf)  #-#-#-#-#
-#. Type: text
-#. Description
-#. Translators, this text will appear on a button, so KEEP IT SHORT
-#. :sl1:
-#. #-#-#-#-#  templates.pot (mdcfg)  #-#-#-#-#
-#. Type: select
-#. Choices
-#. :sl3:
-#. Type: select
-#. Choices
-#. :sl3:
-#: ../net-retriever.templates:1001 ../cdebconf-newt-udeb.templates:5001
-#: ../mdcfg-utils.templates:6001 ../mdcfg-utils.templates:13001
-msgid "Cancel"
-msgstr "Sefsex"
-
-#. Type: text
-#. Description
 #. Main menu item
 #. Translators: keep below 55 columns
 #. :sl1:
-#: ../load-cdrom.templates:1001
-msgid "Load installer components from installation media"
-msgstr "Sali-d isuddas n usebdad seg umidyat n usebded"
+#: ../nobootloader.templates:1001
+msgid "Continue without boot loader"
+msgstr "Kemmel s war asalay n usenker"
 
+#. #-#-#-#-#  templates.pot (partman-auto)  #-#-#-#-#
 #. Type: text
 #. Description
 #. :sl1:
-#: ../partman-base.templates:1001
-msgid "Starting up the partitioner"
-msgstr "Beddu n beṭṭu"
-
 #. #-#-#-#-#  templates.pot (partman-base)  #-#-#-#-#
 #. Type: text
 #. Description
@@ -2092,14 +3423,184 @@ msgstr "Beddu n beṭṭu"
 #. Type: text
 #. Description
 #. :sl2:
-#. #-#-#-#-#  templates.pot (partman-auto)  #-#-#-#-#
+#: ../partman-auto.templates:1001 ../partman-base.templates:2001
+#: ../partman-base.templates:25001
+msgid "Please wait..."
+msgstr "Ttxil-k·m rǧu..."
+
 #. Type: text
 #. Description
 #. :sl1:
-#: ../partman-base.templates:2001 ../partman-base.templates:25001
-#: ../partman-auto.templates:1001
-msgid "Please wait..."
-msgstr "Ttxil-k·m rǧu..."
+#: ../partman-auto.templates:2001
+msgid "Computing the new partitions..."
+msgstr "Asiḍen n yiḥricen imaynuten…"
+
+#. Type: select
+#. Description
+#. :sl1:
+#. Type: select
+#. Description
+#. :sl1:
+#: ../partman-auto.templates:5001 ../partman-auto.templates:9001
+msgid "Partitioning method:"
+msgstr "Tarrayt n beṭṭu:"
+
+#. Type: select
+#. Description
+#. :sl1:
+#: ../partman-auto.templates:5001
+msgid ""
+"The installer can guide you through partitioning a disk (using different "
+"standard schemes) or, if you prefer, you can do it manually. With guided "
+"partitioning you will still have a chance later to review and customise the "
+"results."
+msgstr ""
+"Asebdad yezmer ad ak·akem-iwelleh mi ara tebduḍ aḍebsi (s useqdec n yizenzaɣ "
+"isluganen yemdarraden) neɣ, ma yella tesmenyafeḍ, ad t-tgeḍ s ufus. S "
+"uwelleh n beṭṭu, ad ak·am-tili tegnit mbeɛd i usenqed d usagen n yigmaḍ."
+
+#. Type: select
+#. Description
+#. :sl1:
+#. Type: select
+#. Description
+#. :sl1:
+#: ../partman-auto.templates:5001 ../partman-auto.templates:9001
+msgid ""
+"If you choose guided partitioning for an entire disk, you will next be asked "
+"which disk should be used."
+msgstr ""
+"Ma yella tferneḍ beṭṭu yettuwellhen i uḍebsi s lekmal-is, ɣer sdat ad "
+"tettusutreḍ anwa aḍebsi i ilaq ad yettuseqdec."
+
+#. Type: select
+#. Description
+#. :sl1:
+#: ../partman-auto.templates:10001
+msgid "Partitioning scheme:"
+msgstr "Azenziɣ n beṭṭu:"
+
+#. Type: select
+#. Description
+#. :sl1:
+#. "Selected for partitioning" can be either an entire disk
+#. of "the largest continuous free space" on an existing disk
+#. TRANSLATORS, please take care to choose something appropriate for both
+#.
+#. It is followed by a variable giving the chosen disk, hence the colon
+#. at the end of the sentence. Please keep it.
+#: ../partman-auto.templates:10001
+msgid "Selected for partitioning:"
+msgstr "Yettufren i beṭṭu:"
+
+#. Type: select
+#. Description
+#. :sl1:
+#: ../partman-auto.templates:10001
+msgid ""
+"The disk can be partitioned using one of several different schemes. If you "
+"are unsure, choose the first one."
+msgstr ""
+"Aḍebsi yezmer ad yettwabḍu s useqdec n yiwen seg uzenzaɣ yemgarraden. Ma "
+"yella ur tethiqeḍ ara, fren amezwaru deg-sen."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
+#: ../partman-auto.templates:14001
+msgid "Guided partitioning"
+msgstr "Beṭṭu yettuwelhen"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
+#: ../partman-auto.templates:15001
+msgid "Guided - use the largest continuous free space"
+msgstr "Yettuwelleh - seqdec tallunt tilellit tahrawant yettkemmilen"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
+#: ../partman-auto.templates:16001
+msgid "Guided - use entire disk"
+msgstr "Yettuwelleh - seqdec akk aḍebsi"
+
+#. Type: select
+#. Description
+#. :sl1:
+#: ../partman-auto.templates:17001
+msgid "Select disk to partition:"
+msgstr "Fren aḍebsi i beṭṭu:"
+
+#. Type: select
+#. Description
+#. :sl1:
+#: ../partman-auto.templates:17001
+msgid ""
+"Note that all data on the disk you select will be erased, but not before you "
+"have confirmed that you really want to make the changes."
+msgstr ""
+"Ẓer belli meṛṛa isefka ɣef uḍebsi i tferneḍ ad ttusefḍen, maca mačči uqbel "
+"ad tesnetmeḍ belli tebɣiḍ ad tgeḍ isenfal."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
+#. This is a method for partioning - as in guided (automatic) versus manual
+#: ../partman-auto.templates:18001
+msgid "Manual"
+msgstr "Awfus"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
+#: ../partman-auto.templates:19001
+msgid "Automatically partition the free space"
+msgstr "Beṭṭu n tallunt tilellit s wudem awurman"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
+#: ../partman-auto.templates:20001
+msgid "All files in one partition (recommended for new users)"
+msgstr "Meṛṛa ifuyla deg yiwen uḥric (yelha i yiseqdac imaynuten)"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
+#: ../partman-auto.templates:21001
+msgid "Separate /home partition"
+msgstr "Aḥric yettuɛezlen/agejan"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
+#: ../partman-auto.templates:22001
+msgid "Separate /home, /var, and /tmp partitions"
+msgstr "Iḥricen yettuɛezlen /home, var/d /tmp"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
+#: ../partman-auto-lvm.templates:1001
+msgid "Guided - use entire disk and set up LVM"
+msgstr "Yettuwelleh - seqdec akk aḍebsi syen sbadu LVM"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../partman-base.templates:1001
+msgid "Starting up the partitioner"
+msgstr "Beddu n beṭṭu"
 
 #. Type: text
 #. Description
@@ -2350,165 +3851,6 @@ msgstr "Iḍebsiyen n uḥric"
 
 #. Type: text
 #. Description
-#. :sl1:
-#: ../partman-auto.templates:2001
-msgid "Computing the new partitions..."
-msgstr "Asiḍen n yiḥricen imaynuten…"
-
-#. Type: select
-#. Description
-#. :sl1:
-#. Type: select
-#. Description
-#. :sl1:
-#: ../partman-auto.templates:5001 ../partman-auto.templates:9001
-msgid "Partitioning method:"
-msgstr "Tarrayt n beṭṭu:"
-
-#. Type: select
-#. Description
-#. :sl1:
-#: ../partman-auto.templates:5001
-msgid ""
-"The installer can guide you through partitioning a disk (using different "
-"standard schemes) or, if you prefer, you can do it manually. With guided "
-"partitioning you will still have a chance later to review and customise the "
-"results."
-msgstr ""
-"Asebdad yezmer ad ak·akem-iwelleh mi ara tebduḍ aḍebsi (s useqdec n yizenzaɣ "
-"isluganen yemdarraden) neɣ, ma yella tesmenyafeḍ, ad t-tgeḍ s ufus. S "
-"uwelleh n beṭṭu, ad ak·am-tili tegnit mbeɛd i usenqed d usagen n yigmaḍ."
-
-#. Type: select
-#. Description
-#. :sl1:
-#. Type: select
-#. Description
-#. :sl1:
-#: ../partman-auto.templates:5001 ../partman-auto.templates:9001
-msgid ""
-"If you choose guided partitioning for an entire disk, you will next be asked "
-"which disk should be used."
-msgstr ""
-"Ma yella tferneḍ beṭṭu yettuwellhen i uḍebsi s lekmal-is, ɣer sdat ad "
-"tettusutreḍ anwa aḍebsi i ilaq ad yettuseqdec."
-
-#. Type: select
-#. Description
-#. :sl1:
-#: ../partman-auto.templates:10001
-msgid "Partitioning scheme:"
-msgstr "Azenziɣ n beṭṭu:"
-
-#. Type: select
-#. Description
-#. :sl1:
-#. "Selected for partitioning" can be either an entire disk
-#. of "the largest continuous free space" on an existing disk
-#. TRANSLATORS, please take care to choose something appropriate for both
-#.
-#. It is followed by a variable giving the chosen disk, hence the colon
-#. at the end of the sentence. Please keep it.
-#: ../partman-auto.templates:10001
-msgid "Selected for partitioning:"
-msgstr "Yettufren i beṭṭu:"
-
-#. Type: select
-#. Description
-#. :sl1:
-#: ../partman-auto.templates:10001
-msgid ""
-"The disk can be partitioned using one of several different schemes. If you "
-"are unsure, choose the first one."
-msgstr ""
-"Aḍebsi yezmer ad yettwabḍu s useqdec n yiwen seg uzenzaɣ yemgarraden. Ma "
-"yella ur tethiqeḍ ara, fren amezwaru deg-sen."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
-#: ../partman-auto.templates:14001
-msgid "Guided partitioning"
-msgstr "Beṭṭu yettuwelhen"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
-#: ../partman-auto.templates:15001
-msgid "Guided - use the largest continuous free space"
-msgstr "Yettuwelleh - seqdec tallunt tilellit tahrawant yettkemmilen"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
-#: ../partman-auto.templates:16001
-msgid "Guided - use entire disk"
-msgstr "Yettuwelleh - seqdec akk aḍebsi"
-
-#. Type: select
-#. Description
-#. :sl1:
-#: ../partman-auto.templates:17001
-msgid "Select disk to partition:"
-msgstr "Fren aḍebsi i beṭṭu:"
-
-#. Type: select
-#. Description
-#. :sl1:
-#: ../partman-auto.templates:17001
-msgid ""
-"Note that all data on the disk you select will be erased, but not before you "
-"have confirmed that you really want to make the changes."
-msgstr ""
-"Ẓer belli meṛṛa isefka ɣef uḍebsi i tferneḍ ad ttusefḍen, maca mačči uqbel "
-"ad tesnetmeḍ belli tebɣiḍ ad tgeḍ isenfal."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
-#. This is a method for partioning - as in guided (automatic) versus manual
-#: ../partman-auto.templates:18001
-msgid "Manual"
-msgstr "Awfus"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
-#: ../partman-auto.templates:19001
-msgid "Automatically partition the free space"
-msgstr "Beṭṭu n tallunt tilellit s wudem awurman"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
-#: ../partman-auto.templates:20001
-msgid "All files in one partition (recommended for new users)"
-msgstr "Meṛṛa ifuyla deg yiwen uḥric (yelha i yiseqdac imaynuten)"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
-#: ../partman-auto.templates:21001
-msgid "Separate /home partition"
-msgstr "Aḥric yettuɛezlen/agejan"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
-#: ../partman-auto.templates:22001
-msgid "Separate /home, /var, and /tmp partitions"
-msgstr "Iḥricen yettuɛezlen /home, var/d /tmp"
-
-#. Type: text
-#. Description
 #. short variant of `do not use the partition'
 #. :sl1:
 #: ../partman-basicmethods.templates:7001
@@ -2530,66 +3872,6 @@ msgstr "amasal"
 #: ../partman-basicmethods.templates:11001
 msgid "keep"
 msgstr "eǧǧ"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../partman-partitioning.templates:2001
-msgid "Computing the new state of the partition table..."
-msgstr "Siḍen addad amaynut n tfelwit n uḥric..."
-
-#. Type: select
-#. Choices
-#. :sl1:
-#: ../partman-partitioning.templates:12001
-msgid "Beginning"
-msgstr "Beddu"
-
-#. Type: select
-#. Choices
-#. :sl1:
-#: ../partman-partitioning.templates:12001
-msgid "End"
-msgstr "Fin"
-
-#. Type: select
-#. Description
-#. :sl1:
-#: ../partman-partitioning.templates:12002
-msgid "Location for the new partition:"
-msgstr "Ideg n uḥric amaynut:"
-
-#. Type: select
-#. Description
-#. :sl1:
-#: ../partman-partitioning.templates:12002
-msgid ""
-"Please choose whether you want the new partition to be created at the "
-"beginning or at the end of the available space."
-msgstr ""
-"Ttxil-k·m fren ma yella amek i tebɣiḍ aḥric amaynut ad yettwarnu, deg "
-"tazwara neɣ deg taggara n tallunt yellan."
-
-#. Type: select
-#. Choices
-#. :sl1:
-#: ../partman-partitioning.templates:13001
-msgid "Primary"
-msgstr "Agejdan"
-
-#. Type: select
-#. Choices
-#. :sl1:
-#: ../partman-partitioning.templates:13001
-msgid "Logical"
-msgstr "Tameẓla"
-
-#. Type: select
-#. Description
-#. :sl1:
-#: ../partman-partitioning.templates:13002
-msgid "Type for the new partition:"
-msgstr "Anaw n uḥric amaynut:"
 
 #. Type: text
 #. Description
@@ -2679,6 +3961,44 @@ msgstr "swap"
 
 #. Type: text
 #. Description
+#. :sl2:
+#. File system name (untranslatable in many languages)
+#. Type: text
+#. Description
+#. :sl1:
+#. Short file system name (untranslatable in many languages)
+#: ../partman-btrfs.templates:1001 ../partman-btrfs.templates:3001
+msgid "btrfs"
+msgstr "btrfs"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Type: text
+#. Description
+#. :sl1:
+#: ../partman-efi.templates:2001 ../partman-efi.templates:4001
+msgid "EFI System Partition"
+msgstr "Aḥric n unagraw EFI"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. short variant of 'EFI System Partition'
+#. Up to 10 character positions
+#: ../partman-efi.templates:5001
+msgid "ESP"
+msgstr "ESP"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../partman-efi.templates:7001
+msgid "EFI-fat16"
+msgstr "EFI-fat16"
+
+#. Type: text
+#. Description
 #. :sl1:
 #. File system name (untranslatable in many languages)
 #. Type: text
@@ -2703,18 +4023,6 @@ msgstr "ext4"
 
 #. Type: text
 #. Description
-#. :sl2:
-#. File system name (untranslatable in many languages)
-#. Type: text
-#. Description
-#. :sl1:
-#. Short file system name (untranslatable in many languages)
-#: ../partman-btrfs.templates:1001 ../partman-btrfs.templates:3001
-msgid "btrfs"
-msgstr "btrfs"
-
-#. Type: text
-#. Description
 #. :sl1:
 #. File system name (untranslatable in many languages)
 #. Type: text
@@ -2727,15 +4035,63 @@ msgstr "jfs"
 
 #. Type: text
 #. Description
-#. :sl2:
-#. File system name (untranslatable in many languages)
-#. Type: text
+#. :sl1:
+#: ../partman-partitioning.templates:2001
+msgid "Computing the new state of the partition table..."
+msgstr "Siḍen addad amaynut n tfelwit n uḥric..."
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../partman-partitioning.templates:12001
+msgid "Beginning"
+msgstr "Beddu"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../partman-partitioning.templates:12001
+msgid "End"
+msgstr "Fin"
+
+#. Type: select
 #. Description
 #. :sl1:
-#. Short file system name (untranslatable in many languages)
-#: ../partman-xfs.templates:1001 ../partman-xfs.templates:3001
-msgid "xfs"
-msgstr "xfs"
+#: ../partman-partitioning.templates:12002
+msgid "Location for the new partition:"
+msgstr "Ideg n uḥric amaynut:"
+
+#. Type: select
+#. Description
+#. :sl1:
+#: ../partman-partitioning.templates:12002
+msgid ""
+"Please choose whether you want the new partition to be created at the "
+"beginning or at the end of the available space."
+msgstr ""
+"Ttxil-k·m fren ma yella amek i tebɣiḍ aḥric amaynut ad yettwarnu, deg "
+"tazwara neɣ deg taggara n tallunt yellan."
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../partman-partitioning.templates:13001
+msgid "Primary"
+msgstr "Agejdan"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../partman-partitioning.templates:13001
+msgid "Logical"
+msgstr "Tameẓla"
+
+#. Type: select
+#. Description
+#. :sl1:
+#: ../partman-partitioning.templates:13002
+msgid "Type for the new partition:"
+msgstr "Anaw n uḥric amaynut:"
 
 #. Type: note
 #. Description
@@ -2843,29 +4199,72 @@ msgstr ""
 
 #. Type: text
 #. Description
-#. :sl1:
+#. :sl2:
+#. File system name (untranslatable in many languages)
 #. Type: text
 #. Description
 #. :sl1:
-#: ../partman-efi.templates:2001 ../partman-efi.templates:4001
-msgid "EFI System Partition"
-msgstr "Aḥric n unagraw EFI"
+#. Short file system name (untranslatable in many languages)
+#: ../partman-xfs.templates:1001 ../partman-xfs.templates:3001
+msgid "xfs"
+msgstr "xfs"
+
+#. Type: text
+#. Description
+#. Main menu item
+#. should not be more than 55 columns
+#. pkgsel is the module that installs packages by running tasksel to
+#. select "tasks". Please use "install *software*" and not
+#. "install *packages*" which is less adapted for non technical users
+#. :sl1:
+#: ../pkgsel.templates:1001
+msgid "Select and install software"
+msgstr "Fren syen sebded aseɣzan"
+
+#. Type: text
+#. Description
+#. This appears in a progress bar when running pkgsel
+#. The text is used when pkgsel is launched, before it installs packages
+#. :sl1:
+#: ../pkgsel.templates:2001
+msgid "Setting up..."
+msgstr "Asebded..."
+
+#. Type: text
+#. Description
+#. This appears in a progress bar when running pkgsel
+#. The text is used when upgrading already installed packages.
+#. :sl1:
+#: ../pkgsel.templates:5001
+msgid "Upgrading software..."
+msgstr "Aleqqem n useɣzan..."
+
+#. Type: text
+#. Description
+#. This appears in a progress bar when running pkgsel
+#. The text is used when running tasksel to allow selecting packages
+#. Tasksel will then display its own screens
+#. :sl1:
+#: ../pkgsel.templates:6001
+msgid "Running tasksel..."
+msgstr "Aselkem n tasksel..."
+
+#. Type: text
+#. Description
+#. This appears in a progress bar when running pkgsel
+#. The text is used at the end of the installation phase while
+#. cleaning up pkgsel's stuff
+#. :sl1:
+#: ../pkgsel.templates:7001
+msgid "Cleaning up..."
+msgstr "Asizdeg..."
 
 #. Type: text
 #. Description
 #. :sl1:
-#. short variant of 'EFI System Partition'
-#. Up to 10 character positions
-#: ../partman-efi.templates:5001
-msgid "ESP"
-msgstr "ESP"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../partman-efi.templates:7001
-msgid "EFI-fat16"
-msgstr "EFI-fat16"
+#: ../rescue-mode.templates:1001
+msgid "Enter rescue mode"
+msgstr "Err askar n usellek"
 
 #. Type: text
 #. Description
@@ -2874,894 +4273,6 @@ msgstr "EFI-fat16"
 #: ../tzsetup-udeb.templates:1001
 msgid "Saving the time zone..."
 msgstr "Asekles n temnaḍat takudant..."
-
-#. Type: text
-#. Description
-#. Main menu item
-#. Translators: keep below 55 columns
-#. :sl1:
-#: ../clock-setup.templates:1001
-msgid "Configure the clock"
-msgstr "Swel amasrag"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../clock-setup.templates:2001
-msgid "Is the system clock set to UTC?"
-msgstr "Anagraw n umasrag yettusbadu ɣer UTC?"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../clock-setup.templates:2001
-msgid ""
-"System clocks are generally set to Coordinated Universal Time (UTC). The "
-"operating system uses your time zone to convert system time into local time. "
-"This is recommended unless you also use another operating system that "
-"expects the clock to be set to local time."
-msgstr ""
-"Imasragen n unagraw ttusbadun s umata ɣer wakud agreɣlan amsideg (UTC). "
-"Anagraw n wammud iseqdac tamnaḍt-inek·inem takudant i wakken ad iselket akud "
-"n unagraw ɣer wakud adigan. Aya yettuwelleh-d, ala ma yella tseqdaceḍ "
-"anagraw-nniḍen n wammud ara yeṛǧun asbadu n umasrag ɣer wakud adigan."
-
-#. Type: text
-#. Description
-#. progress bar item
-#. :sl1:
-#: ../clock-setup.templates:3001
-msgid "Configuring clock settings..."
-msgstr "Aswel n yiɣewwaren n umasrag..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../clock-setup.templates:4001
-msgid "Setting up the clock"
-msgstr "Aswel n umasrag"
-
-#. Type: text
-#. Description
-#. progress bar item
-#. :sl1:
-#: ../clock-setup.templates:7001
-msgid "Getting the time from a network time server..."
-msgstr "Awway n wakuf seg uqeddac n wakud n uzeṭṭa..."
-
-#. Type: text
-#. Description
-#. progress bar item
-#. :sl1:
-#: ../clock-setup.templates:8001
-msgid "Setting the hardware clock..."
-msgstr "Iɣewwaren n umasrag n warrum..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../base-installer.templates:4001
-msgid "Preparing to install the base system..."
-msgstr "Aheyyi i usebded n unagraw n taffa..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../base-installer.templates:5001 ../bootstrap-base.templates:30001
-msgid "Installing the base system"
-msgstr "Asebded n unagraw n taffa"
-
-#. #-#-#-#-#  templates.pot (base-installer)  #-#-#-#-#
-#. Type: text
-#. Description
-#. :sl1:
-#. #-#-#-#-#  templates.pot (apt-setup)  #-#-#-#-#
-#. Type: text
-#. Description
-#. :sl2:
-#. #-#-#-#-#  templates.pot (pkgsel)  #-#-#-#-#
-#. Type: text
-#. Description
-#. :sl2:
-#. #-#-#-#-#  templates.pot (finish-install)  #-#-#-#-#
-#. Type: text
-#. Description
-#. :sl1:
-#: ../base-installer.templates:6001 ../apt-setup-udeb.templates:3001
-#: ../pkgsel.templates:9001 ../finish-install.templates:3001
-msgid "Running ${SCRIPT}..."
-msgstr "Aselkem n ${SCRIPT}..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../base-installer.templates:7001
-msgid "Setting up the base system..."
-msgstr "Aswel n unagraw n taffa..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../base-installer.templates:8001 ../bootstrap-base.templates:59001
-msgid "Configuring APT sources..."
-msgstr "Tiɣbula n uswel n APT..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../base-installer.templates:9001
-msgid "Updating the list of available packages..."
-msgstr "Aleqqem tabdart n yikemmusen i yellan..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../base-installer.templates:10001
-msgid "Installing extra packages..."
-msgstr "Asebded n yikemmusen-nniḍen..."
-
-#. Type: text
-#. Description
-#. SUBST0 is a package name
-#. :sl1:
-#: ../base-installer.templates:11001
-msgid "Installing extra packages - retrieving and installing ${SUBST0}..."
-msgstr "Asebded n yikemmusen-nniḍen - tiririt d usebded ${SUBST0}..."
-
-#. Type: text
-#. Description
-#. Item in the main menu to select this package
-#. TRANSLATORS: <65 columns
-#. :sl1:
-#: ../bootstrap-base.templates:1001
-msgid "Install the base system"
-msgstr "Sebded n unagraw n taffa"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. Release is a filename which should not be translated
-#: ../bootstrap-base.templates:23001
-msgid "Retrieving Release file"
-msgstr "Tiririt n ufaylu n lqem"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. Release is a filename which should not be translated
-#: ../bootstrap-base.templates:24001
-msgid "Retrieving Release file signature"
-msgstr "Tiririt n uzmul n ufaylu n lqem"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. "packages" here can be translated
-#: ../bootstrap-base.templates:25001
-msgid "Finding package sizes"
-msgstr "Tifin n tiddiwin n yikemmusen"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. Packages is a filename which should not be translated
-#: ../bootstrap-base.templates:26001
-msgid "Retrieving Packages files"
-msgstr "Tiririt n yifuyla n yikemmusen"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. Packages is a filename which should not be translated
-#: ../bootstrap-base.templates:27001
-msgid "Retrieving Packages file"
-msgstr "Tiririt n ufaylu n yikemmusen"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. "packages" here can be translated
-#: ../bootstrap-base.templates:28001
-msgid "Retrieving packages"
-msgstr "Tiririt n yikemmusen"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. "packages" here can be translated
-#: ../bootstrap-base.templates:29001
-msgid "Extracting packages"
-msgstr "Asuffeɣ n yikemmusen"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. Core packages are packages that are part of the Debian base system
-#. The "core" packages are indeed packages that are specifically
-#. recorded as part of the base system. Other packages may
-#. be installed on the base system because of dependency resolution
-#: ../bootstrap-base.templates:31001
-msgid "Installing core packages"
-msgstr "Asebded n yikemmusen igejdanen"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. Required packages are packages which installation is triggered
-#. by the dependency chain of core packages
-#. In short, they are "required" because at least one of the
-#. packages from the core packages depends on them
-#: ../bootstrap-base.templates:32001
-msgid "Unpacking required packages"
-msgstr "Asefruri n yikemmusen yettusran"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../bootstrap-base.templates:33001
-msgid "Configuring required packages"
-msgstr "Aswel n yikemmusen yettusran"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. The base system is the minimal Debian system
-#. See http://www.debian.org/doc/debian-policy/ch-binary.html#s3.7
-#: ../bootstrap-base.templates:34001
-msgid "Unpacking the base system"
-msgstr "Asefruri n unagraw n taffa"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. The base system is the minimal Debian system
-#. See http://www.debian.org/doc/debian-policy/ch-binary.html#s3.7
-#: ../bootstrap-base.templates:35001
-msgid "Configuring the base system"
-msgstr "Aswel n unagraw n taffa"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../bootstrap-base.templates:36001
-msgid "${SECTION}: ${INFO}..."
-msgstr "${SECTION}: ${INFO}..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. SUBST0 is a package name
-#: ../bootstrap-base.templates:37001
-msgid "Validating ${SUBST0}..."
-msgstr "Aseɣbel ${SUBST0}..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. SUBST0 is a package name
-#: ../bootstrap-base.templates:38001
-msgid "Retrieving ${SUBST0}..."
-msgstr "Tiririt ${SUBST0}..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. SUBST0 is a package name
-#: ../bootstrap-base.templates:39001
-msgid "Extracting ${SUBST0}..."
-msgstr "Asuffeɣ ${SUBST0}..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. SUBST0 is a package name
-#: ../bootstrap-base.templates:40001
-msgid "Unpacking ${SUBST0}..."
-msgstr "Asefruri ${SUBST0}..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. SUBST0 is a package name
-#: ../bootstrap-base.templates:41001
-msgid "Configuring ${SUBST0}..."
-msgstr "Aswel ${SUBST0}..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. Release is a filename which should not be translated
-#: ../bootstrap-base.templates:42001
-msgid "Checking Release signature"
-msgstr "Asenqed n uzmul n lqem"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. SUBST0 is a gpg key id
-#. Release is a filename which should not be translated
-#: ../bootstrap-base.templates:43001
-msgid "Valid Release signature (key id ${SUBST0})"
-msgstr "Azmul n lqem ameɣtu (asulay n tsarut ${SUBST0})"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../bootstrap-base.templates:44001
-msgid "Resolving dependencies of base packages..."
-msgstr "Ferru n tugal n yikemmusen n taffa..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. SUBST0 is a list of packages
-#: ../bootstrap-base.templates:45001
-msgid "Found additional base dependencies: ${SUBST0}"
-msgstr "Af-d tugal-nniḍen n taffa: ${SUBST0}"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. SUBST0 is a list of packages
-#: ../bootstrap-base.templates:46001
-msgid "Found additional required dependencies: ${SUBST0}"
-msgstr "Af-d tugal-nniḍen yettusran: ${SUBST0}"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. SUBST0 is a list of packages
-#: ../bootstrap-base.templates:47001
-msgid "Found packages in base already in required: ${SUBST0}"
-msgstr "Ikemmusen yettwafen yakan deg taffa ttusran: ${SUBST0}"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../bootstrap-base.templates:48001
-msgid "Resolving dependencies of required packages..."
-msgstr "Ferru n tugal n yikemmusen yettusran..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. SUBST0 is an archive component (main, etc)
-#. SUBST1 is a mirror
-#: ../bootstrap-base.templates:49001
-msgid "Checking component ${SUBST0} on ${SUBST1}..."
-msgstr "Asenqed n usuddis ${SUBST0} ɣef ${SUBST1}..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. Core packages are packages that are part of the Debian base system
-#. The "core" packages are indeed packages that are specifically
-#. recorded as part of the base system. Other packages may
-#. be installed on the base system because of dependency resolution
-#: ../bootstrap-base.templates:50001
-msgid "Installing core packages..."
-msgstr "Asebded n yikemmusen igejdanen..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. Required packages are packages which installation is triggered
-#. by the dependency chain of core packages
-#. In short, they are "required" because at least one of the
-#. packages from the core packages depends on them
-#: ../bootstrap-base.templates:51001
-msgid "Unpacking required packages..."
-msgstr "Asefruri n yikemmusen yettusran..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. Required packages are packages which installation is triggered
-#. by the dependency chain of core packages
-#. In short, they are "required" because at least one of the
-#. packages from the core packages depends on them
-#: ../bootstrap-base.templates:52001
-msgid "Configuring required packages..."
-msgstr "Aswel n yikemmusen yettusran..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../bootstrap-base.templates:53001
-msgid "Installing base packages..."
-msgstr "Asebded n yikemmusen n taffa..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../bootstrap-base.templates:54001
-msgid "Unpacking the base system..."
-msgstr "Asefruri n unagraw n taffa..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../bootstrap-base.templates:55001
-msgid "Configuring the base system..."
-msgstr "Aswel n unagraw n taffa..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../bootstrap-base.templates:56001
-msgid "Base system installed successfully."
-msgstr "Anagraw n taffa yettusebded akken iwata."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../bootstrap-base.templates:60001
-msgid "Selecting the kernel to install..."
-msgstr "Fren iɣes i usebded..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../bootstrap-base.templates:61001
-msgid "Installing the kernel..."
-msgstr "Asebded n yiɣes..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. SUBST0 is a package name
-#: ../bootstrap-base.templates:62001
-msgid "Installing the kernel - retrieving and installing ${SUBST0}..."
-msgstr "Asebded n kernel - tiririt d usebded ${SUBST0}..."
-
-#. Type: text
-#. Description
-#. Main menu item
-#. MUST be kept below 55 characters/columns
-#. :sl1:
-#: ../apt-setup-udeb.templates:1001
-msgid "Configure the package manager"
-msgstr "Wwel amsefrak n yikemmusen"
-
-#. Type: text
-#. Description
-#. Translators, "apt" is the program name
-#. so please do NOT translate it
-#. :sl1:
-#: ../apt-setup-udeb.templates:2001
-msgid "Configuring apt"
-msgstr "Aswel n apt"
-
-#. Type: multiselect
-#. Choices
-#. SEC_HOST is a host name (e.g. security.debian.org)
-#. Translators: the *entire* string should be under 55 columns
-#. including host name. In short, KEEP THIS SHORT and, yes, that's tricky
-#. :sl1:
-#: ../apt-setup-udeb.templates:11001
-msgid "security updates (from ${SEC_HOST})"
-msgstr "ileqman n tɣellist (seg ${SEC_HOST})"
-
-#. Type: multiselect
-#. Choices
-#. SEC_HOST is a host name (e.g. security.debian.org)
-#. Translators: the *entire* string should be under 55 columns
-#. including host name. In short, KEEP THIS SHORT and, yes, that's tricky
-#. :sl1:
-#: ../apt-setup-udeb.templates:11001
-msgid "release updates"
-msgstr "ileqqman n lqem"
-
-#. Type: multiselect
-#. Choices
-#. SEC_HOST is a host name (e.g. security.debian.org)
-#. Translators: the *entire* string should be under 55 columns
-#. including host name. In short, KEEP THIS SHORT and, yes, that's tricky
-#. :sl1:
-#: ../apt-setup-udeb.templates:11001
-msgid "backported software"
-msgstr "Ittwabdel lqem yezrin n useɣẓan"
-
-#. Type: multiselect
-#. Description
-#. :sl1:
-#: ../apt-setup-udeb.templates:11002
-msgid "Services to use:"
-msgstr "Imeẓla i useqdec:"
-
-#. Type: multiselect
-#. Description
-#. :sl1:
-#: ../apt-setup-udeb.templates:11002
-msgid ""
-"Debian has two services that provide updates to releases: security and "
-"release updates."
-msgstr ""
-"Debian ɣur-s sin yibenkan i yettmuddun ileqman i lqem: taɣellist d yileqman "
-"n lqem."
-
-#. Type: multiselect
-#. Description
-#. :sl1:
-#: ../apt-setup-udeb.templates:11002
-msgid ""
-"Security updates help to keep your system secured against attacks. Enabling "
-"this service is strongly recommended."
-msgstr ""
-"Ileqman n tɣellist ttɛawanen ad yeqqim unagraw-inek·inem d aɣellsan mgal "
-"aẓdam. Armad n umeẓlu-a yettuwelleh-d fell-as s waṭas."
-
-#. Type: multiselect
-#. Description
-#. :sl1:
-#: ../apt-setup-udeb.templates:11002
-msgid ""
-"Release updates provide more current versions for software that changes "
-"relatively frequently and where not having the latest version could reduce "
-"the usability of the software. It also provides regression fixes. This "
-"service is only available for stable and oldstable releases."
-msgstr ""
-"Ileqman n lqem ttmuddun-d ileqman ineggura akk i yiseɣẓanen i yettbeddilen s "
-"waṭas sya ɣer da, syen ma yella ulac lqem aneggaru akk izmer ad isenqes deg "
-"tezmert n useqdec yelhan n useɣzan. Yettmuddu-d daɣen tifrat n ukaray. "
-"Aqeddac-a yella kan i yileqman urkiden d yiqburen."
-
-#. Type: multiselect
-#. Description
-#. :sl1:
-#: ../apt-setup-udeb.templates:11002
-msgid ""
-"Backported software are adapted from the development version to work with "
-"this release. Although this software has not gone through such complete "
-"testing as that contained in the release, it includes newer versions of some "
-"applications which may provide useful features. Enabling backports here does "
-"not cause any of them to be installed by default; it only allows you to "
-"manually select backports to use."
-msgstr ""
-"Iseɣẓan ibedlen lqem yezrin ttuleqmen seg lqem n usnefli i wakken ad ddun d "
-"lqem-a. Ɣas akken aseɣẓan-a ur yettusekyed ara s wudem ummid am tid yellan "
-"deg lqem, llan deg-s ileqman imaynuten ineggura n kra n yisnasen i izemren "
-"ad d-mudden timahlin inefɛen. Armad n backports dagi ur d-igellu ara s "
-"usebded ula n yiwen deg-sen s wudem amezwer; ad ak·akem-yeǧǧ ad tferneḍ s "
-"ufus backports ara tesqedceḍ."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:1001
-msgid "Scanning the installation media..."
-msgstr "Asmiḍen n umidya n usebded..."
-
-#. Type: error
-#. Description
-#. :sl2:
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:2001 ../apt-cdrom-setup.templates:6001
-msgid ""
-"An attempt to configure apt to install additional packages from the media "
-"failed."
-msgstr ""
-"Aneɣruḍ n uswel n apt i usebded n yikemmusen-nniḍen seg umidyat yecceḍ."
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#. Type: boolean
-#. Description
-#. :sl1:
-#. Type: boolean
-#. Description
-#. :sl1:
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:3001 ../apt-cdrom-setup.templates:4001
-#: ../apt-cdrom-setup.templates:5001 ../apt-cdrom-setup.templates:6001
-msgid "Scan extra installation media?"
-msgstr "Smiḍen amidyat n usebded wayeḍ?"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:3001
-msgid "Scanning your installation media finds the label:"
-msgstr "Asiḍen n umidyat-inek·inem n usebded yufa tabzimt:"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:3001
-msgid ""
-"You now have the option of scanning additional media for use by the package "
-"manager (apt). Normally these should be from the same set as the one you "
-"booted from. If you do not have any additional media, this step can just be "
-"skipped."
-msgstr ""
-"Tura tesɛiḍ taxtiṛit n usmiḍen n umidyat-nniḍen i useqdec n umsefrak n "
-"ukemmus (apt). Yewwi-d ad ilin seg widen yettusbadun iseg tesnekreḍ tazwara. "
-"Ma yella ur tesɛiḍ ara akk amidyat-nniḍen, amecwar-a tzemreḍ ad as-tanfeḍ."
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:3001 ../apt-cdrom-setup.templates:4001
-msgid "If you wish to scan more media, please insert another one now."
-msgstr ""
-"Ma yella tebɣiḍ ad tsiminḍeḍ ugar n yimidyaten, ttxil-k·m err wayeḍ-nniḍen "
-"tura."
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:4001
-msgid "The image with the following label has been scanned:"
-msgstr "Tugna s tebzimt-a tettusmiḍen:"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:5001
-msgid "The image with the following label has already been scanned:"
-msgstr "Tugna s tebzimt-a tettusmiḍen yakan:"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:5001
-msgid "Please replace it now, if you wish to scan another."
-msgstr "Ttxil-k·m beddel-it tura, ma yella tebɣiḍ ad tesmiḍneḍ wayeḍ."
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:6001
-msgid "Please check that the media has been inserted correctly."
-msgstr "Ttxil-k·m senqed ma yella amidyat yettwarr akken iwata."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:7001
-msgid "Media change"
-msgstr "Asenfel n umidyat"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:7001
-msgid "Please insert the media labeled '${LABEL}' and press enter."
-msgstr "Ttxil-k·m err amidyat i yesɛan tabzimt '${LABEL}' syen sit ɣef Enter."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. finish-install progress bar item
-#: ../apt-cdrom-setup.templates:8001
-msgid "Disabling netinst CD in sources.list..."
-msgstr "Asensi n CD netinst deg sources.list..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../apt-cdrom-setup.templates:9001 ../apt-mirror-setup.templates:6001
-msgid ""
-"If you are installing from a netinst CD image and choose not to use a "
-"mirror, you will end up with only a very minimal base system."
-msgstr ""
-"Ma yella tsebdadeḍ seg tugna n CD netinst yerna tferneḍ ur tseqdaceḍ ara "
-"tisit, deg taggara ad d-tafeḍ iman-ik·im s unagraw n taffa adday maḍi."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:10001
-msgid ""
-"You are installing from a netinst CD image, which by itself only allows "
-"installation of a very minimal base system. Use a mirror to install a more "
-"complete system."
-msgstr ""
-"Tsebdadeḍ seg tugna n CD netinst, i yettaǧǧan s timmad-is ala asebded n "
-"unagraw n taffa adday maḍi. Seqdec tisit i usebded n ungraw yemmden ugar."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:11001
-msgid ""
-"You are installing from an image which contains a limited selection of "
-"packages."
-msgstr "La tsebdadeḍ seg tugna i yesɛan tafrant n yikemmusen yesɛan talast."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. The value of %i can be 2 or 3
-#: ../apt-cdrom-setup.templates:12001
-#, no-c-format
-msgid ""
-"You have scanned %i images. Even though these contain a fair selection of "
-"packages, some may be missing (notably some packages needed to support "
-"languages other than English)."
-msgstr ""
-"Tesmiḍneḍ %i. Ɣas akken deg-sent tafrant meqqren n yikemmusen, zemren ad "
-"xaṣṣen kra ( ula d kra n yikemmusen i ilaqen i usefrek n tutlayin-nniḍen ur "
-"nelli d taglizt)."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. The value of %i can be from 4 to 8
-#: ../apt-cdrom-setup.templates:13001
-#, no-c-format
-msgid ""
-"You have scanned %i images. Even though these contain a large selection of "
-"packages, some may be missing."
-msgstr ""
-"Tesmiḍneḍ %i n tugniwin. Ɣas akken deg-sent tafrant meqqren n yikemmusen, "
-"zemren ad xaṣṣen kra."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:14001
-msgid ""
-"Note that using a mirror can result in a large amount of data being "
-"downloaded during the next step of the installation."
-msgstr ""
-"Ẓer belli aseqdec n tisit yezmer ad d-yeglu s usader n waṭas n yisefka deg "
-"umecwar i d-iteddun n usebded."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:15001
-msgid ""
-"You are installing from a DVD image. Even though it contains a large "
-"selection of packages, some may be missing."
-msgstr ""
-"Tsebdadeḍ seg tugna n DVD. Ɣas akken deg-s tafrant meqqren n yikemmusen, "
-"zemren ad xaṣṣen kra."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:16001
-msgid ""
-"Unless you don't have a good Internet connection, use of a mirror is "
-"recommended, especially if you plan to install a graphical desktop "
-"environment."
-msgstr ""
-"Ma yella ur tesɛiḍ ara tuqqna n internet igerrzen, aseqdec n tisit ilaq, "
-"aṭas ma yella teheyyaḍ ad tesbeddeḍ tawennaḍt n tnarit tudlift."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:17001
-msgid ""
-"If you have a reasonably good Internet connection, use of a mirror is "
-"suggested if you plan to install a graphical desktop environment."
-msgstr ""
-"Ma yella tesɛiḍ tuqqna n internet igerrzen, aseqdec n tisit yettwasumer ma "
-"yella tettheyyiḍ ad tesbeddeḍ tawennaḍt n tnarit tudlift."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../apt-mirror-setup.templates:1001
-msgid "Scanning the mirror..."
-msgstr "Asmiḍen n tisit..."
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-mirror-setup.templates:2001
-msgid "Use non-free software?"
-msgstr "Seqdec aseɣẓan ur nelli d ilelli?"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-mirror-setup.templates:2001
-msgid ""
-"Some non-free software has been made to work with Debian. Though this "
-"software is not at all a part of Debian, standard Debian tools can be used "
-"to install it. This software has varying licenses which may prevent you from "
-"using, modifying, or sharing it."
-msgstr ""
-"Kra n yiseɣẓan ur nelli d ilelliyen ttufeṣlen i wakken ad ddun akked Debian. "
-"Ɣas akken aseɣẓan-a mačči d amur seg Debian, ifecka n Debian isluganen "
-"zemren ad ttusqedcen i usebded-ines. Aseɣẓan-a yesɛa turagin yemgarraden i "
-"izemren ur ak·akem-ttaǧǧant ara ad t-tesqedceḍ, ad t-tbeddleḍ neɣ ad t-"
-"tebduḍ."
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#. Type: boolean
-#. Description
-#. This template is used by the Ubuntu version of d-i.
-#. :sl2:
-#: ../apt-mirror-setup.templates:2001 ../apt-mirror-setup.templates-ubuntu:1001
-msgid "Please choose whether you want to have it available anyway."
-msgstr "Ttxil-k·m fren ma yella tebɣiḍ ad yili ɣas akken."
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-mirror-setup.templates:3001
-msgid "Use contrib software?"
-msgstr "Seqdec aseɣẓan contrib ?"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-mirror-setup.templates:3001
-msgid ""
-"Some additional software has been made to work with Debian. Though this "
-"software is free, it depends on non-free software for its operation. This "
-"software is not a part of Debian, but standard Debian tools can be used to "
-"install it."
-msgstr ""
-"Kra n yiseɣẓan-nniḍen ttufeṣlen i wakken ad ddun d Debian. Ɣas akken aseɣẓan-"
-"a d ilelli, maca yesra aseɣẓan ur nelli d ilelli i wakken ad yeddu. Aseɣzan-"
-"a mačči d amur seg Debian maca ifecka n Debian isluganen zemren ad "
-"ttusqedcen i usebded-ines."
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#. Type: boolean
-#. Description
-#. This template is used by the Ubuntu version of d-i.
-#. :sl2:
-#. Type: boolean
-#. Description
-#. This template is used by the Ubuntu version of d-i.
-#. :sl2:
-#. Type: boolean
-#. Description
-#. This template is used by the Ubuntu version of d-i.
-#. :sl2:
-#. Type: boolean
-#. Description
-#. This template is used by the Ubuntu version of d-i.
-#. :sl2:
-#: ../apt-mirror-setup.templates:3001 ../apt-mirror-setup.templates-ubuntu:2001
-#: ../apt-mirror-setup.templates-ubuntu:3001
-#: ../apt-mirror-setup.templates-ubuntu:4001
-#: ../apt-mirror-setup.templates-ubuntu:5001
-msgid ""
-"Please choose whether you want this software to be made available to you."
-msgstr "Ttxil-k·m fren ma yella tebɣiḍ aseɣẓan-a ad yili ilmendad-inek·inem."
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-mirror-setup.templates:5001
-msgid "Use a network mirror?"
-msgstr "Seqdec tisit n uzeṭṭa?"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-mirror-setup.templates:5001
-msgid ""
-"A network mirror can be used to supplement the software that is included on "
-"the installation media. This may also make newer versions of software "
-"available."
-msgstr ""
-"Tisit n uzeṭṭa tezmer ad tettuseqdec i wakken ad iɛɛar aseɣẓan i d-yeddan "
-"deg umidyat n usebded. Aya yezmer ad yerr ileqman imaynuten ineggura n "
-"useɣẓan ad ttilin."
 
 #. Type: boolean
 #. Description
@@ -3839,26 +4350,6 @@ msgstr ""
 msgid "Note that you will not be able to see the password as you type it."
 msgstr ""
 "Ẓer belli ur tettizmireḍ ara ad twaliḍ awal n uɛeddi akken i t-tettaruḍ."
-
-#. #-#-#-#-#  templates.pot (user-setup)  #-#-#-#-#
-#. Type: password
-#. Description
-#. :sl1:
-#. Type: password
-#. Description
-#. :sl1:
-#. #-#-#-#-#  templates.pot (grub-installer)  #-#-#-#-#
-#. Type: password
-#. Description
-#. :sl2:
-#. #-#-#-#-#  templates.pot (network-console)  #-#-#-#-#
-#. Type: password
-#. Description
-#. :sl3:
-#: ../user-setup-udeb.templates:7001 ../user-setup-udeb.templates:14001
-#: ../grub-installer.templates:10001 ../network-console.templates:5001
-msgid "Re-enter password to verify:"
-msgstr "Ales asekcem n wawal n uɛeddi i usenqed:"
 
 #. Type: password
 #. Description
@@ -3957,497 +4448,6 @@ msgstr "Swel iseqdacen d wawalen uffiren"
 #: ../user-setup-udeb.templates:19001
 msgid "Setting users and passwords..."
 msgstr "Asbadu n yiseqdac d wawalen uffiren..."
-
-#. Type: text
-#. Description
-#. Translators, this text will appear on a button, so KEEP IT SHORT
-#. :sl1:
-#: ../cdebconf-newt-udeb.templates:1001 ../cdebconf-gtk-udeb.templates:1001
-msgid "Continue"
-msgstr "Kemmel"
-
-#. Type: text
-#. Description
-#. Translators, this text will appear on a button, so KEEP IT SHORT
-#. :sl1:
-#: ../cdebconf-newt-udeb.templates:2001 ../cdebconf-gtk-udeb.templates:2001
-msgid "Go Back"
-msgstr "Uɣal ɣer deffir"
-
-#. Type: text
-#. Description
-#. Translators, this text will appear on a button, so KEEP IT SHORT
-#. :sl1:
-#. Type: text
-#. Description
-#. :sl4:
-#: ../cdebconf-newt-udeb.templates:3001 ../cdebconf-gtk-udeb.templates:3001
-#: ../cdebconf-slang-udeb.templates:1001 ../cdebconf-text-udeb.templates:10001
-msgid "Yes"
-msgstr "Ih"
-
-#. Type: text
-#. Description
-#. Translators, this text will appear on a button, so KEEP IT SHORT
-#. :sl1:
-#. Type: text
-#. Description
-#. :sl4:
-#: ../cdebconf-newt-udeb.templates:4001 ../cdebconf-gtk-udeb.templates:4001
-#: ../cdebconf-slang-udeb.templates:2001 ../cdebconf-text-udeb.templates:11001
-msgid "No"
-msgstr "Ala"
-
-#. Type: text
-#. Description
-#. Help line displayed at the bottom of the cdebconf newt interface.
-#. Translators: must fit within 80 characters.
-#. :sl1:
-#: ../cdebconf-newt-udeb.templates:6001
-msgid "<Tab> moves; <Space> selects; <Enter> activates buttons"
-msgstr "<Tab> tilḥin; <Space> afran; <Enter> armad tiqeffalin"
-
-#. Type: text
-#. Description
-#. Help line displayed at the bottom of the cdebconf newt interface.
-#. Translators: must fit within 80 characters.
-#. :sl1:
-#: ../cdebconf-newt-udeb.templates:7001
-msgid "<F1> for help; <Tab> moves; <Space> selects; <Enter> activates buttons"
-msgstr "<F1> i tallelt; <Tab> tilḥin; <Space> afran; <Enter> armad tiqeffalin"
-
-#. Type: text
-#. Description
-#. Appears as a checkbox in the newt and GTK interfaces.
-#. :sl1:
-#: ../cdebconf-newt-udeb.templates:8001 ../cdebconf-gtk-udeb.templates:9001
-msgid "Show Password in Clear"
-msgstr "Sken awal n uɛeddi ufriẓ"
-
-#. Type: text
-#. Description
-#. Translators, this text will appear on a button, so KEEP IT SHORT
-#. :sl1:
-#: ../cdebconf-gtk-udeb.templates:5001
-msgid "Help"
-msgstr "Tallelt"
-
-#. Type: text
-#. Description
-#. TRANSLATORS: This should be "translated" to "RTL" or "LTR" depending of
-#. default text direction of your language
-#. LTR: Left to Right (Latin, Cyrillic, CJK, Indic...)
-#. RTL: Right To Left (Arabic, Hebrew, Persian...)
-#. DO NOT USE ANYTHING ELSE
-#. :sl1:
-#: ../cdebconf-gtk-udeb.templates:6001
-msgid "LTR"
-msgstr "LTR"
-
-#. Type: text
-#. Description
-#. Translators, this text will appear on a button, so KEEP IT SHORT
-#. This button will allow users to virtually "shoot a picture"
-#. of the screen
-#. :sl1:
-#: ../cdebconf-gtk-udeb.templates:7001
-msgid "Screenshot"
-msgstr "Tuṭṭfa n ugdil"
-
-#. Type: text
-#. Description
-#. Text that will appear in a dialog box mentioning which file
-#. the screenshot has been saved to. "%s" is a file name here
-#. :sl1:
-#: ../cdebconf-gtk-udeb.templates:8001
-#, no-c-format
-msgid "Screenshot saved as %s"
-msgstr "Tuṭṭfa n ugdil tettwasekles am %s"
-
-#. Type: text
-#. Description
-#. Main menu item
-#. should not be more than 55 columns
-#. pkgsel is the module that installs packages by running tasksel to
-#. select "tasks". Please use "install *software*" and not
-#. "install *packages*" which is less adapted for non technical users
-#. :sl1:
-#: ../pkgsel.templates:1001
-msgid "Select and install software"
-msgstr "Fren syen sebded aseɣzan"
-
-#. Type: text
-#. Description
-#. This appears in a progress bar when running pkgsel
-#. The text is used when pkgsel is launched, before it installs packages
-#. :sl1:
-#: ../pkgsel.templates:2001
-msgid "Setting up..."
-msgstr "Asebded..."
-
-#. Type: text
-#. Description
-#. This appears in a progress bar when running pkgsel
-#. The text is used when upgrading already installed packages.
-#. :sl1:
-#: ../pkgsel.templates:5001
-msgid "Upgrading software..."
-msgstr "Aleqqem n useɣzan..."
-
-#. Type: text
-#. Description
-#. This appears in a progress bar when running pkgsel
-#. The text is used when running tasksel to allow selecting packages
-#. Tasksel will then display its own screens
-#. :sl1:
-#: ../pkgsel.templates:6001
-msgid "Running tasksel..."
-msgstr "Aselkem n tasksel..."
-
-#. Type: text
-#. Description
-#. This appears in a progress bar when running pkgsel
-#. The text is used at the end of the installation phase while
-#. cleaning up pkgsel's stuff
-#. :sl1:
-#: ../pkgsel.templates:7001
-msgid "Cleaning up..."
-msgstr "Asizdeg..."
-
-#. Type: text
-#. Description
-#. Main menu item
-#. Translators: keep below 55 columns
-#. :sl1:
-#: ../finish-install.templates:1001
-msgid "Finish the installation"
-msgstr "Kemmel akked usebded"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../finish-install.templates:2001
-msgid "Finishing the installation"
-msgstr "Kemmel akked usebded"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../finish-install.templates:4001
-msgid "Configuring network..."
-msgstr "Swel azeṭṭa..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../finish-install.templates:5001
-msgid "Setting up frame buffer..."
-msgstr "Asebded n tkatut tilmi..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../finish-install.templates:6001
-msgid "Unmounting file systems..."
-msgstr "Tukksa n userkeb n yinagrawen n yifuyla..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../finish-install.templates:7001
-msgid "Rebooting into your new system..."
-msgstr "Ales tanekra s ugraw-inek·inem amaynut..."
-
-#. Type: note
-#. Description
-#. :sl1:
-#: ../finish-install.templates:8001
-msgid "Installation complete"
-msgstr "Asebded immed"
-
-#. Type: note
-#. Description
-#. :sl1:
-#: ../finish-install.templates:8001
-msgid ""
-"Installation is complete, so it is time to boot into your new system. Make "
-"sure to remove the installation media, so that you boot into the new system "
-"rather than restarting the installation."
-msgstr ""
-"Asebded yemmed, ihi d lawan ad tesnekkreḍ deg unagraw-inek·inem amaynut. "
-"Ḍmen tekkseḍ-d amidyat n usebded i wakken ad tesnekreḍ deg unagraw amaynut "
-"anawlu ad talseḍ asenker n usebded."
-
-#. Type: text
-#. Description
-#. Main menu item
-#. Translators: keep below 55 columns
-#. :sl1:
-#: ../nobootloader.templates:1001
-msgid "Continue without boot loader"
-msgstr "Kemmel s war asalay n usenker"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:1001 ../grub-installer.templates:2001
-msgid "Install the GRUB boot loader to your primary drive?"
-msgstr "Sebded amsalay n usenker GRUB ɣef uḍebsi ameqqran?"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:1001
-msgid ""
-"The following other operating systems have been detected on this computer: "
-"${OS_LIST}"
-msgstr "Inagrawen-a-nniḍen n wammud ttwafen ɣef uselkim-a: ${OS_LIST}"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:1001
-msgid ""
-"If all of your operating systems are listed above, then it should be safe to "
-"install the boot loader to your primary drive (UEFI partition/boot record). "
-"When your computer boots, you will be able to choose to load one of these "
-"operating systems or the newly installed Debian system."
-msgstr ""
-"Ma yella meṛṛa inagrawen-inek·inem n wammud ttwabdaren-d ddaw-a, ilqa ad "
-"tḍemneḍ asebded n usalay n usenker ɣef yimeɣri-inek·inem agejdan (aḥric UEFI/"
-"asekles n usenker). Mi ara yekker uselkim-inek·inem, tzemreḍ ad tferneḍ ad d-"
-"tsaliḍ yiwen se yinagrawen-a n wammud neɣ anagraw n Debian i yettusbedden "
-"melmi kan."
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:2001
-msgid ""
-"It seems that this new installation is the only operating system on this "
-"computer. If so, it should be safe to install the GRUB boot loader to your "
-"primary drive (UEFI partition/boot record)."
-msgstr ""
-"Asebdad amaynut yettban d netta kan i d anagraw n wammud i yellan deg "
-"uselkim-a. Ma yella d tidet waya, ilaq ad yettusebded usebdad n usenkar n "
-"GRUB s ttawil ɣef umeɣri-inek·inem agejdan (aḥric UEFI/asekles n usenker)."
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:2001
-msgid ""
-"Warning: If your computer has another operating system that the installer "
-"failed to detect, this will make that operating system temporarily "
-"unbootable, though GRUB can be manually configured later to boot it."
-msgstr ""
-"Ɣur-k·m: Ma yella aselkim-inek·inem deg-s anagraw-nniḍen n wammud win ideg "
-"yecceḍ usebdad ad t-id-yaf, aya ad yerr anagraw-nni n wammud mačči n usekker "
-"i kra n wakud. GRUB yezmer ad yettuswel mbeɛd i wakken ad yettusenker."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:18001
-msgid "Installing GRUB boot loader"
-msgstr "Asebded amsalay n usenker GRUB"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:19001
-msgid "Looking for other operating systems..."
-msgstr "Tamuɣli ɣef yinagrawen-nniḍen n wammud..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:20001
-msgid "Installing the '${GRUB}' package..."
-msgstr "Asebded n ukemmus '${GRUB}'..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:21001
-msgid "Determining GRUB boot device..."
-msgstr "Aguccel n yibenk n usenker n GRUB..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:22001
-msgid "Running \"grub-install ${BOOTDEV}\"..."
-msgstr "Aseddu n \"grub-install ${BOOTDEV}\"..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:23001
-msgid "Running \"update-grub\"..."
-msgstr "Aseddu \"update-grub\"..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:24001
-msgid "Updating /etc/kernel-img.conf..."
-msgstr "Aleqqem /etc/kernel-img.conf..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:25001
-msgid "Checking whether to force usage of the removable media path"
-msgstr "Asenqed ma yella ad nḥettem aseqdec n ubrid n umidyat aziraz"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:26001
-msgid "Mounting filesystems"
-msgstr "Aserkeb n unagraw n yifuyla"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:27001
-msgid "Configuring grub-efi for future usage of the removable media path"
-msgstr "Aswel n grub-efi i useqdec i d-iteddun n ubrid n umidyat aziraz"
-
-#. Type: text
-#. Description
-#. Main menu item
-#. Translators: keep below 55 columns
-#. :sl1:
-#: ../grub-installer.templates:28001
-msgid "Install the GRUB boot loader"
-msgstr "Asebded amsalay n usenker GRUB"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:34001
-msgid "Force GRUB installation to the EFI removable media path?"
-msgstr "Ḥettem asebded n GRUB ɣef ubrid n umidya aziraz EFI?"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:34001
-msgid ""
-"It seems that this computer is configured to boot via EFI, but maybe that "
-"configuration will not work for booting from the hard drive. Some EFI "
-"firmware implementations do not meet the EFI specification (i.e. they are "
-"buggy!) and do not support proper configuration of boot options from system "
-"hard drives."
-msgstr ""
-"Yettban uselkim-a yettuswel i wakken ad yekker s EFI, maca ahat tawila-a ur "
-"tetteddu ara i usenkar seg yibenk aqquran. Kra seg yisebdaden n ufreɣẓan EFI "
-"ur d-ttarrant ara i ilugan n EFI (anamek-is ttwabugin!) Yerna ur sefraken "
-"ara tawila tameɣtut n textiṛiyin n usenker seg yinuḍaf iqquranen n unagraw."
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:34001
-msgid ""
-"A workaround for this problem is to install an extra copy of the EFI version "
-"of the GRUB boot loader to a fallback location, the \"removable media path"
-"\". Almost all EFI systems, no matter how buggy, will boot GRUB that way."
-msgstr ""
-"Tifrat-nniḍen i wugur-a tettezzi deg usebded n unɣal-nniḍen n lqem EFI n "
-"usalay n usenker deg yideg n usellek, d \"abrid n umidyat aziraz\". Tuget n "
-"yinagrawen EFI, ɣas akken llant tucḍiwin deg-sen, senkarayen GRUB s tarrayt-"
-"a."
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:34001
-msgid ""
-"Warning: If the installer failed to detect another operating system that is "
-"present on your computer that also depends on this fallback, installing GRUB "
-"there will make that operating system temporarily unbootable. GRUB can be "
-"manually configured later to boot it if necessary."
-msgstr ""
-"Ɣur-k·m: Ma yella asebdad yecceḍ deg tifin n unagraw-nniḍen n wammud i "
-"yellan deg uselkim-inek·inem i ibedden ɣef tifrat-a n usellek, asebded n "
-"GRUB dinna ad yerr anagraw-nni n wammud mačči n usekker i kra n wakud. GRUB "
-"yezmer ad yettuswel mbeɛd i wakken ad yettusenker ma yella ilaq."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../rescue-mode.templates:1001
-msgid "Enter rescue mode"
-msgstr "Err askar n usellek"
-
-#. Type: text
-#. Description
-#. Main menu item
-#. Translators: keep below 55 columns
-#. :sl1:
-#: ../iso-scan.templates:1001
-msgid "Scan hard drives for an installer ISO image"
-msgstr "Freḍ ibenkan iqquranen i tugna IOS n usebdad"
-
-#. Type: text
-#. Description
-#. Main menu item
-#. Translators: keep below 55 columns
-#. :sl1:
-#: ../save-logs.templates:1001
-msgid "Save debug logs"
-msgstr "Sekles iɣmisen n temseɣtayt"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. finish-install progress bar item
-#: ../save-logs.templates:9001
-msgid "Gathering information for installation report..."
-msgstr "Alqaḍ n telɣut i uneqqis n usebded..."
-
-#. Type: text
-#. Description
-#. Main menu item
-#. Translators: keep below 55 columns
-#. :sl1:
-#: ../mdcfg-utils.templates:1001
-msgid "Configure MD devices"
-msgstr "Swel ibenkan MD"
-
-#. #-#-#-#-#  templates.pot (lvmcfg)  #-#-#-#-#
-#. Type: text
-#. Description
-#. Main menu item
-#. Translators: keep below 55 columns
-#. :sl1:
-#. #-#-#-#-#  templates.pot (partman-lvm)  #-#-#-#-#
-#. Type: text
-#. Description
-#. Type: text
-#. Description
-#. :sl3:
-#. Main menu item
-#. Translators: keep below 55 columns
-#. Use infinitive form
-#: ../lvmcfg.templates:1001 ../partman-lvm.templates:7001
-#: ../partman-lvm.templates:23001
-msgid "Configure the Logical Volume Manager"
-msgstr "Swel amsefrak n ubleɣ ameẓẓul"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
-#: ../partman-auto-lvm.templates:1001
-msgid "Guided - use entire disk and set up LVM"
-msgstr "Yettuwelleh - seqdec akk aḍebsi syen sbadu LVM"
 
 #~ msgid "Continue the install without loading kernel modules?"
 #~ msgstr "Kemmel asebded mebla asali n tɣessa n izegrar?"

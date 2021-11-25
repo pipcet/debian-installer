@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer.2006071\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-24 22:59+0100\n"
+"POT-Creation-Date: 2021-11-21 20:02+0000\n"
 "PO-Revision-Date: 2011-03-01 12:49+0400\n"
 "Last-Translator: Aiet Kolkhi <aietkolkhi@gmail.com>\n"
 "Language-Team: Georgian\n"
@@ -23,57 +23,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0\n"
-
-#. Type: text
-#. Description
-#. eg. Virtual disk 1 (xvda)
-#. :sl4:
-#: ../partman-base.templates:64001
-#, no-c-format
-msgid "Virtual disk %s (%s)"
-msgstr "ვირტუალური დისკი %s (%s)"
-
-#. Type: text
-#. Description
-#. eg. Virtual disk 1, partition #1 (xvda1)
-#. :sl4:
-#: ../partman-base.templates:65001
-#, no-c-format
-msgid "Virtual disk %s, partition #%s (%s)"
-msgstr "ვირტუალური დისკი %s, პარტიცია #%s (%s)"
-
-#. Type: text
-#. Description
-#. :sl4:
-#. Note to translators: Please keep your translations of this string below
-#. a 65 columns limit (which means 65 characters in single-byte languages)
-#: ../partman-basicfilesystems.templates:58001
-msgid "acls - support POSIX.1e Access Control List"
-msgstr "acls - POSIX.1e Access Control List-ის მხარდაჭერა"
-
-#. Type: text
-#. Description
-#. :sl4:
-#. Note to translators: Please keep your translations of this string below
-#. a 65 columns limit (which means 65 characters in single-byte languages)
-#: ../partman-basicfilesystems.templates:59001
-msgid "shortnames - only use the old MS-DOS 8.3 style filenames"
-msgstr "shortnames - MS-DOS 8.3 ძველი სტილის ფაილის მოკლე სახელები"
-
-#. Type: text
-#. Description
-#. :sl4:
-#: ../partman-target.templates:3001
-msgid ""
-"In order to start your new system, a so called boot loader is used.  It is "
-"installed in a boot partition.  You must set the bootable flag for the "
-"partition.  Such a partition will be marked with \"${BOOTABLE}\" in the main "
-"partitioning menu."
-msgstr ""
-"კომპიუტერის ჩატვირთვისას სისტემის გაშვებას უზრუნველყოფს ე. წ. სისტემური "
-"ჩამტვირთველი. ის დაყენებულია ჩატვირთვის დანაყოფზე. დაუყენეთ მას ჩატვირთვის "
-"ალამი. ასეთი დანაყოფი დაყოფის მთავარ მენიუში აღნიშნულია როგორც "
-"\"${BOOTABLE}\"."
 
 #. Type: text
 #. Description
@@ -249,24 +198,115 @@ msgid ""
 "'GTK' is a graphical interface that may be used in any graphical environment."
 msgstr ""
 
+#. Type: text
+#. Description
+#. This item is a progress bar heading when the system configures
+#. some flashable memory used by many embedded devices
+#. :sl4:
+#: ../flash-kernel-installer.templates:1001
+msgid "Configuring flash memory to boot the system"
+msgstr "flash-მეხსიერების კონფიგურაცია სისტემის ჩასატვირთად"
+
+#. Type: text
+#. Description
+#. This item is a progress bar heading when an embedded device is
+#. configured so it will boot from disk
+#. :sl4:
+#: ../flash-kernel-installer.templates:2001
+msgid "Making the system bootable"
+msgstr "სისტემის ჩატვირთვადად გარდაქმნა"
+
+#. Type: text
+#. Description
+#. This is "preparing the system" to flash the kernel and initrd
+#. on a flashable memory
+#. :sl4:
+#: ../flash-kernel-installer.templates:3001
+msgid "Preparing the system..."
+msgstr "სისტემის მომზადება..."
+
+#. Type: text
+#. Description
+#. This is a progress bar showing up when the system
+#. write the kernel to the flashable memory of the embedded device
+#. :sl4:
+#: ../flash-kernel-installer.templates:4001
+msgid "Writing the kernel to flash memory..."
+msgstr "კერნელის ფლეშ-მეხსიერებაში ჩაწერა..."
+
+#. Type: text
+#. Description
+#. This is a progress bar showing up when the system generates a
+#. special boot image on disk for some embedded device so they
+#. can boot.
+#. :sl4:
+#: ../flash-kernel-installer.templates:5001
+msgid "Generating boot image on disk..."
+msgstr "დისკზე ჩატვირთვის იმიჯის გენერირება..."
+
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. This item is a menu entry for a step where the system configures
+#. the flashable memory used by many embedded devices
+#. (writing the kernel and initrd to it)
+#. :sl4:
+#: ../flash-kernel-installer.templates:6001
+msgid "Make the system bootable"
+msgstr "სისტემის ჩატვირთვადად გარდაქმნა"
+
+#. Type: boolean
+#. Description
+#. :sl4:
+#: ../grub-installer.templates:17001
+msgid "Install GRUB?"
+msgstr "გსურთ GRUB-ის ინსტალაცია?"
+
+#. Type: boolean
+#. Description
+#. :sl4:
+#: ../grub-installer.templates:17001
+msgid ""
+"GRUB 2 is the next generation of GNU GRUB, the boot loader that is commonly "
+"used on i386/amd64 PCs. It is now also available for ${ARCH}."
+msgstr ""
+"GRUB 2 გახლავთ i386/amd64 პლათფორმებზე ხშირად გამოყენებული ჩამტვირთველის GNU "
+"GRUB-ის შემდეგი თაობა. იგი უკვე თავსებადია ${ARCH}-თან."
+
+#. Type: boolean
+#. Description
+#. :sl4:
+#: ../grub-installer.templates:17001
+msgid ""
+"It has interesting new features but is still experimental software for this "
+"architecture. If you choose to install it, you should be prepared for "
+"breakage, and have an idea on how to recover your system if it becomes "
+"unbootable. You're advised not to try this in production environments."
+msgstr ""
+"მას საინტერესო ახალი ფუნქცია გააჩნია, თუმცა ამ არქიტექტურისათვის მაინც "
+"ექსპერიმენტულ ეტაპზეა. თუ აირჩევთ მის ინსტალაციას, მზად იყავით სისტემის "
+"შეფერხებებისათვის და სისტემის აღდგენისათვის, თუ სისტემა აღარ ჩაიტვირთება. "
+"გირჩევთ ეს კონფიგურაცია სამუშაო სისტემისათვის არ გამოიყენოთ."
+
 #. Type: error
 #. Description
 #. :sl4:
-#: ../nobootloader.templates:2001 ../grub-installer.templates:32001
+#: ../grub-installer.templates:32001 ../nobootloader.templates:2001
 msgid "Failed to mount /target/proc"
 msgstr "შეცდომა დამონტაჟებისას"
 
 #. Type: error
 #. Description
 #. :sl4:
-#: ../nobootloader.templates:2001 ../grub-installer.templates:32001
+#: ../grub-installer.templates:32001 ../nobootloader.templates:2001
 msgid "Mounting the proc file system on /target/proc failed."
 msgstr "proc ფაილური სისტემა ვერ დამონტაჟდა პუნქტზე /target/proc."
 
 #. Type: error
 #. Description
 #. :sl4:
-#: ../nobootloader.templates:2001 ../grub-installer.templates:32001
+#: ../grub-installer.templates:32001 ../nobootloader.templates:2001
 msgid "Warning: Your system may be unbootable!"
 msgstr "ყურადღება! თქვენი სისტემა შეიძლება აღარ ჩაიტვირთოს!"
 
@@ -353,38 +393,41 @@ msgstr ""
 "თუ თქვენ ყოველი დაწყებისას ავტოჩატვირთვა გსურთ, ზემოაღნიშნულის გარდა "
 "შეგიძლიათ შემდეგი ცვლადის დაყენება:"
 
-#. Type: boolean
+#. Type: text
 #. Description
+#. eg. Virtual disk 1 (xvda)
 #. :sl4:
-#: ../grub-installer.templates:17001
-msgid "Install GRUB?"
-msgstr "გსურთ GRUB-ის ინსტალაცია?"
+#: ../partman-base.templates:64001
+#, no-c-format
+msgid "Virtual disk %s (%s)"
+msgstr "ვირტუალური დისკი %s (%s)"
 
-#. Type: boolean
+#. Type: text
 #. Description
+#. eg. Virtual disk 1, partition #1 (xvda1)
 #. :sl4:
-#: ../grub-installer.templates:17001
-msgid ""
-"GRUB 2 is the next generation of GNU GRUB, the boot loader that is commonly "
-"used on i386/amd64 PCs. It is now also available for ${ARCH}."
-msgstr ""
-"GRUB 2 გახლავთ i386/amd64 პლათფორმებზე ხშირად გამოყენებული ჩამტვირთველის GNU "
-"GRUB-ის შემდეგი თაობა. იგი უკვე თავსებადია ${ARCH}-თან."
+#: ../partman-base.templates:65001
+#, no-c-format
+msgid "Virtual disk %s, partition #%s (%s)"
+msgstr "ვირტუალური დისკი %s, პარტიცია #%s (%s)"
 
-#. Type: boolean
+#. Type: text
 #. Description
 #. :sl4:
-#: ../grub-installer.templates:17001
-msgid ""
-"It has interesting new features but is still experimental software for this "
-"architecture. If you choose to install it, you should be prepared for "
-"breakage, and have an idea on how to recover your system if it becomes "
-"unbootable. You're advised not to try this in production environments."
-msgstr ""
-"მას საინტერესო ახალი ფუნქცია გააჩნია, თუმცა ამ არქიტექტურისათვის მაინც "
-"ექსპერიმენტულ ეტაპზეა. თუ აირჩევთ მის ინსტალაციას, მზად იყავით სისტემის "
-"შეფერხებებისათვის და სისტემის აღდგენისათვის, თუ სისტემა აღარ ჩაიტვირთება. "
-"გირჩევთ ეს კონფიგურაცია სამუშაო სისტემისათვის არ გამოიყენოთ."
+#. Note to translators: Please keep your translations of this string below
+#. a 65 columns limit (which means 65 characters in single-byte languages)
+#: ../partman-basicfilesystems.templates:58001
+msgid "acls - support POSIX.1e Access Control List"
+msgstr "acls - POSIX.1e Access Control List-ის მხარდაჭერა"
+
+#. Type: text
+#. Description
+#. :sl4:
+#. Note to translators: Please keep your translations of this string below
+#. a 65 columns limit (which means 65 characters in single-byte languages)
+#: ../partman-basicfilesystems.templates:59001
+msgid "shortnames - only use the old MS-DOS 8.3 style filenames"
+msgstr "shortnames - MS-DOS 8.3 ძველი სტილის ფაილის მოკლე სახელები"
 
 #. Type: text
 #. Description
@@ -559,58 +602,15 @@ msgstr "დავბრუნდეთ დაყოფის მენიუშ�
 
 #. Type: text
 #. Description
-#. This item is a progress bar heading when the system configures
-#. some flashable memory used by many embedded devices
 #. :sl4:
-#: ../flash-kernel-installer.templates:1001
-msgid "Configuring flash memory to boot the system"
-msgstr "flash-მეხსიერების კონფიგურაცია სისტემის ჩასატვირთად"
-
-#. Type: text
-#. Description
-#. This item is a progress bar heading when an embedded device is
-#. configured so it will boot from disk
-#. :sl4:
-#: ../flash-kernel-installer.templates:2001
-msgid "Making the system bootable"
-msgstr "სისტემის ჩატვირთვადად გარდაქმნა"
-
-#. Type: text
-#. Description
-#. This is "preparing the system" to flash the kernel and initrd
-#. on a flashable memory
-#. :sl4:
-#: ../flash-kernel-installer.templates:3001
-msgid "Preparing the system..."
-msgstr "სისტემის მომზადება..."
-
-#. Type: text
-#. Description
-#. This is a progress bar showing up when the system
-#. write the kernel to the flashable memory of the embedded device
-#. :sl4:
-#: ../flash-kernel-installer.templates:4001
-msgid "Writing the kernel to flash memory..."
-msgstr "კერნელის ფლეშ-მეხსიერებაში ჩაწერა..."
-
-#. Type: text
-#. Description
-#. This is a progress bar showing up when the system generates a
-#. special boot image on disk for some embedded device so they
-#. can boot.
-#. :sl4:
-#: ../flash-kernel-installer.templates:5001
-msgid "Generating boot image on disk..."
-msgstr "დისკზე ჩატვირთვის იმიჯის გენერირება..."
-
-#. Type: text
-#. Description
-#. Main menu item
-#. Translators: keep below 55 columns
-#. This item is a menu entry for a step where the system configures
-#. the flashable memory used by many embedded devices
-#. (writing the kernel and initrd to it)
-#. :sl4:
-#: ../flash-kernel-installer.templates:6001
-msgid "Make the system bootable"
-msgstr "სისტემის ჩატვირთვადად გარდაქმნა"
+#: ../partman-target.templates:3001
+msgid ""
+"In order to start your new system, a so called boot loader is used.  It is "
+"installed in a boot partition.  You must set the bootable flag for the "
+"partition.  Such a partition will be marked with \"${BOOTABLE}\" in the main "
+"partitioning menu."
+msgstr ""
+"კომპიუტერის ჩატვირთვისას სისტემის გაშვებას უზრუნველყოფს ე. წ. სისტემური "
+"ჩამტვირთველი. ის დაყენებულია ჩატვირთვის დანაყოფზე. დაუყენეთ მას ჩატვირთვის "
+"ალამი. ასეთი დანაყოფი დაყოფის მთავარ მენიუში აღნიშნულია როგორც "
+"\"${BOOTABLE}\"."

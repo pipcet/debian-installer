@@ -25,7 +25,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-28 20:01+0000\n"
+"POT-Creation-Date: 2021-11-21 20:02+0000\n"
 "Language-Team: Debian L10N Turkish\n"
 "PO-Revision-Date: 2021-06-12 23:25+0300\n"
 "Last-Translator: Fatih Altun <fatih.altun@pardus.org.tr>\n"
@@ -35,6 +35,30 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 1.8.11\n"
+
+#. Type: select
+#. Description
+#: ../apt-setup-udeb.templates:8002
+msgid "Downloading local repository key failed:"
+msgstr "Yerel depo anahtarı indirilemedi:"
+
+#. Type: select
+#. Description
+#: ../apt-setup-udeb.templates:8002
+msgid ""
+"This may be a problem with your network, or with the server hosting this "
+"key. You can choose to retry the download, or ignore the problem and "
+"continue without all the packages from this repository."
+msgstr ""
+"Bu sorun ağınızdan veya kullandığınız yansıdan kaynaklanıyor olabilir. Dosya "
+"indirme işlemini tekrar edebilir veya bu sorunu gözardı ederek bu yansıdaki "
+"tüm paketler olmadan kuruluma devam edebilirsiniz."
+
+#. Type: select
+#. Description
+#: ../keyboard-configuration.templates:16002
+msgid "Keymap to use:"
+msgstr "Kullanılacak klavye düzeni:"
 
 #: ../../mktemplates.continents:15
 msgid "Africa"
@@ -76,72 +100,6 @@ msgstr "Okyanusya"
 msgid "South America"
 msgstr "Güney Amerika"
 
-#. Type: select
-#. Description
-#: ../keyboard-configuration.templates:16002
-msgid "Keymap to use:"
-msgstr "Kullanılacak klavye düzeni:"
-
-#. Type: select
-#. Description
-#: ../apt-setup-udeb.templates:8002
-msgid "Downloading local repository key failed:"
-msgstr "Yerel depo anahtarı indirilemedi:"
-
-#. Type: select
-#. Description
-#: ../apt-setup-udeb.templates:8002
-msgid ""
-"This may be a problem with your network, or with the server hosting this "
-"key. You can choose to retry the download, or ignore the problem and "
-"continue without all the packages from this repository."
-msgstr ""
-"Bu sorun ağınızdan veya kullandığınız yansıdan kaynaklanıyor olabilir. Dosya "
-"indirme işlemini tekrar edebilir veya bu sorunu gözardı ederek bu yansıdaki "
-"tüm paketler olmadan kuruluma devam edebilirsiniz."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../main-menu.templates:1001
-msgid "Debian installer main menu"
-msgstr "Debian kurulum programı ana menüsü"
-
-#. Type: select
-#. Description
-#. :sl1:
-#: ../main-menu.templates:2001
-msgid "Choose the next step in the install process:"
-msgstr "Kurulumun bir sonraki adımını seçin:"
-
-#. Type: text
-#. Description
-#. Main menu item
-#. The translation should not exceed 55 columns except for languages
-#. that are only supported in the graphical version of the installer
-#. :sl1:
-#: ../di-utils-shell.templates:2001
-msgid "Execute a shell"
-msgstr "Bir kabuk çalıştır"
-
-#. Type: text
-#. Description
-#. Main menu item
-#. The translation should not exceed 55 columns except for languages
-#. that are only supported in the graphical version of the installer
-#. :sl1:
-#: ../di-utils-reboot.templates:2001
-msgid "Abort the installation"
-msgstr "Kurulumu iptal et"
-
-#. Type: text
-#. Description
-#. base-installer progress bar item
-#. :sl1:
-#: ../di-utils.templates:1001
-msgid "Registering modules..."
-msgstr "Modüller kaydediliyor..."
-
 #. Type: text
 #. Description
 #. (Progress bar) title displayed when loading udebs
@@ -171,289 +129,1152 @@ msgstr "${PACKAGE} yapılandırılıyor"
 
 #. Type: text
 #. Description
-#. This menu entry may be translated.
-#. However, translators are required to keep "Choose language"
-#. as an alternative separated by the "/" character
-#. Example (french): Choisir la langue/Choose language
+#. Main menu item
+#. MUST be kept below 55 characters/columns
 #. :sl1:
-#: ../localechooser.templates-in:1001
-msgid "Choose language"
-msgstr "Dil seç/Choose language"
+#: ../apt-setup-udeb.templates:1001
+msgid "Configure the package manager"
+msgstr "Paket yöneticisini yapılandır"
 
 #. Type: text
 #. Description
+#. Translators, "apt" is the program name
+#. so please do NOT translate it
+#. :sl1:
+#: ../apt-setup-udeb.templates:2001
+msgid "Configuring apt"
+msgstr "Apt yapılandırılıyor"
+
+#. #-#-#-#-#  templates.pot (apt-setup)  #-#-#-#-#
+#. Type: text
+#. Description
+#. :sl2:
+#. #-#-#-#-#  templates.pot (base-installer)  #-#-#-#-#
+#. Type: text
+#. Description
+#. :sl1:
+#. #-#-#-#-#  templates.pot (finish-install)  #-#-#-#-#
+#. Type: text
+#. Description
+#. :sl1:
+#. #-#-#-#-#  templates.pot (pkgsel)  #-#-#-#-#
+#. Type: text
+#. Description
+#. :sl2:
+#: ../apt-setup-udeb.templates:3001 ../base-installer.templates:6001
+#: ../finish-install.templates:3001 ../pkgsel.templates:9001
+msgid "Running ${SCRIPT}..."
+msgstr "${SCRIPT} çalıştırılıyor..."
+
+#. Type: multiselect
+#. Choices
+#. SEC_HOST is a host name (e.g. security.debian.org)
+#. Translators: the *entire* string should be under 55 columns
+#. including host name. In short, KEEP THIS SHORT and, yes, that's tricky
+#. :sl1:
+#: ../apt-setup-udeb.templates:11001
+msgid "security updates (from ${SEC_HOST})"
+msgstr "güvenlik güncellemeleri (${SEC_HOST} adresinden)"
+
+#. Type: multiselect
+#. Choices
+#. SEC_HOST is a host name (e.g. security.debian.org)
+#. Translators: the *entire* string should be under 55 columns
+#. including host name. In short, KEEP THIS SHORT and, yes, that's tricky
+#. :sl1:
+#: ../apt-setup-udeb.templates:11001
+msgid "release updates"
+msgstr "sürüm güncellemeleri"
+
+#. Type: multiselect
+#. Choices
+#. SEC_HOST is a host name (e.g. security.debian.org)
+#. Translators: the *entire* string should be under 55 columns
+#. including host name. In short, KEEP THIS SHORT and, yes, that's tricky
+#. :sl1:
+#: ../apt-setup-udeb.templates:11001
+msgid "backported software"
+msgstr "uyarlanmış yazılım"
+
+#. Type: multiselect
+#. Description
+#. :sl1:
+#: ../apt-setup-udeb.templates:11002
+msgid "Services to use:"
+msgstr "Kullanılacak hizmetler:"
+
+#. Type: multiselect
+#. Description
+#. :sl1:
+#: ../apt-setup-udeb.templates:11002
+msgid ""
+"Debian has two services that provide updates to releases: security and "
+"release updates."
+msgstr ""
+"Debian, sürüm güncellemeleri için iki farklı hizmete sunar: güvenlik "
+"güncellemeleri ve sürüm güncellemeleri."
+
+#. Type: multiselect
+#. Description
+#. :sl1:
+#: ../apt-setup-udeb.templates:11002
+msgid ""
+"Security updates help to keep your system secured against attacks. Enabling "
+"this service is strongly recommended."
+msgstr ""
+"Güvenlik güncellemeleri sisteminizin saldırılar karşısında güvenli durumda "
+"kalmasına yardımcı olur. Bu hizmeti etkinleştirmeniz şiddetle tavsiye edilir."
+
+#. Type: multiselect
+#. Description
+#. :sl1:
+#: ../apt-setup-udeb.templates:11002
+msgid ""
+"Release updates provide more current versions for software that changes "
+"relatively frequently and where not having the latest version could reduce "
+"the usability of the software. It also provides regression fixes. This "
+"service is only available for stable and oldstable releases."
+msgstr ""
+"Sürüm güncellemeleri, görece sık değişen ve en son sürümünün kullanılmaması "
+"halinde yararı azalan yazılımların daha güncel sürümlerini sağlamaktadır. "
+"Sürüm güncellemeleri aynı zamanda gerileme hatalarının düzeltmelerini de "
+"sağlar.  Bu hizmet yalnızca kararlı ve eskikararlı sürümler için mevcuttur."
+
+#. Type: multiselect
+#. Description
+#. :sl1:
+#: ../apt-setup-udeb.templates:11002
+msgid ""
+"Backported software are adapted from the development version to work with "
+"this release. Although this software has not gone through such complete "
+"testing as that contained in the release, it includes newer versions of some "
+"applications which may provide useful features. Enabling backports here does "
+"not cause any of them to be installed by default; it only allows you to "
+"manually select backports to use."
+msgstr ""
+"Uyarlanmış yazılımlar (backports), bu dağıtım sürümüyle çalışabilmesi için "
+"geliştirme sürümünden uyarlanarak hazırlanmıştır. Uyarlanmış yazılımlar, "
+"mevcut sürümde bulunanlar kadar kapsamlı bir testten geçmemiş olmakla "
+"beraber, yararlı olabilecek özelliklere sahip bazı yeni sürüm programlar "
+"içermektedir. Bu yazılımları etkinleştirmek onların hemen kurulmasına neden "
+"olmaz, yalnızca sizin kullanmak istediğiniz uyarlanmış yazılımları seçmenizi "
+"sağlar."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:1001
+msgid "Scanning the installation media..."
+msgstr "Kurulum medyası taranıyor..."
+
+#. Type: error
+#. Description
+#. :sl2:
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:2001 ../apt-cdrom-setup.templates:6001
+msgid ""
+"An attempt to configure apt to install additional packages from the media "
+"failed."
+msgstr ""
+"Medyadan ek paketler yüklemek için apt'yi yapılandırma girişimi başarısız "
+"oldu."
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#. Type: boolean
+#. Description
+#. :sl1:
+#. Type: boolean
+#. Description
+#. :sl1:
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:3001 ../apt-cdrom-setup.templates:4001
+#: ../apt-cdrom-setup.templates:5001 ../apt-cdrom-setup.templates:6001
+msgid "Scan extra installation media?"
+msgstr "Ekstra kurulum medyası taransın mı?"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:3001
+msgid "Scanning your installation media finds the label:"
+msgstr "Kurulum medyanız tarandığında şu etiket bulunur:"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:3001
+msgid ""
+"You now have the option of scanning additional media for use by the package "
+"manager (apt). Normally these should be from the same set as the one you "
+"booted from. If you do not have any additional media, this step can just be "
+"skipped."
+msgstr ""
+"Artık paket yöneticisi (apt) tarafından kullanılmak üzere ek medya tarama "
+"seçeneğine sahipsiniz. Normalde bunlar, başlattığınız kümeyle aynı kümeden "
+"olmalıdır. Ek medyanız yoksa, bu adım atlanabilir."
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:3001 ../apt-cdrom-setup.templates:4001
+msgid "If you wish to scan more media, please insert another one now."
+msgstr ""
+"Daha fazla medya taramak istiyorsanız, lütfen şimdi bir tane daha ekleyin."
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:4001
+msgid "The image with the following label has been scanned:"
+msgstr "Aşağıdaki etikete sahip medya tarandı:"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:5001
+msgid "The image with the following label has already been scanned:"
+msgstr "Aşağıdaki etikete sahip medya daha önceden taranmış:"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:5001
+msgid "Please replace it now, if you wish to scan another."
+msgstr "Başka bir tarama yapmak istiyorsanız lütfen şimdi değiştirin."
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:6001
+msgid "Please check that the media has been inserted correctly."
+msgstr "Lütfen ortamın doğru yerleştirildiğini kontrol edin."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:7001
+msgid "Media change"
+msgstr "Ortam değişti"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:7001
+msgid "Please insert the media labeled '${LABEL}' and press enter."
+msgstr "Lütfen '${LABEL}' etiketli ortamı yerleştirin ve enter tuşuna basın."
+
+#. Type: text
+#. Description
+#. :sl1:
 #. finish-install progress bar item
-#. :sl1:
-#: ../localechooser.templates-in:6001
-msgid "Storing language..."
-msgstr "Dil ayarı kaydediliyor..."
+#: ../apt-cdrom-setup.templates:8001
+msgid "Disabling netinst CD in sources.list..."
+msgstr "'sources.list' dosyasındaki netinst CD kaydı etkisizleştiriliyor..."
 
-#. Type: title
-#. Description
-#. Displayed as dialog title during language selection
-#. :sl1:
-#: ../localechooser.templates-in:7001
-msgid "Select a language"
-msgstr "Dil seçimi"
-
-#. Type: title
-#. Description
-#. Displayed as dialog title during country selection
-#. :sl1:
-#: ../localechooser.templates-in:8001
-msgid "Select your location"
-msgstr "Konum seçimi"
-
-#. Type: title
-#. Description
-#. Displayed as dialog title during locale selection
-#. :sl1:
-#: ../localechooser.templates-in:9001
-msgid "Configure locales"
-msgstr "Yerel Yapılandırması"
-
-#. Type: note
+#. Type: text
 #. Description
 #. :sl1:
-#: ../localechooser.templates-in:12001
-msgid "Language selection no longer possible"
-msgstr "Dil seçimi artık mümkün değil"
-
-#. Type: note
+#. Type: boolean
 #. Description
-#. :sl1:
-#: ../localechooser.templates-in:12001
+#. :sl2:
+#: ../apt-cdrom-setup.templates:9001 ../apt-mirror-setup.templates:6001
 msgid ""
-"At this point it is no longer possible to change the language for the "
-"installation, but you can still change the country or locale."
+"If you are installing from a netinst CD image and choose not to use a "
+"mirror, you will end up with only a very minimal base system."
 msgstr ""
-"Bu noktadan sonra kurulum için yapılan dil seçimini değiştirmek mümkün "
-"değil, ancak hâlâ ülke ve yereli değiştirebilirsiniz."
+"Bir netinst CD görüntüsünden kurulum yapıyorsanız ve yansı kullanmamayı "
+"seçerseniz, yalnızca çok küçük bir temel sistemle karşılaşacaksınız."
 
-#. Type: note
+#. Type: text
 #. Description
 #. :sl1:
-#: ../localechooser.templates-in:12001
+#: ../apt-cdrom-setup.templates:10001
 msgid ""
-"To select a different language you will need to abort this installation and "
-"reboot the installer."
+"You are installing from a netinst CD image, which by itself only allows "
+"installation of a very minimal base system. Use a mirror to install a more "
+"complete system."
 msgstr ""
-"Başka bir dil seçmek için kurulumu iptal etmeniz ve kurulum programını "
-"yeniden başlatmanız gerekli."
+"Bir netinst CD görüntüsünden kurulum yapıyorsunuz, bu da tek başına çok az "
+"bir temel sistemin kurulumuna izin veriyor. Daha eksiksiz bir sistem kurmak "
+"için bir yansı kullanın."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:11001
+msgid ""
+"You are installing from an image which contains a limited selection of "
+"packages."
+msgstr "Sınırlı sayıda paket içeren bir medyadan kurulum yapıyorsunuz."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. The value of %i can be 2 or 3
+#: ../apt-cdrom-setup.templates:12001
+#, no-c-format
+msgid ""
+"You have scanned %i images. Even though these contain a fair selection of "
+"packages, some may be missing (notably some packages needed to support "
+"languages other than English)."
+msgstr ""
+"%i adet medya tarattınız. Bunlar adil bir paket seçimi içermesine rağmen, "
+"bazıları eksik olabilir (özellikle İngilizce dışındaki dilleri desteklemek "
+"için bazı paketler gereklidir)."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. The value of %i can be from 4 to 8
+#: ../apt-cdrom-setup.templates:13001
+#, no-c-format
+msgid ""
+"You have scanned %i images. Even though these contain a large selection of "
+"packages, some may be missing."
+msgstr ""
+"%i medya taradınız. Bunlar çok çeşitli paketler içermesine rağmen, bazıları "
+"eksik olabilir."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:14001
+msgid ""
+"Note that using a mirror can result in a large amount of data being "
+"downloaded during the next step of the installation."
+msgstr ""
+"Bir yansı kullanmanız halinde bir sonraki kurulum adımında ağ üzerinden "
+"büyük miktarda veri aktarılacağını lütfen unutmayın."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:15001
+msgid ""
+"You are installing from a DVD image. Even though it contains a large "
+"selection of packages, some may be missing."
+msgstr ""
+"Bir DVD görüntüsünden kuruyorsunuz. Çok sayıda paket içermesine rağmen, "
+"bazıları eksik olabilir."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:16001
+msgid ""
+"Unless you don't have a good Internet connection, use of a mirror is "
+"recommended, especially if you plan to install a graphical desktop "
+"environment."
+msgstr ""
+"İyi bir İnternet bağlantısına sahip olmadığınız sürece bir yansı kullanmanız "
+"tavsiye edilir; özellikle bir grafik masaüstü ortamı kurma niyetindeyseniz."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:17001
+msgid ""
+"If you have a reasonably good Internet connection, use of a mirror is "
+"suggested if you plan to install a graphical desktop environment."
+msgstr ""
+"İyi bir İnternet bağlantısına sahipseniz bir yansı kullanmanız tavsiye "
+"edilir; özellikle bir grafik masaüstü ortamı kurma niyetindeyseniz."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../apt-mirror-setup.templates:1001
+msgid "Scanning the mirror..."
+msgstr "Yansı taranıyor..."
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-mirror-setup.templates:2001
+msgid "Use non-free software?"
+msgstr "Özgür olmayan yazılım kullanacak mısınız?"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-mirror-setup.templates:2001
+msgid ""
+"Some non-free software has been made to work with Debian. Though this "
+"software is not at all a part of Debian, standard Debian tools can be used "
+"to install it. This software has varying licenses which may prevent you from "
+"using, modifying, or sharing it."
+msgstr ""
+"Bazı özgür olmayan yazılımlar Debian ile kullanılacak hale getirilmiştir. Bu "
+"yazılımlar Debian'ın bir parçası olmamakla birlikte standart Debian araçları "
+"ile kurulabilirler. Bu yazılımların; onları kullanmanızı, değiştirmenizi ya "
+"da paylaşmanızı kısıtlayan değişik lisansları vardır."
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #. Type: boolean
 #. Description
-#. :sl1:
-#: ../localechooser.templates-in:13001 ../localechooser.templates-in:14001
-msgid "Continue the installation in the selected language?"
-msgstr "Kuruluma seçilen dilde devam edilsin mi?"
+#. This template is used by the Ubuntu version of d-i.
+#. :sl2:
+#: ../apt-mirror-setup.templates:2001 ../apt-mirror-setup.templates-ubuntu:1001
+msgid "Please choose whether you want to have it available anyway."
+msgstr ""
+"Lütfen kullanılabilir olmasını isteyip istemediğiniz konusunda seçiminizi "
+"yapın."
 
 #. Type: boolean
 #. Description
 #. :sl1:
-#: ../localechooser.templates-in:13001
-msgid ""
-"The translation of the installer is incomplete for the selected language."
-msgstr "Kurulum programının seçilen dil için çevirisi bitmemiş."
+#: ../apt-mirror-setup.templates:3001
+msgid "Use contrib software?"
+msgstr "Katkı yazılımlar kullanılsın mı?"
 
 #. Type: boolean
 #. Description
 #. :sl1:
-#: ../localechooser.templates-in:14001
+#: ../apt-mirror-setup.templates:3001
 msgid ""
-"The translation of the installer is not fully complete for the selected "
-"language."
-msgstr "Kurulum programının seçilen dil çevirisi tamamen bitmemiş."
+"Some additional software has been made to work with Debian. Though this "
+"software is free, it depends on non-free software for its operation. This "
+"software is not a part of Debian, but standard Debian tools can be used to "
+"install it."
+msgstr ""
+"Bazı ilave yazılımlar Debian ile çalışabilir hale getirilmiştir. Bu "
+"yazılımlar özgür olmakla birlikte çalışmak için özgür olmayan yazılımlara "
+"bağımlıdırlar. Bu yazılımlar Debian'ın bir parçası değildirler, fakat "
+"standart Debian araçları kullanılarak kurulumları yapılabilir."
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#. Type: boolean
+#. Description
+#. This template is used by the Ubuntu version of d-i.
+#. :sl2:
+#. Type: boolean
+#. Description
+#. This template is used by the Ubuntu version of d-i.
+#. :sl2:
+#. Type: boolean
+#. Description
+#. This template is used by the Ubuntu version of d-i.
+#. :sl2:
+#. Type: boolean
+#. Description
+#. This template is used by the Ubuntu version of d-i.
+#. :sl2:
+#: ../apt-mirror-setup.templates:3001 ../apt-mirror-setup.templates-ubuntu:2001
+#: ../apt-mirror-setup.templates-ubuntu:3001
+#: ../apt-mirror-setup.templates-ubuntu:4001
+#: ../apt-mirror-setup.templates-ubuntu:5001
+msgid ""
+"Please choose whether you want this software to be made available to you."
+msgstr ""
+"Lütfen bu çeşit yazılımların kullanılabilir olması konusunda seçiminizi "
+"yapın."
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-mirror-setup.templates:5001
+msgid "Use a network mirror?"
+msgstr "Bir ağ yansısı kullanılsın mı?"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-mirror-setup.templates:5001
+msgid ""
+"A network mirror can be used to supplement the software that is included on "
+"the installation media. This may also make newer versions of software "
+"available."
+msgstr ""
+"Kurulum medyasında bulunan yazılımı desteklemek için bir ağ aynası "
+"kullanılabilir. Bu ayrıca yazılımın daha yeni sürümlerini kullanılabilir "
+"hale getirebilir."
 
 #. Type: text
 #. Description
 #. :sl1:
-#: ../localechooser.templates-in:15001
-msgid ""
-"This means that there is a significant chance that some dialogs will be "
-"displayed in English instead."
-msgstr ""
-"Bu şu anlama geliyor: Bazı diyaloglar büyük olasılıkla İngilizce "
-"görüntülenecek."
+#: ../base-installer.templates:4001
+msgid "Preparing to install the base system..."
+msgstr "Temel sistem kurulumuna hazırlanılıyor..."
 
 #. Type: text
 #. Description
 #. :sl1:
-#: ../localechooser.templates-in:16001
-msgid ""
-"If you do anything other than a purely default installation, there is a real "
-"chance that some dialogs will be displayed in English instead."
-msgstr ""
-"Eğer tamamıyla öntanımlı kurulumdan başka bir şey yaparsanız, bazı "
-"diyaloglar büyük olasılıkla İngilizce görüntülenecek."
+#: ../base-installer.templates:5001 ../bootstrap-base.templates:30001
+msgid "Installing the base system"
+msgstr "Temel sistem kuruluyor"
 
 #. Type: text
 #. Description
 #. :sl1:
-#: ../localechooser.templates-in:17001
-msgid ""
-"If you continue the installation in the selected language, most dialogs "
-"should be displayed correctly but - especially if you use the more advanced "
-"options of the installer - some may be displayed in English instead."
-msgstr ""
-"Kuruluma seçilen dilde devam ederseniz çoğu diyalog düzgün görüntülenecek, "
-"fakat - özellikle kurulum programının gelişmiş seçeneklerini kullanırsanız - "
-"bazı diyaloglar İngilizce görüntülenebilir."
+#: ../base-installer.templates:7001
+msgid "Setting up the base system..."
+msgstr "Temel sistem kuruluyor..."
 
 #. Type: text
 #. Description
 #. :sl1:
-#: ../localechooser.templates-in:18001
-msgid ""
-"If you continue the installation in the selected language, dialogs should "
-"normally be displayed correctly but - especially if you use the more "
-"advanced options of the installer - there is a slight chance some may be "
-"displayed in English instead."
-msgstr ""
-"Kuruluma seçilen dilde devam ederseniz, diyaloglar düzgün olarak "
-"görüntülenecek; fakat - özellikle de kurulum programının daha gelişmiş "
-"özelliklerini kullanırsanız - bazılarının İngilizce görüntülenme olasılığı - "
-"küçük de olsa - var."
+#: ../base-installer.templates:8001 ../bootstrap-base.templates:59001
+msgid "Configuring APT sources..."
+msgstr "APT kaynakları yapılandırılıyor..."
 
 #. Type: text
 #. Description
 #. :sl1:
-#: ../localechooser.templates-in:19001
-msgid ""
-"The chance that you will actually encounter a dialog that is not translated "
-"into the selected language is extremely small, but it cannot be ruled out "
-"completely."
-msgstr ""
-"Seçilen dile çevrilmemiş bir diyalogla karşılaşma şansınız bir hayli az, "
-"fakat yine de yok sayılamaz."
+#: ../base-installer.templates:9001
+msgid "Updating the list of available packages..."
+msgstr "Mevcut paketlere ilişkin liste güncelleniyor..."
 
 #. Type: text
 #. Description
 #. :sl1:
-#: ../localechooser.templates-in:20001
-msgid ""
-"Unless you have a good understanding of the alternative language, it is "
-"recommended to either select a different language or abort the installation."
-msgstr ""
-"Alternatif dili iyi bilmiyorsanız, farklı bir dil seçmeniz ya da kurulumu "
-"iptal etmeniz tavsiye edilir."
+#: ../base-installer.templates:10001
+msgid "Installing extra packages..."
+msgstr "Ekstra paketler kuruluyor..."
+
+#. Type: text
+#. Description
+#. SUBST0 is a package name
+#. :sl1:
+#: ../base-installer.templates:11001
+msgid "Installing extra packages - retrieving and installing ${SUBST0}..."
+msgstr "Ekstra paketler kuruluyor - ${SUBST0} alınıyor ve kuruluyor..."
+
+#. Type: text
+#. Description
+#. Item in the main menu to select this package
+#. TRANSLATORS: <65 columns
+#. :sl1:
+#: ../bootstrap-base.templates:1001
+msgid "Install the base system"
+msgstr "Temel sistemi kur"
 
 #. Type: text
 #. Description
 #. :sl1:
-#: ../localechooser.templates-in:21001
-msgid ""
-"If you choose not to continue, you will be given the option of selecting a "
-"different language, or you can abort the installation."
+#. Release is a filename which should not be translated
+#: ../bootstrap-base.templates:23001
+msgid "Retrieving Release file"
+msgstr "'Release' dosyası alınıyor"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Release is a filename which should not be translated
+#: ../bootstrap-base.templates:24001
+msgid "Retrieving Release file signature"
+msgstr "'Release' dosyasına ait imza dosyası alınıyor"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. "packages" here can be translated
+#: ../bootstrap-base.templates:25001
+msgid "Finding package sizes"
+msgstr "Paket boyutları bulunuyor"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Packages is a filename which should not be translated
+#: ../bootstrap-base.templates:26001
+msgid "Retrieving Packages files"
+msgstr "'Packages' dosyaları alınıyor"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Packages is a filename which should not be translated
+#: ../bootstrap-base.templates:27001
+msgid "Retrieving Packages file"
+msgstr "'Packages' dosyası alınıyor"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. "packages" here can be translated
+#: ../bootstrap-base.templates:28001
+msgid "Retrieving packages"
+msgstr "Paketler alınıyor"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. "packages" here can be translated
+#: ../bootstrap-base.templates:29001
+msgid "Extracting packages"
+msgstr "Paketler açılıyor"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Core packages are packages that are part of the Debian base system
+#. The "core" packages are indeed packages that are specifically
+#. recorded as part of the base system. Other packages may
+#. be installed on the base system because of dependency resolution
+#: ../bootstrap-base.templates:31001
+msgid "Installing core packages"
+msgstr "Ana paketler kuruluyor"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Required packages are packages which installation is triggered
+#. by the dependency chain of core packages
+#. In short, they are "required" because at least one of the
+#. packages from the core packages depends on them
+#: ../bootstrap-base.templates:32001
+msgid "Unpacking required packages"
+msgstr "Gerekli paketler açılıyor"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../bootstrap-base.templates:33001
+msgid "Configuring required packages"
+msgstr "Gerekli paketler yapılandırılıyor"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. The base system is the minimal Debian system
+#. See http://www.debian.org/doc/debian-policy/ch-binary.html#s3.7
+#: ../bootstrap-base.templates:34001
+msgid "Unpacking the base system"
+msgstr "Temel sistem paketleri açılıyor"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. The base system is the minimal Debian system
+#. See http://www.debian.org/doc/debian-policy/ch-binary.html#s3.7
+#: ../bootstrap-base.templates:35001
+msgid "Configuring the base system"
+msgstr "Temel sistem yapılandırılıyor"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../bootstrap-base.templates:36001
+msgid "${SECTION}: ${INFO}..."
+msgstr "${SECTION}: ${INFO}..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. SUBST0 is a package name
+#: ../bootstrap-base.templates:37001
+msgid "Validating ${SUBST0}..."
+msgstr "${SUBST0} doğrulanıyor..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. SUBST0 is a package name
+#: ../bootstrap-base.templates:38001
+msgid "Retrieving ${SUBST0}..."
+msgstr "${SUBST0} alınıyor..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. SUBST0 is a package name
+#: ../bootstrap-base.templates:39001
+msgid "Extracting ${SUBST0}..."
+msgstr "${SUBST0} açılıyor..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. SUBST0 is a package name
+#: ../bootstrap-base.templates:40001
+msgid "Unpacking ${SUBST0}..."
+msgstr "${SUBST0} açılıyor..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. SUBST0 is a package name
+#: ../bootstrap-base.templates:41001
+msgid "Configuring ${SUBST0}..."
+msgstr "${SUBST0} yapılandırılıyor..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Release is a filename which should not be translated
+#: ../bootstrap-base.templates:42001
+msgid "Checking Release signature"
+msgstr "'Release' dosyasına ait imza denetleniyor"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. SUBST0 is a gpg key id
+#. Release is a filename which should not be translated
+#: ../bootstrap-base.templates:43001
+msgid "Valid Release signature (key id ${SUBST0})"
+msgstr "'Release' imzası geçerli (anahtar kimliği: ${SUBST0})"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../bootstrap-base.templates:44001
+msgid "Resolving dependencies of base packages..."
+msgstr "Temel paketlerin bağımlılıkları çözülüyor..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. SUBST0 is a list of packages
+#: ../bootstrap-base.templates:45001
+msgid "Found additional base dependencies: ${SUBST0}"
+msgstr "İlave temel paket bağımlılıkları bulundu: ${SUBST0}"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. SUBST0 is a list of packages
+#: ../bootstrap-base.templates:46001
+msgid "Found additional required dependencies: ${SUBST0}"
+msgstr "İlave gerekli paket bağımlılıkları bulundu: ${SUBST0}"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. SUBST0 is a list of packages
+#: ../bootstrap-base.templates:47001
+msgid "Found packages in base already in required: ${SUBST0}"
+msgstr "Bulunan temel bağımlılıklar zaten gerekliler listesinde: ${SUBST0}"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../bootstrap-base.templates:48001
+msgid "Resolving dependencies of required packages..."
+msgstr "Gerekli paketlerin bağımlılıkları çözülüyor..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. SUBST0 is an archive component (main, etc)
+#. SUBST1 is a mirror
+#: ../bootstrap-base.templates:49001
+msgid "Checking component ${SUBST0} on ${SUBST1}..."
+msgstr "${SUBST1} üzerindeki ${SUBST0} bileşeni denetleniyor..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Core packages are packages that are part of the Debian base system
+#. The "core" packages are indeed packages that are specifically
+#. recorded as part of the base system. Other packages may
+#. be installed on the base system because of dependency resolution
+#: ../bootstrap-base.templates:50001
+msgid "Installing core packages..."
+msgstr "Ana paketler kuruluyor..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Required packages are packages which installation is triggered
+#. by the dependency chain of core packages
+#. In short, they are "required" because at least one of the
+#. packages from the core packages depends on them
+#: ../bootstrap-base.templates:51001
+msgid "Unpacking required packages..."
+msgstr "Gerekli paketler açılıyor..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Required packages are packages which installation is triggered
+#. by the dependency chain of core packages
+#. In short, they are "required" because at least one of the
+#. packages from the core packages depends on them
+#: ../bootstrap-base.templates:52001
+msgid "Configuring required packages..."
+msgstr "Gerekli paketler yapılandırılıyor..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../bootstrap-base.templates:53001
+msgid "Installing base packages..."
+msgstr "Temel paketler kuruluyor..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../bootstrap-base.templates:54001
+msgid "Unpacking the base system..."
+msgstr "Temel sistem paketleri açılıyor..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../bootstrap-base.templates:55001
+msgid "Configuring the base system..."
+msgstr "Temel sistem yapılandırılıyor..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../bootstrap-base.templates:56001
+msgid "Base system installed successfully."
+msgstr "Temel sistem başarıyla kuruldu."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../bootstrap-base.templates:60001
+msgid "Selecting the kernel to install..."
+msgstr "Kurulacak çekirdek seçiliyor..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../bootstrap-base.templates:61001
+msgid "Installing the kernel..."
+msgstr "Çekirdek kuruluyor..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. SUBST0 is a package name
+#: ../bootstrap-base.templates:62001
+msgid "Installing the kernel - retrieving and installing ${SUBST0}..."
+msgstr "Çekirdek kuruluyor - ${SUBST0} alınıyor ve kuruluyor..."
+
+#. Type: text
+#. Description
+#. Translators, this text will appear on a button, so KEEP IT SHORT
+#. :sl1:
+#: ../cdebconf-newt-udeb.templates:1001 ../cdebconf-gtk-udeb.templates:1001
+msgid "Continue"
+msgstr "Devam"
+
+#. Type: text
+#. Description
+#. Translators, this text will appear on a button, so KEEP IT SHORT
+#. :sl1:
+#: ../cdebconf-newt-udeb.templates:2001 ../cdebconf-gtk-udeb.templates:2001
+msgid "Go Back"
+msgstr "Geri dön"
+
+#. Type: text
+#. Description
+#. Translators, this text will appear on a button, so KEEP IT SHORT
+#. :sl1:
+#. Type: text
+#. Description
+#. :sl4:
+#: ../cdebconf-newt-udeb.templates:3001 ../cdebconf-gtk-udeb.templates:3001
+#: ../cdebconf-slang-udeb.templates:1001 ../cdebconf-text-udeb.templates:10001
+msgid "Yes"
+msgstr "Evet"
+
+#. Type: text
+#. Description
+#. Translators, this text will appear on a button, so KEEP IT SHORT
+#. :sl1:
+#. Type: text
+#. Description
+#. :sl4:
+#: ../cdebconf-newt-udeb.templates:4001 ../cdebconf-gtk-udeb.templates:4001
+#: ../cdebconf-slang-udeb.templates:2001 ../cdebconf-text-udeb.templates:11001
+msgid "No"
+msgstr "Hayır"
+
+#. #-#-#-#-#  templates.pot (cdebconf)  #-#-#-#-#
+#. Type: text
+#. Description
+#. Translators, this text will appear on a button, so KEEP IT SHORT
+#. :sl1:
+#. #-#-#-#-#  templates.pot (mdcfg)  #-#-#-#-#
+#. Type: select
+#. Choices
+#. :sl3:
+#. Type: select
+#. Choices
+#. :sl3:
+#. #-#-#-#-#  templates.pot (net-retriever)  #-#-#-#-#
+#. Type: select
+#. Choices
+#. These are choices of actions so this is, at least in English,
+#. an infinitive form
+#. :sl2:
+#: ../cdebconf-newt-udeb.templates:5001 ../mdcfg-utils.templates:6001
+#: ../mdcfg-utils.templates:13001 ../net-retriever.templates:1001
+msgid "Cancel"
+msgstr "İptal et"
+
+#. Type: text
+#. Description
+#. Help line displayed at the bottom of the cdebconf newt interface.
+#. Translators: must fit within 80 characters.
+#. :sl1:
+#: ../cdebconf-newt-udeb.templates:6001
+msgid "<Tab> moves; <Space> selects; <Enter> activates buttons"
 msgstr ""
-"Devam etmemeyi seçerseniz, size farklı bir dil seçme hakkı verilecek; ya da "
-"kurulumu iptal edebilirsiniz."
+"<Tab> ögeler arasında geçiş; <Space> seç; <Enter> düğmeleri etkinleştir"
+
+#. Type: text
+#. Description
+#. Help line displayed at the bottom of the cdebconf newt interface.
+#. Translators: must fit within 80 characters.
+#. :sl1:
+#: ../cdebconf-newt-udeb.templates:7001
+msgid "<F1> for help; <Tab> moves; <Space> selects; <Enter> activates buttons"
+msgstr "<F1> yardım; <Tab> geçiş; <Space> seç; <Enter> düğmeleri etkinleştir"
+
+#. Type: text
+#. Description
+#. Appears as a checkbox in the newt and GTK interfaces.
+#. :sl1:
+#: ../cdebconf-newt-udeb.templates:8001 ../cdebconf-gtk-udeb.templates:9001
+msgid "Show Password in Clear"
+msgstr "Parolayı Göster"
+
+#. Type: text
+#. Description
+#. Translators, this text will appear on a button, so KEEP IT SHORT
+#. :sl1:
+#: ../cdebconf-gtk-udeb.templates:5001
+msgid "Help"
+msgstr "Yardım"
+
+#. Type: text
+#. Description
+#. TRANSLATORS: This should be "translated" to "RTL" or "LTR" depending of
+#. default text direction of your language
+#. LTR: Left to Right (Latin, Cyrillic, CJK, Indic...)
+#. RTL: Right To Left (Arabic, Hebrew, Persian...)
+#. DO NOT USE ANYTHING ELSE
+#. :sl1:
+#: ../cdebconf-gtk-udeb.templates:6001
+msgid "LTR"
+msgstr "LTR"
+
+#. Type: text
+#. Description
+#. Translators, this text will appear on a button, so KEEP IT SHORT
+#. This button will allow users to virtually "shoot a picture"
+#. of the screen
+#. :sl1:
+#: ../cdebconf-gtk-udeb.templates:7001
+msgid "Screenshot"
+msgstr "Ekran görüntüsü"
+
+#. Type: text
+#. Description
+#. Text that will appear in a dialog box mentioning which file
+#. the screenshot has been saved to. "%s" is a file name here
+#. :sl1:
+#: ../cdebconf-gtk-udeb.templates:8001
+#, no-c-format
+msgid "Screenshot saved as %s"
+msgstr "Ekran görüntüsü %s dosyasına kaydedildi"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../choose-mirror-bin.templates-in:5001
+msgid "Checking the Debian archive mirror"
+msgstr "Debian arşivi yansısı denetleniyor"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../choose-mirror-bin.templates-in:6001
+msgid "Downloading Release files..."
+msgstr "'Release' dosyaları indiriliyor..."
+
+#. Type: text
+#. Description
+#. main-menu item
+#. Translators: keep below 55 columns
+#. :sl1:
+#: ../choose-mirror-bin.templates-in:14001
+msgid "Choose a mirror of the Debian archive"
+msgstr "Bir Debian arşivi yansısı seçin"
 
 #. Type: select
 #. Choices
-#. "other", here, is added to the list of countries that will be displayed
-#. for users to choose among them
-#. For instance, choosing "Italian" will show:
-#. Italy, Switzerland, other
 #. :sl1:
-#: ../localechooser.templates-in:22001 ../../mktemplates.continents:26
-msgid "other"
-msgstr "diğer"
+#. Type: select
+#. Choices
+#. :sl2:
+#: ../choose-mirror-bin.templates.http-in:2001
+#: ../choose-mirror-bin.templates.ftp.sel-in:2001
+msgid "enter information manually"
+msgstr "bilgileri elle girin"
 
-#. Type: text
-#. Description
+#. Type: select
+#. Default
+#. Translators, you should put here the ISO 3166 code of a country
+#. which you know hosts at least one Debian HTTP mirror. Please check
+#. that the country really has a Debian HTTP mirror before putting a
+#. random value here
+#.
+#. First check that the country you mention here is listed in
+#. https://salsa.debian.org/mirror-team/masterlist/-/blob/master/Mirrors.masterlist
+#.
+#. BE CAREFUL to use the TWO LETTER ISO-3166 CODE and not anything else
+#.
+#. You do not need to translate what's between the square brackets
+#. You should even NOT put square brackets in translations:
+#. msgid "US[ Default value for http]"
+#. msgstr "FR"
 #. :sl1:
-#: ../localechooser.templates-in:23001
-msgid "Country, territory or area:"
-msgstr "Ülke, bölge veya alan:"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../localechooser.templates-in:24001
-msgid "Continent or region:"
-msgstr "Kıta veya bölge:"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../localechooser.templates-in:25001
-msgid ""
-"The selected location will be used to set your time zone and also for "
-"example to help select the system locale. Normally this should be the "
-"country where you live."
-msgstr ""
-"Burada seçeceğiniz ülke, saat diliminizin ayarlanmasında ve sistem yerelinin "
-"belirlenmesinde kullanılacaktır. Genellikle, yaşadığınız ülkeyi seçmeniz "
-"gerekir."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../localechooser.templates-in:26001
-msgid ""
-"This is a shortlist of locations based on the language you selected. Choose "
-"\"other\" if your location is not listed."
-msgstr ""
-"Bu liste seçtiğiniz dile bağlı olarak gösterilen kısa bir listedir. Eğer "
-"ülkeniz bu listede yoksa \"diğer\"i seçin."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../localechooser.templates-in:27001
-msgid "Select the continent or region to which your location belongs."
-msgstr "Bulunduğunuz yerin içinde olduğu kıta ya da bölgeyi seçin."
-
-#. Type: text
-#. Description
-#. '%s' will be replaced with the name of the currently selected continent/region
-#. :sl1:
-#: ../localechooser.templates-in:28001
-#, no-c-format
-msgid ""
-"Listed are locations for: %s. Use the <Go Back> option to select a different "
-"continent or region if your location is not listed."
-msgstr ""
-"Bu konumlar %s için listelenmektedir. Başka bir kıta ya da bölge seçmek için "
-"<Geri Dön> seçeneğini kullanın."
+#: ../choose-mirror-bin.templates.http-in:2002
+msgid "US[ Default value for http]"
+msgstr "TR"
 
 #. Type: select
 #. Description
 #. :sl1:
-#: ../localechooser.templates-in:29001
-msgid "Country to base default locale settings on:"
-msgstr "Öntanımlı yerel ayarlarının temel alınacağı ülke:"
+#. Type: select
+#. Description
+#. :sl2:
+#: ../choose-mirror-bin.templates.http-in:2003
+#: ../choose-mirror-bin.templates.ftp.sel-in:2003
+msgid "Debian archive mirror country:"
+msgstr "Debian yansısının bulunduğu ülke:"
 
-#. Type: text
+#. Type: select
 #. Description
 #. :sl1:
-#: ../localechooser.templates-in:30001
+#. Type: select
+#. Description
+#. :sl2:
+#: ../choose-mirror-bin.templates.http-in:2003
+#: ../choose-mirror-bin.templates.ftp.sel-in:2003
 msgid ""
-"There is no locale defined for the combination of language and country you "
-"have selected. You can now select your preference from the locales available "
-"for the selected language. The locale that will be used is listed in the "
-"second column."
+"The goal is to find a mirror of the Debian archive that is close to you on "
+"the network -- be aware that nearby countries, or even your own, may not be "
+"the best choice."
 msgstr ""
-"Seçtiğiniz dil ve bölge bileşimi için tanımlı bir yerel yok. Şimdi "
-"seçtiğiniz dile uygun yerellerden birini seçebilirsiniz. Yereller ikinci "
-"sütunda listelenecektir."
+"Amaç, size en yakın Debian arşivi yansısını bulmaktır -- yakın ülkelerdeki "
+"ve hatta kendi ülkenizdeki yansıların bile en iyi seçim olamayabileceğini "
+"unutmayın."
 
-#. Type: text
+#. Type: select
 #. Description
 #. :sl1:
-#: ../localechooser.templates-in:31001
+#. Type: select
+#. Description
+#. :sl2:
+#: ../choose-mirror-bin.templates.http-in:3001
+#: ../choose-mirror-bin.templates.ftp.sel-in:3001
+msgid "Debian archive mirror:"
+msgstr "Debian arşivi yansısı:"
+
+#. Type: select
+#. Description
+#. :sl1:
+#. Type: select
+#. Description
+#. :sl2:
+#: ../choose-mirror-bin.templates.http-in:3001
+#: ../choose-mirror-bin.templates.ftp.sel-in:3001
 msgid ""
-"There are multiple locales defined for the language you have selected. You "
-"can now select your preference from those locales. The locale that will be "
-"used is listed in the second column."
+"Please select a Debian archive mirror. You should use a mirror in your "
+"country or region if you do not know which mirror has the best Internet "
+"connection to you."
 msgstr ""
-"Seçtiğiniz dil için tanımlı birden fazla yerel var. Şimdi bu yereller "
-"arasından seçim yapabilirsiniz. Kullanılacak olan yerel ikinci sütunda "
-"listelenecektir."
+"Lütfen bir Debian arşivi yansısı seçin. Size en uygun İnternet bağlantısını "
+"sunan yansıyı bilmiyorsanız ülke veya bölgenizdeki yansıyı kullanmalısınız."
+
+#. Type: select
+#. Description
+#. :sl1:
+#: ../choose-mirror-bin.templates.http-in:3001
+msgid "Usually, deb.debian.org is a good choice."
+msgstr "Genellikle, deb.debian.org iyi bir seçimdir."
+
+#. Type: string
+#. Description
+#. :sl1:
+#. Type: string
+#. Description
+#. :sl2:
+#: ../choose-mirror-bin.templates.http-in:4001
+#: ../choose-mirror-bin.templates.ftp.base-in:2001
+msgid "Debian archive mirror hostname:"
+msgstr "Debian arşivi yansısının adresini girin:"
+
+#. Type: string
+#. Description
+#. :sl1:
+#. Type: string
+#. Description
+#. :sl2:
+#: ../choose-mirror-bin.templates.http-in:4001
+#: ../choose-mirror-bin.templates.ftp.base-in:2001
+msgid ""
+"Please enter the hostname of the mirror from which Debian will be downloaded."
+msgstr "Lütfen Debian'ın indirileceği yansının adresini girin."
+
+#. Type: string
+#. Description
+#. :sl1:
+#. Type: string
+#. Description
+#. :sl2:
+#: ../choose-mirror-bin.templates.http-in:4001
+#: ../choose-mirror-bin.templates.ftp.base-in:2001
+msgid ""
+"An alternate port can be specified using the standard [hostname]:[port] "
+"format."
+msgstr ""
+"Alternatif bir başka port alışageldik [makine adı]:[port] biçemiyle "
+"belirtilebilir."
+
+#. Type: string
+#. Description
+#. :sl1:
+#: ../choose-mirror-bin.templates.http-in:6001
+msgid "HTTP proxy information (blank for none):"
+msgstr "HTTP vekil bilgileri (kullanmıyorsanız boş bırakın):"
+
+#. Type: string
+#. Description
+#. :sl1:
+#: ../choose-mirror-bin.templates.http-in:6001
+msgid ""
+"If you need to use a HTTP proxy to access the outside world, enter the proxy "
+"information here. Otherwise, leave this blank."
+msgstr ""
+"Eğer dışa erişim için bir HTTP vekil sunucu kullanıyorsanız vekil sunucu "
+"bilgilerini girin. Aksi takdirde boş bırakın."
+
+#. Type: string
+#. Description
+#. :sl1:
+#. Type: string
+#. Description
+#. :sl2:
+#: ../choose-mirror-bin.templates.http-in:6001
+#: ../choose-mirror-bin.templates.ftp.base-in:4001
+msgid ""
+"The proxy information should be given in the standard form of \"http://"
+"[[user][:pass]@]host[:port]/\"."
+msgstr ""
+"Vekil sunucu bilgileri \"http://[[kullanıcı_adı][:parola]@]adres[:port]/\" "
+"şeklinde girilmelidir."
 
 #. Type: text
 #. Description
@@ -1383,6 +2204,389 @@ msgstr "Kurulum medyası kaldırılıyor/çıkarılıyor... "
 
 #. Type: text
 #. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl1:
+#: ../load-cdrom.templates:1001
+msgid "Load installer components from installation media"
+msgstr "Kurulum bileşenlerini kurulum ortamından yükle"
+
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl1:
+#: ../clock-setup.templates:1001
+msgid "Configure the clock"
+msgstr "Saati ayarla"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../clock-setup.templates:2001
+msgid "Is the system clock set to UTC?"
+msgstr "Sistem saati UTC'ye mi ayarlı?"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../clock-setup.templates:2001
+msgid ""
+"System clocks are generally set to Coordinated Universal Time (UTC). The "
+"operating system uses your time zone to convert system time into local time. "
+"This is recommended unless you also use another operating system that "
+"expects the clock to be set to local time."
+msgstr ""
+"Sistem saatleri genellikle 'Eş Güdümlü Evrensel Saat'e (UTC) göre ayarlanır. "
+"İşletim sistemi, saat dilimi bilgisini kullanarak sistem saatini yerel saate "
+"çevirir. Sistem saatinin yerel saate ayarlanmasını bekleyen başka işletim "
+"sistemleri kullanmıyorsanız sistem saatini UTC'ye ayarlamanız önerilir."
+
+#. Type: text
+#. Description
+#. progress bar item
+#. :sl1:
+#: ../clock-setup.templates:3001
+msgid "Configuring clock settings..."
+msgstr "Saat ayarları yapılandırılıyor..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../clock-setup.templates:4001
+msgid "Setting up the clock"
+msgstr "Saat ayarlanıyor"
+
+#. Type: text
+#. Description
+#. progress bar item
+#. :sl1:
+#: ../clock-setup.templates:7001
+msgid "Getting the time from a network time server..."
+msgstr "Bir ağ zamanı sunucusundan zaman bilgisi alınıyor..."
+
+#. Type: text
+#. Description
+#. progress bar item
+#. :sl1:
+#: ../clock-setup.templates:8001
+msgid "Setting the hardware clock..."
+msgstr "Donanım saati ayarlanıyor..."
+
+#. Type: text
+#. Description
+#. Main menu item
+#. The translation should not exceed 55 columns except for languages
+#. that are only supported in the graphical version of the installer
+#. :sl1:
+#: ../di-utils-shell.templates:2001
+msgid "Execute a shell"
+msgstr "Bir kabuk çalıştır"
+
+#. Type: text
+#. Description
+#. Main menu item
+#. The translation should not exceed 55 columns except for languages
+#. that are only supported in the graphical version of the installer
+#. :sl1:
+#: ../di-utils-reboot.templates:2001
+msgid "Abort the installation"
+msgstr "Kurulumu iptal et"
+
+#. Type: text
+#. Description
+#. base-installer progress bar item
+#. :sl1:
+#: ../di-utils.templates:1001
+msgid "Registering modules..."
+msgstr "Modüller kaydediliyor..."
+
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl1:
+#: ../finish-install.templates:1001
+msgid "Finish the installation"
+msgstr "Kurulumu bitir"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../finish-install.templates:2001
+msgid "Finishing the installation"
+msgstr "Kurulum bitiriliyor"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../finish-install.templates:4001
+msgid "Configuring network..."
+msgstr "Ağ yapılandırılıyor..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../finish-install.templates:5001
+msgid "Setting up frame buffer..."
+msgstr "Kare tamponu ayarlanıyor..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../finish-install.templates:6001
+msgid "Unmounting file systems..."
+msgstr "Bağlanan dosya sistemleri ayrılıyor..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../finish-install.templates:7001
+msgid "Rebooting into your new system..."
+msgstr "Yeni sisteminiz yeniden başlatılıyor..."
+
+#. Type: note
+#. Description
+#. :sl1:
+#: ../finish-install.templates:8001
+msgid "Installation complete"
+msgstr "Kurulum tamamlandı"
+
+#. Type: note
+#. Description
+#. :sl1:
+#: ../finish-install.templates:8001
+msgid ""
+"Installation is complete, so it is time to boot into your new system. Make "
+"sure to remove the installation media, so that you boot into the new system "
+"rather than restarting the installation."
+msgstr ""
+"Kurulum tamamlandı ve şimdi sıra bilgisayarınızı yeni sisteminiz ile açmaya "
+"geldi. Kurulum programının tekrar başlamaması ve yeni sisteminizden açılış "
+"yapılması için kurulumda kullandığınız ortamı çıkarmayı unutmayın."
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:1001 ../grub-installer.templates:2001
+msgid "Install the GRUB boot loader to your primary drive?"
+msgstr "GRUB önyükleyici birincil sürücünüze yüklensin mi?"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:1001
+msgid ""
+"The following other operating systems have been detected on this computer: "
+"${OS_LIST}"
+msgstr ""
+"Bu bilgisayarda aşağıda listelenen işletim sistemleri belirlendi: ${OS_LIST}"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:1001
+msgid ""
+"If all of your operating systems are listed above, then it should be safe to "
+"install the boot loader to your primary drive (UEFI partition/boot record). "
+"When your computer boots, you will be able to choose to load one of these "
+"operating systems or the newly installed Debian system."
+msgstr ""
+"Tüm işletim sistemleriniz yukarıda listeleniyorsa, önyükleyiciyi birincil "
+"sürücünüze (UEFI bölümü/önyükleme kaydı) yüklemek güvenli olacaktır. "
+"Bilgisayarınız açıldığında, bu işletim sistemlerinden birini veya yeni "
+"kurulan Debian sistemini yüklemeyi seçebileceksiniz."
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:2001
+msgid ""
+"It seems that this new installation is the only operating system on this "
+"computer. If so, it should be safe to install the GRUB boot loader to your "
+"primary drive (UEFI partition/boot record)."
+msgstr ""
+"Görünüşe göre bu yeni kurulum, bu bilgisayardaki tek işletim sistemi. "
+"Öyleyse, GRUB önyükleyicisini birincil sürücünüze (UEFI bölümü/önyükleme "
+"kaydı) yüklemek güvenli olacaktır."
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:2001
+msgid ""
+"Warning: If your computer has another operating system that the installer "
+"failed to detect, this will make that operating system temporarily "
+"unbootable, though GRUB can be manually configured later to boot it."
+msgstr ""
+"Uyarı: Bilgisayarınızda yükleyicinin algılayamadığı başka bir işletim "
+"sistemi varsa, bu, işletim sistemini geçici olarak önyüklenemez hale "
+"getirecektir, ancak GRUB daha sonra önyüklemek için manuel olarak "
+"yapılandırılabilir."
+
+#. #-#-#-#-#  templates.pot (grub-installer)  #-#-#-#-#
+#. Type: password
+#. Description
+#. :sl2:
+#. #-#-#-#-#  templates.pot (network-console)  #-#-#-#-#
+#. Type: password
+#. Description
+#. :sl3:
+#. #-#-#-#-#  templates.pot (user-setup)  #-#-#-#-#
+#. Type: password
+#. Description
+#. :sl1:
+#. Type: password
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:10001 ../network-console.templates:5001
+#: ../user-setup-udeb.templates:7001 ../user-setup-udeb.templates:14001
+msgid "Re-enter password to verify:"
+msgstr "Doğrulamak için parolayı tekrar girin:"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:18001
+msgid "Installing GRUB boot loader"
+msgstr "GRUB önyükleyici kuruluyor"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:19001
+msgid "Looking for other operating systems..."
+msgstr "Sisteminizde kurulu diğer işletim sistemleri araştırılıyor..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:20001
+msgid "Installing the '${GRUB}' package..."
+msgstr "'${GRUB}' paketi kuruluyor..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:21001
+msgid "Determining GRUB boot device..."
+msgstr "GRUB önyükleme aygıtı belirleniyor..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:22001
+msgid "Running \"grub-install ${BOOTDEV}\"..."
+msgstr "\"grub-install ${BOOTDEV}\" çalıştırılıyor..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:23001
+msgid "Running \"update-grub\"..."
+msgstr "\"update-grub\" çalıştırılıyor..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:24001
+msgid "Updating /etc/kernel-img.conf..."
+msgstr "/etc/kernel-img.conf güncelleniyor..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:25001
+msgid "Checking whether to force usage of the removable media path"
+msgstr ""
+"Taşınabilir ortam yoluna kurulum yapılmasının gerekip gerekmediği "
+"denetleniyor"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:26001
+msgid "Mounting filesystems"
+msgstr "Dosya sistemleri bağlanıyor"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:27001
+msgid "Configuring grub-efi for future usage of the removable media path"
+msgstr ""
+"İleride taşınabilir ortam yolunun kullanılabilmesi için grub-efi "
+"yapılandırılıyor"
+
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl1:
+#: ../grub-installer.templates:28001
+msgid "Install the GRUB boot loader"
+msgstr "GRUB önyükleyiciyi kur"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:34001
+msgid "Force GRUB installation to the EFI removable media path?"
+msgstr "EFI taşınabilir ortam yoluna zorunlu bir GRUB kurulumu yapılsın mı?"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:34001
+msgid ""
+"It seems that this computer is configured to boot via EFI, but maybe that "
+"configuration will not work for booting from the hard drive. Some EFI "
+"firmware implementations do not meet the EFI specification (i.e. they are "
+"buggy!) and do not support proper configuration of boot options from system "
+"hard drives."
+msgstr ""
+"Bu bilgisayar EFI ile başlatılacak şekilde yapılandırılmış; ama bu "
+"yapılandırma sabit diskten başlatma yapmakta başarısız olabilir. Bazı EFI "
+"aygıt yazılımları EFI şartnamelerine tam olarak uymaz (yani hatalıdırlar!) "
+"ve önyükleme seçeneklerinin sistem sabit disklerinden yapılandırılmasını tam "
+"olarak desteklemezler."
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:34001
+msgid ""
+"A workaround for this problem is to install an extra copy of the EFI version "
+"of the GRUB boot loader to a fallback location, the \"removable media path"
+"\". Almost all EFI systems, no matter how buggy, will boot GRUB that way."
+msgstr ""
+"Bu sorununa geçici bir çözüm olarak GRUB önyükleyicinin EFI uyarlamasının "
+"fazladan bir kopyası \"taşınabilir ortam yolu\" adı verilen konuma "
+"kurulabilir. Ne kadar hatalı olursa olsun neredeyse tüm EFI sistemleri "
+"GRUB'u bu şekilde önyükleyebilir."
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:34001
+msgid ""
+"Warning: If the installer failed to detect another operating system that is "
+"present on your computer that also depends on this fallback, installing GRUB "
+"there will make that operating system temporarily unbootable. GRUB can be "
+"manually configured later to boot it if necessary."
+msgstr ""
+"Uyarı: Kurulum programı, bilgisayarınızda bulunan ve başlatılabilmek için bu "
+"mekanizmaya bel bağlayan diğer işletim sistemlerini algılamakta başarısız "
+"olursa, GRUB'u buraya kurmak bu işletim sisteminin geçici olarak "
+"başlatılamamasına yol açacaktır. Bununla birlikte bilgisayarın bu işletim "
+"sistemi ile başlatılabilmesi için GRUB'u daha sonra elle "
+"yapılandırabilirsiniz."
+
+#. Type: text
+#. Description
 #. :sl1:
 #: ../ethdetect.templates:4001
 msgid "Detecting network hardware"
@@ -1447,6 +2651,361 @@ msgstr "Donanım ilklendirme için bekleniyor..."
 #: ../hw-detect.templates:12001
 msgid "Checking for firmware..."
 msgstr "Aygıt yazılımı denetleniyor..."
+
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl1:
+#: ../save-logs.templates:1001
+msgid "Save debug logs"
+msgstr "Hata ayıklama bilgilerini kaydet"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. finish-install progress bar item
+#: ../save-logs.templates:9001
+msgid "Gathering information for installation report..."
+msgstr "Kurulum raporu için bilgi toplanıyor..."
+
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl1:
+#: ../iso-scan.templates:1001
+msgid "Scan hard drives for an installer ISO image"
+msgstr "Sabit diskleri kurulumda kullanılabilecek ISO dosyası için tara"
+
+#. Type: text
+#. Description
+#. This menu entry may be translated.
+#. However, translators are required to keep "Choose language"
+#. as an alternative separated by the "/" character
+#. Example (french): Choisir la langue/Choose language
+#. :sl1:
+#: ../localechooser.templates-in:1001
+msgid "Choose language"
+msgstr "Dil seç/Choose language"
+
+#. Type: text
+#. Description
+#. finish-install progress bar item
+#. :sl1:
+#: ../localechooser.templates-in:6001
+msgid "Storing language..."
+msgstr "Dil ayarı kaydediliyor..."
+
+#. Type: title
+#. Description
+#. Displayed as dialog title during language selection
+#. :sl1:
+#: ../localechooser.templates-in:7001
+msgid "Select a language"
+msgstr "Dil seçimi"
+
+#. Type: title
+#. Description
+#. Displayed as dialog title during country selection
+#. :sl1:
+#: ../localechooser.templates-in:8001
+msgid "Select your location"
+msgstr "Konum seçimi"
+
+#. Type: title
+#. Description
+#. Displayed as dialog title during locale selection
+#. :sl1:
+#: ../localechooser.templates-in:9001
+msgid "Configure locales"
+msgstr "Yerel Yapılandırması"
+
+#. Type: note
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:12001
+msgid "Language selection no longer possible"
+msgstr "Dil seçimi artık mümkün değil"
+
+#. Type: note
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:12001
+msgid ""
+"At this point it is no longer possible to change the language for the "
+"installation, but you can still change the country or locale."
+msgstr ""
+"Bu noktadan sonra kurulum için yapılan dil seçimini değiştirmek mümkün "
+"değil, ancak hâlâ ülke ve yereli değiştirebilirsiniz."
+
+#. Type: note
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:12001
+msgid ""
+"To select a different language you will need to abort this installation and "
+"reboot the installer."
+msgstr ""
+"Başka bir dil seçmek için kurulumu iptal etmeniz ve kurulum programını "
+"yeniden başlatmanız gerekli."
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:13001 ../localechooser.templates-in:14001
+msgid "Continue the installation in the selected language?"
+msgstr "Kuruluma seçilen dilde devam edilsin mi?"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:13001
+msgid ""
+"The translation of the installer is incomplete for the selected language."
+msgstr "Kurulum programının seçilen dil için çevirisi bitmemiş."
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:14001
+msgid ""
+"The translation of the installer is not fully complete for the selected "
+"language."
+msgstr "Kurulum programının seçilen dil çevirisi tamamen bitmemiş."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:15001
+msgid ""
+"This means that there is a significant chance that some dialogs will be "
+"displayed in English instead."
+msgstr ""
+"Bu şu anlama geliyor: Bazı diyaloglar büyük olasılıkla İngilizce "
+"görüntülenecek."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:16001
+msgid ""
+"If you do anything other than a purely default installation, there is a real "
+"chance that some dialogs will be displayed in English instead."
+msgstr ""
+"Eğer tamamıyla öntanımlı kurulumdan başka bir şey yaparsanız, bazı "
+"diyaloglar büyük olasılıkla İngilizce görüntülenecek."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:17001
+msgid ""
+"If you continue the installation in the selected language, most dialogs "
+"should be displayed correctly but - especially if you use the more advanced "
+"options of the installer - some may be displayed in English instead."
+msgstr ""
+"Kuruluma seçilen dilde devam ederseniz çoğu diyalog düzgün görüntülenecek, "
+"fakat - özellikle kurulum programının gelişmiş seçeneklerini kullanırsanız - "
+"bazı diyaloglar İngilizce görüntülenebilir."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:18001
+msgid ""
+"If you continue the installation in the selected language, dialogs should "
+"normally be displayed correctly but - especially if you use the more "
+"advanced options of the installer - there is a slight chance some may be "
+"displayed in English instead."
+msgstr ""
+"Kuruluma seçilen dilde devam ederseniz, diyaloglar düzgün olarak "
+"görüntülenecek; fakat - özellikle de kurulum programının daha gelişmiş "
+"özelliklerini kullanırsanız - bazılarının İngilizce görüntülenme olasılığı - "
+"küçük de olsa - var."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:19001
+msgid ""
+"The chance that you will actually encounter a dialog that is not translated "
+"into the selected language is extremely small, but it cannot be ruled out "
+"completely."
+msgstr ""
+"Seçilen dile çevrilmemiş bir diyalogla karşılaşma şansınız bir hayli az, "
+"fakat yine de yok sayılamaz."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:20001
+msgid ""
+"Unless you have a good understanding of the alternative language, it is "
+"recommended to either select a different language or abort the installation."
+msgstr ""
+"Alternatif dili iyi bilmiyorsanız, farklı bir dil seçmeniz ya da kurulumu "
+"iptal etmeniz tavsiye edilir."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:21001
+msgid ""
+"If you choose not to continue, you will be given the option of selecting a "
+"different language, or you can abort the installation."
+msgstr ""
+"Devam etmemeyi seçerseniz, size farklı bir dil seçme hakkı verilecek; ya da "
+"kurulumu iptal edebilirsiniz."
+
+#. Type: select
+#. Choices
+#. "other", here, is added to the list of countries that will be displayed
+#. for users to choose among them
+#. For instance, choosing "Italian" will show:
+#. Italy, Switzerland, other
+#. :sl1:
+#: ../localechooser.templates-in:22001 ../../mktemplates.continents:26
+msgid "other"
+msgstr "diğer"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:23001
+msgid "Country, territory or area:"
+msgstr "Ülke, bölge veya alan:"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:24001
+msgid "Continent or region:"
+msgstr "Kıta veya bölge:"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:25001
+msgid ""
+"The selected location will be used to set your time zone and also for "
+"example to help select the system locale. Normally this should be the "
+"country where you live."
+msgstr ""
+"Burada seçeceğiniz ülke, saat diliminizin ayarlanmasında ve sistem yerelinin "
+"belirlenmesinde kullanılacaktır. Genellikle, yaşadığınız ülkeyi seçmeniz "
+"gerekir."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:26001
+msgid ""
+"This is a shortlist of locations based on the language you selected. Choose "
+"\"other\" if your location is not listed."
+msgstr ""
+"Bu liste seçtiğiniz dile bağlı olarak gösterilen kısa bir listedir. Eğer "
+"ülkeniz bu listede yoksa \"diğer\"i seçin."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:27001
+msgid "Select the continent or region to which your location belongs."
+msgstr "Bulunduğunuz yerin içinde olduğu kıta ya da bölgeyi seçin."
+
+#. Type: text
+#. Description
+#. '%s' will be replaced with the name of the currently selected continent/region
+#. :sl1:
+#: ../localechooser.templates-in:28001
+#, no-c-format
+msgid ""
+"Listed are locations for: %s. Use the <Go Back> option to select a different "
+"continent or region if your location is not listed."
+msgstr ""
+"Bu konumlar %s için listelenmektedir. Başka bir kıta ya da bölge seçmek için "
+"<Geri Dön> seçeneğini kullanın."
+
+#. Type: select
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:29001
+msgid "Country to base default locale settings on:"
+msgstr "Öntanımlı yerel ayarlarının temel alınacağı ülke:"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:30001
+msgid ""
+"There is no locale defined for the combination of language and country you "
+"have selected. You can now select your preference from the locales available "
+"for the selected language. The locale that will be used is listed in the "
+"second column."
+msgstr ""
+"Seçtiğiniz dil ve bölge bileşimi için tanımlı bir yerel yok. Şimdi "
+"seçtiğiniz dile uygun yerellerden birini seçebilirsiniz. Yereller ikinci "
+"sütunda listelenecektir."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:31001
+msgid ""
+"There are multiple locales defined for the language you have selected. You "
+"can now select your preference from those locales. The locale that will be "
+"used is listed in the second column."
+msgstr ""
+"Seçtiğiniz dil için tanımlı birden fazla yerel var. Şimdi bu yereller "
+"arasından seçim yapabilirsiniz. Kullanılacak olan yerel ikinci sütunda "
+"listelenecektir."
+
+#. #-#-#-#-#  templates.pot (lvmcfg)  #-#-#-#-#
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl1:
+#. #-#-#-#-#  templates.pot (partman-lvm)  #-#-#-#-#
+#. Type: text
+#. Description
+#. Type: text
+#. Description
+#. :sl3:
+#. Main menu item
+#. Translators: keep below 55 columns
+#. Use infinitive form
+#: ../lvmcfg.templates:1001 ../partman-lvm.templates:7001
+#: ../partman-lvm.templates:23001
+msgid "Configure the Logical Volume Manager"
+msgstr "Mantıksal Disk Yöneticisini (LVM) yapılandır"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../main-menu.templates:1001
+msgid "Debian installer main menu"
+msgstr "Debian kurulum programı ana menüsü"
+
+#. Type: select
+#. Description
+#. :sl1:
+#: ../main-menu.templates:2001
+msgid "Choose the next step in the install process:"
+msgstr "Kurulumun bir sonraki adımını seçin:"
+
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl1:
+#: ../mdcfg-utils.templates:1001
+msgid "Configure MD devices"
+msgstr "MD aygıtlarını yapılandır"
 
 #. Type: boolean
 #. Description
@@ -1915,231 +3474,17 @@ msgstr "Ağı statik adresleme ile yapılandır"
 
 #. Type: text
 #. Description
-#. :sl1:
-#: ../choose-mirror-bin.templates-in:5001
-msgid "Checking the Debian archive mirror"
-msgstr "Debian arşivi yansısı denetleniyor"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../choose-mirror-bin.templates-in:6001
-msgid "Downloading Release files..."
-msgstr "'Release' dosyaları indiriliyor..."
-
-#. Type: text
-#. Description
-#. main-menu item
-#. Translators: keep below 55 columns
-#. :sl1:
-#: ../choose-mirror-bin.templates-in:14001
-msgid "Choose a mirror of the Debian archive"
-msgstr "Bir Debian arşivi yansısı seçin"
-
-#. Type: select
-#. Choices
-#. :sl1:
-#. Type: select
-#. Choices
-#. :sl2:
-#: ../choose-mirror-bin.templates.http-in:2001
-#: ../choose-mirror-bin.templates.ftp.sel-in:2001
-msgid "enter information manually"
-msgstr "bilgileri elle girin"
-
-#. Type: select
-#. Default
-#. Translators, you should put here the ISO 3166 code of a country
-#. which you know hosts at least one Debian HTTP mirror. Please check
-#. that the country really has a Debian HTTP mirror before putting a
-#. random value here
-#.
-#. First check that the country you mention here is listed in
-#. https://salsa.debian.org/mirror-team/masterlist/-/blob/master/Mirrors.masterlist
-#.
-#. BE CAREFUL to use the TWO LETTER ISO-3166 CODE and not anything else
-#.
-#. You do not need to translate what's between the square brackets
-#. You should even NOT put square brackets in translations:
-#. msgid "US[ Default value for http]"
-#. msgstr "FR"
-#. :sl1:
-#: ../choose-mirror-bin.templates.http-in:2002
-msgid "US[ Default value for http]"
-msgstr "TR"
-
-#. Type: select
-#. Description
-#. :sl1:
-#. Type: select
-#. Description
-#. :sl2:
-#: ../choose-mirror-bin.templates.http-in:2003
-#: ../choose-mirror-bin.templates.ftp.sel-in:2003
-msgid "Debian archive mirror country:"
-msgstr "Debian yansısının bulunduğu ülke:"
-
-#. Type: select
-#. Description
-#. :sl1:
-#. Type: select
-#. Description
-#. :sl2:
-#: ../choose-mirror-bin.templates.http-in:2003
-#: ../choose-mirror-bin.templates.ftp.sel-in:2003
-msgid ""
-"The goal is to find a mirror of the Debian archive that is close to you on "
-"the network -- be aware that nearby countries, or even your own, may not be "
-"the best choice."
-msgstr ""
-"Amaç, size en yakın Debian arşivi yansısını bulmaktır -- yakın ülkelerdeki "
-"ve hatta kendi ülkenizdeki yansıların bile en iyi seçim olamayabileceğini "
-"unutmayın."
-
-#. Type: select
-#. Description
-#. :sl1:
-#. Type: select
-#. Description
-#. :sl2:
-#: ../choose-mirror-bin.templates.http-in:3001
-#: ../choose-mirror-bin.templates.ftp.sel-in:3001
-msgid "Debian archive mirror:"
-msgstr "Debian arşivi yansısı:"
-
-#. Type: select
-#. Description
-#. :sl1:
-#. Type: select
-#. Description
-#. :sl2:
-#: ../choose-mirror-bin.templates.http-in:3001
-#: ../choose-mirror-bin.templates.ftp.sel-in:3001
-msgid ""
-"Please select a Debian archive mirror. You should use a mirror in your "
-"country or region if you do not know which mirror has the best Internet "
-"connection to you."
-msgstr ""
-"Lütfen bir Debian arşivi yansısı seçin. Size en uygun İnternet bağlantısını "
-"sunan yansıyı bilmiyorsanız ülke veya bölgenizdeki yansıyı kullanmalısınız."
-
-#. Type: select
-#. Description
-#. :sl1:
-#: ../choose-mirror-bin.templates.http-in:3001
-msgid "Usually, deb.debian.org is a good choice."
-msgstr "Genellikle, deb.debian.org iyi bir seçimdir."
-
-#. Type: string
-#. Description
-#. :sl1:
-#. Type: string
-#. Description
-#. :sl2:
-#: ../choose-mirror-bin.templates.http-in:4001
-#: ../choose-mirror-bin.templates.ftp.base-in:2001
-msgid "Debian archive mirror hostname:"
-msgstr "Debian arşivi yansısının adresini girin:"
-
-#. Type: string
-#. Description
-#. :sl1:
-#. Type: string
-#. Description
-#. :sl2:
-#: ../choose-mirror-bin.templates.http-in:4001
-#: ../choose-mirror-bin.templates.ftp.base-in:2001
-msgid ""
-"Please enter the hostname of the mirror from which Debian will be downloaded."
-msgstr "Lütfen Debian'ın indirileceği yansının adresini girin."
-
-#. Type: string
-#. Description
-#. :sl1:
-#. Type: string
-#. Description
-#. :sl2:
-#: ../choose-mirror-bin.templates.http-in:4001
-#: ../choose-mirror-bin.templates.ftp.base-in:2001
-msgid ""
-"An alternate port can be specified using the standard [hostname]:[port] "
-"format."
-msgstr ""
-"Alternatif bir başka port alışageldik [makine adı]:[port] biçemiyle "
-"belirtilebilir."
-
-#. Type: string
-#. Description
-#. :sl1:
-#: ../choose-mirror-bin.templates.http-in:6001
-msgid "HTTP proxy information (blank for none):"
-msgstr "HTTP vekil bilgileri (kullanmıyorsanız boş bırakın):"
-
-#. Type: string
-#. Description
-#. :sl1:
-#: ../choose-mirror-bin.templates.http-in:6001
-msgid ""
-"If you need to use a HTTP proxy to access the outside world, enter the proxy "
-"information here. Otherwise, leave this blank."
-msgstr ""
-"Eğer dışa erişim için bir HTTP vekil sunucu kullanıyorsanız vekil sunucu "
-"bilgilerini girin. Aksi takdirde boş bırakın."
-
-#. Type: string
-#. Description
-#. :sl1:
-#. Type: string
-#. Description
-#. :sl2:
-#: ../choose-mirror-bin.templates.http-in:6001
-#: ../choose-mirror-bin.templates.ftp.base-in:4001
-msgid ""
-"The proxy information should be given in the standard form of \"http://"
-"[[user][:pass]@]host[:port]/\"."
-msgstr ""
-"Vekil sunucu bilgileri \"http://[[kullanıcı_adı][:parola]@]adres[:port]/\" "
-"şeklinde girilmelidir."
-
-#. #-#-#-#-#  templates.pot (net-retriever)  #-#-#-#-#
-#. Type: select
-#. Choices
-#. These are choices of actions so this is, at least in English,
-#. an infinitive form
-#. :sl2:
-#. #-#-#-#-#  templates.pot (cdebconf)  #-#-#-#-#
-#. Type: text
-#. Description
-#. Translators, this text will appear on a button, so KEEP IT SHORT
-#. :sl1:
-#. #-#-#-#-#  templates.pot (mdcfg)  #-#-#-#-#
-#. Type: select
-#. Choices
-#. :sl3:
-#. Type: select
-#. Choices
-#. :sl3:
-#: ../net-retriever.templates:1001 ../cdebconf-newt-udeb.templates:5001
-#: ../mdcfg-utils.templates:6001 ../mdcfg-utils.templates:13001
-msgid "Cancel"
-msgstr "İptal et"
-
-#. Type: text
-#. Description
 #. Main menu item
 #. Translators: keep below 55 columns
 #. :sl1:
-#: ../load-cdrom.templates:1001
-msgid "Load installer components from installation media"
-msgstr "Kurulum bileşenlerini kurulum ortamından yükle"
+#: ../nobootloader.templates:1001
+msgid "Continue without boot loader"
+msgstr "Önyükleyicisiz devam et"
 
+#. #-#-#-#-#  templates.pot (partman-auto)  #-#-#-#-#
 #. Type: text
 #. Description
 #. :sl1:
-#: ../partman-base.templates:1001
-msgid "Starting up the partitioner"
-msgstr "Bölümleme uygulaması başlatılıyor"
-
 #. #-#-#-#-#  templates.pot (partman-base)  #-#-#-#-#
 #. Type: text
 #. Description
@@ -2147,14 +3492,185 @@ msgstr "Bölümleme uygulaması başlatılıyor"
 #. Type: text
 #. Description
 #. :sl2:
-#. #-#-#-#-#  templates.pot (partman-auto)  #-#-#-#-#
+#: ../partman-auto.templates:1001 ../partman-base.templates:2001
+#: ../partman-base.templates:25001
+msgid "Please wait..."
+msgstr "Lütfen bekleyin..."
+
 #. Type: text
 #. Description
 #. :sl1:
-#: ../partman-base.templates:2001 ../partman-base.templates:25001
-#: ../partman-auto.templates:1001
-msgid "Please wait..."
-msgstr "Lütfen bekleyin..."
+#: ../partman-auto.templates:2001
+msgid "Computing the new partitions..."
+msgstr "Yeni bölümler hesaplanıyor..."
+
+#. Type: select
+#. Description
+#. :sl1:
+#. Type: select
+#. Description
+#. :sl1:
+#: ../partman-auto.templates:5001 ../partman-auto.templates:9001
+msgid "Partitioning method:"
+msgstr "Bölümleme yöntemi:"
+
+#. Type: select
+#. Description
+#. :sl1:
+#: ../partman-auto.templates:5001
+msgid ""
+"The installer can guide you through partitioning a disk (using different "
+"standard schemes) or, if you prefer, you can do it manually. With guided "
+"partitioning you will still have a chance later to review and customise the "
+"results."
+msgstr ""
+"Kurulum programı disk bölümleme konusunda (standart bölümleme şemaları "
+"kullanarak) size yardım edebilir; ya da tercih ederseniz elle bölümleme "
+"yapabilirsiniz. Bölümleme yardımcısı eşliğinde bölümleme yaparsanız işlemin "
+"sonunda hâlâ sonuçları gözden geçirme ve değiştirme şansınız olacaktır."
+
+#. Type: select
+#. Description
+#. :sl1:
+#. Type: select
+#. Description
+#. :sl1:
+#: ../partman-auto.templates:5001 ../partman-auto.templates:9001
+msgid ""
+"If you choose guided partitioning for an entire disk, you will next be asked "
+"which disk should be used."
+msgstr ""
+"Eğer bütün bir diskin bölümlenmesinde bölümleme yardımcısını kullanmayı "
+"seçmişseniz bir sonraki adımda hangi diskin kullanılacağı size sorulacaktır."
+
+#. Type: select
+#. Description
+#. :sl1:
+#: ../partman-auto.templates:10001
+msgid "Partitioning scheme:"
+msgstr "Bölümleme şeması:"
+
+#. Type: select
+#. Description
+#. :sl1:
+#. "Selected for partitioning" can be either an entire disk
+#. of "the largest continuous free space" on an existing disk
+#. TRANSLATORS, please take care to choose something appropriate for both
+#.
+#. It is followed by a variable giving the chosen disk, hence the colon
+#. at the end of the sentence. Please keep it.
+#: ../partman-auto.templates:10001
+msgid "Selected for partitioning:"
+msgstr "Bölümlenecek alanı seçin:"
+
+#. Type: select
+#. Description
+#. :sl1:
+#: ../partman-auto.templates:10001
+msgid ""
+"The disk can be partitioned using one of several different schemes. If you "
+"are unsure, choose the first one."
+msgstr ""
+"Disk birkaç farklı şekilde bölümlenebilir. Emin değilseniz, birinci şemayı "
+"seçin."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
+#: ../partman-auto.templates:14001
+msgid "Guided partitioning"
+msgstr "Bölümleme yardımcısını kullanarak bölümle"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
+#: ../partman-auto.templates:15001
+msgid "Guided - use the largest continuous free space"
+msgstr "Yardımcı ile - en büyük kesintisiz boş alanı kullan"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
+#: ../partman-auto.templates:16001
+msgid "Guided - use entire disk"
+msgstr "Yardımcı ile - diskin tamamını kullan"
+
+#. Type: select
+#. Description
+#. :sl1:
+#: ../partman-auto.templates:17001
+msgid "Select disk to partition:"
+msgstr "Bölümlenecek diski seçin:"
+
+#. Type: select
+#. Description
+#. :sl1:
+#: ../partman-auto.templates:17001
+msgid ""
+"Note that all data on the disk you select will be erased, but not before you "
+"have confirmed that you really want to make the changes."
+msgstr ""
+"Dikkat!  Seçtiğiniz diskteki bütün veriler silinecektir. Fakat bu işlem "
+"ancak diskte yapılacak değişiklikleri siz onaylandığınızda gerçekleşecektir."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
+#. This is a method for partioning - as in guided (automatic) versus manual
+#: ../partman-auto.templates:18001
+msgid "Manual"
+msgstr "Elle"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
+#: ../partman-auto.templates:19001
+msgid "Automatically partition the free space"
+msgstr "Boş alanı otomatik olarak bölümle"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
+#: ../partman-auto.templates:20001
+msgid "All files in one partition (recommended for new users)"
+msgstr "Tüm dosyalar tek bölümde (yeni kullanıcılara önerilir)"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
+#: ../partman-auto.templates:21001
+msgid "Separate /home partition"
+msgstr "Ayrı /home bölümü"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
+#: ../partman-auto.templates:22001
+msgid "Separate /home, /var, and /tmp partitions"
+msgstr "Ayrı /home, /var ve /tmp bölümleri"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
+#: ../partman-auto-lvm.templates:1001
+msgid "Guided - use entire disk and set up LVM"
+msgstr "Yardımcı ile - diskin tamamını kullan ve LVM'yi ayarla"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../partman-base.templates:1001
+msgid "Starting up the partitioner"
+msgstr "Bölümleme uygulaması başlatılıyor"
 
 #. Type: text
 #. Description
@@ -2405,166 +3921,6 @@ msgstr "Diskleri bölümle"
 
 #. Type: text
 #. Description
-#. :sl1:
-#: ../partman-auto.templates:2001
-msgid "Computing the new partitions..."
-msgstr "Yeni bölümler hesaplanıyor..."
-
-#. Type: select
-#. Description
-#. :sl1:
-#. Type: select
-#. Description
-#. :sl1:
-#: ../partman-auto.templates:5001 ../partman-auto.templates:9001
-msgid "Partitioning method:"
-msgstr "Bölümleme yöntemi:"
-
-#. Type: select
-#. Description
-#. :sl1:
-#: ../partman-auto.templates:5001
-msgid ""
-"The installer can guide you through partitioning a disk (using different "
-"standard schemes) or, if you prefer, you can do it manually. With guided "
-"partitioning you will still have a chance later to review and customise the "
-"results."
-msgstr ""
-"Kurulum programı disk bölümleme konusunda (standart bölümleme şemaları "
-"kullanarak) size yardım edebilir; ya da tercih ederseniz elle bölümleme "
-"yapabilirsiniz. Bölümleme yardımcısı eşliğinde bölümleme yaparsanız işlemin "
-"sonunda hâlâ sonuçları gözden geçirme ve değiştirme şansınız olacaktır."
-
-#. Type: select
-#. Description
-#. :sl1:
-#. Type: select
-#. Description
-#. :sl1:
-#: ../partman-auto.templates:5001 ../partman-auto.templates:9001
-msgid ""
-"If you choose guided partitioning for an entire disk, you will next be asked "
-"which disk should be used."
-msgstr ""
-"Eğer bütün bir diskin bölümlenmesinde bölümleme yardımcısını kullanmayı "
-"seçmişseniz bir sonraki adımda hangi diskin kullanılacağı size sorulacaktır."
-
-#. Type: select
-#. Description
-#. :sl1:
-#: ../partman-auto.templates:10001
-msgid "Partitioning scheme:"
-msgstr "Bölümleme şeması:"
-
-#. Type: select
-#. Description
-#. :sl1:
-#. "Selected for partitioning" can be either an entire disk
-#. of "the largest continuous free space" on an existing disk
-#. TRANSLATORS, please take care to choose something appropriate for both
-#.
-#. It is followed by a variable giving the chosen disk, hence the colon
-#. at the end of the sentence. Please keep it.
-#: ../partman-auto.templates:10001
-msgid "Selected for partitioning:"
-msgstr "Bölümlenecek alanı seçin:"
-
-#. Type: select
-#. Description
-#. :sl1:
-#: ../partman-auto.templates:10001
-msgid ""
-"The disk can be partitioned using one of several different schemes. If you "
-"are unsure, choose the first one."
-msgstr ""
-"Disk birkaç farklı şekilde bölümlenebilir. Emin değilseniz, birinci şemayı "
-"seçin."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
-#: ../partman-auto.templates:14001
-msgid "Guided partitioning"
-msgstr "Bölümleme yardımcısını kullanarak bölümle"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
-#: ../partman-auto.templates:15001
-msgid "Guided - use the largest continuous free space"
-msgstr "Yardımcı ile - en büyük kesintisiz boş alanı kullan"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
-#: ../partman-auto.templates:16001
-msgid "Guided - use entire disk"
-msgstr "Yardımcı ile - diskin tamamını kullan"
-
-#. Type: select
-#. Description
-#. :sl1:
-#: ../partman-auto.templates:17001
-msgid "Select disk to partition:"
-msgstr "Bölümlenecek diski seçin:"
-
-#. Type: select
-#. Description
-#. :sl1:
-#: ../partman-auto.templates:17001
-msgid ""
-"Note that all data on the disk you select will be erased, but not before you "
-"have confirmed that you really want to make the changes."
-msgstr ""
-"Dikkat!  Seçtiğiniz diskteki bütün veriler silinecektir. Fakat bu işlem "
-"ancak diskte yapılacak değişiklikleri siz onaylandığınızda gerçekleşecektir."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
-#. This is a method for partioning - as in guided (automatic) versus manual
-#: ../partman-auto.templates:18001
-msgid "Manual"
-msgstr "Elle"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
-#: ../partman-auto.templates:19001
-msgid "Automatically partition the free space"
-msgstr "Boş alanı otomatik olarak bölümle"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
-#: ../partman-auto.templates:20001
-msgid "All files in one partition (recommended for new users)"
-msgstr "Tüm dosyalar tek bölümde (yeni kullanıcılara önerilir)"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
-#: ../partman-auto.templates:21001
-msgid "Separate /home partition"
-msgstr "Ayrı /home bölümü"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
-#: ../partman-auto.templates:22001
-msgid "Separate /home, /var, and /tmp partitions"
-msgstr "Ayrı /home, /var ve /tmp bölümleri"
-
-#. Type: text
-#. Description
 #. short variant of `do not use the partition'
 #. :sl1:
 #: ../partman-basicmethods.templates:7001
@@ -2586,66 +3942,6 @@ msgstr "biçimle"
 #: ../partman-basicmethods.templates:11001
 msgid "keep"
 msgstr "dokunma"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../partman-partitioning.templates:2001
-msgid "Computing the new state of the partition table..."
-msgstr "Bölümleme tablosunun yeni durumu hesaplanıyor..."
-
-#. Type: select
-#. Choices
-#. :sl1:
-#: ../partman-partitioning.templates:12001
-msgid "Beginning"
-msgstr "Başlangıç"
-
-#. Type: select
-#. Choices
-#. :sl1:
-#: ../partman-partitioning.templates:12001
-msgid "End"
-msgstr "Son"
-
-#. Type: select
-#. Description
-#. :sl1:
-#: ../partman-partitioning.templates:12002
-msgid "Location for the new partition:"
-msgstr "Yeni bölümün konumu:"
-
-#. Type: select
-#. Description
-#. :sl1:
-#: ../partman-partitioning.templates:12002
-msgid ""
-"Please choose whether you want the new partition to be created at the "
-"beginning or at the end of the available space."
-msgstr ""
-"Lütfen yeni bölümün, kullanılabilir alanın başında mı yoksa sonunda mı "
-"oluşturulmasını istediğinizi seçin."
-
-#. Type: select
-#. Choices
-#. :sl1:
-#: ../partman-partitioning.templates:13001
-msgid "Primary"
-msgstr "Birincil"
-
-#. Type: select
-#. Choices
-#. :sl1:
-#: ../partman-partitioning.templates:13001
-msgid "Logical"
-msgstr "Mantıksal"
-
-#. Type: select
-#. Description
-#. :sl1:
-#: ../partman-partitioning.templates:13002
-msgid "Type for the new partition:"
-msgstr "Yeni bölümün türü:"
 
 #. Type: text
 #. Description
@@ -2741,6 +4037,44 @@ msgstr "takas"
 
 #. Type: text
 #. Description
+#. :sl2:
+#. File system name (untranslatable in many languages)
+#. Type: text
+#. Description
+#. :sl1:
+#. Short file system name (untranslatable in many languages)
+#: ../partman-btrfs.templates:1001 ../partman-btrfs.templates:3001
+msgid "btrfs"
+msgstr "btrfs"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Type: text
+#. Description
+#. :sl1:
+#: ../partman-efi.templates:2001 ../partman-efi.templates:4001
+msgid "EFI System Partition"
+msgstr "EFI Sistem Bölümü"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. short variant of 'EFI System Partition'
+#. Up to 10 character positions
+#: ../partman-efi.templates:5001
+msgid "ESP"
+msgstr "ESB"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../partman-efi.templates:7001
+msgid "EFI-fat16"
+msgstr "EFI-fat16"
+
+#. Type: text
+#. Description
 #. :sl1:
 #. File system name (untranslatable in many languages)
 #. Type: text
@@ -2765,18 +4099,6 @@ msgstr "ext4"
 
 #. Type: text
 #. Description
-#. :sl2:
-#. File system name (untranslatable in many languages)
-#. Type: text
-#. Description
-#. :sl1:
-#. Short file system name (untranslatable in many languages)
-#: ../partman-btrfs.templates:1001 ../partman-btrfs.templates:3001
-msgid "btrfs"
-msgstr "btrfs"
-
-#. Type: text
-#. Description
 #. :sl1:
 #. File system name (untranslatable in many languages)
 #. Type: text
@@ -2789,15 +4111,63 @@ msgstr "jfs"
 
 #. Type: text
 #. Description
-#. :sl2:
-#. File system name (untranslatable in many languages)
-#. Type: text
+#. :sl1:
+#: ../partman-partitioning.templates:2001
+msgid "Computing the new state of the partition table..."
+msgstr "Bölümleme tablosunun yeni durumu hesaplanıyor..."
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../partman-partitioning.templates:12001
+msgid "Beginning"
+msgstr "Başlangıç"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../partman-partitioning.templates:12001
+msgid "End"
+msgstr "Son"
+
+#. Type: select
 #. Description
 #. :sl1:
-#. Short file system name (untranslatable in many languages)
-#: ../partman-xfs.templates:1001 ../partman-xfs.templates:3001
-msgid "xfs"
-msgstr "xfs"
+#: ../partman-partitioning.templates:12002
+msgid "Location for the new partition:"
+msgstr "Yeni bölümün konumu:"
+
+#. Type: select
+#. Description
+#. :sl1:
+#: ../partman-partitioning.templates:12002
+msgid ""
+"Please choose whether you want the new partition to be created at the "
+"beginning or at the end of the available space."
+msgstr ""
+"Lütfen yeni bölümün, kullanılabilir alanın başında mı yoksa sonunda mı "
+"oluşturulmasını istediğinizi seçin."
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../partman-partitioning.templates:13001
+msgid "Primary"
+msgstr "Birincil"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../partman-partitioning.templates:13001
+msgid "Logical"
+msgstr "Mantıksal"
+
+#. Type: select
+#. Description
+#. :sl1:
+#: ../partman-partitioning.templates:13002
+msgid "Type for the new partition:"
+msgstr "Yeni bölümün türü:"
 
 #. Type: note
 #. Description
@@ -2907,29 +4277,72 @@ msgstr ""
 
 #. Type: text
 #. Description
-#. :sl1:
+#. :sl2:
+#. File system name (untranslatable in many languages)
 #. Type: text
 #. Description
 #. :sl1:
-#: ../partman-efi.templates:2001 ../partman-efi.templates:4001
-msgid "EFI System Partition"
-msgstr "EFI Sistem Bölümü"
+#. Short file system name (untranslatable in many languages)
+#: ../partman-xfs.templates:1001 ../partman-xfs.templates:3001
+msgid "xfs"
+msgstr "xfs"
+
+#. Type: text
+#. Description
+#. Main menu item
+#. should not be more than 55 columns
+#. pkgsel is the module that installs packages by running tasksel to
+#. select "tasks". Please use "install *software*" and not
+#. "install *packages*" which is less adapted for non technical users
+#. :sl1:
+#: ../pkgsel.templates:1001
+msgid "Select and install software"
+msgstr "Yazılım seç ve kur"
+
+#. Type: text
+#. Description
+#. This appears in a progress bar when running pkgsel
+#. The text is used when pkgsel is launched, before it installs packages
+#. :sl1:
+#: ../pkgsel.templates:2001
+msgid "Setting up..."
+msgstr "Yazılımlar ayarlanıyor..."
+
+#. Type: text
+#. Description
+#. This appears in a progress bar when running pkgsel
+#. The text is used when upgrading already installed packages.
+#. :sl1:
+#: ../pkgsel.templates:5001
+msgid "Upgrading software..."
+msgstr "Yazılım güncelleniyor..."
+
+#. Type: text
+#. Description
+#. This appears in a progress bar when running pkgsel
+#. The text is used when running tasksel to allow selecting packages
+#. Tasksel will then display its own screens
+#. :sl1:
+#: ../pkgsel.templates:6001
+msgid "Running tasksel..."
+msgstr "Görev seçici (tasksel) çalıştırılıyor..."
+
+#. Type: text
+#. Description
+#. This appears in a progress bar when running pkgsel
+#. The text is used at the end of the installation phase while
+#. cleaning up pkgsel's stuff
+#. :sl1:
+#: ../pkgsel.templates:7001
+msgid "Cleaning up..."
+msgstr "Yazılımlar temizleniyor..."
 
 #. Type: text
 #. Description
 #. :sl1:
-#. short variant of 'EFI System Partition'
-#. Up to 10 character positions
-#: ../partman-efi.templates:5001
-msgid "ESP"
-msgstr "ESB"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../partman-efi.templates:7001
-msgid "EFI-fat16"
-msgstr "EFI-fat16"
+#: ../rescue-mode.templates:1001
+msgid "Enter rescue mode"
+msgstr "Kurtarma kipine gir"
 
 #. Type: text
 #. Description
@@ -2938,899 +4351,6 @@ msgstr "EFI-fat16"
 #: ../tzsetup-udeb.templates:1001
 msgid "Saving the time zone..."
 msgstr "Saat dilimi kaydediliyor..."
-
-#. Type: text
-#. Description
-#. Main menu item
-#. Translators: keep below 55 columns
-#. :sl1:
-#: ../clock-setup.templates:1001
-msgid "Configure the clock"
-msgstr "Saati ayarla"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../clock-setup.templates:2001
-msgid "Is the system clock set to UTC?"
-msgstr "Sistem saati UTC'ye mi ayarlı?"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../clock-setup.templates:2001
-msgid ""
-"System clocks are generally set to Coordinated Universal Time (UTC). The "
-"operating system uses your time zone to convert system time into local time. "
-"This is recommended unless you also use another operating system that "
-"expects the clock to be set to local time."
-msgstr ""
-"Sistem saatleri genellikle 'Eş Güdümlü Evrensel Saat'e (UTC) göre ayarlanır. "
-"İşletim sistemi, saat dilimi bilgisini kullanarak sistem saatini yerel saate "
-"çevirir. Sistem saatinin yerel saate ayarlanmasını bekleyen başka işletim "
-"sistemleri kullanmıyorsanız sistem saatini UTC'ye ayarlamanız önerilir."
-
-#. Type: text
-#. Description
-#. progress bar item
-#. :sl1:
-#: ../clock-setup.templates:3001
-msgid "Configuring clock settings..."
-msgstr "Saat ayarları yapılandırılıyor..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../clock-setup.templates:4001
-msgid "Setting up the clock"
-msgstr "Saat ayarlanıyor"
-
-#. Type: text
-#. Description
-#. progress bar item
-#. :sl1:
-#: ../clock-setup.templates:7001
-msgid "Getting the time from a network time server..."
-msgstr "Bir ağ zamanı sunucusundan zaman bilgisi alınıyor..."
-
-#. Type: text
-#. Description
-#. progress bar item
-#. :sl1:
-#: ../clock-setup.templates:8001
-msgid "Setting the hardware clock..."
-msgstr "Donanım saati ayarlanıyor..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../base-installer.templates:4001
-msgid "Preparing to install the base system..."
-msgstr "Temel sistem kurulumuna hazırlanılıyor..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../base-installer.templates:5001 ../bootstrap-base.templates:30001
-msgid "Installing the base system"
-msgstr "Temel sistem kuruluyor"
-
-#. #-#-#-#-#  templates.pot (base-installer)  #-#-#-#-#
-#. Type: text
-#. Description
-#. :sl1:
-#. #-#-#-#-#  templates.pot (apt-setup)  #-#-#-#-#
-#. Type: text
-#. Description
-#. :sl2:
-#. #-#-#-#-#  templates.pot (pkgsel)  #-#-#-#-#
-#. Type: text
-#. Description
-#. :sl2:
-#. #-#-#-#-#  templates.pot (finish-install)  #-#-#-#-#
-#. Type: text
-#. Description
-#. :sl1:
-#: ../base-installer.templates:6001 ../apt-setup-udeb.templates:3001
-#: ../pkgsel.templates:9001 ../finish-install.templates:3001
-msgid "Running ${SCRIPT}..."
-msgstr "${SCRIPT} çalıştırılıyor..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../base-installer.templates:7001
-msgid "Setting up the base system..."
-msgstr "Temel sistem kuruluyor..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../base-installer.templates:8001 ../bootstrap-base.templates:59001
-msgid "Configuring APT sources..."
-msgstr "APT kaynakları yapılandırılıyor..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../base-installer.templates:9001
-msgid "Updating the list of available packages..."
-msgstr "Mevcut paketlere ilişkin liste güncelleniyor..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../base-installer.templates:10001
-msgid "Installing extra packages..."
-msgstr "Ekstra paketler kuruluyor..."
-
-#. Type: text
-#. Description
-#. SUBST0 is a package name
-#. :sl1:
-#: ../base-installer.templates:11001
-msgid "Installing extra packages - retrieving and installing ${SUBST0}..."
-msgstr "Ekstra paketler kuruluyor - ${SUBST0} alınıyor ve kuruluyor..."
-
-#. Type: text
-#. Description
-#. Item in the main menu to select this package
-#. TRANSLATORS: <65 columns
-#. :sl1:
-#: ../bootstrap-base.templates:1001
-msgid "Install the base system"
-msgstr "Temel sistemi kur"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. Release is a filename which should not be translated
-#: ../bootstrap-base.templates:23001
-msgid "Retrieving Release file"
-msgstr "'Release' dosyası alınıyor"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. Release is a filename which should not be translated
-#: ../bootstrap-base.templates:24001
-msgid "Retrieving Release file signature"
-msgstr "'Release' dosyasına ait imza dosyası alınıyor"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. "packages" here can be translated
-#: ../bootstrap-base.templates:25001
-msgid "Finding package sizes"
-msgstr "Paket boyutları bulunuyor"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. Packages is a filename which should not be translated
-#: ../bootstrap-base.templates:26001
-msgid "Retrieving Packages files"
-msgstr "'Packages' dosyaları alınıyor"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. Packages is a filename which should not be translated
-#: ../bootstrap-base.templates:27001
-msgid "Retrieving Packages file"
-msgstr "'Packages' dosyası alınıyor"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. "packages" here can be translated
-#: ../bootstrap-base.templates:28001
-msgid "Retrieving packages"
-msgstr "Paketler alınıyor"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. "packages" here can be translated
-#: ../bootstrap-base.templates:29001
-msgid "Extracting packages"
-msgstr "Paketler açılıyor"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. Core packages are packages that are part of the Debian base system
-#. The "core" packages are indeed packages that are specifically
-#. recorded as part of the base system. Other packages may
-#. be installed on the base system because of dependency resolution
-#: ../bootstrap-base.templates:31001
-msgid "Installing core packages"
-msgstr "Ana paketler kuruluyor"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. Required packages are packages which installation is triggered
-#. by the dependency chain of core packages
-#. In short, they are "required" because at least one of the
-#. packages from the core packages depends on them
-#: ../bootstrap-base.templates:32001
-msgid "Unpacking required packages"
-msgstr "Gerekli paketler açılıyor"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../bootstrap-base.templates:33001
-msgid "Configuring required packages"
-msgstr "Gerekli paketler yapılandırılıyor"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. The base system is the minimal Debian system
-#. See http://www.debian.org/doc/debian-policy/ch-binary.html#s3.7
-#: ../bootstrap-base.templates:34001
-msgid "Unpacking the base system"
-msgstr "Temel sistem paketleri açılıyor"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. The base system is the minimal Debian system
-#. See http://www.debian.org/doc/debian-policy/ch-binary.html#s3.7
-#: ../bootstrap-base.templates:35001
-msgid "Configuring the base system"
-msgstr "Temel sistem yapılandırılıyor"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../bootstrap-base.templates:36001
-msgid "${SECTION}: ${INFO}..."
-msgstr "${SECTION}: ${INFO}..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. SUBST0 is a package name
-#: ../bootstrap-base.templates:37001
-msgid "Validating ${SUBST0}..."
-msgstr "${SUBST0} doğrulanıyor..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. SUBST0 is a package name
-#: ../bootstrap-base.templates:38001
-msgid "Retrieving ${SUBST0}..."
-msgstr "${SUBST0} alınıyor..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. SUBST0 is a package name
-#: ../bootstrap-base.templates:39001
-msgid "Extracting ${SUBST0}..."
-msgstr "${SUBST0} açılıyor..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. SUBST0 is a package name
-#: ../bootstrap-base.templates:40001
-msgid "Unpacking ${SUBST0}..."
-msgstr "${SUBST0} açılıyor..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. SUBST0 is a package name
-#: ../bootstrap-base.templates:41001
-msgid "Configuring ${SUBST0}..."
-msgstr "${SUBST0} yapılandırılıyor..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. Release is a filename which should not be translated
-#: ../bootstrap-base.templates:42001
-msgid "Checking Release signature"
-msgstr "'Release' dosyasına ait imza denetleniyor"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. SUBST0 is a gpg key id
-#. Release is a filename which should not be translated
-#: ../bootstrap-base.templates:43001
-msgid "Valid Release signature (key id ${SUBST0})"
-msgstr "'Release' imzası geçerli (anahtar kimliği: ${SUBST0})"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../bootstrap-base.templates:44001
-msgid "Resolving dependencies of base packages..."
-msgstr "Temel paketlerin bağımlılıkları çözülüyor..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. SUBST0 is a list of packages
-#: ../bootstrap-base.templates:45001
-msgid "Found additional base dependencies: ${SUBST0}"
-msgstr "İlave temel paket bağımlılıkları bulundu: ${SUBST0}"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. SUBST0 is a list of packages
-#: ../bootstrap-base.templates:46001
-msgid "Found additional required dependencies: ${SUBST0}"
-msgstr "İlave gerekli paket bağımlılıkları bulundu: ${SUBST0}"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. SUBST0 is a list of packages
-#: ../bootstrap-base.templates:47001
-msgid "Found packages in base already in required: ${SUBST0}"
-msgstr "Bulunan temel bağımlılıklar zaten gerekliler listesinde: ${SUBST0}"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../bootstrap-base.templates:48001
-msgid "Resolving dependencies of required packages..."
-msgstr "Gerekli paketlerin bağımlılıkları çözülüyor..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. SUBST0 is an archive component (main, etc)
-#. SUBST1 is a mirror
-#: ../bootstrap-base.templates:49001
-msgid "Checking component ${SUBST0} on ${SUBST1}..."
-msgstr "${SUBST1} üzerindeki ${SUBST0} bileşeni denetleniyor..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. Core packages are packages that are part of the Debian base system
-#. The "core" packages are indeed packages that are specifically
-#. recorded as part of the base system. Other packages may
-#. be installed on the base system because of dependency resolution
-#: ../bootstrap-base.templates:50001
-msgid "Installing core packages..."
-msgstr "Ana paketler kuruluyor..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. Required packages are packages which installation is triggered
-#. by the dependency chain of core packages
-#. In short, they are "required" because at least one of the
-#. packages from the core packages depends on them
-#: ../bootstrap-base.templates:51001
-msgid "Unpacking required packages..."
-msgstr "Gerekli paketler açılıyor..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. Required packages are packages which installation is triggered
-#. by the dependency chain of core packages
-#. In short, they are "required" because at least one of the
-#. packages from the core packages depends on them
-#: ../bootstrap-base.templates:52001
-msgid "Configuring required packages..."
-msgstr "Gerekli paketler yapılandırılıyor..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../bootstrap-base.templates:53001
-msgid "Installing base packages..."
-msgstr "Temel paketler kuruluyor..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../bootstrap-base.templates:54001
-msgid "Unpacking the base system..."
-msgstr "Temel sistem paketleri açılıyor..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../bootstrap-base.templates:55001
-msgid "Configuring the base system..."
-msgstr "Temel sistem yapılandırılıyor..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../bootstrap-base.templates:56001
-msgid "Base system installed successfully."
-msgstr "Temel sistem başarıyla kuruldu."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../bootstrap-base.templates:60001
-msgid "Selecting the kernel to install..."
-msgstr "Kurulacak çekirdek seçiliyor..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../bootstrap-base.templates:61001
-msgid "Installing the kernel..."
-msgstr "Çekirdek kuruluyor..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. SUBST0 is a package name
-#: ../bootstrap-base.templates:62001
-msgid "Installing the kernel - retrieving and installing ${SUBST0}..."
-msgstr "Çekirdek kuruluyor - ${SUBST0} alınıyor ve kuruluyor..."
-
-#. Type: text
-#. Description
-#. Main menu item
-#. MUST be kept below 55 characters/columns
-#. :sl1:
-#: ../apt-setup-udeb.templates:1001
-msgid "Configure the package manager"
-msgstr "Paket yöneticisini yapılandır"
-
-#. Type: text
-#. Description
-#. Translators, "apt" is the program name
-#. so please do NOT translate it
-#. :sl1:
-#: ../apt-setup-udeb.templates:2001
-msgid "Configuring apt"
-msgstr "Apt yapılandırılıyor"
-
-#. Type: multiselect
-#. Choices
-#. SEC_HOST is a host name (e.g. security.debian.org)
-#. Translators: the *entire* string should be under 55 columns
-#. including host name. In short, KEEP THIS SHORT and, yes, that's tricky
-#. :sl1:
-#: ../apt-setup-udeb.templates:11001
-msgid "security updates (from ${SEC_HOST})"
-msgstr "güvenlik güncellemeleri (${SEC_HOST} adresinden)"
-
-#. Type: multiselect
-#. Choices
-#. SEC_HOST is a host name (e.g. security.debian.org)
-#. Translators: the *entire* string should be under 55 columns
-#. including host name. In short, KEEP THIS SHORT and, yes, that's tricky
-#. :sl1:
-#: ../apt-setup-udeb.templates:11001
-msgid "release updates"
-msgstr "sürüm güncellemeleri"
-
-#. Type: multiselect
-#. Choices
-#. SEC_HOST is a host name (e.g. security.debian.org)
-#. Translators: the *entire* string should be under 55 columns
-#. including host name. In short, KEEP THIS SHORT and, yes, that's tricky
-#. :sl1:
-#: ../apt-setup-udeb.templates:11001
-msgid "backported software"
-msgstr "uyarlanmış yazılım"
-
-#. Type: multiselect
-#. Description
-#. :sl1:
-#: ../apt-setup-udeb.templates:11002
-msgid "Services to use:"
-msgstr "Kullanılacak hizmetler:"
-
-#. Type: multiselect
-#. Description
-#. :sl1:
-#: ../apt-setup-udeb.templates:11002
-msgid ""
-"Debian has two services that provide updates to releases: security and "
-"release updates."
-msgstr ""
-"Debian, sürüm güncellemeleri için iki farklı hizmete sunar: güvenlik "
-"güncellemeleri ve sürüm güncellemeleri."
-
-#. Type: multiselect
-#. Description
-#. :sl1:
-#: ../apt-setup-udeb.templates:11002
-msgid ""
-"Security updates help to keep your system secured against attacks. Enabling "
-"this service is strongly recommended."
-msgstr ""
-"Güvenlik güncellemeleri sisteminizin saldırılar karşısında güvenli durumda "
-"kalmasına yardımcı olur. Bu hizmeti etkinleştirmeniz şiddetle tavsiye edilir."
-
-#. Type: multiselect
-#. Description
-#. :sl1:
-#: ../apt-setup-udeb.templates:11002
-msgid ""
-"Release updates provide more current versions for software that changes "
-"relatively frequently and where not having the latest version could reduce "
-"the usability of the software. It also provides regression fixes. This "
-"service is only available for stable and oldstable releases."
-msgstr ""
-"Sürüm güncellemeleri, görece sık değişen ve en son sürümünün kullanılmaması "
-"halinde yararı azalan yazılımların daha güncel sürümlerini sağlamaktadır. "
-"Sürüm güncellemeleri aynı zamanda gerileme hatalarının düzeltmelerini de "
-"sağlar.  Bu hizmet yalnızca kararlı ve eskikararlı sürümler için mevcuttur."
-
-#. Type: multiselect
-#. Description
-#. :sl1:
-#: ../apt-setup-udeb.templates:11002
-msgid ""
-"Backported software are adapted from the development version to work with "
-"this release. Although this software has not gone through such complete "
-"testing as that contained in the release, it includes newer versions of some "
-"applications which may provide useful features. Enabling backports here does "
-"not cause any of them to be installed by default; it only allows you to "
-"manually select backports to use."
-msgstr ""
-"Uyarlanmış yazılımlar (backports), bu dağıtım sürümüyle çalışabilmesi için "
-"geliştirme sürümünden uyarlanarak hazırlanmıştır. Uyarlanmış yazılımlar, "
-"mevcut sürümde bulunanlar kadar kapsamlı bir testten geçmemiş olmakla "
-"beraber, yararlı olabilecek özelliklere sahip bazı yeni sürüm programlar "
-"içermektedir. Bu yazılımları etkinleştirmek onların hemen kurulmasına neden "
-"olmaz, yalnızca sizin kullanmak istediğiniz uyarlanmış yazılımları seçmenizi "
-"sağlar."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:1001
-msgid "Scanning the installation media..."
-msgstr "Kurulum medyası taranıyor..."
-
-#. Type: error
-#. Description
-#. :sl2:
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:2001 ../apt-cdrom-setup.templates:6001
-msgid ""
-"An attempt to configure apt to install additional packages from the media "
-"failed."
-msgstr ""
-"Medyadan ek paketler yüklemek için apt'yi yapılandırma girişimi başarısız "
-"oldu."
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#. Type: boolean
-#. Description
-#. :sl1:
-#. Type: boolean
-#. Description
-#. :sl1:
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:3001 ../apt-cdrom-setup.templates:4001
-#: ../apt-cdrom-setup.templates:5001 ../apt-cdrom-setup.templates:6001
-msgid "Scan extra installation media?"
-msgstr "Ekstra kurulum medyası taransın mı?"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:3001
-msgid "Scanning your installation media finds the label:"
-msgstr "Kurulum medyanız tarandığında şu etiket bulunur:"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:3001
-msgid ""
-"You now have the option of scanning additional media for use by the package "
-"manager (apt). Normally these should be from the same set as the one you "
-"booted from. If you do not have any additional media, this step can just be "
-"skipped."
-msgstr ""
-"Artık paket yöneticisi (apt) tarafından kullanılmak üzere ek medya tarama "
-"seçeneğine sahipsiniz. Normalde bunlar, başlattığınız kümeyle aynı kümeden "
-"olmalıdır. Ek medyanız yoksa, bu adım atlanabilir."
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:3001 ../apt-cdrom-setup.templates:4001
-msgid "If you wish to scan more media, please insert another one now."
-msgstr ""
-"Daha fazla medya taramak istiyorsanız, lütfen şimdi bir tane daha ekleyin."
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:4001
-msgid "The image with the following label has been scanned:"
-msgstr "Aşağıdaki etikete sahip medya tarandı:"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:5001
-msgid "The image with the following label has already been scanned:"
-msgstr "Aşağıdaki etikete sahip medya daha önceden taranmış:"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:5001
-msgid "Please replace it now, if you wish to scan another."
-msgstr "Başka bir tarama yapmak istiyorsanız lütfen şimdi değiştirin."
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:6001
-msgid "Please check that the media has been inserted correctly."
-msgstr "Lütfen ortamın doğru yerleştirildiğini kontrol edin."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:7001
-msgid "Media change"
-msgstr "Ortam değişti"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:7001
-msgid "Please insert the media labeled '${LABEL}' and press enter."
-msgstr "Lütfen '${LABEL}' etiketli ortamı yerleştirin ve enter tuşuna basın."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. finish-install progress bar item
-#: ../apt-cdrom-setup.templates:8001
-msgid "Disabling netinst CD in sources.list..."
-msgstr "'sources.list' dosyasındaki netinst CD kaydı etkisizleştiriliyor..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../apt-cdrom-setup.templates:9001 ../apt-mirror-setup.templates:6001
-msgid ""
-"If you are installing from a netinst CD image and choose not to use a "
-"mirror, you will end up with only a very minimal base system."
-msgstr ""
-"Bir netinst CD görüntüsünden kurulum yapıyorsanız ve yansı kullanmamayı "
-"seçerseniz, yalnızca çok küçük bir temel sistemle karşılaşacaksınız."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:10001
-msgid ""
-"You are installing from a netinst CD image, which by itself only allows "
-"installation of a very minimal base system. Use a mirror to install a more "
-"complete system."
-msgstr ""
-"Bir netinst CD görüntüsünden kurulum yapıyorsunuz, bu da tek başına çok az "
-"bir temel sistemin kurulumuna izin veriyor. Daha eksiksiz bir sistem kurmak "
-"için bir yansı kullanın."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:11001
-msgid ""
-"You are installing from an image which contains a limited selection of "
-"packages."
-msgstr "Sınırlı sayıda paket içeren bir medyadan kurulum yapıyorsunuz."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. The value of %i can be 2 or 3
-#: ../apt-cdrom-setup.templates:12001
-#, no-c-format
-msgid ""
-"You have scanned %i images. Even though these contain a fair selection of "
-"packages, some may be missing (notably some packages needed to support "
-"languages other than English)."
-msgstr ""
-"%i adet medya tarattınız. Bunlar adil bir paket seçimi içermesine rağmen, "
-"bazıları eksik olabilir (özellikle İngilizce dışındaki dilleri desteklemek "
-"için bazı paketler gereklidir)."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. The value of %i can be from 4 to 8
-#: ../apt-cdrom-setup.templates:13001
-#, no-c-format
-msgid ""
-"You have scanned %i images. Even though these contain a large selection of "
-"packages, some may be missing."
-msgstr ""
-"%i medya taradınız. Bunlar çok çeşitli paketler içermesine rağmen, bazıları "
-"eksik olabilir."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:14001
-msgid ""
-"Note that using a mirror can result in a large amount of data being "
-"downloaded during the next step of the installation."
-msgstr ""
-"Bir yansı kullanmanız halinde bir sonraki kurulum adımında ağ üzerinden "
-"büyük miktarda veri aktarılacağını lütfen unutmayın."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:15001
-msgid ""
-"You are installing from a DVD image. Even though it contains a large "
-"selection of packages, some may be missing."
-msgstr ""
-"Bir DVD görüntüsünden kuruyorsunuz. Çok sayıda paket içermesine rağmen, "
-"bazıları eksik olabilir."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:16001
-msgid ""
-"Unless you don't have a good Internet connection, use of a mirror is "
-"recommended, especially if you plan to install a graphical desktop "
-"environment."
-msgstr ""
-"İyi bir İnternet bağlantısına sahip olmadığınız sürece bir yansı kullanmanız "
-"tavsiye edilir; özellikle bir grafik masaüstü ortamı kurma niyetindeyseniz."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:17001
-msgid ""
-"If you have a reasonably good Internet connection, use of a mirror is "
-"suggested if you plan to install a graphical desktop environment."
-msgstr ""
-"İyi bir İnternet bağlantısına sahipseniz bir yansı kullanmanız tavsiye "
-"edilir; özellikle bir grafik masaüstü ortamı kurma niyetindeyseniz."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../apt-mirror-setup.templates:1001
-msgid "Scanning the mirror..."
-msgstr "Yansı taranıyor..."
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-mirror-setup.templates:2001
-msgid "Use non-free software?"
-msgstr "Özgür olmayan yazılım kullanacak mısınız?"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-mirror-setup.templates:2001
-msgid ""
-"Some non-free software has been made to work with Debian. Though this "
-"software is not at all a part of Debian, standard Debian tools can be used "
-"to install it. This software has varying licenses which may prevent you from "
-"using, modifying, or sharing it."
-msgstr ""
-"Bazı özgür olmayan yazılımlar Debian ile kullanılacak hale getirilmiştir. Bu "
-"yazılımlar Debian'ın bir parçası olmamakla birlikte standart Debian araçları "
-"ile kurulabilirler. Bu yazılımların; onları kullanmanızı, değiştirmenizi ya "
-"da paylaşmanızı kısıtlayan değişik lisansları vardır."
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#. Type: boolean
-#. Description
-#. This template is used by the Ubuntu version of d-i.
-#. :sl2:
-#: ../apt-mirror-setup.templates:2001 ../apt-mirror-setup.templates-ubuntu:1001
-msgid "Please choose whether you want to have it available anyway."
-msgstr ""
-"Lütfen kullanılabilir olmasını isteyip istemediğiniz konusunda seçiminizi "
-"yapın."
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-mirror-setup.templates:3001
-msgid "Use contrib software?"
-msgstr "Katkı yazılımlar kullanılsın mı?"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-mirror-setup.templates:3001
-msgid ""
-"Some additional software has been made to work with Debian. Though this "
-"software is free, it depends on non-free software for its operation. This "
-"software is not a part of Debian, but standard Debian tools can be used to "
-"install it."
-msgstr ""
-"Bazı ilave yazılımlar Debian ile çalışabilir hale getirilmiştir. Bu "
-"yazılımlar özgür olmakla birlikte çalışmak için özgür olmayan yazılımlara "
-"bağımlıdırlar. Bu yazılımlar Debian'ın bir parçası değildirler, fakat "
-"standart Debian araçları kullanılarak kurulumları yapılabilir."
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#. Type: boolean
-#. Description
-#. This template is used by the Ubuntu version of d-i.
-#. :sl2:
-#. Type: boolean
-#. Description
-#. This template is used by the Ubuntu version of d-i.
-#. :sl2:
-#. Type: boolean
-#. Description
-#. This template is used by the Ubuntu version of d-i.
-#. :sl2:
-#. Type: boolean
-#. Description
-#. This template is used by the Ubuntu version of d-i.
-#. :sl2:
-#: ../apt-mirror-setup.templates:3001 ../apt-mirror-setup.templates-ubuntu:2001
-#: ../apt-mirror-setup.templates-ubuntu:3001
-#: ../apt-mirror-setup.templates-ubuntu:4001
-#: ../apt-mirror-setup.templates-ubuntu:5001
-msgid ""
-"Please choose whether you want this software to be made available to you."
-msgstr ""
-"Lütfen bu çeşit yazılımların kullanılabilir olması konusunda seçiminizi "
-"yapın."
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-mirror-setup.templates:5001
-msgid "Use a network mirror?"
-msgstr "Bir ağ yansısı kullanılsın mı?"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-mirror-setup.templates:5001
-msgid ""
-"A network mirror can be used to supplement the software that is included on "
-"the installation media. This may also make newer versions of software "
-"available."
-msgstr ""
-"Kurulum medyasında bulunan yazılımı desteklemek için bir ağ aynası "
-"kullanılabilir. Bu ayrıca yazılımın daha yeni sürümlerini kullanılabilir "
-"hale getirebilir."
 
 #. Type: boolean
 #. Description
@@ -3909,26 +4429,6 @@ msgstr ""
 #: ../user-setup-udeb.templates:6001
 msgid "Note that you will not be able to see the password as you type it."
 msgstr "Parolayı yazarken parolanın görünmeyeceğini unutmayın."
-
-#. #-#-#-#-#  templates.pot (user-setup)  #-#-#-#-#
-#. Type: password
-#. Description
-#. :sl1:
-#. Type: password
-#. Description
-#. :sl1:
-#. #-#-#-#-#  templates.pot (grub-installer)  #-#-#-#-#
-#. Type: password
-#. Description
-#. :sl2:
-#. #-#-#-#-#  templates.pot (network-console)  #-#-#-#-#
-#. Type: password
-#. Description
-#. :sl3:
-#: ../user-setup-udeb.templates:7001 ../user-setup-udeb.templates:14001
-#: ../grub-installer.templates:10001 ../network-console.templates:5001
-msgid "Re-enter password to verify:"
-msgstr "Doğrulamak için parolayı tekrar girin:"
 
 #. Type: password
 #. Description
@@ -4025,506 +4525,6 @@ msgstr "Kullanıcıları ve parolaları oluştur"
 #: ../user-setup-udeb.templates:19001
 msgid "Setting users and passwords..."
 msgstr "Kullanıcılar ve parolalar ayarlanıyor..."
-
-#. Type: text
-#. Description
-#. Translators, this text will appear on a button, so KEEP IT SHORT
-#. :sl1:
-#: ../cdebconf-newt-udeb.templates:1001 ../cdebconf-gtk-udeb.templates:1001
-msgid "Continue"
-msgstr "Devam"
-
-#. Type: text
-#. Description
-#. Translators, this text will appear on a button, so KEEP IT SHORT
-#. :sl1:
-#: ../cdebconf-newt-udeb.templates:2001 ../cdebconf-gtk-udeb.templates:2001
-msgid "Go Back"
-msgstr "Geri dön"
-
-#. Type: text
-#. Description
-#. Translators, this text will appear on a button, so KEEP IT SHORT
-#. :sl1:
-#. Type: text
-#. Description
-#. :sl4:
-#: ../cdebconf-newt-udeb.templates:3001 ../cdebconf-gtk-udeb.templates:3001
-#: ../cdebconf-slang-udeb.templates:1001 ../cdebconf-text-udeb.templates:10001
-msgid "Yes"
-msgstr "Evet"
-
-#. Type: text
-#. Description
-#. Translators, this text will appear on a button, so KEEP IT SHORT
-#. :sl1:
-#. Type: text
-#. Description
-#. :sl4:
-#: ../cdebconf-newt-udeb.templates:4001 ../cdebconf-gtk-udeb.templates:4001
-#: ../cdebconf-slang-udeb.templates:2001 ../cdebconf-text-udeb.templates:11001
-msgid "No"
-msgstr "Hayır"
-
-#. Type: text
-#. Description
-#. Help line displayed at the bottom of the cdebconf newt interface.
-#. Translators: must fit within 80 characters.
-#. :sl1:
-#: ../cdebconf-newt-udeb.templates:6001
-msgid "<Tab> moves; <Space> selects; <Enter> activates buttons"
-msgstr ""
-"<Tab> ögeler arasında geçiş; <Space> seç; <Enter> düğmeleri etkinleştir"
-
-#. Type: text
-#. Description
-#. Help line displayed at the bottom of the cdebconf newt interface.
-#. Translators: must fit within 80 characters.
-#. :sl1:
-#: ../cdebconf-newt-udeb.templates:7001
-msgid "<F1> for help; <Tab> moves; <Space> selects; <Enter> activates buttons"
-msgstr "<F1> yardım; <Tab> geçiş; <Space> seç; <Enter> düğmeleri etkinleştir"
-
-#. Type: text
-#. Description
-#. Appears as a checkbox in the newt and GTK interfaces.
-#. :sl1:
-#: ../cdebconf-newt-udeb.templates:8001 ../cdebconf-gtk-udeb.templates:9001
-msgid "Show Password in Clear"
-msgstr "Parolayı Göster"
-
-#. Type: text
-#. Description
-#. Translators, this text will appear on a button, so KEEP IT SHORT
-#. :sl1:
-#: ../cdebconf-gtk-udeb.templates:5001
-msgid "Help"
-msgstr "Yardım"
-
-#. Type: text
-#. Description
-#. TRANSLATORS: This should be "translated" to "RTL" or "LTR" depending of
-#. default text direction of your language
-#. LTR: Left to Right (Latin, Cyrillic, CJK, Indic...)
-#. RTL: Right To Left (Arabic, Hebrew, Persian...)
-#. DO NOT USE ANYTHING ELSE
-#. :sl1:
-#: ../cdebconf-gtk-udeb.templates:6001
-msgid "LTR"
-msgstr "LTR"
-
-#. Type: text
-#. Description
-#. Translators, this text will appear on a button, so KEEP IT SHORT
-#. This button will allow users to virtually "shoot a picture"
-#. of the screen
-#. :sl1:
-#: ../cdebconf-gtk-udeb.templates:7001
-msgid "Screenshot"
-msgstr "Ekran görüntüsü"
-
-#. Type: text
-#. Description
-#. Text that will appear in a dialog box mentioning which file
-#. the screenshot has been saved to. "%s" is a file name here
-#. :sl1:
-#: ../cdebconf-gtk-udeb.templates:8001
-#, no-c-format
-msgid "Screenshot saved as %s"
-msgstr "Ekran görüntüsü %s dosyasına kaydedildi"
-
-#. Type: text
-#. Description
-#. Main menu item
-#. should not be more than 55 columns
-#. pkgsel is the module that installs packages by running tasksel to
-#. select "tasks". Please use "install *software*" and not
-#. "install *packages*" which is less adapted for non technical users
-#. :sl1:
-#: ../pkgsel.templates:1001
-msgid "Select and install software"
-msgstr "Yazılım seç ve kur"
-
-#. Type: text
-#. Description
-#. This appears in a progress bar when running pkgsel
-#. The text is used when pkgsel is launched, before it installs packages
-#. :sl1:
-#: ../pkgsel.templates:2001
-msgid "Setting up..."
-msgstr "Yazılımlar ayarlanıyor..."
-
-#. Type: text
-#. Description
-#. This appears in a progress bar when running pkgsel
-#. The text is used when upgrading already installed packages.
-#. :sl1:
-#: ../pkgsel.templates:5001
-msgid "Upgrading software..."
-msgstr "Yazılım güncelleniyor..."
-
-#. Type: text
-#. Description
-#. This appears in a progress bar when running pkgsel
-#. The text is used when running tasksel to allow selecting packages
-#. Tasksel will then display its own screens
-#. :sl1:
-#: ../pkgsel.templates:6001
-msgid "Running tasksel..."
-msgstr "Görev seçici (tasksel) çalıştırılıyor..."
-
-#. Type: text
-#. Description
-#. This appears in a progress bar when running pkgsel
-#. The text is used at the end of the installation phase while
-#. cleaning up pkgsel's stuff
-#. :sl1:
-#: ../pkgsel.templates:7001
-msgid "Cleaning up..."
-msgstr "Yazılımlar temizleniyor..."
-
-#. Type: text
-#. Description
-#. Main menu item
-#. Translators: keep below 55 columns
-#. :sl1:
-#: ../finish-install.templates:1001
-msgid "Finish the installation"
-msgstr "Kurulumu bitir"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../finish-install.templates:2001
-msgid "Finishing the installation"
-msgstr "Kurulum bitiriliyor"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../finish-install.templates:4001
-msgid "Configuring network..."
-msgstr "Ağ yapılandırılıyor..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../finish-install.templates:5001
-msgid "Setting up frame buffer..."
-msgstr "Kare tamponu ayarlanıyor..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../finish-install.templates:6001
-msgid "Unmounting file systems..."
-msgstr "Bağlanan dosya sistemleri ayrılıyor..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../finish-install.templates:7001
-msgid "Rebooting into your new system..."
-msgstr "Yeni sisteminiz yeniden başlatılıyor..."
-
-#. Type: note
-#. Description
-#. :sl1:
-#: ../finish-install.templates:8001
-msgid "Installation complete"
-msgstr "Kurulum tamamlandı"
-
-#. Type: note
-#. Description
-#. :sl1:
-#: ../finish-install.templates:8001
-msgid ""
-"Installation is complete, so it is time to boot into your new system. Make "
-"sure to remove the installation media, so that you boot into the new system "
-"rather than restarting the installation."
-msgstr ""
-"Kurulum tamamlandı ve şimdi sıra bilgisayarınızı yeni sisteminiz ile açmaya "
-"geldi. Kurulum programının tekrar başlamaması ve yeni sisteminizden açılış "
-"yapılması için kurulumda kullandığınız ortamı çıkarmayı unutmayın."
-
-#. Type: text
-#. Description
-#. Main menu item
-#. Translators: keep below 55 columns
-#. :sl1:
-#: ../nobootloader.templates:1001
-msgid "Continue without boot loader"
-msgstr "Önyükleyicisiz devam et"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:1001 ../grub-installer.templates:2001
-msgid "Install the GRUB boot loader to your primary drive?"
-msgstr "GRUB önyükleyici birincil sürücünüze yüklensin mi?"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:1001
-msgid ""
-"The following other operating systems have been detected on this computer: "
-"${OS_LIST}"
-msgstr ""
-"Bu bilgisayarda aşağıda listelenen işletim sistemleri belirlendi: ${OS_LIST}"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:1001
-msgid ""
-"If all of your operating systems are listed above, then it should be safe to "
-"install the boot loader to your primary drive (UEFI partition/boot record). "
-"When your computer boots, you will be able to choose to load one of these "
-"operating systems or the newly installed Debian system."
-msgstr ""
-"Tüm işletim sistemleriniz yukarıda listeleniyorsa, önyükleyiciyi birincil "
-"sürücünüze (UEFI bölümü/önyükleme kaydı) yüklemek güvenli olacaktır. "
-"Bilgisayarınız açıldığında, bu işletim sistemlerinden birini veya yeni "
-"kurulan Debian sistemini yüklemeyi seçebileceksiniz."
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:2001
-msgid ""
-"It seems that this new installation is the only operating system on this "
-"computer. If so, it should be safe to install the GRUB boot loader to your "
-"primary drive (UEFI partition/boot record)."
-msgstr ""
-"Görünüşe göre bu yeni kurulum, bu bilgisayardaki tek işletim sistemi. "
-"Öyleyse, GRUB önyükleyicisini birincil sürücünüze (UEFI bölümü/önyükleme "
-"kaydı) yüklemek güvenli olacaktır."
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:2001
-msgid ""
-"Warning: If your computer has another operating system that the installer "
-"failed to detect, this will make that operating system temporarily "
-"unbootable, though GRUB can be manually configured later to boot it."
-msgstr ""
-"Uyarı: Bilgisayarınızda yükleyicinin algılayamadığı başka bir işletim "
-"sistemi varsa, bu, işletim sistemini geçici olarak önyüklenemez hale "
-"getirecektir, ancak GRUB daha sonra önyüklemek için manuel olarak "
-"yapılandırılabilir."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:18001
-msgid "Installing GRUB boot loader"
-msgstr "GRUB önyükleyici kuruluyor"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:19001
-msgid "Looking for other operating systems..."
-msgstr "Sisteminizde kurulu diğer işletim sistemleri araştırılıyor..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:20001
-msgid "Installing the '${GRUB}' package..."
-msgstr "'${GRUB}' paketi kuruluyor..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:21001
-msgid "Determining GRUB boot device..."
-msgstr "GRUB önyükleme aygıtı belirleniyor..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:22001
-msgid "Running \"grub-install ${BOOTDEV}\"..."
-msgstr "\"grub-install ${BOOTDEV}\" çalıştırılıyor..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:23001
-msgid "Running \"update-grub\"..."
-msgstr "\"update-grub\" çalıştırılıyor..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:24001
-msgid "Updating /etc/kernel-img.conf..."
-msgstr "/etc/kernel-img.conf güncelleniyor..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:25001
-msgid "Checking whether to force usage of the removable media path"
-msgstr ""
-"Taşınabilir ortam yoluna kurulum yapılmasının gerekip gerekmediği "
-"denetleniyor"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:26001
-msgid "Mounting filesystems"
-msgstr "Dosya sistemleri bağlanıyor"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:27001
-msgid "Configuring grub-efi for future usage of the removable media path"
-msgstr ""
-"İleride taşınabilir ortam yolunun kullanılabilmesi için grub-efi "
-"yapılandırılıyor"
-
-#. Type: text
-#. Description
-#. Main menu item
-#. Translators: keep below 55 columns
-#. :sl1:
-#: ../grub-installer.templates:28001
-msgid "Install the GRUB boot loader"
-msgstr "GRUB önyükleyiciyi kur"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:34001
-msgid "Force GRUB installation to the EFI removable media path?"
-msgstr "EFI taşınabilir ortam yoluna zorunlu bir GRUB kurulumu yapılsın mı?"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:34001
-msgid ""
-"It seems that this computer is configured to boot via EFI, but maybe that "
-"configuration will not work for booting from the hard drive. Some EFI "
-"firmware implementations do not meet the EFI specification (i.e. they are "
-"buggy!) and do not support proper configuration of boot options from system "
-"hard drives."
-msgstr ""
-"Bu bilgisayar EFI ile başlatılacak şekilde yapılandırılmış; ama bu "
-"yapılandırma sabit diskten başlatma yapmakta başarısız olabilir. Bazı EFI "
-"aygıt yazılımları EFI şartnamelerine tam olarak uymaz (yani hatalıdırlar!) "
-"ve önyükleme seçeneklerinin sistem sabit disklerinden yapılandırılmasını tam "
-"olarak desteklemezler."
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:34001
-msgid ""
-"A workaround for this problem is to install an extra copy of the EFI version "
-"of the GRUB boot loader to a fallback location, the \"removable media path"
-"\". Almost all EFI systems, no matter how buggy, will boot GRUB that way."
-msgstr ""
-"Bu sorununa geçici bir çözüm olarak GRUB önyükleyicinin EFI uyarlamasının "
-"fazladan bir kopyası \"taşınabilir ortam yolu\" adı verilen konuma "
-"kurulabilir. Ne kadar hatalı olursa olsun neredeyse tüm EFI sistemleri "
-"GRUB'u bu şekilde önyükleyebilir."
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:34001
-msgid ""
-"Warning: If the installer failed to detect another operating system that is "
-"present on your computer that also depends on this fallback, installing GRUB "
-"there will make that operating system temporarily unbootable. GRUB can be "
-"manually configured later to boot it if necessary."
-msgstr ""
-"Uyarı: Kurulum programı, bilgisayarınızda bulunan ve başlatılabilmek için bu "
-"mekanizmaya bel bağlayan diğer işletim sistemlerini algılamakta başarısız "
-"olursa, GRUB'u buraya kurmak bu işletim sisteminin geçici olarak "
-"başlatılamamasına yol açacaktır. Bununla birlikte bilgisayarın bu işletim "
-"sistemi ile başlatılabilmesi için GRUB'u daha sonra elle "
-"yapılandırabilirsiniz."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../rescue-mode.templates:1001
-msgid "Enter rescue mode"
-msgstr "Kurtarma kipine gir"
-
-#. Type: text
-#. Description
-#. Main menu item
-#. Translators: keep below 55 columns
-#. :sl1:
-#: ../iso-scan.templates:1001
-msgid "Scan hard drives for an installer ISO image"
-msgstr "Sabit diskleri kurulumda kullanılabilecek ISO dosyası için tara"
-
-#. Type: text
-#. Description
-#. Main menu item
-#. Translators: keep below 55 columns
-#. :sl1:
-#: ../save-logs.templates:1001
-msgid "Save debug logs"
-msgstr "Hata ayıklama bilgilerini kaydet"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. finish-install progress bar item
-#: ../save-logs.templates:9001
-msgid "Gathering information for installation report..."
-msgstr "Kurulum raporu için bilgi toplanıyor..."
-
-#. Type: text
-#. Description
-#. Main menu item
-#. Translators: keep below 55 columns
-#. :sl1:
-#: ../mdcfg-utils.templates:1001
-msgid "Configure MD devices"
-msgstr "MD aygıtlarını yapılandır"
-
-#. #-#-#-#-#  templates.pot (lvmcfg)  #-#-#-#-#
-#. Type: text
-#. Description
-#. Main menu item
-#. Translators: keep below 55 columns
-#. :sl1:
-#. #-#-#-#-#  templates.pot (partman-lvm)  #-#-#-#-#
-#. Type: text
-#. Description
-#. Type: text
-#. Description
-#. :sl3:
-#. Main menu item
-#. Translators: keep below 55 columns
-#. Use infinitive form
-#: ../lvmcfg.templates:1001 ../partman-lvm.templates:7001
-#: ../partman-lvm.templates:23001
-msgid "Configure the Logical Volume Manager"
-msgstr "Mantıksal Disk Yöneticisini (LVM) yapılandır"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
-#: ../partman-auto-lvm.templates:1001
-msgid "Guided - use entire disk and set up LVM"
-msgstr "Yardımcı ile - diskin tamamını kullan ve LVM'yi ayarla"
 
 #~ msgid ""
 #~ "Please select the size of the font for the console.  For reference, the "

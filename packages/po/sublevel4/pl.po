@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-24 22:59+0100\n"
+"POT-Creation-Date: 2021-11-21 20:02+0000\n"
 "PO-Revision-Date: 2020-09-11 20:10+0000\n"
 "Last-Translator: Bartosz Feński <fenio@debian.org>\n"
 "Language-Team: Polish <debian-l10n-polish@lists.debian.org>\n"
@@ -22,57 +22,6 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 4.3-dev\n"
-
-#. Type: text
-#. Description
-#. eg. Virtual disk 1 (xvda)
-#. :sl4:
-#: ../partman-base.templates:64001
-#, no-c-format
-msgid "Virtual disk %s (%s)"
-msgstr "Wirtualny dysk %s (%s)"
-
-#. Type: text
-#. Description
-#. eg. Virtual disk 1, partition #1 (xvda1)
-#. :sl4:
-#: ../partman-base.templates:65001
-#, no-c-format
-msgid "Virtual disk %s, partition #%s (%s)"
-msgstr "Wirtualny dysk %s, partycja #%s (%s)"
-
-#. Type: text
-#. Description
-#. :sl4:
-#. Note to translators: Please keep your translations of this string below
-#. a 65 columns limit (which means 65 characters in single-byte languages)
-#: ../partman-basicfilesystems.templates:58001
-msgid "acls - support POSIX.1e Access Control List"
-msgstr "acls - obsługa list kontroli dostępu (ACL) POSIX.1e"
-
-#. Type: text
-#. Description
-#. :sl4:
-#. Note to translators: Please keep your translations of this string below
-#. a 65 columns limit (which means 65 characters in single-byte languages)
-#: ../partman-basicfilesystems.templates:59001
-msgid "shortnames - only use the old MS-DOS 8.3 style filenames"
-msgstr "krótkie nazwy - tylko krótkie nazwy MS-DOS 8.3"
-
-#. Type: text
-#. Description
-#. :sl4:
-#: ../partman-target.templates:3001
-msgid ""
-"In order to start your new system, a so called boot loader is used.  It is "
-"installed in a boot partition.  You must set the bootable flag for the "
-"partition.  Such a partition will be marked with \"${BOOTABLE}\" in the main "
-"partitioning menu."
-msgstr ""
-"Do uruchamiania systemu, używany jest tak zwany program rozruchowy. Jest "
-"instalowany na partycji rozruchowej. Trzeba dla niej ustawić flagę "
-"rozruchową. Taka partycja będzie oznaczona jako \"${BOOTABLE}\" w głównym "
-"menu partycjonowania."
 
 #. Type: text
 #. Description
@@ -250,24 +199,115 @@ msgstr ""
 "\"GTK\" jest graficznym interfejsem, który może być użyty w dowolnym "
 "środowisku graficznym."
 
+#. Type: text
+#. Description
+#. This item is a progress bar heading when the system configures
+#. some flashable memory used by many embedded devices
+#. :sl4:
+#: ../flash-kernel-installer.templates:1001
+msgid "Configuring flash memory to boot the system"
+msgstr "Konfigurowanie pamięci flash do uruchamiania systemu"
+
+#. Type: text
+#. Description
+#. This item is a progress bar heading when an embedded device is
+#. configured so it will boot from disk
+#. :sl4:
+#: ../flash-kernel-installer.templates:2001
+msgid "Making the system bootable"
+msgstr "Przygotowanie systemu do rozruchu"
+
+#. Type: text
+#. Description
+#. This is "preparing the system" to flash the kernel and initrd
+#. on a flashable memory
+#. :sl4:
+#: ../flash-kernel-installer.templates:3001
+msgid "Preparing the system..."
+msgstr "Przygotowywanie systemu..."
+
+#. Type: text
+#. Description
+#. This is a progress bar showing up when the system
+#. write the kernel to the flashable memory of the embedded device
+#. :sl4:
+#: ../flash-kernel-installer.templates:4001
+msgid "Writing the kernel to flash memory..."
+msgstr "Zapisywanie jądra na pamięci flash..."
+
+#. Type: text
+#. Description
+#. This is a progress bar showing up when the system generates a
+#. special boot image on disk for some embedded device so they
+#. can boot.
+#. :sl4:
+#: ../flash-kernel-installer.templates:5001
+msgid "Generating boot image on disk..."
+msgstr "Tworzenie obrazu rozruchowego na dysku..."
+
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. This item is a menu entry for a step where the system configures
+#. the flashable memory used by many embedded devices
+#. (writing the kernel and initrd to it)
+#. :sl4:
+#: ../flash-kernel-installer.templates:6001
+msgid "Make the system bootable"
+msgstr "Zainstaluj jądro na dysku"
+
+#. Type: boolean
+#. Description
+#. :sl4:
+#: ../grub-installer.templates:17001
+msgid "Install GRUB?"
+msgstr "Zainstalować GRUB?"
+
+#. Type: boolean
+#. Description
+#. :sl4:
+#: ../grub-installer.templates:17001
+msgid ""
+"GRUB 2 is the next generation of GNU GRUB, the boot loader that is commonly "
+"used on i386/amd64 PCs. It is now also available for ${ARCH}."
+msgstr ""
+"GRUB 2 to następna generacja GNU GRUB, programu rozruchowego popularnego na "
+"komputerach i386/amd64. Jest teraz dostępny dla ${ARCH}."
+
+#. Type: boolean
+#. Description
+#. :sl4:
+#: ../grub-installer.templates:17001
+msgid ""
+"It has interesting new features but is still experimental software for this "
+"architecture. If you choose to install it, you should be prepared for "
+"breakage, and have an idea on how to recover your system if it becomes "
+"unbootable. You're advised not to try this in production environments."
+msgstr ""
+"Ma interesujące nowe funkcje, ale na tej architekturze nadal jest "
+"oprogramowaniem eksperymentalnym. Jeśli zdecydujesz się na jego instalację, "
+"przygotuj się na błędy i zorientuj się jak odzyskać system jeśli rozruch "
+"zawiedzie. Nie zaleca się robić tego w środowiskach produkcyjnych."
+
 #. Type: error
 #. Description
 #. :sl4:
-#: ../nobootloader.templates:2001 ../grub-installer.templates:32001
+#: ../grub-installer.templates:32001 ../nobootloader.templates:2001
 msgid "Failed to mount /target/proc"
 msgstr "Montowanie /target/proc nie powiodło się"
 
 #. Type: error
 #. Description
 #. :sl4:
-#: ../nobootloader.templates:2001 ../grub-installer.templates:32001
+#: ../grub-installer.templates:32001 ../nobootloader.templates:2001
 msgid "Mounting the proc file system on /target/proc failed."
 msgstr "Zamontowanie systemu plików proc na /target/proc nie powiodło się."
 
 #. Type: error
 #. Description
 #. :sl4:
-#: ../nobootloader.templates:2001 ../grub-installer.templates:32001
+#: ../grub-installer.templates:32001 ../nobootloader.templates:2001
 msgid "Warning: Your system may be unbootable!"
 msgstr "Uwaga: Twój system może się nie uruchamiać!"
 
@@ -352,38 +392,41 @@ msgstr ""
 "Jeśli wolisz by system uruchamiał się automatycznie, możesz oprócz "
 "powyższych ustawić następującą zmienną:"
 
-#. Type: boolean
+#. Type: text
 #. Description
+#. eg. Virtual disk 1 (xvda)
 #. :sl4:
-#: ../grub-installer.templates:17001
-msgid "Install GRUB?"
-msgstr "Zainstalować GRUB?"
+#: ../partman-base.templates:64001
+#, no-c-format
+msgid "Virtual disk %s (%s)"
+msgstr "Wirtualny dysk %s (%s)"
 
-#. Type: boolean
+#. Type: text
 #. Description
+#. eg. Virtual disk 1, partition #1 (xvda1)
 #. :sl4:
-#: ../grub-installer.templates:17001
-msgid ""
-"GRUB 2 is the next generation of GNU GRUB, the boot loader that is commonly "
-"used on i386/amd64 PCs. It is now also available for ${ARCH}."
-msgstr ""
-"GRUB 2 to następna generacja GNU GRUB, programu rozruchowego popularnego na "
-"komputerach i386/amd64. Jest teraz dostępny dla ${ARCH}."
+#: ../partman-base.templates:65001
+#, no-c-format
+msgid "Virtual disk %s, partition #%s (%s)"
+msgstr "Wirtualny dysk %s, partycja #%s (%s)"
 
-#. Type: boolean
+#. Type: text
 #. Description
 #. :sl4:
-#: ../grub-installer.templates:17001
-msgid ""
-"It has interesting new features but is still experimental software for this "
-"architecture. If you choose to install it, you should be prepared for "
-"breakage, and have an idea on how to recover your system if it becomes "
-"unbootable. You're advised not to try this in production environments."
-msgstr ""
-"Ma interesujące nowe funkcje, ale na tej architekturze nadal jest "
-"oprogramowaniem eksperymentalnym. Jeśli zdecydujesz się na jego instalację, "
-"przygotuj się na błędy i zorientuj się jak odzyskać system jeśli rozruch "
-"zawiedzie. Nie zaleca się robić tego w środowiskach produkcyjnych."
+#. Note to translators: Please keep your translations of this string below
+#. a 65 columns limit (which means 65 characters in single-byte languages)
+#: ../partman-basicfilesystems.templates:58001
+msgid "acls - support POSIX.1e Access Control List"
+msgstr "acls - obsługa list kontroli dostępu (ACL) POSIX.1e"
+
+#. Type: text
+#. Description
+#. :sl4:
+#. Note to translators: Please keep your translations of this string below
+#. a 65 columns limit (which means 65 characters in single-byte languages)
+#: ../partman-basicfilesystems.templates:59001
+msgid "shortnames - only use the old MS-DOS 8.3 style filenames"
+msgstr "krótkie nazwy - tylko krótkie nazwy MS-DOS 8.3"
 
 #. Type: text
 #. Description
@@ -557,58 +600,15 @@ msgstr "Zakończenie i powrót do partycjonowania"
 
 #. Type: text
 #. Description
-#. This item is a progress bar heading when the system configures
-#. some flashable memory used by many embedded devices
 #. :sl4:
-#: ../flash-kernel-installer.templates:1001
-msgid "Configuring flash memory to boot the system"
-msgstr "Konfigurowanie pamięci flash do uruchamiania systemu"
-
-#. Type: text
-#. Description
-#. This item is a progress bar heading when an embedded device is
-#. configured so it will boot from disk
-#. :sl4:
-#: ../flash-kernel-installer.templates:2001
-msgid "Making the system bootable"
-msgstr "Przygotowanie systemu do rozruchu"
-
-#. Type: text
-#. Description
-#. This is "preparing the system" to flash the kernel and initrd
-#. on a flashable memory
-#. :sl4:
-#: ../flash-kernel-installer.templates:3001
-msgid "Preparing the system..."
-msgstr "Przygotowywanie systemu..."
-
-#. Type: text
-#. Description
-#. This is a progress bar showing up when the system
-#. write the kernel to the flashable memory of the embedded device
-#. :sl4:
-#: ../flash-kernel-installer.templates:4001
-msgid "Writing the kernel to flash memory..."
-msgstr "Zapisywanie jądra na pamięci flash..."
-
-#. Type: text
-#. Description
-#. This is a progress bar showing up when the system generates a
-#. special boot image on disk for some embedded device so they
-#. can boot.
-#. :sl4:
-#: ../flash-kernel-installer.templates:5001
-msgid "Generating boot image on disk..."
-msgstr "Tworzenie obrazu rozruchowego na dysku..."
-
-#. Type: text
-#. Description
-#. Main menu item
-#. Translators: keep below 55 columns
-#. This item is a menu entry for a step where the system configures
-#. the flashable memory used by many embedded devices
-#. (writing the kernel and initrd to it)
-#. :sl4:
-#: ../flash-kernel-installer.templates:6001
-msgid "Make the system bootable"
-msgstr "Zainstaluj jądro na dysku"
+#: ../partman-target.templates:3001
+msgid ""
+"In order to start your new system, a so called boot loader is used.  It is "
+"installed in a boot partition.  You must set the bootable flag for the "
+"partition.  Such a partition will be marked with \"${BOOTABLE}\" in the main "
+"partitioning menu."
+msgstr ""
+"Do uruchamiania systemu, używany jest tak zwany program rozruchowy. Jest "
+"instalowany na partycji rozruchowej. Trzeba dla niej ustawić flagę "
+"rozruchową. Taka partycja będzie oznaczona jako \"${BOOTABLE}\" w głównym "
+"menu partycjonowania."

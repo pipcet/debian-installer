@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-24 22:59+0100\n"
+"POT-Creation-Date: 2021-11-21 20:02+0000\n"
 "PO-Revision-Date: 2018-02-09 21:07+0100\n"
 "Last-Translator: Holger Wansing <linux@wansing-online.de>\n"
 "Language-Team: German <debian-l10n-german@lists.debian.org>\n"
@@ -23,57 +23,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 1.5\n"
-
-#. Type: text
-#. Description
-#. eg. Virtual disk 1 (xvda)
-#. :sl4:
-#: ../partman-base.templates:64001
-#, no-c-format
-msgid "Virtual disk %s (%s)"
-msgstr "Virtuelle Festplatte %s (%s)"
-
-#. Type: text
-#. Description
-#. eg. Virtual disk 1, partition #1 (xvda1)
-#. :sl4:
-#: ../partman-base.templates:65001
-#, no-c-format
-msgid "Virtual disk %s, partition #%s (%s)"
-msgstr "Virtuelle Festplatte %s, Partition %s (%s)"
-
-#. Type: text
-#. Description
-#. :sl4:
-#. Note to translators: Please keep your translations of this string below
-#. a 65 columns limit (which means 65 characters in single-byte languages)
-#: ../partman-basicfilesystems.templates:58001
-msgid "acls - support POSIX.1e Access Control List"
-msgstr "acls - Unterstützung für POSIX.1e Access-Control-Lists"
-
-#. Type: text
-#. Description
-#. :sl4:
-#. Note to translators: Please keep your translations of this string below
-#. a 65 columns limit (which means 65 characters in single-byte languages)
-#: ../partman-basicfilesystems.templates:59001
-msgid "shortnames - only use the old MS-DOS 8.3 style filenames"
-msgstr "shortnames - nur alte Dateinamen im MS-DOS-Stil (8.3) verwenden"
-
-#. Type: text
-#. Description
-#. :sl4:
-#: ../partman-target.templates:3001
-msgid ""
-"In order to start your new system, a so called boot loader is used.  It is "
-"installed in a boot partition.  You must set the bootable flag for the "
-"partition.  Such a partition will be marked with \"${BOOTABLE}\" in the main "
-"partitioning menu."
-msgstr ""
-"Damit Ihr Computer Ihr neues System starten kann, wird ein so genannter "
-"Bootloader benötigt. Er wird in einer boot-fähigen Partition installiert. "
-"Sie müssen das »bootable«-Flag für die Partition aktivieren. Eine solche "
-"Partition wird im Hauptpartitionsmenü mit »${BOOTABLE}« gekennzeichnet."
 
 #. Type: text
 #. Description
@@ -253,24 +202,117 @@ msgstr ""
 "»GTK« ist eine grafische Oberfläche, die in jeder grafischen Umgebung "
 "verwendet werden kann."
 
+#. Type: text
+#. Description
+#. This item is a progress bar heading when the system configures
+#. some flashable memory used by many embedded devices
+#. :sl4:
+#: ../flash-kernel-installer.templates:1001
+msgid "Configuring flash memory to boot the system"
+msgstr "Konfiguration des Flash-Speichers, um das System zu booten"
+
+#. Type: text
+#. Description
+#. This item is a progress bar heading when an embedded device is
+#. configured so it will boot from disk
+#. :sl4:
+#: ../flash-kernel-installer.templates:2001
+msgid "Making the system bootable"
+msgstr "Das System boot-fähig machen"
+
+#. Type: text
+#. Description
+#. This is "preparing the system" to flash the kernel and initrd
+#. on a flashable memory
+#. :sl4:
+#: ../flash-kernel-installer.templates:3001
+msgid "Preparing the system..."
+msgstr "Vorbereiten des Systems ..."
+
+#. Type: text
+#. Description
+#. This is a progress bar showing up when the system
+#. write the kernel to the flashable memory of the embedded device
+#. :sl4:
+#: ../flash-kernel-installer.templates:4001
+msgid "Writing the kernel to flash memory..."
+msgstr "Schreiben des Kernels in den Flash-Speicher ..."
+
+#. Type: text
+#. Description
+#. This is a progress bar showing up when the system generates a
+#. special boot image on disk for some embedded device so they
+#. can boot.
+#. :sl4:
+#: ../flash-kernel-installer.templates:5001
+msgid "Generating boot image on disk..."
+msgstr "Erzeugen des Boot-Images auf Festplatte ..."
+
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. This item is a menu entry for a step where the system configures
+#. the flashable memory used by many embedded devices
+#. (writing the kernel and initrd to it)
+#. :sl4:
+#: ../flash-kernel-installer.templates:6001
+msgid "Make the system bootable"
+msgstr "System boot-fähig machen"
+
+#. Type: boolean
+#. Description
+#. :sl4:
+#: ../grub-installer.templates:17001
+msgid "Install GRUB?"
+msgstr "GRUB installieren?"
+
+#. Type: boolean
+#. Description
+#. :sl4:
+#: ../grub-installer.templates:17001
+msgid ""
+"GRUB 2 is the next generation of GNU GRUB, the boot loader that is commonly "
+"used on i386/amd64 PCs. It is now also available for ${ARCH}."
+msgstr ""
+"GRUB2 ist die nächste Generation von GNU GRUB, dem Bootloader, der allgemein "
+"auf i386-/amd64-PCs verwendet wird. Er ist jetzt auch für ${ARCH} verfügbar."
+
+#. Type: boolean
+#. Description
+#. :sl4:
+#: ../grub-installer.templates:17001
+msgid ""
+"It has interesting new features but is still experimental software for this "
+"architecture. If you choose to install it, you should be prepared for "
+"breakage, and have an idea on how to recover your system if it becomes "
+"unbootable. You're advised not to try this in production environments."
+msgstr ""
+"Er bietet interessante neue Funktionalitäten, ist jedoch für diese "
+"Architektur immer noch experimentell. Falls Sie sich entscheiden, ihn zu "
+"installieren, sollten Sie darauf vorbereitet sein, dass das System "
+"beschädigt werden könnte und wissen, wie Sie es reparieren können, falls es "
+"nicht mehr bootet. Sie tun gut daran, dies nicht in Produktionsumgebungen "
+"auszuprobieren."
+
 #. Type: error
 #. Description
 #. :sl4:
-#: ../nobootloader.templates:2001 ../grub-installer.templates:32001
+#: ../grub-installer.templates:32001 ../nobootloader.templates:2001
 msgid "Failed to mount /target/proc"
 msgstr "Einbinden von /target/proc fehlgeschlagen"
 
 #. Type: error
 #. Description
 #. :sl4:
-#: ../nobootloader.templates:2001 ../grub-installer.templates:32001
+#: ../grub-installer.templates:32001 ../nobootloader.templates:2001
 msgid "Mounting the proc file system on /target/proc failed."
 msgstr "Das proc-Dateisystem konnte nicht als /target/proc eingebunden werden."
 
 #. Type: error
 #. Description
 #. :sl4:
-#: ../nobootloader.templates:2001 ../grub-installer.templates:32001
+#: ../grub-installer.templates:32001 ../nobootloader.templates:2001
 msgid "Warning: Your system may be unbootable!"
 msgstr "Warnung: Ihr Computer wird möglicherweise nicht starten können!"
 
@@ -358,40 +400,41 @@ msgstr ""
 "Falls Sie einen automatischen Boot-Vorgang bei jedem Start bevorzugen, "
 "können Sie zusätzlich zu den obigen die folgende Variable setzen:"
 
-#. Type: boolean
+#. Type: text
 #. Description
+#. eg. Virtual disk 1 (xvda)
 #. :sl4:
-#: ../grub-installer.templates:17001
-msgid "Install GRUB?"
-msgstr "GRUB installieren?"
+#: ../partman-base.templates:64001
+#, no-c-format
+msgid "Virtual disk %s (%s)"
+msgstr "Virtuelle Festplatte %s (%s)"
 
-#. Type: boolean
+#. Type: text
 #. Description
+#. eg. Virtual disk 1, partition #1 (xvda1)
 #. :sl4:
-#: ../grub-installer.templates:17001
-msgid ""
-"GRUB 2 is the next generation of GNU GRUB, the boot loader that is commonly "
-"used on i386/amd64 PCs. It is now also available for ${ARCH}."
-msgstr ""
-"GRUB2 ist die nächste Generation von GNU GRUB, dem Bootloader, der allgemein "
-"auf i386-/amd64-PCs verwendet wird. Er ist jetzt auch für ${ARCH} verfügbar."
+#: ../partman-base.templates:65001
+#, no-c-format
+msgid "Virtual disk %s, partition #%s (%s)"
+msgstr "Virtuelle Festplatte %s, Partition %s (%s)"
 
-#. Type: boolean
+#. Type: text
 #. Description
 #. :sl4:
-#: ../grub-installer.templates:17001
-msgid ""
-"It has interesting new features but is still experimental software for this "
-"architecture. If you choose to install it, you should be prepared for "
-"breakage, and have an idea on how to recover your system if it becomes "
-"unbootable. You're advised not to try this in production environments."
-msgstr ""
-"Er bietet interessante neue Funktionalitäten, ist jedoch für diese "
-"Architektur immer noch experimentell. Falls Sie sich entscheiden, ihn zu "
-"installieren, sollten Sie darauf vorbereitet sein, dass das System "
-"beschädigt werden könnte und wissen, wie Sie es reparieren können, falls es "
-"nicht mehr bootet. Sie tun gut daran, dies nicht in Produktionsumgebungen "
-"auszuprobieren."
+#. Note to translators: Please keep your translations of this string below
+#. a 65 columns limit (which means 65 characters in single-byte languages)
+#: ../partman-basicfilesystems.templates:58001
+msgid "acls - support POSIX.1e Access Control List"
+msgstr "acls - Unterstützung für POSIX.1e Access-Control-Lists"
+
+#. Type: text
+#. Description
+#. :sl4:
+#. Note to translators: Please keep your translations of this string below
+#. a 65 columns limit (which means 65 characters in single-byte languages)
+#: ../partman-basicfilesystems.templates:59001
+msgid "shortnames - only use the old MS-DOS 8.3 style filenames"
+msgstr "shortnames - nur alte Dateinamen im MS-DOS-Stil (8.3) verwenden"
 
 #. Type: text
 #. Description
@@ -569,58 +612,15 @@ msgstr "Abschließen und zum Partitionierungsprogramm zurückkehren"
 
 #. Type: text
 #. Description
-#. This item is a progress bar heading when the system configures
-#. some flashable memory used by many embedded devices
 #. :sl4:
-#: ../flash-kernel-installer.templates:1001
-msgid "Configuring flash memory to boot the system"
-msgstr "Konfiguration des Flash-Speichers, um das System zu booten"
-
-#. Type: text
-#. Description
-#. This item is a progress bar heading when an embedded device is
-#. configured so it will boot from disk
-#. :sl4:
-#: ../flash-kernel-installer.templates:2001
-msgid "Making the system bootable"
-msgstr "Das System boot-fähig machen"
-
-#. Type: text
-#. Description
-#. This is "preparing the system" to flash the kernel and initrd
-#. on a flashable memory
-#. :sl4:
-#: ../flash-kernel-installer.templates:3001
-msgid "Preparing the system..."
-msgstr "Vorbereiten des Systems ..."
-
-#. Type: text
-#. Description
-#. This is a progress bar showing up when the system
-#. write the kernel to the flashable memory of the embedded device
-#. :sl4:
-#: ../flash-kernel-installer.templates:4001
-msgid "Writing the kernel to flash memory..."
-msgstr "Schreiben des Kernels in den Flash-Speicher ..."
-
-#. Type: text
-#. Description
-#. This is a progress bar showing up when the system generates a
-#. special boot image on disk for some embedded device so they
-#. can boot.
-#. :sl4:
-#: ../flash-kernel-installer.templates:5001
-msgid "Generating boot image on disk..."
-msgstr "Erzeugen des Boot-Images auf Festplatte ..."
-
-#. Type: text
-#. Description
-#. Main menu item
-#. Translators: keep below 55 columns
-#. This item is a menu entry for a step where the system configures
-#. the flashable memory used by many embedded devices
-#. (writing the kernel and initrd to it)
-#. :sl4:
-#: ../flash-kernel-installer.templates:6001
-msgid "Make the system bootable"
-msgstr "System boot-fähig machen"
+#: ../partman-target.templates:3001
+msgid ""
+"In order to start your new system, a so called boot loader is used.  It is "
+"installed in a boot partition.  You must set the bootable flag for the "
+"partition.  Such a partition will be marked with \"${BOOTABLE}\" in the main "
+"partitioning menu."
+msgstr ""
+"Damit Ihr Computer Ihr neues System starten kann, wird ein so genannter "
+"Bootloader benötigt. Er wird in einer boot-fähigen Partition installiert. "
+"Sie müssen das »bootable«-Flag für die Partition aktivieren. Eine solche "
+"Partition wird im Hauptpartitionsmenü mit »${BOOTABLE}« gekennzeichnet."

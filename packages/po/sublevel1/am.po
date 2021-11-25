@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-28 20:01+0000\n"
+"POT-Creation-Date: 2021-11-21 20:02+0000\n"
 "PO-Revision-Date: 2019-08-28 18:09+0000\n"
 "Last-Translator: leela <53352@protonmail.com>\n"
 "Language-Team: Amharic <linux-ethiopia@googlegroups.com>\n"
@@ -22,6 +22,29 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 3.9-dev\n"
+
+#. Type: select
+#. Description
+#: ../apt-setup-udeb.templates:8002
+msgid "Downloading local repository key failed:"
+msgstr "የቅርብ አስቀማጭ ቁልፍ ማምጣት አልተሳካም"
+
+#. Type: select
+#. Description
+#: ../apt-setup-udeb.templates:8002
+msgid ""
+"This may be a problem with your network, or with the server hosting this "
+"key. You can choose to retry the download, or ignore the problem and "
+"continue without all the packages from this repository."
+msgstr ""
+"ይህ ችግር የአውታርዎ ወይም ይህንን ቁልፍ የያዘ ተጠሪ ሊሆን ይችላል፡፡ ማምጣቱን እንደገና መሞከር ወይም ችግሩ እንዳለ "
+"ሆኖ የቀሩትን ጥቅሎች በመተው መትከሉን ሊቀጥሉበት ይችላሉ፡፡"
+
+#. Type: select
+#. Description
+#: ../keyboard-configuration.templates:16002
+msgid "Keymap to use:"
+msgstr "ጥቅም ላይ የሚውልው የፊደል ገበታ፦"
 
 #: ../../mktemplates.continents:15
 msgid "Africa"
@@ -63,72 +86,6 @@ msgstr "ኦሲንያ"
 msgid "South America"
 msgstr "ደቡብ አሜሪካ"
 
-#. Type: select
-#. Description
-#: ../keyboard-configuration.templates:16002
-msgid "Keymap to use:"
-msgstr "ጥቅም ላይ የሚውልው የፊደል ገበታ፦"
-
-#. Type: select
-#. Description
-#: ../apt-setup-udeb.templates:8002
-msgid "Downloading local repository key failed:"
-msgstr "የቅርብ አስቀማጭ ቁልፍ ማምጣት አልተሳካም"
-
-#. Type: select
-#. Description
-#: ../apt-setup-udeb.templates:8002
-msgid ""
-"This may be a problem with your network, or with the server hosting this "
-"key. You can choose to retry the download, or ignore the problem and "
-"continue without all the packages from this repository."
-msgstr ""
-"ይህ ችግር የአውታርዎ ወይም ይህንን ቁልፍ የያዘ ተጠሪ ሊሆን ይችላል፡፡ ማምጣቱን እንደገና መሞከር ወይም ችግሩ እንዳለ "
-"ሆኖ የቀሩትን ጥቅሎች በመተው መትከሉን ሊቀጥሉበት ይችላሉ፡፡"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../main-menu.templates:1001
-msgid "Debian installer main menu"
-msgstr "የደቢያን ተካይ ዋና ምናሌ"
-
-#. Type: select
-#. Description
-#. :sl1:
-#: ../main-menu.templates:2001
-msgid "Choose the next step in the install process:"
-msgstr "በተከላ ሂደቱ የሚቀጥለውን ደረጃ ይምረጡ፡"
-
-#. Type: text
-#. Description
-#. Main menu item
-#. The translation should not exceed 55 columns except for languages
-#. that are only supported in the graphical version of the installer
-#. :sl1:
-#: ../di-utils-shell.templates:2001
-msgid "Execute a shell"
-msgstr "ሰሌዳ አስነሳ"
-
-#. Type: text
-#. Description
-#. Main menu item
-#. The translation should not exceed 55 columns except for languages
-#. that are only supported in the graphical version of the installer
-#. :sl1:
-#: ../di-utils-reboot.templates:2001
-#, fuzzy
-msgid "Abort the installation"
-msgstr "ተከላውን ይቁም"
-
-#. Type: text
-#. Description
-#. base-installer progress bar item
-#. :sl1:
-#: ../di-utils.templates:1001
-msgid "Registering modules..."
-msgstr "ጥቅል-ስልቶችን በመመዝገብ ላይ..."
-
 #. Type: text
 #. Description
 #. (Progress bar) title displayed when loading udebs
@@ -158,267 +115,1176 @@ msgstr "${PACKAGE} በማሰናዳት ላይ"
 
 #. Type: text
 #. Description
-#. This menu entry may be translated.
-#. However, translators are required to keep "Choose language"
-#. as an alternative separated by the "/" character
-#. Example (french): Choisir la langue/Choose language
+#. Main menu item
+#. MUST be kept below 55 characters/columns
 #. :sl1:
-#: ../localechooser.templates-in:1001
-msgid "Choose language"
-msgstr "ቋንቋ ምረጥ/Choose language"
+#: ../apt-setup-udeb.templates:1001
+msgid "Configure the package manager"
+msgstr "የጥቅል አስተዳዳሪውን አዘጋጅ"
 
 #. Type: text
 #. Description
+#. Translators, "apt" is the program name
+#. so please do NOT translate it
+#. :sl1:
+#: ../apt-setup-udeb.templates:2001
+msgid "Configuring apt"
+msgstr "apt በማስተካከል ላይ"
+
+#. #-#-#-#-#  templates.pot (apt-setup)  #-#-#-#-#
+#. Type: text
+#. Description
+#. :sl2:
+#. #-#-#-#-#  templates.pot (base-installer)  #-#-#-#-#
+#. Type: text
+#. Description
+#. :sl1:
+#. #-#-#-#-#  templates.pot (finish-install)  #-#-#-#-#
+#. Type: text
+#. Description
+#. :sl1:
+#. #-#-#-#-#  templates.pot (pkgsel)  #-#-#-#-#
+#. Type: text
+#. Description
+#. :sl2:
+#: ../apt-setup-udeb.templates:3001 ../base-installer.templates:6001
+#: ../finish-install.templates:3001 ../pkgsel.templates:9001
+msgid "Running ${SCRIPT}..."
+msgstr "${SCRIPT} በማስክከድ ላይ..."
+
+#. Type: multiselect
+#. Choices
+#. SEC_HOST is a host name (e.g. security.debian.org)
+#. Translators: the *entire* string should be under 55 columns
+#. including host name. In short, KEEP THIS SHORT and, yes, that's tricky
+#. :sl1:
+#: ../apt-setup-udeb.templates:11001
+msgid "security updates (from ${SEC_HOST})"
+msgstr "የደህንነት እዳሴ (ከ ${SEC_HOST})"
+
+#. Type: multiselect
+#. Choices
+#. SEC_HOST is a host name (e.g. security.debian.org)
+#. Translators: the *entire* string should be under 55 columns
+#. including host name. In short, KEEP THIS SHORT and, yes, that's tricky
+#. :sl1:
+#: ../apt-setup-udeb.templates:11001
+msgid "release updates"
+msgstr "የተለቀቀውን እዳሴ፦"
+
+#. Type: multiselect
+#. Choices
+#. SEC_HOST is a host name (e.g. security.debian.org)
+#. Translators: the *entire* string should be under 55 columns
+#. including host name. In short, KEEP THIS SHORT and, yes, that's tricky
+#. :sl1:
+#: ../apt-setup-udeb.templates:11001
+msgid "backported software"
+msgstr "ከተሻሻለው የተቀዳ ስስ ነገር"
+
+#. Type: multiselect
+#. Description
+#. :sl1:
+#: ../apt-setup-udeb.templates:11002
+msgid "Services to use:"
+msgstr "የሚጠቀሙበት አገልጋይ፦"
+
+#. Type: multiselect
+#. Description
+#. :sl1:
+#: ../apt-setup-udeb.templates:11002
+msgid ""
+"Debian has two services that provide updates to releases: security and "
+"release updates."
+msgstr "ደብያን ሁለት ማሻሻያዎችን የማቅረብ ኣገልግሎሮች አሉት፤ የደህንነትና የዝርያ ማሻሻያ።"
+
+#. Type: multiselect
+#. Description
+#. :sl1:
+#: ../apt-setup-udeb.templates:11002
+msgid ""
+"Security updates help to keep your system secured against attacks. Enabling "
+"this service is strongly recommended."
+msgstr "የደህንነት ማሻሻያዎች ስርዓተ አስሊውን ከጥቃት ለመከላከል ስለሚረዱ ይህንን ማስቻል በጥብቅ ይመከራል።"
+
+#. Type: multiselect
+#. Description
+#. :sl1:
+#: ../apt-setup-udeb.templates:11002
+msgid ""
+"Release updates provide more current versions for software that changes "
+"relatively frequently and where not having the latest version could reduce "
+"the usability of the software. It also provides regression fixes. This "
+"service is only available for stable and oldstable releases."
+msgstr ""
+"የዝርያ ማሻሻያዎች በኣንጻሩ በየጊዜው የሚቀያየሩና አዳዲስ ስስአስሊን አለማግኘት ጠቀሜታ የሚቀንስ ሲሆን ይቀርባል። "
+"በተጨማሪም የኋልዮሽ መጠገኛዎችን ያቀርባል። ይህ አገልግሎት ለበሳልና ለአሮጌ-በሳል ዝርያዎች ብቻ ይቀርባል። "
+
+#. Type: multiselect
+#. Description
+#. :sl1:
+#: ../apt-setup-udeb.templates:11002
+msgid ""
+"Backported software are adapted from the development version to work with "
+"this release. Although this software has not gone through such complete "
+"testing as that contained in the release, it includes newer versions of some "
+"applications which may provide useful features. Enabling backports here does "
+"not cause any of them to be installed by default; it only allows you to "
+"manually select backports to use."
+msgstr ""
+"ከተሻሻለው የተቀዳ ስልቶች ገና ድፍድፍ ላይ ካለ ዝርያ ተወስደው ከዚህ ስርዓት ጋር እንዲሰሩ ተደርገዋል። ምንም እንኳን "
+"እነዚህ ስልቶች እንደለሎቹ ስልቶች ሙሉ በሙሉ ሙከራ ባይደረግባቸውም ጠቃሚ የሆኑ አዳዲስ ባህሪዎችን ይዘዋል። ከተሻሻለው "
+"የተቀዳን ማስቻል በቀጥታ እንዲተከሉ አያደርግም፤ በእጅ እንዲመርጡ ያስችልዎታል እንጂ።"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:1001
+#, fuzzy
+#| msgid "Finishing the installation"
+msgid "Scanning the installation media..."
+msgstr "ተከላውን በመጨረስ ላይ"
+
+#. Type: error
+#. Description
+#. :sl2:
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:2001 ../apt-cdrom-setup.templates:6001
+#, fuzzy
+#| msgid ""
+#| "An attempt to configure apt to install additional packages from the CD "
+#| "failed."
+msgid ""
+"An attempt to configure apt to install additional packages from the media "
+"failed."
+msgstr "አፕትን ከሲዲ ላይ ተጨማሪ ጥቅሎችን እንዲተክል የተደረገው ሙከራ አልተሳካም።"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#. Type: boolean
+#. Description
+#. :sl1:
+#. Type: boolean
+#. Description
+#. :sl1:
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:3001 ../apt-cdrom-setup.templates:4001
+#: ../apt-cdrom-setup.templates:5001 ../apt-cdrom-setup.templates:6001
+#, fuzzy
+#| msgid "SILO installation failed"
+msgid "Scan extra installation media?"
+msgstr "የሲሎ ተከላ አልተሳካም"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:3001
+msgid "Scanning your installation media finds the label:"
+msgstr ""
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:3001
+#, fuzzy
+#| msgid ""
+#| "You now have the option to scan additional CDs or DVDs for use by the "
+#| "package manager (apt). Normally these should be from the same set as the "
+#| "installation CD/DVD. If you do not have any additional CDs or DVDs "
+#| "available, this step can just be skipped."
+msgid ""
+"You now have the option of scanning additional media for use by the package "
+"manager (apt). Normally these should be from the same set as the one you "
+"booted from. If you do not have any additional media, this step can just be "
+"skipped."
+msgstr ""
+"ተጫማሪ ሲዲዎች ተፈትሸው በጥቅል አስተዳዳሪው (apt) በጥቅም ላይ እንዲውሉ ለማድረግ ምርጫ አለዎት። እነዚህ ሲዲዎች/"
+"ዲቪዲዎች ከአንድ ዝርያ መሆን አለባቸው። ተጫማሪ ሲዲ/ዲቪዲ ከሌሎት ይህን ደረጃ ሊዘሉት ይችላሉ።"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:3001 ../apt-cdrom-setup.templates:4001
+#, fuzzy
+#| msgid "If you wish to scan another CD or DVD, please insert it now."
+msgid "If you wish to scan more media, please insert another one now."
+msgstr "ሌላ ሲዲ ወይም ዲቪዲ መፈተሽ ከፈለጉ እባክዎን አሁን ያስገቡ።"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:4001
+#, fuzzy
+#| msgid "The CD or DVD with the following label has been scanned:"
+msgid "The image with the following label has been scanned:"
+msgstr "የሚቀጥለውን ስም የያዘ ሲዲ ወይም ዲቪዲ ተፈትሿል፦"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:5001
+#, fuzzy
+#| msgid "The CD or DVD with the following label has already been scanned:"
+msgid "The image with the following label has already been scanned:"
+msgstr "የሚቀጥለውን ስም የያዘ ሲዲ ወይም ዲቪዲ ቀድሞ ተፈትሿል፦"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:5001
+#, fuzzy
+#| msgid "Please replace it now if you wish to scan another CD or DVD."
+msgid "Please replace it now, if you wish to scan another."
+msgstr "ለላ ሲዲ/ዲቪዲ ለመፈተሽ ከፈለጉ እባክዎን አሁን ያስገቡ።"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:6001
+#, fuzzy
+#| msgid "Please check that the CD/DVD has been inserted correctly."
+msgid "Please check that the media has been inserted correctly."
+msgstr "እባክዎ ሲዲ/ዲቪዲ በትክክል መከተቱን ያረጋግጡ፡፡"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:7001
+msgid "Media change"
+msgstr "ማኅደር ቀይር"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:7001
+#, fuzzy
+#| msgid ""
+#| "/cdrom/: Please insert the disc labeled '${LABEL}' in the drive '/cdrom/' "
+#| "and press enter."
+msgid "Please insert the media labeled '${LABEL}' and press enter."
+msgstr ""
+"/cdrom/: እባክዎ  '${LABEL}' ምልክት ያለበትን ሲዲ በመንጃው '/cdrom/' ውስጥ ይጨምሩና enterን ይጫኑ."
+
+#. Type: text
+#. Description
+#. :sl1:
 #. finish-install progress bar item
-#. :sl1:
-#: ../localechooser.templates-in:6001
-msgid "Storing language..."
-msgstr "ቋንቋን በማስቀመጥ ላይ"
-
-#. Type: title
-#. Description
-#. Displayed as dialog title during language selection
-#. :sl1:
-#: ../localechooser.templates-in:7001
-msgid "Select a language"
-msgstr "ቋንቋ ይምረጡ"
-
-#. Type: title
-#. Description
-#. Displayed as dialog title during country selection
-#. :sl1:
-#: ../localechooser.templates-in:8001
-msgid "Select your location"
-msgstr "አካባቢዎን ይምረጡ"
-
-#. Type: title
-#. Description
-#. Displayed as dialog title during locale selection
-#. :sl1:
-#: ../localechooser.templates-in:9001
-msgid "Configure locales"
-msgstr "ከባቢን አዘጋጅ"
-
-#. Type: note
-#. Description
-#. :sl1:
-#: ../localechooser.templates-in:12001
-msgid "Language selection no longer possible"
-msgstr "አሁን ቋንቋ መምረጥ አይቻልም"
-
-#. Type: note
-#. Description
-#. :sl1:
-#: ../localechooser.templates-in:12001
-msgid ""
-"At this point it is no longer possible to change the language for the "
-"installation, but you can still change the country or locale."
-msgstr "በዚህ ደረጃ ላይ የተከላ ቋንቋን መቀየር አይቻልም፤ ነገር ግን አገርንና ከባቢን አሁንም መቀየር ይችላሉ።"
-
-#. Type: note
-#. Description
-#. :sl1:
-#: ../localechooser.templates-in:12001
-msgid ""
-"To select a different language you will need to abort this installation and "
-"reboot the installer."
-msgstr "ሌላ ቋንቋ ለመምረጥ ከፈለጉ ይህንን ተከላ አቁመው እንደገና ተካዩን ቡት ማድረግ ይኖርቦታል። "
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../localechooser.templates-in:13001 ../localechooser.templates-in:14001
-msgid "Continue the installation in the selected language?"
-msgstr "በተመረጠው ቋንቋ መትከል ይቀጥል?"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../localechooser.templates-in:13001
-msgid ""
-"The translation of the installer is incomplete for the selected language."
-msgstr "ለተካዩ የተመረጠው ቋንቋ ትርጉም አልተጠናቀቀም።"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../localechooser.templates-in:14001
-msgid ""
-"The translation of the installer is not fully complete for the selected "
-"language."
-msgstr "ለተመረጠው ቋንቋ የተካዩ ትርጉም አልተጠናቀቀም።"
+#: ../apt-cdrom-setup.templates:8001
+msgid "Disabling netinst CD in sources.list..."
+msgstr "የnetinst CD አኮላሽ in sources.list..."
 
 #. Type: text
 #. Description
 #. :sl1:
-#: ../localechooser.templates-in:15001
-msgid ""
-"This means that there is a significant chance that some dialogs will be "
-"displayed in English instead."
-msgstr "ይህ ማለት አንዳንድ ሰጣገባዎች በእንግሊዝኛ ቋንቋ ይሆናል ማለት ነው።"
-
-#. Type: text
+#. Type: boolean
 #. Description
-#. :sl1:
-#: ../localechooser.templates-in:16001
+#. :sl2:
+#: ../apt-cdrom-setup.templates:9001 ../apt-mirror-setup.templates:6001
+#, fuzzy
+#| msgid ""
+#| "If you are installing from a netinst CD and choose not to use a mirror, "
+#| "you will end up with only a very minimal base system."
 msgid ""
-"If you do anything other than a purely default installation, there is a real "
-"chance that some dialogs will be displayed in English instead."
-msgstr "ከቀዳሚ ምርጫዎች የተለየ ካደርጉ ሰጣገባዎች በእንግሊዘኛ ቋንቋ ሊሆን ይችላል።"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../localechooser.templates-in:17001
-msgid ""
-"If you continue the installation in the selected language, most dialogs "
-"should be displayed correctly but - especially if you use the more advanced "
-"options of the installer - some may be displayed in English instead."
+"If you are installing from a netinst CD image and choose not to use a "
+"mirror, you will end up with only a very minimal base system."
 msgstr ""
-"በተመረጠው ቋንቋ ተከላውን ከቀጠሉ አብዛኛው ሰጣገባ በትክክል ይታያል፣ የበለጠ ጠለቅ ያለ የተካይ ምርጫን ከተጠቀሙ "
-"አንዳንድ ሰጣገባዎች በእንግሊዘኛ ቋንቋ ሊታይ ይችላል።"
+"ከnetinst CD የሚተክሉና የማኅደር መስተዋትን ላለመጠቀም ከመረጥ የሚተክሉት በጣም አነስተኛ የሆነ መሰረታዊ ስርዓት "
+"ብቻ ነው።"
 
 #. Type: text
 #. Description
 #. :sl1:
-#: ../localechooser.templates-in:18001
+#: ../apt-cdrom-setup.templates:10001
+#, fuzzy
+#| msgid ""
+#| "You are installing from a netinst CD, which by itself only allows "
+#| "installation of a very minimal base system. Use a mirror to install a "
+#| "more complete system."
 msgid ""
-"If you continue the installation in the selected language, dialogs should "
-"normally be displayed correctly but - especially if you use the more "
-"advanced options of the installer - there is a slight chance some may be "
-"displayed in English instead."
+"You are installing from a netinst CD image, which by itself only allows "
+"installation of a very minimal base system. Use a mirror to install a more "
+"complete system."
 msgstr ""
-"በተመረጠው ቋንቋ ተከላውን ከቀጠሉ አብዛኛው ሰጣገባ በትክክል ይታያል፣ የበለጠ ጠለቅ ያለ የተካይ ምርጫን ከተጠቀሙ "
-"አንዳንድ ሰጣገባዎች በእንግሊዘኛ ቋንቋ ሊታይ ይችላል።"
+"የሚተክሉት በጣም አነስተኛ የሆነ መሰረታዊ ስርዓት ብቻ ነው ከሚተክለው ከnetinst CD ነው። የተሟላ ተከላ ለማካሄድ "
+"የማኅደር መስተዋትን ይምረጡ ።"
 
 #. Type: text
 #. Description
 #. :sl1:
-#: ../localechooser.templates-in:19001
+#: ../apt-cdrom-setup.templates:11001
+#, fuzzy
+#| msgid ""
+#| "You are installing from a CD, which contains a limited selection of "
+#| "packages."
 msgid ""
-"The chance that you will actually encounter a dialog that is not translated "
-"into the selected language is extremely small, but it cannot be ruled out "
-"completely."
-msgstr "ያልተተረጎመ ሰጣገባዎች ጥቂት ናቸው ስለዚህ አያጋጥሞትም ማለት አይቻልም።"
+"You are installing from an image which contains a limited selection of "
+"packages."
+msgstr "የተወሰነ ጥቅል ብቻ ከያዘ ሲዲ ላይ በመትከል ላይ ይገኛሉ"
 
 #. Type: text
 #. Description
 #. :sl1:
-#: ../localechooser.templates-in:20001
+#. The value of %i can be 2 or 3
+#: ../apt-cdrom-setup.templates:12001
+#, fuzzy, no-c-format
+#| msgid ""
+#| "You have scanned %i CDs. Even though these contain a fair selection of "
+#| "packages, some may be missing (notably some packages needed to support "
+#| "languages other than English)."
 msgid ""
-"Unless you have a good understanding of the alternative language, it is "
-"recommended to either select a different language or abort the installation."
-msgstr "ቋንቋን በደምብ የማይችሉ ከሆነ ሌላ ቋንቋ ውይም እንግሊዘኛ ይምረጡ።"
+"You have scanned %i images. Even though these contain a fair selection of "
+"packages, some may be missing (notably some packages needed to support "
+"languages other than English)."
+msgstr ""
+"%i ሲዲዎች ተፈትሿል። ምንም እንኳን ዲቪዲ ብዙ ጥቅሎችን ቢይዝም አንዳንድ (በተለይ ከእንግሊዘኛ ውጭ ያሉ ቋንቋዎችን "
+"የሚደግፉ) ላይኖሩበት ይችላሉ።"
 
 #. Type: text
 #. Description
 #. :sl1:
-#: ../localechooser.templates-in:21001
+#. The value of %i can be from 4 to 8
+#: ../apt-cdrom-setup.templates:13001
+#, fuzzy, no-c-format
+#| msgid ""
+#| "You have scanned %i CDs. Even though these contain a large selection of "
+#| "packages, some may be missing."
 msgid ""
-"If you choose not to continue, you will be given the option of selecting a "
-"different language, or you can abort the installation."
-msgstr "ላለመቀጠል ከፈለጉ ሌላ ቋንቋ ለመምረጥ ወይም ተከላውን ለማቆም ይችላሉ።"
+"You have scanned %i images. Even though these contain a large selection of "
+"packages, some may be missing."
+msgstr "%i ሲዲዎች ተፈትሸዋል። ምንም እንኳን ዲቪዲ ብዙ የጥቅሎች ምርጫ ቢኖረውም አንዳንድ የለሉበት ሊኖሩ ይችላሉ።"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:14001
+msgid ""
+"Note that using a mirror can result in a large amount of data being "
+"downloaded during the next step of the installation."
+msgstr "የማኅደር መስተዋትን መምረጥ በሚቀጥለው የተከላ ደረጃ እጅግ ብዙ ዴታ የሚያመጣ መሆኑን ያስተውሉ።"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:15001
+#, fuzzy
+#| msgid ""
+#| "You are installing from a DVD. Even though the DVD contains a large "
+#| "selection of packages, some may be missing."
+msgid ""
+"You are installing from a DVD image. Even though it contains a large "
+"selection of packages, some may be missing."
+msgstr ""
+"ከዲቪዲ በመትከል ላይ ይገኛሉ። ምንም እንኳን ዲቪዲ ብዙ የጥቅሎች ምርጫ ቢኖረውም አንዳንድ የለሉበት ሊኖሩ ይችላሉ።"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:16001
+msgid ""
+"Unless you don't have a good Internet connection, use of a mirror is "
+"recommended, especially if you plan to install a graphical desktop "
+"environment."
+msgstr ""
+"ጥሩ የኢንተርኔት ግንኙነት ከሌሎት በስተቀር የማኅደር መስተዋትን ይጠቀሙ፤ በተለይ ንድፋዊ ገበታን ለመጠቀም ካሰቡ።"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:17001
+msgid ""
+"If you have a reasonably good Internet connection, use of a mirror is "
+"suggested if you plan to install a graphical desktop environment."
+msgstr "ጥሩ የኢንተርኔት ግንኙነት ካለዎት የማኅደር መስተዋትን ይጠቀሙ፤ በተለይ ንድፋዊ ገበታን ለመጠቀም ካሰቡ።"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../apt-mirror-setup.templates:1001
+msgid "Scanning the mirror..."
+msgstr "የማኅደር-መስተዋትን በማሰስ ላይ"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-mirror-setup.templates:2001
+msgid "Use non-free software?"
+msgstr "ነጻ ያልሆነ ስስ-አካል ልጠቀም?"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-mirror-setup.templates:2001
+msgid ""
+"Some non-free software has been made to work with Debian. Though this "
+"software is not at all a part of Debian, standard Debian tools can be used "
+"to install it. This software has varying licenses which may prevent you from "
+"using, modifying, or sharing it."
+msgstr ""
+"አንዳንድ ነጻ ያልሆኑ ስልቶች ከደቢያን አቅርቦት ጋር እንዲሰሩ ተደርገዋል። ምንም እንኳን እነዚህ ስልቶች የዋናው "
+"አቅርቦት አካል ባይሆኑም የተከላ አስተዳዳሪውን በመጠቀም እንዚህን ስልቶች መትከል ይቻላል። እንዚህ ስልቶች ከመጠቀም፣ "
+"ከማጋራት ወይም ከማሻሻል ሊገደብ የሚችሉ የተለያዩ ፈቃዶች ሊኖራቸው ይችላል።"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#. Type: boolean
+#. Description
+#. This template is used by the Ubuntu version of d-i.
+#. :sl2:
+#: ../apt-mirror-setup.templates:2001 ../apt-mirror-setup.templates-ubuntu:1001
+msgid "Please choose whether you want to have it available anyway."
+msgstr "እባክዎ ብሆንም እንኳን እንዲኖርዎት ይፈልጉ እንደሆን ይምረጡ፡፡"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-mirror-setup.templates:3001
+msgid "Use contrib software?"
+msgstr "contrib ስሳክልን ልጠቀም?"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-mirror-setup.templates:3001
+msgid ""
+"Some additional software has been made to work with Debian. Though this "
+"software is free, it depends on non-free software for its operation. This "
+"software is not a part of Debian, but standard Debian tools can be used to "
+"install it."
+msgstr ""
+"ኣንዳንድ ተጨማሪ ስስአካሎች ከደቢያን ጋር እንዲሰሩ ተደርገዋል፡፡ ምንም እንኳን እነዚህ ስስአካሎች ነጻ ቢሆኑም ለስራቸው "
+"ነጻ ባልሆኑ ስስአካሎች ይደገፋሉ፡፡ እንዚህ ስስአካሎች የደቢያን አካል አይደሉም ነገርግን የደቢያን ቀዳሚ የመትከያ "
+"መሳሪያዎችን በመጠቀም መትከል ይቻላል፡፡"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#. Type: boolean
+#. Description
+#. This template is used by the Ubuntu version of d-i.
+#. :sl2:
+#. Type: boolean
+#. Description
+#. This template is used by the Ubuntu version of d-i.
+#. :sl2:
+#. Type: boolean
+#. Description
+#. This template is used by the Ubuntu version of d-i.
+#. :sl2:
+#. Type: boolean
+#. Description
+#. This template is used by the Ubuntu version of d-i.
+#. :sl2:
+#: ../apt-mirror-setup.templates:3001 ../apt-mirror-setup.templates-ubuntu:2001
+#: ../apt-mirror-setup.templates-ubuntu:3001
+#: ../apt-mirror-setup.templates-ubuntu:4001
+#: ../apt-mirror-setup.templates-ubuntu:5001
+msgid ""
+"Please choose whether you want this software to be made available to you."
+msgstr "ይህን ፕሮግራም ይፈልጉት እንደሆን ይምረጡ፡፡"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-mirror-setup.templates:5001
+msgid "Use a network mirror?"
+msgstr "የአውታር ማኅደር-መስተዋት ልጠቀም?"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-mirror-setup.templates:5001
+#, fuzzy
+#| msgid ""
+#| "A network mirror can be used to supplement the software that is included "
+#| "on the CD-ROM. This may also make newer versions of software available."
+msgid ""
+"A network mirror can be used to supplement the software that is included on "
+"the installation media. This may also make newer versions of software "
+"available."
+msgstr ""
+"በሲዲው ላይ ካለው በተጨማሪ የአውታር ማኅደር መስትዋትን መጠቀም ይቻላል። ይህ የስልቶቹን አዲስ ዝርያ እንዲጠቀሙ "
+"ይረዳዎታል።"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../base-installer.templates:4001
+msgid "Preparing to install the base system..."
+msgstr "መሠረታዊ ስርዓቱን ለመትከል በመዘጋጀት ላይ..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../base-installer.templates:5001 ../bootstrap-base.templates:30001
+msgid "Installing the base system"
+msgstr "መሠረታዊ ሥርዓቱን በመትከል ላይ"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../base-installer.templates:7001
+msgid "Setting up the base system..."
+msgstr "መሰረታዊ ስርዓትን በመትከል ላይ..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../base-installer.templates:8001 ../bootstrap-base.templates:59001
+msgid "Configuring APT sources..."
+msgstr "የAPT ምንጮችን አዘጋጅ..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../base-installer.templates:9001
+msgid "Updating the list of available packages..."
+msgstr "ያሉ ጥቅሎችን ዝርዝር በማሻሻል ላይ..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../base-installer.templates:10001
+msgid "Installing extra packages..."
+msgstr "ተጨማሪ ጥቅሎችን በመትከል ላይ..."
+
+#. Type: text
+#. Description
+#. SUBST0 is a package name
+#. :sl1:
+#: ../base-installer.templates:11001
+msgid "Installing extra packages - retrieving and installing ${SUBST0}..."
+msgstr "ተጨማሪ ጥቅሎችን በመትከል ላይ- ${SUBST0}ን በማምጣትና በመትከል ላይ..."
+
+#. Type: text
+#. Description
+#. Item in the main menu to select this package
+#. TRANSLATORS: <65 columns
+#. :sl1:
+#: ../bootstrap-base.templates:1001
+msgid "Install the base system"
+msgstr "መሠረታዊ ሥርዓቱን ትከል"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Release is a filename which should not be translated
+#: ../bootstrap-base.templates:23001
+msgid "Retrieving Release file"
+msgstr "የመልቀቂያ ፋይልን በማምጣት ላይ"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Release is a filename which should not be translated
+#: ../bootstrap-base.templates:24001
+msgid "Retrieving Release file signature"
+msgstr "የመልቀቂያ ፋይል ፊርማን በማምጣት ላይ"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. "packages" here can be translated
+#: ../bootstrap-base.templates:25001
+msgid "Finding package sizes"
+msgstr "የጥቅል መጠንን በማግኘት ላይ"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Packages is a filename which should not be translated
+#: ../bootstrap-base.templates:26001
+msgid "Retrieving Packages files"
+msgstr "የጥቅል ፋይሎችን በማምጣት ላይ"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Packages is a filename which should not be translated
+#: ../bootstrap-base.templates:27001
+msgid "Retrieving Packages file"
+msgstr "የጥቅል ፋይልን በማምጣት ላይ"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. "packages" here can be translated
+#: ../bootstrap-base.templates:28001
+msgid "Retrieving packages"
+msgstr "ጥቅሎችን በማምጣት ላይ"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. "packages" here can be translated
+#: ../bootstrap-base.templates:29001
+msgid "Extracting packages"
+msgstr "ጥቅሎችን በመፍታት ላይ"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Core packages are packages that are part of the Debian base system
+#. The "core" packages are indeed packages that are specifically
+#. recorded as part of the base system. Other packages may
+#. be installed on the base system because of dependency resolution
+#: ../bootstrap-base.templates:31001
+msgid "Installing core packages"
+msgstr "መሰረታዊ ጥቅሎችን በመትከል ላይ"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Required packages are packages which installation is triggered
+#. by the dependency chain of core packages
+#. In short, they are "required" because at least one of the
+#. packages from the core packages depends on them
+#: ../bootstrap-base.templates:32001
+msgid "Unpacking required packages"
+msgstr "ተፈላጊ ጥቅሎችን በምፍታት ላይ"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../bootstrap-base.templates:33001
+msgid "Configuring required packages"
+msgstr "መስተካከል የሚፈልጉ ጥቅሎች"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. The base system is the minimal Debian system
+#. See http://www.debian.org/doc/debian-policy/ch-binary.html#s3.7
+#: ../bootstrap-base.templates:34001
+msgid "Unpacking the base system"
+msgstr "መሰራታዊ ስርዓቱን በመፍታት ላይ"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. The base system is the minimal Debian system
+#. See http://www.debian.org/doc/debian-policy/ch-binary.html#s3.7
+#: ../bootstrap-base.templates:35001
+msgid "Configuring the base system"
+msgstr "መሰረታዊ ስርዓቱን በመፍታት ላይ"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../bootstrap-base.templates:36001
+msgid "${SECTION}: ${INFO}..."
+msgstr "${SECTION}: ${INFO}..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. SUBST0 is a package name
+#: ../bootstrap-base.templates:37001
+msgid "Validating ${SUBST0}..."
+msgstr "${SUBST0}ን በማረጋገጥ ላይ..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. SUBST0 is a package name
+#: ../bootstrap-base.templates:38001
+msgid "Retrieving ${SUBST0}..."
+msgstr "${SUBST0} በማምጣት ላይ..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. SUBST0 is a package name
+#: ../bootstrap-base.templates:39001
+msgid "Extracting ${SUBST0}..."
+msgstr "${SUBST0} በመፍታት ላይ..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. SUBST0 is a package name
+#: ../bootstrap-base.templates:40001
+msgid "Unpacking ${SUBST0}..."
+msgstr "${SUBST0} በመፍታት ላይ..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. SUBST0 is a package name
+#: ../bootstrap-base.templates:41001
+msgid "Configuring ${SUBST0}..."
+msgstr "${SUBST0} በማስተካከል ላይ..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Release is a filename which should not be translated
+#: ../bootstrap-base.templates:42001
+msgid "Checking Release signature"
+msgstr "የመልቀቂያ ፋይል ፊርማን በማረጋገጥ ላይ..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. SUBST0 is a gpg key id
+#. Release is a filename which should not be translated
+#: ../bootstrap-base.templates:43001
+msgid "Valid Release signature (key id ${SUBST0})"
+msgstr "የሚሰራ Release signature (key id ${SUBST0})"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../bootstrap-base.templates:44001
+msgid "Resolving dependencies of base packages..."
+msgstr "የመሠረታዊ ጥቅሉን ተደጋጋፊዎች በማውጣጣት ላይ..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. SUBST0 is a list of packages
+#: ../bootstrap-base.templates:45001
+msgid "Found additional base dependencies: ${SUBST0}"
+msgstr "ተጨማሪ የመሠረታዊ ስልቶች ተደጋጋፊዎች ተገኝተዋል:- ${SUBST0}"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. SUBST0 is a list of packages
+#: ../bootstrap-base.templates:46001
+msgid "Found additional required dependencies: ${SUBST0}"
+msgstr "ተጨማሪ አስፈላጊ ተደጋፊዎች ተገኝተዎል:- ${SUBST0}"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. SUBST0 is a list of packages
+#: ../bootstrap-base.templates:47001
+msgid "Found packages in base already in required: ${SUBST0}"
+msgstr "አስፈላጊ የተባለው ውስጥ ያሉ ጥቅሎች መሰረት ውስጥ ተገኝተዋል:- ${SUBST0}"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../bootstrap-base.templates:48001
+msgid "Resolving dependencies of required packages..."
+msgstr "የመሠረታዊ ጥቅሉን ተደጋጋፊዎች በማውጣጣት ላይ..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. SUBST0 is an archive component (main, etc)
+#. SUBST1 is a mirror
+#: ../bootstrap-base.templates:49001
+msgid "Checking component ${SUBST0} on ${SUBST1}..."
+msgstr "በ${SUBST1} ላይ ያለውን አካል ${SUBST0} በመፈተን ላይ ..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Core packages are packages that are part of the Debian base system
+#. The "core" packages are indeed packages that are specifically
+#. recorded as part of the base system. Other packages may
+#. be installed on the base system because of dependency resolution
+#: ../bootstrap-base.templates:50001
+msgid "Installing core packages..."
+msgstr "መሰረታዊ ጥቅሎችን በመትከል ላይ"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Required packages are packages which installation is triggered
+#. by the dependency chain of core packages
+#. In short, they are "required" because at least one of the
+#. packages from the core packages depends on them
+#: ../bootstrap-base.templates:51001
+msgid "Unpacking required packages..."
+msgstr "አስፈላጊ ጥቅሎችን በመፍታት ላይ..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Required packages are packages which installation is triggered
+#. by the dependency chain of core packages
+#. In short, they are "required" because at least one of the
+#. packages from the core packages depends on them
+#: ../bootstrap-base.templates:52001
+msgid "Configuring required packages..."
+msgstr "አስፈላጊ ጥቅሎችን በማስተካከል ላይ..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../bootstrap-base.templates:53001
+msgid "Installing base packages..."
+msgstr "መሰረታዊ ጥቅሎችን በመትከል ላይ..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../bootstrap-base.templates:54001
+msgid "Unpacking the base system..."
+msgstr "መሰረታዊ ጥቅሎችን በመፍታት ላይ..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../bootstrap-base.templates:55001
+msgid "Configuring the base system..."
+msgstr "መሠረታዊ ሥርዓቱን በማስተካከል ላይ..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../bootstrap-base.templates:56001
+msgid "Base system installed successfully."
+msgstr "የመሠረታዊ ስርዓት ተከላው ተሳክቷል፡፡"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../bootstrap-base.templates:60001
+msgid "Selecting the kernel to install..."
+msgstr "የሚተከል ከርነል በመምረጥ ላይ..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../bootstrap-base.templates:61001
+msgid "Installing the kernel..."
+msgstr "የከርነል በመትከል ላይ..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. SUBST0 is a package name
+#: ../bootstrap-base.templates:62001
+msgid "Installing the kernel - retrieving and installing ${SUBST0}..."
+msgstr "ከርነሉ በመትከል ላይ - ${SUBST0}ን አምጥቶ በመትከል ላይ..."
+
+#. Type: text
+#. Description
+#. Translators, this text will appear on a button, so KEEP IT SHORT
+#. :sl1:
+#: ../cdebconf-newt-udeb.templates:1001 ../cdebconf-gtk-udeb.templates:1001
+msgid "Continue"
+msgstr "ቀጥል"
+
+#. Type: text
+#. Description
+#. Translators, this text will appear on a button, so KEEP IT SHORT
+#. :sl1:
+#: ../cdebconf-newt-udeb.templates:2001 ../cdebconf-gtk-udeb.templates:2001
+msgid "Go Back"
+msgstr "ሂድ ወደ ኋላ"
+
+#. Type: text
+#. Description
+#. Translators, this text will appear on a button, so KEEP IT SHORT
+#. :sl1:
+#. Type: text
+#. Description
+#. :sl4:
+#: ../cdebconf-newt-udeb.templates:3001 ../cdebconf-gtk-udeb.templates:3001
+#: ../cdebconf-slang-udeb.templates:1001 ../cdebconf-text-udeb.templates:10001
+msgid "Yes"
+msgstr "አዎ"
+
+#. Type: text
+#. Description
+#. Translators, this text will appear on a button, so KEEP IT SHORT
+#. :sl1:
+#. Type: text
+#. Description
+#. :sl4:
+#: ../cdebconf-newt-udeb.templates:4001 ../cdebconf-gtk-udeb.templates:4001
+#: ../cdebconf-slang-udeb.templates:2001 ../cdebconf-text-udeb.templates:11001
+msgid "No"
+msgstr "አይ"
+
+#. #-#-#-#-#  templates.pot (cdebconf)  #-#-#-#-#
+#. Type: text
+#. Description
+#. Translators, this text will appear on a button, so KEEP IT SHORT
+#. :sl1:
+#. #-#-#-#-#  templates.pot (mdcfg)  #-#-#-#-#
+#. Type: select
+#. Choices
+#. :sl3:
+#. Type: select
+#. Choices
+#. :sl3:
+#. #-#-#-#-#  templates.pot (net-retriever)  #-#-#-#-#
+#. Type: select
+#. Choices
+#. These are choices of actions so this is, at least in English,
+#. an infinitive form
+#. :sl2:
+#: ../cdebconf-newt-udeb.templates:5001 ../mdcfg-utils.templates:6001
+#: ../mdcfg-utils.templates:13001 ../net-retriever.templates:1001
+msgid "Cancel"
+msgstr "ተወው"
+
+#. Type: text
+#. Description
+#. Help line displayed at the bottom of the cdebconf newt interface.
+#. Translators: must fit within 80 characters.
+#. :sl1:
+#: ../cdebconf-newt-udeb.templates:6001
+msgid "<Tab> moves; <Space> selects; <Enter> activates buttons"
+msgstr "<Tab> ያስኬዳል; <Space> ይመርጣል; <Enter> ቁልፎችን ያስነሳል"
+
+#. Type: text
+#. Description
+#. Help line displayed at the bottom of the cdebconf newt interface.
+#. Translators: must fit within 80 characters.
+#. :sl1:
+#: ../cdebconf-newt-udeb.templates:7001
+msgid "<F1> for help; <Tab> moves; <Space> selects; <Enter> activates buttons"
+msgstr "<F1> ለመመሪያ;<Tab> ያስኬዳል; <Space> ይመርጣል; <Enter> ቁልፎችን ያስነሳል"
+
+#. Type: text
+#. Description
+#. Appears as a checkbox in the newt and GTK interfaces.
+#. :sl1:
+#: ../cdebconf-newt-udeb.templates:8001 ../cdebconf-gtk-udeb.templates:9001
+#, fuzzy
+#| msgid "Password input error"
+msgid "Show Password in Clear"
+msgstr "ሚስጥር-ቃል ማስገባት ስህተት"
+
+#. Type: text
+#. Description
+#. Translators, this text will appear on a button, so KEEP IT SHORT
+#. :sl1:
+#: ../cdebconf-gtk-udeb.templates:5001
+msgid "Help"
+msgstr "መመሪያ"
+
+#. Type: text
+#. Description
+#. TRANSLATORS: This should be "translated" to "RTL" or "LTR" depending of
+#. default text direction of your language
+#. LTR: Left to Right (Latin, Cyrillic, CJK, Indic...)
+#. RTL: Right To Left (Arabic, Hebrew, Persian...)
+#. DO NOT USE ANYTHING ELSE
+#. :sl1:
+#: ../cdebconf-gtk-udeb.templates:6001
+msgid "LTR"
+msgstr "LTR"
+
+#. Type: text
+#. Description
+#. Translators, this text will appear on a button, so KEEP IT SHORT
+#. This button will allow users to virtually "shoot a picture"
+#. of the screen
+#. :sl1:
+#: ../cdebconf-gtk-udeb.templates:7001
+msgid "Screenshot"
+msgstr "የስክሪን ፎቶ"
+
+#. Type: text
+#. Description
+#. Text that will appear in a dialog box mentioning which file
+#. the screenshot has been saved to. "%s" is a file name here
+#. :sl1:
+#: ../cdebconf-gtk-udeb.templates:8001
+#, no-c-format
+msgid "Screenshot saved as %s"
+msgstr "የስክሪን ፎቶ %s ተብሎ ተቀምጧል"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../choose-mirror-bin.templates-in:5001
+msgid "Checking the Debian archive mirror"
+msgstr "የደቢያን ማኅደር መስተዋቶችን በመፈተሽ ላይ"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../choose-mirror-bin.templates-in:6001
+msgid "Downloading Release files..."
+msgstr "መልቀቂያ ፋይሎችን በመጫን ላይ..."
+
+#. Type: text
+#. Description
+#. main-menu item
+#. Translators: keep below 55 columns
+#. :sl1:
+#: ../choose-mirror-bin.templates-in:14001
+msgid "Choose a mirror of the Debian archive"
+msgstr "የደቢያን ማኅደር-መስተዋት ምረጥ"
 
 #. Type: select
 #. Choices
-#. "other", here, is added to the list of countries that will be displayed
-#. for users to choose among them
-#. For instance, choosing "Italian" will show:
-#. Italy, Switzerland, other
 #. :sl1:
-#: ../localechooser.templates-in:22001 ../../mktemplates.continents:26
-msgid "other"
-msgstr "ሌላ"
+#. Type: select
+#. Choices
+#. :sl2:
+#: ../choose-mirror-bin.templates.http-in:2001
+#: ../choose-mirror-bin.templates.ftp.sel-in:2001
+msgid "enter information manually"
+msgstr "መረጃን በእጅ አስገባ"
 
-#. Type: text
-#. Description
+#. Type: select
+#. Default
+#. Translators, you should put here the ISO 3166 code of a country
+#. which you know hosts at least one Debian HTTP mirror. Please check
+#. that the country really has a Debian HTTP mirror before putting a
+#. random value here
+#.
+#. First check that the country you mention here is listed in
+#. https://salsa.debian.org/mirror-team/masterlist/-/blob/master/Mirrors.masterlist
+#.
+#. BE CAREFUL to use the TWO LETTER ISO-3166 CODE and not anything else
+#.
+#. You do not need to translate what's between the square brackets
+#. You should even NOT put square brackets in translations:
+#. msgid "US[ Default value for http]"
+#. msgstr "FR"
 #. :sl1:
-#: ../localechooser.templates-in:23001
-msgid "Country, territory or area:"
-msgstr "አገር፣ ክፍለ አስተዳደር ወይም አካባቢ፦"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../localechooser.templates-in:24001
-msgid "Continent or region:"
-msgstr "ክፍለዓለም ወይም ከባቢ"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../localechooser.templates-in:25001
-msgid ""
-"The selected location will be used to set your time zone and also for "
-"example to help select the system locale. Normally this should be the "
-"country where you live."
-msgstr ""
-"የተመረጠው ቦታ የጊዜ ቀጠና ለመወሰንና የስርዓቱን ከባቢ ባሕሪዎች ለመወሰን ጥቅም ላይ ይውላል። በተለምዶ ይህ "
-"የሚኖሩበትን አገር ይሆናል።"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../localechooser.templates-in:26001
-msgid ""
-"This is a shortlist of locations based on the language you selected. Choose "
-"\"other\" if your location is not listed."
-msgstr ""
-"ይህ በመረጡት ቋንቋ ላይ ተመርኩዞ የተዘጋጀ አጭር የቦታዎች ዝርዝር ነው። ቦታዎ ከሌለ \"other\" የሚለውን ይምረጡ።"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../localechooser.templates-in:27001
-msgid "Select the continent or region to which your location belongs."
-msgstr "አካባቢዎ የሚገኝበትን ክፍለ ዓለም ወይም ከባቢ ይምረጡ።"
-
-#. Type: text
-#. Description
-#. '%s' will be replaced with the name of the currently selected continent/region
-#. :sl1:
-#: ../localechooser.templates-in:28001
-#, no-c-format
-msgid ""
-"Listed are locations for: %s. Use the <Go Back> option to select a different "
-"continent or region if your location is not listed."
-msgstr ""
-"ይህ የ: %s. የቦታ ዝርዝር ነው። የተለየ ክፍለ ዓለም ወይም አካባቢ ለመምረጥ ከፈለጉ <Go Back> የሚለውን ይጠቀሙ።"
+#: ../choose-mirror-bin.templates.http-in:2002
+msgid "US[ Default value for http]"
+msgstr "US"
 
 #. Type: select
 #. Description
 #. :sl1:
-#: ../localechooser.templates-in:29001
-msgid "Country to base default locale settings on:"
-msgstr "ቀዳሚ የከባቢ ባህሪ የሚመሰረትበት አገር፦"
+#. Type: select
+#. Description
+#. :sl2:
+#: ../choose-mirror-bin.templates.http-in:2003
+#: ../choose-mirror-bin.templates.ftp.sel-in:2003
+msgid "Debian archive mirror country:"
+msgstr "የደቢያን ማኅደር-መስተዋት አገር"
 
-#. Type: text
+#. Type: select
 #. Description
 #. :sl1:
-#: ../localechooser.templates-in:30001
+#. Type: select
+#. Description
+#. :sl2:
+#: ../choose-mirror-bin.templates.http-in:2003
+#: ../choose-mirror-bin.templates.ftp.sel-in:2003
 msgid ""
-"There is no locale defined for the combination of language and country you "
-"have selected. You can now select your preference from the locales available "
-"for the selected language. The locale that will be used is listed in the "
-"second column."
+"The goal is to find a mirror of the Debian archive that is close to you on "
+"the network -- be aware that nearby countries, or even your own, may not be "
+"the best choice."
 msgstr ""
-"ለመረጡት የአገረና የቋንቋ ቅንጅት የከባቢ ባህሪ አልተሰየመለትም። አሁን ለተመረጠው ቋንቋ ካሉት የከባቢ ባህሪዎች መሃከል "
-"መምረጥ ይችላሉ። በጥቅም ላይ የሚውለው የከባቢ ባህሪ በሁለተኛው ረድፍ ላይ ተሰጥቷል።"
+"አላማው ለርስዎ አውታር የሚቀርበው መስተዋት ማኅደርን ለማግኘት ነው። ብዙ ጊዜ በቅርብ የሚገኝ ወይም ራስዎ አገር ውስጥ "
+"ያለ ማኅደር ጥሩ ምርጫ ሲሆን አንዳንድ ጊዜ ይህ ላይሆን ይችላል።"
 
-#. Type: text
+#. Type: select
 #. Description
 #. :sl1:
-#: ../localechooser.templates-in:31001
+#. Type: select
+#. Description
+#. :sl2:
+#: ../choose-mirror-bin.templates.http-in:3001
+#: ../choose-mirror-bin.templates.ftp.sel-in:3001
+msgid "Debian archive mirror:"
+msgstr "የደቢያን ማኅደር-መስተዋት"
+
+#. Type: select
+#. Description
+#. :sl1:
+#. Type: select
+#. Description
+#. :sl2:
+#: ../choose-mirror-bin.templates.http-in:3001
+#: ../choose-mirror-bin.templates.ftp.sel-in:3001
 msgid ""
-"There are multiple locales defined for the language you have selected. You "
-"can now select your preference from those locales. The locale that will be "
-"used is listed in the second column."
+"Please select a Debian archive mirror. You should use a mirror in your "
+"country or region if you do not know which mirror has the best Internet "
+"connection to you."
 msgstr ""
-"ለተመረጠው ቋንቋ ብዙ የተሰየሙ የከባቢ ባህሪዎች አሉት። አሁን ከነዚህ የከባቢ ባህሪዎች መሃከል መምረጥ ይችላሉ። በጥቅም "
-"ላይ የሚውለው የከባቢ ባህሪ በሁለተኛው ረድፍ ላይ ተሰጥቷል።"
+"እባክዎ የደቢያን መስተዋት ማኅደርን ይምረጡ፡፡ የትኛው መስተዋት የተሻለ ኢንተርኔት ግንኙነት እንዳለው ካላወቁ ባሉበት "
+"አገር ወይም ባካባቢዎ ያለውን መስተዋት ይምረጡ ፡፡ል"
+
+#. Type: select
+#. Description
+#. :sl1:
+#: ../choose-mirror-bin.templates.http-in:3001
+msgid "Usually, deb.debian.org is a good choice."
+msgstr "deb.debian.org ጥሩ ምርጫ ሊሆን ይችላል."
+
+#. Type: string
+#. Description
+#. :sl1:
+#. Type: string
+#. Description
+#. :sl2:
+#: ../choose-mirror-bin.templates.http-in:4001
+#: ../choose-mirror-bin.templates.ftp.base-in:2001
+msgid "Debian archive mirror hostname:"
+msgstr "የደቢያን ማኅደር-መስተዋት አገልጋይ ስም፦"
+
+#. Type: string
+#. Description
+#. :sl1:
+#. Type: string
+#. Description
+#. :sl2:
+#: ../choose-mirror-bin.templates.http-in:4001
+#: ../choose-mirror-bin.templates.ftp.base-in:2001
+msgid ""
+"Please enter the hostname of the mirror from which Debian will be downloaded."
+msgstr "እባክዎ ደቢያን የሚመጣበትን የመስተዋት ተጠሪ ስም ይጻፉ።"
+
+#. Type: string
+#. Description
+#. :sl1:
+#. Type: string
+#. Description
+#. :sl2:
+#: ../choose-mirror-bin.templates.http-in:4001
+#: ../choose-mirror-bin.templates.ftp.base-in:2001
+msgid ""
+"An alternate port can be specified using the standard [hostname]:[port] "
+"format."
+msgstr "የተለመደውን የ [hostname]:[port] ፎርማት በመጠቀም ተለዋጭ በር መስጠት ይቻላል"
+
+#. Type: string
+#. Description
+#. :sl1:
+#: ../choose-mirror-bin.templates.http-in:6001
+msgid "HTTP proxy information (blank for none):"
+msgstr "የHTTP proxy መረጃ (ከሌለ ባዶ ይተዉት)፦"
+
+#. Type: string
+#. Description
+#. :sl1:
+#: ../choose-mirror-bin.templates.http-in:6001
+msgid ""
+"If you need to use a HTTP proxy to access the outside world, enter the proxy "
+"information here. Otherwise, leave this blank."
+msgstr ""
+"ከውጪው ዓለ ጋር ለመገናኘት HTTP ምስለኔ የሚጠቀሙ ከሆነ የምስለኔውን መረጃ እዚህ ያስገቡ፡፡ ያለዚያ ይህንን ባዶ "
+"ይትዉት፡፡"
+
+#. Type: string
+#. Description
+#. :sl1:
+#. Type: string
+#. Description
+#. :sl2:
+#: ../choose-mirror-bin.templates.http-in:6001
+#: ../choose-mirror-bin.templates.ftp.base-in:4001
+msgid ""
+"The proxy information should be given in the standard form of \"http://"
+"[[user][:pass]@]host[:port]/\"."
+msgstr ""
+"የምስለኔ መረጃ መሰጠት በተለመደው  \"http://[[user][:pass]@]host[:port]/\" አይነት መሆን "
+"ይኖርበታል፡፡"
 
 #. Type: text
 #. Description
@@ -1313,6 +2179,401 @@ msgstr ""
 
 #. Type: text
 #. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl1:
+#: ../load-cdrom.templates:1001
+#, fuzzy
+#| msgid "Load installer components from an installer ISO"
+msgid "Load installer components from installation media"
+msgstr "ተካይ አካሎችን ከተካይ ኢሶ ጫን"
+
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl1:
+#: ../clock-setup.templates:1001
+msgid "Configure the clock"
+msgstr "ስዓት አስተካክል"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../clock-setup.templates:2001
+msgid "Is the system clock set to UTC?"
+msgstr "የስርዓቱ ስዓት በUTC ላይ የተመሠረተ ነው?"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../clock-setup.templates:2001
+msgid ""
+"System clocks are generally set to Coordinated Universal Time (UTC). The "
+"operating system uses your time zone to convert system time into local time. "
+"This is recommended unless you also use another operating system that "
+"expects the clock to be set to local time."
+msgstr ""
+"በተለምዶ የስርዓት ሰዓት የሚሰጠው በCoordinated Universal Time (UTC) ነው። ገዚ ስርዓቱ የሰዓት "
+"ቀጠናውን በመጠቀም የስርዓቱን ሰዓት ወደአካባቢዎ ሰዓት ይቀይራል። ሌላ የአካባቢ ሰዓት እንዲኖር የሚጠብቅ ገዢ ስርዓት "
+"ከሌለ በስተቀር ይህ ተመራጭ ነው።"
+
+#. Type: text
+#. Description
+#. progress bar item
+#. :sl1:
+#: ../clock-setup.templates:3001
+msgid "Configuring clock settings..."
+msgstr "የሰዓት ሰየማን በማስተካከል ላይ..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../clock-setup.templates:4001
+msgid "Setting up the clock"
+msgstr "ስዓት በመሰየም ላይ"
+
+#. Type: text
+#. Description
+#. progress bar item
+#. :sl1:
+#: ../clock-setup.templates:7001
+msgid "Getting the time from a network time server..."
+msgstr "ከመረብ ሰዓት ካዳሚ ሰዓቱን እያመጣ ነው..."
+
+#. Type: text
+#. Description
+#. progress bar item
+#. :sl1:
+#: ../clock-setup.templates:8001
+msgid "Setting the hardware clock..."
+msgstr "የጥር ነገር ስዓት በመሰየም ላይ..."
+
+#. Type: text
+#. Description
+#. Main menu item
+#. The translation should not exceed 55 columns except for languages
+#. that are only supported in the graphical version of the installer
+#. :sl1:
+#: ../di-utils-shell.templates:2001
+msgid "Execute a shell"
+msgstr "ሰሌዳ አስነሳ"
+
+#. Type: text
+#. Description
+#. Main menu item
+#. The translation should not exceed 55 columns except for languages
+#. that are only supported in the graphical version of the installer
+#. :sl1:
+#: ../di-utils-reboot.templates:2001
+#, fuzzy
+msgid "Abort the installation"
+msgstr "ተከላውን ይቁም"
+
+#. Type: text
+#. Description
+#. base-installer progress bar item
+#. :sl1:
+#: ../di-utils.templates:1001
+msgid "Registering modules..."
+msgstr "ጥቅል-ስልቶችን በመመዝገብ ላይ..."
+
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl1:
+#: ../finish-install.templates:1001
+msgid "Finish the installation"
+msgstr "ተከላውን ጨርስ"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../finish-install.templates:2001
+msgid "Finishing the installation"
+msgstr "ተከላውን በመጨረስ ላይ"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../finish-install.templates:4001
+msgid "Configuring network..."
+msgstr "አውታርን በማዘጋጀት ላይ..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../finish-install.templates:5001
+msgid "Setting up frame buffer..."
+msgstr "frame buffer በመትከል ላይ..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../finish-install.templates:6001
+msgid "Unmounting file systems..."
+msgstr "የ%s ሰነድን ለመክፈት ስህተት አለ"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../finish-install.templates:7001
+msgid "Rebooting into your new system..."
+msgstr "አዲስ ስርዓትዎ ውስጥ እንደገና በማስነሳት በመግባት ላይ"
+
+#. Type: note
+#. Description
+#. :sl1:
+#: ../finish-install.templates:8001
+msgid "Installation complete"
+msgstr "ተከላው ተፈጽሟል"
+
+#. Type: note
+#. Description
+#. :sl1:
+#: ../finish-install.templates:8001
+#, fuzzy
+#| msgid ""
+#| "Installation is complete, so it is time to boot into your new system. "
+#| "Make sure to remove the installation media (CD-ROM, floppies), so that "
+#| "you boot into the new system rather than restarting the installation."
+msgid ""
+"Installation is complete, so it is time to boot into your new system. Make "
+"sure to remove the installation media, so that you boot into the new system "
+"rather than restarting the installation."
+msgstr ""
+"ተከላው ተጠናቋል። እንግዲህ ወደ አዲሱ ስርዓትዎ ቡት አድርገው የመግቢያው ጊዜ ተቃርቧል። አስሊው ሲነሳ ወደ ተከላ "
+"ተመልሰው እንዳይገቡ ለተከላ የተጠቀሙባችቸውን ሲዲና ፍሎፒ ማውጣትዎን ያረጋግጡ።"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:1001 ../grub-installer.templates:2001
+#, fuzzy
+#| msgid "Install the GRUB boot loader on a hard disk"
+msgid "Install the GRUB boot loader to your primary drive?"
+msgstr "የግሩብ ስርዓት አስነሺ ፕሮግራምን ዲስኩ ላይ ይትከሉ፡፡"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:1001
+msgid ""
+"The following other operating systems have been detected on this computer: "
+"${OS_LIST}"
+msgstr "የሚቀጥሉት ገዢ ስልቶች በዚህ አስሊ ላይ ተገኝተዋል: ${OS_LIST}"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:1001
+#, fuzzy
+#| msgid ""
+#| "If all of your operating systems are listed above, then it should be safe "
+#| "to install the boot loader to the master boot record of your first hard "
+#| "drive. When your computer boots, you will be able to choose to load one "
+#| "of these operating systems or your new system."
+msgid ""
+"If all of your operating systems are listed above, then it should be safe to "
+"install the boot loader to your primary drive (UEFI partition/boot record). "
+"When your computer boots, you will be able to choose to load one of these "
+"operating systems or the newly installed Debian system."
+msgstr ""
+"ሁሉም ገዢ ስልቶች ከላይ ካለው ዝርዝር ውስጥ ካሉ የቡት ጫኚውን በመጀመሪያው ዲስክ ውስጥ በሚገኘው በዋናው የቡት ማኅደር "
+"ውስጥ መትከል ችግር አያስከትልም ይሆናል።"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:2001
+#, fuzzy
+#| msgid ""
+#| "It seems that this new installation is the only operating system on this "
+#| "computer. If so, it should be safe to install the GRUB boot loader to the "
+#| "master boot record of your first hard drive."
+msgid ""
+"It seems that this new installation is the only operating system on this "
+"computer. If so, it should be safe to install the GRUB boot loader to your "
+"primary drive (UEFI partition/boot record)."
+msgstr ""
+"በዚህ አስሊ ላይ ያለው ይህ አዲስ የተተከለው ገዢ ስርዓት ብቻ ይመስላል። ይሄ ከሆነ ግሩብን በመጀመሪያው ዲስክ ዋና "
+"የቡት ማኅደር ላይ መትከሉ ችግር አይኖረውም። "
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:2001
+#, fuzzy
+#| msgid ""
+#| "Warning: If the installer failed to detect another operating system that "
+#| "is present on your computer, modifying the master boot record will make "
+#| "that operating system temporarily unbootable, though GRUB can be manually "
+#| "configured later to boot it."
+msgid ""
+"Warning: If your computer has another operating system that the installer "
+"failed to detect, this will make that operating system temporarily "
+"unbootable, though GRUB can be manually configured later to boot it."
+msgstr ""
+"ማስጠንቀቂያ፦ ተካዩ አስሊዎ ውስጥ ያለ ሌላ ገዢ ስርዓትን ማግኘት ካቃተው ዋና የቡት ማኅደሩን መቀየሩ፣ ምንም እንኳን "
+"ግሩብን በኋላ በእጅ ማረም ቢቻልም፣ ያልተገኘው ገዢ ስልት ለጊዜውም ቢሆን እንዳይነሳ ሊያደርገው ይችላል። "
+
+#. #-#-#-#-#  templates.pot (grub-installer)  #-#-#-#-#
+#. Type: password
+#. Description
+#. :sl2:
+#. #-#-#-#-#  templates.pot (network-console)  #-#-#-#-#
+#. Type: password
+#. Description
+#. :sl3:
+#. #-#-#-#-#  templates.pot (user-setup)  #-#-#-#-#
+#. Type: password
+#. Description
+#. :sl1:
+#. Type: password
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:10001 ../network-console.templates:5001
+#: ../user-setup-udeb.templates:7001 ../user-setup-udeb.templates:14001
+msgid "Re-enter password to verify:"
+msgstr "ለማረጋገጥ ማለፊያቃልን እንደገና ያስገቡ፦"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:18001
+msgid "Installing GRUB boot loader"
+msgstr "ግሩብ የገዢ ስልት ማስነሻን በመትከል ላይ"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:19001
+msgid "Looking for other operating systems..."
+msgstr "ለሎች ገዢ ስርዓቶችን በመፈለግ ላይ..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:20001
+msgid "Installing the '${GRUB}' package..."
+msgstr "የ'${GRUB}' ጥቅልን በመትከል ላይ..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:21001
+msgid "Determining GRUB boot device..."
+msgstr "የግሩብ የገዢ ስልት ማስነሻን አካል በማረጋገጥ ላይ..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:22001
+msgid "Running \"grub-install ${BOOTDEV}\"..."
+msgstr "\"grub-install ${BOOTDEV}\"... በማስኬድ ላይ"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:23001
+msgid "Running \"update-grub\"..."
+msgstr "\"update-grub\" በማስኬድ ላይ..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:24001
+msgid "Updating /etc/kernel-img.conf..."
+msgstr "/etc/kernel-img.conf በማሻሻል ላይ..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:25001
+msgid "Checking whether to force usage of the removable media path"
+msgstr ""
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:26001
+#, fuzzy
+#| msgid "Unmounting file systems..."
+msgid "Mounting filesystems"
+msgstr "የ%s ሰነድን ለመክፈት ስህተት አለ"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:27001
+msgid "Configuring grub-efi for future usage of the removable media path"
+msgstr ""
+
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl1:
+#: ../grub-installer.templates:28001
+#, fuzzy
+#| msgid "Installing GRUB boot loader"
+msgid "Install the GRUB boot loader"
+msgstr "ግሩብ የገዢ ስልት ማስነሻን በመትከል ላይ"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:34001
+msgid "Force GRUB installation to the EFI removable media path?"
+msgstr ""
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:34001
+msgid ""
+"It seems that this computer is configured to boot via EFI, but maybe that "
+"configuration will not work for booting from the hard drive. Some EFI "
+"firmware implementations do not meet the EFI specification (i.e. they are "
+"buggy!) and do not support proper configuration of boot options from system "
+"hard drives."
+msgstr ""
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:34001
+msgid ""
+"A workaround for this problem is to install an extra copy of the EFI version "
+"of the GRUB boot loader to a fallback location, the \"removable media path"
+"\". Almost all EFI systems, no matter how buggy, will boot GRUB that way."
+msgstr ""
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:34001
+#, fuzzy
+#| msgid ""
+#| "Warning: If the installer failed to detect another operating system that "
+#| "is present on your computer, modifying the master boot record will make "
+#| "that operating system temporarily unbootable, though GRUB can be manually "
+#| "configured later to boot it."
+msgid ""
+"Warning: If the installer failed to detect another operating system that is "
+"present on your computer that also depends on this fallback, installing GRUB "
+"there will make that operating system temporarily unbootable. GRUB can be "
+"manually configured later to boot it if necessary."
+msgstr ""
+"ማስጠንቀቂያ፦ ተካዩ አስሊዎ ውስጥ ያለ ሌላ ገዢ ስርዓትን ማግኘት ካቃተው ዋና የቡት ማኅደሩን መቀየሩ፣ ምንም እንኳን "
+"ግሩብን በኋላ በእጅ ማረም ቢቻልም፣ ያልተገኘው ገዢ ስልት ለጊዜውም ቢሆን እንዳይነሳ ሊያደርገው ይችላል። "
+
+#. Type: text
+#. Description
 #. :sl1:
 #: ../ethdetect.templates:4001
 msgid "Detecting network hardware"
@@ -1377,6 +2638,339 @@ msgstr "ጥር አካል መነሳሳትን በመጠበቅ ላይ..."
 #: ../hw-detect.templates:12001
 msgid "Checking for firmware..."
 msgstr "ፊርምስልት መኖሩን በማረጋገጥ ላይ"
+
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl1:
+#: ../save-logs.templates:1001
+msgid "Save debug logs"
+msgstr "የጸረ-ተውሳክ መዝገብን አስቀምጥ"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. finish-install progress bar item
+#: ../save-logs.templates:9001
+msgid "Gathering information for installation report..."
+msgstr "ለተከላው ሪፖርት መረጃ በመሰብሰብ ላይ..."
+
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl1:
+#: ../iso-scan.templates:1001
+msgid "Scan hard drives for an installer ISO image"
+msgstr "ተካይ ISO ምስልን ለማግኘት ዲስኩን ያስሱ"
+
+#. Type: text
+#. Description
+#. This menu entry may be translated.
+#. However, translators are required to keep "Choose language"
+#. as an alternative separated by the "/" character
+#. Example (french): Choisir la langue/Choose language
+#. :sl1:
+#: ../localechooser.templates-in:1001
+msgid "Choose language"
+msgstr "ቋንቋ ምረጥ/Choose language"
+
+#. Type: text
+#. Description
+#. finish-install progress bar item
+#. :sl1:
+#: ../localechooser.templates-in:6001
+msgid "Storing language..."
+msgstr "ቋንቋን በማስቀመጥ ላይ"
+
+#. Type: title
+#. Description
+#. Displayed as dialog title during language selection
+#. :sl1:
+#: ../localechooser.templates-in:7001
+msgid "Select a language"
+msgstr "ቋንቋ ይምረጡ"
+
+#. Type: title
+#. Description
+#. Displayed as dialog title during country selection
+#. :sl1:
+#: ../localechooser.templates-in:8001
+msgid "Select your location"
+msgstr "አካባቢዎን ይምረጡ"
+
+#. Type: title
+#. Description
+#. Displayed as dialog title during locale selection
+#. :sl1:
+#: ../localechooser.templates-in:9001
+msgid "Configure locales"
+msgstr "ከባቢን አዘጋጅ"
+
+#. Type: note
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:12001
+msgid "Language selection no longer possible"
+msgstr "አሁን ቋንቋ መምረጥ አይቻልም"
+
+#. Type: note
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:12001
+msgid ""
+"At this point it is no longer possible to change the language for the "
+"installation, but you can still change the country or locale."
+msgstr "በዚህ ደረጃ ላይ የተከላ ቋንቋን መቀየር አይቻልም፤ ነገር ግን አገርንና ከባቢን አሁንም መቀየር ይችላሉ።"
+
+#. Type: note
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:12001
+msgid ""
+"To select a different language you will need to abort this installation and "
+"reboot the installer."
+msgstr "ሌላ ቋንቋ ለመምረጥ ከፈለጉ ይህንን ተከላ አቁመው እንደገና ተካዩን ቡት ማድረግ ይኖርቦታል። "
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:13001 ../localechooser.templates-in:14001
+msgid "Continue the installation in the selected language?"
+msgstr "በተመረጠው ቋንቋ መትከል ይቀጥል?"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:13001
+msgid ""
+"The translation of the installer is incomplete for the selected language."
+msgstr "ለተካዩ የተመረጠው ቋንቋ ትርጉም አልተጠናቀቀም።"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:14001
+msgid ""
+"The translation of the installer is not fully complete for the selected "
+"language."
+msgstr "ለተመረጠው ቋንቋ የተካዩ ትርጉም አልተጠናቀቀም።"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:15001
+msgid ""
+"This means that there is a significant chance that some dialogs will be "
+"displayed in English instead."
+msgstr "ይህ ማለት አንዳንድ ሰጣገባዎች በእንግሊዝኛ ቋንቋ ይሆናል ማለት ነው።"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:16001
+msgid ""
+"If you do anything other than a purely default installation, there is a real "
+"chance that some dialogs will be displayed in English instead."
+msgstr "ከቀዳሚ ምርጫዎች የተለየ ካደርጉ ሰጣገባዎች በእንግሊዘኛ ቋንቋ ሊሆን ይችላል።"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:17001
+msgid ""
+"If you continue the installation in the selected language, most dialogs "
+"should be displayed correctly but - especially if you use the more advanced "
+"options of the installer - some may be displayed in English instead."
+msgstr ""
+"በተመረጠው ቋንቋ ተከላውን ከቀጠሉ አብዛኛው ሰጣገባ በትክክል ይታያል፣ የበለጠ ጠለቅ ያለ የተካይ ምርጫን ከተጠቀሙ "
+"አንዳንድ ሰጣገባዎች በእንግሊዘኛ ቋንቋ ሊታይ ይችላል።"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:18001
+msgid ""
+"If you continue the installation in the selected language, dialogs should "
+"normally be displayed correctly but - especially if you use the more "
+"advanced options of the installer - there is a slight chance some may be "
+"displayed in English instead."
+msgstr ""
+"በተመረጠው ቋንቋ ተከላውን ከቀጠሉ አብዛኛው ሰጣገባ በትክክል ይታያል፣ የበለጠ ጠለቅ ያለ የተካይ ምርጫን ከተጠቀሙ "
+"አንዳንድ ሰጣገባዎች በእንግሊዘኛ ቋንቋ ሊታይ ይችላል።"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:19001
+msgid ""
+"The chance that you will actually encounter a dialog that is not translated "
+"into the selected language is extremely small, but it cannot be ruled out "
+"completely."
+msgstr "ያልተተረጎመ ሰጣገባዎች ጥቂት ናቸው ስለዚህ አያጋጥሞትም ማለት አይቻልም።"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:20001
+msgid ""
+"Unless you have a good understanding of the alternative language, it is "
+"recommended to either select a different language or abort the installation."
+msgstr "ቋንቋን በደምብ የማይችሉ ከሆነ ሌላ ቋንቋ ውይም እንግሊዘኛ ይምረጡ።"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:21001
+msgid ""
+"If you choose not to continue, you will be given the option of selecting a "
+"different language, or you can abort the installation."
+msgstr "ላለመቀጠል ከፈለጉ ሌላ ቋንቋ ለመምረጥ ወይም ተከላውን ለማቆም ይችላሉ።"
+
+#. Type: select
+#. Choices
+#. "other", here, is added to the list of countries that will be displayed
+#. for users to choose among them
+#. For instance, choosing "Italian" will show:
+#. Italy, Switzerland, other
+#. :sl1:
+#: ../localechooser.templates-in:22001 ../../mktemplates.continents:26
+msgid "other"
+msgstr "ሌላ"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:23001
+msgid "Country, territory or area:"
+msgstr "አገር፣ ክፍለ አስተዳደር ወይም አካባቢ፦"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:24001
+msgid "Continent or region:"
+msgstr "ክፍለዓለም ወይም ከባቢ"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:25001
+msgid ""
+"The selected location will be used to set your time zone and also for "
+"example to help select the system locale. Normally this should be the "
+"country where you live."
+msgstr ""
+"የተመረጠው ቦታ የጊዜ ቀጠና ለመወሰንና የስርዓቱን ከባቢ ባሕሪዎች ለመወሰን ጥቅም ላይ ይውላል። በተለምዶ ይህ "
+"የሚኖሩበትን አገር ይሆናል።"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:26001
+msgid ""
+"This is a shortlist of locations based on the language you selected. Choose "
+"\"other\" if your location is not listed."
+msgstr ""
+"ይህ በመረጡት ቋንቋ ላይ ተመርኩዞ የተዘጋጀ አጭር የቦታዎች ዝርዝር ነው። ቦታዎ ከሌለ \"other\" የሚለውን ይምረጡ።"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:27001
+msgid "Select the continent or region to which your location belongs."
+msgstr "አካባቢዎ የሚገኝበትን ክፍለ ዓለም ወይም ከባቢ ይምረጡ።"
+
+#. Type: text
+#. Description
+#. '%s' will be replaced with the name of the currently selected continent/region
+#. :sl1:
+#: ../localechooser.templates-in:28001
+#, no-c-format
+msgid ""
+"Listed are locations for: %s. Use the <Go Back> option to select a different "
+"continent or region if your location is not listed."
+msgstr ""
+"ይህ የ: %s. የቦታ ዝርዝር ነው። የተለየ ክፍለ ዓለም ወይም አካባቢ ለመምረጥ ከፈለጉ <Go Back> የሚለውን ይጠቀሙ።"
+
+#. Type: select
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:29001
+msgid "Country to base default locale settings on:"
+msgstr "ቀዳሚ የከባቢ ባህሪ የሚመሰረትበት አገር፦"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:30001
+msgid ""
+"There is no locale defined for the combination of language and country you "
+"have selected. You can now select your preference from the locales available "
+"for the selected language. The locale that will be used is listed in the "
+"second column."
+msgstr ""
+"ለመረጡት የአገረና የቋንቋ ቅንጅት የከባቢ ባህሪ አልተሰየመለትም። አሁን ለተመረጠው ቋንቋ ካሉት የከባቢ ባህሪዎች መሃከል "
+"መምረጥ ይችላሉ። በጥቅም ላይ የሚውለው የከባቢ ባህሪ በሁለተኛው ረድፍ ላይ ተሰጥቷል።"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:31001
+msgid ""
+"There are multiple locales defined for the language you have selected. You "
+"can now select your preference from those locales. The locale that will be "
+"used is listed in the second column."
+msgstr ""
+"ለተመረጠው ቋንቋ ብዙ የተሰየሙ የከባቢ ባህሪዎች አሉት። አሁን ከነዚህ የከባቢ ባህሪዎች መሃከል መምረጥ ይችላሉ። በጥቅም "
+"ላይ የሚውለው የከባቢ ባህሪ በሁለተኛው ረድፍ ላይ ተሰጥቷል።"
+
+#. #-#-#-#-#  templates.pot (lvmcfg)  #-#-#-#-#
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl1:
+#. #-#-#-#-#  templates.pot (partman-lvm)  #-#-#-#-#
+#. Type: text
+#. Description
+#. Type: text
+#. Description
+#. :sl3:
+#. Main menu item
+#. Translators: keep below 55 columns
+#. Use infinitive form
+#: ../lvmcfg.templates:1001 ../partman-lvm.templates:7001
+#: ../partman-lvm.templates:23001
+msgid "Configure the Logical Volume Manager"
+msgstr "ሎጂካዊ ይዘት አስተዳዳሪውን አስተካክል"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../main-menu.templates:1001
+msgid "Debian installer main menu"
+msgstr "የደቢያን ተካይ ዋና ምናሌ"
+
+#. Type: select
+#. Description
+#. :sl1:
+#: ../main-menu.templates:2001
+msgid "Choose the next step in the install process:"
+msgstr "በተከላ ሂደቱ የሚቀጥለውን ደረጃ ይምረጡ፡"
+
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl1:
+#: ../mdcfg-utils.templates:1001
+msgid "Configure MD devices"
+msgstr "የMD አካልን አስተካክል፦"
 
 #. Type: boolean
 #. Description
@@ -1822,230 +3416,17 @@ msgstr "ቋሚ አድራሻን በመጠቀም አውታር አስተካክል"
 
 #. Type: text
 #. Description
-#. :sl1:
-#: ../choose-mirror-bin.templates-in:5001
-msgid "Checking the Debian archive mirror"
-msgstr "የደቢያን ማኅደር መስተዋቶችን በመፈተሽ ላይ"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../choose-mirror-bin.templates-in:6001
-msgid "Downloading Release files..."
-msgstr "መልቀቂያ ፋይሎችን በመጫን ላይ..."
-
-#. Type: text
-#. Description
-#. main-menu item
-#. Translators: keep below 55 columns
-#. :sl1:
-#: ../choose-mirror-bin.templates-in:14001
-msgid "Choose a mirror of the Debian archive"
-msgstr "የደቢያን ማኅደር-መስተዋት ምረጥ"
-
-#. Type: select
-#. Choices
-#. :sl1:
-#. Type: select
-#. Choices
-#. :sl2:
-#: ../choose-mirror-bin.templates.http-in:2001
-#: ../choose-mirror-bin.templates.ftp.sel-in:2001
-msgid "enter information manually"
-msgstr "መረጃን በእጅ አስገባ"
-
-#. Type: select
-#. Default
-#. Translators, you should put here the ISO 3166 code of a country
-#. which you know hosts at least one Debian HTTP mirror. Please check
-#. that the country really has a Debian HTTP mirror before putting a
-#. random value here
-#.
-#. First check that the country you mention here is listed in
-#. https://salsa.debian.org/mirror-team/masterlist/-/blob/master/Mirrors.masterlist
-#.
-#. BE CAREFUL to use the TWO LETTER ISO-3166 CODE and not anything else
-#.
-#. You do not need to translate what's between the square brackets
-#. You should even NOT put square brackets in translations:
-#. msgid "US[ Default value for http]"
-#. msgstr "FR"
-#. :sl1:
-#: ../choose-mirror-bin.templates.http-in:2002
-msgid "US[ Default value for http]"
-msgstr "US"
-
-#. Type: select
-#. Description
-#. :sl1:
-#. Type: select
-#. Description
-#. :sl2:
-#: ../choose-mirror-bin.templates.http-in:2003
-#: ../choose-mirror-bin.templates.ftp.sel-in:2003
-msgid "Debian archive mirror country:"
-msgstr "የደቢያን ማኅደር-መስተዋት አገር"
-
-#. Type: select
-#. Description
-#. :sl1:
-#. Type: select
-#. Description
-#. :sl2:
-#: ../choose-mirror-bin.templates.http-in:2003
-#: ../choose-mirror-bin.templates.ftp.sel-in:2003
-msgid ""
-"The goal is to find a mirror of the Debian archive that is close to you on "
-"the network -- be aware that nearby countries, or even your own, may not be "
-"the best choice."
-msgstr ""
-"አላማው ለርስዎ አውታር የሚቀርበው መስተዋት ማኅደርን ለማግኘት ነው። ብዙ ጊዜ በቅርብ የሚገኝ ወይም ራስዎ አገር ውስጥ "
-"ያለ ማኅደር ጥሩ ምርጫ ሲሆን አንዳንድ ጊዜ ይህ ላይሆን ይችላል።"
-
-#. Type: select
-#. Description
-#. :sl1:
-#. Type: select
-#. Description
-#. :sl2:
-#: ../choose-mirror-bin.templates.http-in:3001
-#: ../choose-mirror-bin.templates.ftp.sel-in:3001
-msgid "Debian archive mirror:"
-msgstr "የደቢያን ማኅደር-መስተዋት"
-
-#. Type: select
-#. Description
-#. :sl1:
-#. Type: select
-#. Description
-#. :sl2:
-#: ../choose-mirror-bin.templates.http-in:3001
-#: ../choose-mirror-bin.templates.ftp.sel-in:3001
-msgid ""
-"Please select a Debian archive mirror. You should use a mirror in your "
-"country or region if you do not know which mirror has the best Internet "
-"connection to you."
-msgstr ""
-"እባክዎ የደቢያን መስተዋት ማኅደርን ይምረጡ፡፡ የትኛው መስተዋት የተሻለ ኢንተርኔት ግንኙነት እንዳለው ካላወቁ ባሉበት "
-"አገር ወይም ባካባቢዎ ያለውን መስተዋት ይምረጡ ፡፡ል"
-
-#. Type: select
-#. Description
-#. :sl1:
-#: ../choose-mirror-bin.templates.http-in:3001
-msgid "Usually, deb.debian.org is a good choice."
-msgstr "deb.debian.org ጥሩ ምርጫ ሊሆን ይችላል."
-
-#. Type: string
-#. Description
-#. :sl1:
-#. Type: string
-#. Description
-#. :sl2:
-#: ../choose-mirror-bin.templates.http-in:4001
-#: ../choose-mirror-bin.templates.ftp.base-in:2001
-msgid "Debian archive mirror hostname:"
-msgstr "የደቢያን ማኅደር-መስተዋት አገልጋይ ስም፦"
-
-#. Type: string
-#. Description
-#. :sl1:
-#. Type: string
-#. Description
-#. :sl2:
-#: ../choose-mirror-bin.templates.http-in:4001
-#: ../choose-mirror-bin.templates.ftp.base-in:2001
-msgid ""
-"Please enter the hostname of the mirror from which Debian will be downloaded."
-msgstr "እባክዎ ደቢያን የሚመጣበትን የመስተዋት ተጠሪ ስም ይጻፉ።"
-
-#. Type: string
-#. Description
-#. :sl1:
-#. Type: string
-#. Description
-#. :sl2:
-#: ../choose-mirror-bin.templates.http-in:4001
-#: ../choose-mirror-bin.templates.ftp.base-in:2001
-msgid ""
-"An alternate port can be specified using the standard [hostname]:[port] "
-"format."
-msgstr "የተለመደውን የ [hostname]:[port] ፎርማት በመጠቀም ተለዋጭ በር መስጠት ይቻላል"
-
-#. Type: string
-#. Description
-#. :sl1:
-#: ../choose-mirror-bin.templates.http-in:6001
-msgid "HTTP proxy information (blank for none):"
-msgstr "የHTTP proxy መረጃ (ከሌለ ባዶ ይተዉት)፦"
-
-#. Type: string
-#. Description
-#. :sl1:
-#: ../choose-mirror-bin.templates.http-in:6001
-msgid ""
-"If you need to use a HTTP proxy to access the outside world, enter the proxy "
-"information here. Otherwise, leave this blank."
-msgstr ""
-"ከውጪው ዓለ ጋር ለመገናኘት HTTP ምስለኔ የሚጠቀሙ ከሆነ የምስለኔውን መረጃ እዚህ ያስገቡ፡፡ ያለዚያ ይህንን ባዶ "
-"ይትዉት፡፡"
-
-#. Type: string
-#. Description
-#. :sl1:
-#. Type: string
-#. Description
-#. :sl2:
-#: ../choose-mirror-bin.templates.http-in:6001
-#: ../choose-mirror-bin.templates.ftp.base-in:4001
-msgid ""
-"The proxy information should be given in the standard form of \"http://"
-"[[user][:pass]@]host[:port]/\"."
-msgstr ""
-"የምስለኔ መረጃ መሰጠት በተለመደው  \"http://[[user][:pass]@]host[:port]/\" አይነት መሆን "
-"ይኖርበታል፡፡"
-
-#. #-#-#-#-#  templates.pot (net-retriever)  #-#-#-#-#
-#. Type: select
-#. Choices
-#. These are choices of actions so this is, at least in English,
-#. an infinitive form
-#. :sl2:
-#. #-#-#-#-#  templates.pot (cdebconf)  #-#-#-#-#
-#. Type: text
-#. Description
-#. Translators, this text will appear on a button, so KEEP IT SHORT
-#. :sl1:
-#. #-#-#-#-#  templates.pot (mdcfg)  #-#-#-#-#
-#. Type: select
-#. Choices
-#. :sl3:
-#. Type: select
-#. Choices
-#. :sl3:
-#: ../net-retriever.templates:1001 ../cdebconf-newt-udeb.templates:5001
-#: ../mdcfg-utils.templates:6001 ../mdcfg-utils.templates:13001
-msgid "Cancel"
-msgstr "ተወው"
-
-#. Type: text
-#. Description
 #. Main menu item
 #. Translators: keep below 55 columns
 #. :sl1:
-#: ../load-cdrom.templates:1001
-#, fuzzy
-#| msgid "Load installer components from an installer ISO"
-msgid "Load installer components from installation media"
-msgstr "ተካይ አካሎችን ከተካይ ኢሶ ጫን"
+#: ../nobootloader.templates:1001
+msgid "Continue without boot loader"
+msgstr "ተከላውን ያለ አስነሺ ቀጥል"
 
+#. #-#-#-#-#  templates.pot (partman-auto)  #-#-#-#-#
 #. Type: text
 #. Description
 #. :sl1:
-#: ../partman-base.templates:1001
-msgid "Starting up the partitioner"
-msgstr "ከፋይ ስልትን በማስነሳት ላይ"
-
 #. #-#-#-#-#  templates.pot (partman-base)  #-#-#-#-#
 #. Type: text
 #. Description
@@ -2053,14 +3434,178 @@ msgstr "ከፋይ ስልትን በማስነሳት ላይ"
 #. Type: text
 #. Description
 #. :sl2:
-#. #-#-#-#-#  templates.pot (partman-auto)  #-#-#-#-#
+#: ../partman-auto.templates:1001 ../partman-base.templates:2001
+#: ../partman-base.templates:25001
+msgid "Please wait..."
+msgstr "እባክዎን ይጠብቁ..."
+
 #. Type: text
 #. Description
 #. :sl1:
-#: ../partman-base.templates:2001 ../partman-base.templates:25001
-#: ../partman-auto.templates:1001
-msgid "Please wait..."
-msgstr "እባክዎን ይጠብቁ..."
+#: ../partman-auto.templates:2001
+msgid "Computing the new partitions..."
+msgstr "አዲሱን ክፋይ በማስላት ላይ..."
+
+#. Type: select
+#. Description
+#. :sl1:
+#. Type: select
+#. Description
+#. :sl1:
+#: ../partman-auto.templates:5001 ../partman-auto.templates:9001
+msgid "Partitioning method:"
+msgstr "የከፈላ ዘዴ፦"
+
+#. Type: select
+#. Description
+#. :sl1:
+#: ../partman-auto.templates:5001
+msgid ""
+"The installer can guide you through partitioning a disk (using different "
+"standard schemes) or, if you prefer, you can do it manually. With guided "
+"partitioning you will still have a chance later to review and customise the "
+"results."
+msgstr ""
+"ተካዩ (የተለያዩ አሰራሮችን በመጠቀም) ዲስክ ለመክፈል ሊመራዎት ይችላል፣ ወይም ከፈለጉ በራስዎ ለማድረግ ይችላሉ። "
+"በመመራት ብከፍሉም በኋላ ተመልሰው የተሰራውን ለመቆጣጠርና ለማስተካከል እድል አለዎት።"
+
+#. Type: select
+#. Description
+#. :sl1:
+#. Type: select
+#. Description
+#. :sl1:
+#: ../partman-auto.templates:5001 ../partman-auto.templates:9001
+msgid ""
+"If you choose guided partitioning for an entire disk, you will next be asked "
+"which disk should be used."
+msgstr "ሙሉ ዲስኩን እየተመሩ ለመክፈል ከመረጥ ቀጥሎ የትኛውን ዲስክ መጠቀም እንዳለብን ይጠየቃሉ፡፡"
+
+#. Type: select
+#. Description
+#. :sl1:
+#: ../partman-auto.templates:10001
+msgid "Partitioning scheme:"
+msgstr "የመክፈል መርሃግብር፦"
+
+#. Type: select
+#. Description
+#. :sl1:
+#. "Selected for partitioning" can be either an entire disk
+#. of "the largest continuous free space" on an existing disk
+#. TRANSLATORS, please take care to choose something appropriate for both
+#.
+#. It is followed by a variable giving the chosen disk, hence the colon
+#. at the end of the sentence. Please keep it.
+#: ../partman-auto.templates:10001
+msgid "Selected for partitioning:"
+msgstr "ለመክፈል የተመረጠ፦"
+
+#. Type: select
+#. Description
+#. :sl1:
+#: ../partman-auto.templates:10001
+msgid ""
+"The disk can be partitioned using one of several different schemes. If you "
+"are unsure, choose the first one."
+msgstr "ይህ ዲስክ የተለያየ መርሃግብር በመጠቀም ሊከፈል ይችላል። እርግጠኛ ካልሆኑ የመጀመሪያውን ይምረጡ።"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
+#: ../partman-auto.templates:14001
+msgid "Guided partitioning"
+msgstr "ከፈላ በመሪ"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
+#: ../partman-auto.templates:15001
+msgid "Guided - use the largest continuous free space"
+msgstr "በመሪ - ትልቁን ተከታታይ ባዶ ቦታ ይጠቀሙ"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
+#: ../partman-auto.templates:16001
+msgid "Guided - use entire disk"
+msgstr "በመሪ - ዲስኩን በሙሉ ይጠቀሙ"
+
+#. Type: select
+#. Description
+#. :sl1:
+#: ../partman-auto.templates:17001
+msgid "Select disk to partition:"
+msgstr "ዲስክ ለመክፈል ምረጥ፦"
+
+#. Type: select
+#. Description
+#. :sl1:
+#: ../partman-auto.templates:17001
+msgid ""
+"Note that all data on the disk you select will be erased, but not before you "
+"have confirmed that you really want to make the changes."
+msgstr ""
+"በዲስኩ ላይ ያለ መረጃ ሁሉ እንደሚሰረዝ ያስተውሉ፡፡ ቢሆንም ለውጡን ማድረግ ይፈልጉ እንደሆን ካረጋገጡ በኋላ ነው፡፡"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
+#. This is a method for partioning - as in guided (automatic) versus manual
+#: ../partman-auto.templates:18001
+msgid "Manual"
+msgstr "በእጅ ክፈል"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
+#: ../partman-auto.templates:19001
+msgid "Automatically partition the free space"
+msgstr "ባዶ ቦታን በራስሰር ክፈል"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
+#: ../partman-auto.templates:20001
+msgid "All files in one partition (recommended for new users)"
+msgstr "ሁሉም ፍይሎች በአንድ ክፋይ (ለአዲስ ተጠቃሚዎች ይህንን ይመክሯል)"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
+#: ../partman-auto.templates:21001
+msgid "Separate /home partition"
+msgstr "የ /home ክፋይ ይለይ፦"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
+#: ../partman-auto.templates:22001
+msgid "Separate /home, /var, and /tmp partitions"
+msgstr "የተለዩ  /home, /var, and /tmp ክፋዮች"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
+#: ../partman-auto-lvm.templates:1001
+msgid "Guided - use entire disk and set up LVM"
+msgstr "Guided - ሙሉ ዲስክ ተጠቅሞ LVM ይሰየም"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../partman-base.templates:1001
+msgid "Starting up the partitioner"
+msgstr "ከፋይ ስልትን በማስነሳት ላይ"
 
 #. Type: text
 #. Description
@@ -2305,159 +3850,6 @@ msgstr "ተሟሽ ዲስክ"
 
 #. Type: text
 #. Description
-#. :sl1:
-#: ../partman-auto.templates:2001
-msgid "Computing the new partitions..."
-msgstr "አዲሱን ክፋይ በማስላት ላይ..."
-
-#. Type: select
-#. Description
-#. :sl1:
-#. Type: select
-#. Description
-#. :sl1:
-#: ../partman-auto.templates:5001 ../partman-auto.templates:9001
-msgid "Partitioning method:"
-msgstr "የከፈላ ዘዴ፦"
-
-#. Type: select
-#. Description
-#. :sl1:
-#: ../partman-auto.templates:5001
-msgid ""
-"The installer can guide you through partitioning a disk (using different "
-"standard schemes) or, if you prefer, you can do it manually. With guided "
-"partitioning you will still have a chance later to review and customise the "
-"results."
-msgstr ""
-"ተካዩ (የተለያዩ አሰራሮችን በመጠቀም) ዲስክ ለመክፈል ሊመራዎት ይችላል፣ ወይም ከፈለጉ በራስዎ ለማድረግ ይችላሉ። "
-"በመመራት ብከፍሉም በኋላ ተመልሰው የተሰራውን ለመቆጣጠርና ለማስተካከል እድል አለዎት።"
-
-#. Type: select
-#. Description
-#. :sl1:
-#. Type: select
-#. Description
-#. :sl1:
-#: ../partman-auto.templates:5001 ../partman-auto.templates:9001
-msgid ""
-"If you choose guided partitioning for an entire disk, you will next be asked "
-"which disk should be used."
-msgstr "ሙሉ ዲስኩን እየተመሩ ለመክፈል ከመረጥ ቀጥሎ የትኛውን ዲስክ መጠቀም እንዳለብን ይጠየቃሉ፡፡"
-
-#. Type: select
-#. Description
-#. :sl1:
-#: ../partman-auto.templates:10001
-msgid "Partitioning scheme:"
-msgstr "የመክፈል መርሃግብር፦"
-
-#. Type: select
-#. Description
-#. :sl1:
-#. "Selected for partitioning" can be either an entire disk
-#. of "the largest continuous free space" on an existing disk
-#. TRANSLATORS, please take care to choose something appropriate for both
-#.
-#. It is followed by a variable giving the chosen disk, hence the colon
-#. at the end of the sentence. Please keep it.
-#: ../partman-auto.templates:10001
-msgid "Selected for partitioning:"
-msgstr "ለመክፈል የተመረጠ፦"
-
-#. Type: select
-#. Description
-#. :sl1:
-#: ../partman-auto.templates:10001
-msgid ""
-"The disk can be partitioned using one of several different schemes. If you "
-"are unsure, choose the first one."
-msgstr "ይህ ዲስክ የተለያየ መርሃግብር በመጠቀም ሊከፈል ይችላል። እርግጠኛ ካልሆኑ የመጀመሪያውን ይምረጡ።"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
-#: ../partman-auto.templates:14001
-msgid "Guided partitioning"
-msgstr "ከፈላ በመሪ"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
-#: ../partman-auto.templates:15001
-msgid "Guided - use the largest continuous free space"
-msgstr "በመሪ - ትልቁን ተከታታይ ባዶ ቦታ ይጠቀሙ"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
-#: ../partman-auto.templates:16001
-msgid "Guided - use entire disk"
-msgstr "በመሪ - ዲስኩን በሙሉ ይጠቀሙ"
-
-#. Type: select
-#. Description
-#. :sl1:
-#: ../partman-auto.templates:17001
-msgid "Select disk to partition:"
-msgstr "ዲስክ ለመክፈል ምረጥ፦"
-
-#. Type: select
-#. Description
-#. :sl1:
-#: ../partman-auto.templates:17001
-msgid ""
-"Note that all data on the disk you select will be erased, but not before you "
-"have confirmed that you really want to make the changes."
-msgstr ""
-"በዲስኩ ላይ ያለ መረጃ ሁሉ እንደሚሰረዝ ያስተውሉ፡፡ ቢሆንም ለውጡን ማድረግ ይፈልጉ እንደሆን ካረጋገጡ በኋላ ነው፡፡"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
-#. This is a method for partioning - as in guided (automatic) versus manual
-#: ../partman-auto.templates:18001
-msgid "Manual"
-msgstr "በእጅ ክፈል"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
-#: ../partman-auto.templates:19001
-msgid "Automatically partition the free space"
-msgstr "ባዶ ቦታን በራስሰር ክፈል"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
-#: ../partman-auto.templates:20001
-msgid "All files in one partition (recommended for new users)"
-msgstr "ሁሉም ፍይሎች በአንድ ክፋይ (ለአዲስ ተጠቃሚዎች ይህንን ይመክሯል)"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
-#: ../partman-auto.templates:21001
-msgid "Separate /home partition"
-msgstr "የ /home ክፋይ ይለይ፦"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
-#: ../partman-auto.templates:22001
-msgid "Separate /home, /var, and /tmp partitions"
-msgstr "የተለዩ  /home, /var, and /tmp ክፋዮች"
-
-#. Type: text
-#. Description
 #. short variant of `do not use the partition'
 #. :sl1:
 #: ../partman-basicmethods.templates:7001
@@ -2479,65 +3871,6 @@ msgstr "አሟሽ"
 #: ../partman-basicmethods.templates:11001
 msgid "keep"
 msgstr "ቆጥብ"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../partman-partitioning.templates:2001
-msgid "Computing the new state of the partition table..."
-msgstr "የአዲሱን ባዶ የክፋይ ሠንጠረዥ ሁኔታ በማስላት ላይ..."
-
-#. Type: select
-#. Choices
-#. :sl1:
-#: ../partman-partitioning.templates:12001
-msgid "Beginning"
-msgstr "መጀመሪያ"
-
-#. Type: select
-#. Choices
-#. :sl1:
-#: ../partman-partitioning.templates:12001
-msgid "End"
-msgstr "መጨረሻ"
-
-#. Type: select
-#. Description
-#. :sl1:
-#: ../partman-partitioning.templates:12002
-msgid "Location for the new partition:"
-msgstr "የአዲሱ ክፋይ ቦታ፦"
-
-#. Type: select
-#. Description
-#. :sl1:
-#: ../partman-partitioning.templates:12002
-#, fuzzy
-msgid ""
-"Please choose whether you want the new partition to be created at the "
-"beginning or at the end of the available space."
-msgstr "አዲሱ ክፋይ በባዶ ቦታው መጀመሪያ ወይስ መጨረሻ ላይ ይሁን."
-
-#. Type: select
-#. Choices
-#. :sl1:
-#: ../partman-partitioning.templates:13001
-msgid "Primary"
-msgstr "ዋና ክፋይ"
-
-#. Type: select
-#. Choices
-#. :sl1:
-#: ../partman-partitioning.templates:13001
-msgid "Logical"
-msgstr "ንዑስ ክፋይ"
-
-#. Type: select
-#. Description
-#. :sl1:
-#: ../partman-partitioning.templates:13002
-msgid "Type for the new partition:"
-msgstr "የአዲሱ ክፋይ ዓይነት፦"
 
 #. Type: text
 #. Description
@@ -2628,6 +3961,46 @@ msgstr "መለወጫ ክፋይ"
 
 #. Type: text
 #. Description
+#. :sl2:
+#. File system name (untranslatable in many languages)
+#. Type: text
+#. Description
+#. :sl1:
+#. Short file system name (untranslatable in many languages)
+#: ../partman-btrfs.templates:1001 ../partman-btrfs.templates:3001
+msgid "btrfs"
+msgstr "btrfs"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Type: text
+#. Description
+#. :sl1:
+#: ../partman-efi.templates:2001 ../partman-efi.templates:4001
+#, fuzzy
+#| msgid "EFI boot partition"
+msgid "EFI System Partition"
+msgstr "የኤፊ ስርዓት ማስነሻ ክፋይ፦"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. short variant of 'EFI System Partition'
+#. Up to 10 character positions
+#: ../partman-efi.templates:5001
+msgid "ESP"
+msgstr ""
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../partman-efi.templates:7001
+msgid "EFI-fat16"
+msgstr "ኤፊ-FAT16"
+
+#. Type: text
+#. Description
 #. :sl1:
 #. File system name (untranslatable in many languages)
 #. Type: text
@@ -2652,18 +4025,6 @@ msgstr "Ext4"
 
 #. Type: text
 #. Description
-#. :sl2:
-#. File system name (untranslatable in many languages)
-#. Type: text
-#. Description
-#. :sl1:
-#. Short file system name (untranslatable in many languages)
-#: ../partman-btrfs.templates:1001 ../partman-btrfs.templates:3001
-msgid "btrfs"
-msgstr "btrfs"
-
-#. Type: text
-#. Description
 #. :sl1:
 #. File system name (untranslatable in many languages)
 #. Type: text
@@ -2676,15 +4037,62 @@ msgstr "jfs"
 
 #. Type: text
 #. Description
-#. :sl2:
-#. File system name (untranslatable in many languages)
-#. Type: text
+#. :sl1:
+#: ../partman-partitioning.templates:2001
+msgid "Computing the new state of the partition table..."
+msgstr "የአዲሱን ባዶ የክፋይ ሠንጠረዥ ሁኔታ በማስላት ላይ..."
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../partman-partitioning.templates:12001
+msgid "Beginning"
+msgstr "መጀመሪያ"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../partman-partitioning.templates:12001
+msgid "End"
+msgstr "መጨረሻ"
+
+#. Type: select
 #. Description
 #. :sl1:
-#. Short file system name (untranslatable in many languages)
-#: ../partman-xfs.templates:1001 ../partman-xfs.templates:3001
-msgid "xfs"
-msgstr "xfs"
+#: ../partman-partitioning.templates:12002
+msgid "Location for the new partition:"
+msgstr "የአዲሱ ክፋይ ቦታ፦"
+
+#. Type: select
+#. Description
+#. :sl1:
+#: ../partman-partitioning.templates:12002
+#, fuzzy
+msgid ""
+"Please choose whether you want the new partition to be created at the "
+"beginning or at the end of the available space."
+msgstr "አዲሱ ክፋይ በባዶ ቦታው መጀመሪያ ወይስ መጨረሻ ላይ ይሁን."
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../partman-partitioning.templates:13001
+msgid "Primary"
+msgstr "ዋና ክፋይ"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../partman-partitioning.templates:13001
+msgid "Logical"
+msgstr "ንዑስ ክፋይ"
+
+#. Type: select
+#. Description
+#. :sl1:
+#: ../partman-partitioning.templates:13002
+msgid "Type for the new partition:"
+msgstr "የአዲሱ ክፋይ ዓይነት፦"
 
 #. Type: note
 #. Description
@@ -2783,31 +4191,72 @@ msgstr ""
 
 #. Type: text
 #. Description
-#. :sl1:
+#. :sl2:
+#. File system name (untranslatable in many languages)
 #. Type: text
 #. Description
 #. :sl1:
-#: ../partman-efi.templates:2001 ../partman-efi.templates:4001
-#, fuzzy
-#| msgid "EFI boot partition"
-msgid "EFI System Partition"
-msgstr "የኤፊ ስርዓት ማስነሻ ክፋይ፦"
+#. Short file system name (untranslatable in many languages)
+#: ../partman-xfs.templates:1001 ../partman-xfs.templates:3001
+msgid "xfs"
+msgstr "xfs"
+
+#. Type: text
+#. Description
+#. Main menu item
+#. should not be more than 55 columns
+#. pkgsel is the module that installs packages by running tasksel to
+#. select "tasks". Please use "install *software*" and not
+#. "install *packages*" which is less adapted for non technical users
+#. :sl1:
+#: ../pkgsel.templates:1001
+msgid "Select and install software"
+msgstr "ስስአካልን ይምረጡና ይትከሉ፡፡ "
+
+#. Type: text
+#. Description
+#. This appears in a progress bar when running pkgsel
+#. The text is used when pkgsel is launched, before it installs packages
+#. :sl1:
+#: ../pkgsel.templates:2001
+msgid "Setting up..."
+msgstr "በመትከል ላይ..."
+
+#. Type: text
+#. Description
+#. This appears in a progress bar when running pkgsel
+#. The text is used when upgrading already installed packages.
+#. :sl1:
+#: ../pkgsel.templates:5001
+msgid "Upgrading software..."
+msgstr "ስስአስሊን አሳድ"
+
+#. Type: text
+#. Description
+#. This appears in a progress bar when running pkgsel
+#. The text is used when running tasksel to allow selecting packages
+#. Tasksel will then display its own screens
+#. :sl1:
+#: ../pkgsel.templates:6001
+msgid "Running tasksel..."
+msgstr "ታስክሰልን በማስኬድ ላይ..."
+
+#. Type: text
+#. Description
+#. This appears in a progress bar when running pkgsel
+#. The text is used at the end of the installation phase while
+#. cleaning up pkgsel's stuff
+#. :sl1:
+#: ../pkgsel.templates:7001
+msgid "Cleaning up..."
+msgstr "በማጽዳት ላይ..."
 
 #. Type: text
 #. Description
 #. :sl1:
-#. short variant of 'EFI System Partition'
-#. Up to 10 character positions
-#: ../partman-efi.templates:5001
-msgid "ESP"
-msgstr ""
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../partman-efi.templates:7001
-msgid "EFI-fat16"
-msgstr "ኤፊ-FAT16"
+#: ../rescue-mode.templates:1001
+msgid "Enter rescue mode"
+msgstr "የማዳን ሞድ ግባ"
 
 #. Type: text
 #. Description
@@ -2816,924 +4265,6 @@ msgstr "ኤፊ-FAT16"
 #: ../tzsetup-udeb.templates:1001
 msgid "Saving the time zone..."
 msgstr "የሰዓት ክልልን በማስቀመጥ ላይ..."
-
-#. Type: text
-#. Description
-#. Main menu item
-#. Translators: keep below 55 columns
-#. :sl1:
-#: ../clock-setup.templates:1001
-msgid "Configure the clock"
-msgstr "ስዓት አስተካክል"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../clock-setup.templates:2001
-msgid "Is the system clock set to UTC?"
-msgstr "የስርዓቱ ስዓት በUTC ላይ የተመሠረተ ነው?"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../clock-setup.templates:2001
-msgid ""
-"System clocks are generally set to Coordinated Universal Time (UTC). The "
-"operating system uses your time zone to convert system time into local time. "
-"This is recommended unless you also use another operating system that "
-"expects the clock to be set to local time."
-msgstr ""
-"በተለምዶ የስርዓት ሰዓት የሚሰጠው በCoordinated Universal Time (UTC) ነው። ገዚ ስርዓቱ የሰዓት "
-"ቀጠናውን በመጠቀም የስርዓቱን ሰዓት ወደአካባቢዎ ሰዓት ይቀይራል። ሌላ የአካባቢ ሰዓት እንዲኖር የሚጠብቅ ገዢ ስርዓት "
-"ከሌለ በስተቀር ይህ ተመራጭ ነው።"
-
-#. Type: text
-#. Description
-#. progress bar item
-#. :sl1:
-#: ../clock-setup.templates:3001
-msgid "Configuring clock settings..."
-msgstr "የሰዓት ሰየማን በማስተካከል ላይ..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../clock-setup.templates:4001
-msgid "Setting up the clock"
-msgstr "ስዓት በመሰየም ላይ"
-
-#. Type: text
-#. Description
-#. progress bar item
-#. :sl1:
-#: ../clock-setup.templates:7001
-msgid "Getting the time from a network time server..."
-msgstr "ከመረብ ሰዓት ካዳሚ ሰዓቱን እያመጣ ነው..."
-
-#. Type: text
-#. Description
-#. progress bar item
-#. :sl1:
-#: ../clock-setup.templates:8001
-msgid "Setting the hardware clock..."
-msgstr "የጥር ነገር ስዓት በመሰየም ላይ..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../base-installer.templates:4001
-msgid "Preparing to install the base system..."
-msgstr "መሠረታዊ ስርዓቱን ለመትከል በመዘጋጀት ላይ..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../base-installer.templates:5001 ../bootstrap-base.templates:30001
-msgid "Installing the base system"
-msgstr "መሠረታዊ ሥርዓቱን በመትከል ላይ"
-
-#. #-#-#-#-#  templates.pot (base-installer)  #-#-#-#-#
-#. Type: text
-#. Description
-#. :sl1:
-#. #-#-#-#-#  templates.pot (apt-setup)  #-#-#-#-#
-#. Type: text
-#. Description
-#. :sl2:
-#. #-#-#-#-#  templates.pot (pkgsel)  #-#-#-#-#
-#. Type: text
-#. Description
-#. :sl2:
-#. #-#-#-#-#  templates.pot (finish-install)  #-#-#-#-#
-#. Type: text
-#. Description
-#. :sl1:
-#: ../base-installer.templates:6001 ../apt-setup-udeb.templates:3001
-#: ../pkgsel.templates:9001 ../finish-install.templates:3001
-msgid "Running ${SCRIPT}..."
-msgstr "${SCRIPT} በማስክከድ ላይ..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../base-installer.templates:7001
-msgid "Setting up the base system..."
-msgstr "መሰረታዊ ስርዓትን በመትከል ላይ..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../base-installer.templates:8001 ../bootstrap-base.templates:59001
-msgid "Configuring APT sources..."
-msgstr "የAPT ምንጮችን አዘጋጅ..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../base-installer.templates:9001
-msgid "Updating the list of available packages..."
-msgstr "ያሉ ጥቅሎችን ዝርዝር በማሻሻል ላይ..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../base-installer.templates:10001
-msgid "Installing extra packages..."
-msgstr "ተጨማሪ ጥቅሎችን በመትከል ላይ..."
-
-#. Type: text
-#. Description
-#. SUBST0 is a package name
-#. :sl1:
-#: ../base-installer.templates:11001
-msgid "Installing extra packages - retrieving and installing ${SUBST0}..."
-msgstr "ተጨማሪ ጥቅሎችን በመትከል ላይ- ${SUBST0}ን በማምጣትና በመትከል ላይ..."
-
-#. Type: text
-#. Description
-#. Item in the main menu to select this package
-#. TRANSLATORS: <65 columns
-#. :sl1:
-#: ../bootstrap-base.templates:1001
-msgid "Install the base system"
-msgstr "መሠረታዊ ሥርዓቱን ትከል"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. Release is a filename which should not be translated
-#: ../bootstrap-base.templates:23001
-msgid "Retrieving Release file"
-msgstr "የመልቀቂያ ፋይልን በማምጣት ላይ"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. Release is a filename which should not be translated
-#: ../bootstrap-base.templates:24001
-msgid "Retrieving Release file signature"
-msgstr "የመልቀቂያ ፋይል ፊርማን በማምጣት ላይ"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. "packages" here can be translated
-#: ../bootstrap-base.templates:25001
-msgid "Finding package sizes"
-msgstr "የጥቅል መጠንን በማግኘት ላይ"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. Packages is a filename which should not be translated
-#: ../bootstrap-base.templates:26001
-msgid "Retrieving Packages files"
-msgstr "የጥቅል ፋይሎችን በማምጣት ላይ"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. Packages is a filename which should not be translated
-#: ../bootstrap-base.templates:27001
-msgid "Retrieving Packages file"
-msgstr "የጥቅል ፋይልን በማምጣት ላይ"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. "packages" here can be translated
-#: ../bootstrap-base.templates:28001
-msgid "Retrieving packages"
-msgstr "ጥቅሎችን በማምጣት ላይ"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. "packages" here can be translated
-#: ../bootstrap-base.templates:29001
-msgid "Extracting packages"
-msgstr "ጥቅሎችን በመፍታት ላይ"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. Core packages are packages that are part of the Debian base system
-#. The "core" packages are indeed packages that are specifically
-#. recorded as part of the base system. Other packages may
-#. be installed on the base system because of dependency resolution
-#: ../bootstrap-base.templates:31001
-msgid "Installing core packages"
-msgstr "መሰረታዊ ጥቅሎችን በመትከል ላይ"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. Required packages are packages which installation is triggered
-#. by the dependency chain of core packages
-#. In short, they are "required" because at least one of the
-#. packages from the core packages depends on them
-#: ../bootstrap-base.templates:32001
-msgid "Unpacking required packages"
-msgstr "ተፈላጊ ጥቅሎችን በምፍታት ላይ"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../bootstrap-base.templates:33001
-msgid "Configuring required packages"
-msgstr "መስተካከል የሚፈልጉ ጥቅሎች"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. The base system is the minimal Debian system
-#. See http://www.debian.org/doc/debian-policy/ch-binary.html#s3.7
-#: ../bootstrap-base.templates:34001
-msgid "Unpacking the base system"
-msgstr "መሰራታዊ ስርዓቱን በመፍታት ላይ"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. The base system is the minimal Debian system
-#. See http://www.debian.org/doc/debian-policy/ch-binary.html#s3.7
-#: ../bootstrap-base.templates:35001
-msgid "Configuring the base system"
-msgstr "መሰረታዊ ስርዓቱን በመፍታት ላይ"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../bootstrap-base.templates:36001
-msgid "${SECTION}: ${INFO}..."
-msgstr "${SECTION}: ${INFO}..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. SUBST0 is a package name
-#: ../bootstrap-base.templates:37001
-msgid "Validating ${SUBST0}..."
-msgstr "${SUBST0}ን በማረጋገጥ ላይ..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. SUBST0 is a package name
-#: ../bootstrap-base.templates:38001
-msgid "Retrieving ${SUBST0}..."
-msgstr "${SUBST0} በማምጣት ላይ..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. SUBST0 is a package name
-#: ../bootstrap-base.templates:39001
-msgid "Extracting ${SUBST0}..."
-msgstr "${SUBST0} በመፍታት ላይ..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. SUBST0 is a package name
-#: ../bootstrap-base.templates:40001
-msgid "Unpacking ${SUBST0}..."
-msgstr "${SUBST0} በመፍታት ላይ..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. SUBST0 is a package name
-#: ../bootstrap-base.templates:41001
-msgid "Configuring ${SUBST0}..."
-msgstr "${SUBST0} በማስተካከል ላይ..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. Release is a filename which should not be translated
-#: ../bootstrap-base.templates:42001
-msgid "Checking Release signature"
-msgstr "የመልቀቂያ ፋይል ፊርማን በማረጋገጥ ላይ..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. SUBST0 is a gpg key id
-#. Release is a filename which should not be translated
-#: ../bootstrap-base.templates:43001
-msgid "Valid Release signature (key id ${SUBST0})"
-msgstr "የሚሰራ Release signature (key id ${SUBST0})"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../bootstrap-base.templates:44001
-msgid "Resolving dependencies of base packages..."
-msgstr "የመሠረታዊ ጥቅሉን ተደጋጋፊዎች በማውጣጣት ላይ..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. SUBST0 is a list of packages
-#: ../bootstrap-base.templates:45001
-msgid "Found additional base dependencies: ${SUBST0}"
-msgstr "ተጨማሪ የመሠረታዊ ስልቶች ተደጋጋፊዎች ተገኝተዋል:- ${SUBST0}"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. SUBST0 is a list of packages
-#: ../bootstrap-base.templates:46001
-msgid "Found additional required dependencies: ${SUBST0}"
-msgstr "ተጨማሪ አስፈላጊ ተደጋፊዎች ተገኝተዎል:- ${SUBST0}"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. SUBST0 is a list of packages
-#: ../bootstrap-base.templates:47001
-msgid "Found packages in base already in required: ${SUBST0}"
-msgstr "አስፈላጊ የተባለው ውስጥ ያሉ ጥቅሎች መሰረት ውስጥ ተገኝተዋል:- ${SUBST0}"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../bootstrap-base.templates:48001
-msgid "Resolving dependencies of required packages..."
-msgstr "የመሠረታዊ ጥቅሉን ተደጋጋፊዎች በማውጣጣት ላይ..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. SUBST0 is an archive component (main, etc)
-#. SUBST1 is a mirror
-#: ../bootstrap-base.templates:49001
-msgid "Checking component ${SUBST0} on ${SUBST1}..."
-msgstr "በ${SUBST1} ላይ ያለውን አካል ${SUBST0} በመፈተን ላይ ..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. Core packages are packages that are part of the Debian base system
-#. The "core" packages are indeed packages that are specifically
-#. recorded as part of the base system. Other packages may
-#. be installed on the base system because of dependency resolution
-#: ../bootstrap-base.templates:50001
-msgid "Installing core packages..."
-msgstr "መሰረታዊ ጥቅሎችን በመትከል ላይ"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. Required packages are packages which installation is triggered
-#. by the dependency chain of core packages
-#. In short, they are "required" because at least one of the
-#. packages from the core packages depends on them
-#: ../bootstrap-base.templates:51001
-msgid "Unpacking required packages..."
-msgstr "አስፈላጊ ጥቅሎችን በመፍታት ላይ..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. Required packages are packages which installation is triggered
-#. by the dependency chain of core packages
-#. In short, they are "required" because at least one of the
-#. packages from the core packages depends on them
-#: ../bootstrap-base.templates:52001
-msgid "Configuring required packages..."
-msgstr "አስፈላጊ ጥቅሎችን በማስተካከል ላይ..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../bootstrap-base.templates:53001
-msgid "Installing base packages..."
-msgstr "መሰረታዊ ጥቅሎችን በመትከል ላይ..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../bootstrap-base.templates:54001
-msgid "Unpacking the base system..."
-msgstr "መሰረታዊ ጥቅሎችን በመፍታት ላይ..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../bootstrap-base.templates:55001
-msgid "Configuring the base system..."
-msgstr "መሠረታዊ ሥርዓቱን በማስተካከል ላይ..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../bootstrap-base.templates:56001
-msgid "Base system installed successfully."
-msgstr "የመሠረታዊ ስርዓት ተከላው ተሳክቷል፡፡"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../bootstrap-base.templates:60001
-msgid "Selecting the kernel to install..."
-msgstr "የሚተከል ከርነል በመምረጥ ላይ..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../bootstrap-base.templates:61001
-msgid "Installing the kernel..."
-msgstr "የከርነል በመትከል ላይ..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. SUBST0 is a package name
-#: ../bootstrap-base.templates:62001
-msgid "Installing the kernel - retrieving and installing ${SUBST0}..."
-msgstr "ከርነሉ በመትከል ላይ - ${SUBST0}ን አምጥቶ በመትከል ላይ..."
-
-#. Type: text
-#. Description
-#. Main menu item
-#. MUST be kept below 55 characters/columns
-#. :sl1:
-#: ../apt-setup-udeb.templates:1001
-msgid "Configure the package manager"
-msgstr "የጥቅል አስተዳዳሪውን አዘጋጅ"
-
-#. Type: text
-#. Description
-#. Translators, "apt" is the program name
-#. so please do NOT translate it
-#. :sl1:
-#: ../apt-setup-udeb.templates:2001
-msgid "Configuring apt"
-msgstr "apt በማስተካከል ላይ"
-
-#. Type: multiselect
-#. Choices
-#. SEC_HOST is a host name (e.g. security.debian.org)
-#. Translators: the *entire* string should be under 55 columns
-#. including host name. In short, KEEP THIS SHORT and, yes, that's tricky
-#. :sl1:
-#: ../apt-setup-udeb.templates:11001
-msgid "security updates (from ${SEC_HOST})"
-msgstr "የደህንነት እዳሴ (ከ ${SEC_HOST})"
-
-#. Type: multiselect
-#. Choices
-#. SEC_HOST is a host name (e.g. security.debian.org)
-#. Translators: the *entire* string should be under 55 columns
-#. including host name. In short, KEEP THIS SHORT and, yes, that's tricky
-#. :sl1:
-#: ../apt-setup-udeb.templates:11001
-msgid "release updates"
-msgstr "የተለቀቀውን እዳሴ፦"
-
-#. Type: multiselect
-#. Choices
-#. SEC_HOST is a host name (e.g. security.debian.org)
-#. Translators: the *entire* string should be under 55 columns
-#. including host name. In short, KEEP THIS SHORT and, yes, that's tricky
-#. :sl1:
-#: ../apt-setup-udeb.templates:11001
-msgid "backported software"
-msgstr "ከተሻሻለው የተቀዳ ስስ ነገር"
-
-#. Type: multiselect
-#. Description
-#. :sl1:
-#: ../apt-setup-udeb.templates:11002
-msgid "Services to use:"
-msgstr "የሚጠቀሙበት አገልጋይ፦"
-
-#. Type: multiselect
-#. Description
-#. :sl1:
-#: ../apt-setup-udeb.templates:11002
-msgid ""
-"Debian has two services that provide updates to releases: security and "
-"release updates."
-msgstr "ደብያን ሁለት ማሻሻያዎችን የማቅረብ ኣገልግሎሮች አሉት፤ የደህንነትና የዝርያ ማሻሻያ።"
-
-#. Type: multiselect
-#. Description
-#. :sl1:
-#: ../apt-setup-udeb.templates:11002
-msgid ""
-"Security updates help to keep your system secured against attacks. Enabling "
-"this service is strongly recommended."
-msgstr "የደህንነት ማሻሻያዎች ስርዓተ አስሊውን ከጥቃት ለመከላከል ስለሚረዱ ይህንን ማስቻል በጥብቅ ይመከራል።"
-
-#. Type: multiselect
-#. Description
-#. :sl1:
-#: ../apt-setup-udeb.templates:11002
-msgid ""
-"Release updates provide more current versions for software that changes "
-"relatively frequently and where not having the latest version could reduce "
-"the usability of the software. It also provides regression fixes. This "
-"service is only available for stable and oldstable releases."
-msgstr ""
-"የዝርያ ማሻሻያዎች በኣንጻሩ በየጊዜው የሚቀያየሩና አዳዲስ ስስአስሊን አለማግኘት ጠቀሜታ የሚቀንስ ሲሆን ይቀርባል። "
-"በተጨማሪም የኋልዮሽ መጠገኛዎችን ያቀርባል። ይህ አገልግሎት ለበሳልና ለአሮጌ-በሳል ዝርያዎች ብቻ ይቀርባል። "
-
-#. Type: multiselect
-#. Description
-#. :sl1:
-#: ../apt-setup-udeb.templates:11002
-msgid ""
-"Backported software are adapted from the development version to work with "
-"this release. Although this software has not gone through such complete "
-"testing as that contained in the release, it includes newer versions of some "
-"applications which may provide useful features. Enabling backports here does "
-"not cause any of them to be installed by default; it only allows you to "
-"manually select backports to use."
-msgstr ""
-"ከተሻሻለው የተቀዳ ስልቶች ገና ድፍድፍ ላይ ካለ ዝርያ ተወስደው ከዚህ ስርዓት ጋር እንዲሰሩ ተደርገዋል። ምንም እንኳን "
-"እነዚህ ስልቶች እንደለሎቹ ስልቶች ሙሉ በሙሉ ሙከራ ባይደረግባቸውም ጠቃሚ የሆኑ አዳዲስ ባህሪዎችን ይዘዋል። ከተሻሻለው "
-"የተቀዳን ማስቻል በቀጥታ እንዲተከሉ አያደርግም፤ በእጅ እንዲመርጡ ያስችልዎታል እንጂ።"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:1001
-#, fuzzy
-#| msgid "Finishing the installation"
-msgid "Scanning the installation media..."
-msgstr "ተከላውን በመጨረስ ላይ"
-
-#. Type: error
-#. Description
-#. :sl2:
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:2001 ../apt-cdrom-setup.templates:6001
-#, fuzzy
-#| msgid ""
-#| "An attempt to configure apt to install additional packages from the CD "
-#| "failed."
-msgid ""
-"An attempt to configure apt to install additional packages from the media "
-"failed."
-msgstr "አፕትን ከሲዲ ላይ ተጨማሪ ጥቅሎችን እንዲተክል የተደረገው ሙከራ አልተሳካም።"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#. Type: boolean
-#. Description
-#. :sl1:
-#. Type: boolean
-#. Description
-#. :sl1:
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:3001 ../apt-cdrom-setup.templates:4001
-#: ../apt-cdrom-setup.templates:5001 ../apt-cdrom-setup.templates:6001
-#, fuzzy
-#| msgid "SILO installation failed"
-msgid "Scan extra installation media?"
-msgstr "የሲሎ ተከላ አልተሳካም"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:3001
-msgid "Scanning your installation media finds the label:"
-msgstr ""
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:3001
-#, fuzzy
-#| msgid ""
-#| "You now have the option to scan additional CDs or DVDs for use by the "
-#| "package manager (apt). Normally these should be from the same set as the "
-#| "installation CD/DVD. If you do not have any additional CDs or DVDs "
-#| "available, this step can just be skipped."
-msgid ""
-"You now have the option of scanning additional media for use by the package "
-"manager (apt). Normally these should be from the same set as the one you "
-"booted from. If you do not have any additional media, this step can just be "
-"skipped."
-msgstr ""
-"ተጫማሪ ሲዲዎች ተፈትሸው በጥቅል አስተዳዳሪው (apt) በጥቅም ላይ እንዲውሉ ለማድረግ ምርጫ አለዎት። እነዚህ ሲዲዎች/"
-"ዲቪዲዎች ከአንድ ዝርያ መሆን አለባቸው። ተጫማሪ ሲዲ/ዲቪዲ ከሌሎት ይህን ደረጃ ሊዘሉት ይችላሉ።"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:3001 ../apt-cdrom-setup.templates:4001
-#, fuzzy
-#| msgid "If you wish to scan another CD or DVD, please insert it now."
-msgid "If you wish to scan more media, please insert another one now."
-msgstr "ሌላ ሲዲ ወይም ዲቪዲ መፈተሽ ከፈለጉ እባክዎን አሁን ያስገቡ።"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:4001
-#, fuzzy
-#| msgid "The CD or DVD with the following label has been scanned:"
-msgid "The image with the following label has been scanned:"
-msgstr "የሚቀጥለውን ስም የያዘ ሲዲ ወይም ዲቪዲ ተፈትሿል፦"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:5001
-#, fuzzy
-#| msgid "The CD or DVD with the following label has already been scanned:"
-msgid "The image with the following label has already been scanned:"
-msgstr "የሚቀጥለውን ስም የያዘ ሲዲ ወይም ዲቪዲ ቀድሞ ተፈትሿል፦"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:5001
-#, fuzzy
-#| msgid "Please replace it now if you wish to scan another CD or DVD."
-msgid "Please replace it now, if you wish to scan another."
-msgstr "ለላ ሲዲ/ዲቪዲ ለመፈተሽ ከፈለጉ እባክዎን አሁን ያስገቡ።"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:6001
-#, fuzzy
-#| msgid "Please check that the CD/DVD has been inserted correctly."
-msgid "Please check that the media has been inserted correctly."
-msgstr "እባክዎ ሲዲ/ዲቪዲ በትክክል መከተቱን ያረጋግጡ፡፡"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:7001
-msgid "Media change"
-msgstr "ማኅደር ቀይር"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:7001
-#, fuzzy
-#| msgid ""
-#| "/cdrom/: Please insert the disc labeled '${LABEL}' in the drive '/cdrom/' "
-#| "and press enter."
-msgid "Please insert the media labeled '${LABEL}' and press enter."
-msgstr ""
-"/cdrom/: እባክዎ  '${LABEL}' ምልክት ያለበትን ሲዲ በመንጃው '/cdrom/' ውስጥ ይጨምሩና enterን ይጫኑ."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. finish-install progress bar item
-#: ../apt-cdrom-setup.templates:8001
-msgid "Disabling netinst CD in sources.list..."
-msgstr "የnetinst CD አኮላሽ in sources.list..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../apt-cdrom-setup.templates:9001 ../apt-mirror-setup.templates:6001
-#, fuzzy
-#| msgid ""
-#| "If you are installing from a netinst CD and choose not to use a mirror, "
-#| "you will end up with only a very minimal base system."
-msgid ""
-"If you are installing from a netinst CD image and choose not to use a "
-"mirror, you will end up with only a very minimal base system."
-msgstr ""
-"ከnetinst CD የሚተክሉና የማኅደር መስተዋትን ላለመጠቀም ከመረጥ የሚተክሉት በጣም አነስተኛ የሆነ መሰረታዊ ስርዓት "
-"ብቻ ነው።"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:10001
-#, fuzzy
-#| msgid ""
-#| "You are installing from a netinst CD, which by itself only allows "
-#| "installation of a very minimal base system. Use a mirror to install a "
-#| "more complete system."
-msgid ""
-"You are installing from a netinst CD image, which by itself only allows "
-"installation of a very minimal base system. Use a mirror to install a more "
-"complete system."
-msgstr ""
-"የሚተክሉት በጣም አነስተኛ የሆነ መሰረታዊ ስርዓት ብቻ ነው ከሚተክለው ከnetinst CD ነው። የተሟላ ተከላ ለማካሄድ "
-"የማኅደር መስተዋትን ይምረጡ ።"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:11001
-#, fuzzy
-#| msgid ""
-#| "You are installing from a CD, which contains a limited selection of "
-#| "packages."
-msgid ""
-"You are installing from an image which contains a limited selection of "
-"packages."
-msgstr "የተወሰነ ጥቅል ብቻ ከያዘ ሲዲ ላይ በመትከል ላይ ይገኛሉ"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. The value of %i can be 2 or 3
-#: ../apt-cdrom-setup.templates:12001
-#, fuzzy, no-c-format
-#| msgid ""
-#| "You have scanned %i CDs. Even though these contain a fair selection of "
-#| "packages, some may be missing (notably some packages needed to support "
-#| "languages other than English)."
-msgid ""
-"You have scanned %i images. Even though these contain a fair selection of "
-"packages, some may be missing (notably some packages needed to support "
-"languages other than English)."
-msgstr ""
-"%i ሲዲዎች ተፈትሿል። ምንም እንኳን ዲቪዲ ብዙ ጥቅሎችን ቢይዝም አንዳንድ (በተለይ ከእንግሊዘኛ ውጭ ያሉ ቋንቋዎችን "
-"የሚደግፉ) ላይኖሩበት ይችላሉ።"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. The value of %i can be from 4 to 8
-#: ../apt-cdrom-setup.templates:13001
-#, fuzzy, no-c-format
-#| msgid ""
-#| "You have scanned %i CDs. Even though these contain a large selection of "
-#| "packages, some may be missing."
-msgid ""
-"You have scanned %i images. Even though these contain a large selection of "
-"packages, some may be missing."
-msgstr "%i ሲዲዎች ተፈትሸዋል። ምንም እንኳን ዲቪዲ ብዙ የጥቅሎች ምርጫ ቢኖረውም አንዳንድ የለሉበት ሊኖሩ ይችላሉ።"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:14001
-msgid ""
-"Note that using a mirror can result in a large amount of data being "
-"downloaded during the next step of the installation."
-msgstr "የማኅደር መስተዋትን መምረጥ በሚቀጥለው የተከላ ደረጃ እጅግ ብዙ ዴታ የሚያመጣ መሆኑን ያስተውሉ።"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:15001
-#, fuzzy
-#| msgid ""
-#| "You are installing from a DVD. Even though the DVD contains a large "
-#| "selection of packages, some may be missing."
-msgid ""
-"You are installing from a DVD image. Even though it contains a large "
-"selection of packages, some may be missing."
-msgstr ""
-"ከዲቪዲ በመትከል ላይ ይገኛሉ። ምንም እንኳን ዲቪዲ ብዙ የጥቅሎች ምርጫ ቢኖረውም አንዳንድ የለሉበት ሊኖሩ ይችላሉ።"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:16001
-msgid ""
-"Unless you don't have a good Internet connection, use of a mirror is "
-"recommended, especially if you plan to install a graphical desktop "
-"environment."
-msgstr ""
-"ጥሩ የኢንተርኔት ግንኙነት ከሌሎት በስተቀር የማኅደር መስተዋትን ይጠቀሙ፤ በተለይ ንድፋዊ ገበታን ለመጠቀም ካሰቡ።"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:17001
-msgid ""
-"If you have a reasonably good Internet connection, use of a mirror is "
-"suggested if you plan to install a graphical desktop environment."
-msgstr "ጥሩ የኢንተርኔት ግንኙነት ካለዎት የማኅደር መስተዋትን ይጠቀሙ፤ በተለይ ንድፋዊ ገበታን ለመጠቀም ካሰቡ።"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../apt-mirror-setup.templates:1001
-msgid "Scanning the mirror..."
-msgstr "የማኅደር-መስተዋትን በማሰስ ላይ"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-mirror-setup.templates:2001
-msgid "Use non-free software?"
-msgstr "ነጻ ያልሆነ ስስ-አካል ልጠቀም?"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-mirror-setup.templates:2001
-msgid ""
-"Some non-free software has been made to work with Debian. Though this "
-"software is not at all a part of Debian, standard Debian tools can be used "
-"to install it. This software has varying licenses which may prevent you from "
-"using, modifying, or sharing it."
-msgstr ""
-"አንዳንድ ነጻ ያልሆኑ ስልቶች ከደቢያን አቅርቦት ጋር እንዲሰሩ ተደርገዋል። ምንም እንኳን እነዚህ ስልቶች የዋናው "
-"አቅርቦት አካል ባይሆኑም የተከላ አስተዳዳሪውን በመጠቀም እንዚህን ስልቶች መትከል ይቻላል። እንዚህ ስልቶች ከመጠቀም፣ "
-"ከማጋራት ወይም ከማሻሻል ሊገደብ የሚችሉ የተለያዩ ፈቃዶች ሊኖራቸው ይችላል።"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#. Type: boolean
-#. Description
-#. This template is used by the Ubuntu version of d-i.
-#. :sl2:
-#: ../apt-mirror-setup.templates:2001 ../apt-mirror-setup.templates-ubuntu:1001
-msgid "Please choose whether you want to have it available anyway."
-msgstr "እባክዎ ብሆንም እንኳን እንዲኖርዎት ይፈልጉ እንደሆን ይምረጡ፡፡"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-mirror-setup.templates:3001
-msgid "Use contrib software?"
-msgstr "contrib ስሳክልን ልጠቀም?"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-mirror-setup.templates:3001
-msgid ""
-"Some additional software has been made to work with Debian. Though this "
-"software is free, it depends on non-free software for its operation. This "
-"software is not a part of Debian, but standard Debian tools can be used to "
-"install it."
-msgstr ""
-"ኣንዳንድ ተጨማሪ ስስአካሎች ከደቢያን ጋር እንዲሰሩ ተደርገዋል፡፡ ምንም እንኳን እነዚህ ስስአካሎች ነጻ ቢሆኑም ለስራቸው "
-"ነጻ ባልሆኑ ስስአካሎች ይደገፋሉ፡፡ እንዚህ ስስአካሎች የደቢያን አካል አይደሉም ነገርግን የደቢያን ቀዳሚ የመትከያ "
-"መሳሪያዎችን በመጠቀም መትከል ይቻላል፡፡"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#. Type: boolean
-#. Description
-#. This template is used by the Ubuntu version of d-i.
-#. :sl2:
-#. Type: boolean
-#. Description
-#. This template is used by the Ubuntu version of d-i.
-#. :sl2:
-#. Type: boolean
-#. Description
-#. This template is used by the Ubuntu version of d-i.
-#. :sl2:
-#. Type: boolean
-#. Description
-#. This template is used by the Ubuntu version of d-i.
-#. :sl2:
-#: ../apt-mirror-setup.templates:3001 ../apt-mirror-setup.templates-ubuntu:2001
-#: ../apt-mirror-setup.templates-ubuntu:3001
-#: ../apt-mirror-setup.templates-ubuntu:4001
-#: ../apt-mirror-setup.templates-ubuntu:5001
-msgid ""
-"Please choose whether you want this software to be made available to you."
-msgstr "ይህን ፕሮግራም ይፈልጉት እንደሆን ይምረጡ፡፡"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-mirror-setup.templates:5001
-msgid "Use a network mirror?"
-msgstr "የአውታር ማኅደር-መስተዋት ልጠቀም?"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-mirror-setup.templates:5001
-#, fuzzy
-#| msgid ""
-#| "A network mirror can be used to supplement the software that is included "
-#| "on the CD-ROM. This may also make newer versions of software available."
-msgid ""
-"A network mirror can be used to supplement the software that is included on "
-"the installation media. This may also make newer versions of software "
-"available."
-msgstr ""
-"በሲዲው ላይ ካለው በተጨማሪ የአውታር ማኅደር መስትዋትን መጠቀም ይቻላል። ይህ የስልቶቹን አዲስ ዝርያ እንዲጠቀሙ "
-"ይረዳዎታል።"
 
 #. Type: boolean
 #. Description
@@ -3805,26 +4336,6 @@ msgstr ""
 #: ../user-setup-udeb.templates:6001
 msgid "Note that you will not be able to see the password as you type it."
 msgstr "የማለፊያ ቃላትን በሚተይቡበ ጊዜ እንደማያዩዋቸው ያስተውሉ።"
-
-#. #-#-#-#-#  templates.pot (user-setup)  #-#-#-#-#
-#. Type: password
-#. Description
-#. :sl1:
-#. Type: password
-#. Description
-#. :sl1:
-#. #-#-#-#-#  templates.pot (grub-installer)  #-#-#-#-#
-#. Type: password
-#. Description
-#. :sl2:
-#. #-#-#-#-#  templates.pot (network-console)  #-#-#-#-#
-#. Type: password
-#. Description
-#. :sl3:
-#: ../user-setup-udeb.templates:7001 ../user-setup-udeb.templates:14001
-#: ../grub-installer.templates:10001 ../network-console.templates:5001
-msgid "Re-enter password to verify:"
-msgstr "ለማረጋገጥ ማለፊያቃልን እንደገና ያስገቡ፦"
 
 #. Type: password
 #. Description
@@ -3913,517 +4424,6 @@ msgstr "ተጠቃሚዎችንና ማለፊያ ቃላትን ሰይም"
 #: ../user-setup-udeb.templates:19001
 msgid "Setting users and passwords..."
 msgstr "ተጠቃሚዎችንና ማለፊያ-ቃሎችን በመሰየም ላይ... "
-
-#. Type: text
-#. Description
-#. Translators, this text will appear on a button, so KEEP IT SHORT
-#. :sl1:
-#: ../cdebconf-newt-udeb.templates:1001 ../cdebconf-gtk-udeb.templates:1001
-msgid "Continue"
-msgstr "ቀጥል"
-
-#. Type: text
-#. Description
-#. Translators, this text will appear on a button, so KEEP IT SHORT
-#. :sl1:
-#: ../cdebconf-newt-udeb.templates:2001 ../cdebconf-gtk-udeb.templates:2001
-msgid "Go Back"
-msgstr "ሂድ ወደ ኋላ"
-
-#. Type: text
-#. Description
-#. Translators, this text will appear on a button, so KEEP IT SHORT
-#. :sl1:
-#. Type: text
-#. Description
-#. :sl4:
-#: ../cdebconf-newt-udeb.templates:3001 ../cdebconf-gtk-udeb.templates:3001
-#: ../cdebconf-slang-udeb.templates:1001 ../cdebconf-text-udeb.templates:10001
-msgid "Yes"
-msgstr "አዎ"
-
-#. Type: text
-#. Description
-#. Translators, this text will appear on a button, so KEEP IT SHORT
-#. :sl1:
-#. Type: text
-#. Description
-#. :sl4:
-#: ../cdebconf-newt-udeb.templates:4001 ../cdebconf-gtk-udeb.templates:4001
-#: ../cdebconf-slang-udeb.templates:2001 ../cdebconf-text-udeb.templates:11001
-msgid "No"
-msgstr "አይ"
-
-#. Type: text
-#. Description
-#. Help line displayed at the bottom of the cdebconf newt interface.
-#. Translators: must fit within 80 characters.
-#. :sl1:
-#: ../cdebconf-newt-udeb.templates:6001
-msgid "<Tab> moves; <Space> selects; <Enter> activates buttons"
-msgstr "<Tab> ያስኬዳል; <Space> ይመርጣል; <Enter> ቁልፎችን ያስነሳል"
-
-#. Type: text
-#. Description
-#. Help line displayed at the bottom of the cdebconf newt interface.
-#. Translators: must fit within 80 characters.
-#. :sl1:
-#: ../cdebconf-newt-udeb.templates:7001
-msgid "<F1> for help; <Tab> moves; <Space> selects; <Enter> activates buttons"
-msgstr "<F1> ለመመሪያ;<Tab> ያስኬዳል; <Space> ይመርጣል; <Enter> ቁልፎችን ያስነሳል"
-
-#. Type: text
-#. Description
-#. Appears as a checkbox in the newt and GTK interfaces.
-#. :sl1:
-#: ../cdebconf-newt-udeb.templates:8001 ../cdebconf-gtk-udeb.templates:9001
-#, fuzzy
-#| msgid "Password input error"
-msgid "Show Password in Clear"
-msgstr "ሚስጥር-ቃል ማስገባት ስህተት"
-
-#. Type: text
-#. Description
-#. Translators, this text will appear on a button, so KEEP IT SHORT
-#. :sl1:
-#: ../cdebconf-gtk-udeb.templates:5001
-msgid "Help"
-msgstr "መመሪያ"
-
-#. Type: text
-#. Description
-#. TRANSLATORS: This should be "translated" to "RTL" or "LTR" depending of
-#. default text direction of your language
-#. LTR: Left to Right (Latin, Cyrillic, CJK, Indic...)
-#. RTL: Right To Left (Arabic, Hebrew, Persian...)
-#. DO NOT USE ANYTHING ELSE
-#. :sl1:
-#: ../cdebconf-gtk-udeb.templates:6001
-msgid "LTR"
-msgstr "LTR"
-
-#. Type: text
-#. Description
-#. Translators, this text will appear on a button, so KEEP IT SHORT
-#. This button will allow users to virtually "shoot a picture"
-#. of the screen
-#. :sl1:
-#: ../cdebconf-gtk-udeb.templates:7001
-msgid "Screenshot"
-msgstr "የስክሪን ፎቶ"
-
-#. Type: text
-#. Description
-#. Text that will appear in a dialog box mentioning which file
-#. the screenshot has been saved to. "%s" is a file name here
-#. :sl1:
-#: ../cdebconf-gtk-udeb.templates:8001
-#, no-c-format
-msgid "Screenshot saved as %s"
-msgstr "የስክሪን ፎቶ %s ተብሎ ተቀምጧል"
-
-#. Type: text
-#. Description
-#. Main menu item
-#. should not be more than 55 columns
-#. pkgsel is the module that installs packages by running tasksel to
-#. select "tasks". Please use "install *software*" and not
-#. "install *packages*" which is less adapted for non technical users
-#. :sl1:
-#: ../pkgsel.templates:1001
-msgid "Select and install software"
-msgstr "ስስአካልን ይምረጡና ይትከሉ፡፡ "
-
-#. Type: text
-#. Description
-#. This appears in a progress bar when running pkgsel
-#. The text is used when pkgsel is launched, before it installs packages
-#. :sl1:
-#: ../pkgsel.templates:2001
-msgid "Setting up..."
-msgstr "በመትከል ላይ..."
-
-#. Type: text
-#. Description
-#. This appears in a progress bar when running pkgsel
-#. The text is used when upgrading already installed packages.
-#. :sl1:
-#: ../pkgsel.templates:5001
-msgid "Upgrading software..."
-msgstr "ስስአስሊን አሳድ"
-
-#. Type: text
-#. Description
-#. This appears in a progress bar when running pkgsel
-#. The text is used when running tasksel to allow selecting packages
-#. Tasksel will then display its own screens
-#. :sl1:
-#: ../pkgsel.templates:6001
-msgid "Running tasksel..."
-msgstr "ታስክሰልን በማስኬድ ላይ..."
-
-#. Type: text
-#. Description
-#. This appears in a progress bar when running pkgsel
-#. The text is used at the end of the installation phase while
-#. cleaning up pkgsel's stuff
-#. :sl1:
-#: ../pkgsel.templates:7001
-msgid "Cleaning up..."
-msgstr "በማጽዳት ላይ..."
-
-#. Type: text
-#. Description
-#. Main menu item
-#. Translators: keep below 55 columns
-#. :sl1:
-#: ../finish-install.templates:1001
-msgid "Finish the installation"
-msgstr "ተከላውን ጨርስ"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../finish-install.templates:2001
-msgid "Finishing the installation"
-msgstr "ተከላውን በመጨረስ ላይ"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../finish-install.templates:4001
-msgid "Configuring network..."
-msgstr "አውታርን በማዘጋጀት ላይ..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../finish-install.templates:5001
-msgid "Setting up frame buffer..."
-msgstr "frame buffer በመትከል ላይ..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../finish-install.templates:6001
-msgid "Unmounting file systems..."
-msgstr "የ%s ሰነድን ለመክፈት ስህተት አለ"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../finish-install.templates:7001
-msgid "Rebooting into your new system..."
-msgstr "አዲስ ስርዓትዎ ውስጥ እንደገና በማስነሳት በመግባት ላይ"
-
-#. Type: note
-#. Description
-#. :sl1:
-#: ../finish-install.templates:8001
-msgid "Installation complete"
-msgstr "ተከላው ተፈጽሟል"
-
-#. Type: note
-#. Description
-#. :sl1:
-#: ../finish-install.templates:8001
-#, fuzzy
-#| msgid ""
-#| "Installation is complete, so it is time to boot into your new system. "
-#| "Make sure to remove the installation media (CD-ROM, floppies), so that "
-#| "you boot into the new system rather than restarting the installation."
-msgid ""
-"Installation is complete, so it is time to boot into your new system. Make "
-"sure to remove the installation media, so that you boot into the new system "
-"rather than restarting the installation."
-msgstr ""
-"ተከላው ተጠናቋል። እንግዲህ ወደ አዲሱ ስርዓትዎ ቡት አድርገው የመግቢያው ጊዜ ተቃርቧል። አስሊው ሲነሳ ወደ ተከላ "
-"ተመልሰው እንዳይገቡ ለተከላ የተጠቀሙባችቸውን ሲዲና ፍሎፒ ማውጣትዎን ያረጋግጡ።"
-
-#. Type: text
-#. Description
-#. Main menu item
-#. Translators: keep below 55 columns
-#. :sl1:
-#: ../nobootloader.templates:1001
-msgid "Continue without boot loader"
-msgstr "ተከላውን ያለ አስነሺ ቀጥል"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:1001 ../grub-installer.templates:2001
-#, fuzzy
-#| msgid "Install the GRUB boot loader on a hard disk"
-msgid "Install the GRUB boot loader to your primary drive?"
-msgstr "የግሩብ ስርዓት አስነሺ ፕሮግራምን ዲስኩ ላይ ይትከሉ፡፡"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:1001
-msgid ""
-"The following other operating systems have been detected on this computer: "
-"${OS_LIST}"
-msgstr "የሚቀጥሉት ገዢ ስልቶች በዚህ አስሊ ላይ ተገኝተዋል: ${OS_LIST}"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:1001
-#, fuzzy
-#| msgid ""
-#| "If all of your operating systems are listed above, then it should be safe "
-#| "to install the boot loader to the master boot record of your first hard "
-#| "drive. When your computer boots, you will be able to choose to load one "
-#| "of these operating systems or your new system."
-msgid ""
-"If all of your operating systems are listed above, then it should be safe to "
-"install the boot loader to your primary drive (UEFI partition/boot record). "
-"When your computer boots, you will be able to choose to load one of these "
-"operating systems or the newly installed Debian system."
-msgstr ""
-"ሁሉም ገዢ ስልቶች ከላይ ካለው ዝርዝር ውስጥ ካሉ የቡት ጫኚውን በመጀመሪያው ዲስክ ውስጥ በሚገኘው በዋናው የቡት ማኅደር "
-"ውስጥ መትከል ችግር አያስከትልም ይሆናል።"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:2001
-#, fuzzy
-#| msgid ""
-#| "It seems that this new installation is the only operating system on this "
-#| "computer. If so, it should be safe to install the GRUB boot loader to the "
-#| "master boot record of your first hard drive."
-msgid ""
-"It seems that this new installation is the only operating system on this "
-"computer. If so, it should be safe to install the GRUB boot loader to your "
-"primary drive (UEFI partition/boot record)."
-msgstr ""
-"በዚህ አስሊ ላይ ያለው ይህ አዲስ የተተከለው ገዢ ስርዓት ብቻ ይመስላል። ይሄ ከሆነ ግሩብን በመጀመሪያው ዲስክ ዋና "
-"የቡት ማኅደር ላይ መትከሉ ችግር አይኖረውም። "
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:2001
-#, fuzzy
-#| msgid ""
-#| "Warning: If the installer failed to detect another operating system that "
-#| "is present on your computer, modifying the master boot record will make "
-#| "that operating system temporarily unbootable, though GRUB can be manually "
-#| "configured later to boot it."
-msgid ""
-"Warning: If your computer has another operating system that the installer "
-"failed to detect, this will make that operating system temporarily "
-"unbootable, though GRUB can be manually configured later to boot it."
-msgstr ""
-"ማስጠንቀቂያ፦ ተካዩ አስሊዎ ውስጥ ያለ ሌላ ገዢ ስርዓትን ማግኘት ካቃተው ዋና የቡት ማኅደሩን መቀየሩ፣ ምንም እንኳን "
-"ግሩብን በኋላ በእጅ ማረም ቢቻልም፣ ያልተገኘው ገዢ ስልት ለጊዜውም ቢሆን እንዳይነሳ ሊያደርገው ይችላል። "
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:18001
-msgid "Installing GRUB boot loader"
-msgstr "ግሩብ የገዢ ስልት ማስነሻን በመትከል ላይ"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:19001
-msgid "Looking for other operating systems..."
-msgstr "ለሎች ገዢ ስርዓቶችን በመፈለግ ላይ..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:20001
-msgid "Installing the '${GRUB}' package..."
-msgstr "የ'${GRUB}' ጥቅልን በመትከል ላይ..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:21001
-msgid "Determining GRUB boot device..."
-msgstr "የግሩብ የገዢ ስልት ማስነሻን አካል በማረጋገጥ ላይ..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:22001
-msgid "Running \"grub-install ${BOOTDEV}\"..."
-msgstr "\"grub-install ${BOOTDEV}\"... በማስኬድ ላይ"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:23001
-msgid "Running \"update-grub\"..."
-msgstr "\"update-grub\" በማስኬድ ላይ..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:24001
-msgid "Updating /etc/kernel-img.conf..."
-msgstr "/etc/kernel-img.conf በማሻሻል ላይ..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:25001
-msgid "Checking whether to force usage of the removable media path"
-msgstr ""
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:26001
-#, fuzzy
-#| msgid "Unmounting file systems..."
-msgid "Mounting filesystems"
-msgstr "የ%s ሰነድን ለመክፈት ስህተት አለ"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:27001
-msgid "Configuring grub-efi for future usage of the removable media path"
-msgstr ""
-
-#. Type: text
-#. Description
-#. Main menu item
-#. Translators: keep below 55 columns
-#. :sl1:
-#: ../grub-installer.templates:28001
-#, fuzzy
-#| msgid "Installing GRUB boot loader"
-msgid "Install the GRUB boot loader"
-msgstr "ግሩብ የገዢ ስልት ማስነሻን በመትከል ላይ"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:34001
-msgid "Force GRUB installation to the EFI removable media path?"
-msgstr ""
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:34001
-msgid ""
-"It seems that this computer is configured to boot via EFI, but maybe that "
-"configuration will not work for booting from the hard drive. Some EFI "
-"firmware implementations do not meet the EFI specification (i.e. they are "
-"buggy!) and do not support proper configuration of boot options from system "
-"hard drives."
-msgstr ""
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:34001
-msgid ""
-"A workaround for this problem is to install an extra copy of the EFI version "
-"of the GRUB boot loader to a fallback location, the \"removable media path"
-"\". Almost all EFI systems, no matter how buggy, will boot GRUB that way."
-msgstr ""
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:34001
-#, fuzzy
-#| msgid ""
-#| "Warning: If the installer failed to detect another operating system that "
-#| "is present on your computer, modifying the master boot record will make "
-#| "that operating system temporarily unbootable, though GRUB can be manually "
-#| "configured later to boot it."
-msgid ""
-"Warning: If the installer failed to detect another operating system that is "
-"present on your computer that also depends on this fallback, installing GRUB "
-"there will make that operating system temporarily unbootable. GRUB can be "
-"manually configured later to boot it if necessary."
-msgstr ""
-"ማስጠንቀቂያ፦ ተካዩ አስሊዎ ውስጥ ያለ ሌላ ገዢ ስርዓትን ማግኘት ካቃተው ዋና የቡት ማኅደሩን መቀየሩ፣ ምንም እንኳን "
-"ግሩብን በኋላ በእጅ ማረም ቢቻልም፣ ያልተገኘው ገዢ ስልት ለጊዜውም ቢሆን እንዳይነሳ ሊያደርገው ይችላል። "
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../rescue-mode.templates:1001
-msgid "Enter rescue mode"
-msgstr "የማዳን ሞድ ግባ"
-
-#. Type: text
-#. Description
-#. Main menu item
-#. Translators: keep below 55 columns
-#. :sl1:
-#: ../iso-scan.templates:1001
-msgid "Scan hard drives for an installer ISO image"
-msgstr "ተካይ ISO ምስልን ለማግኘት ዲስኩን ያስሱ"
-
-#. Type: text
-#. Description
-#. Main menu item
-#. Translators: keep below 55 columns
-#. :sl1:
-#: ../save-logs.templates:1001
-msgid "Save debug logs"
-msgstr "የጸረ-ተውሳክ መዝገብን አስቀምጥ"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. finish-install progress bar item
-#: ../save-logs.templates:9001
-msgid "Gathering information for installation report..."
-msgstr "ለተከላው ሪፖርት መረጃ በመሰብሰብ ላይ..."
-
-#. Type: text
-#. Description
-#. Main menu item
-#. Translators: keep below 55 columns
-#. :sl1:
-#: ../mdcfg-utils.templates:1001
-msgid "Configure MD devices"
-msgstr "የMD አካልን አስተካክል፦"
-
-#. #-#-#-#-#  templates.pot (lvmcfg)  #-#-#-#-#
-#. Type: text
-#. Description
-#. Main menu item
-#. Translators: keep below 55 columns
-#. :sl1:
-#. #-#-#-#-#  templates.pot (partman-lvm)  #-#-#-#-#
-#. Type: text
-#. Description
-#. Type: text
-#. Description
-#. :sl3:
-#. Main menu item
-#. Translators: keep below 55 columns
-#. Use infinitive form
-#: ../lvmcfg.templates:1001 ../partman-lvm.templates:7001
-#: ../partman-lvm.templates:23001
-msgid "Configure the Logical Volume Manager"
-msgstr "ሎጂካዊ ይዘት አስተዳዳሪውን አስተካክል"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
-#: ../partman-auto-lvm.templates:1001
-msgid "Guided - use entire disk and set up LVM"
-msgstr "Guided - ሙሉ ዲስክ ተጠቅሞ LVM ይሰየም"
 
 #, fuzzy
 #~| msgid ""
