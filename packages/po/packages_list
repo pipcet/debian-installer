@@ -1,5 +1,7 @@
-# List of packages with translatable material
-# which we want translators to work on
+# List of packages with translatable material, which we want translators to work on.
+#
+# Is also used to generate the 'D-I packages needing a translation upload' list
+# (see scripts/l10n/scan-trans).
 #
 # ONLY i18n COORDINATORS or release managers should add packages here
 #
@@ -17,51 +19,16 @@
 # display of warnings for incomplete translations, add a "-" after the
 # package name. See also: scripts/l10n/calc-release-status.
 
-# General d-i stuff
-main-menu
-debian-installer-utils
-anna
+############################################################################################
+# List now sorted alphabetically.
 
-# First half
-localechooser
-# No longer used
+# No longer used:
 # kbd-chooser
-console-setup
-cdrom-detect
-hw-detect
-netcfg
-choose-mirror
-net-retriever
-cdrom-retriever
-media-retriever
 
-# Generic and i386 partman
-partman-base
-partman-auto
-partman-basicmethods
-partman-partitioning
-partman-basicfilesystems
-partman-ext3
-partman-btrfs
-partman-jfs
-partman-xfs
-partman-target
-partman-efi
 
-# Second half
-tzsetup
-clock-setup
-base-installer
-apt-setup
-user-setup
-cdebconf
-cdebconf-terminal
-pkgsel
-finish-install
-nobootloader
+# Not used:
+# live-installer
 
-# i386 bootloader
-grub-installer
 
 # powerpc partman and bootloader
 # # Not release architecture
@@ -73,17 +40,6 @@ grub-installer
 # powerpc only : de-activated as it is no longer a release architecture
 # prep-installer
 
-# Optional components
-preseed
-rescue
-iso-scan
-installation-report
-cdrom-checker
-network-console
-# Not used
-# live-installer
-debian-installer-launcher
-partman-iscsi
 
 # Other architectures partman and bootloader
 # HPPA is disabled
@@ -97,20 +53,60 @@ partman-iscsi
 # No longer used
 # arcboot-installer
 
-# Expert components
-mdcfg
+
+anna
+apt-setup
+base-installer
+cdebconf
+cdebconf-entropy
+cdebconf-terminal
+choose-mirror
+console-setup
+cdrom-checker
+cdrom-detect
+cdrom-retriever
+clock-setup
+debian-installer-launcher
+debian-installer-utils
+finish-install
+flash-kernel
+grub-installer
+hw-detect
+installation-report
+iso-scan
+localechooser
 lvmcfg
-partman-md
-partman-lvm
+main-menu
+mdcfg
+media-retriever
+netcfg
+net-retriever
+network-console
+nobootloader
+partman-auto
+partman-auto-crypto
 partman-auto-lvm
 partman-auto-raid
+partman-base
+partman-basicmethods
+partman-basicfilesystems
+partman-btrfs
 partman-crypto
-partman-auto-crypto
+partman-efi
+partman-ext3
+partman-iscsi
+partman-jfs
+partman-lvm
+partman-md
 partman-nbd
-cdebconf-entropy
-
-# Rest
+partman-partitioning
+partman-target
+partman-xfs
+pkgsel
+preseed
+rescue
 s390-netdevice
 s390-dasd
+tzsetup
+user-setup
 zipl-installer
-flash-kernel
