@@ -4,7 +4,7 @@
 # from the "packages_list" file maintained in packages/po.
 # Then call output-l10n-changes for those packages, to list
 # l10n related changings.
-listfile=po/packages_list
+listfile=./po/packages_list
 packages=$(grep -v -E "^\#|^[[:space:]]*$" ${listfile} | sed -r "s/[[:space:]]+-//")
 
 for package in $packages ; do
