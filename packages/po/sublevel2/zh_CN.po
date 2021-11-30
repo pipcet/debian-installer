@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-21 20:02+0000\n"
+"POT-Creation-Date: 2021-11-30 20:02+0000\n"
 "PO-Revision-Date: 2021-09-10 08:34+0000\n"
 "Last-Translator: 吕文彬 <wenbin816@gmail.com>\n"
 "Language-Team: <debian-l10n-chinese@lists.debian.org>\n"
@@ -2074,16 +2074,10 @@ msgstr "缺失的固件文件是：${FILES}"
 #. Possible locations for debug logs to be saved
 #. :sl2:
 #: ../save-logs.templates:2001
-msgid "floppy"
-msgstr "软盘"
-
-#. Type: select
-#. Choices
-#. Possible locations for debug logs to be saved
-#. :sl2:
-#: ../save-logs.templates:2001
-msgid "web"
-msgstr "web"
+#, fuzzy
+#| msgid "Wireless network:"
+msgid "serve over network"
+msgstr "无线网络："
 
 #. Type: select
 #. Choices
@@ -2092,6 +2086,14 @@ msgstr "web"
 #: ../save-logs.templates:2001
 msgid "mounted file system"
 msgstr "已挂载的文件系统"
+
+#. Type: select
+#. Choices
+#. Possible locations for debug logs to be saved
+#. :sl2:
+#: ../save-logs.templates:2001
+msgid "floppy"
+msgstr "软盘"
 
 #. Type: select
 #. Description
@@ -2105,11 +2107,11 @@ msgstr "如何保存或传送调试日志？"
 #. :sl2:
 #: ../save-logs.templates:2002
 msgid ""
-"Debugging log files for the installer can be saved to floppy, served up over "
-"the web, or saved to a mounted file system."
+"Debugging log files for the installer are accessible in /var/log/. They can "
+"be served up over the network (a small webserver is started on this machine, "
+"to achieve that), saved to some mounted file system (like the one on a USB "
+"stick), or to a floppy."
 msgstr ""
-"安装程序的调试日志文件可以存储于软盘或者 web 服务器上，也可以保存在已挂载的文"
-"件系统中。"
 
 #. Type: string
 #. Description

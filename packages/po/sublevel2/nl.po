@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer/sublevel2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-21 20:02+0000\n"
+"POT-Creation-Date: 2021-11-30 20:02+0000\n"
 "PO-Revision-Date: 2021-02-25 21:55+0100\n"
 "Last-Translator: Frans Spiesschaert <Frans.Spiesschaert@yucom.be>\n"
 "Language-Team: Debian Dutch l10n Team <debian-l10n-dutch@lists.debian.org>\n"
@@ -2205,16 +2205,10 @@ msgstr "De ontbrekende firmwarebestanden zijn: ${FILES}"
 #. Possible locations for debug logs to be saved
 #. :sl2:
 #: ../save-logs.templates:2001
-msgid "floppy"
-msgstr "diskette"
-
-#. Type: select
-#. Choices
-#. Possible locations for debug logs to be saved
-#. :sl2:
-#: ../save-logs.templates:2001
-msgid "web"
-msgstr "web"
+#, fuzzy
+#| msgid "Wireless network:"
+msgid "serve over network"
+msgstr "Draadloos netwerk:"
 
 #. Type: select
 #. Choices
@@ -2223,6 +2217,14 @@ msgstr "web"
 #: ../save-logs.templates:2001
 msgid "mounted file system"
 msgstr "aangekoppeld bestandssysteem"
+
+#. Type: select
+#. Choices
+#. Possible locations for debug logs to be saved
+#. :sl2:
+#: ../save-logs.templates:2001
+msgid "floppy"
+msgstr "diskette"
 
 #. Type: select
 #. Description
@@ -2236,12 +2238,11 @@ msgstr "Via welke methode wilt u de debug-logbestanden opslaan of oversturen?"
 #. :sl2:
 #: ../save-logs.templates:2002
 msgid ""
-"Debugging log files for the installer can be saved to floppy, served up over "
-"the web, or saved to a mounted file system."
+"Debugging log files for the installer are accessible in /var/log/. They can "
+"be served up over the network (a small webserver is started on this machine, "
+"to achieve that), saved to some mounted file system (like the one on a USB "
+"stick), or to a floppy."
 msgstr ""
-"Debug-logbestanden van het installatieprogramma kunnen opgeslagen worden op "
-"diskette of een aangekoppeld bestandssysteem, of over het web aangeboden "
-"worden via een eenvoudige webserver."
 
 #. Type: string
 #. Description
