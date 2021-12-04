@@ -9,21 +9,23 @@
 # Borys Yanovych <borys@yanovy.ch>, 2010, 2011.
 # Yuri Chornoivan <yurchor@ukr.net>, 2012, 2013.
 # Anton Gladky <gladk@debian.org>, 2011-2016
+# Taras Panchenko <top39@ukr.net>, 2021.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: d-i-sublevel2-uk\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-11-30 20:02+0000\n"
-"PO-Revision-Date: 2021-01-02 21:51+0100\n"
-"Last-Translator: Anton Gladky <gladk@debian.org>\n"
+"PO-Revision-Date: 2021-12-03 23:44+0000\n"
+"Last-Translator: Taras Panchenko <top39@ukr.net>\n"
 "Language-Team: Ukrainian <translation-team-uk@lists.sourceforge.net>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.4.2\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.10-dev\n"
 
 #. Type: multiselect
 #. Description
@@ -99,10 +101,8 @@ msgstr "Не вдалося завантажити ${PACKAGE} з невідом�
 #. Description
 #. :sl2:
 #: ../anna.templates:8001
-#, fuzzy
-#| msgid "No disk found"
 msgid "No kernel modules found"
-msgstr "Диски не знайдені"
+msgstr "Модулі ядра не знайдені"
 
 #. Type: error
 #. Description
@@ -125,6 +125,8 @@ msgid ""
 "You should make sure that your installation image is up-to-date, or - if "
 "that's the case - try a different mirror, preferably deb.debian.org."
 msgstr ""
+"Ви повинні переконатися, що ваш образ встановлювача оновлений, або - якщо це "
+"так - спробуйте інше дзеркало, бажано deb.debian.org."
 
 #. Type: text
 #. Description
@@ -476,17 +478,13 @@ msgstr "Неможливо встановити базову систему"
 #. See http://www.debian.org/doc/debian-policy/ch-binary.html#s3.7
 #. :sl2:
 #: ../bootstrap-base.templates:2001
-#, fuzzy
-#| msgid ""
-#| "The installer cannot figure out how to install the base system. No "
-#| "installable CD-ROM was found and no valid mirror was configured."
 msgid ""
 "The installer cannot figure out how to install the base system. It found no "
 "installable image, and no valid mirror was configured."
 msgstr ""
-"Встановлювач не може визначити, яким чином встановлювати базову систему. Не "
-"знайдено CD-ROM, з якого можна провести встановлення, та не було вибрано "
-"вірне дзеркало."
+"Встановлювач не може визначити, яким чином встановлювати базову систему. Він "
+"не знайшов образ, з якого можна виконати встановлення, або не було "
+"налаштовано дійсне дзеркало."
 
 #. Type: error
 #. Description
@@ -827,16 +825,12 @@ msgstr "Невірний файл Release: відсутній запис для 
 #. SUBST0 is a filename or package name
 #. Debootstrap is a program name: should not be translated
 #: ../bootstrap-base.templates:22001
-#, fuzzy
-#| msgid ""
-#| "Couldn't retrieve ${SUBST0}. This may be due to a network problem or a "
-#| "bad CD, depending on your installation method."
 msgid ""
 "Couldn't retrieve ${SUBST0}. This may be due to a network problem or bad "
 "media, depending on your installation method."
 msgstr ""
 "Неможливо отримати ${SUBST0}. Це може бути викликано проблемою з мережею або "
-"поганим компакт-диском, залежно від методу встановлення."
+"поганим носієм, залежно від методу встановлення."
 
 #. Type: error
 #. Description
@@ -938,12 +932,12 @@ msgid ""
 "   the vast majority of cases."
 msgstr ""
 "Ви можете вибрати найнижчий пріоритет питань, які бажаєте бачити:\n"
-"- „критичний“ - питання про речі, які можуть призвести до непрацездатності "
-"системи, якщо не втрутитися\n"
-"- „високий“ - питання без придатної типової відповіді\n"
-"- „середній“ - питання з придатними типовими відповідями\n"
-"- „низький“ - найпростіші питання, для яких є типові відповіді, що працюють "
-"в більшості випадків."
+" - 'критичний' - питання про речі, які можуть призвести до\n"
+"    непрацездатності системи, якщо не втрутитися.\n"
+" - 'високий' - питання без придатної типової відповіді.\n"
+" - 'середній' - питання з придатними типовими відповідями.\n"
+" - 'низький' - найпростіші питання, для яких є типові відповіді,\n"
+"   що працюють в більшості випадків."
 
 #. Type: select
 #. Description
@@ -1009,10 +1003,10 @@ msgid ""
 "release for your installation, but normally you should go back and select a "
 "different mirror that does support the correct version."
 msgstr ""
-"Вказана (звична) версія Debian  (${RELEASE}) недоступна на обраному "
-"дзеркалі. Можна продовжити та вибрати для встановлення інший випуск, однак "
-"зазвичай потрібно повернутися назад та вибрати інше дзеркало, яке все ж "
-"підтримує потрібну версію."
+"Вказана (типова) версія Debian (${RELEASE}) недоступна на обраному дзеркалі. "
+"Можна продовжити та вибрати для встановлення інший випуск, однак зазвичай "
+"потрібно повернутися назад та вибрати інше дзеркало, яке все ж підтримує "
+"потрібну версію."
 
 #. Type: error
 #. Description
@@ -1330,7 +1324,7 @@ msgid ""
 "the Control+period combination as a Compose key."
 msgstr ""
 "Клавіша Compose не працює на текстових консолях в режимі Unicode. В інших "
-"режимах, незалежно від від того, що ви оберете тут, завжди можна замінити "
+"режимах, незалежно від того, що ви оберете тут, завжди можна замінити "
 "клавішу Compose комбінацією клавіш Control+код та отримати аналогічний "
 "функціонал."
 
@@ -1340,168 +1334,128 @@ msgstr ""
 #. Translators: keep it under 65 columns
 #. :sl2:
 #: ../cdrom-checker.templates:12001
-#, fuzzy
-#| msgid "Check the integrity of another CD-ROM?"
 msgid "Check the integrity of installation media"
-msgstr "Перевірити цілісність іншого компакт-диску?"
+msgstr "Перевірити цілісність носія встановлювача"
 
 #. Type: boolean
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:1001
-#, fuzzy
-#| msgid "Load drivers from removable media"
 msgid "Load drivers from removable media?"
-msgstr "Завантажити драйвери зі змінного носія"
+msgstr "Завантажити драйвери зі змінного носія?"
 
 #. Type: boolean
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:1001
 msgid "No device for installation media was detected."
-msgstr ""
+msgstr "Пристрій для носія встановлювача не виявлено."
 
 #. Type: boolean
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:1001
-#, fuzzy
-#| msgid ""
-#| "You may need to load additional CD-ROM drivers from removable media, such "
-#| "as a driver floppy. If you have such media available now, insert it, and "
-#| "continue. Otherwise, you will be given the option to manually select CD-"
-#| "ROM modules."
 msgid ""
 "You may need to load additional drivers from removable media, such as a "
 "driver floppy or a USB stick. If you have these available now, insert the "
 "media, and continue. Otherwise, you will be given the option to manually "
 "select some modules."
 msgstr ""
-"Можливо, вам потрібно завантажити додаткові драйвери для CD-ROM зі змінного "
-"носія. Якщо у вас є потрібний носій з драйверами, то вставте його та "
-"продовжуйте. Інакше, вам буде надано можливість вибрати модулі для CD-ROM "
-"вручну."
+"Можливо, вам потрібно завантажити додаткові драйвери зі змінного носія, "
+"наприклад дискети або USB-накопичувача. Якщо вони зараз доступні, вставте "
+"носій і продовжуйте. Інакше, вам буде надано можливість вручну вибрати деякі "
+"модулі."
 
 #. Type: boolean
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:3001
-#, fuzzy
-#| msgid "Manually select a CD-ROM module and device?"
 msgid "Manually select a module and device for installation media?"
-msgstr "Вибрати модуль та пристрій CD-ROM вручну?"
+msgstr "Вибрати модуль та пристрій носія встановлювача вручну?"
 
 #. Type: boolean
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:3001
-#, fuzzy
-#| msgid "No common CD-ROM drive was detected."
 msgid "No device for installation media (like a CD-ROM device) was detected."
-msgstr "Стандартний пристрій CD-ROM не був виявлений"
+msgstr ""
+"Не було виявлено жодного пристрою для носія встановлювача (наприклад, "
+"пристрою CD-ROM)."
 
 #. Type: boolean
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:3001
-#, fuzzy
-#| msgid ""
-#| "Your CD-ROM drive may be an old Mitsumi or another non-IDE, non-SCSI CD-"
-#| "ROM drive. In that case you should choose which module to load and the "
-#| "device to use. If you don't know which module and device are needed, look "
-#| "for some documentation or try a network installation instead of a CD-ROM "
-#| "installation."
 msgid ""
 "If your CD-ROM drive is an old Mitsumi or another non-IDE, non-SCSI CD-ROM "
 "drive, you should choose which module to load and the device to use. If you "
 "don't know which module and device are needed, look for some documentation "
 "or try a network installation."
 msgstr ""
-"Можливо ви використовуєте старий пристрій Mitsumi або інший не-IDE, не-SCSI "
-"CD-ROM. В цьому випадку ви повинні вказати, які модулі завантажувати та який "
-"пристрій використовувати. Якщо ви не знаєте, який вам потрібний модуль та "
-"пристрій, то почитайте документацію або спробуйте встановлення через мережу "
-"замість встановлення з CD-ROM."
+"Якщо ваш дисковод CD-ROM - це старий пристрій Mitsumi або інший дисковод CD-"
+"ROM, відмінний від IDE та SCSI, вам слід вибрати який модуль завантажити та "
+"який пристрій використовувати. Якщо ви не знаєте, який модуль та пристрій "
+"потрібні, зверніться до документації або спробуйте встановлення через мережу."
 
 #. Type: boolean
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:4001
-#, fuzzy
-#| msgid "Remote installation password:"
 msgid "Retry mounting installation media?"
-msgstr "Пароль віддаленого встановлення:"
+msgstr "Спробувати знову встановити носій встановлювача?"
 
 #. Type: boolean
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:4001
-#, fuzzy
-#| msgid ""
-#| "Your installation CD-ROM couldn't be mounted. This probably means that "
-#| "the CD-ROM was not in the drive. If so you can insert it and try again."
 msgid ""
 "Your installation media couldn't be mounted. When installing from CD-ROM, "
 "this probably means that the disk was not in the drive. If so you can insert "
 "it and try again."
 msgstr ""
-"Не вдається змонтувати установочний CD. Це може означати, що диск не "
-"вставлений в пристрій читання CD-ROM. В цьому випадку, вставте його та "
-"спробуйте ще раз."
+"Не вдалося змонтувати ваш носій встановлювача. Під час встановлення із CD-"
+"ROM це, ймовірно, означає, що диска не було в накопичувачі. Якщо це так, ви "
+"можете вставити його та спробувати ще раз."
 
 #. Type: select
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:5001
-#, fuzzy
-#| msgid "Module needed for accessing the CD-ROM:"
 msgid "Module needed for accessing the installation media:"
-msgstr "Модуль, що необхідний для доступу до CD-ROM:"
+msgstr "Модуль, що необхідний для доступу до носія встановлювача:"
 
 #. Type: select
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:5001
-#, fuzzy
-#| msgid ""
-#| "The automatic detection didn't find a CD-ROM drive. You can try to load a "
-#| "specific module if you have an unusual CD-ROM drive (that is neither IDE "
-#| "nor SCSI)."
 msgid ""
 "The automatic detection didn't find a drive for installation media. When "
 "installing from CD-ROM and you have an unusual CD-ROM drive (that is neither "
 "IDE nor SCSI), you can try to load a specific module."
 msgstr ""
-"Не вдалося виявити пристрій CD-ROM автоматично. Ви можете спробувати "
-"завантажити один з модулів, якщо у вас специфічний пристрій CD-ROM (не IDE "
-"та не SCSI)."
+"Автоматичне виявлення не знайшло дисковод носія встановлювача. Під час "
+"встановлення з носія CD-ROM за допомогою незвичайного приводу CD-ROM ("
+"відмінного від IDE та SCSI), ви можете спробувати завантажити певний модуль."
 
 #. Type: string
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:6001
-#, fuzzy
-#| msgid "Device file for accessing the CD-ROM:"
 msgid "Device file for accessing the installation media:"
-msgstr "Файл пристрою для доступу до CD-ROM:"
+msgstr "Файл пристрою для доступу до носія встановлювача:"
 
 #. Type: string
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:6001
-#, fuzzy
-#| msgid ""
-#| "In order to access your CD-ROM drive, please enter the device file that "
-#| "should be used. Non-standard CD-ROM drives use non-standard device files "
-#| "(such as /dev/mcdx)."
 msgid ""
 "In order to access your installation media (like your CD-ROM), please enter "
 "the device file that should be used. Non-standard CD-ROM drives use non-"
 "standard device files (such as /dev/mcdx)."
 msgstr ""
-"Для отримання доступу до вашого пристрою CD-ROM, введіть назву файлу "
-"пристрою, оскільки нестандартний CD-ROM використовує нестандартний файл "
-"пристрою (такий як /dev/mcdx)."
+"Для отримання доступу до вашого носія встановлювача(наприклад, CD-ROM), "
+"введіть файл пристрою, який потрібно використовувати. Нестандартні CD-ROM "
+"використовують нестандартні файли пристроїв (наприклад /dev/mcdx)."
 
 #. Type: string
 #. Description
@@ -1520,56 +1474,40 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:12001
-#, fuzzy
-#| msgid "UNetbootin media detected"
 msgid "Installation media detected"
-msgstr "Носій UNetbootin виявлено"
+msgstr "Виявлено носій встановлювача"
 
 #. Type: note
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:12001
-#, fuzzy
-#| msgid ""
-#| "The CD-ROM autodetection was successful. A CD-ROM drive has been found "
-#| "and it currently contains the CD ${cdname}. The installation will now "
-#| "continue."
 msgid ""
 "Autodetection of the installation media was successful. A drive has been "
 "found that contains '${cdname}'. The installation will now continue."
 msgstr ""
-"Автоматичне виявлення CD-ROM пройшло вдало. В пристрої CD-ROM знайдений диск "
-"${cdname}. Встановлення буде продовжене."
+"Автоматичне визначення носія встановлювача пройшло вдало. Знайдено пристрій, "
+"який містить '${cdname}'. Встановлення буде продовжене."
 
 #. Type: error
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:14001
-#, fuzzy
-#| msgid "UNetbootin media detected"
 msgid "Incorrect installation media detected"
-msgstr "Носій UNetbootin виявлено"
+msgstr "Виявлено хибний носій встановлювача"
 
 #. Type: error
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:14001
-#, fuzzy
-#| msgid ""
-#| "The CD-ROM drive contains a CD which cannot be used for installation."
 msgid "The detected media cannot be used for installation."
-msgstr ""
-"Пристрій читання компакт-дисків містить диск що не може бути використаний "
-"для встановлення."
+msgstr "Виявлений носій не може бути використаний для встановлення."
 
 #. Type: error
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:14001
-#, fuzzy
-#| msgid "Please insert a suitable CD to continue with the installation."
 msgid "Please provide suitable media to continue with the installation."
-msgstr "Для продовження встановлення вставте, будь ласка, потрібний диск."
+msgstr "Для продовження встановлення надайте, будь ласка, потрібний носій."
 
 #. Type: error
 #. Description
@@ -1584,32 +1522,24 @@ msgstr "Помилка при читанні файла Release"
 #. Translators: DO NOT TRANSLATE "Release". This is the name of a file.
 #. :sl2:
 #: ../cdrom-detect.templates:15001
-#, fuzzy
-#| msgid ""
-#| "The CD-ROM does not seem to contain a valid 'Release' file, or that file "
-#| "could not be read correctly."
 msgid ""
 "The installation media do not seem to contain a valid 'Release' file, or "
 "that file could not be read correctly."
 msgstr ""
-"Здається, що CD-ROM не містить вірного файла „Release“ або цей файл не може "
-"бути коректно прочитаний."
+"Здається, що носій встановлювача не містить дійсного файлу 'Release', або "
+"цей файл не може бути прочитаний належним чином."
 
 #. Type: error
 #. Description
 #. Translators: DO NOT TRANSLATE "Release". This is the name of a file.
 #. :sl2:
 #: ../cdrom-detect.templates:15001
-#, fuzzy
-#| msgid ""
-#| "You may try to repeat CD-ROM detection but, even if it does succeed the "
-#| "second time, you may experience problems later in the installation."
 msgid ""
 "You may try to repeat the media detection, but even if it does succeed the "
 "second time, you may experience problems later in the installation."
 msgstr ""
-"Ви можете спробувати повторити визначення CD-ROM, але, навіть якщо це пройде "
-"успішно, ви можете мати проблеми при продовженні встановлення."
+"Ви можете спробувати повторити визначення носія, але, навіть якщо це пройде "
+"успішно, у вас можуть виникнути проблеми під час встановлення пізніше."
 
 #. Type: text
 #. Description
@@ -1617,38 +1547,30 @@ msgstr ""
 #. Translators: keep below 55 columns.
 #. :sl2:
 #: ../cdrom-detect.templates:20001
-#, fuzzy
-#| msgid "Use the \"exit\" command to return to the installation menu."
 msgid "Detect and mount installation media"
-msgstr "Для повернення до меню встановлення, використовуйте команду „exit“."
+msgstr "Виявлення та монтування носія встановлювача"
 
 #. Type: boolean
 #. Description
 #. :sl2:
 #: ../cdrom-retriever.templates:1001
-#, fuzzy
-#| msgid "Failed to copy file from CD-ROM. Retry?"
 msgid "Failed to copy file from installation media. Retry?"
-msgstr "Не вдалося скопіювати файл із CD-ROM. Спробувати знову?"
+msgstr "Не вдалося скопіювати файл з носія встановлювача. Спробувати знову?"
 
 #. Type: boolean
 #. Description
 #. :sl2:
 #: ../cdrom-retriever.templates:1001
-#, fuzzy
-#| msgid ""
-#| "There was a problem reading data from the CD-ROM. Please make sure it is "
-#| "in the drive. If retrying does not work, you should check the integrity "
-#| "of your CD-ROM."
 msgid ""
 "There was a problem reading data. Please make sure you have inserted the "
 "installation media correctly. If retrying does not work, you should check "
 "the integrity of your installation media (there is an associated entry in "
 "the main menu for that)."
 msgstr ""
-"Виникла проблема при зчитуванні даних із CD-ROM. Перевірте, чи є диск у "
-"пристрої читання. Якщо не вдається повторити читання, то вам потрібно "
-"перевірити цілісність вашого компакт-диска."
+"Виникла проблема при зчитуванні даних. Перевірте, що ви правильно вставили "
+"носій встановлювача. Якщо не вдається повторити читання, то вам слід "
+"перевірити цілісність носія встановлювача (для цього є відповідний запис у "
+"головному меню)."
 
 #. Type: boolean
 #. Description
@@ -1661,17 +1583,12 @@ msgstr "Встановити годинник використовуючи NTP?"
 #. Description
 #. :sl2:
 #: ../clock-setup.templates:5001
-#, fuzzy
-#| msgid ""
-#| "The Network Time Protocol (NTP) can be used to set the system's clock. "
-#| "The installation process works best with a correctly set clock."
 msgid ""
 "The Network Time Protocol (NTP) can be used to set the system's clock. Your "
 "system works best with a correctly set clock."
 msgstr ""
-"Можна використати NTP (Network Time Protocol) для встановлення системного "
-"годинника. Процес встановлення працює найкраще з правильно встановленим "
-"годинником."
+"Для встановлення системного годинника можна використати NTP (Network Time "
+"Protocol). Ваша система працює найкраще із правильно встановленим годинником."
 
 #. Type: string
 #. Description
@@ -1861,41 +1778,22 @@ msgstr "Пристрій для встановлення системного з
 #. Description
 #. :sl2:
 #: ../grub-installer.templates:7001 ../grub-installer.templates:8002
-#, fuzzy
-#| msgid ""
-#| "You need to make the newly installed system bootable, by installing the "
-#| "GRUB boot loader on a bootable device. The usual way to do this is to "
-#| "install GRUB on the master boot record of your first hard drive. If you "
-#| "prefer, you can install GRUB elsewhere on the drive, or to another drive, "
-#| "or even to a floppy."
 msgid ""
 "You need to make the newly installed system bootable, by installing the GRUB "
 "boot loader on a bootable device. The usual way to do this is to install "
 "GRUB to your primary drive (UEFI partition/boot record). You may instead "
 "install GRUB to a different drive (or partition), or to removable media."
 msgstr ""
-"Вам потрібно зробити можливим завантаження щойно встановленої системи шляхом "
-"встановлення завантажувача GRUB на завантажувальний пристрій. Звичайно це "
-"робиться шляхом встановлення GRUB в головний завантажувальний запис (MBR) "
-"вашого першого жорсткого диска. Якщо бажаєте, ви можете встановити GRUB в "
-"іншому місці жорсткого диска, на іншому диску або навіть на дискеті."
+"Щойно встановлену систему потрібно зробити завантажуваною, встановивши "
+"завантажувач GRUB на пристрій завантаження. Звичайний спосіб зробити це - "
+"встановити GRUB на ваш основний диск (розділ UEFI/завантажувальний запис MBR)"
+". Натомість ви можете встановити GRUB на інший диск (або розділ) або на "
+"знімний носій."
 
 #. Type: string
 #. Description
 #. :sl2:
 #: ../grub-installer.templates:7001
-#, fuzzy
-#| msgid ""
-#| "The device should be specified as a device in /dev. Below are some "
-#| "examples:\n"
-#| " - \"/dev/sda\" will install GRUB to the master boot record of your "
-#| "first\n"
-#| "   hard drive;\n"
-#| " - \"/dev/sda2\" will use the second partition of your first hard drive;\n"
-#| " - \"/dev/sdc5\" will use the first extended partition of your third "
-#| "hard\n"
-#| "   drive;\n"
-#| " - \"/dev/fd0\" will install GRUB to a floppy."
 msgid ""
 "The device notation should be specified as a device in /dev. Below are some "
 "examples:\n"
@@ -1907,14 +1805,13 @@ msgid ""
 "   be a thumbdrive);\n"
 " - \"/dev/fd0\" will install GRUB to a floppy."
 msgstr ""
-"Пристрій повинен бути вказаний як пристрій в /dev. Декілька прикладів:\n"
-"- „/dev/sda“ встановить GRUB в головний завантажувальний запис\n"
-"   вашого першого жорсткого диска;\n"
-"- „/dev/sda2“ буде використовувати другий розділ вашого\n"
-"   першого жорсткого диска;\n"
-"- „/dev/sdc5“ буде використовувати перший логічний розділ\n"
-"   вашого жорсткого третього диска;\n"
-"- „/dev/fd0“ встановить GRUB на дискету."
+"Назву пристрою слід вказати як пристрій у /dev. Нижче наведено кілька "
+"прикладів:\n"
+"  - \"/dev/sda\" встановити GRUB на ваш основний диск (розділ UEFI/boot\n"
+"    record);\n"
+"  - \"/dev/sdb\" встановити GRUB на вторинний диск (який може бути,\n"
+"    наприклад, великим накопичувачем);\n"
+"  - \"/dev/fd0\" встановити GRUB на дискету."
 
 #. Type: password
 #. Description
@@ -2272,10 +2169,8 @@ msgstr "Відсутні файли вбудованого програмног�
 #. Possible locations for debug logs to be saved
 #. :sl2:
 #: ../save-logs.templates:2001
-#, fuzzy
-#| msgid "Wireless network:"
 msgid "serve over network"
-msgstr "Бездротова мережа:"
+msgstr "обслуговувати через мережу"
 
 #. Type: select
 #. Choices
@@ -2310,6 +2205,10 @@ msgid ""
 "to achieve that), saved to some mounted file system (like the one on a USB "
 "stick), or to a floppy."
 msgstr ""
+"Файли журналу зневадження для встановлювача доступні у /var/log/. Вони "
+"доступні через мережу (для цього на цій машині запускається невеликий "
+"веб-сервер), можна зберегти у змонтованій файловій системі (наприклад, на "
+"USB-накопичувачі) або на дискеті."
 
 #. Type: string
 #. Description
@@ -3088,6 +2987,8 @@ msgid ""
 "No DHCP client was found. Please make sure, that a DHCP installer component "
 "is installed."
 msgstr ""
+"Не знайдено клієнта DHCP. Будь ласка, переконайтеся, що DHCP компонент "
+"встановлювача встановлено."
 
 #. Type: error
 #. Description
@@ -3107,13 +3008,6 @@ msgstr "Продовжувати без типового маршруту?"
 #. Description
 #. :sl2:
 #: ../netcfg-dhcp.templates:8001
-#, fuzzy
-#| msgid ""
-#| "The network autoconfiguration was successful. However, no default route "
-#| "was set: the system does not know how to communicate with hosts on the "
-#| "Internet. This will make it impossible to continue with the installation "
-#| "unless you have the first installation CD-ROM, a 'Netinst' CD-ROM, or "
-#| "packages available on the local network."
 msgid ""
 "The network autoconfiguration was successful. However, no default route was "
 "set: the system does not know how to communicate with hosts on the Internet. "
@@ -3123,9 +3017,9 @@ msgid ""
 msgstr ""
 "Автоматичне налаштування мережі пройшло успішно. Однак, не був встановлений "
 "типовий маршрут: система не знає, як зв'язуватися з вузлами Інтернет. Ви не "
-"зможете продовжити встановлення, якщо ви не маєте першого офіційного компакт-"
-"диска Debian, диска „Netinst“ або пакунків, що доступні через локальну "
-"мережу."
+"зможете продовжити встановлення, якщо ви не маєте першого образу з набору "
+"інсталяційних носіїв, образу 'Netinst', або пакунків, що доступні через "
+"локальну мережу."
 
 #. Type: boolean
 #. Description
@@ -3182,6 +3076,8 @@ msgid ""
 "The value you provided is not a usable IPv4 or IPv6 address. Please consult "
 "your network administrator and try again."
 msgstr ""
+"Надане вами значення не є придатною адресою IPv4 або IPv6. Зверніться до "
+"адміністратора мережі та повторіть спробу."
 
 #. Type: string
 #. Description
@@ -4438,10 +4334,8 @@ msgstr "Не знайдений розділ EFI."
 #. Description
 #. :sl2:
 #: ../partman-efi.templates:8001
-#, fuzzy
-#| msgid "Partitions to assemble:"
 msgid "EFI partition too small"
-msgstr "Зібрати з таких розділів:"
+msgstr "Розділ EFI замалий"
 
 #. Type: error
 #. Description
