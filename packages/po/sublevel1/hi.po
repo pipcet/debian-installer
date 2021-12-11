@@ -30,8 +30,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer_packages_po_sublevel1_hi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-28 20:01+0000\n"
-"PO-Revision-Date: 2021-01-20 18:26+0000\n"
+"POT-Creation-Date: 2021-12-02 20:02+0000\n"
+"PO-Revision-Date: 2021-12-03 23:44+0000\n"
 "Last-Translator: KushagraKarira <kushagrakarira@gmail.com>\n"
 "Language-Team: \n"
 "Language: hi\n"
@@ -39,7 +39,31 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.5-dev\n"
+"X-Generator: Weblate 4.10-dev\n"
+
+#. Type: select
+#. Description
+#: ../apt-setup-udeb.templates:8002
+msgid "Downloading local repository key failed:"
+msgstr "स्थानीय रिपोजिटरी कुंजी डाउनलोड विफल:"
+
+#. Type: select
+#. Description
+#: ../apt-setup-udeb.templates:8002
+msgid ""
+"This may be a problem with your network, or with the server hosting this "
+"key. You can choose to retry the download, or ignore the problem and "
+"continue without all the packages from this repository."
+msgstr ""
+"समस्या आपके नेटवर्क में हो सकती है, या कुंजी जिस सर्वर पर स्थित है, उसमें हो सकती है. आप "
+"दोबारा कुंजी डाउनलोड करने का प्रयास कर सकते हैं,या इस भण्डार में स्थित पॅकेज के बिना "
+"संस्थापन जारी रख सकते हैं."
+
+#. Type: select
+#. Description
+#: ../keyboard-configuration.templates:16002
+msgid "Keymap to use:"
+msgstr "कुंजीपट खाका जिसे इस्तेमाल करना है:"
 
 #: ../../mktemplates.continents:15
 msgid "Africa"
@@ -81,72 +105,6 @@ msgstr "ओशीनिया"
 msgid "South America"
 msgstr "दक्षिणी अमेरिका"
 
-#. Type: select
-#. Description
-#: ../keyboard-configuration.templates:16002
-msgid "Keymap to use:"
-msgstr "कुंजीपट खाका जिसे इस्तेमाल करना है:"
-
-#. Type: select
-#. Description
-#: ../apt-setup-udeb.templates:8002
-msgid "Downloading local repository key failed:"
-msgstr "स्थानीय रिपोजिटरी कुंजी डाउनलोड विफल:"
-
-#. Type: select
-#. Description
-#: ../apt-setup-udeb.templates:8002
-msgid ""
-"This may be a problem with your network, or with the server hosting this "
-"key. You can choose to retry the download, or ignore the problem and "
-"continue without all the packages from this repository."
-msgstr ""
-"समस्या आपके नेटवर्क में हो सकती है, या कुंजी जिस सर्वर पर स्थित है, उसमें हो सकती है. आप "
-"दोबारा कुंजी डाउनलोड करने का प्रयास कर सकते हैं,या इस भण्डार में स्थित पॅकेज के बिना "
-"संस्थापन जारी रख सकते हैं."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../main-menu.templates:1001
-msgid "Debian installer main menu"
-msgstr "डेबियन संस्थापक मुख्य मेन्यू"
-
-#. Type: select
-#. Description
-#. :sl1:
-#: ../main-menu.templates:2001
-msgid "Choose the next step in the install process:"
-msgstr "संस्थापन प्रक्रिया के अगले चरण को चुनें:"
-
-#. Type: text
-#. Description
-#. Main menu item
-#. The translation should not exceed 55 columns except for languages
-#. that are only supported in the graphical version of the installer
-#. :sl1:
-#: ../di-utils-shell.templates:2001
-msgid "Execute a shell"
-msgstr "एक शेल चलाएँ"
-
-#. Type: text
-#. Description
-#. Main menu item
-#. The translation should not exceed 55 columns except for languages
-#. that are only supported in the graphical version of the installer
-#. :sl1:
-#: ../di-utils-reboot.templates:2001
-msgid "Abort the installation"
-msgstr "संस्थापना छोड़ दें"
-
-#. Type: text
-#. Description
-#. base-installer progress bar item
-#. :sl1:
-#: ../di-utils.templates:1001
-msgid "Registering modules..."
-msgstr "मॉड्यूल्स का पंजीयन किया जा रहा है..."
-
 #. Type: text
 #. Description
 #. (Progress bar) title displayed when loading udebs
@@ -176,279 +134,1137 @@ msgstr "${PACKAGE} प्राप्त किया जा रहा है"
 
 #. Type: text
 #. Description
-#. This menu entry may be translated.
-#. However, translators are required to keep "Choose language"
-#. as an alternative separated by the "/" character
-#. Example (french): Choisir la langue/Choose language
+#. Main menu item
+#. MUST be kept below 55 characters/columns
 #. :sl1:
-#: ../localechooser.templates-in:1001
-msgid "Choose language"
-msgstr "भाषा चुनें / Choose language"
+#: ../apt-setup-udeb.templates:1001
+msgid "Configure the package manager"
+msgstr "पैकेज प्रबंधक कॉन्फ़िगर करें"
 
 #. Type: text
 #. Description
+#. Translators, "apt" is the program name
+#. so please do NOT translate it
+#. :sl1:
+#: ../apt-setup-udeb.templates:2001
+msgid "Configuring apt"
+msgstr "कॉन्फ़िगर एपीटी"
+
+#. #-#-#-#-#  templates.pot (apt-setup)  #-#-#-#-#
+#. Type: text
+#. Description
+#. :sl2:
+#. #-#-#-#-#  templates.pot (base-installer)  #-#-#-#-#
+#. Type: text
+#. Description
+#. :sl1:
+#. #-#-#-#-#  templates.pot (finish-install)  #-#-#-#-#
+#. Type: text
+#. Description
+#. :sl1:
+#. #-#-#-#-#  templates.pot (pkgsel)  #-#-#-#-#
+#. Type: text
+#. Description
+#. :sl2:
+#: ../apt-setup-udeb.templates:3001 ../base-installer.templates:6001
+#: ../finish-install.templates:3001 ../pkgsel.templates:9001
+msgid "Running ${SCRIPT}..."
+msgstr "${SCRIPT} प्रक्रिया में है..."
+
+#. Type: multiselect
+#. Choices
+#. SEC_HOST is a host name (e.g. security.debian.org)
+#. Translators: the *entire* string should be under 55 columns
+#. including host name. In short, KEEP THIS SHORT and, yes, that's tricky
+#. :sl1:
+#: ../apt-setup-udeb.templates:11001
+msgid "security updates (from ${SEC_HOST})"
+msgstr "सुरक्षा अपडेट्स (${SEC_HOST} से)"
+
+#. Type: multiselect
+#. Choices
+#. SEC_HOST is a host name (e.g. security.debian.org)
+#. Translators: the *entire* string should be under 55 columns
+#. including host name. In short, KEEP THIS SHORT and, yes, that's tricky
+#. :sl1:
+#: ../apt-setup-udeb.templates:11001
+msgid "release updates"
+msgstr "रिलीज़ अपडेट्स"
+
+#. Type: multiselect
+#. Choices
+#. SEC_HOST is a host name (e.g. security.debian.org)
+#. Translators: the *entire* string should be under 55 columns
+#. including host name. In short, KEEP THIS SHORT and, yes, that's tricky
+#. :sl1:
+#: ../apt-setup-udeb.templates:11001
+msgid "backported software"
+msgstr "बैकपोर्टेड सॉफ्टवेयर"
+
+#. Type: multiselect
+#. Description
+#. :sl1:
+#: ../apt-setup-udeb.templates:11002
+msgid "Services to use:"
+msgstr "नेमसर्वर पता:"
+
+#. Type: multiselect
+#. Description
+#. :sl1:
+#: ../apt-setup-udeb.templates:11002
+msgid ""
+"Debian has two services that provide updates to releases: security and "
+"release updates."
+msgstr ""
+"डेबियन में रिलीज़ अपडेट प्राप्त करने के लिए दो सुविधाएँ उपलब्ध हैं: सेक्यूरिटी तथा रिलीज़ "
+"अपडेट्स।"
+
+#. Type: multiselect
+#. Description
+#. :sl1:
+#: ../apt-setup-udeb.templates:11002
+msgid ""
+"Security updates help to keep your system secured against attacks. Enabling "
+"this service is strongly recommended."
+msgstr ""
+"सेक्यूरिटी अपडेट्स के द्वारा आपके सिस्टम की सुरक्षा को सेक्यूरिटी आक्रमण से सुरक्षित किया जाता "
+"है। हम आपसे अनुरोध करते हैं कि आप इस सुविधा का उपयोग करें।"
+
+#. Type: multiselect
+#. Description
+#. :sl1:
+#: ../apt-setup-udeb.templates:11002
+msgid ""
+"Release updates provide more current versions for software that changes "
+"relatively frequently and where not having the latest version could reduce "
+"the usability of the software. It also provides regression fixes. This "
+"service is only available for stable and oldstable releases."
+msgstr ""
+"रिलीज़ अपडेट्स उन प्रोग्राम के लिए है, जो नियमित रूप से बदलते रहते हैं, तथा सर्वोत्तम वर्शन "
+"का उपयोग न करने से प्रोग्राम की उपयोगिता में कमी हो। उदारणतः, वायरस स्कैनर की नवीनतम "
+"वायरस सूची इस भंडार से प्राप्त किया जा सकता है। यह सुविधा केवल 'स्टेबल' तथा 'ओल्डस्टेबल' "
+"रिलीज़ के लिए उपलब्ध है।"
+
+#. Type: multiselect
+#. Description
+#. :sl1:
+#: ../apt-setup-udeb.templates:11002
+msgid ""
+"Backported software are adapted from the development version to work with "
+"this release. Although this software has not gone through such complete "
+"testing as that contained in the release, it includes newer versions of some "
+"applications which may provide useful features. Enabling backports here does "
+"not cause any of them to be installed by default; it only allows you to "
+"manually select backports to use."
+msgstr ""
+"कुछ सॉफ्टवेयर विकास वृक्ष से इस रिलीज़ के साथ कार्य करने के लिए बैकपोर्ट िकए गये हैं. हालाँकि "
+"इन सॉफ्टवेयर का उतना पूर्ण परीक्षण नहीं हुआ है जितना कि इस रिलीज़ के सॉफ्टवेयर का हुआ है, "
+"फिर भी इसमें कुछ अनुप्रयोगों के नये वर्ज़न शामिल हैं जो कुछ उपयोगी विशेषताएँ प्रदान कर सकते हैं."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:1001
+msgid "Scanning the installation media..."
+msgstr "स्थापना मीडिया को स्कैन कर रहा है ..."
+
+#. Type: error
+#. Description
+#. :sl2:
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:2001 ../apt-cdrom-setup.templates:6001
+msgid ""
+"An attempt to configure apt to install additional packages from the media "
+"failed."
+msgstr ""
+"मीडिया से अतिरिक्त पैकेज स्थापित करने के लिए apt को कॉन्फ़िगर करने का प्रयास विफल रहा।"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#. Type: boolean
+#. Description
+#. :sl1:
+#. Type: boolean
+#. Description
+#. :sl1:
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:3001 ../apt-cdrom-setup.templates:4001
+#: ../apt-cdrom-setup.templates:5001 ../apt-cdrom-setup.templates:6001
+msgid "Scan extra installation media?"
+msgstr "अतिरिक्त स्थापना मीडिया स्कैन करें?"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:3001
+msgid "Scanning your installation media finds the label:"
+msgstr "आपके इंस्टालेशन मीडिया को स्कैन करने पर लेबल मिल जाता है:"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:3001
+msgid ""
+"You now have the option of scanning additional media for use by the package "
+"manager (apt). Normally these should be from the same set as the one you "
+"booted from. If you do not have any additional media, this step can just be "
+"skipped."
+msgstr ""
+"अब आपके पास पैकेज मैनेजर (एप्ट) द्वारा उपयोग के लिए अतिरिक्त मीडिया को स्कैन करने का "
+"विकल्प है। आम तौर पर ये उसी सेट से होने चाहिए, जिस पर आपने बूट किया था। यदि आपके पास "
+"कोई अतिरिक्त मीडिया नहीं है, तो यह कदम बस छोड़ दिया जा सकता है।"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:3001 ../apt-cdrom-setup.templates:4001
+msgid "If you wish to scan more media, please insert another one now."
+msgstr "यदि आप अधिक मीडिया स्कैन करना चाहते हैं, तो कृपया अब एक और डालें।"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:4001
+msgid "The image with the following label has been scanned:"
+msgstr "निम्नलिखित लेबल वाली छवि को स्कैन किया गया है:"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:5001
+msgid "The image with the following label has already been scanned:"
+msgstr "निम्नलिखित लेबल वाली छवि पहले ही स्कैन की जा चुकी है:"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:5001
+msgid "Please replace it now, if you wish to scan another."
+msgstr "यदि आप दूसरा स्कैन करना चाहते हैं, तो कृपया इसे बदल दें।"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:6001
+msgid "Please check that the media has been inserted correctly."
+msgstr "कृपया जांच लें कि मीडिया सही तरीके से डाला गया है।"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:7001
+msgid "Media change"
+msgstr "मीडिया बदल गया"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:7001
+msgid "Please insert the media labeled '${LABEL}' and press enter."
+msgstr "कृपया '${LABEL}' लेबल वाला मीडिया डालें और एंटर दबाएँ।"
+
+#. Type: text
+#. Description
+#. :sl1:
 #. finish-install progress bar item
-#. :sl1:
-#: ../localechooser.templates-in:6001
-msgid "Storing language..."
-msgstr "भाषा स्टोर किया जा रहा है..."
+#: ../apt-cdrom-setup.templates:8001
+msgid "Disabling netinst CD in sources.list..."
+msgstr "नेटिन्सटाल सुविधा को sources.list में निष्क्रिय किया जा रहा है..."
 
-#. Type: title
-#. Description
-#. Displayed as dialog title during language selection
-#. :sl1:
-#: ../localechooser.templates-in:7001
-msgid "Select a language"
-msgstr "भाषा चुनें"
-
-#. Type: title
-#. Description
-#. Displayed as dialog title during country selection
-#. :sl1:
-#: ../localechooser.templates-in:8001
-msgid "Select your location"
-msgstr "अपना स्थान चुनें"
-
-#. Type: title
-#. Description
-#. Displayed as dialog title during locale selection
-#. :sl1:
-#: ../localechooser.templates-in:9001
-msgid "Configure locales"
-msgstr "लोकेल संस्थापन"
-
-#. Type: note
+#. Type: text
 #. Description
 #. :sl1:
-#: ../localechooser.templates-in:12001
-msgid "Language selection no longer possible"
-msgstr "भाषा चुनना अब से संभव नहीं"
-
-#. Type: note
+#. Type: boolean
 #. Description
-#. :sl1:
-#: ../localechooser.templates-in:12001
+#. :sl2:
+#: ../apt-cdrom-setup.templates:9001 ../apt-mirror-setup.templates:6001
 msgid ""
-"At this point it is no longer possible to change the language for the "
-"installation, but you can still change the country or locale."
+"If you are installing from a netinst CD image and choose not to use a "
+"mirror, you will end up with only a very minimal base system."
 msgstr ""
-"इस पंक्ति पर भाषा में परिवर्तन संभव नहीं है, पर देश अथवा लोकेल अब भी बदला जा सकता है."
+"यदि आप एक netinst सीडी छवि से स्थापित कर रहे हैं और दर्पण का उपयोग नहीं करना चुनते हैं, "
+"तो आप केवल बहुत ही न्यूनतम आधार प्रणाली के साथ समाप्त हो जाएंगे।"
 
-#. Type: note
+#. Type: text
 #. Description
 #. :sl1:
-#: ../localechooser.templates-in:12001
+#: ../apt-cdrom-setup.templates:10001
 msgid ""
-"To select a different language you will need to abort this installation and "
-"reboot the installer."
+"You are installing from a netinst CD image, which by itself only allows "
+"installation of a very minimal base system. Use a mirror to install a more "
+"complete system."
 msgstr ""
-"अलग भाषा चुनने के लिए आपको इस संस्थापन को स्थगित कर संस्थापक को रीबूट करना होगा."
+"आप एक netinst सीडी छवि से स्थापित कर रहे हैं, जो अपने आप में केवल एक बहुत ही न्यूनतम "
+"आधार प्रणाली की स्थापना की अनुमति देता है। अधिक पूर्ण प्रणाली स्थापित करने के लिए दर्पण "
+"का उपयोग करें।"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:11001
+msgid ""
+"You are installing from an image which contains a limited selection of "
+"packages."
+msgstr "आप एक छवि से स्थापित कर रहे हैं जिसमें संकुल का सीमित चयन है।"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. The value of %i can be 2 or 3
+#: ../apt-cdrom-setup.templates:12001
+#, no-c-format
+msgid ""
+"You have scanned %i images. Even though these contain a fair selection of "
+"packages, some may be missing (notably some packages needed to support "
+"languages other than English)."
+msgstr ""
+"आपने %i छवियां स्कैन की हैं। भले ही इनमें पैकेजों का सही चयन हो, लेकिन कुछ गायब हो सकते हैं "
+"(विशेष रूप से अंग्रेजी के अलावा अन्य भाषाओं का समर्थन करने के लिए आवश्यक कुछ पैकेज)।"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. The value of %i can be from 4 to 8
+#: ../apt-cdrom-setup.templates:13001
+#, no-c-format
+msgid ""
+"You have scanned %i images. Even though these contain a large selection of "
+"packages, some may be missing."
+msgstr ""
+"आपने %i छवियां स्कैन की हैं। भले ही इनमें पैकेज का एक बड़ा चयन हो, लेकिन कुछ गायब हो सकते हैं।"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:14001
+msgid ""
+"Note that using a mirror can result in a large amount of data being "
+"downloaded during the next step of the installation."
+msgstr ""
+"इस विषय का ध्यान रखिए कि मिरर के उपयोग से संस्थापन के अगले चरण में भारी मात्रा में डेटा "
+"नेटवर्क से डाउनलोड की जाएगी।"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:15001
+msgid ""
+"You are installing from a DVD image. Even though it contains a large "
+"selection of packages, some may be missing."
+msgstr ""
+"आप एक डीवीडी छवि से स्थापित कर रहे हैं। भले ही इसमें पैकेजों का एक बड़ा चयन हो, लेकिन कुछ "
+"गायब हो सकते हैं।"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:16001
+msgid ""
+"Unless you don't have a good Internet connection, use of a mirror is "
+"recommended, especially if you plan to install a graphical desktop "
+"environment."
+msgstr ""
+"अच्छी इंटरनेट सुविधा की उपस्थिति में आपसे अनुरोध है कि आप मिरर का उपयोग करें, विशेषतः अगर "
+"आप ग्राफिकल सिस्टम का संस्थापन करना चाहते हैं।"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:17001
+msgid ""
+"If you have a reasonably good Internet connection, use of a mirror is "
+"suggested if you plan to install a graphical desktop environment."
+msgstr ""
+"अच्छी इंटरनेट सुविधा की उपस्थिति में करें, तः अगर आप ग्राफिकल सिस्टम का संस्थापन करना च, "
+"तो मिरर का उपयोग बेहतर होगााहते हैं।"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../apt-mirror-setup.templates:1001
+msgid "Scanning the mirror..."
+msgstr "मिरर ी को स्कैन किया जा रहा है..."
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-mirror-setup.templates:2001
+msgid "Use non-free software?"
+msgstr "नॉन-फ्री सॉफ्टवेयर प्रयोग करें?"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-mirror-setup.templates:2001
+msgid ""
+"Some non-free software has been made to work with Debian. Though this "
+"software is not at all a part of Debian, standard Debian tools can be used "
+"to install it. This software has varying licenses which may prevent you from "
+"using, modifying, or sharing it."
+msgstr ""
+"कुछ नॉन-फ्री सॉफ्टवेयरों को डेबियन के साथ काम करने लायक बनाया गया है. यह सॉफ्टवेयर "
+"डेबियन का भाग नहीं है, फिर भी मानक डेबियन औजारों की सहायता से इनको संस्थापित किया जा "
+"सकता है. इन सॉफ्टवेयरों के लाइसेंस भिन्न हैं जोकि आपको इनके प्रयोग, परिवर्तन व वितरण से "
+"रोक सकते हैं."
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #. Type: boolean
 #. Description
-#. :sl1:
-#: ../localechooser.templates-in:13001 ../localechooser.templates-in:14001
-msgid "Continue the installation in the selected language?"
-msgstr "चुने हुए भाषा में आगे संस्थापन करें?"
+#. This template is used by the Ubuntu version of d-i.
+#. :sl2:
+#: ../apt-mirror-setup.templates:2001 ../apt-mirror-setup.templates-ubuntu:1001
+msgid "Please choose whether you want to have it available anyway."
+msgstr "कृपया चुनें कि आप फिर भी इनको उपलब्ध रखना चाहेंगे."
 
 #. Type: boolean
 #. Description
 #. :sl1:
-#: ../localechooser.templates-in:13001
-msgid ""
-"The translation of the installer is incomplete for the selected language."
-msgstr "चुने गए भाषा के लिए संस्थापक का अनुवाद पूर्ण है."
+#: ../apt-mirror-setup.templates:3001
+msgid "Use contrib software?"
+msgstr "कॉन्ट्रिब सॉफ्टवेयर प्रयोग करें?"
 
 #. Type: boolean
 #. Description
 #. :sl1:
-#: ../localechooser.templates-in:14001
+#: ../apt-mirror-setup.templates:3001
 msgid ""
-"The translation of the installer is not fully complete for the selected "
-"language."
-msgstr "चुने गए भाषा के लिए संस्थापक का अनुवाद पूर्ण नहीं है."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../localechooser.templates-in:15001
-msgid ""
-"This means that there is a significant chance that some dialogs will be "
-"displayed in English instead."
-msgstr "इस कारण कई डायलोग अंग्रेज़ी में दिखाए जाने की संभावना है."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../localechooser.templates-in:16001
-msgid ""
-"If you do anything other than a purely default installation, there is a real "
-"chance that some dialogs will be displayed in English instead."
+"Some additional software has been made to work with Debian. Though this "
+"software is free, it depends on non-free software for its operation. This "
+"software is not a part of Debian, but standard Debian tools can be used to "
+"install it."
 msgstr ""
-"अगर आप डीफ़ॉल्ट संस्थापन के अलावा किसी अन्य संसथापन करेंगे, तो अंग्रेज़ी में डायलोग दिखाए "
-"जाने की अधिक संभावना है."
+"कुछ अतिरिक्त सॉफ्टवेयरों को डेबियन के साथ कार्य करने योग्य बनाया गया है. हालाँकि ये "
+"सॉफ्टवेयर फ्री हैं, फिर भी ये नॉन-फ्री सॉफ्टवेयरों पर निर्भर करते हैं. यह सॉफ्टवेयर डेबियन का "
+"भाग नहीं हैं फिरभी इन्हें मानक डेबियन औजारों की सहायता से संस्थापित किया जा सकता है."
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#. Type: boolean
+#. Description
+#. This template is used by the Ubuntu version of d-i.
+#. :sl2:
+#. Type: boolean
+#. Description
+#. This template is used by the Ubuntu version of d-i.
+#. :sl2:
+#. Type: boolean
+#. Description
+#. This template is used by the Ubuntu version of d-i.
+#. :sl2:
+#. Type: boolean
+#. Description
+#. This template is used by the Ubuntu version of d-i.
+#. :sl2:
+#: ../apt-mirror-setup.templates:3001 ../apt-mirror-setup.templates-ubuntu:2001
+#: ../apt-mirror-setup.templates-ubuntu:3001
+#: ../apt-mirror-setup.templates-ubuntu:4001
+#: ../apt-mirror-setup.templates-ubuntu:5001
+msgid ""
+"Please choose whether you want this software to be made available to you."
+msgstr "चुनें कि आप यह सॉफ्टवेयर उपलब्ध चाहते हैं या नहीं."
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-mirror-setup.templates:5001
+msgid "Use a network mirror?"
+msgstr "नेटवर्क मिरर का प्रयोग करें?"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-mirror-setup.templates:5001
+msgid ""
+"A network mirror can be used to supplement the software that is included on "
+"the installation media. This may also make newer versions of software "
+"available."
+msgstr ""
+"इंस्टॉलेशन मीडिया पर शामिल किए गए सॉफ़्टवेयर के पूरक के लिए एक नेटवर्क दर्पण का उपयोग "
+"किया जा सकता है। इससे सॉफ्टवेयर के नए संस्करण भी उपलब्ध हो सकते हैं।"
 
 #. Type: text
 #. Description
 #. :sl1:
-#: ../localechooser.templates-in:17001
-msgid ""
-"If you continue the installation in the selected language, most dialogs "
-"should be displayed correctly but - especially if you use the more advanced "
-"options of the installer - some may be displayed in English instead."
-msgstr ""
-"अगर आप चुने गए भाषा में संस्थापन जारी रखेंगे, तो अधिकतर डायलोग सही दिखाई जाएंगी, पर, "
-"विशेषतः संस्थापक के एडवान्स्ड विकल्पों में, अंग्रेज़ी में डायलोग दिखाए जाने की संभावना है."
+#: ../base-installer.templates:4001
+msgid "Preparing to install the base system..."
+msgstr "आधार तंत्र संस्थापित करने की तैयारी कर रहे हैं..."
 
 #. Type: text
 #. Description
 #. :sl1:
-#: ../localechooser.templates-in:18001
-msgid ""
-"If you continue the installation in the selected language, dialogs should "
-"normally be displayed correctly but - especially if you use the more "
-"advanced options of the installer - there is a slight chance some may be "
-"displayed in English instead."
-msgstr ""
-"अगर आप चुने गए भाषा में संस्थापन जारी रखेंगे, तो अधिकतर डायलोग सही दिखाई जाएंगी, पर, "
-"विशेषतः संस्थापक के एडवान्स्ड विकल्पों में, अंग्रेज़ी में डायलोग दिखाए जाने की थोडी संभावना है."
+#: ../base-installer.templates:5001 ../bootstrap-base.templates:30001
+msgid "Installing the base system"
+msgstr "आधार तंत्र संस्थापित किया जा रहा है"
 
 #. Type: text
 #. Description
 #. :sl1:
-#: ../localechooser.templates-in:19001
-msgid ""
-"The chance that you will actually encounter a dialog that is not translated "
-"into the selected language is extremely small, but it cannot be ruled out "
-"completely."
-msgstr ""
-"चुने गए भाषा में अनुवाद न किए गए डायलोग दिखाए जाने की संभावना बहुत कम है, पर इसे "
-"निश्चित रूप से कहा नहीं जा सकता."
+#: ../base-installer.templates:7001
+msgid "Setting up the base system..."
+msgstr "आधार तंत्र व्यवस्थित रहे हैं..."
 
 #. Type: text
 #. Description
 #. :sl1:
-#: ../localechooser.templates-in:20001
-msgid ""
-"Unless you have a good understanding of the alternative language, it is "
-"recommended to either select a different language or abort the installation."
-msgstr ""
-"अगर आपको अन्य भाषा का अच्छा ज्ञान न हो, तो अन्य भाषा चुनें अथवा संस्थापन रद्द करें."
+#: ../base-installer.templates:8001 ../bootstrap-base.templates:59001
+msgid "Configuring APT sources..."
+msgstr "एपीटी स्रोत व्यवस्थित किया जा रहा है..."
 
 #. Type: text
 #. Description
 #. :sl1:
-#: ../localechooser.templates-in:21001
-msgid ""
-"If you choose not to continue, you will be given the option of selecting a "
-"different language, or you can abort the installation."
+#: ../base-installer.templates:9001
+msgid "Updating the list of available packages..."
+msgstr "उपलब्ध पैकेजों की सूची का अद्यतन कर रहे हैं..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../base-installer.templates:10001
+msgid "Installing extra packages..."
+msgstr "अतिरिक्त पैकेजों को संस्थापित किया जा रहा है..."
+
+#. Type: text
+#. Description
+#. SUBST0 is a package name
+#. :sl1:
+#: ../base-installer.templates:11001
+msgid "Installing extra packages - retrieving and installing ${SUBST0}..."
+msgstr "अतिरिक्त पैकेजों का संस्थापन - ${SUBST0} का प्राप्तिकरण व संस्थापन..."
+
+#. Type: text
+#. Description
+#. Item in the main menu to select this package
+#. TRANSLATORS: <65 columns
+#. :sl1:
+#: ../bootstrap-base.templates:1001
+msgid "Install the base system"
+msgstr "आधार तंत्र संस्थापित करें"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Release is a filename which should not be translated
+#: ../bootstrap-base.templates:23001
+msgid "Retrieving Release file"
+msgstr "रिलीज फ़ाइल प्राप्त कर रहे हैं"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Release is a filename which should not be translated
+#: ../bootstrap-base.templates:24001
+msgid "Retrieving Release file signature"
+msgstr "रिलीज फ़ाइल हस्ताक्षर प्राप्त कर रहे है"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. "packages" here can be translated
+#: ../bootstrap-base.templates:25001
+msgid "Finding package sizes"
+msgstr "पैकेज के आकार पता कर रहे है"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Packages is a filename which should not be translated
+#: ../bootstrap-base.templates:26001
+msgid "Retrieving Packages files"
+msgstr "पैकेज फ़ाइलों को प्राप्त कर रहे है"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Packages is a filename which should not be translated
+#: ../bootstrap-base.templates:27001
+msgid "Retrieving Packages file"
+msgstr "पैकेजेज़ फ़ाइल को प्राप्त कर रहे है"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. "packages" here can be translated
+#: ../bootstrap-base.templates:28001
+msgid "Retrieving packages"
+msgstr "पुनः प्राप्त पैकेज"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. "packages" here can be translated
+#: ../bootstrap-base.templates:29001
+msgid "Extracting packages"
+msgstr "पैकेजों को निकाला जा रहा है"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Core packages are packages that are part of the Debian base system
+#. The "core" packages are indeed packages that are specifically
+#. recorded as part of the base system. Other packages may
+#. be installed on the base system because of dependency resolution
+#: ../bootstrap-base.templates:31001
+msgid "Installing core packages"
+msgstr "कोर पैकेज स्थापित करना"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Required packages are packages which installation is triggered
+#. by the dependency chain of core packages
+#. In short, they are "required" because at least one of the
+#. packages from the core packages depends on them
+#: ../bootstrap-base.templates:32001
+msgid "Unpacking required packages"
+msgstr "आवश्यक पैकेज खोलना"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../bootstrap-base.templates:33001
+msgid "Configuring required packages"
+msgstr "आवश्यक पैकेज कॉन्फ़िगर करना"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. The base system is the minimal Debian system
+#. See http://www.debian.org/doc/debian-policy/ch-binary.html#s3.7
+#: ../bootstrap-base.templates:34001
+msgid "Unpacking the base system"
+msgstr "आधार तंत्र खोला जा रहा है"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. The base system is the minimal Debian system
+#. See http://www.debian.org/doc/debian-policy/ch-binary.html#s3.7
+#: ../bootstrap-base.templates:35001
+msgid "Configuring the base system"
+msgstr "आधार तंत्र व्यवस्थित किया जा रहा है"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../bootstrap-base.templates:36001
+msgid "${SECTION}: ${INFO}..."
+msgstr "${SECTION}: ${INFO}..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. SUBST0 is a package name
+#: ../bootstrap-base.templates:37001
+msgid "Validating ${SUBST0}..."
+msgstr "${SUBST0} की पुष्टि की जा रही है..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. SUBST0 is a package name
+#: ../bootstrap-base.templates:38001
+msgid "Retrieving ${SUBST0}..."
+msgstr "${SUBST0} प्राप्त किया जा रहा है..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. SUBST0 is a package name
+#: ../bootstrap-base.templates:39001
+msgid "Extracting ${SUBST0}..."
+msgstr "${SUBST0} निकाला जा रहा है..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. SUBST0 is a package name
+#: ../bootstrap-base.templates:40001
+msgid "Unpacking ${SUBST0}..."
+msgstr "${SUBST0}खोला जा रहा है..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. SUBST0 is a package name
+#: ../bootstrap-base.templates:41001
+msgid "Configuring ${SUBST0}..."
+msgstr "${SUBST0} व्यवस्थित किया जा रहा है..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Release is a filename which should not be translated
+#: ../bootstrap-base.templates:42001
+msgid "Checking Release signature"
+msgstr "रिलीज़ हस्ताक्षर को जाँच रहे हैं"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. SUBST0 is a gpg key id
+#. Release is a filename which should not be translated
+#: ../bootstrap-base.templates:43001
+msgid "Valid Release signature (key id ${SUBST0})"
+msgstr "रिलीज़ हस्ताक्षर वैध (कुंजी पहचान ${SUBST0})"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../bootstrap-base.templates:44001
+msgid "Resolving dependencies of base packages..."
+msgstr "आधार पैकेजों की निर्भरता का विश्लेषण कर रहे हैं..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. SUBST0 is a list of packages
+#: ../bootstrap-base.templates:45001
+msgid "Found additional base dependencies: ${SUBST0}"
+msgstr "अतिरिक्त आधारभूत निर्भरताएँ पाई गईं: ${SUBST0}"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. SUBST0 is a list of packages
+#: ../bootstrap-base.templates:46001
+msgid "Found additional required dependencies: ${SUBST0}"
+msgstr "अतिरिक्त आवश्यक निर्भरताएँ पाई गईं: ${SUBST0}"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. SUBST0 is a list of packages
+#: ../bootstrap-base.templates:47001
+msgid "Found packages in base already in required: ${SUBST0}"
+msgstr "आधारभूत में पाये गये पैकेज पहले से ही आवश्यक में हैं: ${SUBST0}"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../bootstrap-base.templates:48001
+msgid "Resolving dependencies of required packages..."
+msgstr "आवश्यक पैकेजों की निर्भरता हल कर रहे हैं..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. SUBST0 is an archive component (main, etc)
+#. SUBST1 is a mirror
+#: ../bootstrap-base.templates:49001
+msgid "Checking component ${SUBST0} on ${SUBST1}..."
+msgstr "अव्यव ${SUBST0} को ${SUBST1} पर जाँच रहे हैं..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Core packages are packages that are part of the Debian base system
+#. The "core" packages are indeed packages that are specifically
+#. recorded as part of the base system. Other packages may
+#. be installed on the base system because of dependency resolution
+#: ../bootstrap-base.templates:50001
+msgid "Installing core packages..."
+msgstr "क्रोड़ पैकेजों को संस्थापित किया जा रहा है..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Required packages are packages which installation is triggered
+#. by the dependency chain of core packages
+#. In short, they are "required" because at least one of the
+#. packages from the core packages depends on them
+#: ../bootstrap-base.templates:51001
+msgid "Unpacking required packages..."
+msgstr "आवश्यक पैकेजों को खोल रहे हैं..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Required packages are packages which installation is triggered
+#. by the dependency chain of core packages
+#. In short, they are "required" because at least one of the
+#. packages from the core packages depends on them
+#: ../bootstrap-base.templates:52001
+msgid "Configuring required packages..."
+msgstr "आवश्यक पैकेजों को व्यवस्थित कर रहे हैं..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../bootstrap-base.templates:53001
+msgid "Installing base packages..."
+msgstr "आधार पैकेजों को संस्थापित किया जा रहा है..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../bootstrap-base.templates:54001
+msgid "Unpacking the base system..."
+msgstr "आधार तंत्र खोल रहे हैं..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../bootstrap-base.templates:55001
+msgid "Configuring the base system..."
+msgstr "आधार तंत्र व्यवस्थित किया जा रहा है।"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../bootstrap-base.templates:56001
+msgid "Base system installed successfully."
+msgstr "आधार तंत्र सफलता पूर्वक संस्थापित हो गया."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../bootstrap-base.templates:60001
+msgid "Selecting the kernel to install..."
+msgstr "संस्थापित करने के लिए कर्नेल चुना जा रहा है..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../bootstrap-base.templates:61001
+msgid "Installing the kernel..."
+msgstr "कर्नेल संस्थापित किया जा रहा है..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. SUBST0 is a package name
+#: ../bootstrap-base.templates:62001
+msgid "Installing the kernel - retrieving and installing ${SUBST0}..."
+msgstr "करनेल का संस्थापन - ${SUBST0} का प्राप्तिकरण व संस्थापन..."
+
+#. Type: text
+#. Description
+#. Translators, this text will appear on a button, so KEEP IT SHORT
+#. :sl1:
+#: ../cdebconf-newt-udeb.templates:1001 ../cdebconf-gtk-udeb.templates:1001
+msgid "Continue"
+msgstr "जारी रखें"
+
+#. Type: text
+#. Description
+#. Translators, this text will appear on a button, so KEEP IT SHORT
+#. :sl1:
+#: ../cdebconf-newt-udeb.templates:2001 ../cdebconf-gtk-udeb.templates:2001
+msgid "Go Back"
+msgstr "पीछे जाएँ"
+
+#. Type: text
+#. Description
+#. Translators, this text will appear on a button, so KEEP IT SHORT
+#. :sl1:
+#. Type: text
+#. Description
+#. :sl4:
+#: ../cdebconf-newt-udeb.templates:3001 ../cdebconf-gtk-udeb.templates:3001
+#: ../cdebconf-slang-udeb.templates:1001 ../cdebconf-text-udeb.templates:10001
+msgid "Yes"
+msgstr "हाँ"
+
+#. Type: text
+#. Description
+#. Translators, this text will appear on a button, so KEEP IT SHORT
+#. :sl1:
+#. Type: text
+#. Description
+#. :sl4:
+#: ../cdebconf-newt-udeb.templates:4001 ../cdebconf-gtk-udeb.templates:4001
+#: ../cdebconf-slang-udeb.templates:2001 ../cdebconf-text-udeb.templates:11001
+msgid "No"
+msgstr "नहीं"
+
+#. #-#-#-#-#  templates.pot (cdebconf)  #-#-#-#-#
+#. Type: text
+#. Description
+#. Translators, this text will appear on a button, so KEEP IT SHORT
+#. :sl1:
+#. #-#-#-#-#  templates.pot (mdcfg)  #-#-#-#-#
+#. Type: select
+#. Choices
+#. :sl3:
+#. Type: select
+#. Choices
+#. :sl3:
+#. #-#-#-#-#  templates.pot (net-retriever)  #-#-#-#-#
+#. Type: select
+#. Choices
+#. These are choices of actions so this is, at least in English,
+#. an infinitive form
+#. :sl2:
+#: ../cdebconf-newt-udeb.templates:5001 ../mdcfg-utils.templates:6001
+#: ../mdcfg-utils.templates:13001 ../net-retriever.templates:1001
+msgid "Cancel"
+msgstr "रद्द करें"
+
+#. Type: text
+#. Description
+#. Help line displayed at the bottom of the cdebconf newt interface.
+#. Translators: must fit within 80 characters.
+#. :sl1:
+#: ../cdebconf-newt-udeb.templates:6001
+msgid "<Tab> moves; <Space> selects; <Enter> activates buttons"
+msgstr "<Tab> से आगे-पीछे करें; <Space> से चुनें; <Enter> से बटनों को सक्रिय करें"
+
+#. Type: text
+#. Description
+#. Help line displayed at the bottom of the cdebconf newt interface.
+#. Translators: must fit within 80 characters.
+#. :sl1:
+#: ../cdebconf-newt-udeb.templates:7001
+msgid "<F1> for help; <Tab> moves; <Space> selects; <Enter> activates buttons"
 msgstr ""
-"अगर आप आगे नहीं बढ़ेंगे, तो आपको अन्य भाषा चुनने का विकल्प दिया जाएगा, नही. तो आप "
-"संस्थापन रद्द कर सकते हैं."
+"<F1> सहायता के लिए;<Tab> से आगे-पीछे करें; <Space> से चुनें; <Enter> से बटनों को सक्रिय करें"
+
+#. Type: text
+#. Description
+#. Appears as a checkbox in the newt and GTK interfaces.
+#. :sl1:
+#: ../cdebconf-newt-udeb.templates:8001 ../cdebconf-gtk-udeb.templates:9001
+msgid "Show Password in Clear"
+msgstr "स्पष्ट में पासवर्ड दिखाओ"
+
+#. Type: text
+#. Description
+#. Translators, this text will appear on a button, so KEEP IT SHORT
+#. :sl1:
+#: ../cdebconf-gtk-udeb.templates:5001
+msgid "Help"
+msgstr "सहायता"
+
+#. Type: text
+#. Description
+#. TRANSLATORS: This should be "translated" to "RTL" or "LTR" depending of
+#. default text direction of your language
+#. LTR: Left to Right (Latin, Cyrillic, CJK, Indic...)
+#. RTL: Right To Left (Arabic, Hebrew, Persian...)
+#. DO NOT USE ANYTHING ELSE
+#. :sl1:
+#: ../cdebconf-gtk-udeb.templates:6001
+msgid "LTR"
+msgstr "एलटीआर"
+
+#. Type: text
+#. Description
+#. Translators, this text will appear on a button, so KEEP IT SHORT
+#. This button will allow users to virtually "shoot a picture"
+#. of the screen
+#. :sl1:
+#: ../cdebconf-gtk-udeb.templates:7001
+msgid "Screenshot"
+msgstr "स्क्रीनशॉट"
+
+#. Type: text
+#. Description
+#. Text that will appear in a dialog box mentioning which file
+#. the screenshot has been saved to. "%s" is a file name here
+#. :sl1:
+#: ../cdebconf-gtk-udeb.templates:8001
+#, no-c-format
+msgid "Screenshot saved as %s"
+msgstr "स्क्रीनशॉट को %s में ँति सुरक्षित किया"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../choose-mirror-bin.templates-in:5001
+msgid "Checking the Debian archive mirror"
+msgstr "डेबियन आर्काइव मिरर की जाँच की जा रही है"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../choose-mirror-bin.templates-in:6001
+msgid "Downloading Release files..."
+msgstr "रिलीज फ़ाइल डाउनलोड कर रहे हैं..."
+
+#. Type: text
+#. Description
+#. main-menu item
+#. Translators: keep below 55 columns
+#. :sl1:
+#: ../choose-mirror-bin.templates-in:14001
+msgid "Choose a mirror of the Debian archive"
+msgstr "डेबियन आर्काइव का कोई मिरर चुनें"
 
 #. Type: select
 #. Choices
-#. "other", here, is added to the list of countries that will be displayed
-#. for users to choose among them
-#. For instance, choosing "Italian" will show:
-#. Italy, Switzerland, other
 #. :sl1:
-#: ../localechooser.templates-in:22001 ../../mktemplates.continents:26
-msgid "other"
-msgstr "अन्य"
+#. Type: select
+#. Choices
+#. :sl2:
+#: ../choose-mirror-bin.templates.http-in:2001
+#: ../choose-mirror-bin.templates.ftp.sel-in:2001
+msgid "enter information manually"
+msgstr "जानकारी हस्तचालित भरें"
 
-#. Type: text
-#. Description
+#. Type: select
+#. Default
+#. Translators, you should put here the ISO 3166 code of a country
+#. which you know hosts at least one Debian HTTP mirror. Please check
+#. that the country really has a Debian HTTP mirror before putting a
+#. random value here
+#.
+#. First check that the country you mention here is listed in
+#. https://salsa.debian.org/mirror-team/masterlist/-/blob/master/Mirrors.masterlist
+#.
+#. BE CAREFUL to use the TWO LETTER ISO-3166 CODE and not anything else
+#.
+#. You do not need to translate what's between the square brackets
+#. You should even NOT put square brackets in translations:
+#. msgid "US[ Default value for http]"
+#. msgstr "FR"
 #. :sl1:
-#: ../localechooser.templates-in:23001
-msgid "Country, territory or area:"
-msgstr "देश, प्रदेश या क्षेत्र:"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../localechooser.templates-in:24001
-msgid "Continent or region:"
-msgstr "महाद्वीप या क्षेत्र:"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../localechooser.templates-in:25001
-msgid ""
-"The selected location will be used to set your time zone and also for "
-"example to help select the system locale. Normally this should be the "
-"country where you live."
-msgstr ""
-"चुने गए क्षेत्र के आधार पर समय खंड और सिस्टम लोकेल जैसे कई विषयों को भी चुना जाएगा."
-"साधारणतः यह आप जिस देश में स्थित हों, उसके आधार पर होगा."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../localechooser.templates-in:26001
-msgid ""
-"This is a shortlist of locations based on the language you selected. Choose "
-"\"other\" if your location is not listed."
-msgstr ""
-"चुने गए भाषा के आधार पर यह कुछ क्षेत्र हैं जिनमे आपका क्षेत्र हो सकता है. अगरआपका क्षेत्र न "
-"हों तो \"अन्य\" चुनें."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../localechooser.templates-in:27001
-msgid "Select the continent or region to which your location belongs."
-msgstr "महाद्वीप या क्षेत्र चुनें, जिसमें आपका देश स्थित है."
-
-#. Type: text
-#. Description
-#. '%s' will be replaced with the name of the currently selected continent/region
-#. :sl1:
-#: ../localechooser.templates-in:28001
-#, no-c-format
-msgid ""
-"Listed are locations for: %s. Use the <Go Back> option to select a different "
-"continent or region if your location is not listed."
-msgstr ""
-"%s के लिए स्थान दिए गए हैं. अगर आपका स्थान यहाँ उपस्थित न हो तो<GoBack> द्वारा अन्य "
-"महाद्वीप या क्षेत्र चुनें."
+#: ../choose-mirror-bin.templates.http-in:2002
+msgid "US[ Default value for http]"
+msgstr "US"
 
 #. Type: select
 #. Description
 #. :sl1:
-#: ../localechooser.templates-in:29001
-msgid "Country to base default locale settings on:"
-msgstr "देश, जिसके आधार पर आपका लोकेल चुना जाएगा:"
+#. Type: select
+#. Description
+#. :sl2:
+#: ../choose-mirror-bin.templates.http-in:2003
+#: ../choose-mirror-bin.templates.ftp.sel-in:2003
+msgid "Debian archive mirror country:"
+msgstr "डेबियन आर्काइव मिरर देश:"
 
-#. Type: text
+#. Type: select
 #. Description
 #. :sl1:
-#: ../localechooser.templates-in:30001
+#. Type: select
+#. Description
+#. :sl2:
+#: ../choose-mirror-bin.templates.http-in:2003
+#: ../choose-mirror-bin.templates.ftp.sel-in:2003
 msgid ""
-"There is no locale defined for the combination of language and country you "
-"have selected. You can now select your preference from the locales available "
-"for the selected language. The locale that will be used is listed in the "
-"second column."
+"The goal is to find a mirror of the Debian archive that is close to you on "
+"the network -- be aware that nearby countries, or even your own, may not be "
+"the best choice."
 msgstr ""
-"चुने गए देश और भाषा की जोड़ी के लिए कोई लोकेल उपलब्ध नहीं है. अब आपचुने गए भाषा के लिए "
-"उपलब्ध लोकेल में से किसी एक चुन सकते हैं. जिस लोकेलका उपयोग किया जाएगा, वह द्वितीय पंक्ति "
-"में दिया गया है."
+"आपको डेबियन आर्काइव का समीपस्थ मिरर चुनना है -- ऐसा संभव है कि आपका अपना देश या "
+"आसपास के देश सर्वोत्तम पसंद न सिद्ध हों."
 
-#. Type: text
+#. Type: select
 #. Description
 #. :sl1:
-#: ../localechooser.templates-in:31001
+#. Type: select
+#. Description
+#. :sl2:
+#: ../choose-mirror-bin.templates.http-in:3001
+#: ../choose-mirror-bin.templates.ftp.sel-in:3001
+msgid "Debian archive mirror:"
+msgstr "डेबियन आर्काइव मिरर:"
+
+#. Type: select
+#. Description
+#. :sl1:
+#. Type: select
+#. Description
+#. :sl2:
+#: ../choose-mirror-bin.templates.http-in:3001
+#: ../choose-mirror-bin.templates.ftp.sel-in:3001
 msgid ""
-"There are multiple locales defined for the language you have selected. You "
-"can now select your preference from those locales. The locale that will be "
-"used is listed in the second column."
+"Please select a Debian archive mirror. You should use a mirror in your "
+"country or region if you do not know which mirror has the best Internet "
+"connection to you."
 msgstr ""
-"चुने गए देश और भाषा की जोड़ी के लिए एक से अधिक लोकेल उपलब्ध हैं. अब आपउपलब्ध लोकेल में से "
-"किसी एक चुन सकते हैं. जिस लोकेल का उपयोग किया जाएगा,वह द्वितीय पंक्ति में दिया गया है."
+"कृपया एक डेबियन आर्काइव मिरर चुनें। यदि आपको नहीं पता है कि किस मिरर का इंटरनेट कनेक्शन "
+"आपके लिए सबसे अच्छा है तो अपने देश अथवा क्षेत्र का मिरर प्रयोग करें।"
+
+#. Type: select
+#. Description
+#. :sl1:
+#: ../choose-mirror-bin.templates.http-in:3001
+msgid "Usually, deb.debian.org is a good choice."
+msgstr "सामान्यतः, deb.debian.org एक अच्छा विकल्प है."
+
+#. Type: string
+#. Description
+#. :sl1:
+#. Type: string
+#. Description
+#. :sl2:
+#: ../choose-mirror-bin.templates.http-in:4001
+#: ../choose-mirror-bin.templates.ftp.base-in:2001
+msgid "Debian archive mirror hostname:"
+msgstr "डेबियन आर्काइव मिरर होस्टनाम:"
+
+#. Type: string
+#. Description
+#. :sl1:
+#. Type: string
+#. Description
+#. :sl2:
+#: ../choose-mirror-bin.templates.http-in:4001
+#: ../choose-mirror-bin.templates.ftp.base-in:2001
+msgid ""
+"Please enter the hostname of the mirror from which Debian will be downloaded."
+msgstr "कृपया मिरर का होस्टनाम भरें जहाँ से डेबियन डाउनलोड किया जाएगा."
+
+#. Type: string
+#. Description
+#. :sl1:
+#. Type: string
+#. Description
+#. :sl2:
+#: ../choose-mirror-bin.templates.http-in:4001
+#: ../choose-mirror-bin.templates.ftp.base-in:2001
+msgid ""
+"An alternate port can be specified using the standard [hostname]:[port] "
+"format."
+msgstr ""
+"एक वैकल्पिक पोर्ट मानक [hostname]: [port] प्रारूप का उपयोग करके निर्दिष्ट किया जा "
+"सकता है।"
+
+#. Type: string
+#. Description
+#. :sl1:
+#: ../choose-mirror-bin.templates.http-in:6001
+msgid "HTTP proxy information (blank for none):"
+msgstr "एचटीटीपी प्रॉक्सी जानकारी (यदि कुछ नहीं है तो रिक्त छोड़ें):"
+
+#. Type: string
+#. Description
+#. :sl1:
+#: ../choose-mirror-bin.templates.http-in:6001
+msgid ""
+"If you need to use a HTTP proxy to access the outside world, enter the proxy "
+"information here. Otherwise, leave this blank."
+msgstr ""
+"यदि आपको इंटरनेट पर जाने के लिए एचटीटीपी प्रॉक्सी की आवश्यकता होती है तो यहाँ प्रॉक्सी "
+"की जानकारी भरें। अन्यथा खाली छोड़ दें।"
+
+#. Type: string
+#. Description
+#. :sl1:
+#. Type: string
+#. Description
+#. :sl2:
+#: ../choose-mirror-bin.templates.http-in:6001
+#: ../choose-mirror-bin.templates.ftp.base-in:4001
+msgid ""
+"The proxy information should be given in the standard form of \"http://"
+"[[user][:pass]@]host[:port]/\"."
+msgstr ""
+"प्रॉक्सी जानकारी इन मानक ढंग से दी जानी चाहिए \"http://[[user][:pass]@]host[:"
+"port]/\"."
 
 #. Type: text
 #. Description
@@ -1371,6 +2187,389 @@ msgstr "इंस्टॉलेशन मीडिया को अनमाउ
 
 #. Type: text
 #. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl1:
+#: ../load-cdrom.templates:1001
+msgid "Load installer components from installation media"
+msgstr "इंस्टॉलर मीडिया से इंस्टॉलर घटकों को लोड करें"
+
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl1:
+#: ../clock-setup.templates:1001
+msgid "Configure the clock"
+msgstr "घड़ी व्यवस्थित करें"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../clock-setup.templates:2001
+msgid "Is the system clock set to UTC?"
+msgstr "क्या सिस्टम की घड़ी यूटीसी से मिली हुई है?"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../clock-setup.templates:2001
+msgid ""
+"System clocks are generally set to Coordinated Universal Time (UTC). The "
+"operating system uses your time zone to convert system time into local time. "
+"This is recommended unless you also use another operating system that "
+"expects the clock to be set to local time."
+msgstr ""
+"सिस्टम घड़ियाँ सामान्यतः समपदस्थ वैश्विक समय (यूटीसी) से मिली होती हैं। प्रचालन तंत्र आपके "
+"समय-मण्डल का प्रयोग करते हुए सिस्टम समय को स्थानीय समय में परिवर्तित करता है। इसकी "
+"संस्तुति की जाती है जब तक कि आप साथ में कोई अन्य प्रचालन तंत्र प्रयोग नहीं करते हैं जिसे घड़ी "
+"स्थानीय समय से मिली हुई चाहिए।"
+
+#. Type: text
+#. Description
+#. progress bar item
+#. :sl1:
+#: ../clock-setup.templates:3001
+msgid "Configuring clock settings..."
+msgstr "घड़ी की अवस्था कोिंग को सुरक्षित कर रहे है..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../clock-setup.templates:4001
+msgid "Setting up the clock"
+msgstr "घड़ी व्यवस्थित हो रही है"
+
+#. Type: text
+#. Description
+#. progress bar item
+#. :sl1:
+#: ../clock-setup.templates:7001
+msgid "Getting the time from a network time server..."
+msgstr "नेटवर्क सर्वर से समय व्यवस्था का ज्ञान प्राप्त किया जा रहा है..."
+
+#. Type: text
+#. Description
+#. progress bar item
+#. :sl1:
+#: ../clock-setup.templates:8001
+msgid "Setting the hardware clock..."
+msgstr "घड़ी व्यवस्थित हो रही है..."
+
+#. Type: text
+#. Description
+#. Main menu item
+#. The translation should not exceed 55 columns except for languages
+#. that are only supported in the graphical version of the installer
+#. :sl1:
+#: ../di-utils-shell.templates:2001
+msgid "Execute a shell"
+msgstr "एक शेल चलाएँ"
+
+#. Type: text
+#. Description
+#. Main menu item
+#. The translation should not exceed 55 columns except for languages
+#. that are only supported in the graphical version of the installer
+#. :sl1:
+#: ../di-utils-reboot.templates:2001
+msgid "Abort the installation"
+msgstr "संस्थापना छोड़ दें"
+
+#. Type: text
+#. Description
+#. base-installer progress bar item
+#. :sl1:
+#: ../di-utils.templates:1001
+msgid "Registering modules..."
+msgstr "मॉड्यूल्स का पंजीयन किया जा रहा है..."
+
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl1:
+#: ../finish-install.templates:1001
+msgid "Finish the installation"
+msgstr "संस्थापना सम्पन्न करें"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../finish-install.templates:2001
+msgid "Finishing the installation"
+msgstr "संस्थापना पूरी की जा रही है"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../finish-install.templates:4001
+msgid "Configuring network..."
+msgstr "नेटवर्क कॉन्फ़िगर किया जा रहा है..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../finish-install.templates:5001
+msgid "Setting up frame buffer..."
+msgstr "फ्रेम बफर सेटअप किया जा रहा है..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../finish-install.templates:6001
+msgid "Unmounting file systems..."
+msgstr "फ़ाइल सिस्टम अनमाउन्ट किया जा रहा है..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../finish-install.templates:7001
+msgid "Rebooting into your new system..."
+msgstr "आपके नए डेबियन तंत्र में रीबूट किया जा रहा है..."
+
+#. Type: note
+#. Description
+#. Translators: translate <Continue> identical to the translation of the button!
+#. :sl1:
+#: ../finish-install.templates:8001
+msgid "Installation complete"
+msgstr "संस्थापना सम्पन्न"
+
+#. Type: note
+#. Description
+#. Translators: translate <Continue> identical to the translation of the button!
+#. :sl1:
+#: ../finish-install.templates:8001
+msgid ""
+"Installation is complete, so it is time to boot into your new system. Make "
+"sure to remove the installation media, so that you boot into the new system "
+"rather than restarting the installation."
+msgstr ""
+"स्थापना पूर्ण हो गई है, इसलिए आपके नए सिस्टम में बूट करने का समय आ गया है। इंस्टॉलेशन "
+"मीडिया को निकालना सुनिश्चित करें, ताकि आप इंस्टॉलेशन को फिर से शुरू करने के बजाय नए "
+"सिस्टम में बूट करें।"
+
+#. Type: note
+#. Description
+#. Translators: translate <Continue> identical to the translation of the button!
+#. :sl1:
+#: ../finish-install.templates:8001
+msgid "Please choose <Continue> to reboot."
+msgstr "कृपया <Continue> रिबूट करने के लिए चुनें।"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:1001 ../grub-installer.templates:2001
+msgid "Install the GRUB boot loader to your primary drive?"
+msgstr "अपने प्राथमिक ड्राइव में GRUB बूट लोडर स्थापित करें?"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:1001
+msgid ""
+"The following other operating systems have been detected on this computer: "
+"${OS_LIST}"
+msgstr "इस संगणक पर निम्न अन्य प्रचालन तंत्र पाये गये हैं: ${OS_LIST}"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:1001
+msgid ""
+"If all of your operating systems are listed above, then it should be safe to "
+"install the boot loader to your primary drive (UEFI partition/boot record). "
+"When your computer boots, you will be able to choose to load one of these "
+"operating systems or the newly installed Debian system."
+msgstr ""
+"यदि आपके सभी ऑपरेटिंग सिस्टम ऊपर सूचीबद्ध हैं, तो अपने प्राथमिक ड्राइव (UEFI विभाजन / "
+"बूट रिकॉर्ड) पर बूट लोडर को स्थापित करना सुरक्षित होना चाहिए। जब आपके कंप्यूटर बूट करते "
+"हैं, तो आप इनमें से एक ऑपरेटिंग सिस्टम या नए इंस्टॉल किए गए डेबियन सिस्टम को लोड करने के "
+"लिए चुन पाएंगे।"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:2001
+msgid ""
+"It seems that this new installation is the only operating system on this "
+"computer. If so, it should be safe to install the GRUB boot loader to your "
+"primary drive (UEFI partition/boot record)."
+msgstr ""
+"ऐसा लगता है कि यह नई स्थापना इस कंप्यूटर पर केवल ऑपरेटिंग सिस्टम है। यदि हां, तो अपने "
+"प्राथमिक ड्राइव (UEFI विभाजन / बूट रिकॉर्ड) में GRUB बूट लोडर को स्थापित करना सुरक्षित "
+"होना चाहिए।"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:2001
+msgid ""
+"Warning: If your computer has another operating system that the installer "
+"failed to detect, this will make that operating system temporarily "
+"unbootable, though GRUB can be manually configured later to boot it."
+msgstr ""
+"चेतावनी: यदि आपके कंप्यूटर में एक और ऑपरेटिंग सिस्टम है जो इंस्टॉलर का पता लगाने में विफल "
+"रहा है, तो यह उस ऑपरेटिंग सिस्टम को अस्थायी रूप से अनबूटेबल बना देगा, हालांकि GRUB को "
+"बूट करने के लिए बाद में मैन्युअल रूप से कॉन्फ़िगर किया जा सकता है।"
+
+#. #-#-#-#-#  templates.pot (grub-installer)  #-#-#-#-#
+#. Type: password
+#. Description
+#. :sl2:
+#. #-#-#-#-#  templates.pot (network-console)  #-#-#-#-#
+#. Type: password
+#. Description
+#. :sl3:
+#. #-#-#-#-#  templates.pot (user-setup)  #-#-#-#-#
+#. Type: password
+#. Description
+#. :sl1:
+#. Type: password
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:10001 ../network-console.templates:5001
+#: ../user-setup-udeb.templates:7001 ../user-setup-udeb.templates:14001
+msgid "Re-enter password to verify:"
+msgstr "पुष्टि करने के लिए कूटशब्द दोबारा भरें:"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:18001
+msgid "Installing GRUB boot loader"
+msgstr "ग्रब बूट लोडर संस्थापित किया जा रहा है"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:19001
+msgid "Looking for other operating systems..."
+msgstr "अन्य आपरेटिंग सिस्टम के लिए देखा जा रहै है..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:20001
+msgid "Installing the '${GRUB}' package..."
+msgstr "'${GRUB}' पैकेज स्थापित कर रहा है ..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:21001
+msgid "Determining GRUB boot device..."
+msgstr "ग्रब बूट उपकरण का पता लगाया जा रहा है..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:22001
+msgid "Running \"grub-install ${BOOTDEV}\"..."
+msgstr "चलाया जा रहा है \"grub-install ${BOOTDEV}\"..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:23001
+msgid "Running \"update-grub\"..."
+msgstr "चलाया जा रहा है \"update-grub\"..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:24001
+msgid "Updating /etc/kernel-img.conf..."
+msgstr "अद्यतन किया जा रहा है /etc/kernel-img.conf..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:25001
+msgid "Checking whether to force usage of the removable media path"
+msgstr "यह जांचना कि हटाने योग्य मीडिया पथ के उपयोग को मजबूर करना है या नहीं"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:26001
+msgid "Mounting filesystems"
+msgstr "फ़ाइल सिस्टम माउन्ट किया जा रहा है"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:27001
+msgid "Configuring grub-efi for future usage of the removable media path"
+msgstr "हटाने योग्य मीडिया पथ के भविष्य के उपयोग के लिए grub-efi MConfiguring"
+
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl1:
+#: ../grub-installer.templates:28001
+msgid "Install the GRUB boot loader"
+msgstr "GRUB बूट लोडर स्थापित करें"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:34001
+msgid "Force GRUB installation to the EFI removable media path?"
+msgstr "ईआरआई हटाने योग्य मीडिया पथ में GRUB स्थापना को मजबूर करें?"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:34001
+msgid ""
+"It seems that this computer is configured to boot via EFI, but maybe that "
+"configuration will not work for booting from the hard drive. Some EFI "
+"firmware implementations do not meet the EFI specification (i.e. they are "
+"buggy!) and do not support proper configuration of boot options from system "
+"hard drives."
+msgstr ""
+"ऐसा लगता है कि यह कंप्यूटर ईएफआई के माध्यम से बूट करने के लिए कॉन्फ़िगर किया गया है, लेकिन "
+"शायद यह कॉन्फ़िगरेशन हार्ड ड्राइव से बूट करने के लिए काम नहीं करेगा। कुछ ईएफआई फर्मवेयर "
+"कार्यान्वयन ईएफआई विनिर्देश को पूरा नहीं करते हैं (यानी वे छोटी हैं!) और सिस्टम हार्ड "
+"ड्राइव से बूट विकल्पों की उचित कॉन्फ़िगरेशन का समर्थन नहीं करते हैं।"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:34001
+msgid ""
+"A workaround for this problem is to install an extra copy of the EFI version "
+"of the GRUB boot loader to a fallback location, the \"removable media path"
+"\". Almost all EFI systems, no matter how buggy, will boot GRUB that way."
+msgstr ""
+"इस समस्या के लिए एक समाधान है GRUB बूट लोडर के ईएफआई संस्करण की एक अतिरिक्त प्रतिलिपि "
+"को फॉलबैक स्थान, \"हटाने योग्य मीडिया पथ\" पर स्थापित करना है। लगभग सभी ईएफआई "
+"सिस्टम, कोई फर्क नहीं पड़ता कि कितनी छोटी गाड़ी, इस तरह GRUB बूट करेगा।"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:34001
+msgid ""
+"Warning: If the installer failed to detect another operating system that is "
+"present on your computer that also depends on this fallback, installing GRUB "
+"there will make that operating system temporarily unbootable. GRUB can be "
+"manually configured later to boot it if necessary."
+msgstr ""
+"चेतावनी: यदि इंस्टॉलर आपके कंप्यूटर पर मौजूद किसी अन्य ऑपरेटिंग सिस्टम का पता लगाने में "
+"विफल रहा है जो इस गिरावट पर भी निर्भर करता है, तो वहां GRUB स्थापित करने से वह "
+"ऑपरेटिंग सिस्टम अस्थायी रूप से अनबूटेबल हो जाएगा। यदि आवश्यक हो तो बूट करने के लिए GRUB "
+"को बाद में मैन्युअल रूप से कॉन्फ़िगर किया जा सकता है।"
+
+#. Type: text
+#. Description
 #. :sl1:
 #: ../ethdetect.templates:4001
 msgid "Detecting network hardware"
@@ -1435,6 +2634,351 @@ msgstr "हार्डवेयर तैयार हो रहे हैं..
 #: ../hw-detect.templates:12001
 msgid "Checking for firmware..."
 msgstr "फर्मवेयर की खोज की जा रही है..."
+
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl1:
+#: ../save-logs.templates:1001
+msgid "Save debug logs"
+msgstr "डिबग लॉग सहेजें"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. finish-install progress bar item
+#: ../save-logs.templates:9001
+msgid "Gathering information for installation report..."
+msgstr "संस्थापन रिपोर्ट के लिए जानकारी एकत्रित कर रहे हैं..."
+
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl1:
+#: ../iso-scan.templates:1001
+msgid "Scan hard drives for an installer ISO image"
+msgstr "संस्थापक आईएसओ इमेज के लिए हार्डड्राइव्स को स्कैन करें"
+
+#. Type: text
+#. Description
+#. This menu entry may be translated.
+#. However, translators are required to keep "Choose language"
+#. as an alternative separated by the "/" character
+#. Example (french): Choisir la langue/Choose language
+#. :sl1:
+#: ../localechooser.templates-in:1001
+msgid "Choose language"
+msgstr "भाषा चुनें / Choose language"
+
+#. Type: text
+#. Description
+#. finish-install progress bar item
+#. :sl1:
+#: ../localechooser.templates-in:6001
+msgid "Storing language..."
+msgstr "भाषा स्टोर किया जा रहा है..."
+
+#. Type: title
+#. Description
+#. Displayed as dialog title during language selection
+#. :sl1:
+#: ../localechooser.templates-in:7001
+msgid "Select a language"
+msgstr "भाषा चुनें"
+
+#. Type: title
+#. Description
+#. Displayed as dialog title during country selection
+#. :sl1:
+#: ../localechooser.templates-in:8001
+msgid "Select your location"
+msgstr "अपना स्थान चुनें"
+
+#. Type: title
+#. Description
+#. Displayed as dialog title during locale selection
+#. :sl1:
+#: ../localechooser.templates-in:9001
+msgid "Configure locales"
+msgstr "लोकेल संस्थापन"
+
+#. Type: note
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:12001
+msgid "Language selection no longer possible"
+msgstr "भाषा चुनना अब से संभव नहीं"
+
+#. Type: note
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:12001
+msgid ""
+"At this point it is no longer possible to change the language for the "
+"installation, but you can still change the country or locale."
+msgstr ""
+"इस पंक्ति पर भाषा में परिवर्तन संभव नहीं है, पर देश अथवा लोकेल अब भी बदला जा सकता है."
+
+#. Type: note
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:12001
+msgid ""
+"To select a different language you will need to abort this installation and "
+"reboot the installer."
+msgstr ""
+"अलग भाषा चुनने के लिए आपको इस संस्थापन को स्थगित कर संस्थापक को रीबूट करना होगा."
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:13001 ../localechooser.templates-in:14001
+msgid "Continue the installation in the selected language?"
+msgstr "चुने हुए भाषा में आगे संस्थापन करें?"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:13001
+msgid ""
+"The translation of the installer is incomplete for the selected language."
+msgstr "चुने गए भाषा के लिए संस्थापक का अनुवाद पूर्ण है."
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:14001
+msgid ""
+"The translation of the installer is not fully complete for the selected "
+"language."
+msgstr "चुने गए भाषा के लिए संस्थापक का अनुवाद पूर्ण नहीं है."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:15001
+msgid ""
+"This means that there is a significant chance that some dialogs will be "
+"displayed in English instead."
+msgstr "इस कारण कई डायलोग अंग्रेज़ी में दिखाए जाने की संभावना है."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:16001
+msgid ""
+"If you do anything other than a purely default installation, there is a real "
+"chance that some dialogs will be displayed in English instead."
+msgstr ""
+"अगर आप डीफ़ॉल्ट संस्थापन के अलावा किसी अन्य संसथापन करेंगे, तो अंग्रेज़ी में डायलोग दिखाए "
+"जाने की अधिक संभावना है."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:17001
+msgid ""
+"If you continue the installation in the selected language, most dialogs "
+"should be displayed correctly but - especially if you use the more advanced "
+"options of the installer - some may be displayed in English instead."
+msgstr ""
+"अगर आप चुने गए भाषा में संस्थापन जारी रखेंगे, तो अधिकतर डायलोग सही दिखाई जाएंगी, पर, "
+"विशेषतः संस्थापक के एडवान्स्ड विकल्पों में, अंग्रेज़ी में डायलोग दिखाए जाने की संभावना है."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:18001
+msgid ""
+"If you continue the installation in the selected language, dialogs should "
+"normally be displayed correctly but - especially if you use the more "
+"advanced options of the installer - there is a slight chance some may be "
+"displayed in English instead."
+msgstr ""
+"अगर आप चुने गए भाषा में संस्थापन जारी रखेंगे, तो अधिकतर डायलोग सही दिखाई जाएंगी, पर, "
+"विशेषतः संस्थापक के एडवान्स्ड विकल्पों में, अंग्रेज़ी में डायलोग दिखाए जाने की थोडी संभावना है."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:19001
+msgid ""
+"The chance that you will actually encounter a dialog that is not translated "
+"into the selected language is extremely small, but it cannot be ruled out "
+"completely."
+msgstr ""
+"चुने गए भाषा में अनुवाद न किए गए डायलोग दिखाए जाने की संभावना बहुत कम है, पर इसे "
+"निश्चित रूप से कहा नहीं जा सकता."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:20001
+msgid ""
+"Unless you have a good understanding of the alternative language, it is "
+"recommended to either select a different language or abort the installation."
+msgstr ""
+"अगर आपको अन्य भाषा का अच्छा ज्ञान न हो, तो अन्य भाषा चुनें अथवा संस्थापन रद्द करें."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:21001
+msgid ""
+"If you choose not to continue, you will be given the option of selecting a "
+"different language, or you can abort the installation."
+msgstr ""
+"अगर आप आगे नहीं बढ़ेंगे, तो आपको अन्य भाषा चुनने का विकल्प दिया जाएगा, नही. तो आप "
+"संस्थापन रद्द कर सकते हैं."
+
+#. Type: select
+#. Choices
+#. "other", here, is added to the list of countries that will be displayed
+#. for users to choose among them
+#. For instance, choosing "Italian" will show:
+#. Italy, Switzerland, other
+#. :sl1:
+#: ../localechooser.templates-in:22001 ../../mktemplates.continents:26
+msgid "other"
+msgstr "अन्य"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:23001
+msgid "Country, territory or area:"
+msgstr "देश, प्रदेश या क्षेत्र:"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:24001
+msgid "Continent or region:"
+msgstr "महाद्वीप या क्षेत्र:"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:25001
+msgid ""
+"The selected location will be used to set your time zone and also for "
+"example to help select the system locale. Normally this should be the "
+"country where you live."
+msgstr ""
+"चुने गए क्षेत्र के आधार पर समय खंड और सिस्टम लोकेल जैसे कई विषयों को भी चुना जाएगा."
+"साधारणतः यह आप जिस देश में स्थित हों, उसके आधार पर होगा."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:26001
+msgid ""
+"This is a shortlist of locations based on the language you selected. Choose "
+"\"other\" if your location is not listed."
+msgstr ""
+"चुने गए भाषा के आधार पर यह कुछ क्षेत्र हैं जिनमे आपका क्षेत्र हो सकता है. अगरआपका क्षेत्र न "
+"हों तो \"अन्य\" चुनें."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:27001
+msgid "Select the continent or region to which your location belongs."
+msgstr "महाद्वीप या क्षेत्र चुनें, जिसमें आपका देश स्थित है."
+
+#. Type: text
+#. Description
+#. '%s' will be replaced with the name of the currently selected continent/region
+#. :sl1:
+#: ../localechooser.templates-in:28001
+#, no-c-format
+msgid ""
+"Listed are locations for: %s. Use the <Go Back> option to select a different "
+"continent or region if your location is not listed."
+msgstr ""
+"%s के लिए स्थान दिए गए हैं. अगर आपका स्थान यहाँ उपस्थित न हो तो<GoBack> द्वारा अन्य "
+"महाद्वीप या क्षेत्र चुनें."
+
+#. Type: select
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:29001
+msgid "Country to base default locale settings on:"
+msgstr "देश, जिसके आधार पर आपका लोकेल चुना जाएगा:"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:30001
+msgid ""
+"There is no locale defined for the combination of language and country you "
+"have selected. You can now select your preference from the locales available "
+"for the selected language. The locale that will be used is listed in the "
+"second column."
+msgstr ""
+"चुने गए देश और भाषा की जोड़ी के लिए कोई लोकेल उपलब्ध नहीं है. अब आपचुने गए भाषा के लिए "
+"उपलब्ध लोकेल में से किसी एक चुन सकते हैं. जिस लोकेलका उपयोग किया जाएगा, वह द्वितीय पंक्ति "
+"में दिया गया है."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:31001
+msgid ""
+"There are multiple locales defined for the language you have selected. You "
+"can now select your preference from those locales. The locale that will be "
+"used is listed in the second column."
+msgstr ""
+"चुने गए देश और भाषा की जोड़ी के लिए एक से अधिक लोकेल उपलब्ध हैं. अब आपउपलब्ध लोकेल में से "
+"किसी एक चुन सकते हैं. जिस लोकेल का उपयोग किया जाएगा,वह द्वितीय पंक्ति में दिया गया है."
+
+#. #-#-#-#-#  templates.pot (lvmcfg)  #-#-#-#-#
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl1:
+#. #-#-#-#-#  templates.pot (partman-lvm)  #-#-#-#-#
+#. Type: text
+#. Description
+#. Type: text
+#. Description
+#. :sl3:
+#. Main menu item
+#. Translators: keep below 55 columns
+#. Use infinitive form
+#: ../lvmcfg.templates:1001 ../partman-lvm.templates:7001
+#: ../partman-lvm.templates:23001
+msgid "Configure the Logical Volume Manager"
+msgstr "लॉज़िकल वॉल्यूम प्रबंधक कॉन्फ़िगर करें"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../main-menu.templates:1001
+msgid "Debian installer main menu"
+msgstr "डेबियन संस्थापक मुख्य मेन्यू"
+
+#. Type: select
+#. Description
+#. :sl1:
+#: ../main-menu.templates:2001
+msgid "Choose the next step in the install process:"
+msgstr "संस्थापन प्रक्रिया के अगले चरण को चुनें:"
+
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl1:
+#: ../mdcfg-utils.templates:1001
+msgid "Configure MD devices"
+msgstr "एमडी उपकरण कॉन्फ़िगर करें"
 
 #. Type: boolean
 #. Description
@@ -1895,230 +3439,17 @@ msgstr "स्थैतिक एड्रेसिंग के उपयोग
 
 #. Type: text
 #. Description
-#. :sl1:
-#: ../choose-mirror-bin.templates-in:5001
-msgid "Checking the Debian archive mirror"
-msgstr "डेबियन आर्काइव मिरर की जाँच की जा रही है"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../choose-mirror-bin.templates-in:6001
-msgid "Downloading Release files..."
-msgstr "रिलीज फ़ाइल डाउनलोड कर रहे हैं..."
-
-#. Type: text
-#. Description
-#. main-menu item
-#. Translators: keep below 55 columns
-#. :sl1:
-#: ../choose-mirror-bin.templates-in:14001
-msgid "Choose a mirror of the Debian archive"
-msgstr "डेबियन आर्काइव का कोई मिरर चुनें"
-
-#. Type: select
-#. Choices
-#. :sl1:
-#. Type: select
-#. Choices
-#. :sl2:
-#: ../choose-mirror-bin.templates.http-in:2001
-#: ../choose-mirror-bin.templates.ftp.sel-in:2001
-msgid "enter information manually"
-msgstr "जानकारी हस्तचालित भरें"
-
-#. Type: select
-#. Default
-#. Translators, you should put here the ISO 3166 code of a country
-#. which you know hosts at least one Debian HTTP mirror. Please check
-#. that the country really has a Debian HTTP mirror before putting a
-#. random value here
-#.
-#. First check that the country you mention here is listed in
-#. https://salsa.debian.org/mirror-team/masterlist/-/blob/master/Mirrors.masterlist
-#.
-#. BE CAREFUL to use the TWO LETTER ISO-3166 CODE and not anything else
-#.
-#. You do not need to translate what's between the square brackets
-#. You should even NOT put square brackets in translations:
-#. msgid "US[ Default value for http]"
-#. msgstr "FR"
-#. :sl1:
-#: ../choose-mirror-bin.templates.http-in:2002
-msgid "US[ Default value for http]"
-msgstr "US"
-
-#. Type: select
-#. Description
-#. :sl1:
-#. Type: select
-#. Description
-#. :sl2:
-#: ../choose-mirror-bin.templates.http-in:2003
-#: ../choose-mirror-bin.templates.ftp.sel-in:2003
-msgid "Debian archive mirror country:"
-msgstr "डेबियन आर्काइव मिरर देश:"
-
-#. Type: select
-#. Description
-#. :sl1:
-#. Type: select
-#. Description
-#. :sl2:
-#: ../choose-mirror-bin.templates.http-in:2003
-#: ../choose-mirror-bin.templates.ftp.sel-in:2003
-msgid ""
-"The goal is to find a mirror of the Debian archive that is close to you on "
-"the network -- be aware that nearby countries, or even your own, may not be "
-"the best choice."
-msgstr ""
-"आपको डेबियन आर्काइव का समीपस्थ मिरर चुनना है -- ऐसा संभव है कि आपका अपना देश या "
-"आसपास के देश सर्वोत्तम पसंद न सिद्ध हों."
-
-#. Type: select
-#. Description
-#. :sl1:
-#. Type: select
-#. Description
-#. :sl2:
-#: ../choose-mirror-bin.templates.http-in:3001
-#: ../choose-mirror-bin.templates.ftp.sel-in:3001
-msgid "Debian archive mirror:"
-msgstr "डेबियन आर्काइव मिरर:"
-
-#. Type: select
-#. Description
-#. :sl1:
-#. Type: select
-#. Description
-#. :sl2:
-#: ../choose-mirror-bin.templates.http-in:3001
-#: ../choose-mirror-bin.templates.ftp.sel-in:3001
-msgid ""
-"Please select a Debian archive mirror. You should use a mirror in your "
-"country or region if you do not know which mirror has the best Internet "
-"connection to you."
-msgstr ""
-"कृपया एक डेबियन आर्काइव मिरर चुनें। यदि आपको नहीं पता है कि किस मिरर का इंटरनेट कनेक्शन "
-"आपके लिए सबसे अच्छा है तो अपने देश अथवा क्षेत्र का मिरर प्रयोग करें।"
-
-#. Type: select
-#. Description
-#. :sl1:
-#: ../choose-mirror-bin.templates.http-in:3001
-msgid "Usually, deb.debian.org is a good choice."
-msgstr "सामान्यतः, deb.debian.org एक अच्छा विकल्प है."
-
-#. Type: string
-#. Description
-#. :sl1:
-#. Type: string
-#. Description
-#. :sl2:
-#: ../choose-mirror-bin.templates.http-in:4001
-#: ../choose-mirror-bin.templates.ftp.base-in:2001
-msgid "Debian archive mirror hostname:"
-msgstr "डेबियन आर्काइव मिरर होस्टनाम:"
-
-#. Type: string
-#. Description
-#. :sl1:
-#. Type: string
-#. Description
-#. :sl2:
-#: ../choose-mirror-bin.templates.http-in:4001
-#: ../choose-mirror-bin.templates.ftp.base-in:2001
-msgid ""
-"Please enter the hostname of the mirror from which Debian will be downloaded."
-msgstr "कृपया मिरर का होस्टनाम भरें जहाँ से डेबियन डाउनलोड किया जाएगा."
-
-#. Type: string
-#. Description
-#. :sl1:
-#. Type: string
-#. Description
-#. :sl2:
-#: ../choose-mirror-bin.templates.http-in:4001
-#: ../choose-mirror-bin.templates.ftp.base-in:2001
-msgid ""
-"An alternate port can be specified using the standard [hostname]:[port] "
-"format."
-msgstr ""
-"एक वैकल्पिक पोर्ट मानक [hostname]: [port] प्रारूप का उपयोग करके निर्दिष्ट किया जा "
-"सकता है।"
-
-#. Type: string
-#. Description
-#. :sl1:
-#: ../choose-mirror-bin.templates.http-in:6001
-msgid "HTTP proxy information (blank for none):"
-msgstr "एचटीटीपी प्रॉक्सी जानकारी (यदि कुछ नहीं है तो रिक्त छोड़ें):"
-
-#. Type: string
-#. Description
-#. :sl1:
-#: ../choose-mirror-bin.templates.http-in:6001
-msgid ""
-"If you need to use a HTTP proxy to access the outside world, enter the proxy "
-"information here. Otherwise, leave this blank."
-msgstr ""
-"यदि आपको इंटरनेट पर जाने के लिए एचटीटीपी प्रॉक्सी की आवश्यकता होती है तो यहाँ प्रॉक्सी "
-"की जानकारी भरें। अन्यथा खाली छोड़ दें।"
-
-#. Type: string
-#. Description
-#. :sl1:
-#. Type: string
-#. Description
-#. :sl2:
-#: ../choose-mirror-bin.templates.http-in:6001
-#: ../choose-mirror-bin.templates.ftp.base-in:4001
-msgid ""
-"The proxy information should be given in the standard form of \"http://"
-"[[user][:pass]@]host[:port]/\"."
-msgstr ""
-"प्रॉक्सी जानकारी इन मानक ढंग से दी जानी चाहिए \"http://[[user][:pass]@]host[:"
-"port]/\"."
-
-#. #-#-#-#-#  templates.pot (net-retriever)  #-#-#-#-#
-#. Type: select
-#. Choices
-#. These are choices of actions so this is, at least in English,
-#. an infinitive form
-#. :sl2:
-#. #-#-#-#-#  templates.pot (cdebconf)  #-#-#-#-#
-#. Type: text
-#. Description
-#. Translators, this text will appear on a button, so KEEP IT SHORT
-#. :sl1:
-#. #-#-#-#-#  templates.pot (mdcfg)  #-#-#-#-#
-#. Type: select
-#. Choices
-#. :sl3:
-#. Type: select
-#. Choices
-#. :sl3:
-#: ../net-retriever.templates:1001 ../cdebconf-newt-udeb.templates:5001
-#: ../mdcfg-utils.templates:6001 ../mdcfg-utils.templates:13001
-msgid "Cancel"
-msgstr "रद्द करें"
-
-#. Type: text
-#. Description
 #. Main menu item
 #. Translators: keep below 55 columns
 #. :sl1:
-#: ../load-cdrom.templates:1001
-msgid "Load installer components from installation media"
-msgstr "इंस्टॉलर मीडिया से इंस्टॉलर घटकों को लोड करें"
+#: ../nobootloader.templates:1001
+msgid "Continue without boot loader"
+msgstr "बिना बूटलोडर के जारी रखें"
 
+#. #-#-#-#-#  templates.pot (partman-auto)  #-#-#-#-#
 #. Type: text
 #. Description
 #. :sl1:
-#: ../partman-base.templates:1001
-msgid "Starting up the partitioner"
-msgstr "पार्टीशनर प्रारंभ किया जा रहा है"
-
 #. #-#-#-#-#  templates.pot (partman-base)  #-#-#-#-#
 #. Type: text
 #. Description
@@ -2126,14 +3457,185 @@ msgstr "पार्टीशनर प्रारंभ किया जा �
 #. Type: text
 #. Description
 #. :sl2:
-#. #-#-#-#-#  templates.pot (partman-auto)  #-#-#-#-#
+#: ../partman-auto.templates:1001 ../partman-base.templates:2001
+#: ../partman-base.templates:25001
+msgid "Please wait..."
+msgstr "कृपया प्रतीक्षा करें..."
+
 #. Type: text
 #. Description
 #. :sl1:
-#: ../partman-base.templates:2001 ../partman-base.templates:25001
-#: ../partman-auto.templates:1001
-msgid "Please wait..."
-msgstr "कृपया प्रतीक्षा करें..."
+#: ../partman-auto.templates:2001
+msgid "Computing the new partitions..."
+msgstr "नए पार्टीशन्स की गणना की जा रही है..."
+
+#. Type: select
+#. Description
+#. :sl1:
+#. Type: select
+#. Description
+#. :sl1:
+#: ../partman-auto.templates:5001 ../partman-auto.templates:9001
+msgid "Partitioning method:"
+msgstr "पार्टीशन करने की विधि:"
+
+#. Type: select
+#. Description
+#. :sl1:
+#: ../partman-auto.templates:5001
+msgid ""
+"The installer can guide you through partitioning a disk (using different "
+"standard schemes) or, if you prefer, you can do it manually. With guided "
+"partitioning you will still have a chance later to review and customise the "
+"results."
+msgstr ""
+"यह विभाजक आपको डेबियन के लिए हार्ड डिस्क पार्टिशन के दिशा निर्देश (विभिन्न मानक "
+"पद्धतिओं के अनुसार) दे सकता है या फिर आप चाहें तो इसे हस्तचालित भी कर सकते हैं. यदि आप "
+"पार्टिशनिंग सहायक का प्रयोग करते है फिर भी आपको बाद में परिणामों को देखने व परिवर्तन "
+"करने का अवसर मिलेगा."
+
+#. Type: select
+#. Description
+#. :sl1:
+#. Type: select
+#. Description
+#. :sl1:
+#: ../partman-auto.templates:5001 ../partman-auto.templates:9001
+msgid ""
+"If you choose guided partitioning for an entire disk, you will next be asked "
+"which disk should be used."
+msgstr ""
+"यदि आप संपूर्ण हार्डडिस्क के लिए दिग्दर्शित पार्टिशनिंग का चयन करते हैं तो आपसे अगला प्रश्न "
+"यह पूछा जाएगा कि कौन सी हार्डडिस्क प्रयोग की जाए."
+
+#. Type: select
+#. Description
+#. :sl1:
+#: ../partman-auto.templates:10001
+msgid "Partitioning scheme:"
+msgstr "पार्टीशन करने की स्कीम:"
+
+#. Type: select
+#. Description
+#. :sl1:
+#. "Selected for partitioning" can be either an entire disk
+#. of "the largest continuous free space" on an existing disk
+#. TRANSLATORS, please take care to choose something appropriate for both
+#.
+#. It is followed by a variable giving the chosen disk, hence the colon
+#. at the end of the sentence. Please keep it.
+#: ../partman-auto.templates:10001
+msgid "Selected for partitioning:"
+msgstr "पार्टीशन करने के लिए चयनित:"
+
+#. Type: select
+#. Description
+#. :sl1:
+#: ../partman-auto.templates:10001
+msgid ""
+"The disk can be partitioned using one of several different schemes. If you "
+"are unsure, choose the first one."
+msgstr ""
+"डिस्क को बहुत से भिन्न स्कीम में से किसी एक द्वारा पार्टीशन किया जा सकता है. यदि आप "
+"अनिश्चित हैं, पहला वाला चुन लें."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
+#: ../partman-auto.templates:14001
+msgid "Guided partitioning"
+msgstr "मार्गदर्शन सहित पार्टिशनिंग"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
+#: ../partman-auto.templates:15001
+msgid "Guided - use the largest continuous free space"
+msgstr "दिग्दर्शित - सबसे बड़ा लगातार मुक्त स्थान का प्रयोग करें"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
+#: ../partman-auto.templates:16001
+msgid "Guided - use entire disk"
+msgstr "दिग्दर्शित - सम्पूर्ण डिस्क का प्रयोग करें"
+
+#. Type: select
+#. Description
+#. :sl1:
+#: ../partman-auto.templates:17001
+msgid "Select disk to partition:"
+msgstr "पार्टीशन करने के लिए डिस्क चुनें:"
+
+#. Type: select
+#. Description
+#. :sl1:
+#: ../partman-auto.templates:17001
+msgid ""
+"Note that all data on the disk you select will be erased, but not before you "
+"have confirmed that you really want to make the changes."
+msgstr ""
+"आप जो भी डिस्क चुनेंगे उसका पूरा डाटा मिटा दिया जाएगा, पर उससे पहले आपको यह सुनिश्चत "
+"करने के लिए पूछा जाएगा कि आप वास्तव में वे परिवर्तन करना चाहते हैं या नहीं."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
+#. This is a method for partioning - as in guided (automatic) versus manual
+#: ../partman-auto.templates:18001
+msgid "Manual"
+msgstr "हस्तचालित"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
+#: ../partman-auto.templates:19001
+msgid "Automatically partition the free space"
+msgstr "रिक्त जगह स्वचालित पार्टीशन करें"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
+#: ../partman-auto.templates:20001
+msgid "All files in one partition (recommended for new users)"
+msgstr "एक पार्टीशन में सभी फ़ाइलें (नए उपयोक्ताओं के लिए अनुसंशित)"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
+#: ../partman-auto.templates:21001
+msgid "Separate /home partition"
+msgstr "अलग /home पार्टिशन"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
+#: ../partman-auto.templates:22001
+msgid "Separate /home, /var, and /tmp partitions"
+msgstr "अलग-अलग /home, /var और /tmp पार्टिशन्स"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
+#: ../partman-auto-lvm.templates:1001
+msgid "Guided - use entire disk and set up LVM"
+msgstr "दिग्दर्शित - पूरी डिस्क का प्रयोग करें और एलवीएम व्यवस्थित करें"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../partman-base.templates:1001
+msgid "Starting up the partitioner"
+msgstr "पार्टीशनर प्रारंभ किया जा रहा है"
 
 #. Type: text
 #. Description
@@ -2383,166 +3885,6 @@ msgstr "पार्टीशन डिस्क"
 
 #. Type: text
 #. Description
-#. :sl1:
-#: ../partman-auto.templates:2001
-msgid "Computing the new partitions..."
-msgstr "नए पार्टीशन्स की गणना की जा रही है..."
-
-#. Type: select
-#. Description
-#. :sl1:
-#. Type: select
-#. Description
-#. :sl1:
-#: ../partman-auto.templates:5001 ../partman-auto.templates:9001
-msgid "Partitioning method:"
-msgstr "पार्टीशन करने की विधि:"
-
-#. Type: select
-#. Description
-#. :sl1:
-#: ../partman-auto.templates:5001
-msgid ""
-"The installer can guide you through partitioning a disk (using different "
-"standard schemes) or, if you prefer, you can do it manually. With guided "
-"partitioning you will still have a chance later to review and customise the "
-"results."
-msgstr ""
-"यह विभाजक आपको डेबियन के लिए हार्ड डिस्क पार्टिशन के दिशा निर्देश (विभिन्न मानक "
-"पद्धतिओं के अनुसार) दे सकता है या फिर आप चाहें तो इसे हस्तचालित भी कर सकते हैं. यदि आप "
-"पार्टिशनिंग सहायक का प्रयोग करते है फिर भी आपको बाद में परिणामों को देखने व परिवर्तन "
-"करने का अवसर मिलेगा."
-
-#. Type: select
-#. Description
-#. :sl1:
-#. Type: select
-#. Description
-#. :sl1:
-#: ../partman-auto.templates:5001 ../partman-auto.templates:9001
-msgid ""
-"If you choose guided partitioning for an entire disk, you will next be asked "
-"which disk should be used."
-msgstr ""
-"यदि आप संपूर्ण हार्डडिस्क के लिए दिग्दर्शित पार्टिशनिंग का चयन करते हैं तो आपसे अगला प्रश्न "
-"यह पूछा जाएगा कि कौन सी हार्डडिस्क प्रयोग की जाए."
-
-#. Type: select
-#. Description
-#. :sl1:
-#: ../partman-auto.templates:10001
-msgid "Partitioning scheme:"
-msgstr "पार्टीशन करने की स्कीम:"
-
-#. Type: select
-#. Description
-#. :sl1:
-#. "Selected for partitioning" can be either an entire disk
-#. of "the largest continuous free space" on an existing disk
-#. TRANSLATORS, please take care to choose something appropriate for both
-#.
-#. It is followed by a variable giving the chosen disk, hence the colon
-#. at the end of the sentence. Please keep it.
-#: ../partman-auto.templates:10001
-msgid "Selected for partitioning:"
-msgstr "पार्टीशन करने के लिए चयनित:"
-
-#. Type: select
-#. Description
-#. :sl1:
-#: ../partman-auto.templates:10001
-msgid ""
-"The disk can be partitioned using one of several different schemes. If you "
-"are unsure, choose the first one."
-msgstr ""
-"डिस्क को बहुत से भिन्न स्कीम में से किसी एक द्वारा पार्टीशन किया जा सकता है. यदि आप "
-"अनिश्चित हैं, पहला वाला चुन लें."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
-#: ../partman-auto.templates:14001
-msgid "Guided partitioning"
-msgstr "मार्गदर्शन सहित पार्टिशनिंग"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
-#: ../partman-auto.templates:15001
-msgid "Guided - use the largest continuous free space"
-msgstr "दिग्दर्शित - सबसे बड़ा लगातार मुक्त स्थान का प्रयोग करें"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
-#: ../partman-auto.templates:16001
-msgid "Guided - use entire disk"
-msgstr "दिग्दर्शित - सम्पूर्ण डिस्क का प्रयोग करें"
-
-#. Type: select
-#. Description
-#. :sl1:
-#: ../partman-auto.templates:17001
-msgid "Select disk to partition:"
-msgstr "पार्टीशन करने के लिए डिस्क चुनें:"
-
-#. Type: select
-#. Description
-#. :sl1:
-#: ../partman-auto.templates:17001
-msgid ""
-"Note that all data on the disk you select will be erased, but not before you "
-"have confirmed that you really want to make the changes."
-msgstr ""
-"आप जो भी डिस्क चुनेंगे उसका पूरा डाटा मिटा दिया जाएगा, पर उससे पहले आपको यह सुनिश्चत "
-"करने के लिए पूछा जाएगा कि आप वास्तव में वे परिवर्तन करना चाहते हैं या नहीं."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
-#. This is a method for partioning - as in guided (automatic) versus manual
-#: ../partman-auto.templates:18001
-msgid "Manual"
-msgstr "हस्तचालित"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
-#: ../partman-auto.templates:19001
-msgid "Automatically partition the free space"
-msgstr "रिक्त जगह स्वचालित पार्टीशन करें"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
-#: ../partman-auto.templates:20001
-msgid "All files in one partition (recommended for new users)"
-msgstr "एक पार्टीशन में सभी फ़ाइलें (नए उपयोक्ताओं के लिए अनुसंशित)"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
-#: ../partman-auto.templates:21001
-msgid "Separate /home partition"
-msgstr "अलग /home पार्टिशन"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
-#: ../partman-auto.templates:22001
-msgid "Separate /home, /var, and /tmp partitions"
-msgstr "अलग-अलग /home, /var और /tmp पार्टिशन्स"
-
-#. Type: text
-#. Description
 #. short variant of `do not use the partition'
 #. :sl1:
 #: ../partman-basicmethods.templates:7001
@@ -2564,65 +3906,6 @@ msgstr "फॉर्मेट"
 #: ../partman-basicmethods.templates:11001
 msgid "keep"
 msgstr "रखें"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../partman-partitioning.templates:2001
-msgid "Computing the new state of the partition table..."
-msgstr "पार्टिशन टेबल की नयी अवस्था की गणना की जा रही है..."
-
-#. Type: select
-#. Choices
-#. :sl1:
-#: ../partman-partitioning.templates:12001
-msgid "Beginning"
-msgstr "प्रारंभ"
-
-#. Type: select
-#. Choices
-#. :sl1:
-#: ../partman-partitioning.templates:12001
-msgid "End"
-msgstr "अंत"
-
-#. Type: select
-#. Description
-#. :sl1:
-#: ../partman-partitioning.templates:12002
-msgid "Location for the new partition:"
-msgstr "नए पार्टीशन के लिए स्थान:"
-
-#. Type: select
-#. Description
-#. :sl1:
-#: ../partman-partitioning.templates:12002
-msgid ""
-"Please choose whether you want the new partition to be created at the "
-"beginning or at the end of the available space."
-msgstr ""
-"कृपया चुनें कि क्या आप चाहते हैं कि नया विभाजन शुरुआत में या उपलब्ध स्थान के अंत में बनाया जाए।"
-
-#. Type: select
-#. Choices
-#. :sl1:
-#: ../partman-partitioning.templates:13001
-msgid "Primary"
-msgstr "प्रायमरी"
-
-#. Type: select
-#. Choices
-#. :sl1:
-#: ../partman-partitioning.templates:13001
-msgid "Logical"
-msgstr "लॉज़िकल"
-
-#. Type: select
-#. Description
-#. :sl1:
-#: ../partman-partitioning.templates:13002
-msgid "Type for the new partition:"
-msgstr "नए पार्टीशन के लिए प्रकार:"
 
 #. Type: text
 #. Description
@@ -2718,6 +4001,44 @@ msgstr "स्वैप"
 
 #. Type: text
 #. Description
+#. :sl2:
+#. File system name (untranslatable in many languages)
+#. Type: text
+#. Description
+#. :sl1:
+#. Short file system name (untranslatable in many languages)
+#: ../partman-btrfs.templates:1001 ../partman-btrfs.templates:3001
+msgid "btrfs"
+msgstr "बीटीआरऍफ़एस"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Type: text
+#. Description
+#. :sl1:
+#: ../partman-efi.templates:2001 ../partman-efi.templates:4001
+msgid "EFI System Partition"
+msgstr "EFI सिस्टम विभाजन"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. short variant of 'EFI System Partition'
+#. Up to 10 character positions
+#: ../partman-efi.templates:5001
+msgid "ESP"
+msgstr "ईएसपी"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../partman-efi.templates:7001
+msgid "EFI-fat16"
+msgstr "ईएफआई-एफएटी16"
+
+#. Type: text
+#. Description
 #. :sl1:
 #. File system name (untranslatable in many languages)
 #. Type: text
@@ -2742,18 +4063,6 @@ msgstr "ईएक्सटी4"
 
 #. Type: text
 #. Description
-#. :sl2:
-#. File system name (untranslatable in many languages)
-#. Type: text
-#. Description
-#. :sl1:
-#. Short file system name (untranslatable in many languages)
-#: ../partman-btrfs.templates:1001 ../partman-btrfs.templates:3001
-msgid "btrfs"
-msgstr "बीटीआरऍफ़एस"
-
-#. Type: text
-#. Description
 #. :sl1:
 #. File system name (untranslatable in many languages)
 #. Type: text
@@ -2766,15 +4075,62 @@ msgstr "जेएफ़एस"
 
 #. Type: text
 #. Description
-#. :sl2:
-#. File system name (untranslatable in many languages)
-#. Type: text
+#. :sl1:
+#: ../partman-partitioning.templates:2001
+msgid "Computing the new state of the partition table..."
+msgstr "पार्टिशन टेबल की नयी अवस्था की गणना की जा रही है..."
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../partman-partitioning.templates:12001
+msgid "Beginning"
+msgstr "प्रारंभ"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../partman-partitioning.templates:12001
+msgid "End"
+msgstr "अंत"
+
+#. Type: select
 #. Description
 #. :sl1:
-#. Short file system name (untranslatable in many languages)
-#: ../partman-xfs.templates:1001 ../partman-xfs.templates:3001
-msgid "xfs"
-msgstr "एक्सएफएस"
+#: ../partman-partitioning.templates:12002
+msgid "Location for the new partition:"
+msgstr "नए पार्टीशन के लिए स्थान:"
+
+#. Type: select
+#. Description
+#. :sl1:
+#: ../partman-partitioning.templates:12002
+msgid ""
+"Please choose whether you want the new partition to be created at the "
+"beginning or at the end of the available space."
+msgstr ""
+"कृपया चुनें कि क्या आप चाहते हैं कि नया विभाजन शुरुआत में या उपलब्ध स्थान के अंत में बनाया जाए।"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../partman-partitioning.templates:13001
+msgid "Primary"
+msgstr "प्रायमरी"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../partman-partitioning.templates:13001
+msgid "Logical"
+msgstr "लॉज़िकल"
+
+#. Type: select
+#. Description
+#. :sl1:
+#: ../partman-partitioning.templates:13002
+msgid "Type for the new partition:"
+msgstr "नए पार्टीशन के लिए प्रकार:"
 
 #. Type: note
 #. Description
@@ -2878,29 +4234,72 @@ msgstr ""
 
 #. Type: text
 #. Description
-#. :sl1:
+#. :sl2:
+#. File system name (untranslatable in many languages)
 #. Type: text
 #. Description
 #. :sl1:
-#: ../partman-efi.templates:2001 ../partman-efi.templates:4001
-msgid "EFI System Partition"
-msgstr "EFI सिस्टम विभाजन"
+#. Short file system name (untranslatable in many languages)
+#: ../partman-xfs.templates:1001 ../partman-xfs.templates:3001
+msgid "xfs"
+msgstr "एक्सएफएस"
+
+#. Type: text
+#. Description
+#. Main menu item
+#. should not be more than 55 columns
+#. pkgsel is the module that installs packages by running tasksel to
+#. select "tasks". Please use "install *software*" and not
+#. "install *packages*" which is less adapted for non technical users
+#. :sl1:
+#: ../pkgsel.templates:1001
+msgid "Select and install software"
+msgstr "सॉफ्टवेयर चुनें व संस्थापित करें"
+
+#. Type: text
+#. Description
+#. This appears in a progress bar when running pkgsel
+#. The text is used when pkgsel is launched, before it installs packages
+#. :sl1:
+#: ../pkgsel.templates:2001
+msgid "Setting up..."
+msgstr "सेटअप किया जा रहा है..."
+
+#. Type: text
+#. Description
+#. This appears in a progress bar when running pkgsel
+#. The text is used when upgrading already installed packages.
+#. :sl1:
+#: ../pkgsel.templates:5001
+msgid "Upgrading software..."
+msgstr "सॉफ्टवेयर अपग्रेड किया जा रहा है..."
+
+#. Type: text
+#. Description
+#. This appears in a progress bar when running pkgsel
+#. The text is used when running tasksel to allow selecting packages
+#. Tasksel will then display its own screens
+#. :sl1:
+#: ../pkgsel.templates:6001
+msgid "Running tasksel..."
+msgstr "टास्कसेल चला रहे हैं..."
+
+#. Type: text
+#. Description
+#. This appears in a progress bar when running pkgsel
+#. The text is used at the end of the installation phase while
+#. cleaning up pkgsel's stuff
+#. :sl1:
+#: ../pkgsel.templates:7001
+msgid "Cleaning up..."
+msgstr "साफ कर रहे हैं..."
 
 #. Type: text
 #. Description
 #. :sl1:
-#. short variant of 'EFI System Partition'
-#. Up to 10 character positions
-#: ../partman-efi.templates:5001
-msgid "ESP"
-msgstr "ईएसपी"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../partman-efi.templates:7001
-msgid "EFI-fat16"
-msgstr "ईएफआई-एफएटी16"
+#: ../rescue-mode.templates:1001
+msgid "Enter rescue mode"
+msgstr "बचाव मोड में प्रवेश करें"
 
 #. Type: text
 #. Description
@@ -2909,885 +4308,6 @@ msgstr "ईएफआई-एफएटी16"
 #: ../tzsetup-udeb.templates:1001
 msgid "Saving the time zone..."
 msgstr "समय-मण्डल सुरक्षित किया जा रहा है..."
-
-#. Type: text
-#. Description
-#. Main menu item
-#. Translators: keep below 55 columns
-#. :sl1:
-#: ../clock-setup.templates:1001
-msgid "Configure the clock"
-msgstr "घड़ी व्यवस्थित करें"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../clock-setup.templates:2001
-msgid "Is the system clock set to UTC?"
-msgstr "क्या सिस्टम की घड़ी यूटीसी से मिली हुई है?"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../clock-setup.templates:2001
-msgid ""
-"System clocks are generally set to Coordinated Universal Time (UTC). The "
-"operating system uses your time zone to convert system time into local time. "
-"This is recommended unless you also use another operating system that "
-"expects the clock to be set to local time."
-msgstr ""
-"सिस्टम घड़ियाँ सामान्यतः समपदस्थ वैश्विक समय (यूटीसी) से मिली होती हैं। प्रचालन तंत्र आपके "
-"समय-मण्डल का प्रयोग करते हुए सिस्टम समय को स्थानीय समय में परिवर्तित करता है। इसकी "
-"संस्तुति की जाती है जब तक कि आप साथ में कोई अन्य प्रचालन तंत्र प्रयोग नहीं करते हैं जिसे घड़ी "
-"स्थानीय समय से मिली हुई चाहिए।"
-
-#. Type: text
-#. Description
-#. progress bar item
-#. :sl1:
-#: ../clock-setup.templates:3001
-msgid "Configuring clock settings..."
-msgstr "घड़ी की अवस्था कोिंग को सुरक्षित कर रहे है..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../clock-setup.templates:4001
-msgid "Setting up the clock"
-msgstr "घड़ी व्यवस्थित हो रही है"
-
-#. Type: text
-#. Description
-#. progress bar item
-#. :sl1:
-#: ../clock-setup.templates:7001
-msgid "Getting the time from a network time server..."
-msgstr "नेटवर्क सर्वर से समय व्यवस्था का ज्ञान प्राप्त किया जा रहा है..."
-
-#. Type: text
-#. Description
-#. progress bar item
-#. :sl1:
-#: ../clock-setup.templates:8001
-msgid "Setting the hardware clock..."
-msgstr "घड़ी व्यवस्थित हो रही है..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../base-installer.templates:4001
-msgid "Preparing to install the base system..."
-msgstr "आधार तंत्र संस्थापित करने की तैयारी कर रहे हैं..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../base-installer.templates:5001 ../bootstrap-base.templates:30001
-msgid "Installing the base system"
-msgstr "आधार तंत्र संस्थापित किया जा रहा है"
-
-#. #-#-#-#-#  templates.pot (base-installer)  #-#-#-#-#
-#. Type: text
-#. Description
-#. :sl1:
-#. #-#-#-#-#  templates.pot (apt-setup)  #-#-#-#-#
-#. Type: text
-#. Description
-#. :sl2:
-#. #-#-#-#-#  templates.pot (pkgsel)  #-#-#-#-#
-#. Type: text
-#. Description
-#. :sl2:
-#. #-#-#-#-#  templates.pot (finish-install)  #-#-#-#-#
-#. Type: text
-#. Description
-#. :sl1:
-#: ../base-installer.templates:6001 ../apt-setup-udeb.templates:3001
-#: ../pkgsel.templates:9001 ../finish-install.templates:3001
-msgid "Running ${SCRIPT}..."
-msgstr "${SCRIPT} प्रक्रिया में है..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../base-installer.templates:7001
-msgid "Setting up the base system..."
-msgstr "आधार तंत्र व्यवस्थित रहे हैं..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../base-installer.templates:8001 ../bootstrap-base.templates:59001
-msgid "Configuring APT sources..."
-msgstr "एपीटी स्रोत व्यवस्थित किया जा रहा है..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../base-installer.templates:9001
-msgid "Updating the list of available packages..."
-msgstr "उपलब्ध पैकेजों की सूची का अद्यतन कर रहे हैं..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../base-installer.templates:10001
-msgid "Installing extra packages..."
-msgstr "अतिरिक्त पैकेजों को संस्थापित किया जा रहा है..."
-
-#. Type: text
-#. Description
-#. SUBST0 is a package name
-#. :sl1:
-#: ../base-installer.templates:11001
-msgid "Installing extra packages - retrieving and installing ${SUBST0}..."
-msgstr "अतिरिक्त पैकेजों का संस्थापन - ${SUBST0} का प्राप्तिकरण व संस्थापन..."
-
-#. Type: text
-#. Description
-#. Item in the main menu to select this package
-#. TRANSLATORS: <65 columns
-#. :sl1:
-#: ../bootstrap-base.templates:1001
-msgid "Install the base system"
-msgstr "आधार तंत्र संस्थापित करें"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. Release is a filename which should not be translated
-#: ../bootstrap-base.templates:23001
-msgid "Retrieving Release file"
-msgstr "रिलीज फ़ाइल प्राप्त कर रहे हैं"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. Release is a filename which should not be translated
-#: ../bootstrap-base.templates:24001
-msgid "Retrieving Release file signature"
-msgstr "रिलीज फ़ाइल हस्ताक्षर प्राप्त कर रहे है"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. "packages" here can be translated
-#: ../bootstrap-base.templates:25001
-msgid "Finding package sizes"
-msgstr "पैकेज के आकार पता कर रहे है"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. Packages is a filename which should not be translated
-#: ../bootstrap-base.templates:26001
-msgid "Retrieving Packages files"
-msgstr "पैकेज फ़ाइलों को प्राप्त कर रहे है"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. Packages is a filename which should not be translated
-#: ../bootstrap-base.templates:27001
-msgid "Retrieving Packages file"
-msgstr "पैकेजेज़ फ़ाइल को प्राप्त कर रहे है"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. "packages" here can be translated
-#: ../bootstrap-base.templates:28001
-msgid "Retrieving packages"
-msgstr "पुनः प्राप्त पैकेज"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. "packages" here can be translated
-#: ../bootstrap-base.templates:29001
-msgid "Extracting packages"
-msgstr "पैकेजों को निकाला जा रहा है"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. Core packages are packages that are part of the Debian base system
-#. The "core" packages are indeed packages that are specifically
-#. recorded as part of the base system. Other packages may
-#. be installed on the base system because of dependency resolution
-#: ../bootstrap-base.templates:31001
-msgid "Installing core packages"
-msgstr "कोर पैकेज स्थापित करना"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. Required packages are packages which installation is triggered
-#. by the dependency chain of core packages
-#. In short, they are "required" because at least one of the
-#. packages from the core packages depends on them
-#: ../bootstrap-base.templates:32001
-msgid "Unpacking required packages"
-msgstr "आवश्यक पैकेज खोलना"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../bootstrap-base.templates:33001
-msgid "Configuring required packages"
-msgstr "आवश्यक पैकेज कॉन्फ़िगर करना"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. The base system is the minimal Debian system
-#. See http://www.debian.org/doc/debian-policy/ch-binary.html#s3.7
-#: ../bootstrap-base.templates:34001
-msgid "Unpacking the base system"
-msgstr "आधार तंत्र खोला जा रहा है"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. The base system is the minimal Debian system
-#. See http://www.debian.org/doc/debian-policy/ch-binary.html#s3.7
-#: ../bootstrap-base.templates:35001
-msgid "Configuring the base system"
-msgstr "आधार तंत्र व्यवस्थित किया जा रहा है"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../bootstrap-base.templates:36001
-msgid "${SECTION}: ${INFO}..."
-msgstr "${SECTION}: ${INFO}..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. SUBST0 is a package name
-#: ../bootstrap-base.templates:37001
-msgid "Validating ${SUBST0}..."
-msgstr "${SUBST0} की पुष्टि की जा रही है..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. SUBST0 is a package name
-#: ../bootstrap-base.templates:38001
-msgid "Retrieving ${SUBST0}..."
-msgstr "${SUBST0} प्राप्त किया जा रहा है..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. SUBST0 is a package name
-#: ../bootstrap-base.templates:39001
-msgid "Extracting ${SUBST0}..."
-msgstr "${SUBST0} निकाला जा रहा है..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. SUBST0 is a package name
-#: ../bootstrap-base.templates:40001
-msgid "Unpacking ${SUBST0}..."
-msgstr "${SUBST0}खोला जा रहा है..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. SUBST0 is a package name
-#: ../bootstrap-base.templates:41001
-msgid "Configuring ${SUBST0}..."
-msgstr "${SUBST0} व्यवस्थित किया जा रहा है..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. Release is a filename which should not be translated
-#: ../bootstrap-base.templates:42001
-msgid "Checking Release signature"
-msgstr "रिलीज़ हस्ताक्षर को जाँच रहे हैं"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. SUBST0 is a gpg key id
-#. Release is a filename which should not be translated
-#: ../bootstrap-base.templates:43001
-msgid "Valid Release signature (key id ${SUBST0})"
-msgstr "रिलीज़ हस्ताक्षर वैध (कुंजी पहचान ${SUBST0})"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../bootstrap-base.templates:44001
-msgid "Resolving dependencies of base packages..."
-msgstr "आधार पैकेजों की निर्भरता का विश्लेषण कर रहे हैं..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. SUBST0 is a list of packages
-#: ../bootstrap-base.templates:45001
-msgid "Found additional base dependencies: ${SUBST0}"
-msgstr "अतिरिक्त आधारभूत निर्भरताएँ पाई गईं: ${SUBST0}"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. SUBST0 is a list of packages
-#: ../bootstrap-base.templates:46001
-msgid "Found additional required dependencies: ${SUBST0}"
-msgstr "अतिरिक्त आवश्यक निर्भरताएँ पाई गईं: ${SUBST0}"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. SUBST0 is a list of packages
-#: ../bootstrap-base.templates:47001
-msgid "Found packages in base already in required: ${SUBST0}"
-msgstr "आधारभूत में पाये गये पैकेज पहले से ही आवश्यक में हैं: ${SUBST0}"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../bootstrap-base.templates:48001
-msgid "Resolving dependencies of required packages..."
-msgstr "आवश्यक पैकेजों की निर्भरता हल कर रहे हैं..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. SUBST0 is an archive component (main, etc)
-#. SUBST1 is a mirror
-#: ../bootstrap-base.templates:49001
-msgid "Checking component ${SUBST0} on ${SUBST1}..."
-msgstr "अव्यव ${SUBST0} को ${SUBST1} पर जाँच रहे हैं..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. Core packages are packages that are part of the Debian base system
-#. The "core" packages are indeed packages that are specifically
-#. recorded as part of the base system. Other packages may
-#. be installed on the base system because of dependency resolution
-#: ../bootstrap-base.templates:50001
-msgid "Installing core packages..."
-msgstr "क्रोड़ पैकेजों को संस्थापित किया जा रहा है..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. Required packages are packages which installation is triggered
-#. by the dependency chain of core packages
-#. In short, they are "required" because at least one of the
-#. packages from the core packages depends on them
-#: ../bootstrap-base.templates:51001
-msgid "Unpacking required packages..."
-msgstr "आवश्यक पैकेजों को खोल रहे हैं..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. Required packages are packages which installation is triggered
-#. by the dependency chain of core packages
-#. In short, they are "required" because at least one of the
-#. packages from the core packages depends on them
-#: ../bootstrap-base.templates:52001
-msgid "Configuring required packages..."
-msgstr "आवश्यक पैकेजों को व्यवस्थित कर रहे हैं..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../bootstrap-base.templates:53001
-msgid "Installing base packages..."
-msgstr "आधार पैकेजों को संस्थापित किया जा रहा है..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../bootstrap-base.templates:54001
-msgid "Unpacking the base system..."
-msgstr "आधार तंत्र खोल रहे हैं..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../bootstrap-base.templates:55001
-msgid "Configuring the base system..."
-msgstr "आधार तंत्र व्यवस्थित किया जा रहा है।"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../bootstrap-base.templates:56001
-msgid "Base system installed successfully."
-msgstr "आधार तंत्र सफलता पूर्वक संस्थापित हो गया."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../bootstrap-base.templates:60001
-msgid "Selecting the kernel to install..."
-msgstr "संस्थापित करने के लिए कर्नेल चुना जा रहा है..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../bootstrap-base.templates:61001
-msgid "Installing the kernel..."
-msgstr "कर्नेल संस्थापित किया जा रहा है..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. SUBST0 is a package name
-#: ../bootstrap-base.templates:62001
-msgid "Installing the kernel - retrieving and installing ${SUBST0}..."
-msgstr "करनेल का संस्थापन - ${SUBST0} का प्राप्तिकरण व संस्थापन..."
-
-#. Type: text
-#. Description
-#. Main menu item
-#. MUST be kept below 55 characters/columns
-#. :sl1:
-#: ../apt-setup-udeb.templates:1001
-msgid "Configure the package manager"
-msgstr "पैकेज प्रबंधक कॉन्फ़िगर करें"
-
-#. Type: text
-#. Description
-#. Translators, "apt" is the program name
-#. so please do NOT translate it
-#. :sl1:
-#: ../apt-setup-udeb.templates:2001
-msgid "Configuring apt"
-msgstr "कॉन्फ़िगर एपीटी"
-
-#. Type: multiselect
-#. Choices
-#. SEC_HOST is a host name (e.g. security.debian.org)
-#. Translators: the *entire* string should be under 55 columns
-#. including host name. In short, KEEP THIS SHORT and, yes, that's tricky
-#. :sl1:
-#: ../apt-setup-udeb.templates:11001
-msgid "security updates (from ${SEC_HOST})"
-msgstr "सुरक्षा अपडेट्स (${SEC_HOST} से)"
-
-#. Type: multiselect
-#. Choices
-#. SEC_HOST is a host name (e.g. security.debian.org)
-#. Translators: the *entire* string should be under 55 columns
-#. including host name. In short, KEEP THIS SHORT and, yes, that's tricky
-#. :sl1:
-#: ../apt-setup-udeb.templates:11001
-msgid "release updates"
-msgstr "रिलीज़ अपडेट्स"
-
-#. Type: multiselect
-#. Choices
-#. SEC_HOST is a host name (e.g. security.debian.org)
-#. Translators: the *entire* string should be under 55 columns
-#. including host name. In short, KEEP THIS SHORT and, yes, that's tricky
-#. :sl1:
-#: ../apt-setup-udeb.templates:11001
-msgid "backported software"
-msgstr "बैकपोर्टेड सॉफ्टवेयर"
-
-#. Type: multiselect
-#. Description
-#. :sl1:
-#: ../apt-setup-udeb.templates:11002
-msgid "Services to use:"
-msgstr "नेमसर्वर पता:"
-
-#. Type: multiselect
-#. Description
-#. :sl1:
-#: ../apt-setup-udeb.templates:11002
-msgid ""
-"Debian has two services that provide updates to releases: security and "
-"release updates."
-msgstr ""
-"डेबियन में रिलीज़ अपडेट प्राप्त करने के लिए दो सुविधाएँ उपलब्ध हैं: सेक्यूरिटी तथा रिलीज़ "
-"अपडेट्स।"
-
-#. Type: multiselect
-#. Description
-#. :sl1:
-#: ../apt-setup-udeb.templates:11002
-msgid ""
-"Security updates help to keep your system secured against attacks. Enabling "
-"this service is strongly recommended."
-msgstr ""
-"सेक्यूरिटी अपडेट्स के द्वारा आपके सिस्टम की सुरक्षा को सेक्यूरिटी आक्रमण से सुरक्षित किया जाता "
-"है। हम आपसे अनुरोध करते हैं कि आप इस सुविधा का उपयोग करें।"
-
-#. Type: multiselect
-#. Description
-#. :sl1:
-#: ../apt-setup-udeb.templates:11002
-msgid ""
-"Release updates provide more current versions for software that changes "
-"relatively frequently and where not having the latest version could reduce "
-"the usability of the software. It also provides regression fixes. This "
-"service is only available for stable and oldstable releases."
-msgstr ""
-"रिलीज़ अपडेट्स उन प्रोग्राम के लिए है, जो नियमित रूप से बदलते रहते हैं, तथा सर्वोत्तम वर्शन "
-"का उपयोग न करने से प्रोग्राम की उपयोगिता में कमी हो। उदारणतः, वायरस स्कैनर की नवीनतम "
-"वायरस सूची इस भंडार से प्राप्त किया जा सकता है। यह सुविधा केवल 'स्टेबल' तथा 'ओल्डस्टेबल' "
-"रिलीज़ के लिए उपलब्ध है।"
-
-#. Type: multiselect
-#. Description
-#. :sl1:
-#: ../apt-setup-udeb.templates:11002
-msgid ""
-"Backported software are adapted from the development version to work with "
-"this release. Although this software has not gone through such complete "
-"testing as that contained in the release, it includes newer versions of some "
-"applications which may provide useful features. Enabling backports here does "
-"not cause any of them to be installed by default; it only allows you to "
-"manually select backports to use."
-msgstr ""
-"कुछ सॉफ्टवेयर विकास वृक्ष से इस रिलीज़ के साथ कार्य करने के लिए बैकपोर्ट िकए गये हैं. हालाँकि "
-"इन सॉफ्टवेयर का उतना पूर्ण परीक्षण नहीं हुआ है जितना कि इस रिलीज़ के सॉफ्टवेयर का हुआ है, "
-"फिर भी इसमें कुछ अनुप्रयोगों के नये वर्ज़न शामिल हैं जो कुछ उपयोगी विशेषताएँ प्रदान कर सकते हैं."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:1001
-msgid "Scanning the installation media..."
-msgstr "स्थापना मीडिया को स्कैन कर रहा है ..."
-
-#. Type: error
-#. Description
-#. :sl2:
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:2001 ../apt-cdrom-setup.templates:6001
-msgid ""
-"An attempt to configure apt to install additional packages from the media "
-"failed."
-msgstr ""
-"मीडिया से अतिरिक्त पैकेज स्थापित करने के लिए apt को कॉन्फ़िगर करने का प्रयास विफल रहा।"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#. Type: boolean
-#. Description
-#. :sl1:
-#. Type: boolean
-#. Description
-#. :sl1:
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:3001 ../apt-cdrom-setup.templates:4001
-#: ../apt-cdrom-setup.templates:5001 ../apt-cdrom-setup.templates:6001
-msgid "Scan extra installation media?"
-msgstr "अतिरिक्त स्थापना मीडिया स्कैन करें?"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:3001
-msgid "Scanning your installation media finds the label:"
-msgstr "आपके इंस्टालेशन मीडिया को स्कैन करने पर लेबल मिल जाता है:"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:3001
-msgid ""
-"You now have the option of scanning additional media for use by the package "
-"manager (apt). Normally these should be from the same set as the one you "
-"booted from. If you do not have any additional media, this step can just be "
-"skipped."
-msgstr ""
-"अब आपके पास पैकेज मैनेजर (एप्ट) द्वारा उपयोग के लिए अतिरिक्त मीडिया को स्कैन करने का "
-"विकल्प है। आम तौर पर ये उसी सेट से होने चाहिए, जिस पर आपने बूट किया था। यदि आपके पास "
-"कोई अतिरिक्त मीडिया नहीं है, तो यह कदम बस छोड़ दिया जा सकता है।"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:3001 ../apt-cdrom-setup.templates:4001
-msgid "If you wish to scan more media, please insert another one now."
-msgstr "यदि आप अधिक मीडिया स्कैन करना चाहते हैं, तो कृपया अब एक और डालें।"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:4001
-msgid "The image with the following label has been scanned:"
-msgstr "निम्नलिखित लेबल वाली छवि को स्कैन किया गया है:"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:5001
-msgid "The image with the following label has already been scanned:"
-msgstr "निम्नलिखित लेबल वाली छवि पहले ही स्कैन की जा चुकी है:"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:5001
-msgid "Please replace it now, if you wish to scan another."
-msgstr "यदि आप दूसरा स्कैन करना चाहते हैं, तो कृपया इसे बदल दें।"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:6001
-msgid "Please check that the media has been inserted correctly."
-msgstr "कृपया जांच लें कि मीडिया सही तरीके से डाला गया है।"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:7001
-msgid "Media change"
-msgstr "मीडिया बदल गया"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:7001
-msgid "Please insert the media labeled '${LABEL}' and press enter."
-msgstr "कृपया '${LABEL}' लेबल वाला मीडिया डालें और एंटर दबाएँ।"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. finish-install progress bar item
-#: ../apt-cdrom-setup.templates:8001
-msgid "Disabling netinst CD in sources.list..."
-msgstr "नेटिन्सटाल सुविधा को sources.list में निष्क्रिय किया जा रहा है..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../apt-cdrom-setup.templates:9001 ../apt-mirror-setup.templates:6001
-msgid ""
-"If you are installing from a netinst CD image and choose not to use a "
-"mirror, you will end up with only a very minimal base system."
-msgstr ""
-"यदि आप एक netinst सीडी छवि से स्थापित कर रहे हैं और दर्पण का उपयोग नहीं करना चुनते हैं, "
-"तो आप केवल बहुत ही न्यूनतम आधार प्रणाली के साथ समाप्त हो जाएंगे।"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:10001
-msgid ""
-"You are installing from a netinst CD image, which by itself only allows "
-"installation of a very minimal base system. Use a mirror to install a more "
-"complete system."
-msgstr ""
-"आप एक netinst सीडी छवि से स्थापित कर रहे हैं, जो अपने आप में केवल एक बहुत ही न्यूनतम "
-"आधार प्रणाली की स्थापना की अनुमति देता है। अधिक पूर्ण प्रणाली स्थापित करने के लिए दर्पण "
-"का उपयोग करें।"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:11001
-msgid ""
-"You are installing from an image which contains a limited selection of "
-"packages."
-msgstr "आप एक छवि से स्थापित कर रहे हैं जिसमें संकुल का सीमित चयन है।"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. The value of %i can be 2 or 3
-#: ../apt-cdrom-setup.templates:12001
-#, no-c-format
-msgid ""
-"You have scanned %i images. Even though these contain a fair selection of "
-"packages, some may be missing (notably some packages needed to support "
-"languages other than English)."
-msgstr ""
-"आपने %i छवियां स्कैन की हैं। भले ही इनमें पैकेजों का सही चयन हो, लेकिन कुछ गायब हो सकते हैं "
-"(विशेष रूप से अंग्रेजी के अलावा अन्य भाषाओं का समर्थन करने के लिए आवश्यक कुछ पैकेज)।"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. The value of %i can be from 4 to 8
-#: ../apt-cdrom-setup.templates:13001
-#, no-c-format
-msgid ""
-"You have scanned %i images. Even though these contain a large selection of "
-"packages, some may be missing."
-msgstr ""
-"आपने %i छवियां स्कैन की हैं। भले ही इनमें पैकेज का एक बड़ा चयन हो, लेकिन कुछ गायब हो सकते हैं।"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:14001
-msgid ""
-"Note that using a mirror can result in a large amount of data being "
-"downloaded during the next step of the installation."
-msgstr ""
-"इस विषय का ध्यान रखिए कि मिरर के उपयोग से संस्थापन के अगले चरण में भारी मात्रा में डेटा "
-"नेटवर्क से डाउनलोड की जाएगी।"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:15001
-msgid ""
-"You are installing from a DVD image. Even though it contains a large "
-"selection of packages, some may be missing."
-msgstr ""
-"आप एक डीवीडी छवि से स्थापित कर रहे हैं। भले ही इसमें पैकेजों का एक बड़ा चयन हो, लेकिन कुछ "
-"गायब हो सकते हैं।"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:16001
-msgid ""
-"Unless you don't have a good Internet connection, use of a mirror is "
-"recommended, especially if you plan to install a graphical desktop "
-"environment."
-msgstr ""
-"अच्छी इंटरनेट सुविधा की उपस्थिति में आपसे अनुरोध है कि आप मिरर का उपयोग करें, विशेषतः अगर "
-"आप ग्राफिकल सिस्टम का संस्थापन करना चाहते हैं।"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:17001
-msgid ""
-"If you have a reasonably good Internet connection, use of a mirror is "
-"suggested if you plan to install a graphical desktop environment."
-msgstr ""
-"अच्छी इंटरनेट सुविधा की उपस्थिति में करें, तः अगर आप ग्राफिकल सिस्टम का संस्थापन करना च, "
-"तो मिरर का उपयोग बेहतर होगााहते हैं।"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../apt-mirror-setup.templates:1001
-msgid "Scanning the mirror..."
-msgstr "मिरर ी को स्कैन किया जा रहा है..."
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-mirror-setup.templates:2001
-msgid "Use non-free software?"
-msgstr "नॉन-फ्री सॉफ्टवेयर प्रयोग करें?"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-mirror-setup.templates:2001
-msgid ""
-"Some non-free software has been made to work with Debian. Though this "
-"software is not at all a part of Debian, standard Debian tools can be used "
-"to install it. This software has varying licenses which may prevent you from "
-"using, modifying, or sharing it."
-msgstr ""
-"कुछ नॉन-फ्री सॉफ्टवेयरों को डेबियन के साथ काम करने लायक बनाया गया है. यह सॉफ्टवेयर "
-"डेबियन का भाग नहीं है, फिर भी मानक डेबियन औजारों की सहायता से इनको संस्थापित किया जा "
-"सकता है. इन सॉफ्टवेयरों के लाइसेंस भिन्न हैं जोकि आपको इनके प्रयोग, परिवर्तन व वितरण से "
-"रोक सकते हैं."
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#. Type: boolean
-#. Description
-#. This template is used by the Ubuntu version of d-i.
-#. :sl2:
-#: ../apt-mirror-setup.templates:2001 ../apt-mirror-setup.templates-ubuntu:1001
-msgid "Please choose whether you want to have it available anyway."
-msgstr "कृपया चुनें कि आप फिर भी इनको उपलब्ध रखना चाहेंगे."
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-mirror-setup.templates:3001
-msgid "Use contrib software?"
-msgstr "कॉन्ट्रिब सॉफ्टवेयर प्रयोग करें?"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-mirror-setup.templates:3001
-msgid ""
-"Some additional software has been made to work with Debian. Though this "
-"software is free, it depends on non-free software for its operation. This "
-"software is not a part of Debian, but standard Debian tools can be used to "
-"install it."
-msgstr ""
-"कुछ अतिरिक्त सॉफ्टवेयरों को डेबियन के साथ कार्य करने योग्य बनाया गया है. हालाँकि ये "
-"सॉफ्टवेयर फ्री हैं, फिर भी ये नॉन-फ्री सॉफ्टवेयरों पर निर्भर करते हैं. यह सॉफ्टवेयर डेबियन का "
-"भाग नहीं हैं फिरभी इन्हें मानक डेबियन औजारों की सहायता से संस्थापित किया जा सकता है."
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#. Type: boolean
-#. Description
-#. This template is used by the Ubuntu version of d-i.
-#. :sl2:
-#. Type: boolean
-#. Description
-#. This template is used by the Ubuntu version of d-i.
-#. :sl2:
-#. Type: boolean
-#. Description
-#. This template is used by the Ubuntu version of d-i.
-#. :sl2:
-#. Type: boolean
-#. Description
-#. This template is used by the Ubuntu version of d-i.
-#. :sl2:
-#: ../apt-mirror-setup.templates:3001 ../apt-mirror-setup.templates-ubuntu:2001
-#: ../apt-mirror-setup.templates-ubuntu:3001
-#: ../apt-mirror-setup.templates-ubuntu:4001
-#: ../apt-mirror-setup.templates-ubuntu:5001
-msgid ""
-"Please choose whether you want this software to be made available to you."
-msgstr "चुनें कि आप यह सॉफ्टवेयर उपलब्ध चाहते हैं या नहीं."
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-mirror-setup.templates:5001
-msgid "Use a network mirror?"
-msgstr "नेटवर्क मिरर का प्रयोग करें?"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-mirror-setup.templates:5001
-msgid ""
-"A network mirror can be used to supplement the software that is included on "
-"the installation media. This may also make newer versions of software "
-"available."
-msgstr ""
-"इंस्टॉलेशन मीडिया पर शामिल किए गए सॉफ़्टवेयर के पूरक के लिए एक नेटवर्क दर्पण का उपयोग "
-"किया जा सकता है। इससे सॉफ्टवेयर के नए संस्करण भी उपलब्ध हो सकते हैं।"
 
 #. Type: boolean
 #. Description
@@ -3863,26 +4383,6 @@ msgstr ""
 #: ../user-setup-udeb.templates:6001
 msgid "Note that you will not be able to see the password as you type it."
 msgstr "ज्ञात रहे कि टाइप करते समय कूटशब्द आपको दिखाई नहीं पड़ेगा."
-
-#. #-#-#-#-#  templates.pot (user-setup)  #-#-#-#-#
-#. Type: password
-#. Description
-#. :sl1:
-#. Type: password
-#. Description
-#. :sl1:
-#. #-#-#-#-#  templates.pot (grub-installer)  #-#-#-#-#
-#. Type: password
-#. Description
-#. :sl2:
-#. #-#-#-#-#  templates.pot (network-console)  #-#-#-#-#
-#. Type: password
-#. Description
-#. :sl3:
-#: ../user-setup-udeb.templates:7001 ../user-setup-udeb.templates:14001
-#: ../grub-installer.templates:10001 ../network-console.templates:5001
-msgid "Re-enter password to verify:"
-msgstr "पुष्टि करने के लिए कूटशब्द दोबारा भरें:"
 
 #. Type: password
 #. Description
@@ -3978,496 +4478,6 @@ msgstr "उपयोक्ता व पासशब्द सेटअप क�
 #: ../user-setup-udeb.templates:19001
 msgid "Setting users and passwords..."
 msgstr "उपयोक्ता व पासशब्द सेटअप कर रहे हैं..."
-
-#. Type: text
-#. Description
-#. Translators, this text will appear on a button, so KEEP IT SHORT
-#. :sl1:
-#: ../cdebconf-newt-udeb.templates:1001 ../cdebconf-gtk-udeb.templates:1001
-msgid "Continue"
-msgstr "जारी रखें"
-
-#. Type: text
-#. Description
-#. Translators, this text will appear on a button, so KEEP IT SHORT
-#. :sl1:
-#: ../cdebconf-newt-udeb.templates:2001 ../cdebconf-gtk-udeb.templates:2001
-msgid "Go Back"
-msgstr "पीछे जाएँ"
-
-#. Type: text
-#. Description
-#. Translators, this text will appear on a button, so KEEP IT SHORT
-#. :sl1:
-#. Type: text
-#. Description
-#. :sl4:
-#: ../cdebconf-newt-udeb.templates:3001 ../cdebconf-gtk-udeb.templates:3001
-#: ../cdebconf-slang-udeb.templates:1001 ../cdebconf-text-udeb.templates:10001
-msgid "Yes"
-msgstr "हाँ"
-
-#. Type: text
-#. Description
-#. Translators, this text will appear on a button, so KEEP IT SHORT
-#. :sl1:
-#. Type: text
-#. Description
-#. :sl4:
-#: ../cdebconf-newt-udeb.templates:4001 ../cdebconf-gtk-udeb.templates:4001
-#: ../cdebconf-slang-udeb.templates:2001 ../cdebconf-text-udeb.templates:11001
-msgid "No"
-msgstr "नहीं"
-
-#. Type: text
-#. Description
-#. Help line displayed at the bottom of the cdebconf newt interface.
-#. Translators: must fit within 80 characters.
-#. :sl1:
-#: ../cdebconf-newt-udeb.templates:6001
-msgid "<Tab> moves; <Space> selects; <Enter> activates buttons"
-msgstr "<Tab> से आगे-पीछे करें; <Space> से चुनें; <Enter> से बटनों को सक्रिय करें"
-
-#. Type: text
-#. Description
-#. Help line displayed at the bottom of the cdebconf newt interface.
-#. Translators: must fit within 80 characters.
-#. :sl1:
-#: ../cdebconf-newt-udeb.templates:7001
-msgid "<F1> for help; <Tab> moves; <Space> selects; <Enter> activates buttons"
-msgstr ""
-"<F1> सहायता के लिए;<Tab> से आगे-पीछे करें; <Space> से चुनें; <Enter> से बटनों को सक्रिय करें"
-
-#. Type: text
-#. Description
-#. Appears as a checkbox in the newt and GTK interfaces.
-#. :sl1:
-#: ../cdebconf-newt-udeb.templates:8001 ../cdebconf-gtk-udeb.templates:9001
-msgid "Show Password in Clear"
-msgstr "स्पष्ट में पासवर्ड दिखाओ"
-
-#. Type: text
-#. Description
-#. Translators, this text will appear on a button, so KEEP IT SHORT
-#. :sl1:
-#: ../cdebconf-gtk-udeb.templates:5001
-msgid "Help"
-msgstr "सहायता"
-
-#. Type: text
-#. Description
-#. TRANSLATORS: This should be "translated" to "RTL" or "LTR" depending of
-#. default text direction of your language
-#. LTR: Left to Right (Latin, Cyrillic, CJK, Indic...)
-#. RTL: Right To Left (Arabic, Hebrew, Persian...)
-#. DO NOT USE ANYTHING ELSE
-#. :sl1:
-#: ../cdebconf-gtk-udeb.templates:6001
-msgid "LTR"
-msgstr "एलटीआर"
-
-#. Type: text
-#. Description
-#. Translators, this text will appear on a button, so KEEP IT SHORT
-#. This button will allow users to virtually "shoot a picture"
-#. of the screen
-#. :sl1:
-#: ../cdebconf-gtk-udeb.templates:7001
-msgid "Screenshot"
-msgstr "स्क्रीनशॉट"
-
-#. Type: text
-#. Description
-#. Text that will appear in a dialog box mentioning which file
-#. the screenshot has been saved to. "%s" is a file name here
-#. :sl1:
-#: ../cdebconf-gtk-udeb.templates:8001
-#, no-c-format
-msgid "Screenshot saved as %s"
-msgstr "स्क्रीनशॉट को %s में ँति सुरक्षित किया"
-
-#. Type: text
-#. Description
-#. Main menu item
-#. should not be more than 55 columns
-#. pkgsel is the module that installs packages by running tasksel to
-#. select "tasks". Please use "install *software*" and not
-#. "install *packages*" which is less adapted for non technical users
-#. :sl1:
-#: ../pkgsel.templates:1001
-msgid "Select and install software"
-msgstr "सॉफ्टवेयर चुनें व संस्थापित करें"
-
-#. Type: text
-#. Description
-#. This appears in a progress bar when running pkgsel
-#. The text is used when pkgsel is launched, before it installs packages
-#. :sl1:
-#: ../pkgsel.templates:2001
-msgid "Setting up..."
-msgstr "सेटअप किया जा रहा है..."
-
-#. Type: text
-#. Description
-#. This appears in a progress bar when running pkgsel
-#. The text is used when upgrading already installed packages.
-#. :sl1:
-#: ../pkgsel.templates:5001
-msgid "Upgrading software..."
-msgstr "सॉफ्टवेयर अपग्रेड किया जा रहा है..."
-
-#. Type: text
-#. Description
-#. This appears in a progress bar when running pkgsel
-#. The text is used when running tasksel to allow selecting packages
-#. Tasksel will then display its own screens
-#. :sl1:
-#: ../pkgsel.templates:6001
-msgid "Running tasksel..."
-msgstr "टास्कसेल चला रहे हैं..."
-
-#. Type: text
-#. Description
-#. This appears in a progress bar when running pkgsel
-#. The text is used at the end of the installation phase while
-#. cleaning up pkgsel's stuff
-#. :sl1:
-#: ../pkgsel.templates:7001
-msgid "Cleaning up..."
-msgstr "साफ कर रहे हैं..."
-
-#. Type: text
-#. Description
-#. Main menu item
-#. Translators: keep below 55 columns
-#. :sl1:
-#: ../finish-install.templates:1001
-msgid "Finish the installation"
-msgstr "संस्थापना सम्पन्न करें"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../finish-install.templates:2001
-msgid "Finishing the installation"
-msgstr "संस्थापना पूरी की जा रही है"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../finish-install.templates:4001
-msgid "Configuring network..."
-msgstr "नेटवर्क कॉन्फ़िगर किया जा रहा है..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../finish-install.templates:5001
-msgid "Setting up frame buffer..."
-msgstr "फ्रेम बफर सेटअप किया जा रहा है..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../finish-install.templates:6001
-msgid "Unmounting file systems..."
-msgstr "फ़ाइल सिस्टम अनमाउन्ट किया जा रहा है..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../finish-install.templates:7001
-msgid "Rebooting into your new system..."
-msgstr "आपके नए डेबियन तंत्र में रीबूट किया जा रहा है..."
-
-#. Type: note
-#. Description
-#. :sl1:
-#: ../finish-install.templates:8001
-msgid "Installation complete"
-msgstr "संस्थापना सम्पन्न"
-
-#. Type: note
-#. Description
-#. :sl1:
-#: ../finish-install.templates:8001
-msgid ""
-"Installation is complete, so it is time to boot into your new system. Make "
-"sure to remove the installation media, so that you boot into the new system "
-"rather than restarting the installation."
-msgstr ""
-"स्थापना पूर्ण हो गई है, इसलिए आपके नए सिस्टम में बूट करने का समय आ गया है। इंस्टॉलेशन "
-"मीडिया को निकालना सुनिश्चित करें, ताकि आप इंस्टॉलेशन को फिर से शुरू करने के बजाय नए "
-"सिस्टम में बूट करें।"
-
-#. Type: text
-#. Description
-#. Main menu item
-#. Translators: keep below 55 columns
-#. :sl1:
-#: ../nobootloader.templates:1001
-msgid "Continue without boot loader"
-msgstr "बिना बूटलोडर के जारी रखें"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:1001 ../grub-installer.templates:2001
-msgid "Install the GRUB boot loader to your primary drive?"
-msgstr "अपने प्राथमिक ड्राइव में GRUB बूट लोडर स्थापित करें?"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:1001
-msgid ""
-"The following other operating systems have been detected on this computer: "
-"${OS_LIST}"
-msgstr "इस संगणक पर निम्न अन्य प्रचालन तंत्र पाये गये हैं: ${OS_LIST}"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:1001
-msgid ""
-"If all of your operating systems are listed above, then it should be safe to "
-"install the boot loader to your primary drive (UEFI partition/boot record). "
-"When your computer boots, you will be able to choose to load one of these "
-"operating systems or the newly installed Debian system."
-msgstr ""
-"यदि आपके सभी ऑपरेटिंग सिस्टम ऊपर सूचीबद्ध हैं, तो अपने प्राथमिक ड्राइव (UEFI विभाजन / "
-"बूट रिकॉर्ड) पर बूट लोडर को स्थापित करना सुरक्षित होना चाहिए। जब आपके कंप्यूटर बूट करते "
-"हैं, तो आप इनमें से एक ऑपरेटिंग सिस्टम या नए इंस्टॉल किए गए डेबियन सिस्टम को लोड करने के "
-"लिए चुन पाएंगे।"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:2001
-msgid ""
-"It seems that this new installation is the only operating system on this "
-"computer. If so, it should be safe to install the GRUB boot loader to your "
-"primary drive (UEFI partition/boot record)."
-msgstr ""
-"ऐसा लगता है कि यह नई स्थापना इस कंप्यूटर पर केवल ऑपरेटिंग सिस्टम है। यदि हां, तो अपने "
-"प्राथमिक ड्राइव (UEFI विभाजन / बूट रिकॉर्ड) में GRUB बूट लोडर को स्थापित करना सुरक्षित "
-"होना चाहिए।"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:2001
-msgid ""
-"Warning: If your computer has another operating system that the installer "
-"failed to detect, this will make that operating system temporarily "
-"unbootable, though GRUB can be manually configured later to boot it."
-msgstr ""
-"चेतावनी: यदि आपके कंप्यूटर में एक और ऑपरेटिंग सिस्टम है जो इंस्टॉलर का पता लगाने में विफल "
-"रहा है, तो यह उस ऑपरेटिंग सिस्टम को अस्थायी रूप से अनबूटेबल बना देगा, हालांकि GRUB को "
-"बूट करने के लिए बाद में मैन्युअल रूप से कॉन्फ़िगर किया जा सकता है।"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:18001
-msgid "Installing GRUB boot loader"
-msgstr "ग्रब बूट लोडर संस्थापित किया जा रहा है"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:19001
-msgid "Looking for other operating systems..."
-msgstr "अन्य आपरेटिंग सिस्टम के लिए देखा जा रहै है..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:20001
-msgid "Installing the '${GRUB}' package..."
-msgstr "'${GRUB}' पैकेज स्थापित कर रहा है ..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:21001
-msgid "Determining GRUB boot device..."
-msgstr "ग्रब बूट उपकरण का पता लगाया जा रहा है..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:22001
-msgid "Running \"grub-install ${BOOTDEV}\"..."
-msgstr "चलाया जा रहा है \"grub-install ${BOOTDEV}\"..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:23001
-msgid "Running \"update-grub\"..."
-msgstr "चलाया जा रहा है \"update-grub\"..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:24001
-msgid "Updating /etc/kernel-img.conf..."
-msgstr "अद्यतन किया जा रहा है /etc/kernel-img.conf..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:25001
-msgid "Checking whether to force usage of the removable media path"
-msgstr "यह जांचना कि हटाने योग्य मीडिया पथ के उपयोग को मजबूर करना है या नहीं"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:26001
-msgid "Mounting filesystems"
-msgstr "फ़ाइल सिस्टम माउन्ट किया जा रहा है"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:27001
-msgid "Configuring grub-efi for future usage of the removable media path"
-msgstr "हटाने योग्य मीडिया पथ के भविष्य के उपयोग के लिए grub-efi MConfiguring"
-
-#. Type: text
-#. Description
-#. Main menu item
-#. Translators: keep below 55 columns
-#. :sl1:
-#: ../grub-installer.templates:28001
-msgid "Install the GRUB boot loader"
-msgstr "GRUB बूट लोडर स्थापित करें"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:34001
-msgid "Force GRUB installation to the EFI removable media path?"
-msgstr "ईआरआई हटाने योग्य मीडिया पथ में GRUB स्थापना को मजबूर करें?"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:34001
-msgid ""
-"It seems that this computer is configured to boot via EFI, but maybe that "
-"configuration will not work for booting from the hard drive. Some EFI "
-"firmware implementations do not meet the EFI specification (i.e. they are "
-"buggy!) and do not support proper configuration of boot options from system "
-"hard drives."
-msgstr ""
-"ऐसा लगता है कि यह कंप्यूटर ईएफआई के माध्यम से बूट करने के लिए कॉन्फ़िगर किया गया है, लेकिन "
-"शायद यह कॉन्फ़िगरेशन हार्ड ड्राइव से बूट करने के लिए काम नहीं करेगा। कुछ ईएफआई फर्मवेयर "
-"कार्यान्वयन ईएफआई विनिर्देश को पूरा नहीं करते हैं (यानी वे छोटी हैं!) और सिस्टम हार्ड "
-"ड्राइव से बूट विकल्पों की उचित कॉन्फ़िगरेशन का समर्थन नहीं करते हैं।"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:34001
-msgid ""
-"A workaround for this problem is to install an extra copy of the EFI version "
-"of the GRUB boot loader to a fallback location, the \"removable media path"
-"\". Almost all EFI systems, no matter how buggy, will boot GRUB that way."
-msgstr ""
-"इस समस्या के लिए एक समाधान है GRUB बूट लोडर के ईएफआई संस्करण की एक अतिरिक्त प्रतिलिपि "
-"को फॉलबैक स्थान, \"हटाने योग्य मीडिया पथ\" पर स्थापित करना है। लगभग सभी ईएफआई "
-"सिस्टम, कोई फर्क नहीं पड़ता कि कितनी छोटी गाड़ी, इस तरह GRUB बूट करेगा।"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:34001
-msgid ""
-"Warning: If the installer failed to detect another operating system that is "
-"present on your computer that also depends on this fallback, installing GRUB "
-"there will make that operating system temporarily unbootable. GRUB can be "
-"manually configured later to boot it if necessary."
-msgstr ""
-"चेतावनी: यदि इंस्टॉलर आपके कंप्यूटर पर मौजूद किसी अन्य ऑपरेटिंग सिस्टम का पता लगाने में "
-"विफल रहा है जो इस गिरावट पर भी निर्भर करता है, तो वहां GRUB स्थापित करने से वह "
-"ऑपरेटिंग सिस्टम अस्थायी रूप से अनबूटेबल हो जाएगा। यदि आवश्यक हो तो बूट करने के लिए GRUB "
-"को बाद में मैन्युअल रूप से कॉन्फ़िगर किया जा सकता है।"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../rescue-mode.templates:1001
-msgid "Enter rescue mode"
-msgstr "बचाव मोड में प्रवेश करें"
-
-#. Type: text
-#. Description
-#. Main menu item
-#. Translators: keep below 55 columns
-#. :sl1:
-#: ../iso-scan.templates:1001
-msgid "Scan hard drives for an installer ISO image"
-msgstr "संस्थापक आईएसओ इमेज के लिए हार्डड्राइव्स को स्कैन करें"
-
-#. Type: text
-#. Description
-#. Main menu item
-#. Translators: keep below 55 columns
-#. :sl1:
-#: ../save-logs.templates:1001
-msgid "Save debug logs"
-msgstr "डिबग लॉग सहेजें"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. finish-install progress bar item
-#: ../save-logs.templates:9001
-msgid "Gathering information for installation report..."
-msgstr "संस्थापन रिपोर्ट के लिए जानकारी एकत्रित कर रहे हैं..."
-
-#. Type: text
-#. Description
-#. Main menu item
-#. Translators: keep below 55 columns
-#. :sl1:
-#: ../mdcfg-utils.templates:1001
-msgid "Configure MD devices"
-msgstr "एमडी उपकरण कॉन्फ़िगर करें"
-
-#. #-#-#-#-#  templates.pot (lvmcfg)  #-#-#-#-#
-#. Type: text
-#. Description
-#. Main menu item
-#. Translators: keep below 55 columns
-#. :sl1:
-#. #-#-#-#-#  templates.pot (partman-lvm)  #-#-#-#-#
-#. Type: text
-#. Description
-#. Type: text
-#. Description
-#. :sl3:
-#. Main menu item
-#. Translators: keep below 55 columns
-#. Use infinitive form
-#: ../lvmcfg.templates:1001 ../partman-lvm.templates:7001
-#: ../partman-lvm.templates:23001
-msgid "Configure the Logical Volume Manager"
-msgstr "लॉज़िकल वॉल्यूम प्रबंधक कॉन्फ़िगर करें"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
-#: ../partman-auto-lvm.templates:1001
-msgid "Guided - use entire disk and set up LVM"
-msgstr "दिग्दर्शित - पूरी डिस्क का प्रयोग करें और एलवीएम व्यवस्थित करें"
 
 #~ msgid ""
 #~ "Please select the size of the font for the console.  For reference, the "

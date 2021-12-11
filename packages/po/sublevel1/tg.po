@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-28 20:01+0000\n"
+"POT-Creation-Date: 2021-12-02 20:02+0000\n"
 "PO-Revision-Date: 2019-09-10 18:06+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: Tajik <victor.ibragimov@gmail.com>\n"
@@ -21,6 +21,30 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=1;\n"
 "Language: tg\n"
 "X-Poedit-SourceCharset: UTF-8\n"
+
+#. Type: select
+#. Description
+#: ../apt-setup-udeb.templates:8002
+msgid "Downloading local repository key failed:"
+msgstr "Боргирии калиди анбори бастаҳои маҳаллӣ ба анҷом нарасид:"
+
+#. Type: select
+#. Description
+#: ../apt-setup-udeb.templates:8002
+msgid ""
+"This may be a problem with your network, or with the server hosting this "
+"key. You can choose to retry the download, or ignore the problem and "
+"continue without all the packages from this repository."
+msgstr ""
+"Эҳтимол аст, ки шабакаи шумо мушкилӣ дорад ё ин ки хидматрасоне, ки ин "
+"калидро нигоҳ медорад, дастнорас аст. Шумо метавонед боргириро такрор намоед "
+"ё ин ки мушкилиро нодида гирифта, равандро бе бастаҳои ин анбор идома диҳед."
+
+#. Type: select
+#. Description
+#: ../keyboard-configuration.templates:16002
+msgid "Keymap to use:"
+msgstr "Тарҳбандии ҳарфкалид барои истифода:"
 
 #: ../../mktemplates.continents:15
 msgid "Africa"
@@ -62,72 +86,6 @@ msgstr "Уқёнусиявӣ"
 msgid "South America"
 msgstr "Амрикои Ҷанубӣ"
 
-#. Type: select
-#. Description
-#: ../keyboard-configuration.templates:16002
-msgid "Keymap to use:"
-msgstr "Тарҳбандии ҳарфкалид барои истифода:"
-
-#. Type: select
-#. Description
-#: ../apt-setup-udeb.templates:8002
-msgid "Downloading local repository key failed:"
-msgstr "Боргирии калиди анбори бастаҳои маҳаллӣ ба анҷом нарасид:"
-
-#. Type: select
-#. Description
-#: ../apt-setup-udeb.templates:8002
-msgid ""
-"This may be a problem with your network, or with the server hosting this "
-"key. You can choose to retry the download, or ignore the problem and "
-"continue without all the packages from this repository."
-msgstr ""
-"Эҳтимол аст, ки шабакаи шумо мушкилӣ дорад ё ин ки хидматрасоне, ки ин "
-"калидро нигоҳ медорад, дастнорас аст. Шумо метавонед боргириро такрор намоед "
-"ё ин ки мушкилиро нодида гирифта, равандро бе бастаҳои ин анбор идома диҳед."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../main-menu.templates:1001
-msgid "Debian installer main menu"
-msgstr "Менюи асосии насбкунандаи Debian"
-
-#. Type: select
-#. Description
-#. :sl1:
-#: ../main-menu.templates:2001
-msgid "Choose the next step in the install process:"
-msgstr "Қадами навбатиро дар раванди насбкунӣ интихоб намоед:"
-
-#. Type: text
-#. Description
-#. Main menu item
-#. The translation should not exceed 55 columns except for languages
-#. that are only supported in the graphical version of the installer
-#. :sl1:
-#: ../di-utils-shell.templates:2001
-msgid "Execute a shell"
-msgstr "Иҷро кардани восит"
-
-#. Type: text
-#. Description
-#. Main menu item
-#. The translation should not exceed 55 columns except for languages
-#. that are only supported in the graphical version of the installer
-#. :sl1:
-#: ../di-utils-reboot.templates:2001
-msgid "Abort the installation"
-msgstr "Қатъ кардани насбкунӣ"
-
-#. Type: text
-#. Description
-#. base-installer progress bar item
-#. :sl1:
-#: ../di-utils.templates:1001
-msgid "Registering modules..."
-msgstr "Бақайдгирии модулҳо..."
-
 #. Type: text
 #. Description
 #. (Progress bar) title displayed when loading udebs
@@ -157,298 +115,1222 @@ msgstr "Танзим кардани ${PACKAGE}"
 
 #. Type: text
 #. Description
-#. This menu entry may be translated.
-#. However, translators are required to keep "Choose language"
-#. as an alternative separated by the "/" character
-#. Example (french): Choisir la langue/Choose language
+#. Main menu item
+#. MUST be kept below 55 characters/columns
 #. :sl1:
-#: ../localechooser.templates-in:1001
-msgid "Choose language"
-msgstr "Интихоби забон / Choose language"
+#: ../apt-setup-udeb.templates:1001
+msgid "Configure the package manager"
+msgstr "Танзим кардани мудири бастаҳо"
 
 #. Type: text
 #. Description
+#. Translators, "apt" is the program name
+#. so please do NOT translate it
+#. :sl1:
+#: ../apt-setup-udeb.templates:2001
+msgid "Configuring apt"
+msgstr "Танзимкунии Apt"
+
+#. #-#-#-#-#  templates.pot (apt-setup)  #-#-#-#-#
+#. Type: text
+#. Description
+#. :sl2:
+#. #-#-#-#-#  templates.pot (base-installer)  #-#-#-#-#
+#. Type: text
+#. Description
+#. :sl1:
+#. #-#-#-#-#  templates.pot (finish-install)  #-#-#-#-#
+#. Type: text
+#. Description
+#. :sl1:
+#. #-#-#-#-#  templates.pot (pkgsel)  #-#-#-#-#
+#. Type: text
+#. Description
+#. :sl2:
+#: ../apt-setup-udeb.templates:3001 ../base-installer.templates:6001
+#: ../finish-install.templates:3001 ../pkgsel.templates:9001
+msgid "Running ${SCRIPT}..."
+msgstr "Иҷрокунии ${SCRIPT}..."
+
+#. Type: multiselect
+#. Choices
+#. SEC_HOST is a host name (e.g. security.debian.org)
+#. Translators: the *entire* string should be under 55 columns
+#. including host name. In short, KEEP THIS SHORT and, yes, that's tricky
+#. :sl1:
+#: ../apt-setup-udeb.templates:11001
+msgid "security updates (from ${SEC_HOST})"
+msgstr "навсозиҳои амниятӣ (аз ${SEC_HOST})"
+
+#. Type: multiselect
+#. Choices
+#. SEC_HOST is a host name (e.g. security.debian.org)
+#. Translators: the *entire* string should be under 55 columns
+#. including host name. In short, KEEP THIS SHORT and, yes, that's tricky
+#. :sl1:
+#: ../apt-setup-udeb.templates:11001
+msgid "release updates"
+msgstr "навсозиҳои барориш"
+
+#. Type: multiselect
+#. Choices
+#. SEC_HOST is a host name (e.g. security.debian.org)
+#. Translators: the *entire* string should be under 55 columns
+#. including host name. In short, KEEP THIS SHORT and, yes, that's tricky
+#. :sl1:
+#: ../apt-setup-udeb.templates:11001
+msgid "backported software"
+msgstr "нармафзори интиқолшудаи пешакӣ"
+
+#. Type: multiselect
+#. Description
+#. :sl1:
+#: ../apt-setup-udeb.templates:11002
+msgid "Services to use:"
+msgstr "Хидматҳо барои истифода:"
+
+#. Type: multiselect
+#. Description
+#. :sl1:
+#: ../apt-setup-udeb.templates:11002
+msgid ""
+"Debian has two services that provide updates to releases: security and "
+"release updates."
+msgstr ""
+"Debian дорои ду хидмате, ки навсозиҳоро барои бароришҳо таъмин менамояд, "
+"мебошад: навсозиҳои барориш ва амният."
+
+#. Type: multiselect
+#. Description
+#. :sl1:
+#: ../apt-setup-udeb.templates:11002
+msgid ""
+"Security updates help to keep your system secured against attacks. Enabling "
+"this service is strongly recommended."
+msgstr ""
+"Навсозиҳои амниятӣ низоми шуморо аз ҳамлаҳо маҳофизат мекунад. Тавсия "
+"мешавад, ки шумо ин хидматро фаъол намоед."
+
+#. Type: multiselect
+#. Description
+#. :sl1:
+#: ../apt-setup-udeb.templates:11002
+msgid ""
+"Release updates provide more current versions for software that changes "
+"relatively frequently and where not having the latest version could reduce "
+"the usability of the software. It also provides regression fixes. This "
+"service is only available for stable and oldstable releases."
+msgstr ""
+"Навсозиҳои барориш гунаҳои нисбатан ҷориро барои нармафзоре, ки зуд зуд "
+"тағйир меёбад ва нармафзоре, ки дорои гунаи охирин намебошад, таъмин "
+"менамоянд. Он ҳамчунин ҳалҳои бозгаштро таъмин менамояд. Ин хидмат танҳо "
+"барои бароришҳои устувор ва устувори қаблӣ дастрас аст."
+
+#. Type: multiselect
+#. Description
+#. :sl1:
+#: ../apt-setup-udeb.templates:11002
+msgid ""
+"Backported software are adapted from the development version to work with "
+"this release. Although this software has not gone through such complete "
+"testing as that contained in the release, it includes newer versions of some "
+"applications which may provide useful features. Enabling backports here does "
+"not cause any of them to be installed by default; it only allows you to "
+"manually select backports to use."
+msgstr ""
+"Нармафзори пешакӣ интиқолшуда барои кор кардан бо ин барориш аз гунаи "
+"такомул мувофиқ карда шудааст. Бо вуҷуди он ки ин нармафзор аз санҷиши пурра "
+"гузашта нашудааст, чӣ хеле ки барои барориш лозим аст, он гунаҳои навтари "
+"баъзе барномаҳоеро, ки дорои хусусиятҳои фоиданок мебошанд, дар ба мегирад. "
+"Агар нармафзори пешакӣ интиқолшударо фаъол намоед, он ба сурати пешфарз насб "
+"карда намешавад, вале шумо метавонед нармафзори пешақӣ интиқолшударо ба "
+"таври дастӣ барои истифода интихоб намоед."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:1001
+#, fuzzy
+#| msgid "Finishing the installation"
+msgid "Scanning the installation media..."
+msgstr "Ба анҷом расонидани насб"
+
+#. Type: error
+#. Description
+#. :sl2:
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:2001 ../apt-cdrom-setup.templates:6001
+#, fuzzy
+#| msgid ""
+#| "An attempt to configure apt to install additional packages from the CD "
+#| "failed."
+msgid ""
+"An attempt to configure apt to install additional packages from the media "
+"failed."
+msgstr ""
+"Кӯшиши танзим кардани apt барои насбкунии бастаҳои иловагӣ аз CD ба анҷом "
+"нарасид."
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#. Type: boolean
+#. Description
+#. :sl1:
+#. Type: boolean
+#. Description
+#. :sl1:
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:3001 ../apt-cdrom-setup.templates:4001
+#: ../apt-cdrom-setup.templates:5001 ../apt-cdrom-setup.templates:6001
+#, fuzzy
+#| msgid "SILO installation failed"
+msgid "Scan extra installation media?"
+msgstr "Насби SILO қатъ шудааст"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:3001
+msgid "Scanning your installation media finds the label:"
+msgstr ""
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:3001
+#, fuzzy
+#| msgid ""
+#| "You now have the option to scan additional CDs or DVDs for use by the "
+#| "package manager (apt). Normally these should be from the same set as the "
+#| "installation CD/DVD. If you do not have any additional CDs or DVDs "
+#| "available, this step can just be skipped."
+msgid ""
+"You now have the option of scanning additional media for use by the package "
+"manager (apt). Normally these should be from the same set as the one you "
+"booted from. If you do not have any additional media, this step can just be "
+"skipped."
+msgstr ""
+"Акнун шумо имкон доред, ки CD-ҳо ё DVD-ҳои иловагиро барои истифода бо "
+"мудири бастаҳо (apt) скан намоед. Одатан онҳо бояд аз маҷмӯи якхела ба CD/"
+"DVD бошанд. Агар шумо ягон CD ё DVD-и дастрас надошта бошед, шумо метавонед "
+"ин қадамро нодида гузаронед."
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:3001 ../apt-cdrom-setup.templates:4001
+#, fuzzy
+#| msgid "If you wish to scan another CD or DVD, please insert it now."
+msgid "If you wish to scan more media, please insert another one now."
+msgstr ""
+"Агар шумо хоҳед, ки CD ё DVD-и дигарро скан намоед, лутфан, онро ҳозир дарҷ "
+"намоед."
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:4001
+#, fuzzy
+#| msgid "The CD or DVD with the following label has been scanned:"
+msgid "The image with the following label has been scanned:"
+msgstr "CD ё DVD бо барчаспи зерин скан карда шуд:"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:5001
+#, fuzzy
+#| msgid "The CD or DVD with the following label has already been scanned:"
+msgid "The image with the following label has already been scanned:"
+msgstr "CD ё DVD бо барчаспи зерин аллакай скан карда шуд:"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:5001
+#, fuzzy
+#| msgid "Please replace it now if you wish to scan another CD or DVD."
+msgid "Please replace it now, if you wish to scan another."
+msgstr ""
+"Агар шумо хоҳед, ки CD ё DVD-и дигарро скан намоед, онро ҳозир ҷойгузин "
+"намоед."
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:6001
+#, fuzzy
+#| msgid "Please check that the CD/DVD has been inserted correctly."
+msgid "Please check that the media has been inserted correctly."
+msgstr "Лутфан, мутмаин шавед, ки CD/DVD ба таври дуруст дарҷ карда шудааст."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:7001
+msgid "Media change"
+msgstr "Тағйир додани расона"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:7001
+#, fuzzy
+#| msgid ""
+#| "/cdrom/: Please insert the disc labeled '${LABEL}' in the drive '/cdrom/' "
+#| "and press enter."
+msgid "Please insert the media labeled '${LABEL}' and press enter."
+msgstr ""
+"/cdrom/: Лутфан, дискро бо барчаспи \"${LABEL}\" дар драйви \"/cdrom/\" дарҷ "
+"намоед ва тугмаи enter-ро зер намоед."
+
+#. Type: text
+#. Description
+#. :sl1:
 #. finish-install progress bar item
-#. :sl1:
-#: ../localechooser.templates-in:6001
-msgid "Storing language..."
-msgstr "Нигоҳ доштани забон..."
+#: ../apt-cdrom-setup.templates:8001
+msgid "Disabling netinst CD in sources.list..."
+msgstr "CD-и netinst дар sources.list ғайрифаъол шуда истодааст..."
 
-#. Type: title
-#. Description
-#. Displayed as dialog title during language selection
-#. :sl1:
-#: ../localechooser.templates-in:7001
-msgid "Select a language"
-msgstr "Забонро интихоб намоед"
-
-#. Type: title
-#. Description
-#. Displayed as dialog title during country selection
-#. :sl1:
-#: ../localechooser.templates-in:8001
-msgid "Select your location"
-msgstr "Ҷойгиршавии худро интихоб намоед"
-
-#. Type: title
-#. Description
-#. Displayed as dialog title during locale selection
-#. :sl1:
-#: ../localechooser.templates-in:9001
-msgid "Configure locales"
-msgstr "Танзим кардани маҳаллигардониҳо"
-
-#. Type: note
+#. Type: text
 #. Description
 #. :sl1:
-#: ../localechooser.templates-in:12001
-msgid "Language selection no longer possible"
-msgstr "Интихобкунии забон дигар имконнопазир аст"
-
-#. Type: note
+#. Type: boolean
 #. Description
-#. :sl1:
-#: ../localechooser.templates-in:12001
+#. :sl2:
+#: ../apt-cdrom-setup.templates:9001 ../apt-mirror-setup.templates:6001
+#, fuzzy
+#| msgid ""
+#| "If you are installing from a netinst CD and choose not to use a mirror, "
+#| "you will end up with only a very minimal base system."
 msgid ""
-"At this point it is no longer possible to change the language for the "
-"installation, but you can still change the country or locale."
+"If you are installing from a netinst CD image and choose not to use a "
+"mirror, you will end up with only a very minimal base system."
 msgstr ""
-"Дар ин нуқта тағйир додани забони насбкунӣ дигар имконнопазир аст, аммо шумо "
-"то ҳол метавонед кишвар ё маҳаллигардониро интихоб намоед."
+"Агар шумо аз CD-и насбкунии шабакавӣ насб карда бошед, шумо низоми "
+"хурдтарини асосиро ба даст меоред."
 
-#. Type: note
+#. Type: text
 #. Description
 #. :sl1:
-#: ../localechooser.templates-in:12001
+#: ../apt-cdrom-setup.templates:10001
+#, fuzzy
+#| msgid ""
+#| "You are installing from a netinst CD, which by itself only allows "
+#| "installation of a very minimal base system. Use a mirror to install a "
+#| "more complete system."
 msgid ""
-"To select a different language you will need to abort this installation and "
-"reboot the installer."
+"You are installing from a netinst CD image, which by itself only allows "
+"installation of a very minimal base system. Use a mirror to install a more "
+"complete system."
 msgstr ""
-"Барои интихоб кардани забони дигар, ба шумо лозим мешавад, ки насбкуниро "
-"қатъ намоед ва барномаи насбкуниро бозоғозӣ намоед."
+"Шумо аз CD-и насбкунии шабакавӣ насб карда истодаед, ки он танҳо насбкунии "
+"низоми ақалли асосиро иҷозат медиҳад. Барои насб кардани низоми пурратар "
+"оинаро истифода баред."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:11001
+#, fuzzy
+#| msgid ""
+#| "You are installing from a CD, which contains a limited selection of "
+#| "packages."
+msgid ""
+"You are installing from an image which contains a limited selection of "
+"packages."
+msgstr ""
+"Шумо низомро аз диски CD насб карда истодаед, ки миқдори маҳдудшудаи бастаҳо "
+"дорад."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. The value of %i can be 2 or 3
+#: ../apt-cdrom-setup.templates:12001
+#, fuzzy, no-c-format
+#| msgid ""
+#| "You have scanned %i CDs. Even though these contain a fair selection of "
+#| "packages, some may be missing (notably some packages needed to support "
+#| "languages other than English)."
+msgid ""
+"You have scanned %i images. Even though these contain a fair selection of "
+"packages, some may be missing (notably some packages needed to support "
+"languages other than English)."
+msgstr ""
+"Шумо  CD-ро скан кардед. Гарчанде ки онҳо маҷмӯи зиёди бастаҳоро дар бар "
+"мегиранд, баъзеи онҳо метавонанд мавҷуд набошанд (асосан, барои баъзе "
+"бастаҳо дастгирии забонҳои аз англисӣ фарқкунанда лозим аст)."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. The value of %i can be from 4 to 8
+#: ../apt-cdrom-setup.templates:13001
+#, fuzzy, no-c-format
+#| msgid ""
+#| "You have scanned %i CDs. Even though these contain a large selection of "
+#| "packages, some may be missing."
+msgid ""
+"You have scanned %i images. Even though these contain a large selection of "
+"packages, some may be missing."
+msgstr ""
+"Шумо  CD-ро скан кардед. Гарчанде ки баъзеи онҳо дорои маҷмӯи калон бастаҳо "
+"мебошад, баъзеи онҳо метавонанд дастнорас бошанд."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:14001
+msgid ""
+"Note that using a mirror can result in a large amount of data being "
+"downloaded during the next step of the installation."
+msgstr ""
+"Ба қайд гиред, ки истифодабарии оина метавонад сабаби боргирии миқдори зиёди "
+"иттилоот ҳангоми қадами навбатии насбкунӣ гардад."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:15001
+#, fuzzy
+#| msgid ""
+#| "You are installing from a DVD. Even though the DVD contains a large "
+#| "selection of packages, some may be missing."
+msgid ""
+"You are installing from a DVD image. Even though it contains a large "
+"selection of packages, some may be missing."
+msgstr ""
+"Шумо низомро аз диски DVD насб карда истодаед. Гарчанде, ки диски DVD дорои "
+"бастаҳои зиёд мебошад, баъзе бастаҳо дастнорасанд."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:16001
+msgid ""
+"Unless you don't have a good Internet connection, use of a mirror is "
+"recommended, especially if you plan to install a graphical desktop "
+"environment."
+msgstr ""
+"Агар шумо пайвасти хуби Интернет надошта бошед, истифодаи оина тавсия "
+"мешавад, хусусан агар шумо интихоб намоед, ки муҳити мизи кории графикиро "
+"насб намоед."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../apt-cdrom-setup.templates:17001
+msgid ""
+"If you have a reasonably good Internet connection, use of a mirror is "
+"suggested if you plan to install a graphical desktop environment."
+msgstr ""
+"Агар шумо пайвасти Интернети хуб дошта бошед, тавсия мешавад, ки шумо оинаро "
+"истифода баред, агар шумо хоҳед, ки муҳити мизи кории графикиро насб намоед."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../apt-mirror-setup.templates:1001
+msgid "Scanning the mirror..."
+msgstr "Сканкунии оина..."
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-mirror-setup.templates:2001
+msgid "Use non-free software?"
+msgstr "Нармафзори пулакиро истифода мебаред?"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-mirror-setup.templates:2001
+msgid ""
+"Some non-free software has been made to work with Debian. Though this "
+"software is not at all a part of Debian, standard Debian tools can be used "
+"to install it. This software has varying licenses which may prevent you from "
+"using, modifying, or sharing it."
+msgstr ""
+"Баъзе нармафзори ғайриозод барои кор бо Debian танзим карда шудааст. "
+"Гарчанде ки ин нармафзор қисми Debian намебошад, абзорҳои стандартии Debian "
+"метавонанд барои насб кардани он истифода шаванд. Ин нармафзор дорои "
+"иҷозатномаҳои тағйирёбанда мебошад, ки метавонанд ба шумо истифода, "
+"тағйирдиҳӣ ё мубодилакунии онро иҷозат надиҳанд."
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #. Type: boolean
 #. Description
-#. :sl1:
-#: ../localechooser.templates-in:13001 ../localechooser.templates-in:14001
-msgid "Continue the installation in the selected language?"
-msgstr "Насбкуниро бо забони интихобшуда идома медиҳед?"
+#. This template is used by the Ubuntu version of d-i.
+#. :sl2:
+#: ../apt-mirror-setup.templates:2001 ../apt-mirror-setup.templates-ubuntu:1001
+msgid "Please choose whether you want to have it available anyway."
+msgstr "Лутфан, интихоб намоед, ки оё мехоҳед, ки он ба ҳар ҳол дастрас бошад."
 
 #. Type: boolean
 #. Description
 #. :sl1:
-#: ../localechooser.templates-in:13001
-msgid ""
-"The translation of the installer is incomplete for the selected language."
-msgstr "Тарҷумаи барномаи насбкунӣ барои забони интихобшуда нопурра мебошад."
+#: ../apt-mirror-setup.templates:3001
+msgid "Use contrib software?"
+msgstr "Нармафзори иловагиро истифода мебаред?"
 
 #. Type: boolean
 #. Description
 #. :sl1:
-#: ../localechooser.templates-in:14001
+#: ../apt-mirror-setup.templates:3001
 msgid ""
-"The translation of the installer is not fully complete for the selected "
-"language."
+"Some additional software has been made to work with Debian. Though this "
+"software is free, it depends on non-free software for its operation. This "
+"software is not a part of Debian, but standard Debian tools can be used to "
+"install it."
 msgstr ""
-"Тарҷумаи барномаи насбкунӣ барои забони интихобшуда пурра тайёр намебошад."
+"Баъзе нармафзори иловагӣ барои кор бо Debian сохта шудааст. Гарчанде ки ин "
+"нармафзор ройгон мебошад, барои кори худ он нармафзори ғайриройгонро талаб "
+"мекунад. Ин нармафзор қисми Debian намебошад, аммо барои насб кардани он "
+"абзорҳои стандартии Debian метавонанд истифода шаванд."
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#. Type: boolean
+#. Description
+#. This template is used by the Ubuntu version of d-i.
+#. :sl2:
+#. Type: boolean
+#. Description
+#. This template is used by the Ubuntu version of d-i.
+#. :sl2:
+#. Type: boolean
+#. Description
+#. This template is used by the Ubuntu version of d-i.
+#. :sl2:
+#. Type: boolean
+#. Description
+#. This template is used by the Ubuntu version of d-i.
+#. :sl2:
+#: ../apt-mirror-setup.templates:3001 ../apt-mirror-setup.templates-ubuntu:2001
+#: ../apt-mirror-setup.templates-ubuntu:3001
+#: ../apt-mirror-setup.templates-ubuntu:4001
+#: ../apt-mirror-setup.templates-ubuntu:5001
+msgid ""
+"Please choose whether you want this software to be made available to you."
+msgstr ""
+"Лутфан, интихоб намоед, ки ин нармафзор барои шумо бояд дастрас бошад ё не."
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-mirror-setup.templates:5001
+msgid "Use a network mirror?"
+msgstr "Оинаи шабакаро истифода мебаред?"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../apt-mirror-setup.templates:5001
+#, fuzzy
+#| msgid ""
+#| "A network mirror can be used to supplement the software that is included "
+#| "on the CD-ROM. This may also make newer versions of software available."
+msgid ""
+"A network mirror can be used to supplement the software that is included on "
+"the installation media. This may also make newer versions of software "
+"available."
+msgstr ""
+"Оинаи шабакавӣ метавонад ҳамчун илова барои нармафзоре, ки дар CD-ROM мавҷуд "
+"аст, истифода шавад. Ин метавонанд гунаҳои навтари нармафзорро низ дастрас "
+"кунад."
 
 #. Type: text
 #. Description
 #. :sl1:
-#: ../localechooser.templates-in:15001
-msgid ""
-"This means that there is a significant chance that some dialogs will be "
-"displayed in English instead."
-msgstr ""
-"Ин маънои онро дорад, ки баъзе равзанаҳои гуфтугӯ ба ҷойи он бо забони "
-"англисӣ намоиш дода мешаванд."
+#: ../base-installer.templates:4001
+msgid "Preparing to install the base system..."
+msgstr "Омодасозӣ барои насбкунии низоми асосӣ..."
 
 #. Type: text
 #. Description
 #. :sl1:
-#: ../localechooser.templates-in:16001
-msgid ""
-"If you do anything other than a purely default installation, there is a real "
-"chance that some dialogs will be displayed in English instead."
-msgstr ""
-"Агар шумо ҳангоми насбкунии пурраи стандартӣ амалҳои иловагиро иҷро кунед, "
-"имконияти зиёди он мавҷуд аст, ки баъзеи равзанаҳои гуфтугӯ ба ҷойи он бо "
-"забони англисӣ намоиш дода мешаванд."
+#: ../base-installer.templates:5001 ../bootstrap-base.templates:30001
+msgid "Installing the base system"
+msgstr "Насбкунии низоми асосӣ"
 
 #. Type: text
 #. Description
 #. :sl1:
-#: ../localechooser.templates-in:17001
-msgid ""
-"If you continue the installation in the selected language, most dialogs "
-"should be displayed correctly but - especially if you use the more advanced "
-"options of the installer - some may be displayed in English instead."
-msgstr ""
-"Агар шумо насбкуниро бо забони интихобшуда идома диҳед, қисми зиёди "
-"равзанаҳои гуфтугӯ бояд ба таври дуруст намоиш дода шаванд, аммо - хусусан, "
-"агар шумо имконоти иловагии барномаи насбкуниро истифода баред - баъзеи онҳо "
-"метавонанд ба ҷойи он бо забони англисӣ намоиш дода шаванд."
+#: ../base-installer.templates:7001
+msgid "Setting up the base system..."
+msgstr "Танзимкунии низоми асосӣ..."
 
 #. Type: text
 #. Description
 #. :sl1:
-#: ../localechooser.templates-in:18001
-msgid ""
-"If you continue the installation in the selected language, dialogs should "
-"normally be displayed correctly but - especially if you use the more "
-"advanced options of the installer - there is a slight chance some may be "
-"displayed in English instead."
-msgstr ""
-"Агар шумо насбкуниро бо забони интихобшуда идома диҳед, равзанаҳои гуфтугӯ "
-"бояд ба таври дуруст намоиш дода шаванд, аммо - хусусан, агар шумо имконоти "
-"иловагии барномаи насбкуниро истифода баред - эҳтимол аст, ки баъзеи онҳо "
-"метавонанд ба ҷойи он бо забони англисӣ намоиш дода шаванд."
+#: ../base-installer.templates:8001 ../bootstrap-base.templates:59001
+msgid "Configuring APT sources..."
+msgstr "Танзимкунии манбаҳои APT..."
 
 #. Type: text
 #. Description
 #. :sl1:
-#: ../localechooser.templates-in:19001
-msgid ""
-"The chance that you will actually encounter a dialog that is not translated "
-"into the selected language is extremely small, but it cannot be ruled out "
-"completely."
-msgstr ""
-"Имконияти он, ки шумо воқеан бо равзанаи гуфтугӯе дучор мешавед, ки он ба "
-"забони интихобшуда тарҷума нашудааст, хеле хурд аст, аммо ин имконият "
-"наметавонад тамоман ба назар гирифта нашавад."
+#: ../base-installer.templates:9001
+msgid "Updating the list of available packages..."
+msgstr "Навсозии рӯйхати бастаҳои дастрас..."
 
 #. Type: text
 #. Description
 #. :sl1:
-#: ../localechooser.templates-in:20001
-msgid ""
-"Unless you have a good understanding of the alternative language, it is "
-"recommended to either select a different language or abort the installation."
-msgstr ""
-"Агар шумо дониши хуби забони иловагиро надошта бошед, тавсия дода мешавад, "
-"ки забони дигареро интихоб намоед, ё ки насбкуниро қатъ намоед."
+#: ../base-installer.templates:10001
+msgid "Installing extra packages..."
+msgstr "Насбкунии бастаҳои иловагӣ..."
+
+#. Type: text
+#. Description
+#. SUBST0 is a package name
+#. :sl1:
+#: ../base-installer.templates:11001
+msgid "Installing extra packages - retrieving and installing ${SUBST0}..."
+msgstr "Насбкунии бастаҳои иловагӣ - бозёбӣ ва насбкунии ${SUBST0}..."
+
+#. Type: text
+#. Description
+#. Item in the main menu to select this package
+#. TRANSLATORS: <65 columns
+#. :sl1:
+#: ../bootstrap-base.templates:1001
+msgid "Install the base system"
+msgstr "Насбкунии низоми асосӣ"
 
 #. Type: text
 #. Description
 #. :sl1:
-#: ../localechooser.templates-in:21001
-msgid ""
-"If you choose not to continue, you will be given the option of selecting a "
-"different language, or you can abort the installation."
+#. Release is a filename which should not be translated
+#: ../bootstrap-base.templates:23001
+msgid "Retrieving Release file"
+msgstr "Бозёбии файли барориш"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Release is a filename which should not be translated
+#: ../bootstrap-base.templates:24001
+msgid "Retrieving Release file signature"
+msgstr "Бозёбии имзои файли барориш"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. "packages" here can be translated
+#: ../bootstrap-base.templates:25001
+msgid "Finding package sizes"
+msgstr "Ёфтани андозаҳои бастаҳо"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Packages is a filename which should not be translated
+#: ../bootstrap-base.templates:26001
+msgid "Retrieving Packages files"
+msgstr "Бозёбии файлҳои бастаҳо"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Packages is a filename which should not be translated
+#: ../bootstrap-base.templates:27001
+msgid "Retrieving Packages file"
+msgstr "Бозёбии файли бастаҳо"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. "packages" here can be translated
+#: ../bootstrap-base.templates:28001
+msgid "Retrieving packages"
+msgstr "Бозёбии бастаҳо"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. "packages" here can be translated
+#: ../bootstrap-base.templates:29001
+msgid "Extracting packages"
+msgstr "Баровардани бастаҳо"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Core packages are packages that are part of the Debian base system
+#. The "core" packages are indeed packages that are specifically
+#. recorded as part of the base system. Other packages may
+#. be installed on the base system because of dependency resolution
+#: ../bootstrap-base.templates:31001
+msgid "Installing core packages"
+msgstr "Насбкунии бастаҳои мағзӣ"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Required packages are packages which installation is triggered
+#. by the dependency chain of core packages
+#. In short, they are "required" because at least one of the
+#. packages from the core packages depends on them
+#: ../bootstrap-base.templates:32001
+msgid "Unpacking required packages"
+msgstr "Бастаҳои лозимӣ бароварда шуда истодаанд"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../bootstrap-base.templates:33001
+msgid "Configuring required packages"
+msgstr "Танзимкунии бастаҳои дархостшуда"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. The base system is the minimal Debian system
+#. See http://www.debian.org/doc/debian-policy/ch-binary.html#s3.7
+#: ../bootstrap-base.templates:34001
+msgid "Unpacking the base system"
+msgstr "Баровардани низоми асосӣ"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. The base system is the minimal Debian system
+#. See http://www.debian.org/doc/debian-policy/ch-binary.html#s3.7
+#: ../bootstrap-base.templates:35001
+msgid "Configuring the base system"
+msgstr "Танзимкунии низоми асосӣ"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../bootstrap-base.templates:36001
+msgid "${SECTION}: ${INFO}..."
+msgstr "${SECTION}: ${INFO}..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. SUBST0 is a package name
+#: ../bootstrap-base.templates:37001
+msgid "Validating ${SUBST0}..."
+msgstr "Санҷиши эътибори ${SUBST0}..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. SUBST0 is a package name
+#: ../bootstrap-base.templates:38001
+msgid "Retrieving ${SUBST0}..."
+msgstr "Бозёбии ${SUBST0}..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. SUBST0 is a package name
+#: ../bootstrap-base.templates:39001
+msgid "Extracting ${SUBST0}..."
+msgstr "Барориши ${SUBST0}..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. SUBST0 is a package name
+#: ../bootstrap-base.templates:40001
+msgid "Unpacking ${SUBST0}..."
+msgstr "Барориши ${SUBST0}..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. SUBST0 is a package name
+#: ../bootstrap-base.templates:41001
+msgid "Configuring ${SUBST0}..."
+msgstr "Танзимкунии ${SUBST0}..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Release is a filename which should not be translated
+#: ../bootstrap-base.templates:42001
+msgid "Checking Release signature"
+msgstr "Санҷиши имзои барориш"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. SUBST0 is a gpg key id
+#. Release is a filename which should not be translated
+#: ../bootstrap-base.templates:43001
+msgid "Valid Release signature (key id ${SUBST0})"
+msgstr "Имзои ҳақиқии барориш (рамзи калид ${SUBST0})"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../bootstrap-base.templates:44001
+msgid "Resolving dependencies of base packages..."
+msgstr "Ҳалкунии вобастагиҳои бастаҳои асосӣ рафта истодааст..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. SUBST0 is a list of packages
+#: ../bootstrap-base.templates:45001
+msgid "Found additional base dependencies: ${SUBST0}"
+msgstr "Вобастагиҳои иловагии асосӣ ёфт шуданд: ${SUBST0}"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. SUBST0 is a list of packages
+#: ../bootstrap-base.templates:46001
+msgid "Found additional required dependencies: ${SUBST0}"
+msgstr "Вобастагиҳои иловагии лозимӣ ёфт шуданд: ${SUBST0}"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. SUBST0 is a list of packages
+#: ../bootstrap-base.templates:47001
+msgid "Found packages in base already in required: ${SUBST0}"
+msgstr "Бастаҳои пойгоҳ аллакай лозим мебошанд: ${SUBST0}"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../bootstrap-base.templates:48001
+msgid "Resolving dependencies of required packages..."
+msgstr "Ҳалкунии вобастагиҳои бастаҳои лозимӣ рафта истодааст..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. SUBST0 is an archive component (main, etc)
+#. SUBST1 is a mirror
+#: ../bootstrap-base.templates:49001
+msgid "Checking component ${SUBST0} on ${SUBST1}..."
+msgstr "Санҷиши унсурҳои ${SUBST0} дар ${SUBST1}..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Core packages are packages that are part of the Debian base system
+#. The "core" packages are indeed packages that are specifically
+#. recorded as part of the base system. Other packages may
+#. be installed on the base system because of dependency resolution
+#: ../bootstrap-base.templates:50001
+msgid "Installing core packages..."
+msgstr "Насбкунии бастаҳои мағзӣ..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Required packages are packages which installation is triggered
+#. by the dependency chain of core packages
+#. In short, they are "required" because at least one of the
+#. packages from the core packages depends on them
+#: ../bootstrap-base.templates:51001
+msgid "Unpacking required packages..."
+msgstr "Бастаҳои лозимӣ бароварда шуда истодаанд..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Required packages are packages which installation is triggered
+#. by the dependency chain of core packages
+#. In short, they are "required" because at least one of the
+#. packages from the core packages depends on them
+#: ../bootstrap-base.templates:52001
+msgid "Configuring required packages..."
+msgstr "Танзимкунии бастаҳои дархостшуда..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../bootstrap-base.templates:53001
+msgid "Installing base packages..."
+msgstr "Насбкунии бастаҳои асосӣ..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../bootstrap-base.templates:54001
+msgid "Unpacking the base system..."
+msgstr "Баровардани низоми асосӣ..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../bootstrap-base.templates:55001
+msgid "Configuring the base system..."
+msgstr "Танзимкунии низоми асосӣ..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../bootstrap-base.templates:56001
+msgid "Base system installed successfully."
+msgstr "Низоми асосӣ бо муваффақият насб карда шуд."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../bootstrap-base.templates:60001
+msgid "Selecting the kernel to install..."
+msgstr "Интихобкунии ҳаста барои насбкунӣ..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../bootstrap-base.templates:61001
+msgid "Installing the kernel..."
+msgstr "Насбкунии ҳаста..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. SUBST0 is a package name
+#: ../bootstrap-base.templates:62001
+msgid "Installing the kernel - retrieving and installing ${SUBST0}..."
+msgstr "Насбкунии ҳаста - бозёбӣ ва насбкунии ${SUBST0}..."
+
+#. Type: text
+#. Description
+#. Translators, this text will appear on a button, so KEEP IT SHORT
+#. :sl1:
+#: ../cdebconf-newt-udeb.templates:1001 ../cdebconf-gtk-udeb.templates:1001
+msgid "Continue"
+msgstr "Идома додан"
+
+#. Type: text
+#. Description
+#. Translators, this text will appear on a button, so KEEP IT SHORT
+#. :sl1:
+#: ../cdebconf-newt-udeb.templates:2001 ../cdebconf-gtk-udeb.templates:2001
+msgid "Go Back"
+msgstr "Ба қафо гузаштан"
+
+#. Type: text
+#. Description
+#. Translators, this text will appear on a button, so KEEP IT SHORT
+#. :sl1:
+#. Type: text
+#. Description
+#. :sl4:
+#: ../cdebconf-newt-udeb.templates:3001 ../cdebconf-gtk-udeb.templates:3001
+#: ../cdebconf-slang-udeb.templates:1001 ../cdebconf-text-udeb.templates:10001
+msgid "Yes"
+msgstr "Ҳа"
+
+#. Type: text
+#. Description
+#. Translators, this text will appear on a button, so KEEP IT SHORT
+#. :sl1:
+#. Type: text
+#. Description
+#. :sl4:
+#: ../cdebconf-newt-udeb.templates:4001 ../cdebconf-gtk-udeb.templates:4001
+#: ../cdebconf-slang-udeb.templates:2001 ../cdebconf-text-udeb.templates:11001
+msgid "No"
+msgstr "Не"
+
+#. #-#-#-#-#  templates.pot (cdebconf)  #-#-#-#-#
+#. Type: text
+#. Description
+#. Translators, this text will appear on a button, so KEEP IT SHORT
+#. :sl1:
+#. #-#-#-#-#  templates.pot (mdcfg)  #-#-#-#-#
+#. Type: select
+#. Choices
+#. :sl3:
+#. Type: select
+#. Choices
+#. :sl3:
+#. #-#-#-#-#  templates.pot (net-retriever)  #-#-#-#-#
+#. Type: select
+#. Choices
+#. These are choices of actions so this is, at least in English,
+#. an infinitive form
+#. :sl2:
+#: ../cdebconf-newt-udeb.templates:5001 ../mdcfg-utils.templates:6001
+#: ../mdcfg-utils.templates:13001 ../net-retriever.templates:1001
+msgid "Cancel"
+msgstr "Бекор кардан"
+
+#. Type: text
+#. Description
+#. Help line displayed at the bottom of the cdebconf newt interface.
+#. Translators: must fit within 80 characters.
+#. :sl1:
+#: ../cdebconf-newt-udeb.templates:6001
+msgid "<Tab> moves; <Space> selects; <Enter> activates buttons"
 msgstr ""
-"Агар шумо идомадиҳиро интихоб накунед, ба шумо имкон дода мешавад, ки забони "
-"дигарро интихоб намоед, ё ки шумо метавонед насбкуниро қатъ намоед."
+"Тугмаи <Tab> интиқол медиҳад; тугмаи <Space> интихоб мекунад; тугмаи <Enter> "
+"тугмаҳоро фаъол мекунад"
+
+#. Type: text
+#. Description
+#. Help line displayed at the bottom of the cdebconf newt interface.
+#. Translators: must fit within 80 characters.
+#. :sl1:
+#: ../cdebconf-newt-udeb.templates:7001
+msgid "<F1> for help; <Tab> moves; <Space> selects; <Enter> activates buttons"
+msgstr ""
+"Тугмаи <F1> барои кумак; <Tab> интиқол медиҳад; <Space> интихоб мекунад; "
+"<Enter> тугмаҳоро фаъол мекунад"
+
+#. Type: text
+#. Description
+#. Appears as a checkbox in the newt and GTK interfaces.
+#. :sl1:
+#: ../cdebconf-newt-udeb.templates:8001 ../cdebconf-gtk-udeb.templates:9001
+msgid "Show Password in Clear"
+msgstr "Намоиш додани ниҳонвожаи воридшуда"
+
+#. Type: text
+#. Description
+#. Translators, this text will appear on a button, so KEEP IT SHORT
+#. :sl1:
+#: ../cdebconf-gtk-udeb.templates:5001
+msgid "Help"
+msgstr "Кумак"
+
+#. Type: text
+#. Description
+#. TRANSLATORS: This should be "translated" to "RTL" or "LTR" depending of
+#. default text direction of your language
+#. LTR: Left to Right (Latin, Cyrillic, CJK, Indic...)
+#. RTL: Right To Left (Arabic, Hebrew, Persian...)
+#. DO NOT USE ANYTHING ELSE
+#. :sl1:
+#: ../cdebconf-gtk-udeb.templates:6001
+msgid "LTR"
+msgstr "ЧБР"
+
+#. Type: text
+#. Description
+#. Translators, this text will appear on a button, so KEEP IT SHORT
+#. This button will allow users to virtually "shoot a picture"
+#. of the screen
+#. :sl1:
+#: ../cdebconf-gtk-udeb.templates:7001
+msgid "Screenshot"
+msgstr "Акси экран"
+
+#. Type: text
+#. Description
+#. Text that will appear in a dialog box mentioning which file
+#. the screenshot has been saved to. "%s" is a file name here
+#. :sl1:
+#: ../cdebconf-gtk-udeb.templates:8001
+#, no-c-format
+msgid "Screenshot saved as %s"
+msgstr "Акси экран дар макони зерин бо номи %s захира шудааст"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../choose-mirror-bin.templates-in:5001
+msgid "Checking the Debian archive mirror"
+msgstr "Санҷиши оинаи бойгонии Debian"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../choose-mirror-bin.templates-in:6001
+msgid "Downloading Release files..."
+msgstr "Боргирии файлҳои Release..."
+
+#. Type: text
+#. Description
+#. main-menu item
+#. Translators: keep below 55 columns
+#. :sl1:
+#: ../choose-mirror-bin.templates-in:14001
+msgid "Choose a mirror of the Debian archive"
+msgstr "Интихоб кардани оинаи бойгонии Debian"
 
 #. Type: select
 #. Choices
-#. "other", here, is added to the list of countries that will be displayed
-#. for users to choose among them
-#. For instance, choosing "Italian" will show:
-#. Italy, Switzerland, other
 #. :sl1:
-#: ../localechooser.templates-in:22001 ../../mktemplates.continents:26
-msgid "other"
-msgstr "дигар"
+#. Type: select
+#. Choices
+#. :sl2:
+#: ../choose-mirror-bin.templates.http-in:2001
+#: ../choose-mirror-bin.templates.ftp.sel-in:2001
+msgid "enter information manually"
+msgstr "иттилоотро ба таври дастӣ ворид намоед"
 
-#. Type: text
-#. Description
+#. Type: select
+#. Default
+#. Translators, you should put here the ISO 3166 code of a country
+#. which you know hosts at least one Debian HTTP mirror. Please check
+#. that the country really has a Debian HTTP mirror before putting a
+#. random value here
+#.
+#. First check that the country you mention here is listed in
+#. https://salsa.debian.org/mirror-team/masterlist/-/blob/master/Mirrors.masterlist
+#.
+#. BE CAREFUL to use the TWO LETTER ISO-3166 CODE and not anything else
+#.
+#. You do not need to translate what's between the square brackets
+#. You should even NOT put square brackets in translations:
+#. msgid "US[ Default value for http]"
+#. msgstr "FR"
 #. :sl1:
-#: ../localechooser.templates-in:23001
-msgid "Country, territory or area:"
-msgstr "Кишвар, минтақа ё ноҳия:"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../localechooser.templates-in:24001
-msgid "Continent or region:"
-msgstr "Қитъа ё минтақа:"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../localechooser.templates-in:25001
-msgid ""
-"The selected location will be used to set your time zone and also for "
-"example to help select the system locale. Normally this should be the "
-"country where you live."
-msgstr ""
-"Ҷойгиршавии интихобшуда барои танзим кардани минтақаи вақт истифода бурда "
-"мешавад. Инчунин ҷойгиршавии интихобшуда барои интихоби маҳаллигардонии "
-"низом кумак мерасонад. Одатан ин бояд кишваре бошад, ки шумо дар он ҷо "
-"зиндагонӣ мекунед."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../localechooser.templates-in:26001
-msgid ""
-"This is a shortlist of locations based on the language you selected. Choose "
-"\"other\" if your location is not listed."
-msgstr ""
-"Ин рӯйхати кӯтоҳи ҷойгиршавиҳое мебошад, ки бо забони интихобшудаи шумо асос "
-"ёфтааст. Агар ҷойгиршавии шумо дар рӯйхат мавҷуд набошад, \"дигар\"-ро "
-"интихоб намоед."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../localechooser.templates-in:27001
-msgid "Select the continent or region to which your location belongs."
-msgstr ""
-"Қитъа ё минтақаеро интихоб намоед, ки ҷойгиршавии шумо ба он тааллуқ дорад."
-
-#. Type: text
-#. Description
-#. '%s' will be replaced with the name of the currently selected continent/region
-#. :sl1:
-#: ../localechooser.templates-in:28001
-#, no-c-format
-msgid ""
-"Listed are locations for: %s. Use the <Go Back> option to select a different "
-"continent or region if your location is not listed."
-msgstr ""
-"Дар рӯйхати зерин кишварҳо, минтақаҳо ё ноҳияҳо барои %s мавҷуданд. Агар "
-"ҷойгиршавии шумо дар рӯйхати зерин вуҷуд надошта бошад, тугмаи <Ба қафо "
-"гузаштан>-ро барои интихоб кардани қитъа ё минтақаи дигар истифода баред."
+#: ../choose-mirror-bin.templates.http-in:2002
+msgid "US[ Default value for http]"
+msgstr "ИМА[ Қимати пешфарз барои http]"
 
 #. Type: select
 #. Description
 #. :sl1:
-#: ../localechooser.templates-in:29001
-msgid "Country to base default locale settings on:"
-msgstr "Кишваре, ки бо он танзимоти пешфарзи маҳаллигардонӣ асос меёбанд:"
+#. Type: select
+#. Description
+#. :sl2:
+#: ../choose-mirror-bin.templates.http-in:2003
+#: ../choose-mirror-bin.templates.ftp.sel-in:2003
+msgid "Debian archive mirror country:"
+msgstr "Кишвари оинаи бойгонии Debian:"
 
-#. Type: text
+#. Type: select
 #. Description
 #. :sl1:
-#: ../localechooser.templates-in:30001
+#. Type: select
+#. Description
+#. :sl2:
+#: ../choose-mirror-bin.templates.http-in:2003
+#: ../choose-mirror-bin.templates.ftp.sel-in:2003
 msgid ""
-"There is no locale defined for the combination of language and country you "
-"have selected. You can now select your preference from the locales available "
-"for the selected language. The locale that will be used is listed in the "
-"second column."
+"The goal is to find a mirror of the Debian archive that is close to you on "
+"the network -- be aware that nearby countries, or even your own, may not be "
+"the best choice."
 msgstr ""
-"Барои забон ва кишваре, ки шумо интихоб кардед, ягон маҳаллигардонӣ муайян "
-"нашудааст. Акнун шумо метавонед бартарии худро аз ҷойгиршавиҳое, ки барои "
-"забони интихобшуда дастрасанд, интихоб намоед. Маҳаллигардоние, ки истифода "
-"мешавад, дар сутуни дуюм намоиш дода шудааст."
+"Дар ин ҷо шумо бояд оинаи бойгонии Debian-ро муайян намоед, ки барои шумо "
+"дар шабака наздиктар аст -- дар ёд дошта бошед, ки кишварҳои наздиктар ё "
+"ҳатто кишвари шумо наметавонанд интихоби беҳтарин бошанд."
 
-#. Type: text
+#. Type: select
 #. Description
 #. :sl1:
-#: ../localechooser.templates-in:31001
+#. Type: select
+#. Description
+#. :sl2:
+#: ../choose-mirror-bin.templates.http-in:3001
+#: ../choose-mirror-bin.templates.ftp.sel-in:3001
+msgid "Debian archive mirror:"
+msgstr "Оинаи бойгонии Debian:"
+
+#. Type: select
+#. Description
+#. :sl1:
+#. Type: select
+#. Description
+#. :sl2:
+#: ../choose-mirror-bin.templates.http-in:3001
+#: ../choose-mirror-bin.templates.ftp.sel-in:3001
 msgid ""
-"There are multiple locales defined for the language you have selected. You "
-"can now select your preference from those locales. The locale that will be "
-"used is listed in the second column."
+"Please select a Debian archive mirror. You should use a mirror in your "
+"country or region if you do not know which mirror has the best Internet "
+"connection to you."
 msgstr ""
-"Барои забони интихобшудаи шумо якчанд маҳаллигардонӣ таъин карда шудааст. "
-"Акнун шумо метавонед бартарии худро аз он маҳаллигардониҳо интихоб намоед. "
-"Маҳаллигардоние, ки истифода мешавад, дар сутуни дуюм намоиш дода шудааст."
+"Лутфан яке аз оинаи бойгонии Debian-ро интихоб намоед. Агар надонед, ки "
+"кадом оина пайвасти беҳтарини Интернетро барои шумо дорад, шумо бояд оинаеро "
+"дар кишвар ё минтақаи худ истифода баред."
+
+#. Type: select
+#. Description
+#. :sl1:
+#: ../choose-mirror-bin.templates.http-in:3001
+msgid "Usually, deb.debian.org is a good choice."
+msgstr "Одатан, deb.debian.org интихоби хуб аст."
+
+#. Type: string
+#. Description
+#. :sl1:
+#. Type: string
+#. Description
+#. :sl2:
+#: ../choose-mirror-bin.templates.http-in:4001
+#: ../choose-mirror-bin.templates.ftp.base-in:2001
+msgid "Debian archive mirror hostname:"
+msgstr "Номи мизбони оинаи бойгонии Debian:"
+
+#. Type: string
+#. Description
+#. :sl1:
+#. Type: string
+#. Description
+#. :sl2:
+#: ../choose-mirror-bin.templates.http-in:4001
+#: ../choose-mirror-bin.templates.ftp.base-in:2001
+msgid ""
+"Please enter the hostname of the mirror from which Debian will be downloaded."
+msgstr ""
+"Лутфан, номи мизбони оинае, ки Debian барои боргирӣ истифода мебарад, ворид "
+"намоед."
+
+#. Type: string
+#. Description
+#. :sl1:
+#. Type: string
+#. Description
+#. :sl2:
+#: ../choose-mirror-bin.templates.http-in:4001
+#: ../choose-mirror-bin.templates.ftp.base-in:2001
+msgid ""
+"An alternate port can be specified using the standard [hostname]:[port] "
+"format."
+msgstr ""
+"Порти иловагӣ метавонад тавассути шакли стандартии [мизбон]:[порт] муайян "
+"карда шавад."
+
+#. Type: string
+#. Description
+#. :sl1:
+#: ../choose-mirror-bin.templates.http-in:6001
+msgid "HTTP proxy information (blank for none):"
+msgstr "Маълумоти проксии HTTP (Холӣ монед, агар маълумот надошта бошед):"
+
+#. Type: string
+#. Description
+#. :sl1:
+#: ../choose-mirror-bin.templates.http-in:6001
+msgid ""
+"If you need to use a HTTP proxy to access the outside world, enter the proxy "
+"information here. Otherwise, leave this blank."
+msgstr ""
+"Агар шумо хоҳед, ки проксии HTTP-ро барои пайдо кардани дастрасӣ ба дунёи "
+"беруна истифода баред, маълумоти проксиро дар ин ҷо ворид намоед. Ба таври "
+"дигар, инро холӣ монед."
+
+#. Type: string
+#. Description
+#. :sl1:
+#. Type: string
+#. Description
+#. :sl2:
+#: ../choose-mirror-bin.templates.http-in:6001
+#: ../choose-mirror-bin.templates.ftp.base-in:4001
+msgid ""
+"The proxy information should be given in the standard form of \"http://"
+"[[user][:pass]@]host[:port]/\"."
+msgstr ""
+"Маълумоти прокси бояд шакли стандартии \"http://[[user][:pass]@]host[:port]/"
+"\" дошта бошад."
 
 #. Type: text
 #. Description
@@ -1349,6 +2231,428 @@ msgstr ""
 
 #. Type: text
 #. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl1:
+#: ../load-cdrom.templates:1001
+#, fuzzy
+#| msgid "Load installer components from an installer ISO"
+msgid "Load installer components from installation media"
+msgstr "Бор кардани унсурҳои насбкунанда аз ISO-и насбкунанда"
+
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl1:
+#: ../clock-setup.templates:1001
+msgid "Configure the clock"
+msgstr "Танзим кардани соат"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../clock-setup.templates:2001
+msgid "Is the system clock set to UTC?"
+msgstr "Вақти низом ба UTC танзим мекунед?"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../clock-setup.templates:2001
+msgid ""
+"System clocks are generally set to Coordinated Universal Time (UTC). The "
+"operating system uses your time zone to convert system time into local time. "
+"This is recommended unless you also use another operating system that "
+"expects the clock to be set to local time."
+msgstr ""
+"Умуман, соатҳои низом ба Вақти Умумиҷаҳонии Идорашаванда (UTC) таъин карда "
+"мешаванд. Низоми омил минтақаи вақти шуморо барои табдил додани вақти низом "
+"ба вақти маҳаллӣ истифода мебарад. Ин тавсия мешавад, агар шумо низоми "
+"дигари омилро истифода набаред, ки талаб мекунад, ки соатҳо ба вақти маҳаллӣ "
+"танзим карда шаванд."
+
+#. Type: text
+#. Description
+#. progress bar item
+#. :sl1:
+#: ../clock-setup.templates:3001
+msgid "Configuring clock settings..."
+msgstr "Танзимкунии соат..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../clock-setup.templates:4001
+msgid "Setting up the clock"
+msgstr "Танзимкунии соат"
+
+#. Type: text
+#. Description
+#. progress bar item
+#. :sl1:
+#: ../clock-setup.templates:7001
+msgid "Getting the time from a network time server..."
+msgstr "Танзим кардани вақт тавассути хидматрасони вақтии шабакавӣ..."
+
+#. Type: text
+#. Description
+#. progress bar item
+#. :sl1:
+#: ../clock-setup.templates:8001
+msgid "Setting the hardware clock..."
+msgstr "Танзимкунии соати сахтафзор..."
+
+#. Type: text
+#. Description
+#. Main menu item
+#. The translation should not exceed 55 columns except for languages
+#. that are only supported in the graphical version of the installer
+#. :sl1:
+#: ../di-utils-shell.templates:2001
+msgid "Execute a shell"
+msgstr "Иҷро кардани восит"
+
+#. Type: text
+#. Description
+#. Main menu item
+#. The translation should not exceed 55 columns except for languages
+#. that are only supported in the graphical version of the installer
+#. :sl1:
+#: ../di-utils-reboot.templates:2001
+msgid "Abort the installation"
+msgstr "Қатъ кардани насбкунӣ"
+
+#. Type: text
+#. Description
+#. base-installer progress bar item
+#. :sl1:
+#: ../di-utils.templates:1001
+msgid "Registering modules..."
+msgstr "Бақайдгирии модулҳо..."
+
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl1:
+#: ../finish-install.templates:1001
+msgid "Finish the installation"
+msgstr "Ба анҷом расонидани насб"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../finish-install.templates:2001
+msgid "Finishing the installation"
+msgstr "Ба анҷом расонидани насб"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../finish-install.templates:4001
+msgid "Configuring network..."
+msgstr "Шабака танзим шуда истодааст..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../finish-install.templates:5001
+msgid "Setting up frame buffer..."
+msgstr "Танзими миёнҷии чорчӯба..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../finish-install.templates:6001
+msgid "Unmounting file systems..."
+msgstr "Ҷудокунии низоми файлӣ..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../finish-install.templates:7001
+msgid "Rebooting into your new system..."
+msgstr "Ба низоми нави шумо аз нав бор шуда истодааст..."
+
+#. Type: note
+#. Description
+#. Translators: translate <Continue> identical to the translation of the button!
+#. :sl1:
+#: ../finish-install.templates:8001
+msgid "Installation complete"
+msgstr "Насб ба анҷом расид"
+
+#. Type: note
+#. Description
+#. Translators: translate <Continue> identical to the translation of the button!
+#. :sl1:
+#: ../finish-install.templates:8001
+msgid ""
+"Installation is complete, so it is time to boot into your new system. Make "
+"sure to remove the installation media, so that you boot into the new system "
+"rather than restarting the installation."
+msgstr ""
+"Насб ба анҷом расид ва акнун шумо бояд низоми навро ба кор дароред. Мутмаин "
+"шавед, ки расонаи насбкунии низомро бароред (аз CD-ROM, дискҳои флоппи, "
+"драйви флеш), то ки тавонед ба низоми нав ворид шавед ва насби наверо аз нав "
+"оғоз накунед."
+
+#. Type: note
+#. Description
+#. Translators: translate <Continue> identical to the translation of the button!
+#. :sl1:
+#: ../finish-install.templates:8001
+#, fuzzy
+#| msgid "Please choose a different name."
+msgid "Please choose <Continue> to reboot."
+msgstr "Лутфан, номи дигареро интихоб намоед."
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:1001 ../grub-installer.templates:2001
+#, fuzzy
+#| msgid "Install the GRUB boot loader on a hard disk"
+msgid "Install the GRUB boot loader to your primary drive?"
+msgstr "Насбкунии худроҳандозии GRUB ба диски сахт"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:1001
+msgid ""
+"The following other operating systems have been detected on this computer: "
+"${OS_LIST}"
+msgstr "Низомҳои омили зерин дар ин компютер ташхис карда шуданд: ${OS_LIST}"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:1001
+#, fuzzy
+#| msgid ""
+#| "If all of your operating systems are listed above, then it should be safe "
+#| "to install the boot loader to the master boot record of your first hard "
+#| "drive. When your computer boots, you will be able to choose to load one "
+#| "of these operating systems or your new system."
+msgid ""
+"If all of your operating systems are listed above, then it should be safe to "
+"install the boot loader to your primary drive (UEFI partition/boot record). "
+"When your computer boots, you will be able to choose to load one of these "
+"operating systems or the newly installed Debian system."
+msgstr ""
+"Агар ҳамаи низомҳои оператсионии шумо дар боло номбар шуда бошанд, он гоҳ "
+"насбкунии худроҳандозӣ ба сабти асосии роҳандозии диски сахти аввалини шумо "
+"бехатар мебошад. Вақте ки компютери шумо роҳандозӣ мешавад, шумо метавонед "
+"интихоб намоед, ки яке аз ин низомҳои оператсиониро ба низоми нави худ бор "
+"намоед."
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:2001
+#, fuzzy
+#| msgid ""
+#| "It seems that this new installation is the only operating system on this "
+#| "computer. If so, it should be safe to install the GRUB boot loader to the "
+#| "master boot record of your first hard drive."
+msgid ""
+"It seems that this new installation is the only operating system on this "
+"computer. If so, it should be safe to install the GRUB boot loader to your "
+"primary drive (UEFI partition/boot record)."
+msgstr ""
+"Чунин менамояд, ки ин насбкунии нав метавонад низоми омили ягонаи ин "
+"компютер бошад. Агар чунин бошад, барои бехатарӣ тавсия мешавад, ки "
+"худроҳандозии GRUB-ро ба сабти асосии роҳандозии диски сахти аввалини шумо "
+"насб намоед."
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:2001
+#, fuzzy
+#| msgid ""
+#| "Warning: If the installer failed to detect another operating system that "
+#| "is present on your computer, modifying the master boot record will make "
+#| "that operating system temporarily unbootable, though GRUB can be manually "
+#| "configured later to boot it."
+msgid ""
+"Warning: If your computer has another operating system that the installer "
+"failed to detect, this will make that operating system temporarily "
+"unbootable, though GRUB can be manually configured later to boot it."
+msgstr ""
+"Огоҳӣ: Агар насбкунанда низоми омили дигарро, ки дар компютери шумо мавҷуд "
+"аст, ташхис карда натавонад, тағйир додани сабти асосии роҳандозӣ низоми "
+"омилро муваққатан роҳандозинашаванда мегардонад, гарчанде ки GRUB метавонад "
+"баъдтар барои роҳандозӣ кардани он танзим карда шавад."
+
+#. #-#-#-#-#  templates.pot (grub-installer)  #-#-#-#-#
+#. Type: password
+#. Description
+#. :sl2:
+#. #-#-#-#-#  templates.pot (network-console)  #-#-#-#-#
+#. Type: password
+#. Description
+#. :sl3:
+#. #-#-#-#-#  templates.pot (user-setup)  #-#-#-#-#
+#. Type: password
+#. Description
+#. :sl1:
+#. Type: password
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:10001 ../network-console.templates:5001
+#: ../user-setup-udeb.templates:7001 ../user-setup-udeb.templates:14001
+msgid "Re-enter password to verify:"
+msgstr "Ниҳонвожаро барои тайид кардан аз нав ворид намоед:"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:18001
+msgid "Installing GRUB boot loader"
+msgstr "Насбкунии худроҳандозии GRUB"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:19001
+msgid "Looking for other operating systems..."
+msgstr "Ҷустуҷӯи низомҳои омили дигар рафта истодааст..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:20001
+msgid "Installing the '${GRUB}' package..."
+msgstr "Насбкунии бастаҳои '${GRUB}'..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:21001
+msgid "Determining GRUB boot device..."
+msgstr "Муайянкунии дастгоҳи роҳандозии GRUB..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:22001
+msgid "Running \"grub-install ${BOOTDEV}\"..."
+msgstr "\"grub-install ${BOOTDEV}\" иҷро шуда истодааст..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:23001
+msgid "Running \"update-grub\"..."
+msgstr "Иҷрокунии \"update-grub\"..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:24001
+msgid "Updating /etc/kernel-img.conf..."
+msgstr "Навсозии /etc/kernel-img.conf..."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:25001
+msgid "Checking whether to force usage of the removable media path"
+msgstr ""
+"Дар ҳоли санҷиши ниёзи истифодабарии маҷбурӣ нисбати масири расонаи "
+"ҷудошаванда"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:26001
+msgid "Mounting filesystems"
+msgstr "Васлкунии низомҳои файлӣ"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:27001
+msgid "Configuring grub-efi for future usage of the removable media path"
+msgstr ""
+"Дар ҳоли танзимкунии grub-efi барои истифодабарии оянда нисбати масири "
+"расонаи ҷудошаванда"
+
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl1:
+#: ../grub-installer.templates:28001
+#, fuzzy
+#| msgid "Installing GRUB boot loader"
+msgid "Install the GRUB boot loader"
+msgstr "Насбкунии худроҳандозии GRUB"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:34001
+msgid "Force GRUB installation to the EFI removable media path?"
+msgstr ""
+"Насбкунии маҷбурии GRUB-ро ба масири расонаи ҷудошавандаи EFI татбиқ мекунед?"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:34001
+msgid ""
+"It seems that this computer is configured to boot via EFI, but maybe that "
+"configuration will not work for booting from the hard drive. Some EFI "
+"firmware implementations do not meet the EFI specification (i.e. they are "
+"buggy!) and do not support proper configuration of boot options from system "
+"hard drives."
+msgstr ""
+"Чунин менамояд, ки ин компютер барои иҷрои роҳандозӣ тавассути EFI танзим "
+"карда шудааст, вале эҳтимол ин танзим барои роҳандозӣ аз диски компютерӣ кор "
+"намекунад. Баъзеи амалиётҳои сахтафзори дарунсохт ба хусусиятҳои EFI "
+"мувофиқат намекунанд (масалан, онҳо дорои хатоҳо мебошанд!) ва танзими "
+"лозимиро барои имконоти роҳандозӣ аз дискҳои компютерии низом дастгирӣ "
+"намекунанд."
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:34001
+msgid ""
+"A workaround for this problem is to install an extra copy of the EFI version "
+"of the GRUB boot loader to a fallback location, the \"removable media path"
+"\". Almost all EFI systems, no matter how buggy, will boot GRUB that way."
+msgstr ""
+"Барои ҳал кардани ин масъала, шумо бояд нусхаи иловагии гунаи EFI-ро барои "
+"боркунандаи роҳандозии GRUB ба масири эҳтиётӣ бо номи  \"масири расонаи "
+"ҷудошаванда (removable media path)\\” насб намоед. Ҳамин тариқ тақрибан "
+"ҳамаи низомҳои EFI, новобаста аз будани хатоҳо, роҳандозии GRUB-ро иҷро "
+"мекунанд."
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../grub-installer.templates:34001
+msgid ""
+"Warning: If the installer failed to detect another operating system that is "
+"present on your computer that also depends on this fallback, installing GRUB "
+"there will make that operating system temporarily unbootable. GRUB can be "
+"manually configured later to boot it if necessary."
+msgstr ""
+"Огоҳӣ: Агар насбкунанда низоми омили дигареро, ки дар компютери шумо мавҷуд "
+"аст, ташхис карда натавонад, тағйир додани сабти асосии роҳандозӣ низоми "
+"омилро муваққатан роҳандозинашаванда мегардонад, гарчанде ки GRUB метавонад "
+"баъдтар барои роҳандозӣ кардани он танзим карда шавад."
+
+#. Type: text
+#. Description
 #. :sl1:
 #: ../ethdetect.templates:4001
 msgid "Detecting network hardware"
@@ -1413,6 +2717,370 @@ msgstr "Дар ҳоли интизори омодаи сахтафзор..."
 #: ../hw-detect.templates:12001
 msgid "Checking for firmware..."
 msgstr "Санҷиши нармафзори дастгоҳ..."
+
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl1:
+#: ../save-logs.templates:1001
+msgid "Save debug logs"
+msgstr "Захира кардани сабтҳои рӯйдодҳои ислоҳи хатоҳо"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. finish-install progress bar item
+#: ../save-logs.templates:9001
+msgid "Gathering information for installation report..."
+msgstr "Гирифтани маълумот барои гузориши насбкунӣ..."
+
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl1:
+#: ../iso-scan.templates:1001
+msgid "Scan hard drives for an installer ISO image"
+msgstr "Скан кардани дискҳои сахт барои тимсоли ISO-и насбкунанда"
+
+#. Type: text
+#. Description
+#. This menu entry may be translated.
+#. However, translators are required to keep "Choose language"
+#. as an alternative separated by the "/" character
+#. Example (french): Choisir la langue/Choose language
+#. :sl1:
+#: ../localechooser.templates-in:1001
+msgid "Choose language"
+msgstr "Интихоби забон / Choose language"
+
+#. Type: text
+#. Description
+#. finish-install progress bar item
+#. :sl1:
+#: ../localechooser.templates-in:6001
+msgid "Storing language..."
+msgstr "Нигоҳ доштани забон..."
+
+#. Type: title
+#. Description
+#. Displayed as dialog title during language selection
+#. :sl1:
+#: ../localechooser.templates-in:7001
+msgid "Select a language"
+msgstr "Забонро интихоб намоед"
+
+#. Type: title
+#. Description
+#. Displayed as dialog title during country selection
+#. :sl1:
+#: ../localechooser.templates-in:8001
+msgid "Select your location"
+msgstr "Ҷойгиршавии худро интихоб намоед"
+
+#. Type: title
+#. Description
+#. Displayed as dialog title during locale selection
+#. :sl1:
+#: ../localechooser.templates-in:9001
+msgid "Configure locales"
+msgstr "Танзим кардани маҳаллигардониҳо"
+
+#. Type: note
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:12001
+msgid "Language selection no longer possible"
+msgstr "Интихобкунии забон дигар имконнопазир аст"
+
+#. Type: note
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:12001
+msgid ""
+"At this point it is no longer possible to change the language for the "
+"installation, but you can still change the country or locale."
+msgstr ""
+"Дар ин нуқта тағйир додани забони насбкунӣ дигар имконнопазир аст, аммо шумо "
+"то ҳол метавонед кишвар ё маҳаллигардониро интихоб намоед."
+
+#. Type: note
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:12001
+msgid ""
+"To select a different language you will need to abort this installation and "
+"reboot the installer."
+msgstr ""
+"Барои интихоб кардани забони дигар, ба шумо лозим мешавад, ки насбкуниро "
+"қатъ намоед ва барномаи насбкуниро бозоғозӣ намоед."
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:13001 ../localechooser.templates-in:14001
+msgid "Continue the installation in the selected language?"
+msgstr "Насбкуниро бо забони интихобшуда идома медиҳед?"
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:13001
+msgid ""
+"The translation of the installer is incomplete for the selected language."
+msgstr "Тарҷумаи барномаи насбкунӣ барои забони интихобшуда нопурра мебошад."
+
+#. Type: boolean
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:14001
+msgid ""
+"The translation of the installer is not fully complete for the selected "
+"language."
+msgstr ""
+"Тарҷумаи барномаи насбкунӣ барои забони интихобшуда пурра тайёр намебошад."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:15001
+msgid ""
+"This means that there is a significant chance that some dialogs will be "
+"displayed in English instead."
+msgstr ""
+"Ин маънои онро дорад, ки баъзе равзанаҳои гуфтугӯ ба ҷойи он бо забони "
+"англисӣ намоиш дода мешаванд."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:16001
+msgid ""
+"If you do anything other than a purely default installation, there is a real "
+"chance that some dialogs will be displayed in English instead."
+msgstr ""
+"Агар шумо ҳангоми насбкунии пурраи стандартӣ амалҳои иловагиро иҷро кунед, "
+"имконияти зиёди он мавҷуд аст, ки баъзеи равзанаҳои гуфтугӯ ба ҷойи он бо "
+"забони англисӣ намоиш дода мешаванд."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:17001
+msgid ""
+"If you continue the installation in the selected language, most dialogs "
+"should be displayed correctly but - especially if you use the more advanced "
+"options of the installer - some may be displayed in English instead."
+msgstr ""
+"Агар шумо насбкуниро бо забони интихобшуда идома диҳед, қисми зиёди "
+"равзанаҳои гуфтугӯ бояд ба таври дуруст намоиш дода шаванд, аммо - хусусан, "
+"агар шумо имконоти иловагии барномаи насбкуниро истифода баред - баъзеи онҳо "
+"метавонанд ба ҷойи он бо забони англисӣ намоиш дода шаванд."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:18001
+msgid ""
+"If you continue the installation in the selected language, dialogs should "
+"normally be displayed correctly but - especially if you use the more "
+"advanced options of the installer - there is a slight chance some may be "
+"displayed in English instead."
+msgstr ""
+"Агар шумо насбкуниро бо забони интихобшуда идома диҳед, равзанаҳои гуфтугӯ "
+"бояд ба таври дуруст намоиш дода шаванд, аммо - хусусан, агар шумо имконоти "
+"иловагии барномаи насбкуниро истифода баред - эҳтимол аст, ки баъзеи онҳо "
+"метавонанд ба ҷойи он бо забони англисӣ намоиш дода шаванд."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:19001
+msgid ""
+"The chance that you will actually encounter a dialog that is not translated "
+"into the selected language is extremely small, but it cannot be ruled out "
+"completely."
+msgstr ""
+"Имконияти он, ки шумо воқеан бо равзанаи гуфтугӯе дучор мешавед, ки он ба "
+"забони интихобшуда тарҷума нашудааст, хеле хурд аст, аммо ин имконият "
+"наметавонад тамоман ба назар гирифта нашавад."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:20001
+msgid ""
+"Unless you have a good understanding of the alternative language, it is "
+"recommended to either select a different language or abort the installation."
+msgstr ""
+"Агар шумо дониши хуби забони иловагиро надошта бошед, тавсия дода мешавад, "
+"ки забони дигареро интихоб намоед, ё ки насбкуниро қатъ намоед."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:21001
+msgid ""
+"If you choose not to continue, you will be given the option of selecting a "
+"different language, or you can abort the installation."
+msgstr ""
+"Агар шумо идомадиҳиро интихоб накунед, ба шумо имкон дода мешавад, ки забони "
+"дигарро интихоб намоед, ё ки шумо метавонед насбкуниро қатъ намоед."
+
+#. Type: select
+#. Choices
+#. "other", here, is added to the list of countries that will be displayed
+#. for users to choose among them
+#. For instance, choosing "Italian" will show:
+#. Italy, Switzerland, other
+#. :sl1:
+#: ../localechooser.templates-in:22001 ../../mktemplates.continents:26
+msgid "other"
+msgstr "дигар"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:23001
+msgid "Country, territory or area:"
+msgstr "Кишвар, минтақа ё ноҳия:"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:24001
+msgid "Continent or region:"
+msgstr "Қитъа ё минтақа:"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:25001
+msgid ""
+"The selected location will be used to set your time zone and also for "
+"example to help select the system locale. Normally this should be the "
+"country where you live."
+msgstr ""
+"Ҷойгиршавии интихобшуда барои танзим кардани минтақаи вақт истифода бурда "
+"мешавад. Инчунин ҷойгиршавии интихобшуда барои интихоби маҳаллигардонии "
+"низом кумак мерасонад. Одатан ин бояд кишваре бошад, ки шумо дар он ҷо "
+"зиндагонӣ мекунед."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:26001
+msgid ""
+"This is a shortlist of locations based on the language you selected. Choose "
+"\"other\" if your location is not listed."
+msgstr ""
+"Ин рӯйхати кӯтоҳи ҷойгиршавиҳое мебошад, ки бо забони интихобшудаи шумо асос "
+"ёфтааст. Агар ҷойгиршавии шумо дар рӯйхат мавҷуд набошад, \"дигар\"-ро "
+"интихоб намоед."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:27001
+msgid "Select the continent or region to which your location belongs."
+msgstr ""
+"Қитъа ё минтақаеро интихоб намоед, ки ҷойгиршавии шумо ба он тааллуқ дорад."
+
+#. Type: text
+#. Description
+#. '%s' will be replaced with the name of the currently selected continent/region
+#. :sl1:
+#: ../localechooser.templates-in:28001
+#, no-c-format
+msgid ""
+"Listed are locations for: %s. Use the <Go Back> option to select a different "
+"continent or region if your location is not listed."
+msgstr ""
+"Дар рӯйхати зерин кишварҳо, минтақаҳо ё ноҳияҳо барои %s мавҷуданд. Агар "
+"ҷойгиршавии шумо дар рӯйхати зерин вуҷуд надошта бошад, тугмаи <Ба қафо "
+"гузаштан>-ро барои интихоб кардани қитъа ё минтақаи дигар истифода баред."
+
+#. Type: select
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:29001
+msgid "Country to base default locale settings on:"
+msgstr "Кишваре, ки бо он танзимоти пешфарзи маҳаллигардонӣ асос меёбанд:"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:30001
+msgid ""
+"There is no locale defined for the combination of language and country you "
+"have selected. You can now select your preference from the locales available "
+"for the selected language. The locale that will be used is listed in the "
+"second column."
+msgstr ""
+"Барои забон ва кишваре, ки шумо интихоб кардед, ягон маҳаллигардонӣ муайян "
+"нашудааст. Акнун шумо метавонед бартарии худро аз ҷойгиршавиҳое, ки барои "
+"забони интихобшуда дастрасанд, интихоб намоед. Маҳаллигардоние, ки истифода "
+"мешавад, дар сутуни дуюм намоиш дода шудааст."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../localechooser.templates-in:31001
+msgid ""
+"There are multiple locales defined for the language you have selected. You "
+"can now select your preference from those locales. The locale that will be "
+"used is listed in the second column."
+msgstr ""
+"Барои забони интихобшудаи шумо якчанд маҳаллигардонӣ таъин карда шудааст. "
+"Акнун шумо метавонед бартарии худро аз он маҳаллигардониҳо интихоб намоед. "
+"Маҳаллигардоние, ки истифода мешавад, дар сутуни дуюм намоиш дода шудааст."
+
+#. #-#-#-#-#  templates.pot (lvmcfg)  #-#-#-#-#
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl1:
+#. #-#-#-#-#  templates.pot (partman-lvm)  #-#-#-#-#
+#. Type: text
+#. Description
+#. Type: text
+#. Description
+#. :sl3:
+#. Main menu item
+#. Translators: keep below 55 columns
+#. Use infinitive form
+#: ../lvmcfg.templates:1001 ../partman-lvm.templates:7001
+#: ../partman-lvm.templates:23001
+msgid "Configure the Logical Volume Manager"
+msgstr "Танзим кардани Мудири ҳаҷми мантиқӣ"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../main-menu.templates:1001
+msgid "Debian installer main menu"
+msgstr "Менюи асосии насбкунандаи Debian"
+
+#. Type: select
+#. Description
+#. :sl1:
+#: ../main-menu.templates:2001
+msgid "Choose the next step in the install process:"
+msgstr "Қадами навбатиро дар раванди насбкунӣ интихоб намоед:"
+
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. :sl1:
+#: ../mdcfg-utils.templates:1001
+msgid "Configure MD devices"
+msgstr "Танзимоти дастгоҳҳои MD"
 
 #. Type: boolean
 #. Description
@@ -1887,237 +3555,17 @@ msgstr "Танзим кардани шабака бо истифодаи ниш�
 
 #. Type: text
 #. Description
-#. :sl1:
-#: ../choose-mirror-bin.templates-in:5001
-msgid "Checking the Debian archive mirror"
-msgstr "Санҷиши оинаи бойгонии Debian"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../choose-mirror-bin.templates-in:6001
-msgid "Downloading Release files..."
-msgstr "Боргирии файлҳои Release..."
-
-#. Type: text
-#. Description
-#. main-menu item
-#. Translators: keep below 55 columns
-#. :sl1:
-#: ../choose-mirror-bin.templates-in:14001
-msgid "Choose a mirror of the Debian archive"
-msgstr "Интихоб кардани оинаи бойгонии Debian"
-
-#. Type: select
-#. Choices
-#. :sl1:
-#. Type: select
-#. Choices
-#. :sl2:
-#: ../choose-mirror-bin.templates.http-in:2001
-#: ../choose-mirror-bin.templates.ftp.sel-in:2001
-msgid "enter information manually"
-msgstr "иттилоотро ба таври дастӣ ворид намоед"
-
-#. Type: select
-#. Default
-#. Translators, you should put here the ISO 3166 code of a country
-#. which you know hosts at least one Debian HTTP mirror. Please check
-#. that the country really has a Debian HTTP mirror before putting a
-#. random value here
-#.
-#. First check that the country you mention here is listed in
-#. https://salsa.debian.org/mirror-team/masterlist/-/blob/master/Mirrors.masterlist
-#.
-#. BE CAREFUL to use the TWO LETTER ISO-3166 CODE and not anything else
-#.
-#. You do not need to translate what's between the square brackets
-#. You should even NOT put square brackets in translations:
-#. msgid "US[ Default value for http]"
-#. msgstr "FR"
-#. :sl1:
-#: ../choose-mirror-bin.templates.http-in:2002
-msgid "US[ Default value for http]"
-msgstr "ИМА[ Қимати пешфарз барои http]"
-
-#. Type: select
-#. Description
-#. :sl1:
-#. Type: select
-#. Description
-#. :sl2:
-#: ../choose-mirror-bin.templates.http-in:2003
-#: ../choose-mirror-bin.templates.ftp.sel-in:2003
-msgid "Debian archive mirror country:"
-msgstr "Кишвари оинаи бойгонии Debian:"
-
-#. Type: select
-#. Description
-#. :sl1:
-#. Type: select
-#. Description
-#. :sl2:
-#: ../choose-mirror-bin.templates.http-in:2003
-#: ../choose-mirror-bin.templates.ftp.sel-in:2003
-msgid ""
-"The goal is to find a mirror of the Debian archive that is close to you on "
-"the network -- be aware that nearby countries, or even your own, may not be "
-"the best choice."
-msgstr ""
-"Дар ин ҷо шумо бояд оинаи бойгонии Debian-ро муайян намоед, ки барои шумо "
-"дар шабака наздиктар аст -- дар ёд дошта бошед, ки кишварҳои наздиктар ё "
-"ҳатто кишвари шумо наметавонанд интихоби беҳтарин бошанд."
-
-#. Type: select
-#. Description
-#. :sl1:
-#. Type: select
-#. Description
-#. :sl2:
-#: ../choose-mirror-bin.templates.http-in:3001
-#: ../choose-mirror-bin.templates.ftp.sel-in:3001
-msgid "Debian archive mirror:"
-msgstr "Оинаи бойгонии Debian:"
-
-#. Type: select
-#. Description
-#. :sl1:
-#. Type: select
-#. Description
-#. :sl2:
-#: ../choose-mirror-bin.templates.http-in:3001
-#: ../choose-mirror-bin.templates.ftp.sel-in:3001
-msgid ""
-"Please select a Debian archive mirror. You should use a mirror in your "
-"country or region if you do not know which mirror has the best Internet "
-"connection to you."
-msgstr ""
-"Лутфан яке аз оинаи бойгонии Debian-ро интихоб намоед. Агар надонед, ки "
-"кадом оина пайвасти беҳтарини Интернетро барои шумо дорад, шумо бояд оинаеро "
-"дар кишвар ё минтақаи худ истифода баред."
-
-#. Type: select
-#. Description
-#. :sl1:
-#: ../choose-mirror-bin.templates.http-in:3001
-msgid "Usually, deb.debian.org is a good choice."
-msgstr "Одатан, deb.debian.org интихоби хуб аст."
-
-#. Type: string
-#. Description
-#. :sl1:
-#. Type: string
-#. Description
-#. :sl2:
-#: ../choose-mirror-bin.templates.http-in:4001
-#: ../choose-mirror-bin.templates.ftp.base-in:2001
-msgid "Debian archive mirror hostname:"
-msgstr "Номи мизбони оинаи бойгонии Debian:"
-
-#. Type: string
-#. Description
-#. :sl1:
-#. Type: string
-#. Description
-#. :sl2:
-#: ../choose-mirror-bin.templates.http-in:4001
-#: ../choose-mirror-bin.templates.ftp.base-in:2001
-msgid ""
-"Please enter the hostname of the mirror from which Debian will be downloaded."
-msgstr ""
-"Лутфан, номи мизбони оинае, ки Debian барои боргирӣ истифода мебарад, ворид "
-"намоед."
-
-#. Type: string
-#. Description
-#. :sl1:
-#. Type: string
-#. Description
-#. :sl2:
-#: ../choose-mirror-bin.templates.http-in:4001
-#: ../choose-mirror-bin.templates.ftp.base-in:2001
-msgid ""
-"An alternate port can be specified using the standard [hostname]:[port] "
-"format."
-msgstr ""
-"Порти иловагӣ метавонад тавассути шакли стандартии [мизбон]:[порт] муайян "
-"карда шавад."
-
-#. Type: string
-#. Description
-#. :sl1:
-#: ../choose-mirror-bin.templates.http-in:6001
-msgid "HTTP proxy information (blank for none):"
-msgstr "Маълумоти проксии HTTP (Холӣ монед, агар маълумот надошта бошед):"
-
-#. Type: string
-#. Description
-#. :sl1:
-#: ../choose-mirror-bin.templates.http-in:6001
-msgid ""
-"If you need to use a HTTP proxy to access the outside world, enter the proxy "
-"information here. Otherwise, leave this blank."
-msgstr ""
-"Агар шумо хоҳед, ки проксии HTTP-ро барои пайдо кардани дастрасӣ ба дунёи "
-"беруна истифода баред, маълумоти проксиро дар ин ҷо ворид намоед. Ба таври "
-"дигар, инро холӣ монед."
-
-#. Type: string
-#. Description
-#. :sl1:
-#. Type: string
-#. Description
-#. :sl2:
-#: ../choose-mirror-bin.templates.http-in:6001
-#: ../choose-mirror-bin.templates.ftp.base-in:4001
-msgid ""
-"The proxy information should be given in the standard form of \"http://"
-"[[user][:pass]@]host[:port]/\"."
-msgstr ""
-"Маълумоти прокси бояд шакли стандартии \"http://[[user][:pass]@]host[:port]/"
-"\" дошта бошад."
-
-#. #-#-#-#-#  templates.pot (net-retriever)  #-#-#-#-#
-#. Type: select
-#. Choices
-#. These are choices of actions so this is, at least in English,
-#. an infinitive form
-#. :sl2:
-#. #-#-#-#-#  templates.pot (cdebconf)  #-#-#-#-#
-#. Type: text
-#. Description
-#. Translators, this text will appear on a button, so KEEP IT SHORT
-#. :sl1:
-#. #-#-#-#-#  templates.pot (mdcfg)  #-#-#-#-#
-#. Type: select
-#. Choices
-#. :sl3:
-#. Type: select
-#. Choices
-#. :sl3:
-#: ../net-retriever.templates:1001 ../cdebconf-newt-udeb.templates:5001
-#: ../mdcfg-utils.templates:6001 ../mdcfg-utils.templates:13001
-msgid "Cancel"
-msgstr "Бекор кардан"
-
-#. Type: text
-#. Description
 #. Main menu item
 #. Translators: keep below 55 columns
 #. :sl1:
-#: ../load-cdrom.templates:1001
-#, fuzzy
-#| msgid "Load installer components from an installer ISO"
-msgid "Load installer components from installation media"
-msgstr "Бор кардани унсурҳои насбкунанда аз ISO-и насбкунанда"
+#: ../nobootloader.templates:1001
+msgid "Continue without boot loader"
+msgstr "Идома додан бе худроҳандозӣ"
 
+#. #-#-#-#-#  templates.pot (partman-auto)  #-#-#-#-#
 #. Type: text
 #. Description
 #. :sl1:
-#: ../partman-base.templates:1001
-msgid "Starting up the partitioner"
-msgstr "Оғозкунии абзори қисмбандӣ"
-
 #. #-#-#-#-#  templates.pot (partman-base)  #-#-#-#-#
 #. Type: text
 #. Description
@@ -2125,14 +3573,185 @@ msgstr "Оғозкунии абзори қисмбандӣ"
 #. Type: text
 #. Description
 #. :sl2:
-#. #-#-#-#-#  templates.pot (partman-auto)  #-#-#-#-#
+#: ../partman-auto.templates:1001 ../partman-base.templates:2001
+#: ../partman-base.templates:25001
+msgid "Please wait..."
+msgstr "Лутфан, интизор шавед..."
+
 #. Type: text
 #. Description
 #. :sl1:
-#: ../partman-base.templates:2001 ../partman-base.templates:25001
-#: ../partman-auto.templates:1001
-msgid "Please wait..."
-msgstr "Лутфан, интизор шавед..."
+#: ../partman-auto.templates:2001
+msgid "Computing the new partitions..."
+msgstr "Ҳисобкунии қисмҳои диски нав..."
+
+#. Type: select
+#. Description
+#. :sl1:
+#. Type: select
+#. Description
+#. :sl1:
+#: ../partman-auto.templates:5001 ../partman-auto.templates:9001
+msgid "Partitioning method:"
+msgstr "Усули қисмбандӣ:"
+
+#. Type: select
+#. Description
+#. :sl1:
+#: ../partman-auto.templates:5001
+msgid ""
+"The installer can guide you through partitioning a disk (using different "
+"standard schemes) or, if you prefer, you can do it manually. With guided "
+"partitioning you will still have a chance later to review and customise the "
+"results."
+msgstr ""
+"Насбкунанда метавонад ба шумо ҳангоми қисмбандии диск (тавассути нақшаҳои "
+"стандартии гуногун) ёрӣ расонад, ё ки, агар шумо хоҳед, шумо метавонед инро "
+"ба таври дастӣ иҷро намоед. Бо қисмбандии ёрирасон шумо имкони "
+"азназаргузаронӣ ва фармоиш додани натиҷаҳоро мегиред."
+
+#. Type: select
+#. Description
+#. :sl1:
+#. Type: select
+#. Description
+#. :sl1:
+#: ../partman-auto.templates:5001 ../partman-auto.templates:9001
+msgid ""
+"If you choose guided partitioning for an entire disk, you will next be asked "
+"which disk should be used."
+msgstr ""
+"Агар шумо қисмбандии идорашавандаро барои тамоми диск интихоб намоед, дар "
+"қадами навбатӣ аз шумо пурсида мешавад, ки кадом диск бояд истифода шавад."
+
+#. Type: select
+#. Description
+#. :sl1:
+#: ../partman-auto.templates:10001
+msgid "Partitioning scheme:"
+msgstr "Нақшаи қисмбандӣ:"
+
+#. Type: select
+#. Description
+#. :sl1:
+#. "Selected for partitioning" can be either an entire disk
+#. of "the largest continuous free space" on an existing disk
+#. TRANSLATORS, please take care to choose something appropriate for both
+#.
+#. It is followed by a variable giving the chosen disk, hence the colon
+#. at the end of the sentence. Please keep it.
+#: ../partman-auto.templates:10001
+msgid "Selected for partitioning:"
+msgstr "Барои қисмбандӣ интихоб шудааст:"
+
+#. Type: select
+#. Description
+#. :sl1:
+#: ../partman-auto.templates:10001
+msgid ""
+"The disk can be partitioned using one of several different schemes. If you "
+"are unsure, choose the first one."
+msgstr ""
+"Диск метавонад тавассути яке аз якчанд нақшаи гуногун қисмбандӣ карда шавад. "
+"Агар шумо мутмаин набошед, нақшаи якумро интихоб намоед."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
+#: ../partman-auto.templates:14001
+msgid "Guided partitioning"
+msgstr "Қисмбандии роҳнамоӣ"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
+#: ../partman-auto.templates:15001
+msgid "Guided - use the largest continuous free space"
+msgstr "Идорашаванда - истифодаи фазои озоди идомадиҳандаи калонтарин"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
+#: ../partman-auto.templates:16001
+msgid "Guided - use entire disk"
+msgstr "Идорашаванда - тамоми дискро истифода баред"
+
+#. Type: select
+#. Description
+#. :sl1:
+#: ../partman-auto.templates:17001
+msgid "Select disk to partition:"
+msgstr "Дискро барои қисмбандӣ интихоб намоед:"
+
+#. Type: select
+#. Description
+#. :sl1:
+#: ../partman-auto.templates:17001
+msgid ""
+"Note that all data on the disk you select will be erased, but not before you "
+"have confirmed that you really want to make the changes."
+msgstr ""
+"Ба қайд гиред, ки тамоми иттилоот дар диски интихобшудаи шумо пок карда "
+"мешавад, аммо на пеш аз тасдиқи шумо оиди хоҳиши даровардани тағйирот."
+
+#. Type: text
+#. Description
+#. :sl1:
+#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
+#. This is a method for partioning - as in guided (automatic) versus manual
+#: ../partman-auto.templates:18001
+msgid "Manual"
+msgstr "Дастӣ"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
+#: ../partman-auto.templates:19001
+msgid "Automatically partition the free space"
+msgstr "Эҷодкунии қисмҳои диск дар фазои озод ба таври худкор"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
+#: ../partman-auto.templates:20001
+msgid "All files in one partition (recommended for new users)"
+msgstr "Ҳамаи файлҳо дар як қисми диск (барои корбарони нав тавсия мешавад)"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
+#: ../partman-auto.templates:21001
+msgid "Separate /home partition"
+msgstr "Ҷудо кардани қисми диски /home"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
+#: ../partman-auto.templates:22001
+msgid "Separate /home, /var, and /tmp partitions"
+msgstr "Ҷудо кардани қисмҳои диски /home, /var ва /tmp"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
+#: ../partman-auto-lvm.templates:1001
+msgid "Guided - use entire disk and set up LVM"
+msgstr "Идорашаванда - тамоми дискро истифода баред ва LVM-ро танзим намоед"
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../partman-base.templates:1001
+msgid "Starting up the partitioner"
+msgstr "Оғозкунии абзори қисмбандӣ"
 
 #. Type: text
 #. Description
@@ -2384,166 +4003,6 @@ msgstr "Дискҳои қисмбандӣ"
 
 #. Type: text
 #. Description
-#. :sl1:
-#: ../partman-auto.templates:2001
-msgid "Computing the new partitions..."
-msgstr "Ҳисобкунии қисмҳои диски нав..."
-
-#. Type: select
-#. Description
-#. :sl1:
-#. Type: select
-#. Description
-#. :sl1:
-#: ../partman-auto.templates:5001 ../partman-auto.templates:9001
-msgid "Partitioning method:"
-msgstr "Усули қисмбандӣ:"
-
-#. Type: select
-#. Description
-#. :sl1:
-#: ../partman-auto.templates:5001
-msgid ""
-"The installer can guide you through partitioning a disk (using different "
-"standard schemes) or, if you prefer, you can do it manually. With guided "
-"partitioning you will still have a chance later to review and customise the "
-"results."
-msgstr ""
-"Насбкунанда метавонад ба шумо ҳангоми қисмбандии диск (тавассути нақшаҳои "
-"стандартии гуногун) ёрӣ расонад, ё ки, агар шумо хоҳед, шумо метавонед инро "
-"ба таври дастӣ иҷро намоед. Бо қисмбандии ёрирасон шумо имкони "
-"азназаргузаронӣ ва фармоиш додани натиҷаҳоро мегиред."
-
-#. Type: select
-#. Description
-#. :sl1:
-#. Type: select
-#. Description
-#. :sl1:
-#: ../partman-auto.templates:5001 ../partman-auto.templates:9001
-msgid ""
-"If you choose guided partitioning for an entire disk, you will next be asked "
-"which disk should be used."
-msgstr ""
-"Агар шумо қисмбандии идорашавандаро барои тамоми диск интихоб намоед, дар "
-"қадами навбатӣ аз шумо пурсида мешавад, ки кадом диск бояд истифода шавад."
-
-#. Type: select
-#. Description
-#. :sl1:
-#: ../partman-auto.templates:10001
-msgid "Partitioning scheme:"
-msgstr "Нақшаи қисмбандӣ:"
-
-#. Type: select
-#. Description
-#. :sl1:
-#. "Selected for partitioning" can be either an entire disk
-#. of "the largest continuous free space" on an existing disk
-#. TRANSLATORS, please take care to choose something appropriate for both
-#.
-#. It is followed by a variable giving the chosen disk, hence the colon
-#. at the end of the sentence. Please keep it.
-#: ../partman-auto.templates:10001
-msgid "Selected for partitioning:"
-msgstr "Барои қисмбандӣ интихоб шудааст:"
-
-#. Type: select
-#. Description
-#. :sl1:
-#: ../partman-auto.templates:10001
-msgid ""
-"The disk can be partitioned using one of several different schemes. If you "
-"are unsure, choose the first one."
-msgstr ""
-"Диск метавонад тавассути яке аз якчанд нақшаи гуногун қисмбандӣ карда шавад. "
-"Агар шумо мутмаин набошед, нақшаи якумро интихоб намоед."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
-#: ../partman-auto.templates:14001
-msgid "Guided partitioning"
-msgstr "Қисмбандии роҳнамоӣ"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
-#: ../partman-auto.templates:15001
-msgid "Guided - use the largest continuous free space"
-msgstr "Идорашаванда - истифодаи фазои озоди идомадиҳандаи калонтарин"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
-#: ../partman-auto.templates:16001
-msgid "Guided - use entire disk"
-msgstr "Идорашаванда - тамоми дискро истифода баред"
-
-#. Type: select
-#. Description
-#. :sl1:
-#: ../partman-auto.templates:17001
-msgid "Select disk to partition:"
-msgstr "Дискро барои қисмбандӣ интихоб намоед:"
-
-#. Type: select
-#. Description
-#. :sl1:
-#: ../partman-auto.templates:17001
-msgid ""
-"Note that all data on the disk you select will be erased, but not before you "
-"have confirmed that you really want to make the changes."
-msgstr ""
-"Ба қайд гиред, ки тамоми иттилоот дар диски интихобшудаи шумо пок карда "
-"мешавад, аммо на пеш аз тасдиқи шумо оиди хоҳиши даровардани тағйирот."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
-#. This is a method for partioning - as in guided (automatic) versus manual
-#: ../partman-auto.templates:18001
-msgid "Manual"
-msgstr "Дастӣ"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
-#: ../partman-auto.templates:19001
-msgid "Automatically partition the free space"
-msgstr "Эҷодкунии қисмҳои диск дар фазои озод ба таври худкор"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
-#: ../partman-auto.templates:20001
-msgid "All files in one partition (recommended for new users)"
-msgstr "Ҳамаи файлҳо дар як қисми диск (барои корбарони нав тавсия мешавад)"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
-#: ../partman-auto.templates:21001
-msgid "Separate /home partition"
-msgstr "Ҷудо кардани қисми диски /home"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
-#: ../partman-auto.templates:22001
-msgid "Separate /home, /var, and /tmp partitions"
-msgstr "Ҷудо кардани қисмҳои диски /home, /var ва /tmp"
-
-#. Type: text
-#. Description
 #. short variant of `do not use the partition'
 #. :sl1:
 #: ../partman-basicmethods.templates:7001
@@ -2565,66 +4024,6 @@ msgstr "шаклбандӣ"
 #: ../partman-basicmethods.templates:11001
 msgid "keep"
 msgstr "нигоҳ доштан"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../partman-partitioning.templates:2001
-msgid "Computing the new state of the partition table..."
-msgstr "Ҳисобкунии вазъияти нав барои ҷадвали қисмбандӣ..."
-
-#. Type: select
-#. Choices
-#. :sl1:
-#: ../partman-partitioning.templates:12001
-msgid "Beginning"
-msgstr "Аввал"
-
-#. Type: select
-#. Choices
-#. :sl1:
-#: ../partman-partitioning.templates:12001
-msgid "End"
-msgstr "Анҷом"
-
-#. Type: select
-#. Description
-#. :sl1:
-#: ../partman-partitioning.templates:12002
-msgid "Location for the new partition:"
-msgstr "Ҷойгиршавии қисми диски нав:"
-
-#. Type: select
-#. Description
-#. :sl1:
-#: ../partman-partitioning.templates:12002
-msgid ""
-"Please choose whether you want the new partition to be created at the "
-"beginning or at the end of the available space."
-msgstr ""
-"Лутфан, интихоб намоед, ки қисми диски нав бояд дар аввал ё дар охири фазои "
-"дастрас эҷод карда шавад."
-
-#. Type: select
-#. Choices
-#. :sl1:
-#: ../partman-partitioning.templates:13001
-msgid "Primary"
-msgstr "Асосӣ"
-
-#. Type: select
-#. Choices
-#. :sl1:
-#: ../partman-partitioning.templates:13001
-msgid "Logical"
-msgstr "Мантиқӣ"
-
-#. Type: select
-#. Description
-#. :sl1:
-#: ../partman-partitioning.templates:13002
-msgid "Type for the new partition:"
-msgstr "Навъи қисми диски нав:"
 
 #. Type: text
 #. Description
@@ -2720,6 +4119,46 @@ msgstr "swap"
 
 #. Type: text
 #. Description
+#. :sl2:
+#. File system name (untranslatable in many languages)
+#. Type: text
+#. Description
+#. :sl1:
+#. Short file system name (untranslatable in many languages)
+#: ../partman-btrfs.templates:1001 ../partman-btrfs.templates:3001
+msgid "btrfs"
+msgstr "btrfs"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. Type: text
+#. Description
+#. :sl1:
+#: ../partman-efi.templates:2001 ../partman-efi.templates:4001
+#, fuzzy
+#| msgid "EFI boot partition"
+msgid "EFI System Partition"
+msgstr "Қисми диски роҳандозии EFI"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. short variant of 'EFI System Partition'
+#. Up to 10 character positions
+#: ../partman-efi.templates:5001
+msgid "ESP"
+msgstr ""
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../partman-efi.templates:7001
+msgid "EFI-fat16"
+msgstr "EFI-fat16"
+
+#. Type: text
+#. Description
 #. :sl1:
 #. File system name (untranslatable in many languages)
 #. Type: text
@@ -2744,18 +4183,6 @@ msgstr "ext4"
 
 #. Type: text
 #. Description
-#. :sl2:
-#. File system name (untranslatable in many languages)
-#. Type: text
-#. Description
-#. :sl1:
-#. Short file system name (untranslatable in many languages)
-#: ../partman-btrfs.templates:1001 ../partman-btrfs.templates:3001
-msgid "btrfs"
-msgstr "btrfs"
-
-#. Type: text
-#. Description
 #. :sl1:
 #. File system name (untranslatable in many languages)
 #. Type: text
@@ -2768,15 +4195,63 @@ msgstr "jfs"
 
 #. Type: text
 #. Description
-#. :sl2:
-#. File system name (untranslatable in many languages)
-#. Type: text
+#. :sl1:
+#: ../partman-partitioning.templates:2001
+msgid "Computing the new state of the partition table..."
+msgstr "Ҳисобкунии вазъияти нав барои ҷадвали қисмбандӣ..."
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../partman-partitioning.templates:12001
+msgid "Beginning"
+msgstr "Аввал"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../partman-partitioning.templates:12001
+msgid "End"
+msgstr "Анҷом"
+
+#. Type: select
 #. Description
 #. :sl1:
-#. Short file system name (untranslatable in many languages)
-#: ../partman-xfs.templates:1001 ../partman-xfs.templates:3001
-msgid "xfs"
-msgstr "xfs"
+#: ../partman-partitioning.templates:12002
+msgid "Location for the new partition:"
+msgstr "Ҷойгиршавии қисми диски нав:"
+
+#. Type: select
+#. Description
+#. :sl1:
+#: ../partman-partitioning.templates:12002
+msgid ""
+"Please choose whether you want the new partition to be created at the "
+"beginning or at the end of the available space."
+msgstr ""
+"Лутфан, интихоб намоед, ки қисми диски нав бояд дар аввал ё дар охири фазои "
+"дастрас эҷод карда шавад."
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../partman-partitioning.templates:13001
+msgid "Primary"
+msgstr "Асосӣ"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../partman-partitioning.templates:13001
+msgid "Logical"
+msgstr "Мантиқӣ"
+
+#. Type: select
+#. Description
+#. :sl1:
+#: ../partman-partitioning.templates:13002
+msgid "Type for the new partition:"
+msgstr "Навъи қисми диски нав:"
 
 #. Type: note
 #. Description
@@ -2890,31 +4365,72 @@ msgstr ""
 
 #. Type: text
 #. Description
-#. :sl1:
+#. :sl2:
+#. File system name (untranslatable in many languages)
 #. Type: text
 #. Description
 #. :sl1:
-#: ../partman-efi.templates:2001 ../partman-efi.templates:4001
-#, fuzzy
-#| msgid "EFI boot partition"
-msgid "EFI System Partition"
-msgstr "Қисми диски роҳандозии EFI"
+#. Short file system name (untranslatable in many languages)
+#: ../partman-xfs.templates:1001 ../partman-xfs.templates:3001
+msgid "xfs"
+msgstr "xfs"
+
+#. Type: text
+#. Description
+#. Main menu item
+#. should not be more than 55 columns
+#. pkgsel is the module that installs packages by running tasksel to
+#. select "tasks". Please use "install *software*" and not
+#. "install *packages*" which is less adapted for non technical users
+#. :sl1:
+#: ../pkgsel.templates:1001
+msgid "Select and install software"
+msgstr "Интихоб ва насби нармафзор"
+
+#. Type: text
+#. Description
+#. This appears in a progress bar when running pkgsel
+#. The text is used when pkgsel is launched, before it installs packages
+#. :sl1:
+#: ../pkgsel.templates:2001
+msgid "Setting up..."
+msgstr "Танзим шуда истодааст..."
+
+#. Type: text
+#. Description
+#. This appears in a progress bar when running pkgsel
+#. The text is used when upgrading already installed packages.
+#. :sl1:
+#: ../pkgsel.templates:5001
+msgid "Upgrading software..."
+msgstr "Нармафзор такмил шуда истодааст..."
+
+#. Type: text
+#. Description
+#. This appears in a progress bar when running pkgsel
+#. The text is used when running tasksel to allow selecting packages
+#. Tasksel will then display its own screens
+#. :sl1:
+#: ../pkgsel.templates:6001
+msgid "Running tasksel..."
+msgstr "Барномаи «tasksel» иҷро шуда истодааст..."
+
+#. Type: text
+#. Description
+#. This appears in a progress bar when running pkgsel
+#. The text is used at the end of the installation phase while
+#. cleaning up pkgsel's stuff
+#. :sl1:
+#: ../pkgsel.templates:7001
+msgid "Cleaning up..."
+msgstr "Пок шуда истодааст..."
 
 #. Type: text
 #. Description
 #. :sl1:
-#. short variant of 'EFI System Partition'
-#. Up to 10 character positions
-#: ../partman-efi.templates:5001
-msgid "ESP"
-msgstr ""
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../partman-efi.templates:7001
-msgid "EFI-fat16"
-msgstr "EFI-fat16"
+#: ../rescue-mode.templates:1001
+msgid "Enter rescue mode"
+msgstr "Гузаштан ба реҷаи наҷотдиҳӣ"
 
 #. Type: text
 #. Description
@@ -2923,963 +4439,6 @@ msgstr "EFI-fat16"
 #: ../tzsetup-udeb.templates:1001
 msgid "Saving the time zone..."
 msgstr "Минтақаи вақт захира шуда истодааст..."
-
-#. Type: text
-#. Description
-#. Main menu item
-#. Translators: keep below 55 columns
-#. :sl1:
-#: ../clock-setup.templates:1001
-msgid "Configure the clock"
-msgstr "Танзим кардани соат"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../clock-setup.templates:2001
-msgid "Is the system clock set to UTC?"
-msgstr "Вақти низом ба UTC танзим мекунед?"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../clock-setup.templates:2001
-msgid ""
-"System clocks are generally set to Coordinated Universal Time (UTC). The "
-"operating system uses your time zone to convert system time into local time. "
-"This is recommended unless you also use another operating system that "
-"expects the clock to be set to local time."
-msgstr ""
-"Умуман, соатҳои низом ба Вақти Умумиҷаҳонии Идорашаванда (UTC) таъин карда "
-"мешаванд. Низоми омил минтақаи вақти шуморо барои табдил додани вақти низом "
-"ба вақти маҳаллӣ истифода мебарад. Ин тавсия мешавад, агар шумо низоми "
-"дигари омилро истифода набаред, ки талаб мекунад, ки соатҳо ба вақти маҳаллӣ "
-"танзим карда шаванд."
-
-#. Type: text
-#. Description
-#. progress bar item
-#. :sl1:
-#: ../clock-setup.templates:3001
-msgid "Configuring clock settings..."
-msgstr "Танзимкунии соат..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../clock-setup.templates:4001
-msgid "Setting up the clock"
-msgstr "Танзимкунии соат"
-
-#. Type: text
-#. Description
-#. progress bar item
-#. :sl1:
-#: ../clock-setup.templates:7001
-msgid "Getting the time from a network time server..."
-msgstr "Танзим кардани вақт тавассути хидматрасони вақтии шабакавӣ..."
-
-#. Type: text
-#. Description
-#. progress bar item
-#. :sl1:
-#: ../clock-setup.templates:8001
-msgid "Setting the hardware clock..."
-msgstr "Танзимкунии соати сахтафзор..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../base-installer.templates:4001
-msgid "Preparing to install the base system..."
-msgstr "Омодасозӣ барои насбкунии низоми асосӣ..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../base-installer.templates:5001 ../bootstrap-base.templates:30001
-msgid "Installing the base system"
-msgstr "Насбкунии низоми асосӣ"
-
-#. #-#-#-#-#  templates.pot (base-installer)  #-#-#-#-#
-#. Type: text
-#. Description
-#. :sl1:
-#. #-#-#-#-#  templates.pot (apt-setup)  #-#-#-#-#
-#. Type: text
-#. Description
-#. :sl2:
-#. #-#-#-#-#  templates.pot (pkgsel)  #-#-#-#-#
-#. Type: text
-#. Description
-#. :sl2:
-#. #-#-#-#-#  templates.pot (finish-install)  #-#-#-#-#
-#. Type: text
-#. Description
-#. :sl1:
-#: ../base-installer.templates:6001 ../apt-setup-udeb.templates:3001
-#: ../pkgsel.templates:9001 ../finish-install.templates:3001
-msgid "Running ${SCRIPT}..."
-msgstr "Иҷрокунии ${SCRIPT}..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../base-installer.templates:7001
-msgid "Setting up the base system..."
-msgstr "Танзимкунии низоми асосӣ..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../base-installer.templates:8001 ../bootstrap-base.templates:59001
-msgid "Configuring APT sources..."
-msgstr "Танзимкунии манбаҳои APT..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../base-installer.templates:9001
-msgid "Updating the list of available packages..."
-msgstr "Навсозии рӯйхати бастаҳои дастрас..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../base-installer.templates:10001
-msgid "Installing extra packages..."
-msgstr "Насбкунии бастаҳои иловагӣ..."
-
-#. Type: text
-#. Description
-#. SUBST0 is a package name
-#. :sl1:
-#: ../base-installer.templates:11001
-msgid "Installing extra packages - retrieving and installing ${SUBST0}..."
-msgstr "Насбкунии бастаҳои иловагӣ - бозёбӣ ва насбкунии ${SUBST0}..."
-
-#. Type: text
-#. Description
-#. Item in the main menu to select this package
-#. TRANSLATORS: <65 columns
-#. :sl1:
-#: ../bootstrap-base.templates:1001
-msgid "Install the base system"
-msgstr "Насбкунии низоми асосӣ"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. Release is a filename which should not be translated
-#: ../bootstrap-base.templates:23001
-msgid "Retrieving Release file"
-msgstr "Бозёбии файли барориш"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. Release is a filename which should not be translated
-#: ../bootstrap-base.templates:24001
-msgid "Retrieving Release file signature"
-msgstr "Бозёбии имзои файли барориш"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. "packages" here can be translated
-#: ../bootstrap-base.templates:25001
-msgid "Finding package sizes"
-msgstr "Ёфтани андозаҳои бастаҳо"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. Packages is a filename which should not be translated
-#: ../bootstrap-base.templates:26001
-msgid "Retrieving Packages files"
-msgstr "Бозёбии файлҳои бастаҳо"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. Packages is a filename which should not be translated
-#: ../bootstrap-base.templates:27001
-msgid "Retrieving Packages file"
-msgstr "Бозёбии файли бастаҳо"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. "packages" here can be translated
-#: ../bootstrap-base.templates:28001
-msgid "Retrieving packages"
-msgstr "Бозёбии бастаҳо"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. "packages" here can be translated
-#: ../bootstrap-base.templates:29001
-msgid "Extracting packages"
-msgstr "Баровардани бастаҳо"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. Core packages are packages that are part of the Debian base system
-#. The "core" packages are indeed packages that are specifically
-#. recorded as part of the base system. Other packages may
-#. be installed on the base system because of dependency resolution
-#: ../bootstrap-base.templates:31001
-msgid "Installing core packages"
-msgstr "Насбкунии бастаҳои мағзӣ"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. Required packages are packages which installation is triggered
-#. by the dependency chain of core packages
-#. In short, they are "required" because at least one of the
-#. packages from the core packages depends on them
-#: ../bootstrap-base.templates:32001
-msgid "Unpacking required packages"
-msgstr "Бастаҳои лозимӣ бароварда шуда истодаанд"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../bootstrap-base.templates:33001
-msgid "Configuring required packages"
-msgstr "Танзимкунии бастаҳои дархостшуда"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. The base system is the minimal Debian system
-#. See http://www.debian.org/doc/debian-policy/ch-binary.html#s3.7
-#: ../bootstrap-base.templates:34001
-msgid "Unpacking the base system"
-msgstr "Баровардани низоми асосӣ"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. The base system is the minimal Debian system
-#. See http://www.debian.org/doc/debian-policy/ch-binary.html#s3.7
-#: ../bootstrap-base.templates:35001
-msgid "Configuring the base system"
-msgstr "Танзимкунии низоми асосӣ"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../bootstrap-base.templates:36001
-msgid "${SECTION}: ${INFO}..."
-msgstr "${SECTION}: ${INFO}..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. SUBST0 is a package name
-#: ../bootstrap-base.templates:37001
-msgid "Validating ${SUBST0}..."
-msgstr "Санҷиши эътибори ${SUBST0}..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. SUBST0 is a package name
-#: ../bootstrap-base.templates:38001
-msgid "Retrieving ${SUBST0}..."
-msgstr "Бозёбии ${SUBST0}..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. SUBST0 is a package name
-#: ../bootstrap-base.templates:39001
-msgid "Extracting ${SUBST0}..."
-msgstr "Барориши ${SUBST0}..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. SUBST0 is a package name
-#: ../bootstrap-base.templates:40001
-msgid "Unpacking ${SUBST0}..."
-msgstr "Барориши ${SUBST0}..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. SUBST0 is a package name
-#: ../bootstrap-base.templates:41001
-msgid "Configuring ${SUBST0}..."
-msgstr "Танзимкунии ${SUBST0}..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. Release is a filename which should not be translated
-#: ../bootstrap-base.templates:42001
-msgid "Checking Release signature"
-msgstr "Санҷиши имзои барориш"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. SUBST0 is a gpg key id
-#. Release is a filename which should not be translated
-#: ../bootstrap-base.templates:43001
-msgid "Valid Release signature (key id ${SUBST0})"
-msgstr "Имзои ҳақиқии барориш (рамзи калид ${SUBST0})"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../bootstrap-base.templates:44001
-msgid "Resolving dependencies of base packages..."
-msgstr "Ҳалкунии вобастагиҳои бастаҳои асосӣ рафта истодааст..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. SUBST0 is a list of packages
-#: ../bootstrap-base.templates:45001
-msgid "Found additional base dependencies: ${SUBST0}"
-msgstr "Вобастагиҳои иловагии асосӣ ёфт шуданд: ${SUBST0}"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. SUBST0 is a list of packages
-#: ../bootstrap-base.templates:46001
-msgid "Found additional required dependencies: ${SUBST0}"
-msgstr "Вобастагиҳои иловагии лозимӣ ёфт шуданд: ${SUBST0}"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. SUBST0 is a list of packages
-#: ../bootstrap-base.templates:47001
-msgid "Found packages in base already in required: ${SUBST0}"
-msgstr "Бастаҳои пойгоҳ аллакай лозим мебошанд: ${SUBST0}"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../bootstrap-base.templates:48001
-msgid "Resolving dependencies of required packages..."
-msgstr "Ҳалкунии вобастагиҳои бастаҳои лозимӣ рафта истодааст..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. SUBST0 is an archive component (main, etc)
-#. SUBST1 is a mirror
-#: ../bootstrap-base.templates:49001
-msgid "Checking component ${SUBST0} on ${SUBST1}..."
-msgstr "Санҷиши унсурҳои ${SUBST0} дар ${SUBST1}..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. Core packages are packages that are part of the Debian base system
-#. The "core" packages are indeed packages that are specifically
-#. recorded as part of the base system. Other packages may
-#. be installed on the base system because of dependency resolution
-#: ../bootstrap-base.templates:50001
-msgid "Installing core packages..."
-msgstr "Насбкунии бастаҳои мағзӣ..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. Required packages are packages which installation is triggered
-#. by the dependency chain of core packages
-#. In short, they are "required" because at least one of the
-#. packages from the core packages depends on them
-#: ../bootstrap-base.templates:51001
-msgid "Unpacking required packages..."
-msgstr "Бастаҳои лозимӣ бароварда шуда истодаанд..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. Required packages are packages which installation is triggered
-#. by the dependency chain of core packages
-#. In short, they are "required" because at least one of the
-#. packages from the core packages depends on them
-#: ../bootstrap-base.templates:52001
-msgid "Configuring required packages..."
-msgstr "Танзимкунии бастаҳои дархостшуда..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../bootstrap-base.templates:53001
-msgid "Installing base packages..."
-msgstr "Насбкунии бастаҳои асосӣ..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../bootstrap-base.templates:54001
-msgid "Unpacking the base system..."
-msgstr "Баровардани низоми асосӣ..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../bootstrap-base.templates:55001
-msgid "Configuring the base system..."
-msgstr "Танзимкунии низоми асосӣ..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../bootstrap-base.templates:56001
-msgid "Base system installed successfully."
-msgstr "Низоми асосӣ бо муваффақият насб карда шуд."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../bootstrap-base.templates:60001
-msgid "Selecting the kernel to install..."
-msgstr "Интихобкунии ҳаста барои насбкунӣ..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../bootstrap-base.templates:61001
-msgid "Installing the kernel..."
-msgstr "Насбкунии ҳаста..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. SUBST0 is a package name
-#: ../bootstrap-base.templates:62001
-msgid "Installing the kernel - retrieving and installing ${SUBST0}..."
-msgstr "Насбкунии ҳаста - бозёбӣ ва насбкунии ${SUBST0}..."
-
-#. Type: text
-#. Description
-#. Main menu item
-#. MUST be kept below 55 characters/columns
-#. :sl1:
-#: ../apt-setup-udeb.templates:1001
-msgid "Configure the package manager"
-msgstr "Танзим кардани мудири бастаҳо"
-
-#. Type: text
-#. Description
-#. Translators, "apt" is the program name
-#. so please do NOT translate it
-#. :sl1:
-#: ../apt-setup-udeb.templates:2001
-msgid "Configuring apt"
-msgstr "Танзимкунии Apt"
-
-#. Type: multiselect
-#. Choices
-#. SEC_HOST is a host name (e.g. security.debian.org)
-#. Translators: the *entire* string should be under 55 columns
-#. including host name. In short, KEEP THIS SHORT and, yes, that's tricky
-#. :sl1:
-#: ../apt-setup-udeb.templates:11001
-msgid "security updates (from ${SEC_HOST})"
-msgstr "навсозиҳои амниятӣ (аз ${SEC_HOST})"
-
-#. Type: multiselect
-#. Choices
-#. SEC_HOST is a host name (e.g. security.debian.org)
-#. Translators: the *entire* string should be under 55 columns
-#. including host name. In short, KEEP THIS SHORT and, yes, that's tricky
-#. :sl1:
-#: ../apt-setup-udeb.templates:11001
-msgid "release updates"
-msgstr "навсозиҳои барориш"
-
-#. Type: multiselect
-#. Choices
-#. SEC_HOST is a host name (e.g. security.debian.org)
-#. Translators: the *entire* string should be under 55 columns
-#. including host name. In short, KEEP THIS SHORT and, yes, that's tricky
-#. :sl1:
-#: ../apt-setup-udeb.templates:11001
-msgid "backported software"
-msgstr "нармафзори интиқолшудаи пешакӣ"
-
-#. Type: multiselect
-#. Description
-#. :sl1:
-#: ../apt-setup-udeb.templates:11002
-msgid "Services to use:"
-msgstr "Хидматҳо барои истифода:"
-
-#. Type: multiselect
-#. Description
-#. :sl1:
-#: ../apt-setup-udeb.templates:11002
-msgid ""
-"Debian has two services that provide updates to releases: security and "
-"release updates."
-msgstr ""
-"Debian дорои ду хидмате, ки навсозиҳоро барои бароришҳо таъмин менамояд, "
-"мебошад: навсозиҳои барориш ва амният."
-
-#. Type: multiselect
-#. Description
-#. :sl1:
-#: ../apt-setup-udeb.templates:11002
-msgid ""
-"Security updates help to keep your system secured against attacks. Enabling "
-"this service is strongly recommended."
-msgstr ""
-"Навсозиҳои амниятӣ низоми шуморо аз ҳамлаҳо маҳофизат мекунад. Тавсия "
-"мешавад, ки шумо ин хидматро фаъол намоед."
-
-#. Type: multiselect
-#. Description
-#. :sl1:
-#: ../apt-setup-udeb.templates:11002
-msgid ""
-"Release updates provide more current versions for software that changes "
-"relatively frequently and where not having the latest version could reduce "
-"the usability of the software. It also provides regression fixes. This "
-"service is only available for stable and oldstable releases."
-msgstr ""
-"Навсозиҳои барориш гунаҳои нисбатан ҷориро барои нармафзоре, ки зуд зуд "
-"тағйир меёбад ва нармафзоре, ки дорои гунаи охирин намебошад, таъмин "
-"менамоянд. Он ҳамчунин ҳалҳои бозгаштро таъмин менамояд. Ин хидмат танҳо "
-"барои бароришҳои устувор ва устувори қаблӣ дастрас аст."
-
-#. Type: multiselect
-#. Description
-#. :sl1:
-#: ../apt-setup-udeb.templates:11002
-msgid ""
-"Backported software are adapted from the development version to work with "
-"this release. Although this software has not gone through such complete "
-"testing as that contained in the release, it includes newer versions of some "
-"applications which may provide useful features. Enabling backports here does "
-"not cause any of them to be installed by default; it only allows you to "
-"manually select backports to use."
-msgstr ""
-"Нармафзори пешакӣ интиқолшуда барои кор кардан бо ин барориш аз гунаи "
-"такомул мувофиқ карда шудааст. Бо вуҷуди он ки ин нармафзор аз санҷиши пурра "
-"гузашта нашудааст, чӣ хеле ки барои барориш лозим аст, он гунаҳои навтари "
-"баъзе барномаҳоеро, ки дорои хусусиятҳои фоиданок мебошанд, дар ба мегирад. "
-"Агар нармафзори пешакӣ интиқолшударо фаъол намоед, он ба сурати пешфарз насб "
-"карда намешавад, вале шумо метавонед нармафзори пешақӣ интиқолшударо ба "
-"таври дастӣ барои истифода интихоб намоед."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:1001
-#, fuzzy
-#| msgid "Finishing the installation"
-msgid "Scanning the installation media..."
-msgstr "Ба анҷом расонидани насб"
-
-#. Type: error
-#. Description
-#. :sl2:
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:2001 ../apt-cdrom-setup.templates:6001
-#, fuzzy
-#| msgid ""
-#| "An attempt to configure apt to install additional packages from the CD "
-#| "failed."
-msgid ""
-"An attempt to configure apt to install additional packages from the media "
-"failed."
-msgstr ""
-"Кӯшиши танзим кардани apt барои насбкунии бастаҳои иловагӣ аз CD ба анҷом "
-"нарасид."
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#. Type: boolean
-#. Description
-#. :sl1:
-#. Type: boolean
-#. Description
-#. :sl1:
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:3001 ../apt-cdrom-setup.templates:4001
-#: ../apt-cdrom-setup.templates:5001 ../apt-cdrom-setup.templates:6001
-#, fuzzy
-#| msgid "SILO installation failed"
-msgid "Scan extra installation media?"
-msgstr "Насби SILO қатъ шудааст"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:3001
-msgid "Scanning your installation media finds the label:"
-msgstr ""
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:3001
-#, fuzzy
-#| msgid ""
-#| "You now have the option to scan additional CDs or DVDs for use by the "
-#| "package manager (apt). Normally these should be from the same set as the "
-#| "installation CD/DVD. If you do not have any additional CDs or DVDs "
-#| "available, this step can just be skipped."
-msgid ""
-"You now have the option of scanning additional media for use by the package "
-"manager (apt). Normally these should be from the same set as the one you "
-"booted from. If you do not have any additional media, this step can just be "
-"skipped."
-msgstr ""
-"Акнун шумо имкон доред, ки CD-ҳо ё DVD-ҳои иловагиро барои истифода бо "
-"мудири бастаҳо (apt) скан намоед. Одатан онҳо бояд аз маҷмӯи якхела ба CD/"
-"DVD бошанд. Агар шумо ягон CD ё DVD-и дастрас надошта бошед, шумо метавонед "
-"ин қадамро нодида гузаронед."
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:3001 ../apt-cdrom-setup.templates:4001
-#, fuzzy
-#| msgid "If you wish to scan another CD or DVD, please insert it now."
-msgid "If you wish to scan more media, please insert another one now."
-msgstr ""
-"Агар шумо хоҳед, ки CD ё DVD-и дигарро скан намоед, лутфан, онро ҳозир дарҷ "
-"намоед."
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:4001
-#, fuzzy
-#| msgid "The CD or DVD with the following label has been scanned:"
-msgid "The image with the following label has been scanned:"
-msgstr "CD ё DVD бо барчаспи зерин скан карда шуд:"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:5001
-#, fuzzy
-#| msgid "The CD or DVD with the following label has already been scanned:"
-msgid "The image with the following label has already been scanned:"
-msgstr "CD ё DVD бо барчаспи зерин аллакай скан карда шуд:"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:5001
-#, fuzzy
-#| msgid "Please replace it now if you wish to scan another CD or DVD."
-msgid "Please replace it now, if you wish to scan another."
-msgstr ""
-"Агар шумо хоҳед, ки CD ё DVD-и дигарро скан намоед, онро ҳозир ҷойгузин "
-"намоед."
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:6001
-#, fuzzy
-#| msgid "Please check that the CD/DVD has been inserted correctly."
-msgid "Please check that the media has been inserted correctly."
-msgstr "Лутфан, мутмаин шавед, ки CD/DVD ба таври дуруст дарҷ карда шудааст."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:7001
-msgid "Media change"
-msgstr "Тағйир додани расона"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:7001
-#, fuzzy
-#| msgid ""
-#| "/cdrom/: Please insert the disc labeled '${LABEL}' in the drive '/cdrom/' "
-#| "and press enter."
-msgid "Please insert the media labeled '${LABEL}' and press enter."
-msgstr ""
-"/cdrom/: Лутфан, дискро бо барчаспи \"${LABEL}\" дар драйви \"/cdrom/\" дарҷ "
-"намоед ва тугмаи enter-ро зер намоед."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. finish-install progress bar item
-#: ../apt-cdrom-setup.templates:8001
-msgid "Disabling netinst CD in sources.list..."
-msgstr "CD-и netinst дар sources.list ғайрифаъол шуда истодааст..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../apt-cdrom-setup.templates:9001 ../apt-mirror-setup.templates:6001
-#, fuzzy
-#| msgid ""
-#| "If you are installing from a netinst CD and choose not to use a mirror, "
-#| "you will end up with only a very minimal base system."
-msgid ""
-"If you are installing from a netinst CD image and choose not to use a "
-"mirror, you will end up with only a very minimal base system."
-msgstr ""
-"Агар шумо аз CD-и насбкунии шабакавӣ насб карда бошед, шумо низоми "
-"хурдтарини асосиро ба даст меоред."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:10001
-#, fuzzy
-#| msgid ""
-#| "You are installing from a netinst CD, which by itself only allows "
-#| "installation of a very minimal base system. Use a mirror to install a "
-#| "more complete system."
-msgid ""
-"You are installing from a netinst CD image, which by itself only allows "
-"installation of a very minimal base system. Use a mirror to install a more "
-"complete system."
-msgstr ""
-"Шумо аз CD-и насбкунии шабакавӣ насб карда истодаед, ки он танҳо насбкунии "
-"низоми ақалли асосиро иҷозат медиҳад. Барои насб кардани низоми пурратар "
-"оинаро истифода баред."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:11001
-#, fuzzy
-#| msgid ""
-#| "You are installing from a CD, which contains a limited selection of "
-#| "packages."
-msgid ""
-"You are installing from an image which contains a limited selection of "
-"packages."
-msgstr ""
-"Шумо низомро аз диски CD насб карда истодаед, ки миқдори маҳдудшудаи бастаҳо "
-"дорад."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. The value of %i can be 2 or 3
-#: ../apt-cdrom-setup.templates:12001
-#, fuzzy, no-c-format
-#| msgid ""
-#| "You have scanned %i CDs. Even though these contain a fair selection of "
-#| "packages, some may be missing (notably some packages needed to support "
-#| "languages other than English)."
-msgid ""
-"You have scanned %i images. Even though these contain a fair selection of "
-"packages, some may be missing (notably some packages needed to support "
-"languages other than English)."
-msgstr ""
-"Шумо  CD-ро скан кардед. Гарчанде ки онҳо маҷмӯи зиёди бастаҳоро дар бар "
-"мегиранд, баъзеи онҳо метавонанд мавҷуд набошанд (асосан, барои баъзе "
-"бастаҳо дастгирии забонҳои аз англисӣ фарқкунанда лозим аст)."
-
-#. Type: text
-#. Description
-#. :sl1:
-#. The value of %i can be from 4 to 8
-#: ../apt-cdrom-setup.templates:13001
-#, fuzzy, no-c-format
-#| msgid ""
-#| "You have scanned %i CDs. Even though these contain a large selection of "
-#| "packages, some may be missing."
-msgid ""
-"You have scanned %i images. Even though these contain a large selection of "
-"packages, some may be missing."
-msgstr ""
-"Шумо  CD-ро скан кардед. Гарчанде ки баъзеи онҳо дорои маҷмӯи калон бастаҳо "
-"мебошад, баъзеи онҳо метавонанд дастнорас бошанд."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:14001
-msgid ""
-"Note that using a mirror can result in a large amount of data being "
-"downloaded during the next step of the installation."
-msgstr ""
-"Ба қайд гиред, ки истифодабарии оина метавонад сабаби боргирии миқдори зиёди "
-"иттилоот ҳангоми қадами навбатии насбкунӣ гардад."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:15001
-#, fuzzy
-#| msgid ""
-#| "You are installing from a DVD. Even though the DVD contains a large "
-#| "selection of packages, some may be missing."
-msgid ""
-"You are installing from a DVD image. Even though it contains a large "
-"selection of packages, some may be missing."
-msgstr ""
-"Шумо низомро аз диски DVD насб карда истодаед. Гарчанде, ки диски DVD дорои "
-"бастаҳои зиёд мебошад, баъзе бастаҳо дастнорасанд."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:16001
-msgid ""
-"Unless you don't have a good Internet connection, use of a mirror is "
-"recommended, especially if you plan to install a graphical desktop "
-"environment."
-msgstr ""
-"Агар шумо пайвасти хуби Интернет надошта бошед, истифодаи оина тавсия "
-"мешавад, хусусан агар шумо интихоб намоед, ки муҳити мизи кории графикиро "
-"насб намоед."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../apt-cdrom-setup.templates:17001
-msgid ""
-"If you have a reasonably good Internet connection, use of a mirror is "
-"suggested if you plan to install a graphical desktop environment."
-msgstr ""
-"Агар шумо пайвасти Интернети хуб дошта бошед, тавсия мешавад, ки шумо оинаро "
-"истифода баред, агар шумо хоҳед, ки муҳити мизи кории графикиро насб намоед."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../apt-mirror-setup.templates:1001
-msgid "Scanning the mirror..."
-msgstr "Сканкунии оина..."
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-mirror-setup.templates:2001
-msgid "Use non-free software?"
-msgstr "Нармафзори пулакиро истифода мебаред?"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-mirror-setup.templates:2001
-msgid ""
-"Some non-free software has been made to work with Debian. Though this "
-"software is not at all a part of Debian, standard Debian tools can be used "
-"to install it. This software has varying licenses which may prevent you from "
-"using, modifying, or sharing it."
-msgstr ""
-"Баъзе нармафзори ғайриозод барои кор бо Debian танзим карда шудааст. "
-"Гарчанде ки ин нармафзор қисми Debian намебошад, абзорҳои стандартии Debian "
-"метавонанд барои насб кардани он истифода шаванд. Ин нармафзор дорои "
-"иҷозатномаҳои тағйирёбанда мебошад, ки метавонанд ба шумо истифода, "
-"тағйирдиҳӣ ё мубодилакунии онро иҷозат надиҳанд."
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#. Type: boolean
-#. Description
-#. This template is used by the Ubuntu version of d-i.
-#. :sl2:
-#: ../apt-mirror-setup.templates:2001 ../apt-mirror-setup.templates-ubuntu:1001
-msgid "Please choose whether you want to have it available anyway."
-msgstr "Лутфан, интихоб намоед, ки оё мехоҳед, ки он ба ҳар ҳол дастрас бошад."
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-mirror-setup.templates:3001
-msgid "Use contrib software?"
-msgstr "Нармафзори иловагиро истифода мебаред?"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-mirror-setup.templates:3001
-msgid ""
-"Some additional software has been made to work with Debian. Though this "
-"software is free, it depends on non-free software for its operation. This "
-"software is not a part of Debian, but standard Debian tools can be used to "
-"install it."
-msgstr ""
-"Баъзе нармафзори иловагӣ барои кор бо Debian сохта шудааст. Гарчанде ки ин "
-"нармафзор ройгон мебошад, барои кори худ он нармафзори ғайриройгонро талаб "
-"мекунад. Ин нармафзор қисми Debian намебошад, аммо барои насб кардани он "
-"абзорҳои стандартии Debian метавонанд истифода шаванд."
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#. Type: boolean
-#. Description
-#. This template is used by the Ubuntu version of d-i.
-#. :sl2:
-#. Type: boolean
-#. Description
-#. This template is used by the Ubuntu version of d-i.
-#. :sl2:
-#. Type: boolean
-#. Description
-#. This template is used by the Ubuntu version of d-i.
-#. :sl2:
-#. Type: boolean
-#. Description
-#. This template is used by the Ubuntu version of d-i.
-#. :sl2:
-#: ../apt-mirror-setup.templates:3001 ../apt-mirror-setup.templates-ubuntu:2001
-#: ../apt-mirror-setup.templates-ubuntu:3001
-#: ../apt-mirror-setup.templates-ubuntu:4001
-#: ../apt-mirror-setup.templates-ubuntu:5001
-msgid ""
-"Please choose whether you want this software to be made available to you."
-msgstr ""
-"Лутфан, интихоб намоед, ки ин нармафзор барои шумо бояд дастрас бошад ё не."
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-mirror-setup.templates:5001
-msgid "Use a network mirror?"
-msgstr "Оинаи шабакаро истифода мебаред?"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../apt-mirror-setup.templates:5001
-#, fuzzy
-#| msgid ""
-#| "A network mirror can be used to supplement the software that is included "
-#| "on the CD-ROM. This may also make newer versions of software available."
-msgid ""
-"A network mirror can be used to supplement the software that is included on "
-"the installation media. This may also make newer versions of software "
-"available."
-msgstr ""
-"Оинаи шабакавӣ метавонад ҳамчун илова барои нармафзоре, ки дар CD-ROM мавҷуд "
-"аст, истифода шавад. Ин метавонанд гунаҳои навтари нармафзорро низ дастрас "
-"кунад."
 
 #. Type: boolean
 #. Description
@@ -3958,26 +4517,6 @@ msgstr ""
 msgid "Note that you will not be able to see the password as you type it."
 msgstr ""
 "Ба қайд гиред, ки шумо ҳангоми ворид кардани ниҳонвожа онро дида наметавонед."
-
-#. #-#-#-#-#  templates.pot (user-setup)  #-#-#-#-#
-#. Type: password
-#. Description
-#. :sl1:
-#. Type: password
-#. Description
-#. :sl1:
-#. #-#-#-#-#  templates.pot (grub-installer)  #-#-#-#-#
-#. Type: password
-#. Description
-#. :sl2:
-#. #-#-#-#-#  templates.pot (network-console)  #-#-#-#-#
-#. Type: password
-#. Description
-#. :sl3:
-#: ../user-setup-udeb.templates:7001 ../user-setup-udeb.templates:14001
-#: ../grub-installer.templates:10001 ../network-console.templates:5001
-msgid "Re-enter password to verify:"
-msgstr "Ниҳонвожаро барои тайид кардан аз нав ворид намоед:"
 
 #. Type: password
 #. Description
@@ -4075,533 +4614,6 @@ msgstr "Танзими корбарон ва ниҳонвожаҳо"
 #: ../user-setup-udeb.templates:19001
 msgid "Setting users and passwords..."
 msgstr "Корбарон ва ниҳонвожаҳо танзим шуда истодаанд..."
-
-#. Type: text
-#. Description
-#. Translators, this text will appear on a button, so KEEP IT SHORT
-#. :sl1:
-#: ../cdebconf-newt-udeb.templates:1001 ../cdebconf-gtk-udeb.templates:1001
-msgid "Continue"
-msgstr "Идома додан"
-
-#. Type: text
-#. Description
-#. Translators, this text will appear on a button, so KEEP IT SHORT
-#. :sl1:
-#: ../cdebconf-newt-udeb.templates:2001 ../cdebconf-gtk-udeb.templates:2001
-msgid "Go Back"
-msgstr "Ба қафо гузаштан"
-
-#. Type: text
-#. Description
-#. Translators, this text will appear on a button, so KEEP IT SHORT
-#. :sl1:
-#. Type: text
-#. Description
-#. :sl4:
-#: ../cdebconf-newt-udeb.templates:3001 ../cdebconf-gtk-udeb.templates:3001
-#: ../cdebconf-slang-udeb.templates:1001 ../cdebconf-text-udeb.templates:10001
-msgid "Yes"
-msgstr "Ҳа"
-
-#. Type: text
-#. Description
-#. Translators, this text will appear on a button, so KEEP IT SHORT
-#. :sl1:
-#. Type: text
-#. Description
-#. :sl4:
-#: ../cdebconf-newt-udeb.templates:4001 ../cdebconf-gtk-udeb.templates:4001
-#: ../cdebconf-slang-udeb.templates:2001 ../cdebconf-text-udeb.templates:11001
-msgid "No"
-msgstr "Не"
-
-#. Type: text
-#. Description
-#. Help line displayed at the bottom of the cdebconf newt interface.
-#. Translators: must fit within 80 characters.
-#. :sl1:
-#: ../cdebconf-newt-udeb.templates:6001
-msgid "<Tab> moves; <Space> selects; <Enter> activates buttons"
-msgstr ""
-"Тугмаи <Tab> интиқол медиҳад; тугмаи <Space> интихоб мекунад; тугмаи <Enter> "
-"тугмаҳоро фаъол мекунад"
-
-#. Type: text
-#. Description
-#. Help line displayed at the bottom of the cdebconf newt interface.
-#. Translators: must fit within 80 characters.
-#. :sl1:
-#: ../cdebconf-newt-udeb.templates:7001
-msgid "<F1> for help; <Tab> moves; <Space> selects; <Enter> activates buttons"
-msgstr ""
-"Тугмаи <F1> барои кумак; <Tab> интиқол медиҳад; <Space> интихоб мекунад; "
-"<Enter> тугмаҳоро фаъол мекунад"
-
-#. Type: text
-#. Description
-#. Appears as a checkbox in the newt and GTK interfaces.
-#. :sl1:
-#: ../cdebconf-newt-udeb.templates:8001 ../cdebconf-gtk-udeb.templates:9001
-msgid "Show Password in Clear"
-msgstr "Намоиш додани ниҳонвожаи воридшуда"
-
-#. Type: text
-#. Description
-#. Translators, this text will appear on a button, so KEEP IT SHORT
-#. :sl1:
-#: ../cdebconf-gtk-udeb.templates:5001
-msgid "Help"
-msgstr "Кумак"
-
-#. Type: text
-#. Description
-#. TRANSLATORS: This should be "translated" to "RTL" or "LTR" depending of
-#. default text direction of your language
-#. LTR: Left to Right (Latin, Cyrillic, CJK, Indic...)
-#. RTL: Right To Left (Arabic, Hebrew, Persian...)
-#. DO NOT USE ANYTHING ELSE
-#. :sl1:
-#: ../cdebconf-gtk-udeb.templates:6001
-msgid "LTR"
-msgstr "ЧБР"
-
-#. Type: text
-#. Description
-#. Translators, this text will appear on a button, so KEEP IT SHORT
-#. This button will allow users to virtually "shoot a picture"
-#. of the screen
-#. :sl1:
-#: ../cdebconf-gtk-udeb.templates:7001
-msgid "Screenshot"
-msgstr "Акси экран"
-
-#. Type: text
-#. Description
-#. Text that will appear in a dialog box mentioning which file
-#. the screenshot has been saved to. "%s" is a file name here
-#. :sl1:
-#: ../cdebconf-gtk-udeb.templates:8001
-#, no-c-format
-msgid "Screenshot saved as %s"
-msgstr "Акси экран дар макони зерин бо номи %s захира шудааст"
-
-#. Type: text
-#. Description
-#. Main menu item
-#. should not be more than 55 columns
-#. pkgsel is the module that installs packages by running tasksel to
-#. select "tasks". Please use "install *software*" and not
-#. "install *packages*" which is less adapted for non technical users
-#. :sl1:
-#: ../pkgsel.templates:1001
-msgid "Select and install software"
-msgstr "Интихоб ва насби нармафзор"
-
-#. Type: text
-#. Description
-#. This appears in a progress bar when running pkgsel
-#. The text is used when pkgsel is launched, before it installs packages
-#. :sl1:
-#: ../pkgsel.templates:2001
-msgid "Setting up..."
-msgstr "Танзим шуда истодааст..."
-
-#. Type: text
-#. Description
-#. This appears in a progress bar when running pkgsel
-#. The text is used when upgrading already installed packages.
-#. :sl1:
-#: ../pkgsel.templates:5001
-msgid "Upgrading software..."
-msgstr "Нармафзор такмил шуда истодааст..."
-
-#. Type: text
-#. Description
-#. This appears in a progress bar when running pkgsel
-#. The text is used when running tasksel to allow selecting packages
-#. Tasksel will then display its own screens
-#. :sl1:
-#: ../pkgsel.templates:6001
-msgid "Running tasksel..."
-msgstr "Барномаи «tasksel» иҷро шуда истодааст..."
-
-#. Type: text
-#. Description
-#. This appears in a progress bar when running pkgsel
-#. The text is used at the end of the installation phase while
-#. cleaning up pkgsel's stuff
-#. :sl1:
-#: ../pkgsel.templates:7001
-msgid "Cleaning up..."
-msgstr "Пок шуда истодааст..."
-
-#. Type: text
-#. Description
-#. Main menu item
-#. Translators: keep below 55 columns
-#. :sl1:
-#: ../finish-install.templates:1001
-msgid "Finish the installation"
-msgstr "Ба анҷом расонидани насб"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../finish-install.templates:2001
-msgid "Finishing the installation"
-msgstr "Ба анҷом расонидани насб"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../finish-install.templates:4001
-msgid "Configuring network..."
-msgstr "Шабака танзим шуда истодааст..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../finish-install.templates:5001
-msgid "Setting up frame buffer..."
-msgstr "Танзими миёнҷии чорчӯба..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../finish-install.templates:6001
-msgid "Unmounting file systems..."
-msgstr "Ҷудокунии низоми файлӣ..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../finish-install.templates:7001
-msgid "Rebooting into your new system..."
-msgstr "Ба низоми нави шумо аз нав бор шуда истодааст..."
-
-#. Type: note
-#. Description
-#. :sl1:
-#: ../finish-install.templates:8001
-msgid "Installation complete"
-msgstr "Насб ба анҷом расид"
-
-#. Type: note
-#. Description
-#. :sl1:
-#: ../finish-install.templates:8001
-msgid ""
-"Installation is complete, so it is time to boot into your new system. Make "
-"sure to remove the installation media, so that you boot into the new system "
-"rather than restarting the installation."
-msgstr ""
-"Насб ба анҷом расид ва акнун шумо бояд низоми навро ба кор дароред. Мутмаин "
-"шавед, ки расонаи насбкунии низомро бароред (аз CD-ROM, дискҳои флоппи, "
-"драйви флеш), то ки тавонед ба низоми нав ворид шавед ва насби наверо аз нав "
-"оғоз накунед."
-
-#. Type: text
-#. Description
-#. Main menu item
-#. Translators: keep below 55 columns
-#. :sl1:
-#: ../nobootloader.templates:1001
-msgid "Continue without boot loader"
-msgstr "Идома додан бе худроҳандозӣ"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:1001 ../grub-installer.templates:2001
-#, fuzzy
-#| msgid "Install the GRUB boot loader on a hard disk"
-msgid "Install the GRUB boot loader to your primary drive?"
-msgstr "Насбкунии худроҳандозии GRUB ба диски сахт"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:1001
-msgid ""
-"The following other operating systems have been detected on this computer: "
-"${OS_LIST}"
-msgstr "Низомҳои омили зерин дар ин компютер ташхис карда шуданд: ${OS_LIST}"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:1001
-#, fuzzy
-#| msgid ""
-#| "If all of your operating systems are listed above, then it should be safe "
-#| "to install the boot loader to the master boot record of your first hard "
-#| "drive. When your computer boots, you will be able to choose to load one "
-#| "of these operating systems or your new system."
-msgid ""
-"If all of your operating systems are listed above, then it should be safe to "
-"install the boot loader to your primary drive (UEFI partition/boot record). "
-"When your computer boots, you will be able to choose to load one of these "
-"operating systems or the newly installed Debian system."
-msgstr ""
-"Агар ҳамаи низомҳои оператсионии шумо дар боло номбар шуда бошанд, он гоҳ "
-"насбкунии худроҳандозӣ ба сабти асосии роҳандозии диски сахти аввалини шумо "
-"бехатар мебошад. Вақте ки компютери шумо роҳандозӣ мешавад, шумо метавонед "
-"интихоб намоед, ки яке аз ин низомҳои оператсиониро ба низоми нави худ бор "
-"намоед."
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:2001
-#, fuzzy
-#| msgid ""
-#| "It seems that this new installation is the only operating system on this "
-#| "computer. If so, it should be safe to install the GRUB boot loader to the "
-#| "master boot record of your first hard drive."
-msgid ""
-"It seems that this new installation is the only operating system on this "
-"computer. If so, it should be safe to install the GRUB boot loader to your "
-"primary drive (UEFI partition/boot record)."
-msgstr ""
-"Чунин менамояд, ки ин насбкунии нав метавонад низоми омили ягонаи ин "
-"компютер бошад. Агар чунин бошад, барои бехатарӣ тавсия мешавад, ки "
-"худроҳандозии GRUB-ро ба сабти асосии роҳандозии диски сахти аввалини шумо "
-"насб намоед."
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:2001
-#, fuzzy
-#| msgid ""
-#| "Warning: If the installer failed to detect another operating system that "
-#| "is present on your computer, modifying the master boot record will make "
-#| "that operating system temporarily unbootable, though GRUB can be manually "
-#| "configured later to boot it."
-msgid ""
-"Warning: If your computer has another operating system that the installer "
-"failed to detect, this will make that operating system temporarily "
-"unbootable, though GRUB can be manually configured later to boot it."
-msgstr ""
-"Огоҳӣ: Агар насбкунанда низоми омили дигарро, ки дар компютери шумо мавҷуд "
-"аст, ташхис карда натавонад, тағйир додани сабти асосии роҳандозӣ низоми "
-"омилро муваққатан роҳандозинашаванда мегардонад, гарчанде ки GRUB метавонад "
-"баъдтар барои роҳандозӣ кардани он танзим карда шавад."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:18001
-msgid "Installing GRUB boot loader"
-msgstr "Насбкунии худроҳандозии GRUB"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:19001
-msgid "Looking for other operating systems..."
-msgstr "Ҷустуҷӯи низомҳои омили дигар рафта истодааст..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:20001
-msgid "Installing the '${GRUB}' package..."
-msgstr "Насбкунии бастаҳои '${GRUB}'..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:21001
-msgid "Determining GRUB boot device..."
-msgstr "Муайянкунии дастгоҳи роҳандозии GRUB..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:22001
-msgid "Running \"grub-install ${BOOTDEV}\"..."
-msgstr "\"grub-install ${BOOTDEV}\" иҷро шуда истодааст..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:23001
-msgid "Running \"update-grub\"..."
-msgstr "Иҷрокунии \"update-grub\"..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:24001
-msgid "Updating /etc/kernel-img.conf..."
-msgstr "Навсозии /etc/kernel-img.conf..."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:25001
-msgid "Checking whether to force usage of the removable media path"
-msgstr ""
-"Дар ҳоли санҷиши ниёзи истифодабарии маҷбурӣ нисбати масири расонаи "
-"ҷудошаванда"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:26001
-msgid "Mounting filesystems"
-msgstr "Васлкунии низомҳои файлӣ"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:27001
-msgid "Configuring grub-efi for future usage of the removable media path"
-msgstr ""
-"Дар ҳоли танзимкунии grub-efi барои истифодабарии оянда нисбати масири "
-"расонаи ҷудошаванда"
-
-#. Type: text
-#. Description
-#. Main menu item
-#. Translators: keep below 55 columns
-#. :sl1:
-#: ../grub-installer.templates:28001
-#, fuzzy
-#| msgid "Installing GRUB boot loader"
-msgid "Install the GRUB boot loader"
-msgstr "Насбкунии худроҳандозии GRUB"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:34001
-msgid "Force GRUB installation to the EFI removable media path?"
-msgstr ""
-"Насбкунии маҷбурии GRUB-ро ба масири расонаи ҷудошавандаи EFI татбиқ мекунед?"
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:34001
-msgid ""
-"It seems that this computer is configured to boot via EFI, but maybe that "
-"configuration will not work for booting from the hard drive. Some EFI "
-"firmware implementations do not meet the EFI specification (i.e. they are "
-"buggy!) and do not support proper configuration of boot options from system "
-"hard drives."
-msgstr ""
-"Чунин менамояд, ки ин компютер барои иҷрои роҳандозӣ тавассути EFI танзим "
-"карда шудааст, вале эҳтимол ин танзим барои роҳандозӣ аз диски компютерӣ кор "
-"намекунад. Баъзеи амалиётҳои сахтафзори дарунсохт ба хусусиятҳои EFI "
-"мувофиқат намекунанд (масалан, онҳо дорои хатоҳо мебошанд!) ва танзими "
-"лозимиро барои имконоти роҳандозӣ аз дискҳои компютерии низом дастгирӣ "
-"намекунанд."
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:34001
-msgid ""
-"A workaround for this problem is to install an extra copy of the EFI version "
-"of the GRUB boot loader to a fallback location, the \"removable media path"
-"\". Almost all EFI systems, no matter how buggy, will boot GRUB that way."
-msgstr ""
-"Барои ҳал кардани ин масъала, шумо бояд нусхаи иловагии гунаи EFI-ро барои "
-"боркунандаи роҳандозии GRUB ба масири эҳтиётӣ бо номи  \"масири расонаи "
-"ҷудошаванда (removable media path)\\” насб намоед. Ҳамин тариқ тақрибан "
-"ҳамаи низомҳои EFI, новобаста аз будани хатоҳо, роҳандозии GRUB-ро иҷро "
-"мекунанд."
-
-#. Type: boolean
-#. Description
-#. :sl1:
-#: ../grub-installer.templates:34001
-msgid ""
-"Warning: If the installer failed to detect another operating system that is "
-"present on your computer that also depends on this fallback, installing GRUB "
-"there will make that operating system temporarily unbootable. GRUB can be "
-"manually configured later to boot it if necessary."
-msgstr ""
-"Огоҳӣ: Агар насбкунанда низоми омили дигареро, ки дар компютери шумо мавҷуд "
-"аст, ташхис карда натавонад, тағйир додани сабти асосии роҳандозӣ низоми "
-"омилро муваққатан роҳандозинашаванда мегардонад, гарчанде ки GRUB метавонад "
-"баъдтар барои роҳандозӣ кардани он танзим карда шавад."
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../rescue-mode.templates:1001
-msgid "Enter rescue mode"
-msgstr "Гузаштан ба реҷаи наҷотдиҳӣ"
-
-#. Type: text
-#. Description
-#. Main menu item
-#. Translators: keep below 55 columns
-#. :sl1:
-#: ../iso-scan.templates:1001
-msgid "Scan hard drives for an installer ISO image"
-msgstr "Скан кардани дискҳои сахт барои тимсоли ISO-и насбкунанда"
-
-#. Type: text
-#. Description
-#. Main menu item
-#. Translators: keep below 55 columns
-#. :sl1:
-#: ../save-logs.templates:1001
-msgid "Save debug logs"
-msgstr "Захира кардани сабтҳои рӯйдодҳои ислоҳи хатоҳо"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. finish-install progress bar item
-#: ../save-logs.templates:9001
-msgid "Gathering information for installation report..."
-msgstr "Гирифтани маълумот барои гузориши насбкунӣ..."
-
-#. Type: text
-#. Description
-#. Main menu item
-#. Translators: keep below 55 columns
-#. :sl1:
-#: ../mdcfg-utils.templates:1001
-msgid "Configure MD devices"
-msgstr "Танзимоти дастгоҳҳои MD"
-
-#. #-#-#-#-#  templates.pot (lvmcfg)  #-#-#-#-#
-#. Type: text
-#. Description
-#. Main menu item
-#. Translators: keep below 55 columns
-#. :sl1:
-#. #-#-#-#-#  templates.pot (partman-lvm)  #-#-#-#-#
-#. Type: text
-#. Description
-#. Type: text
-#. Description
-#. :sl3:
-#. Main menu item
-#. Translators: keep below 55 columns
-#. Use infinitive form
-#: ../lvmcfg.templates:1001 ../partman-lvm.templates:7001
-#: ../partman-lvm.templates:23001
-msgid "Configure the Logical Volume Manager"
-msgstr "Танзим кардани Мудири ҳаҷми мантиқӣ"
-
-#. Type: text
-#. Description
-#. :sl1:
-#. TRANSLATORS: This is a menu entry. Keep in under 55 columns/characters
-#: ../partman-auto-lvm.templates:1001
-msgid "Guided - use entire disk and set up LVM"
-msgstr "Идорашаванда - тамоми дискро истифода баред ва LVM-ро танзим намоед"
 
 #~ msgid ""
 #~ "Please select the size of the font for the console.  For reference, the "

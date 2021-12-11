@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Debian Installer Level 1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-24 22:59+0100\n"
+"POT-Creation-Date: 2021-11-21 20:02+0000\n"
 "PO-Revision-Date: 2012-10-14 19:00+0530\n"
 "Last-Translator: Anish A <aneesh.nl@gmail.com>\n"
 "Language-Team: Swatantra Malayalam Computing\n"
@@ -25,57 +25,6 @@ msgstr ""
 "X-Generator: Virtaal 0.7.1\n"
 "X-Poedit-Language: Malayalam\n"
 "X-Poedit-Country: INDIA\n"
-
-#. Type: text
-#. Description
-#. eg. Virtual disk 1 (xvda)
-#. :sl4:
-#: ../partman-base.templates:64001
-#, no-c-format
-msgid "Virtual disk %s (%s)"
-msgstr "മായാ ഡിസ്ക് %s (%s)"
-
-#. Type: text
-#. Description
-#. eg. Virtual disk 1, partition #1 (xvda1)
-#. :sl4:
-#: ../partman-base.templates:65001
-#, no-c-format
-msgid "Virtual disk %s, partition #%s (%s)"
-msgstr "മായാ ഡിസ്ക്, ഭാഗം #%s (%s)"
-
-#. Type: text
-#. Description
-#. :sl4:
-#. Note to translators: Please keep your translations of this string below
-#. a 65 columns limit (which means 65 characters in single-byte languages)
-#: ../partman-basicfilesystems.templates:58001
-msgid "acls - support POSIX.1e Access Control List"
-msgstr "acls - POSIX.1e ആക്സസ് കണ്ട്രോള്‍ ലിസ്റ്റ്"
-
-#. Type: text
-#. Description
-#. :sl4:
-#. Note to translators: Please keep your translations of this string below
-#. a 65 columns limit (which means 65 characters in single-byte languages)
-#: ../partman-basicfilesystems.templates:59001
-msgid "shortnames - only use the old MS-DOS 8.3 style filenames"
-msgstr "shortnames - പഴയ എംഎസ്-ഡോസ് 8.3 ശൈലിയിലുള്ള ഫയലിന്റെ പേരുകള്‍ മാത്രം ഉപയോഗിയ്ക്കുക"
-
-#. Type: text
-#. Description
-#. :sl4:
-#: ../partman-target.templates:3001
-msgid ""
-"In order to start your new system, a so called boot loader is used.  It is "
-"installed in a boot partition.  You must set the bootable flag for the "
-"partition.  Such a partition will be marked with \"${BOOTABLE}\" in the main "
-"partitioning menu."
-msgstr ""
-"നിങ്ങളുടെ സിസ്റ്റം തുടങ്ങുന്നതിന് ബൂട്ട് ലോഡര്‍ എന്നു് വിളിക്കുന്ന ഒന്നാണു് ഉപയോഗിയ്ക്കുന്നതു്. ഒരു ബൂട്ട് "
-"ഭാഗത്താണ് ഇതു് ഇന്‍സ്റ്റാള്‍ ചെയ്തിരിക്കുന്നതു്. നിങ്ങള്‍ ആ ഭാഗത്തിന് ബൂട്ട് ചെയ്യാവുന്ന എന്ന കൊടി സെറ്റ് "
-"ചെയ്യണം. പ്രധാന വിഭജന മെനുവില്‍ അങ്ങനെയൊരു ഭാഗം \"${BOOTABLE}\" എന്നു് "
-"അടയാളപ്പെടുത്തിയിരിക്കും."
 
 #. Type: text
 #. Description
@@ -252,24 +201,115 @@ msgid ""
 msgstr ""
 "'GTK' എന്നത് ഏതൊരു ഗ്രാഫിക്കല്‍ പരിസ്ഥിതിയിലും ഉപയോകിക്കാവുന്ന ഒരു ഗ്രാഫിക്കല്‍ ഇന്റര്‍ഫേസ് ആണ്."
 
+#. Type: text
+#. Description
+#. This item is a progress bar heading when the system configures
+#. some flashable memory used by many embedded devices
+#. :sl4:
+#: ../flash-kernel-installer.templates:1001
+msgid "Configuring flash memory to boot the system"
+msgstr "സിസ്റ്റം ബൂട്ട് ചെയ്യാന്‍ ഫ്ലാഷ് മെമറി ക്രമീകരിച്ചു കൊണ്ടിരിയ്ക്കുന്നു"
+
+#. Type: text
+#. Description
+#. This item is a progress bar heading when an embedded device is
+#. configured so it will boot from disk
+#. :sl4:
+#: ../flash-kernel-installer.templates:2001
+msgid "Making the system bootable"
+msgstr "സിസ്റ്റം ബൂട്ട് ചെയ്യാവുന്നതാക്കുന്നു"
+
+#. Type: text
+#. Description
+#. This is "preparing the system" to flash the kernel and initrd
+#. on a flashable memory
+#. :sl4:
+#: ../flash-kernel-installer.templates:3001
+msgid "Preparing the system..."
+msgstr "സിസ്റ്റം തയ്യാറാക്കി കൊണ്ടിരിയ്ക്കുന്നു..."
+
+#. Type: text
+#. Description
+#. This is a progress bar showing up when the system
+#. write the kernel to the flashable memory of the embedded device
+#. :sl4:
+#: ../flash-kernel-installer.templates:4001
+msgid "Writing the kernel to flash memory..."
+msgstr "കെര്‍ണല്‍ ഫ്ലാഷ് മെമ്മറിയിലേയ്ക്ക് എഴുതിക്കൊണ്ടിരിയ്ക്കുന്നു..."
+
+#. Type: text
+#. Description
+#. This is a progress bar showing up when the system generates a
+#. special boot image on disk for some embedded device so they
+#. can boot.
+#. :sl4:
+#: ../flash-kernel-installer.templates:5001
+msgid "Generating boot image on disk..."
+msgstr "ഡിസ്കില്‍ ബൂട്ട് ഇമേജ് സൃഷ്ടിച്ചുകൊണ്ടിരിയ്ക്കുന്നു..."
+
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. This item is a menu entry for a step where the system configures
+#. the flashable memory used by many embedded devices
+#. (writing the kernel and initrd to it)
+#. :sl4:
+#: ../flash-kernel-installer.templates:6001
+msgid "Make the system bootable"
+msgstr "സിസ്റ്റം ബൂട്ട് ചെയ്യാവുന്നതാക്കുക"
+
+#. Type: boolean
+#. Description
+#. :sl4:
+#: ../grub-installer.templates:17001
+msgid "Install GRUB?"
+msgstr "ഗ്രബ് സ്ഥാപിക്കണോ?"
+
+#. Type: boolean
+#. Description
+#. :sl4:
+#: ../grub-installer.templates:17001
+msgid ""
+"GRUB 2 is the next generation of GNU GRUB, the boot loader that is commonly "
+"used on i386/amd64 PCs. It is now also available for ${ARCH}."
+msgstr ""
+"i386/amd64 സിസ്റ്റത്തില്‍ സാധാരണയായി ഉപയോഗിക്കുന്ന ബൂട്ട് ലോഡറായ GNU GRUB ന്റെ അടുത്ത "
+"തലമുറയില്‍ പെട്ടതാണ് GRUB2. ഇത് ${ARCH} ല്‍ ഇപ്പോള്‍ ലഭ്യമാണ്."
+
+#. Type: boolean
+#. Description
+#. :sl4:
+#: ../grub-installer.templates:17001
+msgid ""
+"It has interesting new features but is still experimental software for this "
+"architecture. If you choose to install it, you should be prepared for "
+"breakage, and have an idea on how to recover your system if it becomes "
+"unbootable. You're advised not to try this in production environments."
+msgstr ""
+"ഇതില്‍ പുതിയ പ്രത്യേകതകള്‍ ഉണ്ടെങ്കിലും ഈ ആര്‍ക്കിടെക്ച്ചറില്‍ ഇപ്പോഴും ഇത് പരീക്ഷണ ചിത്രമാണ്. ഇന്‍"
+"സ്റ്റാള്‍ ചെയ്യണമെങ്കില്‍, കുഴപ്പങ്ങള്‍ക്കായി തയ്യാറെടുക്കുക, മാത്രമല്ല സിസ്റ്റം ബൂട്ട് "
+"ചെയ്യാനാകുന്നില്ലെങ്കില്‍ എങ്ങനെ പഴയത് പോലെയാക്കണമെന്നറിയണം. പ്രധാന ആവശ്യങ്ങള്‍ക്കായി ഇത് "
+"പരീക്ഷിക്കാതിരിക്കുന്നതാണ് നല്ലത്."
+
 #. Type: error
 #. Description
 #. :sl4:
-#: ../nobootloader.templates:2001 ../grub-installer.templates:32001
+#: ../grub-installer.templates:32001 ../nobootloader.templates:2001
 msgid "Failed to mount /target/proc"
 msgstr "/target/proc മൌണ്ട് ചെയ്യുന്നതില്‍ പരാജയപ്പെട്ടു"
 
 #. Type: error
 #. Description
 #. :sl4:
-#: ../nobootloader.templates:2001 ../grub-installer.templates:32001
+#: ../grub-installer.templates:32001 ../nobootloader.templates:2001
 msgid "Mounting the proc file system on /target/proc failed."
 msgstr "proc ഫയല്‍ സിസ്റ്റം /target/proc ല്‍ മൌണ്ട് ചെയ്യുന്നതില്‍ പരാജയപ്പെട്ടു."
 
 #. Type: error
 #. Description
 #. :sl4:
-#: ../nobootloader.templates:2001 ../grub-installer.templates:32001
+#: ../grub-installer.templates:32001 ../nobootloader.templates:2001
 msgid "Warning: Your system may be unbootable!"
 msgstr "മുന്നറിയിപ്പ്: നിങ്ങളുടെ സിസ്റ്റം ബൂട്ട് ചെയ്യാന്‍ പറ്റാതായിട്ടുണ്ടാകാം!"
 
@@ -354,38 +394,41 @@ msgstr ""
 "ഓരോ പ്രാവശ്യം തുടങ്ങുമ്പോഴും സ്വയം ബൂട്ട് ചെയ്യാനാണു് നിങ്ങളാഗ്രഹിയ്ക്കുന്നതെങ്കില്‍ മുകളില്‍ പറഞ്ഞവ "
 "കൂടാതെ താഴെ കൊടുത്തിരിയ്ക്കുന്ന വാരിയബിളുകള്‍ കൂടി നിങ്ങള്‍ക്കു് സജ്ജമാക്കാം:"
 
-#. Type: boolean
+#. Type: text
 #. Description
+#. eg. Virtual disk 1 (xvda)
 #. :sl4:
-#: ../grub-installer.templates:17001
-msgid "Install GRUB?"
-msgstr "ഗ്രബ് സ്ഥാപിക്കണോ?"
+#: ../partman-base.templates:64001
+#, no-c-format
+msgid "Virtual disk %s (%s)"
+msgstr "മായാ ഡിസ്ക് %s (%s)"
 
-#. Type: boolean
+#. Type: text
 #. Description
+#. eg. Virtual disk 1, partition #1 (xvda1)
 #. :sl4:
-#: ../grub-installer.templates:17001
-msgid ""
-"GRUB 2 is the next generation of GNU GRUB, the boot loader that is commonly "
-"used on i386/amd64 PCs. It is now also available for ${ARCH}."
-msgstr ""
-"i386/amd64 സിസ്റ്റത്തില്‍ സാധാരണയായി ഉപയോഗിക്കുന്ന ബൂട്ട് ലോഡറായ GNU GRUB ന്റെ അടുത്ത "
-"തലമുറയില്‍ പെട്ടതാണ് GRUB2. ഇത് ${ARCH} ല്‍ ഇപ്പോള്‍ ലഭ്യമാണ്."
+#: ../partman-base.templates:65001
+#, no-c-format
+msgid "Virtual disk %s, partition #%s (%s)"
+msgstr "മായാ ഡിസ്ക്, ഭാഗം #%s (%s)"
 
-#. Type: boolean
+#. Type: text
 #. Description
 #. :sl4:
-#: ../grub-installer.templates:17001
-msgid ""
-"It has interesting new features but is still experimental software for this "
-"architecture. If you choose to install it, you should be prepared for "
-"breakage, and have an idea on how to recover your system if it becomes "
-"unbootable. You're advised not to try this in production environments."
-msgstr ""
-"ഇതില്‍ പുതിയ പ്രത്യേകതകള്‍ ഉണ്ടെങ്കിലും ഈ ആര്‍ക്കിടെക്ച്ചറില്‍ ഇപ്പോഴും ഇത് പരീക്ഷണ ചിത്രമാണ്. ഇന്‍"
-"സ്റ്റാള്‍ ചെയ്യണമെങ്കില്‍, കുഴപ്പങ്ങള്‍ക്കായി തയ്യാറെടുക്കുക, മാത്രമല്ല സിസ്റ്റം ബൂട്ട് "
-"ചെയ്യാനാകുന്നില്ലെങ്കില്‍ എങ്ങനെ പഴയത് പോലെയാക്കണമെന്നറിയണം. പ്രധാന ആവശ്യങ്ങള്‍ക്കായി ഇത് "
-"പരീക്ഷിക്കാതിരിക്കുന്നതാണ് നല്ലത്."
+#. Note to translators: Please keep your translations of this string below
+#. a 65 columns limit (which means 65 characters in single-byte languages)
+#: ../partman-basicfilesystems.templates:58001
+msgid "acls - support POSIX.1e Access Control List"
+msgstr "acls - POSIX.1e ആക്സസ് കണ്ട്രോള്‍ ലിസ്റ്റ്"
+
+#. Type: text
+#. Description
+#. :sl4:
+#. Note to translators: Please keep your translations of this string below
+#. a 65 columns limit (which means 65 characters in single-byte languages)
+#: ../partman-basicfilesystems.templates:59001
+msgid "shortnames - only use the old MS-DOS 8.3 style filenames"
+msgstr "shortnames - പഴയ എംഎസ്-ഡോസ് 8.3 ശൈലിയിലുള്ള ഫയലിന്റെ പേരുകള്‍ മാത്രം ഉപയോഗിയ്ക്കുക"
 
 #. Type: text
 #. Description
@@ -558,58 +601,15 @@ msgstr "തീര്‍ത്ത് വിഭജകനിലേക്ക് ത�
 
 #. Type: text
 #. Description
-#. This item is a progress bar heading when the system configures
-#. some flashable memory used by many embedded devices
 #. :sl4:
-#: ../flash-kernel-installer.templates:1001
-msgid "Configuring flash memory to boot the system"
-msgstr "സിസ്റ്റം ബൂട്ട് ചെയ്യാന്‍ ഫ്ലാഷ് മെമറി ക്രമീകരിച്ചു കൊണ്ടിരിയ്ക്കുന്നു"
-
-#. Type: text
-#. Description
-#. This item is a progress bar heading when an embedded device is
-#. configured so it will boot from disk
-#. :sl4:
-#: ../flash-kernel-installer.templates:2001
-msgid "Making the system bootable"
-msgstr "സിസ്റ്റം ബൂട്ട് ചെയ്യാവുന്നതാക്കുന്നു"
-
-#. Type: text
-#. Description
-#. This is "preparing the system" to flash the kernel and initrd
-#. on a flashable memory
-#. :sl4:
-#: ../flash-kernel-installer.templates:3001
-msgid "Preparing the system..."
-msgstr "സിസ്റ്റം തയ്യാറാക്കി കൊണ്ടിരിയ്ക്കുന്നു..."
-
-#. Type: text
-#. Description
-#. This is a progress bar showing up when the system
-#. write the kernel to the flashable memory of the embedded device
-#. :sl4:
-#: ../flash-kernel-installer.templates:4001
-msgid "Writing the kernel to flash memory..."
-msgstr "കെര്‍ണല്‍ ഫ്ലാഷ് മെമ്മറിയിലേയ്ക്ക് എഴുതിക്കൊണ്ടിരിയ്ക്കുന്നു..."
-
-#. Type: text
-#. Description
-#. This is a progress bar showing up when the system generates a
-#. special boot image on disk for some embedded device so they
-#. can boot.
-#. :sl4:
-#: ../flash-kernel-installer.templates:5001
-msgid "Generating boot image on disk..."
-msgstr "ഡിസ്കില്‍ ബൂട്ട് ഇമേജ് സൃഷ്ടിച്ചുകൊണ്ടിരിയ്ക്കുന്നു..."
-
-#. Type: text
-#. Description
-#. Main menu item
-#. Translators: keep below 55 columns
-#. This item is a menu entry for a step where the system configures
-#. the flashable memory used by many embedded devices
-#. (writing the kernel and initrd to it)
-#. :sl4:
-#: ../flash-kernel-installer.templates:6001
-msgid "Make the system bootable"
-msgstr "സിസ്റ്റം ബൂട്ട് ചെയ്യാവുന്നതാക്കുക"
+#: ../partman-target.templates:3001
+msgid ""
+"In order to start your new system, a so called boot loader is used.  It is "
+"installed in a boot partition.  You must set the bootable flag for the "
+"partition.  Such a partition will be marked with \"${BOOTABLE}\" in the main "
+"partitioning menu."
+msgstr ""
+"നിങ്ങളുടെ സിസ്റ്റം തുടങ്ങുന്നതിന് ബൂട്ട് ലോഡര്‍ എന്നു് വിളിക്കുന്ന ഒന്നാണു് ഉപയോഗിയ്ക്കുന്നതു്. ഒരു ബൂട്ട് "
+"ഭാഗത്താണ് ഇതു് ഇന്‍സ്റ്റാള്‍ ചെയ്തിരിക്കുന്നതു്. നിങ്ങള്‍ ആ ഭാഗത്തിന് ബൂട്ട് ചെയ്യാവുന്ന എന്ന കൊടി സെറ്റ് "
+"ചെയ്യണം. പ്രധാന വിഭജന മെനുവില്‍ അങ്ങനെയൊരു ഭാഗം \"${BOOTABLE}\" എന്നു് "
+"അടയാളപ്പെടുത്തിയിരിക്കും."

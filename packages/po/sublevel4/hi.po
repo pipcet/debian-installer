@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer_packages_po_sublevel4_hi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-24 22:59+0100\n"
+"POT-Creation-Date: 2021-11-21 20:02+0000\n"
 "PO-Revision-Date: 2021-02-09 19:14+0000\n"
 "Last-Translator: KushagraKarira <kushagrakarira@gmail.com>\n"
 "Language-Team: \n"
@@ -23,56 +23,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 4.5-dev\n"
-
-#. Type: text
-#. Description
-#. eg. Virtual disk 1 (xvda)
-#. :sl4:
-#: ../partman-base.templates:64001
-#, no-c-format
-msgid "Virtual disk %s (%s)"
-msgstr "वर्चुअल डिस्क %s (%s)"
-
-#. Type: text
-#. Description
-#. eg. Virtual disk 1, partition #1 (xvda1)
-#. :sl4:
-#: ../partman-base.templates:65001
-#, no-c-format
-msgid "Virtual disk %s, partition #%s (%s)"
-msgstr "वर्चुअल डिस्क %s, पार्टीशन #%s (%s)"
-
-#. Type: text
-#. Description
-#. :sl4:
-#. Note to translators: Please keep your translations of this string below
-#. a 65 columns limit (which means 65 characters in single-byte languages)
-#: ../partman-basicfilesystems.templates:58001
-msgid "acls - support POSIX.1e Access Control List"
-msgstr "एसीएलएस - प्रवेश नियंत्रण सूची का समर्थन करें"
-
-#. Type: text
-#. Description
-#. :sl4:
-#. Note to translators: Please keep your translations of this string below
-#. a 65 columns limit (which means 65 characters in single-byte languages)
-#: ../partman-basicfilesystems.templates:59001
-msgid "shortnames - only use the old MS-DOS 8.3 style filenames"
-msgstr "shortnames - केवल पुराने MS-DOS 8.3 शैली फ़ाइल नाम का उपयोग करें"
-
-#. Type: text
-#. Description
-#. :sl4:
-#: ../partman-target.templates:3001
-msgid ""
-"In order to start your new system, a so called boot loader is used.  It is "
-"installed in a boot partition.  You must set the bootable flag for the "
-"partition.  Such a partition will be marked with \"${BOOTABLE}\" in the main "
-"partitioning menu."
-msgstr ""
-"आपके नए सिस्टम को प्रारंभ करने के लिए एक बूटलोडर प्रयुक्त होता है. इसे एक बूट पार्टिशन में "
-"संस्थापित किया जाता है. आपको पार्टिशन के लिए बूटेबल फ्लैग अवश्य सेट करना चाहिए. ऐसा "
-"पार्टिशन मुख्य पार्टिशनिंग मेन्यू में \"${BOOTABLE}\" से चिन्हित किया जाएगा."
 
 #. Type: text
 #. Description
@@ -250,24 +200,114 @@ msgstr ""
 "'जीटीके' एक चित्रात्मक माध्यम है जिसका किसी भी चित्रात्मक स्थिति में उपयोग किया जा "
 "सकता है."
 
+#. Type: text
+#. Description
+#. This item is a progress bar heading when the system configures
+#. some flashable memory used by many embedded devices
+#. :sl4:
+#: ../flash-kernel-installer.templates:1001
+msgid "Configuring flash memory to boot the system"
+msgstr "तंत्र को बूट करने के लिए फ्लैश मेमोरी को व्यवस्थित कर रहे हैं"
+
+#. Type: text
+#. Description
+#. This item is a progress bar heading when an embedded device is
+#. configured so it will boot from disk
+#. :sl4:
+#: ../flash-kernel-installer.templates:2001
+msgid "Making the system bootable"
+msgstr "सिस्टम को बूटेबल बनाया जा रहा है"
+
+#. Type: text
+#. Description
+#. This is "preparing the system" to flash the kernel and initrd
+#. on a flashable memory
+#. :sl4:
+#: ../flash-kernel-installer.templates:3001
+msgid "Preparing the system..."
+msgstr "तंत्र को तैयार किया जा रहा है..."
+
+#. Type: text
+#. Description
+#. This is a progress bar showing up when the system
+#. write the kernel to the flashable memory of the embedded device
+#. :sl4:
+#: ../flash-kernel-installer.templates:4001
+msgid "Writing the kernel to flash memory..."
+msgstr "कर्नल को फ्लैश मेमोरी में लिखा जा रहा है..."
+
+#. Type: text
+#. Description
+#. This is a progress bar showing up when the system generates a
+#. special boot image on disk for some embedded device so they
+#. can boot.
+#. :sl4:
+#: ../flash-kernel-installer.templates:5001
+msgid "Generating boot image on disk..."
+msgstr "डिस्क पर बूट इमेज बनाया जा रहा है..."
+
+#. Type: text
+#. Description
+#. Main menu item
+#. Translators: keep below 55 columns
+#. This item is a menu entry for a step where the system configures
+#. the flashable memory used by many embedded devices
+#. (writing the kernel and initrd to it)
+#. :sl4:
+#: ../flash-kernel-installer.templates:6001
+msgid "Make the system bootable"
+msgstr "सिस्टम के बूटेबल बनाया जा रहा है"
+
+#. Type: boolean
+#. Description
+#. :sl4:
+#: ../grub-installer.templates:17001
+msgid "Install GRUB?"
+msgstr "ग्रब संस्थापित करें?"
+
+#. Type: boolean
+#. Description
+#. :sl4:
+#: ../grub-installer.templates:17001
+msgid ""
+"GRUB 2 is the next generation of GNU GRUB, the boot loader that is commonly "
+"used on i386/amd64 PCs. It is now also available for ${ARCH}."
+msgstr ""
+"ग्रब २ ग्नू ग्रब का नया अवतार है, जोकि साधारणतः i386/amd64 PCs पर उपयोगी है.अब वह "
+"${ARCH} पर भी उपलब्ध है."
+
+#. Type: boolean
+#. Description
+#. :sl4:
+#: ../grub-installer.templates:17001
+msgid ""
+"It has interesting new features but is still experimental software for this "
+"architecture. If you choose to install it, you should be prepared for "
+"breakage, and have an idea on how to recover your system if it becomes "
+"unbootable. You're advised not to try this in production environments."
+msgstr ""
+"इसमें कई नयी विशेषताएं हैं, पर यह अब भी इस स्थापत्य के लिए प्रयोगात्मक सॉफ्टवेयर है.अगर आप "
+"इसे संथापित करते हैं, तो समस्याओं के लिए तैयार रहिये,और उन समस्याओं का हल निकालने में सक्रिय "
+"रहिये, जब सिस्टम बूट नहींकर सकता. इसे महत्त्वपूर्ण सिस्टम पर संथापित करना उचित नहीं है."
+
 #. Type: error
 #. Description
 #. :sl4:
-#: ../nobootloader.templates:2001 ../grub-installer.templates:32001
+#: ../grub-installer.templates:32001 ../nobootloader.templates:2001
 msgid "Failed to mount /target/proc"
 msgstr "/target/proc को आरूढ़ करने में विफल"
 
 #. Type: error
 #. Description
 #. :sl4:
-#: ../nobootloader.templates:2001 ../grub-installer.templates:32001
+#: ../grub-installer.templates:32001 ../nobootloader.templates:2001
 msgid "Mounting the proc file system on /target/proc failed."
 msgstr "proc फाइलतंत्र को /target/proc पर माउंट करने में असफल."
 
 #. Type: error
 #. Description
 #. :sl4:
-#: ../nobootloader.templates:2001 ../grub-installer.templates:32001
+#: ../grub-installer.templates:32001 ../nobootloader.templates:2001
 msgid "Warning: Your system may be unbootable!"
 msgstr "चेतावनी: आपका सिस्टम बूट न होने योग्य हो सकता है!"
 
@@ -351,37 +391,41 @@ msgstr ""
 "अगर आप हर बार स्वचलित बूट चाहते हैं, तो उपर्युक्त प्राचलों के अलावा इन प्राचलों को भी सेट "
 "करें:"
 
-#. Type: boolean
+#. Type: text
 #. Description
+#. eg. Virtual disk 1 (xvda)
 #. :sl4:
-#: ../grub-installer.templates:17001
-msgid "Install GRUB?"
-msgstr "ग्रब संस्थापित करें?"
+#: ../partman-base.templates:64001
+#, no-c-format
+msgid "Virtual disk %s (%s)"
+msgstr "वर्चुअल डिस्क %s (%s)"
 
-#. Type: boolean
+#. Type: text
 #. Description
+#. eg. Virtual disk 1, partition #1 (xvda1)
 #. :sl4:
-#: ../grub-installer.templates:17001
-msgid ""
-"GRUB 2 is the next generation of GNU GRUB, the boot loader that is commonly "
-"used on i386/amd64 PCs. It is now also available for ${ARCH}."
-msgstr ""
-"ग्रब २ ग्नू ग्रब का नया अवतार है, जोकि साधारणतः i386/amd64 PCs पर उपयोगी है.अब वह "
-"${ARCH} पर भी उपलब्ध है."
+#: ../partman-base.templates:65001
+#, no-c-format
+msgid "Virtual disk %s, partition #%s (%s)"
+msgstr "वर्चुअल डिस्क %s, पार्टीशन #%s (%s)"
 
-#. Type: boolean
+#. Type: text
 #. Description
 #. :sl4:
-#: ../grub-installer.templates:17001
-msgid ""
-"It has interesting new features but is still experimental software for this "
-"architecture. If you choose to install it, you should be prepared for "
-"breakage, and have an idea on how to recover your system if it becomes "
-"unbootable. You're advised not to try this in production environments."
-msgstr ""
-"इसमें कई नयी विशेषताएं हैं, पर यह अब भी इस स्थापत्य के लिए प्रयोगात्मक सॉफ्टवेयर है.अगर आप "
-"इसे संथापित करते हैं, तो समस्याओं के लिए तैयार रहिये,और उन समस्याओं का हल निकालने में सक्रिय "
-"रहिये, जब सिस्टम बूट नहींकर सकता. इसे महत्त्वपूर्ण सिस्टम पर संथापित करना उचित नहीं है."
+#. Note to translators: Please keep your translations of this string below
+#. a 65 columns limit (which means 65 characters in single-byte languages)
+#: ../partman-basicfilesystems.templates:58001
+msgid "acls - support POSIX.1e Access Control List"
+msgstr "एसीएलएस - प्रवेश नियंत्रण सूची का समर्थन करें"
+
+#. Type: text
+#. Description
+#. :sl4:
+#. Note to translators: Please keep your translations of this string below
+#. a 65 columns limit (which means 65 characters in single-byte languages)
+#: ../partman-basicfilesystems.templates:59001
+msgid "shortnames - only use the old MS-DOS 8.3 style filenames"
+msgstr "shortnames - केवल पुराने MS-DOS 8.3 शैली फ़ाइल नाम का उपयोग करें"
 
 #. Type: text
 #. Description
@@ -547,58 +591,14 @@ msgstr "समाप्त कर पार्टीशनर पर वाप�
 
 #. Type: text
 #. Description
-#. This item is a progress bar heading when the system configures
-#. some flashable memory used by many embedded devices
 #. :sl4:
-#: ../flash-kernel-installer.templates:1001
-msgid "Configuring flash memory to boot the system"
-msgstr "तंत्र को बूट करने के लिए फ्लैश मेमोरी को व्यवस्थित कर रहे हैं"
-
-#. Type: text
-#. Description
-#. This item is a progress bar heading when an embedded device is
-#. configured so it will boot from disk
-#. :sl4:
-#: ../flash-kernel-installer.templates:2001
-msgid "Making the system bootable"
-msgstr "सिस्टम को बूटेबल बनाया जा रहा है"
-
-#. Type: text
-#. Description
-#. This is "preparing the system" to flash the kernel and initrd
-#. on a flashable memory
-#. :sl4:
-#: ../flash-kernel-installer.templates:3001
-msgid "Preparing the system..."
-msgstr "तंत्र को तैयार किया जा रहा है..."
-
-#. Type: text
-#. Description
-#. This is a progress bar showing up when the system
-#. write the kernel to the flashable memory of the embedded device
-#. :sl4:
-#: ../flash-kernel-installer.templates:4001
-msgid "Writing the kernel to flash memory..."
-msgstr "कर्नल को फ्लैश मेमोरी में लिखा जा रहा है..."
-
-#. Type: text
-#. Description
-#. This is a progress bar showing up when the system generates a
-#. special boot image on disk for some embedded device so they
-#. can boot.
-#. :sl4:
-#: ../flash-kernel-installer.templates:5001
-msgid "Generating boot image on disk..."
-msgstr "डिस्क पर बूट इमेज बनाया जा रहा है..."
-
-#. Type: text
-#. Description
-#. Main menu item
-#. Translators: keep below 55 columns
-#. This item is a menu entry for a step where the system configures
-#. the flashable memory used by many embedded devices
-#. (writing the kernel and initrd to it)
-#. :sl4:
-#: ../flash-kernel-installer.templates:6001
-msgid "Make the system bootable"
-msgstr "सिस्टम के बूटेबल बनाया जा रहा है"
+#: ../partman-target.templates:3001
+msgid ""
+"In order to start your new system, a so called boot loader is used.  It is "
+"installed in a boot partition.  You must set the bootable flag for the "
+"partition.  Such a partition will be marked with \"${BOOTABLE}\" in the main "
+"partitioning menu."
+msgstr ""
+"आपके नए सिस्टम को प्रारंभ करने के लिए एक बूटलोडर प्रयुक्त होता है. इसे एक बूट पार्टिशन में "
+"संस्थापित किया जाता है. आपको पार्टिशन के लिए बूटेबल फ्लैग अवश्य सेट करना चाहिए. ऐसा "
+"पार्टिशन मुख्य पार्टिशनिंग मेन्यू में \"${BOOTABLE}\" से चिन्हित किया जाएगा."
