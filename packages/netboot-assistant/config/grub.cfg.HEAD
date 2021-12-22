@@ -1,0 +1,69 @@
+## Run "di-netboot-assistant rebuild-menu" when you modify
+## this file.
+##
+
+if loadfont $prefix/font.pf2 ; then
+  insmod efi_gop
+  insmod efi_uga
+  insmod video_bochs
+  insmod video_cirrus
+  insmod gfxterm
+  terminal_output gfxterm
+  insmod progress
+fi
+
+insmod play
+play 960 440 1 0 4 440 1
+
+set default='Boot from local disk..'
+#set timeout=10
+
+if background_image /d-i/n-pkg/images/11/amd64/text/debian-installer/amd64/boot-screens/splash.png; then
+  set color_normal=light-gray/black
+  set color_highlight=white/black
+elif background_image /d-i/n-a/stable/amd64/boot-screens/splash.png; then
+  set color_normal=light-gray/black
+  set color_highlight=white/black
+else
+  set menu_color_normal=cyan/blue
+  set menu_color_highlight=white/blue
+fi
+
+# ## Optional password, add '--unrestricted' to the boot entries.
+# ## Generate password with 'grub-mkpasswd-pbkdf2'.
+#set superusers="root"
+#password_pbkdf2 root grub.pbkdf2.sha512.10000.7A35...
+
+# ########################################################################
+#
+# Use a temporary package cache during installation, other default locale, install etckeeper.
+#menuentry 'Debian stable (amd64) + tmp-pkg-cache + locale' {
+#   linux   /d-i/n-a/stable/amd64/linux locale?=de_DE mirror/http/proxy?=http://192.168.122.1:3142/ pkgsel/include=etckeeper preseed/late_command="rm -fv /target/etc/apt/apt.conf" ---
+#   initrd  /d-i/n-a/stable/amd64/initrd.gz
+#}
+#
+# Install stable automatically.
+# For details consult '/usr/share/doc/di-netboot-assistant/README.preseed'. 
+#
+#menuentry 'Debian stable (amd64) + preseed' {
+#   linux   /d-i/n-a/stable/amd64/linux auto=true priority=critical url=tftp://installbox ---
+#   initrd  /d-i/n-a/stable/amd64/initrd.gz
+#}
+#
+#menuentry 'Debian stable (amd64) + preseed + example.yml' {
+#   ## generate hostname from MAC address:
+#   regexp --set=1:oct4 --set=2:oct5 --set=3:oct6 "\:([[:xdigit:]]+)\:([[:xdigit:]]+)\:([[:xdigit:]]+)\$" $net_default_mac
+#   linux   /d-i/n-a/stable/amd64/linux auto=true priority=critical hostname=${oct4}${oct5}${oct6} url=tftp://installbox playbook=example.yml ---
+#   initrd  /d-i/n-a/stable/amd64/initrd.gz
+#}
+#
+# ########################################################################
+
+menuentry 'Boot from local disk..' {
+    exit
+}
+
+menuentry 'Shutdown system' {
+    halt
+}
+

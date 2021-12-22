@@ -1,0 +1,292 @@
+debian-installer-netboot-images (202110XX) UNRELEASED; urgency=medium
+
+  * Update DISTRIBUTION (bullseye → bookworm).
+  * Update MAJOR_VERSION (11 → 12).
+  * Use Packages.xz instead of Packages.gz
+
+ -- Cyril Brulebois <kibi@debian.org>  Tue, 05 Oct 2021 05:26:02 +0200
+
+debian-installer-netboot-images (20210731) unstable; urgency=medium
+
+  * Update for D-I Bullseye RC 3.
+
+ -- Cyril Brulebois <kibi@debian.org>  Sun, 01 Aug 2021 18:46:21 +0200
+
+debian-installer-netboot-images (20210606+fixed1) unstable; urgency=medium
+
+  * Fix regression introduced while fixing error reporting in the previous
+    upload (oh, the irony), fixing the FTBFS.
+  * Strip +fixed.* suffix when setting VERSION in debian/rules, to cope
+    with this follow-up upload for the same D-I version (20210606).
+
+ -- Cyril Brulebois <kibi@debian.org>  Thu, 10 Jun 2021 06:50:59 +0200
+
+debian-installer-netboot-images (20210606) unstable; urgency=medium
+
+  * Update for D-I Bullseye RC 2.
+  * Fix error reporting when no fallback suite is defined: exit
+    immediately instead of building empty packages.
+  * Drop unused shared-lib-without-dependency-information lintian
+    overrides.
+  * Add myself to Uploaders.
+
+ -- Cyril Brulebois <kibi@debian.org>  Mon, 07 Jun 2021 17:47:04 +0200
+
+debian-installer-netboot-images (20210415) unstable; urgency=medium
+
+  * Team upload.
+  * Update for debian-installer 20210415 release.
+
+ -- Holger Levsen <holger@debian.org>  Thu, 15 Apr 2021 13:23:35 +0200
+
+debian-installer-netboot-images (20201202) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Wolfgang Schweer ]
+  * New 20201202 debian-installer release. (Closes: #982473)
+  * Move mips to unsupported archs.
+  * Use the new debhelper-compat(=13) notation and drop d/compat.
+  * Update standards version to 4.5.1, no changes needed.
+
+ -- Holger Levsen <holger@debian.org>  Mon, 15 Feb 2021 19:46:33 +0100
+
+debian-installer-netboot-images (20190702+deb10u1) buster; urgency=medium
+
+  [ Cyril Brulebois ]
+  * Update to 20190702+deb10u1 images, from buster-proposed-updates
+  * Set DISTRIBUTION_FALLBACK to buster in debian/rules, and attempt a
+    build against this distribution instead of buster-proposed-updates if
+    the first build against the latter doesn't succeed. This should fix
+    the FTBFS within buster once the point release has happened, as d-i
+    disappears from s-p-u (Closes: #902226). With thanks to Santiago Vila
+    for the initial report.
+  * Make get-images.sh clean up temporary files on error and not only on
+    exit, to make sure they don't interfere with a later attempt against a
+    different distribution (see above).
+
+  [ Holger Wansing ]
+  * Remove trailing whitespace from control file, to fix lintian tag.
+
+ -- Holger Wansing <hwansing@mailbox.org>  Sun, 13 Oct 2019 10:15:16 +0200
+
+debian-installer-netboot-images (20190702) unstable; urgency=medium
+
+  * Update for D-I Buster RC 3.
+  * Drop volatile.debian.{net,org} exclusion from get-mirror.sh, they went
+    away with Squeeze(!).
+
+ -- Cyril Brulebois <kibi@debian.org>  Tue, 02 Jul 2019 19:21:20 +0200
+
+debian-installer-netboot-images (20190410) unstable; urgency=medium
+
+  * Update for D-I Buster RC 1.
+
+ -- Cyril Brulebois <kibi@debian.org>  Mon, 29 Apr 2019 20:13:00 +0200
+
+debian-installer-netboot-images (20190118) unstable; urgency=medium
+
+  [ Mattia Rizzolo ]
+  * Fix Vcs-Browser field.
+
+  [ Cyril Brulebois ]
+  * Update Vcs-{Browser,Git} to point to salsa (alioth's replacement).
+  * Switch to tracking Debian 10 (Buster), which should be signed by
+    keys trusted in sid and testing (closes: #917491).
+
+  [ Julien Cristau ]
+  * Update for buster alpha5.
+
+ -- Julien Cristau <jcristau@debian.org>  Sun, 17 Feb 2019 18:29:54 +0100
+
+debian-installer-netboot-images (20170615) unstable; urgency=medium
+
+  * New 20170615 debian-installer release
+
+ -- Cyril Brulebois <kibi@debian.org>  Thu, 15 Jun 2017 15:54:49 +0200
+
+debian-installer-netboot-images (20170608) unstable; urgency=medium
+
+  * New 20170608 debian-installer release
+
+ -- Didier Raboud <odyx@debian.org>  Mon, 12 Jun 2017 19:50:24 +0200
+
+debian-installer-netboot-images (20170127) unstable; urgency=medium
+
+  * New 20170127 debian-installer release
+
+ -- Didier Raboud <odyx@debian.org>  Thu, 02 Feb 2017 08:09:04 +0100
+
+debian-installer-netboot-images (20170112) unstable; urgency=medium
+
+  * New 20170112 debian-installer release
+
+  * Remove Otavio Salvador <otavio@debian.org> from Uploaders, with thanks for
+    his past work (Closes: #847253)
+
+ -- Didier Raboud <odyx@debian.org>  Sat, 14 Jan 2017 17:48:05 +0100
+
+debian-installer-netboot-images (20161031) unstable; urgency=medium
+
+  * Target Debian Stretch
+    - Update package names to version number '9'
+    - Update supported architectures list: remove powerpc, add mips64el
+    - Regenerate debian/control
+
+  [ Colin Watson ]
+  * Use HTTPS for Vcs-* URLs, and link to cgit rather than gitweb.
+
+  [ Didier Raboud ]
+  * On top of debian/rules, reorder exports and use overridable
+    assignments
+  * Check that the version of debian-installer in the Packages file
+    equals to the one we're building for (Closes: #782845)
+  * Swap the d-i Built-Using with the installer fetching, to fail on
+    version mismatches earlier
+  * Bump S-V to 3.9.8 without changes needed
+  * Let gpgv fail with better error output than let packages without
+    content be generated (Closes: #819586)
+  * Use Apt's mirror configuration to pick a download mirror; this should allow
+    build on buildds:
+    - Create get-mirror.sh inspired by debian-installer's gen-sources.list.udeb
+    - Get and validate a mirror from Apt configuration when fetching
+      architecture-specific images
+
+ -- Didier Raboud <odyx@debian.org>  Sun, 13 Nov 2016 17:07:08 +0100
+
+debian-installer-netboot-images (20150422) unstable; urgency=high
+
+  * Drop kfreebsd-{amd64,i386} from supported architectures
+
+ -- Didier Raboud <odyx@debian.org>  Thu, 23 Apr 2015 14:51:10 +0200
+
+debian-installer-netboot-images (20150418) unstable; urgency=high
+
+  * Update to 20150418 images.
+  * Use httpredir.d.o as mirror
+
+ -- Didier Raboud <odyx@debian.org>  Sun, 19 Apr 2015 11:17:56 +0200
+
+debian-installer-netboot-images (20150324) unstable; urgency=medium
+
+  * Update to 20150324 images.
+  * Use ftp.debian.org as mirror
+
+ -- Didier Raboud <odyx@debian.org>  Mon, 30 Mar 2015 11:25:16 +0200
+
+debian-installer-netboot-images (20150107) unstable; urgency=low
+
+  * Update to 20150107 images.
+
+  [ Dmitrijs Ledkovs ]
+  * Bump debhelper compat level to 9.
+
+  [ Didier Raboud ]
+  * Update architectures' list, distribution codename and major version
+    for Jessie (Closes: #766960)
+  * Add a kfreebsd netboot directory postfix special-case
+  * Add new matching lintian overrides
+  * Move to one-digit versioning, aka from '-7.0-' to '-8-'
+
+  [ Cyril Brulebois ]
+  * Update README to document fancy .bN suffix for d-i-n-i when d-i has
+    +bN.
+  * Add a check in get-images.sh to detect wrong binNMU versioning.
+
+ -- Didier Raboud <odyx@debian.org>  Thu, 29 Jan 2015 10:34:48 +0100
+
+debian-installer-netboot-images (20130430) unstable; urgency=low
+
+  * Update to 20130430 images.
+
+ -- Didier Raboud <odyx@debian.org>  Thu, 02 May 2013 14:48:48 +0200
+
+debian-installer-netboot-images (20130415) unstable; urgency=low
+
+  * Update to 20130415 images.
+
+ -- Julien Cristau <jcristau@debian.org>  Sat, 20 Apr 2013 15:24:39 +0200
+
+debian-installer-netboot-images (20130211) unstable; urgency=low
+
+  [ Didier Raboud ]
+  * Amend previous changelog to note the change of default mirror for
+    the build towards http.debian.net.
+
+ -- Christian Perrier <bubulle@debian.org>  Sun, 03 Mar 2013 16:00:35 +0100
+
+debian-installer-netboot-images (20120828) unstable; urgency=low
+
+  * Mark the s390{,x} architectures unsupported.
+  * Put the netboot images in a 'Release number'-specific path. (Closes:
+    #682656)
+  * Extend the Built-Using field to match debian-installer package's by
+    downloading these too in a trustful way.
+  * Avoid overly cleaning syslinux trees, which breaks the relative
+    paths in syslinux configuration. (Closes: #684717)
+  * Build using http.debian.net.
+
+ -- Didier Raboud <odyx@debian.org>  Wed, 05 Sep 2012 08:50:23 +0200
+
+debian-installer-netboot-images (20120712) unstable; urgency=low
+
+  * Update to 20120712 images.
+
+  * Implement trustchain verification from debian-archive-keyring to the
+    netboot images.
+  * Reflect the guruplug archive symlink in the armel package.
+  * Replace a shell for by make machinery.
+  * Add the Built-Using tag to binary packages to ensure that the
+    debian-installer package stays around.
+  * Convert to 3.0 (native) source format.
+
+ -- Didier Raboud <odyx@debian.org>  Fri, 13 Jul 2012 05:09:07 +0200
+
+debian-installer-netboot-images (20120508) unstable; urgency=low
+
+  * Update to Wheezy's 20120508 images.
+
+  [ Daniel Baumann ]
+  * Adding tftpd-hpa to suggests, this is the tftp server that is covered in
+    the installer manual (Closes: #597116).
+
+  [ Didier Raboud ]
+  * Put the architectures list in one place:
+    - Let the maintainer build the control file from templates.
+    - Generate the lintian overrides automatically at build-time.
+    - Install the downloaded images directly to their destination
+      places, drop the .install files.
+    - Only download the specified architectures.
+    - Drop the debian/TODO now requiring the above.
+  * Update the architectures list to Wheezy:
+    + Add armhf, kfreebsd-amd64, kfreebsd-i386
+    - Drop hppa
+  * Add myself to Uploaders.
+  * Bump Standards-Version to 3.9.3 without changes needed.
+
+ -- Didier Raboud <odyx@debian.org>  Wed, 04 Jul 2012 19:23:59 +0200
+
+debian-installer-netboot-images (20110106.b1) unstable; urgency=low
+
+  * Update to 20110106+b1 images.
+  * Add support to handle binNMUs.
+
+ -- Otavio Salvador <otavio@debian.org>  Thu, 20 Jan 2011 08:05:39 -0200
+
+debian-installer-netboot-images (20101127) unstable; urgency=low
+
+  * Update to 20101127 images.
+
+ -- Otavio Salvador <otavio@ossystems.com.br>  Wed, 01 Dec 2010 15:45:46 -0200
+
+debian-installer-netboot-images (20101020) unstable; urgency=low
+
+  * Update to 20101020 images.
+
+ -- Otavio Salvador <otavio@debian.org>  Sat, 23 Oct 2010 15:27:42 -0200
+
+debian-installer-netboot-images (20100912) unstable; urgency=low
+
+  * Initial upload (Closes: #570767).
+
+ -- Otavio Salvador <otavio@debian.org>  Sat, 07 Aug 2010 08:14:20 +0200

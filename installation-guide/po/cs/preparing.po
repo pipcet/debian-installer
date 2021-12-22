@@ -1,0 +1,3144 @@
+# Translation of the Debian installation-guide to Czech.
+#
+# Miroslav Kure <kurem@upcase.inf.upol.cz>, 2004 - 2017.
+msgid ""
+msgstr ""
+"Project-Id-Version: d-i-manual_preparing\n"
+"Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
+"POT-Creation-Date: 2021-11-26 23:02+0000\n"
+"PO-Revision-Date: 2018-05-21 10:18+0200\n"
+"Last-Translator: Miroslav Kure <kurem@upcase.inf.upol.cz>\n"
+"Language-Team: \n"
+"Language: cz\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: preparing.xml:5
+#, no-c-format
+msgid "Before Installing &debian-gnu;"
+msgstr "Než začnete s instalací"
+
+#. Tag: para
+#: preparing.xml:6
+#, no-c-format
+msgid ""
+"This chapter deals with the preparation for installing &debian; before you "
+"even boot the installer. This includes backing up your data, gathering "
+"information about your hardware, and locating any necessary information."
+msgstr ""
+"Tato kapitola se zabývá přípravou pro instalaci &debian;u ještě před "
+"zavedením instalačního programu. To zahrnuje zazálohování dat, zjištění "
+"informací o hardwaru a další nezbytné kroky."
+
+#. Tag: title
+#: preparing.xml:19
+#, no-c-format
+msgid "Overview of the Installation Process"
+msgstr "Přehled instalačního procesu"
+
+#. Tag: para
+#: preparing.xml:20
+#, no-c-format
+msgid ""
+"First, just a note about re-installations. With &debian;, a circumstance "
+"that will require a complete re-installation of your system is very rare; "
+"perhaps mechanical failure of the hard disk would be the most common case."
+msgstr ""
+"Jenom na okraj bychom chtěli poznamenat, že kompletní reinstalace &debian;u "
+"je velmi výjimečná událost, kterou má nejčastěji na svědomí mechanická "
+"závada pevného disku."
+
+#. Tag: para
+#: preparing.xml:27
+#, no-c-format
+msgid ""
+"Many common operating systems may require a complete installation to be "
+"performed when critical failures take place or for upgrades to new OS "
+"versions. Even if a completely new installation isn't required, often the "
+"programs you use must be re-installed to operate properly in the new OS."
+msgstr ""
+
+#. Tag: para
+#: preparing.xml:35
+#, no-c-format
+msgid ""
+"Under &debian-gnu;, it is much more likely that your OS can be repaired "
+"rather than replaced if things go wrong. Upgrades never require a wholesale "
+"installation; you can always upgrade in-place. And the programs are almost "
+"always compatible with successive OS releases. If a new program version "
+"requires newer supporting software, the &debian; packaging system ensures "
+"that all the necessary software is automatically identified and installed. "
+"The point is, much effort has been put into avoiding the need for re-"
+"installation, so think of it as your very last option. The installer is "
+"<emphasis>not</emphasis> designed to re-install over an existing system."
+msgstr ""
+"Na rozdíl od mnoha známých operačních systémů, které musíte při přechodu na "
+"novější verzi instalovat úplně znovu, nebo alespoň přeinstalovat aplikace, "
+"&debian-gnu; se umí aktualizovat za běhu. Pokud by nová verze programu "
+"vyžadovala nové verze ostatních balíků, nebo byla nějakým způsobem "
+"konfliktní s jiným programem, balíčkovací systém &debian;u se o vše postará. "
+"Protože máte k dispozici mocné aktualizační nástroje, měli byste o kompletní "
+"reinstalaci uvažovat pouze jako o poslední možnosti. Instalační systém "
+"<emphasis>není</emphasis> navržen aktualizaci staršího systému."
+
+#. Tag: para
+#: preparing.xml:48
+#, no-c-format
+msgid ""
+"Here's a road map for the steps you will take during the installation "
+"process."
+msgstr "Následuje stručný přehled instalačního procesu:"
+
+#. Tag: para
+#: preparing.xml:56
+#, no-c-format
+msgid ""
+"Back up any existing data or documents on the hard disk where you plan to "
+"install."
+msgstr "Nejprve si zazálohujete všechna důležitá data (hlavně dokumenty)."
+
+#. Tag: para
+#: preparing.xml:62
+#, no-c-format
+msgid ""
+"Gather information about your computer and any needed documentation, before "
+"starting the installation."
+msgstr ""
+"Poté posbíráte co nejvíce informací o svém počítači a seženete si potřebnou "
+"dokumentaci (např. dokumenty odkazované z této příručky)."
+
+#. Tag: para
+#: preparing.xml:68
+#, no-c-format
+msgid "Create partitionable space for &debian; on your hard disk."
+msgstr "Na pevném disku vytvoříte volné rozdělitelné místo (pro &debian;)."
+
+#. Tag: para
+#: preparing.xml:73
+#, no-c-format
+msgid ""
+"Locate and/or download the installer software and any specialized driver or "
+"firmware files your machine requires."
+msgstr ""
+"Stáhnete si soubory instalačního systému, potřebné ovladače a soubory s "
+"firmwarem."
+
+#. Tag: para
+#: preparing.xml:79
+#, no-c-format
+msgid ""
+"Set up boot media such as CDs/DVDs/USB sticks or provide a network boot "
+"infrastructure from which the installer can be booted."
+msgstr ""
+"Připravíte si zaváděcí média jako CD/DVD/USB klíčenky, nebo vytvoříte "
+"síťovou infrastrukturu pro zavedení instalace ze sítě."
+
+#. Tag: para
+#: preparing.xml:85
+#, no-c-format
+msgid "Boot the installation system."
+msgstr "Zavedete instalační systém."
+
+#. Tag: para
+#: preparing.xml:90
+#, no-c-format
+msgid "Select the installation language."
+msgstr "Zvolíte jazyk pro instalaci."
+
+#. Tag: para
+#: preparing.xml:95
+#, no-c-format
+msgid "Activate the ethernet network connection, if available."
+msgstr "Nastavíte síťové připojení."
+
+#. Tag: para
+#: preparing.xml:101
+#, no-c-format
+msgid "Configure one network interface."
+msgstr "Nastavíte síťové rozhraní."
+
+#. Tag: para
+#: preparing.xml:106
+#, no-c-format
+msgid "Open an ssh connection to the new system."
+msgstr "Otevřete ssh spojení na nový systém."
+
+#. Tag: para
+#: preparing.xml:111
+#, no-c-format
+msgid "Attach one or more DASDs (Direct Access Storage Device)."
+msgstr "Připojíte jedno nebo více DASD (Direct Access Storage Device)."
+
+#. Tag: para
+#: preparing.xml:117
+#, no-c-format
+msgid ""
+"If necessary, resize existing partitions on your target harddisk to make "
+"space for the installation."
+msgstr ""
+"Bude-li třeba, vytvoříte místo pro &debian; zmenšením stávajících oblastí na "
+"cílovém pevném disku."
+
+#. Tag: para
+#: preparing.xml:122
+#, no-c-format
+msgid "Create and mount the partitions on which &debian; will be installed."
+msgstr "Vytvoříte a připojíte oblasti pro &debian;."
+
+#. Tag: para
+#: preparing.xml:127
+#, no-c-format
+msgid ""
+"Watch the automatic download/install/setup of the <firstterm>base system</"
+"firstterm>."
+msgstr ""
+"Můžete pozorovat automatické stažení, instalaci a nastavení "
+"<firstterm>základního systému</firstterm>."
+
+#. Tag: para
+#: preparing.xml:133
+#, no-c-format
+msgid "Select and install <firstterm>additional software</firstterm>."
+msgstr ""
+
+#. Tag: para
+#: preparing.xml:138
+#, no-c-format
+msgid ""
+"Install a <firstterm>boot loader</firstterm> which can start up &debian-gnu; "
+"and/or your existing system."
+msgstr ""
+"Nainstalujete <firstterm>zavaděč</firstterm>, kterým budete spouštět &debian-"
+"gnu; (případně i původní operační systém)."
+
+#. Tag: para
+#: preparing.xml:144
+#, no-c-format
+msgid "Load the newly installed system for the first time."
+msgstr "Spustíte svůj nově nainstalovaný systém."
+
+#. Tag: para
+#: preparing.xml:151
+#, fuzzy, no-c-format
+#| msgid ""
+#| "For &arch-title; you have the option of using <phrase arch=\"any-x86\">a</"
+#| "phrase> <phrase arch=\"powerpc\">an experimental</phrase> graphical "
+#| "version of the installation system. For more information about this "
+#| "graphical installer, see <xref linkend=\"graphical\"/>."
+msgid ""
+"For &arch-title; you have the option of using <phrase arch=\"any-x86\">a</"
+"phrase> <phrase arch=\"arm64\">an experimental</phrase> <phrase arch="
+"\"powerpc\">an experimental</phrase> graphical version of the installation "
+"system. For more information about this graphical installer, see <xref "
+"linkend=\"graphical\"/>."
+msgstr ""
+"Na architektuře &arch-title; můžete použít i <phrase arch=\"powerpc"
+"\">experimentální</phrase> grafickou verzi instalačního systému. Více "
+"informací naleznete v kapitole <xref linkend=\"graphical\"/>."
+
+#. Tag: para
+#: preparing.xml:160
+#, no-c-format
+msgid ""
+"If you have problems during the installation, it helps to know which "
+"packages are involved in which steps. Introducing the leading software "
+"actors in this installation drama:"
+msgstr ""
+"Pokud máte s některým instalačním krokem problémy, je dobré vědět, který "
+"balík je za danou situaci zodpovědný. Nuže, představujeme vám hlavní "
+"softwarové role v tomto instalačním dramatu:"
+
+#. Tag: para
+#: preparing.xml:166
+#, no-c-format
+msgid ""
+"The installer software, <classname>debian-installer</classname>, is the "
+"primary concern of this manual. It detects hardware and loads appropriate "
+"drivers, uses <classname>dhcp-client</classname> to set up the network "
+"connection, runs <classname>debootstrap</classname> to install the base "
+"system packages, and runs <classname>tasksel</classname> to allow you to "
+"install certain additional software. Many more actors play smaller parts in "
+"this process, but <classname>debian-installer</classname> has completed its "
+"task when you load the new system for the first time."
+msgstr ""
+"<classname>debian-installer</classname> (instalační program) je hlavní "
+"náplní této příručky. Rozpoznává hardware a nahrává správné ovladače, "
+"rozděluje disky, instaluje jádro systému a dohlíží na programy "
+"<classname>dhcp-client</classname>, aby nastavil síťové připojení, "
+"<classname>debootstrap</classname>, aby nainstaloval balíky základního "
+"systému a <classname>tasksel</classname>, aby doinstaloval dodatečný "
+"software. V této fázi instalace hraje své epizodní role mnohem více herců, "
+"ale úloha <classname>debian-installer</classname>u končí s prvním zavedením "
+"nového systému."
+
+#. Tag: para
+#: preparing.xml:178
+#, no-c-format
+msgid ""
+"To tune the system to your needs, <classname>tasksel</classname> allows you "
+"to choose to install various predefined bundles of software like a Web "
+"server or a Desktop environment."
+msgstr ""
+"Díky programu <classname>tasksel</classname>, si můžete jednoduše "
+"doinstalovat celé skupiny programů jako <quote>webový server</quote> nebo "
+"<quote>desktopové prostředí</quote> a přizpůsobit si tak systém svým "
+"potřebám."
+
+#. Tag: para
+#: preparing.xml:184
+#, no-c-format
+msgid ""
+"One important option during the installation is whether or not to install a "
+"graphical desktop environment, consisting of the X Window System and one of "
+"the available graphical desktop environments. If you choose not to select "
+"the <quote>Desktop environment</quote> task, you will only have a relatively "
+"basic, command line driven system. Installing the Desktop environment task "
+"is optional because in relation to a text-mode-only system it requires a "
+"comparatively large amount of disk space and because many &debian-gnu; "
+"systems are servers which don't really have any need for a graphical user "
+"interface to do their job."
+msgstr ""
+"Pro začínajícího uživatele je jedním z důležitých rozhodnutí během instalace "
+"instalace desktopového grafického prostředí, se skládá ze systému X Window a "
+"jednoho z populárních desktopových prostředí. Pokud desktopové prostředí "
+"nenainstalujete, budete mít k dispozici relativně jednoduchý systém ovládaný "
+"z příkazové řádky. Grafické prostředí je volitelné proto, protože hodně "
+"systémů &debian-gnu; slouží jako servery, a ty ke své činnosti grafické "
+"rozhraní nepotřebují."
+
+#. Tag: para
+#: preparing.xml:197
+#, no-c-format
+msgid ""
+"Just be aware that the X Window System is completely separate from "
+"<classname>debian-installer</classname>, and in fact is much more "
+"complicated. Troubleshooting of the X Window System is not within the scope "
+"of this manual."
+msgstr ""
+"Vezměte, prosím, na vědomí, že X Window System je od instalačního systému "
+"úplně oddělen a protože je mnohem více komplikovaný, nezabýváme se jím ani v "
+"této příručce."
+
+#. Tag: title
+#: preparing.xml:212
+#, no-c-format
+msgid "Back Up Your Existing Data!"
+msgstr "Zálohujte si svá data!"
+
+#. Tag: para
+#: preparing.xml:213
+#, fuzzy, no-c-format
+#| msgid ""
+#| "Before you start, make sure to back up every file that is now on your "
+#| "system. If this is the first time a non-native operating system is going "
+#| "to be installed on your computer, it is quite likely you will need to re-"
+#| "partition your disk to make room for &debian-gnu;. Anytime you partition "
+#| "your disk, you run a risk of losing everything on the disk, no matter "
+#| "what program you use to do it. The programs used in the installation are "
+#| "quite reliable and most have seen years of use; but they are also quite "
+#| "powerful and a false move can cost you. Even after backing up, be careful "
+#| "and think about your answers and actions. Two minutes of thinking can "
+#| "save hours of unnecessary work."
+msgid ""
+"Before you start, make sure to back up every file that is now on your "
+"system. If this is the first time a non-native operating system is going to "
+"be installed on your computer, it is quite likely you will need to re-"
+"partition your disk to make room for &debian-gnu;. Anytime you partition "
+"your disk, you run a risk of losing everything on the disk, no matter what "
+"program you use to do it. The programs used in the installation of &debian-"
+"gnu; are quite reliable and most have seen years of use; but they are also "
+"quite powerful and a false move can cost you. Even after backing up, be "
+"careful and think about your answers and actions. Two minutes of thinking "
+"can save hours of unnecessary work."
+msgstr ""
+"Před instalací si vytvořte zálohu všech souborů, které máte na disku, "
+"protože byste o ně při instalaci mohli přijít. Je totiž velmi pravděpodobné, "
+"že budete muset přerozdělit pevný disk, abyste si pro &debian-gnu; udělali "
+"místo. Při rozdělování disku byste vždy měli počítat s tím, že můžete "
+"ztratit všechna data. Instalační programy jsou docela spolehlivé a většina z "
+"nich je prověřená lety používání, ale jedna chybná odpověď by se vám mohla "
+"zle vymstít. I po uchování obsahu disků buďte opatrní a promyslete si "
+"odpovědi a kroky při instalaci. Dvě minuty přemýšlení mohou ušetřit hodiny "
+"zbytečné práce."
+
+#. Tag: para
+#: preparing.xml:226
+#, no-c-format
+msgid ""
+"If you are creating a multi-boot system, make sure that you have the "
+"distribution media of any other present operating systems on hand. Even "
+"though this is normally not necessary, there might be situations in which "
+"you could be required to reinstall your operating system's boot loader to "
+"make the system boot or in a worst case even have to reinstall the complete "
+"operating system and restore your previously made backup."
+msgstr ""
+"Jestliže budete instalovat Linux na počítač, kde již máte jiný operační "
+"systém, přesvědčete se, že máte po ruce média pro jeho instalaci. Obvykle to "
+"není potřeba, ale zvlášť v případě, kdy byste se chystali přerozdělit "
+"systémový disk, by se vám mohlo stát, že bude nutné znovu nainstalovat "
+"zavaděč původního systému, nebo dokonce celý systém."
+
+#. Tag: title
+#: preparing.xml:245
+#, no-c-format
+msgid "Information You Will Need"
+msgstr "Dále budete potřebovat"
+
+#. Tag: title
+#: preparing.xml:248
+#, no-c-format
+msgid "Documentation"
+msgstr "Dokumentace"
+
+#. Tag: title
+#: preparing.xml:251
+#, no-c-format
+msgid "Installation Manual"
+msgstr "Instalační manuál"
+
+#. Tag: para
+#: preparing.xml:253
+#, no-c-format
+msgid "This document you are now reading, in plain ASCII, HTML or PDF format."
+msgstr ""
+"(Právě čtete.) Manuál je k dispozici ve formátech ASCII, HTML nebo PDF."
+
+#. Tag: itemizedlist
+#: preparing.xml:259
+#, no-c-format
+msgid "&list-install-manual-files;"
+msgstr "&list-install-manual-files;"
+
+#. Tag: para
+#: preparing.xml:265
+#, no-c-format
+msgid ""
+"The document you are now reading, which is the official version of the "
+"Installation Guide for the &releasename; release of &debian;; available in "
+"<ulink url=\"&url-release-area;/installmanual\">various formats and "
+"translations</ulink>."
+msgstr ""
+"Dokument, který právě čtete, je oficiální verze instalační příručky pro "
+"vydání &debian;u &releasename; a je dostupný v <ulink url=\"&url-release-"
+"area;/installmanual\">různých formátech a jazykových verzích</ulink>."
+
+#. Tag: para
+#: preparing.xml:274
+#, no-c-format
+msgid ""
+"The document you are now reading, which is a development version of the "
+"Installation Guide for the next release of &debian;; available in <ulink url="
+"\"&url-d-i-dillon-manual;\">various formats and translations</ulink>."
+msgstr ""
+"Dokument, který právě čtete, je vývojová verze instalační příručky pro "
+"příští vydání &debian;u a je dostupný v <ulink url=\"&url-d-i-dillon-manual;"
+"\">různých formátech a jazykových verzích</ulink>."
+
+#. Tag: title
+#: preparing.xml:286
+#, no-c-format
+msgid "Hardware documentation"
+msgstr "Domumentace k hardwaru"
+
+#. Tag: para
+#: preparing.xml:287
+#, no-c-format
+msgid ""
+"Often contains useful information on configuring or using your hardware."
+msgstr ""
+"Obsahuje spousty užitečných informací o konfiguraci resp. provozování "
+"různého hardwaru."
+
+#. Tag: ulink
+#: preparing.xml:298
+#, no-c-format
+msgid "The Debian Wiki hardware page"
+msgstr "Debian Hardware Wiki"
+
+#. Tag: ulink
+#: preparing.xml:304
+#, no-c-format
+msgid "Linux for SPARC Processors FAQ"
+msgstr "Linux for SPARC Processors FAQ"
+
+#. Tag: ulink
+#: preparing.xml:310
+#, no-c-format
+msgid "Linux/MIPS website"
+msgstr "Stránky Linux/MIPS"
+
+#. Tag: title
+#: preparing.xml:319
+#, no-c-format
+msgid "&arch-title; Hardware References"
+msgstr "&arch-title; Hardware Reference"
+
+#. Tag: para
+#: preparing.xml:320
+#, no-c-format
+msgid ""
+"Documentation of &arch-title;-specific boot sequence, commands and device "
+"drivers (e.g. DASD, XPRAM, Console, OSA, HiperSockets and z/VM interaction)"
+msgstr ""
+"Dokumentace zaváděcí sekvence na &arch-title;, příkazy a ovladače zařízení "
+"(např. DASD, XPRAM, Console, OSA, HiperSockets a z/VM)"
+
+#. Tag: ulink
+#: preparing.xml:331
+#, no-c-format
+msgid "Device Drivers, Features, and Commands (Linux Kernel 3.2)"
+msgstr "Device Drivers, Features, and Commands (Linux Kernel 3.2)"
+
+#. Tag: para
+#: preparing.xml:336
+#, no-c-format
+msgid ""
+"IBM Redbook describing how Linux can be combined with z/VM on zSeries and "
+"&arch-title; hardware."
+msgstr ""
+"Červená kniha firmy IBM popisující soužití Linuxu a z/VM na strojích zSeries "
+"a &arch-title;."
+
+#. Tag: ulink
+#: preparing.xml:346
+#, no-c-format
+msgid "Linux for &arch-title;"
+msgstr "Linux for &arch-title;"
+
+#. Tag: para
+#: preparing.xml:352
+#, no-c-format
+msgid ""
+"IBM Redbook describing the Linux distributions available for the mainframe. "
+"It has no chapter about &debian; but the basic installation concepts are the "
+"same across all &arch-title; distributions."
+msgstr ""
+"Červená kniha firmy IBM popisující dostupné linuxové distribuce pro "
+"mainframy. Sice nemá kapitolu přímo o &debian;u, ale základní instalační "
+"strategie jsou stejné pro všechny distribuce."
+
+#. Tag: ulink
+#: preparing.xml:363
+#, no-c-format
+msgid "Linux for IBM eServer zSeries and &arch-title;: Distributions"
+msgstr "Linux for IBM eServer zSeries and &arch-title;: Distributions"
+
+#. Tag: title
+#: preparing.xml:373
+#, no-c-format
+msgid "Finding Sources of Hardware Information"
+msgstr "Hledání zdrojů informací o hardwaru"
+
+#. Tag: para
+#: preparing.xml:374
+#, no-c-format
+msgid ""
+"In many cases, the installer will be able to automatically detect your "
+"hardware. But to be prepared, we do recommend familiarizing yourself with "
+"your hardware before the install."
+msgstr ""
+"V mnoha případech umí instalační program rozpoznat hardware automaticky, ale "
+"podle hesla <quote>vždy připraven</quote> doporučujeme, abyste se před "
+"instalací se svým hardwarem seznámili poněkud důvěrněji."
+
+#. Tag: para
+#: preparing.xml:380
+#, no-c-format
+msgid "Hardware information can be gathered from:"
+msgstr "Informace o hardwaru můžete získat:"
+
+#. Tag: para
+#: preparing.xml:387
+#, no-c-format
+msgid "The manuals that come with each piece of hardware."
+msgstr "Z manuálů, které jste získali spolu s příslušným hardwarem."
+
+#. Tag: para
+#: preparing.xml:392
+#, fuzzy, no-c-format
+#| msgid ""
+#| "The BIOS setup screens of your computer. You can view these screens when "
+#| "you start your computer by pressing a combination of keys. Check your "
+#| "manual for the combination. Often, it is the <keycap>Delete</keycap> or "
+#| "the <keycap>F2</keycap> key, but some manufacturers use other keys or key "
+#| "combinations. Usually upon starting the computer there will be a message "
+#| "stating which key to press to enter the setup screen."
+msgid ""
+"The BIOS/UEFI setup screens of your computer. You can view these screens "
+"when you start your computer by pressing a combination of keys. Check your "
+"manual for the combination. Often, it is the <keycap>Delete</keycap> or the "
+"<keycap>F2</keycap> key, but some manufacturers use other keys or key "
+"combinations. Usually upon starting the computer there will be a message "
+"stating which key to press to enter the setup screen."
+msgstr ""
+"Z BIOSu vašeho počítače. K těmto informacím se dostanete, když během startu "
+"počítače stisknete určitou kombinaci kláves. Často to bývá klávesa "
+"<keycap>Delete</keycap> nebo <keycap>F2</keycap>. Obvykle je tato klávesa "
+"zmíněna na obrazovce při startu počítače, nebo v příručce k základní desce."
+
+#. Tag: para
+#: preparing.xml:402
+#, no-c-format
+msgid "The cases and boxes for each piece of hardware."
+msgstr "Z krabic, ve kterých byly části hardware zabaleny."
+
+#. Tag: para
+#: preparing.xml:408
+#, no-c-format
+msgid "The System window in the Windows Control Panel."
+msgstr "Z Ovládacích panelů systému Windows."
+
+#. Tag: para
+#: preparing.xml:414
+#, no-c-format
+msgid ""
+"System commands or tools in another operating system, including file manager "
+"displays. This source is especially useful for information about RAM and "
+"hard drive memory."
+msgstr ""
+"Ze systémových příkazů nebo nástrojů původního operačního systému. Zvláště "
+"užitečné informace jsou o pevném disku a paměti RAM."
+
+#. Tag: para
+#: preparing.xml:421
+#, no-c-format
+msgid ""
+"Your system administrator or Internet Service Provider. These sources can "
+"tell you the settings you need to set up your networking and e-mail."
+msgstr ""
+"Od vašeho správce nebo poskytovatele Internetu. Tyto informace vám mohou "
+"pomoci při nastavení sítě a elektronické pošty."
+
+#. Tag: title
+#: preparing.xml:433
+#, no-c-format
+msgid "Hardware Information Helpful for an Install"
+msgstr "Hardwarové informace užitečné pro instalaci"
+
+#. Tag: entry
+#: preparing.xml:437
+#, no-c-format
+msgid "Hardware"
+msgstr "Hardware"
+
+#. Tag: entry
+#: preparing.xml:437
+#, no-c-format
+msgid "Information You Might Need"
+msgstr "užitečné informace"
+
+#. Tag: entry
+#: preparing.xml:443
+#, no-c-format
+msgid "Hard Drives"
+msgstr "Pevné disky"
+
+#. Tag: entry
+#: preparing.xml:444
+#, no-c-format
+msgid "How many you have."
+msgstr "Počet."
+
+#. Tag: entry
+#: preparing.xml:446
+#, no-c-format
+msgid "Their order on the system."
+msgstr "Jejich pořadí v systému."
+
+#. Tag: entry
+#: preparing.xml:448
+#, no-c-format
+msgid "Whether IDE (also known as PATA), SATA or SCSI."
+msgstr "Typ IDE (též známé jako PATA), SATA nebo SCSI"
+
+#. Tag: entry
+#: preparing.xml:450 preparing.xml:499
+#, no-c-format
+msgid "Available free space."
+msgstr "Dostupné volné místo."
+
+#. Tag: entry
+#: preparing.xml:451
+#, no-c-format
+msgid "Partitions."
+msgstr "Diskové oddíly."
+
+#. Tag: entry
+#: preparing.xml:453
+#, no-c-format
+msgid "Partitions where other operating systems are installed."
+msgstr "Oddíly, na kterých jsou nainstalovány jiné operační systémy"
+
+#. Tag: entry
+#: preparing.xml:481
+#, no-c-format
+msgid "Network interfaces"
+msgstr "Síťová rozhraní"
+
+#. Tag: entry
+#: preparing.xml:482
+#, no-c-format
+msgid "Type/model of available network interfaces."
+msgstr "Výrobce a model síťových adaptérů."
+
+#. Tag: entry
+#: preparing.xml:486
+#, no-c-format
+msgid "Printer"
+msgstr "Tiskárna"
+
+#. Tag: entry
+#: preparing.xml:487
+#, no-c-format
+msgid "Model and manufacturer."
+msgstr "Výrobce a model."
+
+#. Tag: entry
+#: preparing.xml:491
+#, no-c-format
+msgid "Video Card"
+msgstr "Grafická karta"
+
+#. Tag: entry
+#: preparing.xml:492
+#, no-c-format
+msgid "Type/model and manufacturer."
+msgstr "Výrobce a model."
+
+#. Tag: entry
+#: preparing.xml:496
+#, no-c-format
+msgid "DASD"
+msgstr "DASD"
+
+#. Tag: entry
+#: preparing.xml:497
+#, no-c-format
+msgid "Device number(s)."
+msgstr "Čísla zařízení."
+
+#. Tag: entry
+#: preparing.xml:502
+#, no-c-format
+msgid "Network"
+msgstr "<entry>Síť</entry>"
+
+#. Tag: entry
+#: preparing.xml:503
+#, no-c-format
+msgid "Type of adapter."
+msgstr "Typ adaptéru."
+
+#. Tag: entry
+#: preparing.xml:505
+#, no-c-format
+msgid "Device numbers."
+msgstr "Čísla zařízení"
+
+#. Tag: entry
+#: preparing.xml:506
+#, no-c-format
+msgid "Relative adapter number for OSA cards."
+msgstr "Relativní číslo adaptéru karet OSA"
+
+#. Tag: title
+#: preparing.xml:514
+#, no-c-format
+msgid "Hardware Compatibility"
+msgstr "Hardwarová kompatibilita"
+
+#. Tag: para
+#: preparing.xml:516
+#, no-c-format
+msgid ""
+"Many products work without trouble on &arch-kernel;. Moreover, hardware "
+"support in &arch-kernel; is improving daily. However, &arch-kernel; still "
+"does not run as many different types of hardware as some operating systems."
+msgstr ""
+"Mnoho výrobků pracuje v operačním systému &arch-kernel; bez problémů a "
+"podpora hardwaru pro něj se zlepšuje každým dnem. Přes to všechno &arch-"
+"kernel; nepodporuje tolik typů hardwaru jako některé jiné operační systémy."
+
+#. Tag: para
+#: preparing.xml:522
+#, no-c-format
+msgid ""
+"Drivers in &arch-kernel; in most cases are not written for a certain "
+"<quote>product</quote> or <quote>brand</quote> from a specific manufacturer, "
+"but for a certain hardware/chipset. Many seemingly different products/brands "
+"are based on the same hardware design; it is not uncommon that chip "
+"manufacturers provide so-called <quote>reference designs</quote> for "
+"products based on their chips which are then used by several different "
+"device manufacturers and sold under lots of different product or brand names."
+msgstr ""
+"Ovladače v jádře &arch-kernel; většinou nejsou psány pro konkrétní "
+"<quote>výrobek</quote> nebo <quote>značku</quote>, ale pro konkrétní čipovou "
+"sadu. Mnoho na první pohled odlišných zařízení/značek bývá založeno na "
+"stejném hardwaru, často přímo na tzv. <firstterm>referenčním návrhu</"
+"firstterm>, který poskytuje výrobce čipu a ostatní firmy jej pak prodávají "
+"pod svými vlastními názvy."
+
+#. Tag: para
+#: preparing.xml:533
+#, no-c-format
+msgid ""
+"This has advantages and disadvantages. An advantage is that a driver for one "
+"chipset works with lots of different products from different manufacturers, "
+"as long as their product is based on the same chipset. The disadvantage is "
+"that it is not always easy to see which actual chipset is used in a certain "
+"product/brand. Unfortunately sometimes device manufacturers change the "
+"hardware base of their product without changing the product name or at least "
+"the product version number, so that when having two items of the same brand/"
+"product name bought at different times, they can sometimes be based on two "
+"different chipsets and therefore use two different drivers or there might be "
+"no driver at all for one of them."
+msgstr ""
+"To má výhody i nevýhody. Výhodou je, že ovladač pro jednu čipovou sadu "
+"funguje se širokou škálou zařízení od různých výrobců. Nevýhodou je, že "
+"často není jednoduché poznat, který čip je v jakém zařízení použit, protože "
+"někteří výrobci občas změní hardware produktu bez změny názvu zařízení, nebo "
+"alespoň verze. Může se tak stát, že stejný výrobek koupený později, může mít "
+"zcela jiný hardware, pro který je potřeba použít jiný ovladač, nebo pro něj "
+"dokonce ani ovladač existovat nemusí."
+
+#. Tag: para
+#: preparing.xml:546
+#, fuzzy, no-c-format
+msgid ""
+"For USB and PCI/PCI-Express/ExpressCard devices, a good way to find out on "
+"which chipset they are based is to look at their device IDs. All USB/PCI/PCI-"
+"Express/ExpressCard devices have so called <quote>vendor</quote> and "
+"<quote>product</quote> IDs, and the combination of these two is usually the "
+"same for any product based on the same chipset."
+msgstr ""
+"Pro USB a PCI/PCI-Express/ExpressCard zařízení se dá zjistit identifikační "
+"číslo zařízení (ID) a podle něj pak dohledat čipovou sadu, na které je "
+"výrobek založen."
+
+#. Tag: para
+#: preparing.xml:554
+#, fuzzy, no-c-format
+#| msgid ""
+#| "On Linux systems, these IDs can be read with the <command>lsusb</command> "
+#| "command for USB devices and with the <command>lspci -nn</command> command "
+#| "for PCI/PCI-Express/ExpressCard devices. The vendor and product IDs are "
+#| "usually given in the form of two hexadecimal numbers, seperated by a "
+#| "colon, such as <quote>1d6b:0001</quote>."
+msgid ""
+"On Linux systems, these IDs can be read with the <command>lsusb</command> "
+"command for USB devices and with the <command>lspci -nn</command> command "
+"for PCI/PCI-Express/ExpressCard devices. The vendor and product IDs are "
+"usually given in the form of two hexadecimal numbers, separated by a colon, "
+"such as <quote>1d6b:0001</quote>."
+msgstr ""
+"V Linuxu můžete tato ID zjistit příkazem <command>lsusb</command> pro USB "
+"zařízení, nebo příkazem <command>lspci -nn</command> pro zařízení PCI/PCI-"
+"Express/ExpressCard. ID obvykle vypadá jako dvě čísla v šestnáctkové "
+"soustavě oddělená dvojtečkou, např. <quote>1d6b:0001</quote>, kde "
+"<quote>1d6b</quote> je ID výrobce a <quote>0001</quote> je ID zařízení."
+
+#. Tag: para
+#: preparing.xml:562
+#, fuzzy, no-c-format
+msgid ""
+"An example for the output of <command>lsusb</command>: <quote>Bus 001 Device "
+"001: ID 1d6b:0002 Linux Foundation 2.0 root hub</quote>, whereby 1d6b is the "
+"vendor ID and 0002 is the product ID."
+msgstr ""
+"Příklady výstupů obou příkazů <command>lsusb</command>: <quote>Bus 001 "
+"Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub</quote>"
+
+#. Tag: para
+#: preparing.xml:568
+#, fuzzy, no-c-format
+msgid ""
+"An example for the output of <command>lspci -nn</command> for an Ethernet "
+"card: <quote>03:00.0 Ethernet controller [0200]: Realtek Semiconductor Co., "
+"Ltd. RTL8111/8168B PCI Express Gigabit Ethernet controller [10ec:8168] (rev "
+"06)</quote>. The IDs are given inside the rightmost square brackets, i.e. "
+"here 10ec is the vendor- and 8168 is the product ID."
+msgstr ""
+"<command>lspci -nn</command>: <quote>03:00.0 Ethernet controller [0200]: "
+"Realtek Semiconductor Co., Ltd. RTL8111/8168B PCI Express Gigabit Ethernet "
+"controller [10ec:8168] (rev 06)</quote>."
+
+#. Tag: para
+#: preparing.xml:576
+#, no-c-format
+msgid ""
+"As another example, a graphics card could give the following output: "
+"<quote>04:00.0 VGA compatible controller [0300]: Advanced Micro Devices "
+"[AMD] nee ATI RV710 [Radeon HD 4350] [1002:954f]</quote>."
+msgstr ""
+
+#. Tag: para
+#: preparing.xml:582
+#, no-c-format
+msgid ""
+"On Windows systems, the IDs for a device can be found in the Windows device "
+"manager on the tab <quote>details</quote>, where the vendor ID is prefixed "
+"with VEN_ and the product ID is prefixed with DEV_. On Windows 7 systems, "
+"you have to select the property <quote>Hardware IDs</quote> in the device "
+"manager's details tab to actually see the IDs, as they are not displayed by "
+"default."
+msgstr ""
+"Na systémech Windows můžete zjistit ID zařízení ve Správce zařízení na "
+"záložce <quote>Podrobnosti</quote>. ID výrobce má předponu <quote>VEN_</"
+"quote>, ID zařízení pak předponu <quote>DEV_</quote>. U Windows 7 a "
+"novějších navíc musíte na záložce Podrobnosti vybrat ze seznamu vlastnost "
+"<quote>Hardwarová ID</quote>, jelikož jinak byste ID neviděli."
+
+#. Tag: para
+#: preparing.xml:592
+#, no-c-format
+msgid ""
+"Searching on the internet with the vendor/product ID, <quote>&arch-kernel;</"
+"quote> and <quote>driver</quote> as the search terms often results in "
+"information regarding the driver support status for a certain chipset. If a "
+"search for the vendor/product ID does not yield usable results, a search for "
+"the chip code names, which are also often provided by lsusb and lspci "
+"(<quote>RTL8111</quote>/<quote>RTL8168B</quote> in the network card example "
+"and <quote>RV710</quote> in the graphics card example), can help."
+msgstr ""
+"Vyzbrojeni ID pak můžete vyrazit do hlubin Internetu a pátrat po informacích "
+"ohledně ovladače pro danou čipovou sadu. Nebudete-li úspěšní, můžete zkusit "
+"hledat podle kódových jmen čipů, která jsou taktéž vidět ve výpisu příkazů "
+"<command>lsusb</command> a <command>lspci</command>. V našem případě to je "
+"<quote>RTL8111</quote>/<quote>RTL8168B</quote> pro síťovou kartu a "
+"<quote>RV710</quote> pro kartu grafickou."
+
+#. Tag: title
+#: preparing.xml:605
+#, no-c-format
+msgid "Testing hardware compatibility with a Live-System"
+msgstr "Testování kompatibility hardware pomocí Live systému"
+
+#. Tag: para
+#: preparing.xml:607
+#, no-c-format
+msgid ""
+"&debian-gnu; is also available as a so-called <quote>live system</quote> for "
+"certain architectures. A live system is a preconfigured ready-to-use system "
+"in a compressed format that can be booted and used from a read-only medium "
+"like a CD or DVD. Using it by default does not create any permanent changes "
+"on your computer. You can change user settings and install additional "
+"programs from within the live system, but all this only happens in the "
+"computer's RAM, i.e. if you turn off the computer and boot the live system "
+"again, everything is reset to its defaults. If you want to see whether your "
+"hardware is supported by &debian-gnu;, the easiest way is to run a &debian; "
+"live system on it and try it out."
+msgstr ""
+"&debian-gnu; je též na některých architekturách dostupný ve formě tzv. "
+"<quote>live systému</quote>. Jedná se o předpřipravené obrazy systému, které "
+"se dají spustit přímo z USB klíčenky, CD nebo DVD a bez dalšího nastavování "
+"okamžitě používat. Výhodou je, že se v takovém systému ve výchozím nastavení "
+"nic nezapisuje na disk, vše se odehrává jen v operační paměti a po restartu "
+"počítače se vše vrátí do původního stavu. Nejpohodlnější cestou ke zjištění, "
+"zda je daný hardware systémem &debian-gnu; podporován, je tedy spustit "
+"&debian; live a zkusit ho chvíli používat."
+
+#. Tag: para
+#: preparing.xml:620
+#, no-c-format
+msgid ""
+"There are a few limitations in using a live system. The first is that as all "
+"changes you do within the live system must be held in your computer's RAM, "
+"this only works on systems with enough RAM to do that, so installing "
+"additional large software packages may fail due to memory constraints. "
+"Another limitation with regards to hardware compatibility testing is that "
+"the official &debian-gnu; live system contains only free components, i.e. "
+"there are no non-free firmware files included in it. Such non-free packages "
+"can of course be installed manually within the system, but there is no "
+"automatic detection of required firmware files like in the &d-i;, so "
+"installation of non-free components must be done manually if needed."
+msgstr ""
+"Při používání live systému je třeba mít na paměti několik omezení. Jelikož "
+"se vše odehrává v paměti počítače, je třeba mít dostatek paměti. Dalším "
+"omezením pro testování hardwarové kompatibility může být fakt, že oficiální "
+"live obrazy systému &debian-gnu; obsahují pouze svobodné součásti, což "
+"znamená, že na nich nenaleznete například nesvobodný firmware. Ten sice "
+"můžete následně doinstalovat ručně, ale nebude to tak automatické, jako když "
+"se &d-i; sám dotázal po chybějících souborech s firmwarem."
+
+#. Tag: para
+#: preparing.xml:633
+#, no-c-format
+msgid ""
+"Information about the available variants of the &debian; live images can be "
+"found at the <ulink url=\"&url-debian-live-cd;\">Debian Live Images website</"
+"ulink>."
+msgstr ""
+"Podrobnější informace o dostupných obrazech &debian; live můžete nalézt na "
+"stránce <ulink url=\"&url-debian-live-cd;\">Debian Live</ulink>."
+
+#. Tag: title
+#: preparing.xml:647
+#, no-c-format
+msgid "Network Settings"
+msgstr "Nastavení sítě"
+
+#. Tag: para
+#: preparing.xml:649
+#, no-c-format
+msgid ""
+"If your computer is connected to a fixed network (i.e. an Ethernet or "
+"equivalent connection &mdash; not a dialup/PPP connection) which is "
+"administered by somebody else, you should ask your network's system "
+"administrator for this information:"
+msgstr ""
+"Pokud bude váš počítač trvale připojen do sítě (myslí se ethernetové a "
+"obdobné připojení, ne PPP), kterou spravuje někdo jiný, zjistěte si od "
+"správce sítě následující informace."
+
+#. Tag: para
+#: preparing.xml:657
+#, no-c-format
+msgid "Your host name (you may be able to decide this on your own)."
+msgstr "Název počítače (možná si počítač pojmenujete sami)."
+
+#. Tag: para
+#: preparing.xml:662
+#, no-c-format
+msgid "Your domain name."
+msgstr "Název vaší domény."
+
+#. Tag: para
+#: preparing.xml:667
+#, no-c-format
+msgid "Your computer's IP address."
+msgstr "IP adresu vašeho počítače."
+
+#. Tag: para
+#: preparing.xml:672
+#, no-c-format
+msgid "The netmask to use with your network."
+msgstr "Síťovou masku."
+
+#. Tag: para
+#: preparing.xml:677
+#, no-c-format
+msgid ""
+"The IP address of the default gateway system you should route to, if your "
+"network <emphasis>has</emphasis> a gateway."
+msgstr ""
+"IP adresu brány tj. počítače spojujícího vaši síť s další sítí (nebo "
+"Internetem), pokud na vaší síti brána <emphasis>je</emphasis>."
+
+#. Tag: para
+#: preparing.xml:683
+#, no-c-format
+msgid ""
+"The system on your network that you should use as a DNS (Domain Name "
+"Service) server."
+msgstr ""
+"IP adresu jmenného serveru, který zprostředkovává převod názvů počítačů na "
+"IP adresy (DNS)."
+
+#. Tag: para
+#: preparing.xml:691
+#, no-c-format
+msgid ""
+"If the network you are connected to uses DHCP (Dynamic Host Configuration "
+"Protocol) for configuring network settings, you don't need this information "
+"because the DHCP server will provide it directly to your computer during the "
+"installation process."
+msgstr ""
+"Pokud daná síť používá pro nastavení parametrů DHCP (Dynamic Host "
+"Configuration Protocol), nemusíte tyto informace zjišťovat, protože DHCP "
+"server nastaví váš počítač automaticky."
+
+#. Tag: para
+#: preparing.xml:698
+#, no-c-format
+msgid ""
+"If you have internet access via DSL or cable modem (i.e. over a cable tv "
+"network) and have a router (often provided preconfigured by your phone or "
+"catv provider) which handles your network connectivity, DHCP is usually "
+"available by default."
+msgstr ""
+"Při připojení přes DSL nebo kabelovou televizi obvykle dostanete router, "
+"přes který se připojujete, a na kterém obvykle bývá DHCP zapnuto."
+
+#. Tag: para
+#: preparing.xml:706
+#, no-c-format
+msgid ""
+"As a rule of thumb: if you run a Windows system in your home network and did "
+"not have to manually perform any network settings there to achieve Internet "
+"access, network connectivity in &debian-gnu; will also be configured "
+"automatically."
+msgstr ""
+"Hodně zjednodušeně: pokud jste ve svém předchozím operačním systému nemuseli "
+"síť nastavovat ručně, nebudete ji muset nastavovat ani v systému &debian-"
+"gnu;."
+
+#. Tag: para
+#: preparing.xml:713
+#, no-c-format
+msgid "If you use a WLAN/WiFi network, you should find out:"
+msgstr "Používáte-li bezdrátové připojení, měli byste navíc zjistit:"
+
+#. Tag: para
+#: preparing.xml:718
+#, no-c-format
+msgid "The ESSID (<quote>network name</quote>) of your wireless network."
+msgstr "ESSID (jméno) vaší bezdrátové sítě."
+
+#. Tag: para
+#: preparing.xml:723
+#, no-c-format
+msgid "The WEP or WPA/WPA2 security key to access the network (if applicable)."
+msgstr ""
+"Bezpečnostní klíč WEP nebo WPA/WPA2 pro přístup k síti (pokud jej používáte)."
+
+#. Tag: title
+#: preparing.xml:740
+#, no-c-format
+msgid "Meeting Minimum Hardware Requirements"
+msgstr "Splnění minimálních hardwarových požadavků"
+
+#. Tag: para
+#: preparing.xml:741
+#, no-c-format
+msgid ""
+"Once you have gathered information about your computer's hardware, check "
+"that your hardware will let you do the type of installation that you want to "
+"do."
+msgstr ""
+"Porovnejte seznam svého hardware s následující tabulkou, ve které zjistíte, "
+"zda můžete použít zamýšlený typ instalace."
+
+#. Tag: para
+#: preparing.xml:747
+#, no-c-format
+msgid ""
+"Depending on your needs, you might manage with less than some of the "
+"recommended hardware listed in the table below. However, most users risk "
+"being frustrated if they ignore these suggestions."
+msgstr ""
+"Skutečné minimální požadavky mohou být nižší než uvádí tabulka, ale většina "
+"uživatelů by asi nebyla spokojena s rychlostí systému. Vždy záleží na "
+"konkrétních požadavcích a možnostech."
+
+#. Tag: para
+#: preparing.xml:753
+#, no-c-format
+msgid ""
+"A Pentium 4, 1GHz system is the minimum recommended for a desktop system."
+msgstr ""
+"Pro pracovní stanice je minimální doporučený procesor Pentium 4 na 1GHz."
+
+#. Tag: para
+#: preparing.xml:758
+#, no-c-format
+msgid "Any OldWorld or NewWorld PowerPC can serve well as a desktop system."
+msgstr ""
+"Všechny OldWorld nebo NewWorld PowerPC mohou velmi dobře posloužit jako "
+"pracovní stanice."
+
+#. Tag: title
+#: preparing.xml:765
+#, no-c-format
+msgid "Recommended Minimum System Requirements"
+msgstr "Doporučené minimální požadavky"
+
+#. Tag: entry
+#: preparing.xml:769
+#, no-c-format
+msgid "Install Type"
+msgstr "Typ instalace"
+
+#. Tag: entry
+#: preparing.xml:770
+#, no-c-format
+msgid "RAM (minimum)"
+msgstr "RAM (minimální)"
+
+#. Tag: entry
+#: preparing.xml:771
+#, no-c-format
+msgid "RAM (recommended)"
+msgstr "RAM (doporučená)"
+
+#. Tag: entry
+#: preparing.xml:772
+#, no-c-format
+msgid "Hard Drive"
+msgstr "Pevný disk"
+
+#. Tag: entry
+#: preparing.xml:778
+#, no-c-format
+msgid "No desktop"
+msgstr "Bez desktopového prostředí"
+
+#. Tag: entry
+#: preparing.xml:779
+#, no-c-format
+msgid "256 megabytes"
+msgstr "256 MB"
+
+#. Tag: entry
+#: preparing.xml:780
+#, no-c-format
+msgid "512 megabytes"
+msgstr "512 MB"
+
+#. Tag: entry
+#: preparing.xml:781 preparing.xml:785
+#, no-c-format
+msgid "2 gigabytes"
+msgstr "2 GB"
+
+#. Tag: entry
+#: preparing.xml:783
+#, no-c-format
+msgid "With Desktop"
+msgstr "Desktopové prostředí"
+
+#. Tag: entry
+#: preparing.xml:784
+#, fuzzy, no-c-format
+#| msgid "10 gigabytes"
+msgid "1 gigabytes"
+msgstr "10 GB"
+
+#. Tag: entry
+#: preparing.xml:786
+#, no-c-format
+msgid "10 gigabytes"
+msgstr "10 GB"
+
+#. Tag: para
+#: preparing.xml:791
+#, no-c-format
+msgid ""
+"The minimum values assumes that swap will be enabled and a non-liveCD image "
+"is used. The <quote>No desktop</quote> value assumes that the non-graphical "
+"(text-based) installer is used."
+msgstr ""
+
+#. Tag: para
+#: preparing.xml:797
+#, fuzzy, no-c-format
+#| msgid ""
+#| "The actual minimum memory requirements are a lot less than the numbers "
+#| "listed in this table. Depending on the architecture, it is possible to "
+#| "install &debian; with as little as 60MB (for amd64). The same goes for "
+#| "the disk space requirements, especially if you pick and choose which "
+#| "applications to install; see <xref linkend=\"tasksel-size-list\"/> for "
+#| "additional information on disk space requirements."
+msgid ""
+"The actual minimum memory requirements are a lot less than the numbers "
+"listed in this table. With swap enabled, it is possible to install &debian; "
+"with as little as &minimum-memory-strict;. The same goes for the disk space "
+"requirements, especially if you pick and choose which applications to "
+"install; see <xref linkend=\"tasksel-size-list\"/> for additional "
+"information on disk space requirements."
+msgstr ""
+"Konkrétní minimální paměťové požadavky jsou o něco nižší, čísla uváděná v "
+"tabulce. Podle architektury je možné instalovat &debian; s pouhými 60MB RAM "
+"(na amd64). Něco podobného platí i pro požadavky na diskový prostor a hodně "
+"závisí na tom, které aplikace si nainstalujete. Více informací naleznete v "
+"tabulce <xref linkend=\"tasksel-size-list\"/>."
+
+#. Tag: para
+#: preparing.xml:807
+#, no-c-format
+msgid ""
+"It is possible to run a graphical desktop environment on older or low-end "
+"systems, but in that case it is recommended to install a window manager that "
+"is less resource-hungry than those of the GNOME or KDE Plasma desktop "
+"environments; alternatives include <classname>xfce4</classname>, "
+"<classname>icewm</classname> and <classname>wmaker</classname>, but there "
+"are others to choose from."
+msgstr ""
+"I na starších systémech je možné provozovat grafické desktopové prostředí, "
+"ale v takovém případě je doporučeno nainstalovat méně náročné prostředí než "
+"KDE Plasma nebo GNOME. Mezi populární alternativy patří <classname>xfce4</"
+"classname>, <classname>icewm</classname> a <classname>wmaker</classname>, "
+"ale na výběr máte i přehršle dalších."
+
+#. Tag: para
+#: preparing.xml:816
+#, no-c-format
+msgid ""
+"It is practically impossible to give general memory or disk space "
+"requirements for server installations as those very much depend on what the "
+"server is to be used for."
+msgstr ""
+"Pro serverové nasazení je téměř nemožné určit paměťové nebo diskové "
+"požadavky, protože ty se liší podle konkrétního nasazení."
+
+#. Tag: para
+#: preparing.xml:822
+#, no-c-format
+msgid ""
+"Remember that these sizes don't include all the other materials which are "
+"usually to be found, such as user files, mail, and data. It is always best "
+"to be generous when considering the space for your own files and data."
+msgstr ""
+"Pamatujte, že všechny uvedené velikosti jsou orientační a že neobsahují "
+"další věci, které obvykle v systému bývají (jako třeba pošta, soubory "
+"uživatelů, data). Při přidělování místa pro své vlastní soubory a data je "
+"vždy lepší být velkorysý."
+
+#. Tag: para
+#: preparing.xml:829
+#, no-c-format
+msgid ""
+"Disk space required for the smooth operation of the &debian-gnu; system "
+"itself is taken into account in these recommended system requirements. "
+"Notably, the <filename>/var</filename> partition contains a lot of state "
+"information specific to &debian; in addition to its regular contents, like "
+"logfiles. The <command>dpkg</command> files (with information on all "
+"installed packages) can easily consume 40MB. Also, <command>apt</command> "
+"puts downloaded packages here before they are installed. You should usually "
+"allocate at least 200MB for <filename>/var</filename>, and a lot more if you "
+"install a graphical desktop environment."
+msgstr ""
+"Dále je potřeba dávat pozor na oblast <filename>/var</filename>, která "
+"obsahuje hodně dat závislých na konkrétní situaci. Například soubory "
+"programu <command>dpkg</command> mohou klidně zabrat 40MB, ani nevíte jak. "
+"Dále sem zapisuje třeba <command>apt</command>, který zde odkládá stažené "
+"balíky před samotnou instalací. Pokud přidáme velikost logovacích souborů "
+"(většinou v řádech MB) a ostatní proměnlivá data, měli byste pro <filename>/"
+"var</filename> uvažovat o alokování minimálně 200MB. Plánujete-li instalaci "
+"grafického desktopového prostředí, tak i mnohem více. Do <filename>/var</"
+"filename> také implicitně ukládají své databáze databázové systémy."
+
+#. Tag: title
+#: preparing.xml:853
+#, no-c-format
+msgid "Pre-Partitioning for Multi-Boot Systems"
+msgstr "Předrozdělení disku pro více operačních systémů"
+
+#. Tag: para
+#: preparing.xml:854
+#, no-c-format
+msgid ""
+"Partitioning your disk simply refers to the act of breaking up your disk "
+"into sections. Each section is then independent of the others. It's roughly "
+"equivalent to putting up walls inside a house; if you add furniture to one "
+"room it doesn't affect any other room."
+msgstr ""
+"Rozdělením disku se na disku vytvoří několik vzájemně nezávislých oddílů "
+"(angl. partition). Každý oddíl je nezávislý na ostatních. Dá se to přirovnat "
+"k bytu rozčleněnému zdmi &mdash; přidání nábytku do jedné místnosti nemá na "
+"ostatní místnosti žádný vliv."
+
+#. Tag: para
+#: preparing.xml:861
+#, no-c-format
+msgid ""
+"Whenever this section talks about <quote>disks</quote> you should translate "
+"this into a DASD or VM minidisk in the &arch-title; world. Also a machine "
+"means an LPAR or VM guest in this case."
+msgstr ""
+"Kdykoliv se v této kapitole bude mluvit o <quote>disku</quote>, měli byste "
+"si to přeložit do světa &arch-title; jako <quote>DASD</quote> nebo <quote>VM "
+"minidisk</quote>. Obdobně <quote>počítač</quote> znamená <quote>LPAR</quote> "
+"nebo <quote>VM guest</quote>."
+
+#. Tag: para
+#: preparing.xml:867
+#, no-c-format
+msgid ""
+"If you already have an operating system on your system <phrase arch=\"any-"
+"x86\"> (Windows 9x, Windows NT/2000/XP/2003/Vista/7, OS/2, MacOS, Solaris, "
+"FreeBSD, &hellip;) </phrase> <phrase arch=\"s390\"> (VM, z/OS, OS/390, "
+"&hellip;) </phrase> which uses the whole disk and you want to stick &debian; "
+"on the same disk, you will need to repartition it. &debian; requires its own "
+"hard disk partitions. It cannot be installed on Windows or Mac OS X "
+"partitions. It may be able to share some partitions with other Unix systems, "
+"but that's not covered here. At the very least you will need a dedicated "
+"partition for the &debian; root filesystem."
+msgstr ""
+"Jestliže už na počítači máte nějaký operační systém <phrase arch=\"any-"
+"x86\"> (Windows 9x, Windows NT/2000/XP/2003/Vista/7, OS/2, MacOS, Solaris, "
+"FreeBSD, &hellip;) </phrase> <phrase arch=\"s390\"> (VM, z/OS, OS/390, "
+"&hellip;) </phrase> a chcete na stejný disk ještě umístit &debian;, patrně "
+"se nevyhnete přerozdělení disku. &debian; pro sebe potřebuje vlastní diskové "
+"oblasti a nemůže být nainstalován na oblasti systému Windows nebo třeba "
+"MacOS X. Je sice možné sdílet některé oblasti s jinými systémy, ale popis je "
+"mimo rozsah tohoto dokumentu. Minimálně budete potřebovat jednu oblast pro "
+"kořenový souborový systém."
+
+#. Tag: para
+#: preparing.xml:886
+#, no-c-format
+msgid ""
+"You can find information about your current partition setup by using a "
+"partitioning tool for your current operating system<phrase arch=\"any-"
+"x86\">, such as the integrated Disk Manager in Windows or fdisk in DOS</"
+"phrase><phrase arch=\"powerpc\">, such as Disk Utility, Drive Setup, HD "
+"Toolkit, or MacTools</phrase><phrase arch=\"s390\">, such as the VM diskmap</"
+"phrase>. Partitioning tools always provide a way to show existing partitions "
+"without making changes."
+msgstr ""
+"Informace o aktuálním rozdělení disku můžete získat dělicím programem svého "
+"stávajícího operačního systému<phrase arch=\"any-x86\">, jako je Správa "
+"disků ve Windows nebo fdisk v DOSu</phrase><phrase arch=\"powerpc\">, jako "
+"je Disk Utility, Drive Setup, HD Toolkit nebo MacTools</phrase> <phrase arch="
+"\"s390\">, jako je VM diskmap</phrase>. Každý dělicí nástroj umožňuje "
+"prohlížet oblasti bez jejich modifikace."
+
+#. Tag: para
+#: preparing.xml:896
+#, no-c-format
+msgid ""
+"In general, changing a partition with a file system already on it will "
+"destroy any information there. Thus you should always make backups before "
+"doing any repartitioning. Using the analogy of the house, you would probably "
+"want to move all the furniture out of the way before moving a wall or you "
+"risk destroying it."
+msgstr ""
+"Obecně změna oddílu, na kterém je souborový systém, znamená ztrátu dat, "
+"takže si raději disk před změnami do tabulky diskových oddílů zazálohujte. "
+"Podle analogie s bytem a zdmi, z bytu také raději vynesete veškerý nábytek, "
+"než budete přestavovat zdi."
+
+#. Tag: para
+#: preparing.xml:904
+#, no-c-format
+msgid ""
+"Several modern operating systems offer the ability to move and resize "
+"certain existing partitions without destroying their contents. This allows "
+"making space for additional partitions without losing existing data. Even "
+"though this works quite well in most cases, making changes to the "
+"partitioning of a disk is an inherently dangerous action and should only be "
+"done after having made a full backup of all data. <phrase arch=\"any-"
+"x86\">For FAT/FAT32 and NTFS partitions as used by DOS and Windows systems, "
+"the ability to move and resize them losslessly is provided both by &d-i; as "
+"well as by the integrated Disk Manager of Windows 7. </phrase>"
+msgstr ""
+"Přestože některé moderní operační systémy zvládají přesun a změnu velikosti "
+"některých oddílů bez zničení obsahu, takže by se dalo vytvořit místo pro "
+"&debian; beze ztráty dat, jedná se o inherentně nebezpečnou operaci a proto "
+"byste to měli spáchat až po kompletní záloze všech dat. <phrase arch=\"any-"
+"x86\">Oblasti typu FAT/FAT32 a NTFS se dají bezeztrátově upravovat například "
+"ze Správy disků ve Windows 7, nebo během instalace přímo z &d-i;u (viz <xref "
+"linkend=\"di-partition\"/>).</phrase>"
+
+#. Tag: para
+#: preparing.xml:919
+#, fuzzy, no-c-format
+msgid ""
+"To losslessly resize an existing FAT or NTFS partition from within &d-i;, go "
+"to the partitioning step, select the option for manual partitioning, select "
+"the partition to resize, and simply specify its new size."
+msgstr ""
+"Pokud startujete instalační systém z pevného disku a potom tento disk "
+"rozdělíte, smažete si zaváděcí soubory a musíte doufat, že se instalace "
+"povede napoprvé. (Minimálně v tomto případě je dobré mít u sebe nástroje pro "
+"oživení počítače, jako jsou zaváděcí diskety nebo CD s původním systémem a "
+"podobně.)"
+
+#. Tag: emphasis
+#: preparing.xml:927
+#, no-c-format
+msgid "FIXME: write about HP-UX disks?"
+msgstr ""
+
+#. Tag: para
+#: preparing.xml:929
+#, fuzzy, no-c-format
+msgid ""
+"Creating and deleting partitions can be done from within &d-i; as well as "
+"from an existing operating system. As a rule of thumb, partitions should be "
+"created by the system for which they are to be used, i.e. partitions to be "
+"used by &debian-gnu; should be created from within &d-i; and partitions to "
+"be used from another operating system should be created from there. &d-i; is "
+"capable of creating non-&arch-kernel; partitions, and partitions created "
+"this way usually work without problems when used in other operating systems, "
+"but there are a few rare corner cases in which this could cause problems, so "
+"if you want to be sure, use the native partitioning tools to create "
+"partitions for use by other operating systems."
+msgstr ""
+"I když s diskovými oblastmi mohou manipulovat jak &d-i;, tak nástroje ve "
+"stávajícím operačním systému, vždy bývá nejlepší, když si své oblasti "
+"vytváří vždy ten systém, který je bude používat, protože sám nejlépe ví, co "
+"mu chutná. To znamená, že oblasti pro &debian-gnu; byste měli vytvořit v &d-"
+"i;."
+
+#. Tag: para
+#: preparing.xml:942
+#, no-c-format
+msgid ""
+"If you are going to install more than one operating system on the same "
+"machine, you should install all other system(s) before proceeding with the "
+"&debian; installation. Windows and other OS installations may destroy your "
+"ability to start &debian;, or encourage you to reformat non-native "
+"partitions."
+msgstr ""
+"Jestliže budete mít na počítači více operačních systémů, měli byste tyto "
+"systémy instalovat před &debian;em. Instalační programy Windows a jiných "
+"systémů by mohly zabránit startu &debian;u nebo vás navést k přeformátování "
+"některých důležitých oblastí."
+
+#. Tag: para
+#: preparing.xml:950
+#, no-c-format
+msgid ""
+"You can recover from these actions or avoid them, but installing the native "
+"system first saves you trouble."
+msgstr ""
+"Tyto problémy můžete úspěšně vyřešit, případně se jim úplně vyhnout, ale "
+"nejjistější je instalovat &debian; jako poslední systém."
+
+#. Tag: para
+#: preparing.xml:955
+#, no-c-format
+msgid ""
+"In order for OpenFirmware to automatically boot &debian-gnu; the &arch-"
+"parttype; partitions should appear before all other partitions on the disk, "
+"especially Mac OS X boot partitions. This should be kept in mind when pre-"
+"partitioning; you should create a &arch-parttype; placeholder partition to "
+"come <emphasis>before</emphasis> the other bootable partitions on the disk. "
+"(The small partitions dedicated to Apple disk drivers are not bootable.) You "
+"can delete the placeholder with the &debian; partition tools later during "
+"the actual install, and replace it with &arch-parttype; partitions."
+msgstr ""
+"Aby OpenFirmware automaticky zaváděl &debian-gnu;, měly by se oblasti pro "
+"&debian; vyskytovat před všemi ostatními oblastmi na disku (obzvláště před "
+"zaváděcími oblastmi Mac OS X). To se zajistí třeba tím, že se před instalací "
+"vytvoří prázdná oblast <emphasis>před</emphasis> ostatními zaváděcími "
+"oblastmi na disku. (Z malých applových oblastí vyhrazených pro ovladače "
+"disků nelze zavádět.) Poté, při instalaci &debian;u, se tato oblast smaže a "
+"nahradí se oblastmi pro &arch-parttype;."
+
+#. Tag: title
+#: preparing.xml:1031
+#, no-c-format
+msgid "Partitioning from SunOS"
+msgstr "Rozdělení disku ze SunOS"
+
+#. Tag: para
+#: preparing.xml:1033
+#, no-c-format
+msgid ""
+"It's perfectly fine to partition from SunOS; in fact, if you intend to run "
+"both SunOS and &debian; on the same machine, it is recommended that you "
+"partition using SunOS prior to installing &debian;. The Linux kernel "
+"understands Sun disk labels, so there are no problems there. SILO supports "
+"booting Linux and SunOS from any of EXT2 (Linux), UFS (SunOS), romfs or "
+"iso9660 (CDROM) partitions."
+msgstr ""
+"Rozdělení disku ze SunOS je absolutně bezproblémové. Pokud se rozhodnete mít "
+"na jednom stroji SunOS i &debian;, je doporučeno rozdělit disk nástroji "
+"SunOS ještě před instalací &debian;u. Linuxové jádro rozumí formátu Sun "
+"disklabel, takže zde problémy nebudou. SILO podporuje zavádění Linuxu i "
+"SunOS z několika oblastí: EXT2 (Linux), UFS (SunOS), romfs a iso9660 (CDROM)."
+
+#. Tag: title
+#: preparing.xml:1045
+#, no-c-format
+msgid "Partitioning from Linux or another OS"
+msgstr "Dělení disku z Linuxu nebo jiného OS"
+
+#. Tag: para
+#: preparing.xml:1047
+#, no-c-format
+msgid ""
+"Whatever system you are using to partition, make sure you create a "
+"<quote>Sun disk label</quote> on your boot disk. This is the only kind of "
+"partition scheme that the OpenBoot PROM understands, and so it's the only "
+"scheme from which you can boot. In <command>fdisk</command>, the <keycap>s</"
+"keycap> key is used to create Sun disk labels. You only need to do this on "
+"drives that do not already have a Sun disk label. If you are using a drive "
+"that was previously formatted using a PC (or other architecture) you must "
+"create a new disk label, or problems with the disk geometry will most likely "
+"occur."
+msgstr ""
+"Ať už používáte jakýkoliv operační systém pro vytvoření diskových oblastí, "
+"zkontrolujte si, zda na svém zaváděcím disku vytváříte oblast s typem "
+"<quote>Sun disk label</quote>. Toto je jediný způsob rozdělení, kterému "
+"rozumí OpenBoot PROM, a tudíž je to jediný způsob, kterým můžete zavést "
+"systém. V programu <command>fdisk</command>, se k vytvoření Sun disk label "
+"používá klávesa <keycap>s</keycap>. Toto je nutné udělat pouze na discích, "
+"které ještě Sun disk label nemají. Pokud používáte disk, který byl dříve "
+"naformátován v osobním počítači (nebo jiné architektuře), musíte vytvořit "
+"nový disk label, nebo se s velkou pravděpodobností objeví problémy s "
+"geometrií disku."
+
+#. Tag: para
+#: preparing.xml:1059
+#, no-c-format
+msgid ""
+"You will probably be using <command>SILO</command> as your boot loader (the "
+"small program which runs the operating system kernel). <command>SILO</"
+"command> has certain requirements for partition sizes and location; see "
+"<xref linkend=\"partitioning\"/>."
+msgstr ""
+"K zavádění systému budete pravděpodobně používat program <command>SILO</"
+"command> (ten malý program, který zavede jádro operačního systému). "
+"<command>SILO</command> má jisté specifické požadavky na rozdělení a "
+"velikost oblastí &mdash; pro bližší informace se podívejte na <xref linkend="
+"\"partitioning\"/>."
+
+#. Tag: title
+#: preparing.xml:1074
+#, no-c-format
+msgid "Mac OS X Partitioning"
+msgstr "Rozdělení disku z Mac OS X"
+
+#. Tag: para
+#: preparing.xml:1076
+#, no-c-format
+msgid ""
+"The <application>Disk Utility</application> application can be found under "
+"the <filename>Utilities</filename> menu in Mac OS X Installer. It will not "
+"adjust existing partitions; it is limited to partitioning the entire disk at "
+"once."
+msgstr ""
+"Aplikaci <application>Disk Utility</application> můžete najít v instalátoru "
+"Mac OS X v menu <filename>Utilities</filename>. Tato aplikace bohužel "
+"neumožňuje upravit stávající oblasti. To znamená, že musíte disk rozdělit "
+"najednou."
+
+#. Tag: para
+#: preparing.xml:1082
+#, no-c-format
+msgid ""
+"Remember to create a placeholder partition for GNU/Linux, preferably "
+"positioned first in the disk layout. it doesn't matter what type it is, it "
+"will be deleted and replaced later inside the &debian-gnu; installer."
+msgstr ""
+"Oblast pro GNU/Linux byste měli vytvořit na začátku disku. Na jejím typu "
+"nezáleží, protože ho instalační program &debian;u přepíše."
+
+#. Tag: para
+#: preparing.xml:1088
+#, no-c-format
+msgid ""
+"&debian; installer partition table editing tools are compatible with OS X, "
+"but not with MacOS 9. If you are planning to use both MacOS 9 and OS X, it "
+"is best to install OS X and &debian; on one hard drive, and put MacOS 9 on a "
+"separate hard drive. Separate options for OS 9 and OS X will appear when "
+"holding the <keycap>option</keycap> key at boot time, and separate options "
+"can be installed in the <application>yaboot</application> boot menu as well."
+msgstr ""
+"Nástroje pro dělení disků dostupné v &d-i;u jsou kompatibilní s OS X, ale ne "
+"s MacOS 9. Pokud plánujete instalaci MacOS 9 i OS X, je lepší nainstalovat "
+"OS X a &debian; na jeden disk a MacOS 9 na druhý. Jestliže totiž během "
+"startu počítače stisknete klávesu <keycap>option</keycap>, uvidíte pro každý "
+"systém vlastní položku a také pak můžete v zavaděči <application>yaboot</"
+"application> použít pro různé systémy různé parametry."
+
+#. Tag: para
+#: preparing.xml:1098
+#, no-c-format
+msgid ""
+"GNU/Linux is unable to access information on UFS partitions, but can access "
+"HFS+ (aka MacOS Extended) partitions. OS X requires one of these two types "
+"for its boot partition. MacOS 9 can be installed on either HFS (aka MacOS "
+"Standard) or HFS+. To share information between the Mac OS X and GNU/Linux "
+"systems, an exchange partition is handy. HFS, HFS+ and MS-DOS FAT file "
+"systems are supported by MacOS 9, Mac OS X and GNU/Linux."
+msgstr ""
+"GNU/Linux neumí přistupovat k souborům na oblastech UFS, ale podporuje HFS+ "
+"(alias MacOS Extended). Zatímco OS X jednu z nich vyžaduje pro zavádění, "
+"MacOS 9 může být nainstalován buď na HFS (alias MacOS Standard) nebo na HFS"
+"+. Ke sdílení informací mezi MacOS a GNU/Linuxem je vhodné použít "
+"<quote>výměnnou</quote> oblast se souborovým systémem HFS, HFS+ nebo MS-DOS "
+"FAT, které rozumí MacOS 9, Max OS X i GNU/Linux."
+
+#. Tag: title
+#: preparing.xml:1118
+#, no-c-format
+msgid "Pre-Installation Hardware and Operating System Setup"
+msgstr "Než začnete s instalací &hellip;"
+
+#. Tag: para
+#: preparing.xml:1119
+#, fuzzy, no-c-format
+#| msgid ""
+#| "This section will walk you through pre-installation hardware setup, if "
+#| "any, that you will need to do prior to installing &debian;. Generally, "
+#| "this involves checking and possibly changing BIOS/system firmware "
+#| "settings for your system. The <quote>BIOS</quote> or <quote>system "
+#| "firmware</quote> is the core software used by the hardware; it is most "
+#| "critically invoked during the bootstrap process (after power-up)."
+msgid ""
+"This section will walk you through pre-installation hardware setup, if any, "
+"that you will need to do prior to installing &debian;. Generally, this "
+"involves checking and possibly changing BIOS/UEFI/system firmware settings "
+"for your system. The <quote>BIOS/UEFI</quote> or <quote>system firmware</"
+"quote> is the core software used by the hardware; it is most critically "
+"invoked during the bootstrap process (after power-up)."
+msgstr ""
+"Tato část vás provede nastavením hardwaru, který je občas potřeba před "
+"vlastní instalací mírně připravit. Obecně se tím myslí kontrola a případná "
+"změna nastavení <firstterm>BIOS</firstterm>u/systémového "
+"<firstterm>firmware</firstterm>. <quote>BIOS</quote> nebo <quote>systémový "
+"firmware</quote> je nejnižší úroveň softwaru, který je využíván zařízeními v "
+"počítači, a rozhodujícím způsobem ovlivňuje start počítače po jeho zapnutí."
+
+#. Tag: title
+#: preparing.xml:1134
+#, fuzzy, no-c-format
+#| msgid "Invoking the BIOS Set-Up Menu"
+msgid "Invoking the BIOS/UEFI Set-Up Menu"
+msgstr "Vyvolání menu systému BIOS"
+
+#. Tag: para
+#: preparing.xml:1136
+#, fuzzy, no-c-format
+msgid ""
+"The BIOS/UEFI provides the basic functions needed to boot your machine and "
+"to allow your operating system to access your hardware. Your system provides "
+"a BIOS/UEFI setup menu, which is used to configure the BIOS/UEFI. To enter "
+"the BIOS/UEFI setup menu you have to press a key or key combination after "
+"turning on the computer. Often it is the <keycap>Delete</keycap> or the "
+"<keycap>F2</keycap> key, but some manufacturers use other keys. Usually upon "
+"starting the computer there will be a message stating which key to press to "
+"enter the setup screen."
+msgstr ""
+"BIOS zabezpečuje základní funkce nutné pro zavedení operačního systému. Váš "
+"počítač patrně umožňuje vyvolání menu, ze kterého lze BIOS nastavit. Vstup "
+"do BIOSu se liší od výrobce k výrobci, ale často to bývá klávesou "
+"<keycap>Delete</keycap> nebo <keycap>F2</keycap> po zapnutí počítače."
+
+#. Tag: title
+#: preparing.xml:1150 preparing.xml:1494 preparing.xml:1672
+#, no-c-format
+msgid "Boot Device Selection"
+msgstr "Výběr zaváděcího zařízení"
+
+#. Tag: para
+#: preparing.xml:1152
+#, fuzzy, no-c-format
+#| msgid ""
+#| "Within the BIOS setup menu, you can select which devices shall be checked "
+#| "in which sequence for a bootable operating system. Possible choices "
+#| "usually include the internal harddisks, the CD/DVD-ROM drive and USB mass "
+#| "storage devices such as USB sticks or external USB harddisks. On modern "
+#| "systems there is also often a possibility to enable network booting via "
+#| "PXE."
+msgid ""
+"Within the BIOS/UEFI setup menu, you can select which devices shall be "
+"checked in which sequence for a bootable operating system. Possible choices "
+"usually include the internal harddisks, the CD/DVD-ROM drive and USB mass "
+"storage devices such as USB sticks or external USB harddisks. On modern "
+"systems there is also often a possibility to enable network booting via PXE."
+msgstr ""
+"V systémech BIOS si obvykle můžete vybrat pořadí médií, na kterých se bude "
+"hledat zaveditelný operační systém. V seznamu obvykle naleznete interní "
+"pevné disky, CD/DVD mechaniky a bloková USB zařízení jako USB klíčenky nebo "
+"externí USB disky. Často také nechybí zavádění ze sítě pomocí PXE."
+
+#. Tag: para
+#: preparing.xml:1160
+#, fuzzy, no-c-format
+msgid ""
+"Depending on the installation media (CD/DVD ROM, USB stick, network boot) "
+"you have chosen you should enable the appropriate boot devices if they are "
+"not already enabled."
+msgstr ""
+"Dle zvolené instalační metody nastavte pořadí zařízení tak, aby se jako "
+"první spustil instalační systém."
+
+#. Tag: para
+#: preparing.xml:1166
+#, fuzzy, no-c-format
+msgid ""
+"Most BIOS/UEFI versions allow you to call up a boot menu on system startup "
+"in which you select from which device the computer should start for the "
+"current session. If this option is available, the BIOS/UEFI usually displays "
+"a short message like <quote>press <keycap>F12</keycap> for boot menu</quote> "
+"on system startup. The actual key used to select this menu varies from "
+"system to system; commonly used keys are <keycap>F12</keycap>, <keycap>F11</"
+"keycap> and <keycap>F8</keycap>. Choosing a device from this menu does not "
+"change the default boot order of the BIOS/UEFI, i.e. you can start once from "
+"a USB stick while having configured the internal harddisk as the normal "
+"primary boot device."
+msgstr ""
+"Často můžete použít zkratku a příslušné zaváděcí zařízení vybrat hned po "
+"zapnutí počítače bez vstupování do BIOSu. Výhodou je, že na rozdíl od "
+"nastavení v BIOSu, platí tato změna pouze pro tento jeden start počítače. "
+"Nevýhoda je pak ta, že se klávesa pro vyvolání této nabídky liší mezi "
+"systémy ještě více, než samotný vstup do BIOSu. Správnou klávesu vám "
+"prozradí návod k základní desce, obvykle to bývá klávesa <keycap>F12</"
+"keycap>, <keycap>F11</keycap> nebo <keycap>F8</keycap>."
+
+#. Tag: para
+#: preparing.xml:1180
+#, no-c-format
+msgid ""
+"If your BIOS/UEFI does not provide you with a boot menu to do ad-hoc choices "
+"of the current boot device, you will have to change your BIOS/UEFI setup to "
+"make the device from which the &d-i; shall be booted the primary boot device."
+msgstr ""
+
+#. Tag: para
+#: preparing.xml:1186
+#, fuzzy, no-c-format
+#| msgid ""
+#| "Unfortunately some computers contain buggy BIOS versions. Booting &d-i; "
+#| "from a USB stick might not work even if there is an appropriate option in "
+#| "the BIOS setup menu and the stick is selected as the primary boot device. "
+#| "On some of these systems using a USB stick as boot medium is impossible; "
+#| "others can be tricked into booting from the stick by changing the device "
+#| "type in the BIOS setup from the default <quote>USB harddisk</quote> or "
+#| "<quote>USB stick</quote> to <quote>USB ZIP</quote> or <quote>USB CDROM</"
+#| "quote>. <phrase condition=\"isohybrid-supported\"> In particular if you "
+#| "use an isohybrid CD/DVD image on a USB stick (see <xref linkend=\"usb-"
+#| "copy-isohybrid\"/>), changing the device type to <quote>USB CDROM</quote> "
+#| "helps on some BIOSes which will not boot from a USB stick in USB harddisk "
+#| "mode.</phrase>"
+msgid ""
+"Unfortunately some computers may contain buggy BIOS/UEFI versions. Booting "
+"&d-i; from a USB stick might not work even if there is an appropriate option "
+"in the BIOS/UEFI setup menu and the stick is selected as the primary boot "
+"device. On some of these systems using a USB stick as boot medium is "
+"impossible; others can be tricked into booting from the stick by changing "
+"the device type in the BIOS/UEFI setup from the default <quote>USB harddisk</"
+"quote> or <quote>USB stick</quote> to <quote>USB ZIP</quote> or <quote>USB "
+"CDROM</quote>. <phrase condition=\"isohybrid-supported\"> In particular if "
+"you use an isohybrid installation image on a USB stick (see <xref linkend="
+"\"usb-copy-isohybrid\"/>), changing the device type to <quote>USB CDROM</"
+"quote> helps on some BIOSes which will not boot from a USB stick in USB "
+"harddisk mode.</phrase> You may need to configure your BIOS/UEFI to enable "
+"<quote>USB legacy support</quote>."
+msgstr ""
+"Některé počítače mají bohužel chybové verze BIOSu a zavedení instalačního "
+"systému z USB klíčenky nemusí fungovat, i když jste vše nastavili správně. "
+"Někdy se dají počítače ošálit tím, že v BIOSu místo <quote>USB harddisk</"
+"quote> nebo <quote>USB stick</quote> vyberete typ zařízení <quote>USB ZIP</"
+"quote> nebo <quote>USB CDROM</quote>. <phrase condition=\"isohybrid-supported"
+"\"> Změna na <quote>USB CDROM</quote> pomáhá obzvláště v případech, kdy na "
+"USB klíčence používáte CD/DVD obraz typu isohybrid (viz <xref linkend=\"usb-"
+"copy-isohybrid\"/>).</phrase>"
+
+#. Tag: para
+#: preparing.xml:1202
+#, fuzzy, no-c-format
+#| msgid ""
+#| "If you cannot manipulate the BIOS to boot directly from a USB stick you "
+#| "still have the option of using an ISO copied to the stick. Boot &d-i; "
+#| "using <xref linkend=\"boot-drive-files\"/> and, after scanning the hard "
+#| "drives for an installer ISO image, select the USB device and choose an "
+#| "installation image."
+msgid ""
+"If you cannot manipulate the BIOS/UEFI to boot directly from a USB stick you "
+"still have the option of using an ISO copied to the stick. Boot &d-i; using "
+"<xref linkend=\"boot-drive-files\"/> and, after scanning the hard drives for "
+"an installer ISO image, select the USB device and choose an installation "
+"image."
+msgstr ""
+"Jestliže se vám nepodaří přemluvit BIOS, aby zavedl instalaci přímo z USB, "
+"můžete zkusit zavést instalaci z pevného disku (dle kapitoly <xref linkend="
+"\"boot-drive-files\"/>) a v kroku, kdy bude instalační systém hledat na "
+"pevném disku obraz instalačního CD, ho nasměrovat na USB zařízení, na kterém "
+"bude tento obraz ležet."
+
+#. Tag: title
+#: preparing.xml:1220
+#, no-c-format
+msgid "Invoking OpenFirmware"
+msgstr "Vyvolání OpenFirmwaru"
+
+#. Tag: para
+#: preparing.xml:1221
+#, no-c-format
+msgid ""
+"There is normally no need to set up the BIOS (called OpenFirmware) on &arch-"
+"title; systems. PReP and CHRP are equipped with OpenFirmware, but "
+"unfortunately, the means you use to invoke it vary from manufacturer to "
+"manufacturer. You'll have to consult the hardware documentation which came "
+"with your machine."
+msgstr ""
+"Na systémech &arch-title; obvykle není třeba BIOS (nazývaný OpenFirmware) "
+"nastavovat. PReP a CHRP jsou vybaveny OpenFirmwarem, ale protože se bohužel "
+"způsob vyvolání liší u každého výrobce, budete se muset podívat do "
+"dokumentace ke svému počítači."
+
+#. Tag: para
+#: preparing.xml:1229
+#, no-c-format
+msgid ""
+"On &arch-title; Macintoshes, you invoke OpenFirmware with "
+"<keycombo><keycap>Command (cloverleaf/Apple)</keycap><keycap>Option</"
+"keycap><keycap>o</keycap><keycap>f</keycap></keycombo> while booting. "
+"Generally it will check for these keystrokes after the chime, but the exact "
+"timing varies from model to model. See <ulink url=\"&url-netbsd-powerpc-faq;"
+"\"></ulink> for more hints."
+msgstr ""
+"Na &arch-title; Macintoshích vyvoláte OpenFirmware při zavádění klávesami "
+"<keycombo><keycap>Command (čtyřlístek/Apple)</keycap> <keycap>Option</"
+"keycap> <keycap>o</keycap> <keycap>f</keycap></keycombo>. Klávesy se "
+"většinou začnou odchytávat po <quote>zvonku</quote>, ale načasování se liší "
+"od modelu k modelu. Více tipů má <ulink url=\"&url-netbsd-powerpc-faq;\"></"
+"ulink>."
+
+#. Tag: para
+#: preparing.xml:1237
+#, no-c-format
+msgid ""
+"The OpenFirmware prompt looks like this: <informalexample><screen>\n"
+"ok\n"
+"0 &gt;\n"
+"</screen></informalexample> Note that on older model &arch-title; Macs, the "
+"default and sometimes hardwired I/O for OpenFirmware user interaction is "
+"through the serial (modem) port. If you invoke OpenFirmware on one of these "
+"machines, you will just see a black screen. In that case, a terminal program "
+"running on another computer, connected to the modem port, is needed to "
+"interact with OpenFirmware."
+msgstr ""
+"Prompt OpenFirmwaru vypadá takto: <informalexample><screen>\n"
+"ok\n"
+"0 &gt;\n"
+"</screen></informalexample> Na starších modelech &arch-title; Maců je "
+"standardní a někdy jediná možnost komunikace OpenFirmwaru s uživatelem přes "
+"sériový (modemový) port. Jestliže na některém z těchto strojů vyvoláte "
+"OpenFirmware, uvidíte pouze černou obrazovku. V takovém případě musíte pro "
+"komunikaci s OpenFirmwarem použít terminálový program na jiném počítači "
+"připojeném přes sériový port."
+
+#. Tag: para
+#: preparing.xml:1250
+#, no-c-format
+msgid ""
+"The OpenFirmware on OldWorld Beige G3 machines, OF versions 2.0f1 and 2.4, "
+"is broken. These machines will most likely not be able to boot from the hard "
+"drive unless the firmware is patched. A firmware patch is included in the "
+"<application>System Disk 2.3.1</application> utility, available from Apple "
+"at <ulink url=\"ftp://ftp.apple.com/developer/macosxserver/utilities/"
+"SystemDisk2.3.1.smi.bin\"></ulink>. After unpacking the utility in MacOS, "
+"and launching it, select the <guibutton>Save</guibutton> button to have the "
+"firmware patches installed to nvram."
+msgstr ""
+"OpenFirmware na béžových počítačích OldWorld G3 je ve verzích 2.0f1 a 2.4 "
+"pokažený. Dokud se firmware nezazáplatuje, nebudou tyto stroje schopny "
+"zavést systém z pevného disku. Záplata je obsažená v utilitě "
+"<application>System Disk 2.3.1</application> a je dostupná na adrese <ulink "
+"url=\"ftp://ftp.apple.com/developer/macosxserver/utilities/SystemDisk2.3.1."
+"smi.bin\"></ulink>. V MacOS utilitu rozbalte, spusťte a tlačítkem "
+"<guibutton>Save</guibutton> uložte záplatu do nvram."
+
+#. Tag: title
+#: preparing.xml:1266
+#, no-c-format
+msgid "How to update bare metal ppc64el firmware"
+msgstr "Jak aktualizovat firmware na ppc64el"
+
+#. Tag: para
+#: preparing.xml:1267
+#, no-c-format
+msgid ""
+"This is an excerpt from <ulink url=\"&url-ibm-powerkvm;\">IBM PowerKVM on "
+"IBM POWER8</ulink>."
+msgstr ""
+"Jedná se o výtah z dokumentu <ulink url=\"&url-ibm-powerkvm;\">IBM PowerKVM "
+"on IBM POWER8</ulink>."
+
+#. Tag: para
+#: preparing.xml:1272
+#, no-c-format
+msgid ""
+"Open Power Abstraction Layer (OPAL) is the system firmware in the stack of "
+"POWER processor-based server."
+msgstr ""
+"Open Power Abstraction Layer (OPAL) je systémový firmware na serverech "
+"založených na procesorech POWER."
+
+#. Tag: para
+#: preparing.xml:1277
+#, no-c-format
+msgid ""
+"There may be instances when the user might have to upgrade the Power Systems "
+"firmware to a more recent level to acquire new features or additional "
+"support for devices."
+msgstr ""
+"Někdy je vhodné aktualizovat firmware na novější verzi, což může přinést "
+"nové vlastnosti nebo podporu dalších zařízení."
+
+#. Tag: para
+#: preparing.xml:1283
+#, no-c-format
+msgid "Make sure that the following requirements are met:"
+msgstr "Před aktualizací se ujistěte, že jsou splněny následující podmínky:"
+
+#. Tag: para
+#: preparing.xml:1288
+#, no-c-format
+msgid "an OS to be running on the system;"
+msgstr "Na počítači běží OS."
+
+#. Tag: para
+#: preparing.xml:1290
+#, no-c-format
+msgid "the .img file of the OPAL level that the user needs to update to;"
+msgstr "Máte .img soubor s OPALem verze, na kterou chcete aktualizovat."
+
+#. Tag: para
+#: preparing.xml:1292
+#, no-c-format
+msgid "the machine isn't under HMC control."
+msgstr "Počítač není pod kontrolou HMC."
+
+#. Tag: para
+#: preparing.xml:1296
+#, no-c-format
+msgid ""
+"Power Systems has two sides of flash to boot firmware from, namely permanent "
+"and temporary. This provides a way to test firmware updates on the temporary "
+"side of the flash before committing the tested changes to the permanent "
+"side, thereby committing the new updates."
+msgstr ""
+"Power Systems mají flash paměť rozdělenou na dvě části - trvalou a dočasnou. "
+"Díky tomu můžete vyzkoušet aktualizaci firmwaru v dočasné části a po "
+"otestování, že vše funguje, můžete provedené změny přenést z dočasné do "
+"trvalé části paměti."
+
+#. Tag: para
+#: preparing.xml:1303
+#, no-c-format
+msgid "Perform the following steps for the update:"
+msgstr "Aktualizaci OPALu provedete následovně:"
+
+#. Tag: para
+#: preparing.xml:1308
+#, no-c-format
+msgid ""
+"Save the level of the existing firmware before really updating. In ASM, in "
+"the system menu, click <command>Service Aids -&gt; Service Processor Command "
+"Line</command>, and run the following command:"
+msgstr ""
+"Před aktualizací si uložte úroveň současného firmwaru. V systémovém menu ASM "
+"klikněte na <guimenu>Service Aids</guimenu>, zvolte <guimenuitem>Service "
+"Processor Command Line</guimenuitem> a spusťte následující příkaz:"
+
+#. Tag: screen
+#: preparing.xml:1312
+#, no-c-format
+msgid "cupdcmd -f"
+msgstr "cupdcmd -f"
+
+#. Tag: para
+#: preparing.xml:1313
+#, no-c-format
+msgid ""
+"Download the .img file of the level of firmware to be updated to a location "
+"in the host filesystem. Refer to <ulink url=\"&url-ibm-fixcentral;\">IBM Fix "
+"Central</ulink> for downloading the image file."
+msgstr ""
+"Stáhněte si .img soubor s firmwarem, na který chcete aktualizovat, někam do "
+"souborového systému. Ohledně stažení souboru konzultujte <ulink url=\"&url-"
+"ibm-fixcentral;\">IBM Fix Central</ulink>."
+
+#. Tag: para
+#: preparing.xml:1318
+#, no-c-format
+msgid ""
+"Verify the image downloaded by running the following command and save the "
+"output."
+msgstr ""
+"Ověřte stažený obraz firmwaru následujícím příkazem a výstup si uložte."
+
+#. Tag: screen
+#: preparing.xml:1321
+#, no-c-format
+msgid "$update_flash -v -f &lt;file_name.img&gt;"
+msgstr "$update_flash -v -f &lt;firmware.img&gt;"
+
+#. Tag: para
+#: preparing.xml:1323
+#, no-c-format
+msgid "Update the firmware by running the following command."
+msgstr "Aktualizujte firmware příkazem"
+
+#. Tag: screen
+#: preparing.xml:1325
+#, no-c-format
+msgid "$update_flash -f &lt;file_name.img&gt;"
+msgstr "$update_flash -f &lt;firmware.img&gt;"
+
+#. Tag: para
+#: preparing.xml:1331
+#, no-c-format
+msgid ""
+"The command reboots the system and therefore, sessions if any, would be lost."
+msgstr "Příkaz restartuje systém, případná probíhající sezení budou ztracena."
+
+#. Tag: para
+#: preparing.xml:1334
+#, no-c-format
+msgid "Do not reboot or switch off the system until it is back."
+msgstr "Nerestartujte a nevypínejte systém, dokud znovu nenaběhne."
+
+#. Tag: para
+#: preparing.xml:1341
+#, no-c-format
+msgid ""
+"Verify the updated firmware level of the temporary side of the flash as in "
+"step 1."
+msgstr ""
+"Ověřte verzi aktualizovaného firmware v dočasné části flash paměti stejně "
+"jako v kroku 1."
+
+#. Tag: para
+#: preparing.xml:1344
+#, no-c-format
+msgid ""
+"In case the update has to be reverted, the user can do so by running this "
+"command: <informalexample><screen>\n"
+"    $update_flash -r\n"
+"</screen></informalexample> Rejection would reject only the temporary side "
+"of the flash. Therefore, the new level should be committed to the permanent "
+"side only after thorough testing of the new firmware."
+msgstr ""
+"Pokud je z nějakého důvodu potřeba vrátit aktualizaci zpět, můžete tak "
+"učinit příkazem <informalexample><screen>\n"
+"$update_flash -r\n"
+"</screen></informalexample> Návrat je možný pouze v dočasné části flash "
+"paměti, takže byste měli novou verzi firmwaru před zápisem do permanentní "
+"části důkladně otestovat."
+
+#. Tag: para
+#: preparing.xml:1351
+#, no-c-format
+msgid ""
+"The new updated level can be committed to the permanent side of the flash by "
+"running the following command."
+msgstr "Novou verzi můžete zapsat do permanentní části paměti příkazem"
+
+#. Tag: screen
+#: preparing.xml:1354
+#, no-c-format
+msgid "$update_flash -c"
+msgstr "$update_flash -c"
+
+#. Tag: title
+#: preparing.xml:1362
+#, no-c-format
+msgid "Updating KVM guest firmware (SLOF)"
+msgstr "Aktualizace firmwaru KVM hosta (SLOF)"
+
+#. Tag: para
+#: preparing.xml:1363
+#, no-c-format
+msgid ""
+"Slimline Open Firmware (SLOF) is an implementation of the IEEE 1275 "
+"standard. It can be used as partition firmware for pSeries machines running "
+"on QEMU or KVM."
+msgstr ""
+"Slimline Open Firmware (SLOF) je implementací standardu IEEE 1275 a dá se "
+"použít jako firmware pro hosty na počítačích řady pSeries běžících pod QEMU "
+"nebo KVM."
+
+#. Tag: para
+#: preparing.xml:1370
+#, no-c-format
+msgid ""
+"The package qemu-slof is, in fact, a dependency of package qemu-system-ppc "
+"(which also provides the virtual package qemu-system-ppc64), and can be "
+"installed or updated via <command>apt</command> tool on Debian-based "
+"distros. Like so: <informalexample><screen>\n"
+"# apt install qemu-slof\n"
+"</screen></informalexample> SLOF can also be installed into rpm-based "
+"distribution systems, given the proper repository or rpm package. "
+"Additionally, the upstream source code is available at <ulink url=\"http://"
+"github.com/leilihh/SLOF\"></ulink>."
+msgstr ""
+"Balík <classname>qemu-slof</classname> je závislostí balíku <classname>qemu-"
+"system-ppc</classname> (který též poskytuje virtuální balík <classname>qemu-"
+"system-ppc64</classname>) a na systémech založených na Debianu se dá "
+"nainstalovat pomocí <command>apt</command>: <informalexample><screen>\n"
+"# apt install qemu-slof\n"
+"</screen></informalexample> SLOF se samozřejmě dá nainstalovat i na "
+"systémech používajících balíčkovací systém RPM, jen je potřeba přidat "
+"správný repositář. Zdrojový kód je dostupný na <ulink url=\"http://github."
+"com/leilihh/SLOF\"></ulink>."
+
+#. Tag: para
+#: preparing.xml:1385
+#, no-c-format
+msgid ""
+"Thus, one can use a different SLOF file rather than the default, when "
+"running <command>qemu-system</command>, by adding the command line argument "
+"<userinput>-bios &lt;slof_file&gt; </userinput> when starting qemu."
+msgstr ""
+"Při používání <command>qemu-system</command> si můžete volit mezi různými "
+"SLOF tak, že při startu qemu za příkaz přidáte parametr <userinput>-bios &lt;"
+"slof_soubor&gt;</userinput>."
+
+#. Tag: title
+#: preparing.xml:1395
+#, no-c-format
+msgid "Updating PowerKVM hypervisor"
+msgstr "Aktualizace hypervizoru PowerKVM"
+
+#. Tag: title
+#: preparing.xml:1396
+#, no-c-format
+msgid "Instructions for Netboot installation"
+msgstr "Návod pro instalaci ze sítě"
+
+#. Tag: para
+#: preparing.xml:1397
+#, no-c-format
+msgid ""
+"You will need a DHCP/TFTP (BOOTP) server, as well as a web server. After "
+"downloading ibm-powerkvm-*-ppc64-service-*.iso, mount loop it and unpack it "
+"into some directory within your HTTP server www root structure (say "
+"wwwroot): <informalexample><screen>\n"
+"# cd &lt;directory-where-the-iso-is&gt;\n"
+"# mkdir ./iso\n"
+"# sudo mount -o loop ibm-powerkvm-*-ppc64-service-*.iso ./iso\n"
+"# cp -a ./iso/* &lt;path-to-wwwroot&gt;\n"
+"</screen></informalexample> Create the petitboot.conf file in a directory "
+"under your tftproot, say /tftproot/powerkvm, with the following contents: "
+"<informalexample><screen>\n"
+"label PowerKVM Automated Install\n"
+"kernel http://YOUR-SERVER-IP/SOME-PATH-TO-wwwroot/ppc/ppc64/vmlinuz\n"
+"initrd http://YOUR-SERVER-IP/SOME-PATH-TO-wwwroot/ppc/ppc64/initrd.img\n"
+"append root=live:http://YOUR-SERVER-IP/SOME-PATH-TO-wwwroot/LiveOS/squashfs."
+"img repo=http://YOUR-SERVER-IP/SOME-PATH-TO-wwwroot/packages rd.dm=0 rd.md=0 "
+"console=hvc0 console=tty0\n"
+"</screen></informalexample> Editing your dhcpd.conf, set this directive at "
+"the beginning: <informalexample><screen>\n"
+"option conf-file code 209 = text;\n"
+"</screen></informalexample> Add the system directive: "
+"<informalexample><screen>\n"
+"host &lt;your-system&gt; {\n"
+"    hardware ethernet &lt;system macaddr&gt;\n"
+"    fixed-address &lt;system ip&gt;;\n"
+"    option host-name \"&lt;system hostname&gt;\";\n"
+"    option conf-file \"&lt;powerkvm/petitboot.conf&gt;\";\n"
+" }\n"
+"</screen></informalexample> Reboot the dhcp server."
+msgstr ""
+"Budete potřebovat funkční DHCP/TFTP (BOOTP) server a webový server. Po "
+"stažení obrazu <filename>ibm-powerkvm-*-ppc64-service-*.iso</filename>, jej "
+"připojte a rozbalte obsah do podadresáře v kořenovém www adresáři vašeho "
+"webového serveru. <informalexample><screen>\n"
+"# cd &lt;adresář-s-iso-souborem&gt;\n"
+"# mkdir ./iso\n"
+"# sudo mount -o loop ibm-powerkvm-*-ppc64-service-*.iso ./iso\n"
+"# cp -a ./iso/* &lt;cesta-k-www-root&gt;\n"
+"</screen></informalexample> V podadresáři kořenového adresáře TFTP serveru "
+"(např. <filename>/tftproot/powerkvm</filename>) vytvořte soubor "
+"<filename>petitboot.conf</filename> s následujícím obsahem: "
+"<informalexample><screen>\n"
+"label PowerKVM Automated Install\n"
+"kernel http://IP-adresa-serveru/cesta-k-wwwroot/ppc/ppc64/vmlinuz\n"
+"initrd http://IP-adresa-serveru/cesta-k-wwwroot/ppc/ppc64/initrd.img\n"
+"append root=live:http://IP-adresa-serveru/cesta-k-wwwroot/LiveOS/squashfs."
+"img repo=http://IP-adresa-serveru/cesta-k-wwwroot/packages rd.dm=0 rd.md=0 "
+"console=hvc0 console=tty0\n"
+"</screen></informalexample> Na začátek souboru <filename>dhcpd.conf</"
+"filename> přidejte nastavení: <informalexample><screen>\n"
+"option conf-file code 209 = text;\n"
+"</screen></informalexample> a dále vytvořte záznam: "
+"<informalexample><screen>\n"
+"host &lt;váš-systém&gt; {\n"
+"    hardware ethernet &lt;mac-adresa-systému&gt;\n"
+"    fixed-address &lt;ip-adresa-systému&gt;;\n"
+"    option host-name \"&lt;jméno-systému&gt;\";\n"
+"    option conf-file \"&lt;powerkvm/petitboot.conf&gt;\";\n"
+" }\n"
+"</screen></informalexample> Restartujte DHCP server, aby se načetlo nové "
+"nastavení."
+
+#. Tag: para
+#: preparing.xml:1421
+#, no-c-format
+msgid "Boot your PowerLinux machine."
+msgstr "Nastartujte počítač PowerLinux."
+
+#. Tag: para
+#: preparing.xml:1425
+#, no-c-format
+msgid ""
+"There should be the following option at petitboot (select it): "
+"<informalexample><screen>\n"
+"\"Power KVM Automated Install\" \n"
+"</screen></informalexample> The installer menu should appear automatically."
+msgstr ""
+"Petitboot by měl nabídnout následující volbu: <informalexample><screen>\n"
+"\"Power KVM Automated Install\"\n"
+"</screen></informalexample> Po jejím výběru by se měl automaticky objevit "
+"instalační systém."
+
+#. Tag: title
+#: preparing.xml:1436
+#, no-c-format
+msgid "Instructions for DVD"
+msgstr "Návod pro DVD"
+
+#. Tag: para
+#: preparing.xml:1437
+#, no-c-format
+msgid ""
+"Boot the ISO ibm-powerkvm-*-ppc64-service-*.iso (either burn a DVD or make "
+"it virtual if using QEMU) and simply wait for the boot."
+msgstr ""
+"Zaveďte ISO <filename>ibm-powerkvm-*-ppc64-service-*.iso</filename> (buď z "
+"vypáleného DVD nebo při použití QEMU z obrazu) a počkejte, než se systém "
+"zavede."
+
+#. Tag: para
+#: preparing.xml:1440
+#, no-c-format
+msgid ""
+"There should be the following option at petitboot (select it): "
+"<informalexample><screen>\n"
+"\"POWERKVM_LIVECD\" \n"
+"</screen></informalexample> The installer menu should appear automatically."
+msgstr ""
+"Petitboot by měl nabídnout následující volbu: <informalexample><screen>\n"
+"\"POWERKVM_LIVECD\"\n"
+"</screen></informalexample> Po jejím výběru by se měl automaticky objevit "
+"instalační systém."
+
+#. Tag: title
+#: preparing.xml:1461
+#, no-c-format
+msgid "Invoking OpenBoot"
+msgstr "Vyvolání OpenBootu"
+
+#. Tag: para
+#: preparing.xml:1463
+#, no-c-format
+msgid ""
+"OpenBoot provides the basic functions needed to boot the &arch-title; "
+"architecture. This is rather similar in function to the BIOS in the x86 "
+"architecture, although much nicer. The Sun boot PROMs have a built-in forth "
+"interpreter which lets you do quite a number of things with your machine, "
+"such as diagnostics and simple scripts."
+msgstr ""
+"OpenBoot poskytuje základní funkce potřebné k zavedení počítačů &arch-"
+"title;. Funkčně je to podobné BIOSu na architektuře x86, ale mnohem hezčí. "
+"Sun boot PROM mají zabudovaný interpret, který umožňuje provádět s počítačem "
+"zajímavé věci, jako třeba diagnostiku, psaní jednoduchých skriptů, atd."
+
+#. Tag: para
+#: preparing.xml:1471
+#, no-c-format
+msgid ""
+"To get to the boot prompt you need to hold down the <keycap>Stop</keycap> "
+"key (on older type 4 keyboards, use the <keycap>L1</keycap> key, if you have "
+"a PC keyboard adapter, use the <keycap>Break</keycap> key) and press the "
+"<keycap>A</keycap> key. The boot PROM will give you a prompt, either "
+"<userinput>ok</userinput> or <userinput>&gt;</userinput>. It is preferred to "
+"have the <userinput>ok</userinput> prompt. So if you get the old style "
+"prompt, hit the <keycap>n</keycap> key to get the new style prompt."
+msgstr ""
+"K získání zaváděcího promptu musíte stisknout a držet klávesu <keycap>Stop</"
+"keycap> (na starších klávesnicích typu 4 použijte klávesu <keycap>L1</"
+"keycap>, nebo u PC klávesnice připojené adaptérem stiskněte <keycap>Break</"
+"keycap>) a současně stisknout klávesu <keycap>A</keycap>. Boot PROM vám "
+"ukáže prompt <userinput>ok</userinput> nebo <userinput>&gt;</userinput>. "
+"Obecně je lepší mít novější prompt <userinput>ok</userinput>, takže pokud "
+"dostanete starý prompt, pro přepnutí do novějšího stiskněte klávesu "
+"<keycap>n</keycap>."
+
+#. Tag: para
+#: preparing.xml:1483
+#, no-c-format
+msgid ""
+"If you are using a serial console, send a break to the machine. With "
+"Minicom, use <keycap>Ctrl-A F</keycap>, with cu, hit <keycap>Enter</keycap>, "
+"then type <userinput>%~break</userinput>. Consult the documentation of your "
+"terminal emulator if you are using a different program."
+msgstr ""
+"Používáte-li sériovou konzoli, pošlete počítači přerušení. V Minicomu "
+"použijte <keycap>Ctrl-A F</keycap>, v programu cu stiskněte <keycap>Enter</"
+"keycap> a poté napište <userinput>%~break</userinput>. Používáte-li jiný "
+"program pro emulaci terminálu, podívejte se do jeho dokumentace."
+
+#. Tag: para
+#: preparing.xml:1496
+#, no-c-format
+msgid ""
+"You can use OpenBoot to boot from specific devices, and also to change your "
+"default boot device. However, you need to know some details about how "
+"OpenBoot names devices; it's considerably different from Linux device "
+"naming, described in <xref linkend=\"device-names\"/>. Also, the command "
+"will vary a bit, depending on what version of OpenBoot you have. More "
+"information about OpenBoot can be found in the <ulink url=\"&url-openboot;"
+"\">Sun OpenBoot Reference</ulink>."
+msgstr ""
+"OpenBoot můžete použít k zavedení z různých zařízení, nebo ke změně "
+"standardního zaváděcího zařízení. Nyní byste se však měli seznámit s tím, "
+"jak OpenBoot pojmenovává zařízení, protože je to odlišné od způsobu, jakým "
+"zařízení pojmenovává Linux (viz <xref linkend=\"device-names\"/>). Také "
+"příkazy se mohou lišit v závislosti na použité verzi OpenBootu. Bližší "
+"informace o OpenBootu se můžete dočíst v <ulink url=\"&url-openboot;\">Sun "
+"OpenBoot Reference</ulink>."
+
+#. Tag: para
+#: preparing.xml:1506
+#, no-c-format
+msgid ""
+"To boot from a specific device, use the command <userinput>boot "
+"<replaceable>device</replaceable></userinput>. You can set this behavior as "
+"the default using the <userinput>setenv</userinput> command. However, the "
+"name of the variable to set changed between OpenBoot revisions. In OpenBoot "
+"1.x, use the command <userinput>setenv boot-from <replaceable>device</"
+"replaceable></userinput>. In later revisions of OpenBoot, use the command "
+"<userinput>setenv boot-device <replaceable>device</replaceable></userinput>. "
+"Note, this is also configurable using the <command>eeprom</command> command "
+"on Solaris, or modifying the appropriate files in <filename>/proc/openprom/"
+"options/</filename>, for example under Linux: <informalexample><screen>\n"
+"# echo disk1:1 &gt; /proc/openprom/options/boot-device\n"
+"</screen></informalexample> and under Solaris:"
+msgstr ""
+"Systém z daného zařízení zavedete příkazem <userinput>boot "
+"<replaceable>zarizeni</replaceable></userinput>. Pokud z tohoto zařízení "
+"chcete zavádět systém automaticky, můžete nastavit příslušnou proměnnou "
+"příkazem <userinput>setenv</userinput>. V OpenBootu 1.x použijte příkaz "
+"<userinput>setenv boot-from <replaceable>zarizeni</replaceable></userinput>, "
+"nebo v novějších revizích <userinput>setenv boot-device "
+"<replaceable>zarizeni</replaceable></userinput>. Proměnná se dá změnit i "
+"přímo z operačního systému (v Solarisu příkazem <command>eeprom</command>, v "
+"Linuxu změnou souborů v adresáři <filename>/proc/openprom/options/</"
+"filename>). Například pod Linuxem: <informalexample><screen>\n"
+"# echo disk1:1 &gt; /proc/openprom/options/boot-device\n"
+"</screen></informalexample> a pod Solarisem:"
+
+#. Tag: screen
+#: preparing.xml:1550
+#, no-c-format
+msgid "eeprom boot-device=disk1:1"
+msgstr "eeprom boot-device=disk1:1"
+
+#. Tag: title
+#: preparing.xml:1560
+#, no-c-format
+msgid "BIOS Setup"
+msgstr "Nastavení BIOSu"
+
+#. Tag: para
+#: preparing.xml:1561
+#, fuzzy, no-c-format
+#| msgid ""
+#| "In order to install &debian-gnu; on a &arch-title; or zSeries machine you "
+#| "have first boot a kernel into the system. The boot mechanism of this "
+#| "platform is inherently different to other ones, especially from PC-like "
+#| "systems: there are no floppy devices available at all. You will notice "
+#| "another big difference while you work with this platform: most (if not "
+#| "all) of the time you will work remote, with the help of some client "
+#| "session software like telnet, or a browser. This is due to that special "
+#| "system architecture where the 3215/3270 console is line-based instead of "
+#| "character-based."
+msgid ""
+"In order to install &debian-gnu; on a &arch-title; or zSeries machine you "
+"have first boot a kernel into the system. The boot mechanism of this "
+"platform is inherently different to other ones, especially from PC-like "
+"systems, and you will notice a big difference while you work with this "
+"platform: most (if not all) of the time you will work remote, with the help "
+"of some client session software like telnet, or a browser. This is due to "
+"that special system architecture where the 3215/3270 console is line-based "
+"instead of character-based."
+msgstr ""
+"Abyste mohli na počítač S/390 nebo zSeries nainstalovat &debian-gnu;, musíte "
+"nejprve zavést do systému jádro. Zaváděcí mechanismus je na této platformě "
+"diametrálně odlišný od ostatních systémů, obzvláště od kategorie PC "
+"(například zde není k dispozici disketová mechanika). Při práci s touto "
+"platformou si asi všimnete dalšího velkého rozdílu: většinu času (pokud ne "
+"všechen) budete pracovat vzdáleně za použití klientských programů telnetu "
+"nebo www prohlížeče. Je tomu tak kvůli speciální systémové architektuře, kde "
+"je konzola 3215/3270 řádková místo znaková."
+
+#. Tag: para
+#: preparing.xml:1573
+#, no-c-format
+msgid ""
+"Linux on this platform runs either natively on the bare machine, in a so-"
+"called LPAR (Logical Partition) or in a virtual machine supplied by the VM "
+"system. Boot media differs depending on the runtime mode. For example, you "
+"can use the virtual card reader of a virtual machine, or boot from the HMC "
+"(Hardware Management Console) of an LPAR if the HMC and this option is "
+"available for you."
+msgstr ""
+"Linux může na této platformě běžet nativně na skutečném počítači v takzvané "
+"LPAR (logické oblasti), nebo ve virtuálním počítači vytvořeném systémem VM. "
+"Zaváděcí média se liší podle běhového režimu. Například můžete využít "
+"virtuální čtečku karet virtuálního počítače, nebo, pokud instalujete do "
+"LPAR, zavést systém z HMC (hardwarová konzola pro správu systému)."
+
+#. Tag: para
+#: preparing.xml:1582
+#, no-c-format
+msgid ""
+"Before you actually perform an installation, you have to go over some design "
+"and preparation steps. IBM has made documentation available about the whole "
+"process, e.g. how to prepare an installation medium and how actually to boot "
+"from that medium. Duplicating that information here is neither possible nor "
+"necessary. However, we will describe here which kind of &debian;-specific "
+"data is needed and where to find it. Using both sources of information, you "
+"have to prepare your machine and the installation medium before you can "
+"perform a boot from it. When you see the welcome message in your client "
+"session, return to this document to go through the &debian;-specific "
+"installation steps."
+msgstr ""
+"Než začnete s vlastní instalací, měli byste si projít několik přípravných "
+"kroků. Firma IBM celý proces zdokumentovala (mj. jak vytvořit instalační "
+"médium a jak z něj zavést systém) a není zde tedy potřeba tyto informace "
+"duplikovat. Krátce se však zmíníme o krocích specifických pro &debian;. "
+"Podle uvedených zdrojů byste si měli připravit počítač a instalační médium a "
+"poté z něj zavést instalaci. Jakmile uvidíte uvítací zprávu instalačního "
+"systému, pokračujte dál za pomoci tohoto manuálu."
+
+#. Tag: title
+#: preparing.xml:1599
+#, no-c-format
+msgid "Native and LPAR installations"
+msgstr "Nativní (LPAR) instalace"
+
+#. Tag: para
+#: preparing.xml:1600
+#, no-c-format
+msgid ""
+"Please refer to chapter 5 of the <ulink url=\"http://www.redbooks.ibm.com/"
+"pubs/pdfs/redbooks/sg244987.pdf\"> Linux for &arch-title;</ulink> Redbook "
+"and chapter 3.2 of the <ulink url=\"http://www.redbooks.ibm.com/pubs/pdfs/"
+"redbooks/sg246264.pdf\"> Linux for IBM eServer zSeries and &arch-title;: "
+"Distributions</ulink> Redbook on how to set up an LPAR for Linux."
+msgstr ""
+"Pro nastavení LPAR pro instalaci Linuxu si v červených knihách <ulink url="
+"\"http://www.redbooks.ibm.com/pubs/pdfs/redbooks/sg244987.pdf\"> Linux for "
+"&arch-title;</ulink> a <ulink url=\"http://www.redbooks.ibm.com/pubs/pdfs/"
+"redbooks/sg246264.pdf\"> Linux for IBM eServer zSeries and &arch-title;: "
+"Distributions</ulink> nastudujte kapitoly 5 a 3.2."
+
+#. Tag: title
+#: preparing.xml:1614
+#, no-c-format
+msgid "Installation as a VM guest"
+msgstr "Instalace jako host systému VM"
+
+#. Tag: para
+#: preparing.xml:1616
+#, no-c-format
+msgid ""
+"Please refer to chapter 6 of the <ulink url=\"http://www.redbooks.ibm.com/"
+"pubs/pdfs/redbooks/sg244987.pdf\"> Linux for &arch-title;</ulink> Redbook "
+"and chapter 3.1 of the <ulink url=\"http://www.redbooks.ibm.com/pubs/pdfs/"
+"redbooks/sg246264.pdf\"> Linux for IBM eServer zSeries and &arch-title;: "
+"Distributions</ulink> Redbook on how to set up a VM guest for running Linux."
+msgstr ""
+"Pro nastavení hosta systému VM pro instalaci Linuxu si v červených knihách "
+"<ulink url=\"http://www.redbooks.ibm.com/pubs/pdfs/redbooks/sg244987.pdf\"> "
+"Linux for &arch-title;</ulink> a <ulink url=\"http://www.redbooks.ibm.com/"
+"pubs/pdfs/redbooks/sg246264.pdf\"> Linux for IBM eServer zSeries and &arch-"
+"title;: Distributions</ulink> přečtěte kapitoly 6 a 3.1."
+
+#. Tag: para
+#: preparing.xml:1626
+#, no-c-format
+msgid ""
+"You need to copy all the files from the <filename>generic</filename> sub-"
+"directory to your CMS disk. Be sure to transfer <filename>kernel.debian</"
+"filename> and <filename>initrd.debian</filename> in binary mode with a fixed "
+"record length of 80 characters (by specifying <userinput>BINARY</userinput> "
+"and <userinput>LOCSITE FIX 80</userinput> in your FTP client). "
+"<filename>parmfile.debian</filename> can be in either ASCII or EBCDIC "
+"format. A sample <filename>debian.exec</filename> script, which will punch "
+"the files in the proper order, is included with the images."
+msgstr ""
+"Dále budete muset zkopírovat všechny soubory z podadresáře "
+"<filename>generic</filename> na váš CMS disk. Ujistěte se, že soubory "
+"<filename>kernel.debian</filename> a <filename>initrd.debian</filename> "
+"přenášíte v binárním módu s pevnou šířkou záznamu 80 znaků (zadáním příkazů "
+"<userinput>BINARY</userinput> a <userinput>LOCSITE FIX 80</userinput> ve "
+"svém FTP klientovi). Soubor <filename>parmfile.debian</filename> může být "
+"uložen v kódování ASCII nebo EBCDIC. Spolu s obrazy nalezeznete ukázkový "
+"skript <filename>debian.exec</filename>, který nakopne soubory ve správném "
+"pořadí."
+
+#. Tag: title
+#: preparing.xml:1643
+#, no-c-format
+msgid "Setting up an installation server"
+msgstr "Nastavení instalačního serveru"
+
+#. Tag: para
+#: preparing.xml:1645
+#, no-c-format
+msgid ""
+"If you don't have a connection to the Internet (either directly or via a web "
+"proxy) you need to create a local installation server that can be accessed "
+"from your S/390. This server keeps all the packages you want to install and "
+"must make them available using NFS, HTTP or FTP."
+msgstr ""
+"Pokud nemáte připojení k Internetu (ať už přímo nebo přes proxy), musíte si "
+"vytvořit lokální instalační server, který bude dostupný z instalovaného "
+"S/390 a na kterém budou umístěny všechny balíčky, jež chcete instalovat. "
+"Tyto balíčky musí být dostupné přes NFS, HTTP nebo FTP."
+
+#. Tag: para
+#: preparing.xml:1653
+#, fuzzy, no-c-format
+#| msgid ""
+#| "The installation server needs to copy the exact directory structure from "
+#| "any &debian-gnu; mirror, but only the S/390 and architecture-independent "
+#| "files are required. You can also copy the contents of all installation "
+#| "CDs into such a directory tree."
+msgid ""
+"The installation server needs to copy the exact directory structure from any "
+"&debian-gnu; mirror, but only the S/390 and architecture-independent files "
+"are required. You can also copy the contents of all installation images into "
+"such a directory tree."
+msgstr ""
+"Instalační server potřebuje přesnou kopii adresářové struktury libovolného "
+"zrcadla &debian;u. Vyžadovány jsou samozřejmě pouze soubory architektury "
+"S/390 a soubory na architektuře nezávislé. Do takto vytvořené struktury "
+"můžete také nakopírovat obsah všech instalačních CD."
+
+#. Tag: emphasis
+#: preparing.xml:1662
+#, no-c-format
+msgid "FIXME: more information needed &mdash; from a Redbook?"
+msgstr "FIXME: more information needed - from a Redbook?"
+
+#. Tag: title
+#: preparing.xml:1679
+#, no-c-format
+msgid "ARM firmware"
+msgstr "ARM firmware"
+
+#. Tag: para
+#: preparing.xml:1681
+#, no-c-format
+msgid ""
+"As already mentioned before, there is unfortunately no standard for system "
+"firmware on ARM systems. Even the behaviour of different systems which use "
+"nominally the same firmware can be quite different. This results from the "
+"fact that a large part of the devices using the ARM architecture are "
+"embedded systems, for which the manufacturers usually build heavily "
+"customized firmware versions and include device-specific patches. "
+"Unfortunately the manufacturers often do not submit their changes and "
+"extensions back to the mainline firmware developers, so their changes are "
+"not integrated into newer versions of the original firmware."
+msgstr ""
+
+#. Tag: para
+#: preparing.xml:1693
+#, no-c-format
+msgid ""
+"As a result even newly sold systems often use a firmware that is based on a "
+"years-old manufacturer-modified version of a firmware whose mainline "
+"codebase has evolved a lot further in the meantime and offers additional "
+"features or shows different behaviour in certain aspects. In addition to "
+"that, the naming of onboard devices is not consistent between different "
+"manufacturer-modified versions of the same firmware, therefore it is nearly "
+"impossible to provide usable product-independend instructions for ARM-based "
+"systems."
+msgstr ""
+"Výsledkem je, že i nové systémy často používají firmware, který je založený "
+"na nějaké prehistorické verzi firmwaru, kterou si výrobce kdysi upravil, "
+"přičemž vývoj původního firmwaru mezitím pokračoval a nyní nabízí nové "
+"vlastnosti, nebo v některých ohledech jiné chování. Výrobci upravených "
+"firmwarů navíc nepojmenovávají integrovaná zařízení konzistentně, takže i "
+"když se jedná o stejný základní firmware, je na platformě ARM téměř nemožné "
+"poskytnout obecně platné informace."
+
+#. Tag: title
+#: preparing.xml:1706
+#, no-c-format
+msgid "Debian-provided U-Boot (system firmware) images"
+msgstr "Obrazy U-Bootu poskytované &debian;em"
+
+#. Tag: para
+#: preparing.xml:1707
+#, no-c-format
+msgid ""
+"Debian provides U-Boot images for various armhf systems that can load their "
+"U-Boot from an SD card at &armmp-uboot-img;. The U-Boot builds are offered "
+"in two formats: raw U-Boot components and a ready-made card image that can "
+"easily be written onto an SD card. The raw U-Boot components are provided "
+"for advanced users; the generally recommended way is to use one of the ready-"
+"made SD card images. They are named &lt;system-type&gt;.sdcard.img.gz and "
+"can be written to a card e.g. with <informalexample><screen>zcat &lt;system-"
+"type&gt;.sdcard.img.gz &gt; /dev/SD_CARD_DEVICE</screen></informalexample> "
+"As with all images, please be aware that writing the image to an SD card "
+"wipes all previous contents of the card!"
+msgstr ""
+"Na &armmp-uboot-img; poskytuje &debian; obrazy U-Bootu pro nejrůznější armhf "
+"systémy, které umí nahrát U-Boot z SD karty. U-Boot je nabízen ve dvou "
+"variantách: surové komponenty U-Bootu a předpřipravený obraz pro jednoduché "
+"zapsání na SD kartu. Surové komponenty jsou zamýšleny pro pokročilé "
+"uživatele, doporučenou cestou jsou předpřipravené obrazy pro SD karty. "
+"Obrazy se jmenují <literal>&lt;systém&gt;.sdcard.img.gz</literal> a na SD "
+"kartu se dají zapsat například tímto příkazem: <informalexample><screen>zcat "
+"&lt;systém&gt;.sdcard.img.gz &gt; /dev/SD_KARTA</screen></informalexample> "
+"Jako vždy, zkontrolujte si, zda zapisujete na správné zařízení, protože tím "
+"smažete veškerý obsah daného zařízení!"
+
+#. Tag: para
+#: preparing.xml:1722
+#, no-c-format
+msgid ""
+"If Debian provides a U-Boot image for your system, it is recommended that "
+"you use this image instead of the vendor-provided U-Boot, as the version in "
+"Debian is usually newer and has more features."
+msgstr ""
+"Pokud pro svůj systém naleznete obraz U-Bootu jak u &debian;u, tak u výrobce "
+"systému, doporučujeme použít verzi z &debian;u, jelikož tato bývá novější a "
+"mívá více vlastností."
+
+#. Tag: title
+#: preparing.xml:1730
+#, no-c-format
+msgid "Setting the ethernet MAC address in U-Boot"
+msgstr "Nastavení ethernetové MAC adresy v U-Bootu"
+
+#. Tag: para
+#: preparing.xml:1731
+#, no-c-format
+msgid ""
+"The MAC address of every ethernet interface should normally be globally "
+"unique, and it technically has to be unique within its ethernet broadcast "
+"domain. To achieve this, the manufacturer usually allocates a block of MAC "
+"addresses from a centrally-administered pool (for which a fee has to be "
+"paid) and preconfigures one of these addresses on each item sold."
+msgstr ""
+"MAC adresa každého ethernetového rozhraní by měla být celosvětově unikátní, "
+"resp. musí být unikátní minimálně v rámci dané ethernetové broadcastovací "
+"domény. Výrobce si pro sebe obvykle alokuje blok MAC adres z centrálně "
+"spravované zásoby (za což zaplatí nějaký poplatek) a pak příslušně "
+"nakonfiguruje každé vyrobené zařízení tak, aby mělo unikátní adresu."
+
+#. Tag: para
+#: preparing.xml:1739
+#, no-c-format
+msgid ""
+"In the case of development boards, sometimes the manufacturer wants to avoid "
+"paying these fees and therefore provides no globally unique addresses. In "
+"these cases the users themselves have to define MAC addresses for their "
+"systems. When no MAC address is defined for an ethernet interface, some "
+"network drivers generate a random MAC address that can change on every boot, "
+"and if this happens, network access would be possible even when the user has "
+"not manually set an address, but e.g. assigning semi-static IP addresses by "
+"DHCP based on the MAC address of the requesting client would obviously not "
+"work reliably."
+msgstr ""
+"V případě vývojářských desek se chce někdy výrobce vyhnout placení poplatků "
+"a proto unikátní MAC adresu na ethernetové zařízení nenastaví. V takových "
+"případech musí MAC adresu nastavit uživatel. Některé ovladače síťových "
+"karet, když zjistí, že MAC adresa není přiřazena, vygenerují náhodnou MAC "
+"adresu, která se může při každém restartu měnit. Pro uživatele to pak "
+"vypadá, že síťování v zásadě funguje, ale některé služby nemusí být zrovna "
+"spolehlivé, jako třeba přiřazování semi-statických IP adres pomocí DHCP na "
+"základě MAC adresy."
+
+#. Tag: para
+#: preparing.xml:1750
+#, no-c-format
+msgid ""
+"To avoid conflicts with existing officially-assigned MAC addresses, there is "
+"an address pool which is reserved for so-called <quote>locally administered</"
+"quote> addresses. It is defined by the value of two specific bits in the "
+"first byte of the address (the article <quote>MAC address</quote> in the "
+"English language Wikipedia gives a good explanation). In practice this means "
+"that e.g. any address starting with hexadecimal ca (such as ca:ff:"
+"ee:12:34:56) can be used as a locally administered address."
+msgstr ""
+"Aby se předešlo konfliktům se stávajícími, oficiálně přiřazenými MAC "
+"adresami, existuje blok adres, které je rezervován pro takzvaně "
+"<quote>místně spravované</quote> adresy. Blok je definován hodnotou dvou "
+"konkrétních bitů v prvním bajtu adresy. V praxi to znamená, že se jako "
+"lokálně spravovaná adresa dá použít například libovolná adresa začínající "
+"hexadecimálním <literal>ca</literal> (jako třeba <literal>ca:ff:ee:12:34:56</"
+"literal>."
+
+#. Tag: para
+#: preparing.xml:1760
+#, no-c-format
+msgid ""
+"On systems using U-Boot as system firmware, the ethernet MAC address is "
+"placed in the <quote>ethaddr</quote> environment variable. It can be checked "
+"at the U-Boot command prompt with the command <quote>printenv ethaddr</"
+"quote> and can be set with the command <quote>setenv ethaddr ca:ff:"
+"ee:12:34:56</quote>. After setting the value, the command <quote>saveenv</"
+"quote> makes the assignment permanent."
+msgstr ""
+"Na systémech používajících jako firmware U-Boot je ethernetová MAC adresa "
+"umístěna v proměnné prostředí <literal>ethaddr</literal>. Adresu můžete "
+"zkontrolovat v promptu U-Bootu příkazem <command>printenv ethaddr</command> "
+"a nastavit příkazem <command>setenv ethaddr <replaceable>ca:ff:ee:12:34:56</"
+"replaceable></command>. Po nastavení proměnné můžete hodnotu trvale uložit "
+"příkazem <command>saveenv</command>."
+
+#. Tag: title
+#: preparing.xml:1771
+#, no-c-format
+msgid "Kernel/Initrd/Device-Tree relocation issues in U-Boot"
+msgstr "Problémy s přesunem jádra/initrd/stromu zařízení v U-Bootu"
+
+#. Tag: para
+#: preparing.xml:1772
+#, no-c-format
+msgid ""
+"On some systems with older U-Boot versions there can be problems with "
+"properly relocating the Linux kernel, the initial ramdisk and the device-"
+"tree blob in memory during the boot process. In this case, U-Boot shows the "
+"message <quote>Starting kernel ...</quote>, but the system freezes "
+"afterwards without further output. These issues have been solved with newer "
+"U-Boot versions from v2014.07 onwards."
+msgstr ""
+"Na některých systémech se starší verzí U-Bootu se mohou objevit problémy s "
+"korektním přesunem linuxového jádra, úvodního ramdisku a binárky se stromem "
+"zařízení během zavádění. Projevuje se to tak, že U-Boot vypíše hlášku "
+"<computeroutput>Starting kernel ...</computeroutput>, ale systém dál zamrzne "
+"bez jakéhokoliv výstupu. Problém byl vyřešen v novějších verzích U-Bootu, "
+"tj. od verze v2014.07 dále."
+
+#. Tag: para
+#: preparing.xml:1781
+#, no-c-format
+msgid ""
+"If the system has originally used a U-Boot version older than v2014.07 and "
+"has been upgraded to a newer version later, the problem might still occur "
+"even after upgrading U-Boot. Upgrading U-Boot usually does not modify the "
+"existing U-Boot environment variables and the fix requires an additional "
+"environment variable (bootm_size) to be set, which U-Boot does automatically "
+"only on fresh installations without existing environment data. It is "
+"possible to manually set bootm_size to the new U-Boot's default value by "
+"running the command <quote>env default bootm_size; saveenv</quote> at the U-"
+"Boot prompt."
+msgstr ""
+"Problém se může projevit i v případě, že systém původně používal verzi U-"
+"Bootu starší než v2014.07 a teprv následně byl aktualizován. Aktualizace U-"
+"Bootu totiž obvykle nemění stávající proměnné prostředí a oprava problému "
+"vyžaduje, aby se nastavila nová proměnná prostředí <literal>bootm_size</"
+"literal>, což U-Boot provádí automaticky pouze u nových instalací v čistém "
+"prostředí. Ručně tuto novou proměnnou nastavíte v promptu U-Bootu příkazem "
+"<command>env default bootm_size; saveenv</command>."
+
+#. Tag: para
+#: preparing.xml:1792
+#, no-c-format
+msgid ""
+"Another possibility to circumvent relocation-related problems is to run the "
+"command <quote>setenv fdt_high ffffffff; setenv initrd_high 0xffffffff; "
+"saveenv</quote> at the U-Boot prompt to completely disable the relocation of "
+"the initial ramdisk and the device-tree blob."
+msgstr ""
+"Jinou možností, jak obejít problém s přesunem, je v promptu U-Bootu spustit "
+"příkaz <command>setenv fdt_high ffffffff; setenv initrd_high 0xffffffff; "
+"saveenv</command>, kterým zcela zakážete přesun úvodního ramdisku a binárky "
+"se stromem zařízení."
+
+#. Tag: title
+#: preparing.xml:1802
+#, no-c-format
+msgid "Systems with UEFI firmware"
+msgstr "Systémy s firmwarem UEFI"
+
+#. Tag: para
+#: preparing.xml:1803
+#, no-c-format
+msgid ""
+"UEFI (<quote>Unified Extensible Firmware Interface</quote>) is a new kind of "
+"system firmware that is used on many modern systems and is - among other "
+"uses - intended to replace the classic PC BIOS."
+msgstr ""
+"UEFI (<quote>Unified Extensible Firmware Interface</quote>) je nový typ "
+"systémového firmwaru, který se používá na mnoha moderních systémech a, mimo "
+"jiné, by měl v počítačích nahradit klasický BIOS."
+
+#. Tag: para
+#: preparing.xml:1809
+#, no-c-format
+msgid ""
+"Currently most PC systems that use UEFI also have a so-called "
+"<quote>Compatibility Support Module</quote> (CSM) in the firmware, which "
+"provides exactly the same interfaces to an operating system as a classic PC "
+"BIOS, so that software written for the classic PC BIOS can be used "
+"unchanged. Nonetheless UEFI is intended to one day completely replace the "
+"old PC BIOS without being fully backwards-compatible and there are already a "
+"lot of systems with UEFI but without CSM."
+msgstr ""
+"Většina počítačů s UEFI zatím ve firmwaru používá CSM (<quote>Compatibility "
+"Support Module</quote>), který operačnímu systému poskytuje stejná rozhraní, "
+"jako poskytoval tradiční BIOS, tudíž je zatím možno používat software "
+"napsaný přímo pro BIOS beze změn. To však jednou skončí, protože UEFI nebude "
+"tuto kompatibilní vrstvu podporovat navždy. Již nyní existuje mnoho systémů "
+"s UEFI bez CSM."
+
+#. Tag: para
+#: preparing.xml:1819
+#, fuzzy, no-c-format
+msgid ""
+"On systems with UEFI there are a few things to take into consideration when "
+"installing an operating system. The way the firmware loads an operating "
+"system is fundamentally different between the classic BIOS (or UEFI in CSM "
+"mode) and native UEFI. One major difference is the way the harddisk "
+"partitions are recorded on the harddisk. While the classic BIOS and UEFI in "
+"CSM mode use a DOS partition table, native UEFI uses a different "
+"partitioning scheme called <quote>GUID Partition Table</quote> (GPT). On a "
+"single disk, for all practical purposes only one of the two can be used and "
+"in case of a multi-boot setup with different operating systems on one disk, "
+"all of them must therefore use the same type of partition table. Booting "
+"from a disk with GPT is only possible in native UEFI mode, but using GPT "
+"becomes more and more common as hard disk sizes grow, because the classic "
+"DOS partition table cannot address disks larger than about 2 Terabytes while "
+"GPT allows for far larger disks. The other major difference between BIOS (or "
+"UEFI in CSM mode) and native UEFI is the location where boot code is stored "
+"and in which format it has to be. This means that different bootloaders are "
+"needed for each system."
+msgstr ""
+"Při instalaci operačního systému na počítačích s UEFI je potřeba vzít v "
+"úvahu několik věcí, protože systém zavádění se mezi BIOSem (resp. UEFI v "
+"režimu CSM) a nativním UEFI zásadně liší. Jednou významnou změnou je způsob "
+"dělení pevného disku na oblasti. Tradiční BIOS a UEFI v režimu CSM používají "
+"DOSovou tabulku oddílů, nativní UEFI používá systém GPT (<quote>GUID "
+"Partition Table</quote>). Na jednom disku může být použita pouze jedna z "
+"nich, a v případě, že používáte více operačních systémů na jednom disku, "
+"znamená to, že všechny systémy musí podporovat zvolený typ rozdělení disku. "
+"Zavádění z disku s GPT je možné pouze v nativním režimu UEFI, což se může "
+"zdát jako nevýhoda, ale s tím, jak rostou velikosti disků, se používání GPT "
+"rozšiřuje, jelikož tradiční DOSová tabulka oddílů neumí adresovat disky "
+"větší než 2 TB."
+
+#. Tag: para
+#: preparing.xml:1839
+#, fuzzy, no-c-format
+#| msgid ""
+#| "The latter becomes important when booting &d-i; on a UEFI system with CSM "
+#| "because &d-i; checks whether it was started on a BIOS- or on a native "
+#| "UEFI system and installs the corresponding bootloader. Normally this "
+#| "simply works but there can be a problem in multi-boot environments. On "
+#| "some UEFI systems with CSM the default boot mode for removable devices "
+#| "can be different from what is actually used when booting from hard disk, "
+#| "so when booting the installer from a USB stick in a different mode from "
+#| "what is used when booting another already installed operating system from "
+#| "the hard disk, the wrong bootloader might be installed and the system "
+#| "might be unbootable after finishing the installation. When choosing the "
+#| "boot device from a firmware boot menu, some systems offer two seperate "
+#| "choices for each device, so that the user can select whether booting "
+#| "shall happen in CSM or in native UEFI mode."
+msgid ""
+"The latter becomes important when booting &d-i; on a UEFI system with CSM "
+"because &d-i; checks whether it was started on a BIOS- or on a native UEFI "
+"system and installs the corresponding bootloader. Normally this simply works "
+"but there can be a problem in multi-boot environments. On some UEFI systems "
+"with CSM the default boot mode for removable devices can be different from "
+"what is actually used when booting from hard disk, so when booting the "
+"installer from a USB stick in a different mode from what is used when "
+"booting another already installed operating system from the hard disk, the "
+"wrong bootloader might be installed and the system might be unbootable after "
+"finishing the installation. When choosing the boot device from a firmware "
+"boot menu, some systems offer two separate choices for each device, so that "
+"the user can select whether booting shall happen in CSM or in native UEFI "
+"mode."
+msgstr ""
+"Dalším zásadním rozdílem mezi BIOSem (resp. UEFI v režimu CSM) a nativním "
+"UEFI je v tom, odkud se načítá zavaděč a jaký používá formát, což znamená, "
+"že se v obou případech jedná o různé zavaděče. To je důležité pro &d-i; na "
+"systémech s UEFI v režimu CSM, jelikož &d-i; si zjistí, zda byl spuštěn na "
+"počítači s BIOSem nebo na počítači s nativním UEFI a podle toho nainstaluje "
+"příslušný zavaděč. To obvykle funguje k plné spokojenosti, ale přesto může "
+"nastat problém na systémech, které mají více možností zavádění. Na některých "
+"UEFI systémech v režimu CSM se totiž způsob zavádění může lišit mezi "
+"zaváděním z pevného disku a zaváděním z výměnných médií. To může způsobit, "
+"že instalační systém zavedený z USB klíčenky používá jiný režim, než systém "
+"nainstalovaný na pevném disku, čímž dojde k instalaci špatného zavaděče a po "
+"dokončení instalace se pak systém nemusí spustit. Některé systémy nabízí při "
+"volbě zaváděcího zařízení dvě samostatné položky pro každé zařízení, takže "
+"si uživatel může vybrat, zda se má zavádění provést v kompatibilním režimu "
+"CSM, nebo v nativním UEFI."
+
+#. Tag: title
+#: preparing.xml:1858
+#, no-c-format
+msgid "Secure boot"
+msgstr ""
+
+#. Tag: para
+#: preparing.xml:1859
+#, fuzzy, no-c-format
+#| msgid ""
+#| "Another UEFI-related topic is the so-called <quote>secure boot</quote> "
+#| "mechanism. Secure boot means a function of UEFI implementations that "
+#| "allows the firmware to only load and execute code that is "
+#| "cryptographically signed with certain keys and thereby blocking any "
+#| "(potentially malicious) boot code that is unsigned or signed with unknown "
+#| "keys. In practice the only key accepted by default on most UEFI systems "
+#| "with secure boot is a key from Microsoft used for signing the Windows "
+#| "bootloader. As the boot code used by &d-i; is not signed by Microsoft, "
+#| "booting the installer requires prior deactivation of secure boot in case "
+#| "it is enabled. Secure boot is often enabled by default on systems that "
+#| "come preinstalled with a 64-bit version of Windows 8 and there is "
+#| "unfortunately no standard way to disable it in the UEFI setup. On some "
+#| "systems, the option to disable secure boot is only made visible when a "
+#| "BIOS password has been set by the user, so if you have a system with "
+#| "secure boot enabled, but cannot find an option to disable it, try setting "
+#| "a BIOS password, powercycle the machine and look again for an appropriate "
+#| "option."
+msgid ""
+"Another UEFI-related topic is the so-called <quote>secure boot</quote> "
+"mechanism. Secure boot means a function of UEFI implementations that allows "
+"the firmware to only load and execute code that is cryptographically signed "
+"with certain keys and thereby blocking any (potentially malicious) boot code "
+"that is unsigned or signed with unknown keys. In practice the only key "
+"accepted by default on most UEFI systems with secure boot is a key from "
+"Microsoft used for signing the Windows bootloader. Debian includes a "
+"<quote>shim</quote> bootloader signed by Microsoft, so should work correctly "
+"on systems with secure boot enabled."
+msgstr ""
+"Dalším tématem spojeným s UEFI je takzvaný <quote>secure boot</quote>. "
+"Secure boot je mechanismus některých UEFI implementací, které umí uzamknout "
+"zavádění a umožňují pak spouštět pouze kód, který byl kryptograficky "
+"podepsán určitými klíči a tím pádem blokovat (potenciálně škodlivý) "
+"software, který není podepsaný, nebo je podepsaný neznámými klíči. V praxi "
+"to znamená, že na většině UEFI systémů se secure bootem je akceptován pouze "
+"klíč od Microsoftu, kterým je podepsán zavaděč Windows. Jelikož zavaděč "
+"používaný &d-i;em není podepsaný Microsoftem, je nutno před zavedením "
+"instalace secure boot vypnout. Často se to týká počítačů, na kterých je "
+"předinstalovaná 64 bitová verze Windows 8. Bohužel neexistuje unifikovaný "
+"postup, kterým by se dal secure boot vypnout. Na některých systémech se tato "
+"možnost objeví až po té, co uživatel nastaví heslo do BIOSu. Pokud je tedy "
+"secure boot zapnutý a nikde nevidíte možnost jeho vypnutí, zkuste nastavit "
+"heslo do BIOSu, restartovat počítač a podívat se znovu, zda se možnost "
+"neobjevila."
+
+#. Tag: title
+#: preparing.xml:1874
+#, fuzzy, no-c-format
+#| msgid "Disabling the Windows 8 <quote>fast boot</quote> feature"
+msgid ""
+"Disabling the Windows <quote>fast boot</quote>/<quote>fast startup</quote> "
+"feature"
+msgstr "Vypnutí <quote>rychlého spuštění</quote> u Windows 8"
+
+#. Tag: para
+#: preparing.xml:1875
+#, fuzzy, no-c-format
+#| msgid ""
+#| "Windows 8 offers a feature called <quote>fast boot</quote> to cut down "
+#| "system startup time. Technically, when this feature is enabled, Windows 8 "
+#| "does not do a real shutdown and a real cold boot afterwards when ordered "
+#| "to shut down, but instead does something resembling a partial suspend to "
+#| "disk to reduce the <quote>boot</quote> time. As long as Windows 8 is the "
+#| "only operating system on the machine, this is unproblematic, but it can "
+#| "result in problems and data loss when you have a dual boot setup in which "
+#| "another operating system accesses the same filesystems as Windows 8 does. "
+#| "In that case the real state of the filesystem can be different from what "
+#| "Windows 8 believes it to be after the <quote>boot</quote> and this could "
+#| "cause filesystem corruption upon further write accesses to the "
+#| "filesystem. Therefore in a dual boot setup, to avoid filesystem "
+#| "corruption the <quote>fast boot</quote> feature has to be disabled within "
+#| "Windows."
+msgid ""
+"Windows offers a feature (called <quote>fast boot</quote> in Windows 8, "
+"<quote>fast startup</quote> in Windows 10) to cut down system startup time. "
+"Technically, when this feature is enabled, Windows does not do a real "
+"shutdown and a real cold boot afterwards when ordered to shut down, but "
+"instead does something resembling a partial suspend to disk to reduce the "
+"<quote>boot</quote> time. As long as Windows is the only operating system on "
+"the machine, this is unproblematic, but it can result in problems and data "
+"loss, when you have a dual boot setup, in which another operating system "
+"accesses the same filesystems as Windows does. In that case the real state "
+"of the filesystem can be different from what Windows believes it to be after "
+"the <quote>boot</quote> and this could cause filesystem corruption upon "
+"further write accesses to the filesystem. Therefore in a dual boot setup, to "
+"avoid filesystem corruption the <quote>fast boot</quote>/<quote>fast "
+"startup</quote> feature has to be disabled within Windows."
+msgstr ""
+"Windows 8 nabízí možnost nazvanou rychlé spuštění, které zkracuje dobu k "
+"nastartování Windows. Je-li tato možnost povolena, Windows se při vypínání "
+"nevypnou zcela, ale provedou něco, jako částečné uspání, aby tím urychlily "
+"následný start. To samo o sobě ničemu nevadí, ale pokud máte na počítači i "
+"jiný operační systém, který může přistupovat ke stejným oblastem, jako "
+"Windows, může dojít k porušení a ztrátě dat, jelikož se může skutečný stav "
+"souborového systému lišit od toho, jak si jej Windows pamatují a zápisy na "
+"takový souborový systém mohou vést k jeho porušení. V případě zavádění "
+"různých operačních systémů je tedy vhodné <quote>rychlé spuštění</quote> ve "
+"Windows vypnout, aby k porušení souborového systému nedocházelo."
+
+#. Tag: para
+#: preparing.xml:1892
+#, no-c-format
+msgid ""
+"Furthermore, the Windows Update mechanism has (sometimes) been known to "
+"automatically re-enable this feature, after it has been previously disabled "
+"by the user. It is suggested to re-check this setting periodically."
+msgstr ""
+
+#. Tag: para
+#: preparing.xml:1897
+#, no-c-format
+msgid ""
+"It may also be necessary to disable <quote>fast boot</quote> to even allow "
+"access to UEFI setup to choose to boot another operating system or &d-i;. On "
+"some UEFI systems, the firmware will reduce <quote>boot</quote> time by not "
+"initialising the keyboard controller or USB hardware; in these cases, it is "
+"necessary to boot into Windows and disable this feature to allow for a "
+"change of boot order."
+msgstr ""
+"<quote>Rychlé spuštění</quote> je někdy potřeba vypnout už jen proto, abyste "
+"se dostali do nastavení UEFI, kde si můžete zvolit, že chcete zavést jiný "
+"operační systém, nebo &d-i;. Některé UEFI systémy totiž zkracují čas "
+"zavedení tím, že neinicializují řadič klávesnice nebo USB zařízení a "
+"klávesnice pak při zavádění nereaguje. V takovém případě je nezbytné "
+"nastartovat Windows a <quote>rychlé spuštění</quote> vypnout."
+
+#. Tag: title
+#: preparing.xml:1909
+#, no-c-format
+msgid "Hardware Issues to Watch Out For"
+msgstr "Různé hardwarové problémy"
+
+#. Tag: title
+#: preparing.xml:1912
+#, no-c-format
+msgid "USB BIOS support and keyboards"
+msgstr "BIOS a USB klávesnice"
+
+#. Tag: para
+#: preparing.xml:1913
+#, no-c-format
+msgid ""
+"If you have no PS/2-style keyboard, but only a USB model, on some very old "
+"PCs you may need to enable legacy keyboard emulation in your BIOS setup to "
+"be able to use your keyboard in the bootloader menu, but this is not an "
+"issue for modern systems. If your keyboard does not work in the bootloader "
+"menu, consult your mainboard manual and look in the BIOS for <quote>Legacy "
+"keyboard emulation</quote> or <quote>USB keyboard support</quote> options."
+msgstr ""
+"Pokud nemáte k dispozici standardní PS/2 klávesnici, ale pouze USB model, je "
+"možné, že budete muset v BIOSu nastavit emulaci klasické klávesnice. "
+"Hledejte položky jako <quote>Legacy keyboard emulation</quote> nebo "
+"<quote>USB keyboard support</quote>. Toto nastavení změňte pouze v případě, "
+"že instalační program klávesnici nerozpozná."
+
+#. Tag: title
+#: preparing.xml:1926
+#, no-c-format
+msgid "Display-visibility on OldWorld Powermacs"
+msgstr "Viditelnost displeje na OldWorld Powermacích"
+
+#. Tag: para
+#: preparing.xml:1928
+#, no-c-format
+msgid ""
+"Some OldWorld Powermacs, most notably those with the <quote>control</quote> "
+"display driver, may not reliably produce a colormap under Linux when the "
+"display is configured for more than 256 colors. If you are experiencing such "
+"issues with your display after rebooting (you can sometimes see data on the "
+"monitor, but on other occasions cannot see anything) or, if the screen turns "
+"black after booting the installer instead of showing you the user interface, "
+"try changing your display settings under MacOS to use 256 colors instead of "
+"<quote>thousands</quote> or <quote>millions</quote>."
+msgstr ""
+"Některé OldWorld Powermacy, obzvláště ty s <quote>kontrolním</quote> "
+"displejem, pokud jsou nastaveny pro použití více než 256 barev, nemusí pod "
+"Linuxem použít barevnou mapu spolehlivě. Zaznamenáte-li po restartu "
+"následující problémy se zobrazením (občas můžete na monitoru vidět data, ale "
+"jindy není vidět nic), nebo pokud po zavedení instalačního systému obrazovka "
+"zčerná, místo aby se zobrazilo uživatelské rozhraní, zkuste v MacOS změnit "
+"nastavení zobrazení, aby se místo tisíců nebo milionů barev používalo pouze "
+"256."
+
+#~ msgid "128 megabytes"
+#~ msgstr "128 MB"
+
+#~ msgid "1 gigabyte"
+#~ msgstr "1 GB"

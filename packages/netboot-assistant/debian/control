@@ -1,0 +1,30 @@
+Source: di-netboot-assistant
+Section: utils
+Priority: optional
+Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Uploaders: Andreas B. Mundt <andi@debian.org>, Frank Lin PIAT <fpiat@klabs.be>
+Build-Depends: bash-completion, debhelper-compat (= 13)
+Rules-Requires-Root: no
+Homepage: https://wiki.debian.org/DebianInstaller/NetbootAssistant
+Standards-Version: 4.6.0
+Vcs-Browser: https://salsa.debian.org/installer-team/netboot-assistant
+Vcs-Git: https://salsa.debian.org/installer-team/netboot-assistant.git
+
+Package: di-netboot-assistant
+Architecture: all
+Depends: ca-certificates, wget | curl, ${misc:Depends}
+Recommends: tftpd-hpa | atftpd | dnsmasq
+Suggests: dnsmasq | isc-dhcp-server | udhcpd, syslinux, vim-addon-manager
+Description: Debian-Installer netboot assistant
+ di-netboot-assistant is a tool to simplify the preparation of files
+ for TFTP net booting. It downloads and extracts the files needed and
+ takes care of organizing them. The packaged netboot installer as well
+ as Debian Live ISO images are supported too. di-netboot-assistant
+ prepares a top level menu for PXElinux and grub-efi. This allows one to
+ choose from all installed netboot and Debian Live images at boot time.
+ .
+ di-netboot-assistant supports preseeding the installer in order to
+ set up systems completely automatically.
+ .
+ Install grub-efi-amd64-bin to build EFI boot images, and for secure
+ boot support install grub-efi-amd64-signed and shim-signed.

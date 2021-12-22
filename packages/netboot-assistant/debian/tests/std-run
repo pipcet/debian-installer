@@ -1,0 +1,118 @@
+#!/bin/sh
+
+## Make sure package and script version are identical:
+PV="$(dpkg-query -f='${Version}\n' -W di-netboot-assistant)"
+SV="$(di-netboot-assistant -V | cut -d' ' -f2)"
+if [ "${PV%%~*}" != "$SV" ] ; then
+    echo "E: Version of package ($PV) and script ($SV) do not match!"
+    exit 1
+else
+    echo "I: Version of package ($PV) and script ($SV) match."
+fi
+
+ARCH="$(dpkg --print-architecture)"
+
+## make sure the tftp-root and needed directories exists:
+mkdir -vp /var/lib/tftpboot/d-i/n-pkg
+mount -v --bind /usr/lib/debian-installer/ /var/lib/tftpboot/d-i/n-pkg/
+
+c='di-netboot-assistant install stable --arch=all'
+echo "########## install with '--arch=all':"
+echo "########## # $c"
+$c
+
+c='di-netboot-assistant uninstall stable'
+echo "########## uninstall again:"
+echo "########## # $c"
+$c
+
+c='di-netboot-assistant install buster --alias=oldi'
+echo "########## install with alias (oldest debian release not yet archived):"
+echo "########## # $c"
+$c
+
+c='di-netboot-assistant install daily --ignore-sig'
+echo "########## install daily which is not signed:"
+echo "########## # $c"
+$c
+
+c='di-netboot-assistant -v rebuild-menu'
+echo "########## rebuild menu:"
+echo "########## # $c"
+$c
+
+c='di-netboot-assistant -v rebuild-grub'
+echo "########## rebuild grub-efi:"
+echo "########## # $c"
+$c
+
+c='di-netboot-assistant install stable testing'
+echo "########## install two images in one run:"
+echo "########## # $c"
+$c
+
+c='di-netboot-assistant fw-toggle stable --ignore-sig'
+echo "########## install non-free firmware:"
+echo "########## # $c"
+$c
+ls -l /var/lib/tftpboot/d-i/n-a/stable/${ARCH}/
+
+c='di-netboot-assistant fw-toggle stable'
+echo "########## remove non-free firmware:"
+echo "########## # $c"
+$c
+ls -l /var/lib/tftpboot/d-i/n-a/stable/${ARCH}/
+
+c='di-netboot-assistant fw-toggle n-pkg --ignore-sig'
+echo "########## install non-free firmware:"
+echo "########## # $c"
+$c
+ls -l /var/lib/tftpboot/d-i/n-pkg/images/*/${ARCH}/*/debian-installer/${ARCH}/
+
+c='di-netboot-assistant fw-toggle n-pkg'
+echo "########## remove non-free firmware:"
+echo "########## # $c"
+$c
+ls -l /var/lib/tftpboot/d-i/n-pkg/images/*/${ARCH}/*/debian-installer/${ARCH}/
+
+c='cat -n /var/lib/tftpboot/d-i/n-a/pxelinux.cfg/default'
+echo "########## list PXE linux menu:"
+echo "########## # $c"
+$c
+
+c='cat -n /var/lib/tftpboot/d-i/n-a/pxelinux.cfg/default-arm'
+echo "########## list PXE u-boot menu:"
+echo "########## # $c"
+$c
+
+c='cat -n /var/lib/tftpboot/d-i/n-a/grub/grub.cfg'
+echo "########## list grub menu:"
+echo "########## # $c"
+$c
+
+c='ls -l /var/lib/tftpboot/d-i/n-a/  /var/lib/di-netboot-assistant/  /var/cache/di-netboot-assistant/'
+echo "########## list files (metadata and cache):"
+echo "########## # $c"
+$c
+
+c="di-netboot-assistant -v purge $(di-netboot-assistant purge 2> /dev/null | tail -n1) --arch=all"
+echo "########## purge all images installed:"
+echo "########## # $c"
+$c
+
+c='ls -l /var/lib/tftpboot/d-i/n-a/  /var/lib/tftpboot/'
+echo "########## list files left over:"
+echo "########## # $c"
+$c
+
+echo "########## list files left over (metadata and cache should be empty now):"
+c='ls -l /var/lib/di-netboot-assistant/'
+echo "########## # $c"
+$c
+$c | grep -q "total 0"
+c='ls -l /var/cache/di-netboot-assistant/'
+echo "########## # $c"
+$c
+$c | grep -q "total 0"
+
+umount -v /var/lib/tftpboot/d-i/n-pkg/ 2>&1

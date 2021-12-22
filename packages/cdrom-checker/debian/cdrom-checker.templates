@@ -1,0 +1,79 @@
+Template: cdrom-checker/start
+Type: boolean
+Default: false
+# :sl3:
+_Description: Check integrity of the installation media?
+ Warning: this check depends on your hardware and may take some time.
+
+Template: cdrom-checker/askmount
+Type: note
+# :sl3:
+_Description: Insert Debian installation media
+ Please insert one of the official Debian installation media before
+ continuing.
+
+Template: cdrom-checker/mntfailed
+Type: error
+# :sl3:
+_Description: Failed to mount installation media
+ The device '${CDROM}' could not be mounted correctly. Please check the media
+ and cables, and try it again.
+
+Template: cdrom-checker/wrongcd
+Type: error
+# :sl3:
+_Description: No valid Debian installation media
+ What you have inserted is no valid Debian installation media. Please try
+ again.
+
+Template: cdrom-checker/md5file_failed
+Type: error
+# TRANSLATORS: MD5 is a file name, don't translate it.
+# :sl3:
+_Description: Failed to open checksum file
+ Opening the MD5 file on the media failed. This file contains the checksums
+ of the files located on the media.
+
+Template: cdrom-checker/passed
+Type: note
+# :sl3:
+_Description: Integrity test successful
+ The integrity test was successful. The installation image is valid.
+
+Template: cdrom-checker/mismatch
+Type: error
+# :sl3:
+_Description: Integrity test failed
+ The file ${FILE} failed the MD5 checksum verification. Your installation
+ media or this file may have been corrupted.
+
+Template: cdrom-checker/nextcd
+Type: boolean
+Default: false
+# :sl3:
+_Description: Check the integrity of another installation image?
+
+Template: cdrom-checker/firstcd
+Type: note
+# :sl3:
+_Description: Insert Debian boot media
+ Please make sure you have inserted the Debian installation media you
+ booted from, to continue with the installation.
+
+Template: cdrom-checker/progress_title
+Type: text
+# :sl3:
+_Description: Checking integrity of installation image
+
+Template: cdrom-checker/progress_step
+Type: text
+# :sl3:
+_Description: Checking file: ${FILE}
+
+Template: debian-installer/cdrom-checker/title
+Type: text
+#  Main menu item
+# Translators: keep it under 65 columns
+# :sl2:
+_Description: Check the integrity of installation media
+

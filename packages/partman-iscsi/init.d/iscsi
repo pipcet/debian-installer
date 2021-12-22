@@ -1,0 +1,95 @@
+#! /bin/sh
+# Detect iSCSI devices and leave notes about them for later. Ideally, udev
+# would do most of this for us ...
+
+. /lib/partman/lib/base.sh
+
+# We can't work any of this out without udevadm.
+type udevadm >/dev/null 2>&1 || exit 0
+
+cat_null () {
+	local text="$(cat "$1")"
+	if [ "$text" != "<NULL>" ]; then
+		echo "$text"
+	fi
+}
+
+for dev in $DEVICES/*; do
+	[ -d "$dev" ] || continue
+	cd "$dev"
+	rm -f iscsi_portal iscsi_target \
+		iscsi_username iscsi_password \
+		iscsi_username_in iscsi_password_in
+
+	devnode="$(cat device 2>/dev/null)" || continue
+	devpath="$(udevadm info -n "$devnode" -q property | sed -n 's/^DEVPATH=//p')" || continue
+	[ "$devpath" ] || continue
+
+	parent="$devpath"
+	while :; do
+		parent="${parent%/*}"
+		[ "$parent" ] || break
+		[ -L "/sys/$parent/subsystem" ] || continue
+		subsys="$(readlink "/sys/$parent/subsystem")"
+		subsys="${subsys##*/}"
+		if [ "$subsys" = scsi ]; then
+			devtype="$(sed -n 's/^DEVTYPE=//p' /sys/$parent/uevent)" || continue
+			[ "$devtype" = scsi_device ] || continue
+
+			# We found a SCSI device. Now, is it iSCSI?
+			echo "/sys/$parent" | grep -q /session || continue
+
+			# Look for the iSCSI transport device.
+			transportdev="$parent"
+			while :; do
+				transportdev="${transportdev%/*}"
+				[ "$transportdev" ] || break
+				sysname="${transportdev##*/}"
+				if [ "${sysname#session}" != "$sysname" ]; then
+					break
+				fi
+			done
+			[ "$transportdev" ] || continue
+
+			# Confirm that it's really iSCSI: look for the session.
+			sessiondev=
+			for trydev in "subsystem/iscsi_session/$sysname/devices" \
+				      "bus/iscsi_session/$sysname/devices" \
+				      "class/iscsi_session/$sysname"; do
+				if [ -e "/sys/$trydev" ]; then
+					sessiondev="$trydev"
+					break
+				fi
+			done
+			[ "$sessiondev" ] || continue
+
+			# Look for the portal.
+			connectiondev="/sys/$transportdev"
+			while [ ! -f "$connectiondev/persistent_address" ]; do
+				for trydev in "$connectiondev"/*; do
+					[ -d "$trydev" ] || continue
+					trydev="${trydev##*/}"
+					if [ "${trydev#connection*}" != "$trydev" ] || \
+					   [ "$trydev" = iscsi_connection ]; then
+						connectiondev="$connectiondev/$trydev"
+						continue 2
+					fi
+				done
+				break
+			done
+			if [ -f "$connectiondev/persistent_address" ]; then
+				# Hooray!
+				echo "$(cat "$connectiondev/persistent_address"):$(cat "$connectiondev/persistent_port"),$(cat "/sys/$sessiondev/tpgt")" >iscsi_portal
+				cat "/sys/$sessiondev/targetname" >iscsi_target
+				cat_null "/sys/$sessiondev/username" >iscsi_username
+				cat_null "/sys/$sessiondev/password" >iscsi_password
+				cat_null "/sys/$sessiondev/username_in" >iscsi_username_in
+				cat_null "/sys/$sessiondev/password_in" >iscsi_password_in
+				chmod 600 iscsi_password iscsi_password_in
+				break
+			fi
+		fi
+	done
+done
+
+exit 0

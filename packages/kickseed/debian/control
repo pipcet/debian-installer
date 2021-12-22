@@ -1,0 +1,23 @@
+Source: kickseed
+Section: debian-installer
+Priority: optional
+Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Uploaders: Colin Watson <cjwatson@ubuntu.com>
+Build-Depends: debhelper (>= 9), dpkg-dev (>= 1.9)
+Vcs-Browser: https://salsa.debian.org/installer-team/kickseed
+Vcs-Git: https://salsa.debian.org/installer-team/kickseed.git
+
+Package: kickseed-common
+Package-Type: udeb
+Architecture: all
+Priority: standard
+Depends: di-utils (>= 1.20)
+Description: Common files for Kickstart compatibility
+ This package reads Kickstart files and preseeds an installation with them,
+ translating to the d-i preseeding infrastructure.
+
+Package: initrd-kickseed
+Package-Type: udeb
+Architecture: all
+Depends: cdebconf-udeb, kickseed-common, preseed-common, di-utils (>= 1.15)
+Description: Load Kickstart file from the initrd

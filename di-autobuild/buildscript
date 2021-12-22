@@ -1,0 +1,123 @@
+#! /bin/bash
+# vim:set et ts=2 sw=2:
+#
+# Licensed under the terms of the GPL, version 2.
+# (C) 2010 Andreas Barth <aba@not.so.argh.org>
+# (C) 2011 Philipp Kern <pkern@debian.org>
+
+# preconditions:
+#  - a buildd with a LVM setup and hence a unstable-$ARCH-sbuild
+#    schroot environment
+#  - create /home/buildd/di
+#  - clone this script into /home/buildd/di/di-autobuild
+#    (it will auto-create a d-i checkout in /home/buildd/di/debian-installer)
+#  - cron /home/buildd/di/di-autobuild/buildscript to something 0:00-ish
+#    as user buildd
+set -e
+
+# d-i.debian.org:
+DIDO=dillon
+ARCH=${ARCH:-$(dpkg --print-architecture)}
+RSYNC_RETRY=5
+LVM_CHROOT=yes  # default should be yes; on ancina.d.o we set 'no'
+
+exec >> /home/buildd/logs/di-autobuild_daily-${ARCH}-$(date +%Y%m%d-%H%M) 2>&1
+
+echo "INFO: Daily build started on " $(date +%Y%m%d-%H%M)
+trap cleanup ERR TERM HUP INT QUIT EXIT
+
+checkout_installer() {
+  if [ ! -d "/home/buildd/di/debian-installer" ]
+  then
+    echo "INFO: Doing initial checkout of debian-installer into /home/buildd/di ..."
+    (
+      cd /home/buildd/di
+      git -c http.sslCAinfo=/etc/ssl/ca-global/ca-certificates.crt clone https://alioth.debian.org/anonscm/git/d-i/debian-installer.git debian-installer
+      cd debian-installer
+      git config --local --add http.sslCAinfo /etc/ssl/ca-global/ca-certificates.crt
+    )
+  fi
+  echo "INFO: Updating debian-installer checkout ..."
+  (
+    cd /home/buildd/di/debian-installer
+    git pull
+    git clean -dxf
+    echo "INFO: debian-installer revision $(git show-ref HEAD | cut -d' ' -f1)"
+  )
+
+  unset TMPDIR
+  case $LVM_CHROOT in
+    yes) INSTALLER_DIR="$(mktemp -d -p /home/buildd/build-trees installer-XXXXXX)" ;;
+    no) INSTALLER_DIR="$(mktemp -d -p /home/buildd/chroots/sid/build installer-XXXXXX)" ;;
+    *) echo "ERROR: Cannot set installer build directory." ;;
+  esac
+  echo "INFO: Checking out debian-installer into $INSTALLER_DIR/checkout ..."
+  (
+    cd "${INSTALLER_DIR}"
+    git clone /home/buildd/di/debian-installer/ checkout
+  )
+}
+
+install_build_deps() {
+  echo "INFO: installing packages ..."
+  schroot -c "$SID" -d /build -u root -r -- apt-get update
+  (
+    LANG=C schroot -q -c "$SID" -d "/build/$(basename "$INSTALLER_DIR")/checkout/build" -p -r -- dpkg-checkbuilddeps -B ../debian/control 2>&1 || true
+  ) | sed -e 's%dpkg-checkbuilddeps: Unmet build dependencies: %%' -e 's, *([^)]*),,g' \
+    | DEBIAN_PRIORITY=critical DEBIAN_FRONTEND=noninteractive xargs schroot -c "$SID" -d "/build/$(basename "$INSTALLER_DIR")/checkout/build" -u root -p -r -- apt-get -y --no-install-recommends install
+}
+
+build_installer() {
+  echo "INFO: building the installer ..."
+  LOG_TO_STDOUT=1 schroot -c "$SID" -d "/build/$(basename "$INSTALLER_DIR")/checkout/build" -p -r -- daily-build build-only
+}
+
+cleanup () {
+  echo "INFO: cleanup schroot ..."
+  if [ -n "$SID" ]
+  then
+    end_session "$SID"
+    SID=""
+  fi
+  echo "INFO: cleanup installer build directory ..."
+  if [ -n "$INSTALLER_DIR" ]
+  then
+    rm --one-file-system -rf "$INSTALLER_DIR"
+    INSTALLER_DIR=""
+  fi
+  echo "INFO: Exiting now ..."
+  exit 0
+}
+
+create_session() {
+  echo "INFO: creating schroot"
+  SID="$(schroot -b -c sid-${ARCH}-sbuild)"
+  echo "INFO: session $SID created"
+}
+
+end_session() {
+  schroot -e -c "$SID"
+}
+
+upload_result() {
+  local DIR
+  local cont; local ret
+  DIR=$(date -u '+%Y%m%d-%H:%M')
+  echo "INFO: starting rsync"
+  cont=1; ret=1
+  while [ $cont -le $RSYNC_RETRY -a $ret != 0 ]
+  do
+    rsync "${INSTALLER_DIR}/checkout/build/dest/" d-i@$DIDO:${DIR} -a
+    ret="$?"
+    cont="$(( $cont + 1 ))"
+  done
+  echo "INFO: unhide ${DIR}"
+  ssh d-i@$DIDO unhide ${DIR}
+}
+
+checkout_installer
+create_session
+install_build_deps
+build_installer
+upload_result
+

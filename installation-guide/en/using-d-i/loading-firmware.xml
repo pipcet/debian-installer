@@ -1,0 +1,197 @@
+<!-- retain these comments for translator revision tracking -->
+<!-- $Id$ -->
+
+ <sect1 id="loading-firmware" arch="not-s390">
+ <title>Loading Missing Firmware</title>
+<para>
+
+As described in <xref linkend="hardware-firmware"/>, some devices require
+firmware to be loaded. In most cases the device will not work at all
+if the firmware is not available; sometimes basic functionality is not
+impaired if it is missing and the firmware is only needed to enable
+additional features.
+
+</para><para>
+
+If a device driver requests firmware that is not available, &d-i; will
+display a dialog offering to load the missing firmware. If this option
+is selected, &d-i; will scan available devices for either loose firmware
+files or packages containing firmware. If found, the firmware will be
+copied to the correct location (<filename>/lib/firmware</filename>) and
+the driver module will be reloaded.
+
+</para>
+<note><para>
+
+Which devices are scanned and which file systems are supported depends on
+the architecture, the installation method and the stage of the installation.
+Especially during the early stages of the installation, loading the firmware
+is most likely to succeed from a FAT-formatted USB stick.
+<phrase arch="x86">On i386 and amd64 firmware can also be loaded from an
+MMC or SD card.</phrase>
+
+</para></note>
+<para>
+
+Note that it is possible to skip loading the firmware if you know the
+device will also function without it, or if the device is not needed during
+the installation.
+
+</para><para>
+
+&d-i; only prompts for firmware needed by kernel modules loaded during
+the installation. Not all drivers are included in &d-i;, in particular
+radeon is not, so this implies that the capabilities of some devices may
+be no different at the end of the installation from what they were at
+the beginning. Consequently, some of your hardware may not be being used
+to its full potential. If you suspect this is the case, or are just
+curious, it is not a bad idea to check the output of the
+<command>dmesg</command> command on the newly booted system and search
+for <quote>firmware</quote>. 
+
+</para>
+
+  <sect2><title>Preparing a medium</title>
+<para>
+
+Official installation images do not include non-free firmware. The most common
+method to load such firmware is from some removable medium such as a USB
+stick. Alternatively, unofficial installation images containing non-free firmware
+can be found at <ulink url="&url-firmware-cds;"/>.
+
+To prepare a USB stick (or other medium like a hard drive partition),
+the firmware files or packages must be placed in either the root directory
+or a directory named <filename>/firmware</filename> of the file system on
+the medium. The recommended file system to use is FAT as that is most
+certain to be supported during the early stages of the installation.
+
+</para><para>
+
+Tarballs and zip files containing current packages for the most common firmware are
+available from:
+
+<itemizedlist>
+<listitem><para>
+<ulink url="&url-firmware-tarballs;"/>
+</para></listitem>
+</itemizedlist>
+
+Just download the tarball or zip file for the correct release and unpack it to
+the file system on the medium.
+
+</para><para>
+
+If the firmware you need is not included in the tarball, you can also
+download specific firmware packages from the (non-free section of the)
+archive. The following overview should list most available firmware
+packages but is not guaranteed to be complete and may also contain
+non-firmware packages:
+
+<itemizedlist>
+<listitem><para>
+<ulink url="&url-firmware-packages;"/>
+</para></listitem>
+</itemizedlist>
+
+</para><para>
+
+It is also possible to copy individual firmware files to the medium. Loose
+firmware could be obtained for example from an already installed system or
+from a hardware vendor.
+
+</para>
+  </sect2>
+
+  <sect2><title>Firmware and the Installed System</title>
+<para>
+
+Any firmware loaded during the installation will be copied automatically
+to the installed system. In most cases this will ensure that the device
+that requires the firmware will also work correctly after the system is
+rebooted into the installed system. However, if the installed system runs
+a different kernel version from the installer there is a slight chance that
+the firmware cannot be loaded due to version skew.
+
+</para><para>
+
+If the firmware was loaded from a firmware package, &d-i; will also install
+this package for the installed system and will automatically add the non-free
+section of the package archive in APT's <filename>sources.list</filename>.
+This has the advantage that the firmware should be updated automatically if
+a new version becomes available.
+
+</para><para>
+
+If loading the firmware was skipped during the installation, the relevant
+device will probably not work with the installed system until the firmware
+(package) is installed manually.
+
+</para>
+<note><para>
+
+If the firmware was loaded from loose firmware files, the firmware copied to
+the installed system will <emphasis>not</emphasis> be automatically updated
+unless the corresponding firmware package (if available) is installed after
+the installation is completed.
+
+</para></note>
+  </sect2>
+
+  <sect2 id="completing-installed-system"><title>Completing the Installed System</title>
+<para>
+
+Depending on how the installation was performed, it might be that the
+need for some firmware was not detected during installation, that the
+relevant firmware was not available, or that one chose not to install
+some firmware at that time.
+
+In some cases, a successful installation can still end up in a black
+screen or a garbled display when rebooting into the installed
+system. When that happens, the following workarounds can be tried:
+
+</para>
+
+<itemizedlist>
+  <listitem><para>Pass the <code>nomodeset</code> option on the kernel
+  command line. This might help boot into a <quote>fallback
+  graphics</quote> mode.</para></listitem>
+
+  <listitem><para>Use the
+  <keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap><keycap>F2</keycap></keycombo>
+  key combination to switch to VT2, which might offer a functional
+  login prompt.</para></listitem>
+</itemizedlist>
+
+<para>
+
+Once logged in into the installed system, it is possible to automate
+the detection of missing firmware, and to perform the required steps to
+enable them following this procedure:
+
+</para><orderedlist>
+  <listitem><para>Install the <classname>isenkram-cli</classname>
+  package.</para></listitem>
+
+  <listitem><para>Run the
+  <command>isenkram-autoinstall-firmware</command> command as the
+  <quote>root</quote> user.</para></listitem>
+</orderedlist><para>
+
+Usually, rebooting is the simplest way to make sure all kernel modules
+are properly initialized; that's particularly important when one has
+booted the system with the <code>nomodeset</code> option as an
+interim measure.
+
+</para><note><para>
+
+Installing firmware packages is very likely to require enabling the
+non-free section of the package archive. As of &debian-gnu; 11.0,
+running the <command>isenkram-autoinstall-firmware</command> command
+will do that automatically by creating a dedicated file
+(<filename>/etc/apt/sources.list.d/isenkram-autoinstall-firmware.list</filename>),
+pointing at a generic mirror.
+
+</para></note>
+
+  </sect2>
+ </sect1>

@@ -1,0 +1,107 @@
+#! /bin/sh
+# Install iSCSI packages in the target if necessary. iSCSI volumes
+# containing the root filesystem also need some special settings for
+# robustness.
+
+. /lib/partman/lib/base.sh
+
+get_default_interface () {
+	db_get netcfg/choose_interface || return 1
+	default_interface="${RET%%:*}"
+	# Work around netcfg/choose_interface not always being set:
+	#   https://bugs.launchpad.net/ubuntu/+source/netcfg/+bug/430820
+	if [ -z "$default_interface" ]; then
+		default_interface=eth0
+	fi
+}
+
+have_iscsi=
+portal=
+target=
+username=
+password=
+username_in=
+password_in=
+for dev in $DEVICES/*; do
+	[ -d "$dev" ] || continue
+	[ -e "$dev/iscsi_portal" ] || continue
+	have_iscsi=1
+	cd "$dev"
+	portal="$(cat "$dev/iscsi_portal")"
+	target="$(cat "$dev/iscsi_target")"
+
+	contains_root=
+	open_dialog PARTITIONS
+	while { read_line num id size type fs path name; [ "$id" ]; }; do
+		[ "$fs" != free ] || continue
+		[ -f "$id/method" ] || continue
+		[ -f "$id/acting_filesystem" ] || continue
+		[ -f "$id/mountpoint" ] || continue
+		mountpoint="$(cat "$id/mountpoint")"
+		[ "$mountpoint" = / ] || continue
+		contains_root=1
+	done
+	close_dialog
+
+	[ "$contains_root" ] || continue
+	iscsiadm -m node --portal "${portal%,*}" --targetname "$target" -o update -n 'node.conn[0].timeo.noop_out_interval' -v 0
+	iscsiadm -m node --portal "${portal%,*}" --targetname "$target" -o update -n 'node.conn[0].timeo.noop_out_timeout' -v 0
+	iscsiadm -m node --portal "${portal%,*}" --targetname "$target" -o update -n 'node.session.timeo.replacement_timeout' -v 86400
+	username="$(cat "$dev/iscsi_username")"
+	password="$(cat "$dev/iscsi_password")"
+	username_in="$(cat "$dev/iscsi_username_in")"
+	password_in="$(cat "$dev/iscsi_password_in")"
+	break
+done
+
+if [ "$have_iscsi" ]; then
+	apt-install open-iscsi || true
+fi
+
+if [ "$portal" ]; then
+	group="${portal##*,}"
+	portal="${portal%,*}"
+	ip="${portal%%:*}"
+	port="${portal#*:}"
+	mkdir -p /target/etc/iscsi
+	get_default_interface
+	if [ -f "/sys/class/net/$default_interface/address" ]; then
+		cat >>/target/etc/iscsi/iscsi.initramfs <<EOF
+HWADDR="$(cat "/sys/class/net/$default_interface/address")"
+EOF
+	fi
+	cat >>/target/etc/iscsi/iscsi.initramfs <<EOF
+ISCSI_TARGET_NAME="$target"
+ISCSI_TARGET_IP="$ip"
+ISCSI_TARGET_PORT="$port"
+ISCSI_TARGET_GROUP="$group"
+EOF
+	if [ "$username" ] && [ "$username" != "(null)" ]; then
+		cat >>/target/etc/iscsi/iscsi.initramfs <<EOF
+ISCSI_USERNAME="$username"
+ISCSI_PASSWORD="$password"
+EOF
+		if [ "$username_in" ] && [ "$username_in" != "(null)" ]; then
+			cat >>/target/etc/iscsi/iscsi.initramfs <<EOF
+ISCSI_IN_USERNAME="$username_in"
+ISCSI_IN_PASSWORD="$password_in"
+EOF
+		fi
+	fi
+	chmod 600 /target/etc/iscsi/iscsi.initramfs
+
+	# This isn't ideal, but ifupdown doesn't expose any interface that
+	# might allow the initramfs to dynamically tell it to avoid a
+	# particular interface on this boot.
+	if db_get netcfg/choose_interface; then
+		# Work around netcfg/choose_interface not always being set:
+		#   https://bugs.launchpad.net/ubuntu/+source/netcfg/+bug/430820
+		[ "$RET" ] || RET=eth0
+		sed -i "s/\(iface ${RET%%:*} inet\) dhcp/\1 manual/" \
+			/etc/network/interfaces || true
+	fi
+else
+	rm -f /target/etc/iscsi/iscsi.initramfs
+fi
+
+exit 0

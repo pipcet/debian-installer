@@ -1,0 +1,64 @@
+<!-- retain these comments for translator revision tracking -->
+<!-- $Id$ -->
+
+
+ <sect1>
+ <title>Recommended Partitioning Scheme</title>
+<para>
+
+For new users, personal &debian; boxes, home systems, and other
+single-user setups, a single <filename>/</filename> partition (plus
+swap) is probably the easiest, simplest way to go.  The recommended
+partition type is ext4.
+
+</para><para>
+
+For multi-user systems or systems with lots of disk space, it's best
+to put <filename>/var</filename>,
+<filename>/tmp</filename>, and <filename>/home</filename> each on
+their own partitions separate from the <filename>/</filename>
+partition.
+
+</para><para>
+
+You might need a separate <filename>/usr/local</filename> partition if
+you plan to install many programs that are not part of the &debian;
+distribution.  If your machine will be a mail server, you might need
+to make <filename>/var/mail</filename> a separate partition.
+If you are setting up a server with lots
+of user accounts, it's generally good to have a separate, large
+<filename>/home</filename> partition.  In general, the partitioning
+situation varies from computer to computer depending on its uses.
+
+</para><para>
+
+For very complex systems, you should see the
+<ulink url="&url-multidisk-howto;">
+Multi Disk HOWTO</ulink>.  This contains in-depth information, mostly
+of interest to ISPs and people setting up servers.
+
+</para><para>
+
+With respect to the issue of swap partition size, there are many
+views.  One rule of thumb which works well is to use as much swap as
+you have system memory. It also shouldn't be smaller than 512MB, in
+most cases.  Of course, there are exceptions to these rules.
+
+</para><para>
+
+As an example, an older home machine might have 512MB of RAM and a
+20GB SATA drive on <filename>/dev/sda</filename>. There might be a
+8GB partition for another operating system on
+<filename>/dev/sda1</filename>, a 512MB swap partition on
+<filename>/dev/sda3</filename> and about 11.4GB on
+<filename>/dev/sda2</filename> as the Linux partition.
+
+</para><para>
+
+For an idea of the space taken by tasks
+you might be interested in adding after your system installation is
+complete, check <xref linkend="tasksel-size-list"/>.
+
+</para>
+
+ </sect1>

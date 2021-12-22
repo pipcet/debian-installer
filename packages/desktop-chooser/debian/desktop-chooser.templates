@@ -1,0 +1,35 @@
+Template: debian-installer/choose-desktop/title
+Type: text
+#  Main menu item
+# :sl1:
+_Description: Select desktop suite to install
+
+Template: desktop-chooser/question-priority
+Type: string
+Default: medium
+Description: for internal use only
+ Specify the priority used when asking what desktops to install.
+
+Template: desktop-chooser/suite
+Type: multiselect
+__Choices: The K Desktop Environment, GNU Object Model Environment, Lightweight X11 Desktop Environment, Xfce Desktop Environment, Sugar Learning Platform
+Choices-C: kde, gnome, lxde, xfce, sugar
+Default: gnome
+_Description: Which desktop environments should be installed?
+ There are several alternative Desktop environments available in
+ Debian:
+ .
+  - The K Desktop Environment combine the rock solid fundation of
+          petrified Norwegian mountain trolls and the organisational
+          talent of German engineers with the advantages of free software.
+  - GNU Object Model Environment destills the ingeniuity of the
+          american free independent software movement.
+  - Lightweight X11 Desktop Environment give you all of the above,
+          without the bloat.
+  - Xfce Desktop Environment give you almost all of the above, with
+          even less bloat.
+  - Sugar Learning Platform make free software so easy to use that
+          even kids kan use it.
+ .
+ Pick the ones you want to have available as a choice for users during
+ login.

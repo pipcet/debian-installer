@@ -1,0 +1,94 @@
+# bash completion for di-netboot-assistant           -*- shell-script -*-
+#
+# The option '--tftproot=' is not recommended and therefore not suggested.
+
+_di-netboot-assistant()
+{
+    local cur prev words cword
+    _init_completion -s || return
+
+    local COMMANDS=(
+        "install"
+        "uninstall"
+        "uncache"
+        "purge"
+        "rebuild-menu"
+        "rebuild-grub"
+        "fw-toggle"
+    )
+
+    # see if the user selected a command already:
+    local command repo i
+    for (( i=0 ; i < ${#words[@]}-1 ; i++ )) ; do
+        if [[ ${COMMANDS[@]} =~ ${words[i]} ]] ; then
+            command=${words[i]}
+            repo=${words[i+1]}  ## assume repo follows the command
+            break
+        fi
+    done
+
+    if [ -n "$command" -a -n "$repo" ] ; then
+        case $prev in
+            --arch)
+                local lst=$(di-netboot-assistant $command $repo --arch= 2>/dev/null | sed "s/.\+://")
+                COMPREPLY=( $(compgen -W "${lst}" -- ${cur}) )
+                return 0
+                ;;
+            --di-args|--target-args|--alias)
+                return 0
+                ;;
+        esac
+    fi
+
+    # supported options per command
+    if [[ "$cur" == -* ]] ; then
+        case $command in
+            install)
+                COMPREPLY=( $(compgen -W "
+                  --di-args=
+                  --offline
+                  --ignore-sig
+                  --target-args=
+                  --alias=
+                  --arch=
+                  --verbose" -- ${cur}) )
+                ;;
+            uncache|uninstall|purge|fw-toggle)
+                COMPREPLY=( $(compgen -W "--arch= --verbose" -- ${cur}) )
+                ;;
+            rebuild-menu|rebuild-grub)
+                COMPREPLY=( $(compgen -W "--verbose" -- ${cur}) )
+                ;;            
+            "")
+                # suggest this only if there is no command:
+                COMPREPLY=( $(compgen -W "--help --version" -- ${cur}) )
+                ;;
+        esac
+        [[ $COMPREPLY == *= ]] && compopt -o nospace
+        return 0
+    fi
+
+    # specific command arguments
+    if [[ -n $command ]] ; then
+        case $command in
+            rebuild-menu|rebuild-grub)
+                # no additional suggestion:
+                return 0
+                ;;
+            *)
+                # run command with no repo to get possible arguments:
+                local lst=$(di-netboot-assistant $command 2>/dev/null | tail -n +2)
+                COMPREPLY=( $(compgen -W "${lst}" -- ${cur}) )
+                return 0
+                ;;
+        esac
+        
+    fi
+
+    # no command yet, show what commands we have:
+    if [ "$command" = "" -a "$prev" != "--version" -a "$prev" != "--help" ]; then
+        COMPREPLY=( $(compgen -W '${COMMANDS[@]}' -- ${cur}) )
+    fi
+    return 0
+} &&
+complete -F _di-netboot-assistant di-netboot-assistant

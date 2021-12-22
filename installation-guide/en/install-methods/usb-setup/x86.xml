@@ -1,0 +1,152 @@
+<!-- retain these comments for translator revision tracking -->
+<!-- $Id$ -->
+
+   <sect3 arch="x86">
+   <title>Partitioning and adding a boot loader</title>
+<para>
+
+We will show how to set up the memory stick to use the first partition,
+instead of the entire device.
+
+</para><para>
+
+In order to start the kernel after booting from the USB stick, we will
+put a boot loader on the stick. Although any boot loader
+should work, it's convenient to use
+<classname>syslinux</classname>, since it uses a FAT16 partition and can
+be reconfigured by just editing a text file. Any operating system
+which supports the FAT file system can be used to make changes to the
+configuration of the boot loader.
+
+</para><para>
+
+First, you need to install the <classname>syslinux</classname> and
+<classname>mtools</classname> packages on your system.
+
+</para><note><para>
+
+Since most USB sticks come pre-configured with a single FAT16
+partition, you probably won't have to repartition or reformat the
+stick.  If you have to do that anyway, use <command>cfdisk</command>
+or any other partitioning tool to create a FAT16 partition now<footnote>
+
+<para>
+Don't forget to activate the <quote>bootable</quote> flag.
+</para>
+
+</footnote>, and then install an MBR using:
+
+<informalexample><screen>
+# cat /usr/lib/syslinux/mbr/mbr.bin >/dev/<replaceable>sdX</replaceable>
+</screen></informalexample>
+
+Now create the filesystem using:
+
+<informalexample><screen>
+# mkdosfs /dev/<replaceable>sdX1</replaceable>
+</screen></informalexample>
+
+Take care that you use the correct device name for your USB stick. The
+<command>mkdosfs</command> command is contained in the
+<classname>dosfstools</classname> &debian; package.
+
+</para></note><para>
+
+Having a correctly partitioned USB stick (now), you need to put
+<classname>syslinux</classname> on the FAT16 partition with:
+
+<informalexample><screen>
+# syslinux /dev/<replaceable>sdX1</replaceable>
+</screen></informalexample>
+
+Again, take care that you use the correct device name. The partition
+must not be mounted when starting <command>syslinux</command>. This
+procedure writes a boot sector to the partition and creates the file
+<filename>ldlinux.sys</filename> which contains the boot loader code.
+
+</para>
+   </sect3>
+
+   <sect3 arch="x86">
+   <title>Adding the installer files</title>
+<para>
+
+There are two different installation variants to choose here:
+The hd-media variant needs an installation ISO file on the stick,
+to load installer modules and the base system from.
+The netboot installer however will load all that from a &debian; mirror.
+
+</para><para>
+
+According to your choice, you have to download some installer files from
+the hd-media or netboot subdirectory of
+<ulink url="&url-debian-installer;images">debian/dists/&releasename;/main/installer-&architecture;/current/images/</ulink>
+on any &debian; mirror:   
+
+<itemizedlist>
+<listitem><para>
+
+<filename>vmlinuz</filename> or <filename>linux</filename> (kernel binary)
+
+</para></listitem>
+<listitem><para>
+
+<filename>initrd.gz</filename> (initial ramdisk image)
+
+</para></listitem>
+</itemizedlist>
+
+You can choose between either the text-based version of the installer (the
+files can be found directly in hd-media or netboot) or the graphical
+version (look in the respective <filename>gtk</filename> subdirectories).
+
+</para><para>
+
+Then mount the partition
+(<userinput>mount /dev/<replaceable>sdX1</replaceable> /mnt</userinput>)
+and copy the downloaded files to the root directory of the stick.
+
+</para><para>
+
+Next you should create a text file named <filename>syslinux.cfg</filename> 
+in the root directory of the stick as configuration file for syslinux, which at
+a bare minimum should contain the following line:
+
+<informalexample><screen>
+default vmlinuz initrd=initrd.gz
+</screen></informalexample>
+
+Change the name of the kernel binary to <quote><filename>linux</filename></quote>
+if you used files from <filename>netboot</filename>.
+
+</para><para>
+
+For the graphical installer (from <filename>gtk</filename>) you should add
+<userinput>vga=788</userinput> at the end of the line. Other parameters can be
+appended as desired.
+
+</para><para>
+
+To enable the boot prompt to permit further parameter appending, add a
+<userinput>prompt 1</userinput> line.
+
+</para><para>
+
+If you used files from <filename>hd-media</filename>, you should now copy the
+ISO file of a &debian; installation image onto the stick. (For the
+<filename>netboot</filename> variant this is not needed.)
+
+</para><para>
+
+You can use either a netinst or a full CD/DVD image (see
+<xref linkend="official-cdrom"/>). Be sure to select one that fits on your stick.
+Note that the <quote>netboot <filename>mini.iso</filename></quote> image is
+not usable for this purpose.
+
+</para><para>
+
+When you are done, unmount the USB memory stick
+(<userinput>umount /mnt</userinput>).
+
+</para>
+   </sect3>

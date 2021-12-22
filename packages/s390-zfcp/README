@@ -1,0 +1,118 @@
+= FCP device management for the Debian Installer =
+
+***********************************************************************
+Debian Installer module to configure FCP devices to install Debian
+Linux instances on FC-attached SCSI devices on Linux on z Systems.
+***********************************************************************
+
+Using the FCP device configuration module
+-----------------------------------------
+You can use the FCP device configuration module in two different ways:
+
+1. Configuring FCP devices interactively
+2. Configuring FCP devices through preseeding
+
+Configuring FCP devices interactively
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+When the FCP device configuration module starts, it scans the
+CCW bus for FCP devices.  If it detects FCP devices, a panel
+appears to let the user select a particular FCP device for
+configuration.
+
+After the user selected a particular FCP device for configuration,
+the module enables the FCP device first.
+
+After the FCP device is active, the module checks if the FCP devices
+uses N_Port ID virtualization.  If the FCP device uses N_Port ID
+virtualization and automatic LUN scanning is switched on (the default
+setting), no further user configuration steps are required.
+The FCP device becomes configured.
+
+If the FCP does not use N_Port ID virtualization or automatic LUN
+scanning is switched off, the user is requested to specify LUNs.
+To add LUNs, the user must specify the target port (WWPN) and the
+logical unit number (LUN) as pair, WWPN:LUN.  The user can add
+numerous LUNs and, if necessary, can also remove them.  The specified
+LUNs will be attached to the system and the FCP device configuration
+module writes the respective configuration file.
+
+Configuring FCP devices through preseeding
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Use the *s390-zfcp/zfcp* variable to specify one or more FCP devices
+to be configured.  With this variable, you specify a comma-separated
+list of entries.  An entry can be either the bus-ID of an FCP device
+or a combination of the bus-ID of an FCP device followed by the WWPN
+and LUN, each delimited by a colon.
+
+For example:
+
+	0.0.1234,0.0.5678:0x2005000e11159c32:0x12345678000000
+
+The bus-ID for an FCP device is sufficient if
+
+1. the FCP device uses N_Port ID virtualization and
+2. automatic LUN scanning is switched on (default)
+
+You have to specify triplets consisting of the bus-ID of the FCP device,
+WWPN, and LUN in any other case.  Note that the FCP device configuration
+module fails if an entry specified with the *s390-zfcp/zfcp* variable is
+not valid.  An error message which describes the error is written to the
+syslog.
+
+
+Additional installation considerations
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After you completed and configured your FC-attached SCSI devices,
+consider to set up multipath.  To prevent single path failures,
+install your Linux instance on those multipath devices.
+
+Note that it is sufficient to install on multipath devices even
+if there is only a single path available.  Later, you can extend
+your multipath setup and configure additional paths.  Note that
+configuring multipath later, on already installed Linux instances,
+is typically complex.
+
+
+Controlling the FCP device configuration behavior
+-------------------------------------------------
+You can control different aspects of the FCP device configuration
+through kernel and module parameters.  The FCP device configuration
+module does not change any of the kernel and module parameters
+described below.
+
+scsi_mod.scan
+~~~~~~~~~~~~~
+The *scsi_mod.scan* module parameter controls the behavior of the SCSI
+module when processing new target ports and LUN attachments.  Typical
+values are *sync* for synchronous and *async* for asynchronous processing.
+For FCP devices, *sync* is the preferred setting.  Note that Debian kernel
+might have a different value assigned.  For asynchronous processing, the
+FCP device configuration module must wait until a LUN becomes visible.
+This might cause timeouts, in particular, when preseeding is used.  If you
+experience timeouts, specify *sync* for *scsi_mod.scan*.
+
+cio_ignore
+~~~~~~~~~~
+Use the *cio_ignore* kernel parameter to limit the number of FCP devices
+that are visible to the FCP device configuration module.  The FCP device
+configuration module does not check nor remove FCP from the cio_ignore
+blacklist.  Note that Debian does not include support for managing
+cio_ignore blacklists.  So you can use this kernel parameter in general
+to limit the number of CCW devices visible to the Debian Installer and
+the Linux instance to be installed.
+
+zfcp.allow_lun_scan
+~~~~~~~~~~~~~~~~~~~
+Use the *zfcp.allow_lun_scan* module parameter to control the automatic
+LUN scanning for FCP devices with N_Port ID virtualization.   The FCP
+device configuration module checks this kernel parameter at startup.
+Automatic LUN scanning is enabled by default and there is no particular
+reason to turn it off.
+
+
+References
+----------
+- Device Drivers, Features, and Commands (SC33-8411-28)
+  http://public.dhe.ibm.com/software/dw/linux390/docu/l4n2dd28.pdf
+- How to use FC-attached SCSI devices with Linux on z Systems (SC33-8413-08)
+  http://public.dhe.ibm.com/software/dw/linux390/docu/l4n0sg08.pdf

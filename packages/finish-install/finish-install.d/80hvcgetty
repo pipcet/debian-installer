@@ -1,0 +1,29 @@
+#!/bin/sh
+
+# finish-install.d/80hvcgetty
+# Copyright 2019 Karsten Merker <merker@debian.org>
+# Licensed under GPLv2
+
+# On riscv64 systems the SBI (system firmware) provides console I/O
+# functions ("SBI console") that are made available by the Linux kernel
+# as /dev/ttyhvc0.  The physical console device behind the SBI console
+# is usually the first serial console in the system (/dev/ttyS0), i.e.
+# /dev/ttyhvc0 (indirectly over an SBI function) and /dev/ttyS0 (directly
+# over a native Linux serial driver) access the same physical hardware,
+# therefore only one of them may be in use at any point in time.
+#
+# Systemd by default starts a getty on both /dev/ttyS0 and /dev/ttyhvc0
+# which causes a problem in this case, so we have to explicitly disable
+# the getty on /dev/ttyhvc0 on riscv64 systems.
+
+log() {
+	logger -t finish-install "$@"
+}
+
+case "$(archdetect)" in
+	riscv64/*)
+		log "Disabling getty on /dev/ttyhvc0"
+		chroot /target ln -sf /dev/null /etc/systemd/system/serial-getty@hvc0.service
+		exit 0
+		;;
+esac

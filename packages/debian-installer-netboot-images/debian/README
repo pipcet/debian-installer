@@ -1,0 +1,20 @@
+debian-installer-netboot-images for Debian
+------------------------------------------
+
+  * This package contains the netboot images for all architectures that
+    have netboot support in Debian Installer. Currently, this includes
+    all officially supported architectures except s390x.
+
+  * Note about versioning:
+     - This package's version is simply the version of the d-i netboot
+       images it fetches and ships.
+     - Since d-i can be binNMU'd in stable (usually to get built against
+       a newer kernel in proposed-updates, when no source changes are
+       planned for stable), its version ends with +bN; using the exact
+       same version for this package wouldn't work too well because a
+       couple of assumptions are made in the Debian infrastructure
+       (notably in dak) when a binNMU-like version number is seen. To
+       work around those, the .bN suffix is used instead of the usual
+       +bN suffix.
+
+ -- Cyril Brulebois <kibi@debian.org>  Fri, 11 Oct 2013 00:10:43 +0200

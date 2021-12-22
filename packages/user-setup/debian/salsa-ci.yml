@@ -1,0 +1,9 @@
+include:
+  - https://salsa.debian.org/salsa-ci-team/pipeline/raw/master/salsa-ci.yml
+  - https://salsa.debian.org/salsa-ci-team/pipeline/raw/master/pipeline-jobs.yml
+
+# disable piuparts, as it's pointless for udebs
+piuparts:
+  only:
+    variables:
+      - $UNDEFINED_VAR_DISABLES_THIS

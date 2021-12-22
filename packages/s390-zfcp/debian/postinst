@@ -1,0 +1,14 @@
+#! /bin/sh
+set -e
+
+#
+# Run depmod to generate module dependencies and map file
+# to automatically detect and modules when SCSI devices
+# and partitions become active
+#
+test -x /sbin/depmod && depmod -a > /dev/null 2>&1 || true
+
+#
+# Start the FCP configuration utility
+#
+exec zfcp-config

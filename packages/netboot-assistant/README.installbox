@@ -1,0 +1,74 @@
+##
+##            Debian-Installer NetBoot Assistant: installbox
+##           ================================================
+##
+## This example shows how to set up a machine with two NICs as an 'installbox'.
+## Interface wlp1s0 is connected to the internet, enp2s0 serves the installer:
+##          __
+##       __/  \__                          ┌────────────────────┐
+##      /        \   ┌────────┐     wlp1s0 │     installbox     │
+##     ( Internet )──┤ router ├─··········─┤di-netboot-assistant│
+##      \__    __/   └────────┘            └─────────┬──────────┘
+##         \__/                                      │ enp2s0
+##                                                   │
+##                                         ┌─────────┴─────────┐
+##                                         │  client computer  │
+##                                         │  to be installed  │
+##                                         └───────────────────┘
+
+## Install packages, stop dnsmasq and prevent it from starting at boot:
+# apt install di-netboot-assistant dnsmasq nftables debian-installer-netboot-amd64
+# systemctl stop dnsmasq
+# systemctl disable dnsmasq
+# cp /usr/share/doc/di-netboot-assistant/examples/dnsmasq.conf.simple \
+#                                           /etc/dnsmasq.d/netboot-installer
+
+## Prepare location for debian-installer-netboot-amd64 images:
+# mkdir -p /var/lib/tftpboot/d-i/n-pkg/
+
+## Customize the following interface variable, check all following commands, and
+## finally execute this file like 'sudo bash README.installbox' for a quick start.
+
+LAN_IF="${LAN_IF:-enp2s0}"
+
+set -ex
+
+## Make packaged installer files available:
+mount -o bind,ro /usr/lib/debian-installer/ /var/lib/tftpboot/d-i/n-pkg/
+di-netboot-assistant rebuild-menu
+di-netboot-assistant install daily
+
+## Configure the netboot interface:
+ip address add 192.168.0.10/24 dev $LAN_IF
+ip link set $LAN_IF up
+
+## Enable forwarding:
+sysctl -w net.ipv4.ip_forward=1
+
+## Configure masquerading:
+nft add table nat
+nft add chain nat prerouting { type nat hook prerouting priority 0 \; }
+nft add chain nat postrouting { type nat hook postrouting priority 100 \; }
+#nft add rule nat postrouting oifname $WAN_IF masquerade
+nft add rule nat postrouting masquerade
+
+## Provide DNS, DHCP and a TFTP server for the netboot clients:
+systemctl start dnsmasq
+
+
+##### Hints for persistent configuration:
+# echo '/usr/lib/debian-installer/  /var/lib/tftpboot/d-i/n-pkg/  none bind,ro  0  0' >> /etc/fstab
+
+# cat >> /etc/network/interfaces.d/static <<EOF
+#auto enp2s0
+#iface enp2s0 inet static
+#       address 192.168.0.10/24
+#EOF
+
+# systemctl enable dnsmasq
+
+# echo 'net.ipv4.ip_forward=1' > /etc/sysctl.d/netboot-installer.conf
+
+# systemctl enable nftables.service
+# cp /etc/nftables.conf /etc/nftables.conf.orig
+# nft list ruleset > /etc/nftables.conf

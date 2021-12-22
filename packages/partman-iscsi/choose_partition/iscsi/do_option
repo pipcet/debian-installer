@@ -1,0 +1,29 @@
+#! /bin/sh
+
+. /lib/partman/lib/base.sh
+. /lib/partman/lib/iscsi-base.sh
+
+if ! pidof iscsid >/dev/null; then
+	iscsi-start
+fi
+
+while :; do
+	db_input critical partman-iscsi/mainmenu || true
+	db_go || exit 10
+	db_get partman-iscsi/mainmenu
+	case $RET in
+	    login)	iscsi_login ;;
+	    finish)	break ;;
+	    *)
+		logger -t partman-iscsi "Unknown selection '$RET'"
+		break ;;
+	esac
+done
+
+update-dev --settle
+
+stop_parted_server
+
+restart_partman
+
+exit 0

@@ -1,0 +1,14 @@
+Source: partman-multipath
+Section: debian-installer
+Priority: optional
+Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Uploaders: Guido Guenther <agx@sigxcpu.org>
+Build-Depends: debhelper (>= 9), dh-di, po-debconf (>= 0.5.0)
+Vcs-Browser: https://salsa.debian.org/installer-team/partman-multipath
+Vcs-Git: https://salsa.debian.org/installer-team/partman-multipath.git
+
+Package: partman-multipath
+Package-Type: udeb
+Architecture: all
+Depends: ${misc:Depends}, partman-base, multipath-udeb, dmsetup-udeb
+Description: Adds support for multipath block devices to partman

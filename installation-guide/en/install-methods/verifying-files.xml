@@ -1,0 +1,71 @@
+<!-- retain these comments for translator revision tracking -->
+<!-- $Id$ -->
+
+ <sect1 id="verifying-files">
+ <title>Verifying the integrity of installation files</title>
+
+<para>
+
+You can verify the integrity of downloaded files against checksums
+provided in <filename>SHA256SUMS</filename> or <filename>SHA512SUMS</filename>
+files on Debian mirrors. You can find them in the same places as the installation images
+itself.
+Visit the following locations:
+
+</para>
+
+<itemizedlist>
+<listitem><para>
+
+<ulink url="https://cdimage.debian.org/debian-cd/current/&architecture;/iso-cd/">checksum
+files for CD images</ulink>,
+
+</para></listitem>
+<listitem><para>
+
+<ulink url="https://cdimage.debian.org/debian-cd/current/&architecture;/iso-dvd/">checksum
+files for DVD images</ulink>,
+
+</para></listitem>
+<listitem condition="has-bd-iso"><para>
+
+<ulink url="https://cdimage.debian.org/debian-cd/current/&architecture;/iso-bd/">checksum
+files for BD images</ulink>,
+
+</para></listitem>
+<listitem><para>
+
+<ulink url="http://http.us.debian.org/debian/dists/&releasename;/main/installer-&architecture;/current/images/">checksum
+files for other installation files</ulink>.
+
+</para></listitem>
+</itemizedlist>
+
+<para>
+
+To compute the checksum of a downloaded installation file, use
+
+<informalexample><screen>
+sha256sum filename.iso
+</screen></informalexample>
+
+respective
+
+<informalexample><screen>
+sha512sum filename.iso
+</screen></informalexample>
+
+and then compare the shown checksum against the corresponding one in the
+<filename>SHA256SUMS</filename> respective <filename>SHA512SUMS</filename> file.
+
+</para><para>
+
+The <ulink url="&url-debian-cd-faq;">Debian CD FAQ</ulink> has
+<ulink url="https://www.debian.org/CD/faq/index.en.html#verify">more useful information</ulink>
+on this topic (such as the script <filename>check_debian_iso</filename>, to semi-automate
+above procedure), as well as instructions, how to verify the integrity of the above checksum
+files themselves.
+
+</para>
+
+ </sect1>

@@ -1,0 +1,56 @@
+#!/usr/bin/make -f
+
+export DISTRIBUTION?=bookworm
+export DISTRIBUTION_FALLBACK?=
+export KFREEBSD_KERNEL_MAJOR?=11
+
+export VERSION?=$(shell dpkg-parsechangelog | sed -n 's/^Version: //p' | sed 's/+fixed.*//')
+
+# Don't forget to recreate debian/control after editing these lines: $ debian/rules debian/control
+export MAJOR_VERSION=12
+SUPPORTED_ARCHITECTURES = amd64 arm64 armel armhf i386 mips64el mipsel ppc64el
+UNSUPPORTED_ARCHITECTURES = hurd-i386 kfreebsd-amd64 kfreebsd-i386 mips powerpc s390x sparc
+
+%:
+	dh $@
+
+override_dh_auto_install: $(SUPPORTED_ARCHITECTURES:%=get-images-%)
+
+get-images-%:
+	if ! ./get-images.sh $*; then \
+		if [ -n "$(DISTRIBUTION_FALLBACK)" ]; then \
+			echo; echo; echo; \
+			echo "Version not found in $(DISTRIBUTION), falling back to $(DISTRIBUTION_FALLBACK)"; \
+			echo; echo; echo; \
+			sleep 5; \
+			DISTRIBUTION=$(DISTRIBUTION_FALLBACK) ./get-images.sh $*; \
+		else \
+			echo "Version not found in $(DISTRIBUTION), no fallback defined"; \
+			exit 1; \
+		fi \
+	fi
+
+override_dh_lintian: $(SUPPORTED_ARCHITECTURES:%=debian/debian-installer-${MAJOR_VERSION}-netboot-%.lintian-overrides)
+	dh_lintian
+
+debian/debian-installer-%.lintian-overrides: debian/lintian-overrides.in
+	sed -e 's/##IDENTIFIER##/$*/g' $< > $@
+
+debian/control: debian/control.in debian/control.arch.in
+	echo "###############################################" > $@
+	echo "### /!\ FILE GENERATED FROM control.in      ###" >> $@
+	echo "### Edits shall happen in debian/control.in ###" >> $@
+	echo "### Re-generate this file with:             ###" >> $@
+	echo "### $$ debian/rules debian/control           ###" >> $@
+	echo "###############################################" >> $@
+	cat $< >> $@
+	set -e;\
+	for i in ${SUPPORTED_ARCHITECTURES}; do \
+		sed -e 's/##MAJORVERSION##/${MAJOR_VERSION}/g' -e "s/##ARCH##/$$i/g" debian/control.arch.in ;\
+	done >> $@
+
+override_dh_clean:
+	dh_clean
+	rm -f debian/debian-installer-*.lintian-overrides
+
+.PHONY: debian/control

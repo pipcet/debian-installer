@@ -1,0 +1,718 @@
+# Translation of the Debian installation-guide to Czech.
+#
+# Miroslav Kure <kurem@upcase.inf.upol.cz>, 2004 - 2017.
+msgid ""
+msgstr ""
+"Project-Id-Version: d-i-manual_installation-howto\n"
+"Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
+"POT-Creation-Date: 2020-07-26 23:02+0000\n"
+"PO-Revision-Date: 2018-05-21 10:18+0200\n"
+"Last-Translator: Miroslav Kure <kurem@upcase.inf.upol.cz>\n"
+"Language-Team: \n"
+"Language: cz\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#: installation-howto.xml:5
+#, no-c-format
+msgid "Installation Howto"
+msgstr "Jak na instalaci"
+
+#. Tag: para
+#: installation-howto.xml:7
+#, no-c-format
+msgid ""
+"This document describes how to install &debian-gnu; &releasename; for the "
+"&arch-title; (<quote>&architecture;</quote>) with the new &d-i;. It is a "
+"quick walkthrough of the installation process which should contain all the "
+"information you will need for most installs. When more information can be "
+"useful, we will link to more detailed explanations in other parts of this "
+"document."
+msgstr ""
+"Tento dokument popisuje, jak nainstalovat &debian-gnu; &releasename; pro "
+"architekturu &arch-title; (<quote>&architecture;</quote>) pomocí nového "
+"instalačního programu. Jedná se o rychlého průvodce instalačním procesem, "
+"který by měl pokrýt většinu typických instalací. V případech, kdy je vhodné "
+"sdělit více informací, se odkazujeme do ostatních částí tohoto dokumentu."
+
+#. Tag: title
+#: installation-howto.xml:19
+#, no-c-format
+msgid "Preliminaries"
+msgstr "Příprava"
+
+#. Tag: para
+#: installation-howto.xml:20
+#, no-c-format
+msgid ""
+"<phrase condition=\"unofficial-build\"> The debian-installer is still in a "
+"beta state. </phrase> If you encounter bugs during your install, please "
+"refer to <xref linkend=\"submit-bug\"/> for instructions on how to report "
+"them. If you have questions which cannot be answered by this document, "
+"please direct them to the debian-boot mailing list (&email-debian-boot-"
+"list;) or ask on IRC (#debian-boot on the OFTC network)."
+msgstr ""
+"<phrase condition=\"unofficial-build\"> &d-i; je stále ve fázi testování. </"
+"phrase> Zaznamenáte-li během instalace nějaké chyby, podívejte se do <xref "
+"linkend=\"submit-bug\"/>, kde naleznete instrukce, jak je nahlásit. Pokud "
+"máte otázky, na které nemůžete nalézt odpovědi v tomto dokumentu, ptejte se "
+"v diskuzní skupině debian-boot (&email-debian-boot-list;) nebo na IRC (kanál "
+"#debian-boot v síti OFTC)."
+
+#. Tag: title
+#: installation-howto.xml:36
+#, no-c-format
+msgid "Booting the installer"
+msgstr "Zavedení instalačního programu"
+
+#. Tag: para
+#: installation-howto.xml:37
+#, fuzzy, no-c-format
+#| msgid ""
+#| "<phrase condition=\"unofficial-build\"> For some quick links to CD "
+#| "images, check out the <ulink url=\"&url-d-i;\"> &d-i; home page</ulink>. "
+#| "</phrase> The debian-cd team provides builds of CD images using &d-i; on "
+#| "the <ulink url=\"&url-debian-cd;\">Debian CD page</ulink>. For more "
+#| "information on where to get CDs, see <xref linkend=\"official-cdrom\"/>."
+msgid ""
+"<phrase condition=\"unofficial-build\"> For some quick links to installation "
+"images, check out the <ulink url=\"&url-d-i;\"> &d-i; home page</ulink>. </"
+"phrase> The debian-cd team provides builds of installation images using &d-"
+"i; on the <ulink url=\"&url-debian-cd;\">Debian CD/DVD page</ulink>. For "
+"more information on where to get installation images, see <xref linkend="
+"\"official-cdrom\"/>."
+msgstr ""
+"<phrase condition=\"unofficial-build\"> Chcete-li rychle stáhnout obrazy CD, "
+"podívejte se na <ulink url=\"&url-d-i;\">domovskou stánku &d-i;u</ulink>. </"
+"phrase> Tým debian-cd nabízí obrazy CD s &d-i;em na stránce <ulink url="
+"\"&url-debian-cd;\">Debian CD</ulink>. Více informací o získání CD naleznete "
+"v kapitole <xref linkend=\"official-cdrom\"/>."
+
+#. Tag: para
+#: installation-howto.xml:47
+#, fuzzy, no-c-format
+#| msgid ""
+#| "Some installation methods require other images than CD images. <phrase "
+#| "condition=\"unofficial-build\"> The <ulink url=\"&url-d-i;\">&d-i; home "
+#| "page</ulink> has links to other images. </phrase> <xref linkend=\"where-"
+#| "files\"/> explains how to find images on &debian; mirrors."
+msgid ""
+"Some installation methods require other images than those for optical media. "
+"<phrase condition=\"unofficial-build\"> The <ulink url=\"&url-d-i;\">&d-i; "
+"home page</ulink> has links to other images. </phrase> <xref linkend=\"where-"
+"files\"/> explains how to find images on &debian; mirrors."
+msgstr ""
+"Některé metody instalace vyžadují jiné soubory než obrazy CD. <phrase "
+"condition=\"unofficial-build\"> Odkazy na jiné soubory naleznete na <ulink "
+"url=\"&url-d-i;\">domovské stránce &d-i;u</ulink>. </phrase> Kapitola <xref "
+"linkend=\"where-files\"/> vysvětluje, jak najít na zrcadlech &debian;u ty "
+"správné obrazy."
+
+#. Tag: para
+#: installation-howto.xml:57
+#, no-c-format
+msgid ""
+"The subsections below will give the details about which images you should "
+"get for each possible means of installation."
+msgstr ""
+"Následující podkapitoly osvětlují, které obrazy byste měli použít pro který "
+"typ instalace."
+
+#. Tag: title
+#: installation-howto.xml:65
+#, no-c-format
+msgid "Optical disc"
+msgstr ""
+
+#. Tag: para
+#: installation-howto.xml:67
+#, fuzzy, no-c-format
+#| msgid ""
+#| "The netinst CD image is a popular image which can be used to install "
+#| "&releasename; with the &d-i;. This image is intended to boot from CD and "
+#| "install additional packages over a network; hence the name 'netinst'. The "
+#| "image has the software components needed to run the installer and the "
+#| "base packages to provide a minimal &releasename; system. If you'd rather, "
+#| "you can get a full size CD image which will not need the network to "
+#| "install. You only need the first CD of the set."
+msgid ""
+"The netinst CD image is a popular image which can be used to install "
+"&releasename; with the &d-i;. This installation method is intended to boot "
+"from the image and install additional packages over a network; hence the "
+"name <quote>netinst</quote>. The image has the software components needed to "
+"run the installer and the base packages to provide a minimal &releasename; "
+"system. If you'd rather, you can get a full size CD/DVD image which will not "
+"need the network to install. You only need the first image of such set."
+msgstr ""
+"Populární volbou pro instalaci &releasename; je obraz <quote>síťového</"
+"quote> CD. Tento obraz slouží k zavedení instalačního systému z CD, "
+"instalaci minimálního funkčního systému a k instalaci ostatních balíků ze "
+"sítě (proto mu říkáme <quote>síťový</quote>). Pokud byste raději nepoužili "
+"síť, můžete si stáhnout i plné CD, které k instalaci síť nepotřebuje. (Z "
+"celé sady vám bude stačit pouze první obraz.)"
+
+#. Tag: para
+#: installation-howto.xml:77
+#, fuzzy, no-c-format
+#| msgid ""
+#| "Download whichever type you prefer and burn it to a CD. <phrase arch="
+#| "\"any-x86\">To boot the CD, you may need to change your BIOS "
+#| "configuration, as explained in <xref linkend=\"bios-setup\"/>.</phrase> "
+#| "<phrase arch=\"powerpc\"> To boot a PowerMac from CD, press the "
+#| "<keycap>c</keycap> key while booting. See <xref linkend=\"boot-cd\"/> for "
+#| "other ways to boot from CD. </phrase>"
+msgid ""
+"Download whichever type you prefer and burn it to an optical disc. <phrase "
+"arch=\"any-x86\">To boot the disc, you may need to change your BIOS/UEFI "
+"configuration, as explained in <xref linkend=\"bios-setup\"/>.</phrase> "
+"<phrase arch=\"powerpc\"> To boot a PowerMac from CD, press the <keycap>c</"
+"keycap> key while booting. See <xref linkend=\"boot-cd\"/> for other ways to "
+"boot from CD. </phrase>"
+msgstr ""
+"Stáhněte si preferovaný obraz a vypalte jej na CD. <phrase arch=\"any-x86\"> "
+"Pro zavedení z CD možná budete muset změnit nastavení v BIOSu, viz <xref "
+"linkend=\"bios-setup\"/>. </phrase><phrase arch=\"powerpc\"> Pro zavedení "
+"PowerMacu z CD stiskněte během zavádění klávesu <keycap>c</keycap>. Další "
+"možnosti zavádění z CD naleznete v <xref linkend=\"boot-cd\"/>. </phrase>"
+
+#. Tag: title
+#: installation-howto.xml:91
+#, no-c-format
+msgid "USB memory stick"
+msgstr "USB Memory Stick"
+
+#. Tag: para
+#: installation-howto.xml:92
+#, no-c-format
+msgid ""
+"It's also possible to install from removable USB storage devices. For "
+"example a USB keychain can make a handy &debian; install medium that you can "
+"take with you anywhere."
+msgstr ""
+"Instalovat můžete také z výměnných USB zařízení. Například USB klíčenka je "
+"šikovným instalačním zařízením, které můžete nosit stále s sebou a velmi "
+"rychle tak rozšiřovat řady počítačů s &debian;em."
+
+#. Tag: para
+#: installation-howto.xml:98
+#, fuzzy, no-c-format
+#| msgid ""
+#| "The easiest way to prepare your USB memory stick is to download any "
+#| "Debian CD or DVD image that will fit on it, and write the CD image "
+#| "directly to the memory stick. Of course this will destroy anything "
+#| "already on the memory stick. This works because Debian CD images are "
+#| "\"isohybrid\" images that can boot both from CD and from USB drives."
+msgid ""
+"The easiest way to prepare your USB memory stick is to download any Debian "
+"CD or DVD image that will fit on it, and write the image directly to the "
+"memory stick. Of course this will destroy anything already on the stick. "
+"This works because Debian CD/DVD images are <quote>isohybrid</quote> images "
+"that can boot both from optical and USB drives."
+msgstr ""
+"Nejjednodušší cestou k vytvoření USB klíčenky s instalačním systémem je "
+"stáhnout libovolný CD/DVD obraz s instalací Debianu, který se na klíčenku "
+"vejde a nakopírovat ho přímo na klíčenku. Tím samozřejmě zrušíte všechna "
+"data, která na ní byla. Celé to funguje proto, že obrazy instalačních CD "
+"jsou <quote>hybridní</quote> a umožňují zavádění jak z CD, tak z USB."
+
+#. Tag: para
+#: installation-howto.xml:106
+#, no-c-format
+msgid ""
+"The easiest way to prepare your USB memory stick is to download <filename>hd-"
+"media/boot.img.gz</filename>, and use gunzip to extract the 1 GB image from "
+"that file. Write this image directly to your memory stick, which must be at "
+"least 1 GB in size. Of course this will destroy anything already on the "
+"memory stick. Then mount the memory stick, which will now have a FAT "
+"filesystem on it. Next, download a &debian; netinst CD image, and copy that "
+"file to the memory stick; any filename is ok as long as it ends in <literal>."
+"iso</literal>."
+msgstr ""
+"USB klíčenku připravíte jednoduše. Nejprve stáhněte soubor <filename>hd-"
+"media/boot.img.gz</filename>, rozbalte jej a výsledný obraz zapište přímo na "
+"1 GB klíčenku. Tím samozřejmě zrušíte všechna data, která na ní byla &mdash; "
+"na jejich místě se nyní usadil souborový systém FAT obsahující několik "
+"souborů. Souborový systém připojte a nakopírujte na něj obraz síťového CD. "
+"Na jméně obrazu nezáleží, jediná podmínka je, že musí končit na <filename>."
+"iso</filename>."
+
+#. Tag: para
+#: installation-howto.xml:117
+#, no-c-format
+msgid ""
+"There are other, more flexible ways to set up a memory stick to use the "
+"debian-installer, and it's possible to get it to work with smaller memory "
+"sticks. For details, see <xref linkend=\"boot-usb-files\"/>."
+msgstr ""
+"Funkční klíčenku s instalačním programem lze vyrobit více cestami, z nichž "
+"některé jsou popsány v kapitole <xref linkend=\"boot-usb-files\"/>. "
+"(Například návod, jak použít klíčenku menší než 256 MB.)"
+
+#. Tag: para
+#: installation-howto.xml:123
+#, fuzzy, no-c-format
+#| msgid ""
+#| "Some BIOSes can boot USB storage directly, and some cannot. You may need "
+#| "to configure your BIOS to boot from a <quote>removable drive</quote> or "
+#| "even a <quote>USB-ZIP</quote> to get it to boot from the USB device. For "
+#| "helpful hints and details, see <xref linkend=\"usb-boot-x86\"/>."
+msgid ""
+"While booting from USB storage is quite common on UEFI systems, this is "
+"somewhat different in the older BIOS world. Some BIOSes can boot USB storage "
+"directly, and some cannot. You may need to configure your BIOS/UEFI to "
+"enable <quote>USB legacy support</quote> or <quote>Legacy support</quote>. "
+"The boot device selection menu should show <quote>removable drive</quote> or "
+"<quote>USB-HDD</quote> to get it to boot from the USB device. For helpful "
+"hints and details, see <xref linkend=\"usb-boot-x86\"/>."
+msgstr ""
+"Některé BIOSy umí zavádět přímo z USB, jiným je třeba pomoci. Hledejte menu, "
+"které povolí zavádění z <quote>removable drive</quote> nebo <quote>USB-ZIP</"
+"quote>. Užitečné tipy naleznete v kapitole <xref linkend=\"usb-boot-x86\"/>."
+
+#. Tag: para
+#: installation-howto.xml:134
+#, no-c-format
+msgid ""
+"Booting Macintosh systems from USB storage devices involves manual use of "
+"Open Firmware. For directions, see <xref linkend=\"usb-boot-powerpc\"/>."
+msgstr ""
+"Zavádění systémů Macintosh z USB zařízení vyžaduje ruční zásah do Open "
+"Firmwaru. Postup naleznete v <xref linkend=\"usb-boot-powerpc\"/>."
+
+#. Tag: title
+#: installation-howto.xml:143
+#, no-c-format
+msgid "Booting from network"
+msgstr "Zavedení ze sítě"
+
+#. Tag: para
+#: installation-howto.xml:144
+#, no-c-format
+msgid ""
+"It's also possible to boot &d-i; completely from the net. The various "
+"methods to netboot depend on your architecture and netboot setup. The files "
+"in <filename>netboot/</filename> can be used to netboot &d-i;."
+msgstr ""
+"Další z možností, jak zavést &d-i; je pomocí sítě. Konkrétní postup závisí "
+"na vaší architektuře a síťovém prostředí. Obecně budete potřebovat soubory z "
+"adresáře <filename>netboot/</filename>."
+
+#. Tag: para
+#: installation-howto.xml:150
+#, no-c-format
+msgid ""
+"The easiest thing to set up is probably PXE netbooting. Untar the file "
+"<filename>netboot/pxeboot.tar.gz</filename> into <filename>/srv/tftp</"
+"filename> or wherever is appropriate for your tftp server. Set up your DHCP "
+"server to pass filename <filename>pxelinux.0</filename> to clients, and with "
+"luck everything will just work. For detailed instructions, see <xref linkend="
+"\"install-tftp\"/>."
+msgstr ""
+"Nejjednodušší cesta je asi přes PXE. Do adresáře <filename>/srv/tftp</"
+"filename> (nebo jiného podle vašeho tftp serveru) rozbalte soubor "
+"<filename>netboot/pxeboot.tar.gz</filename>. Nastavte DHCP server, aby "
+"klientům předal název souboru <filename>pxelinux.0</filename> a s trochou "
+"štěstí bude vše fungovat samo. Podrobnější informace naleznete v kapitole "
+"<xref linkend=\"install-tftp\"/>."
+
+#. Tag: title
+#: installation-howto.xml:164
+#, no-c-format
+msgid "Booting from hard disk"
+msgstr "Zavedení z pevného disku"
+
+#. Tag: para
+#: installation-howto.xml:165
+#, fuzzy, no-c-format
+#| msgid ""
+#| "It's possible to boot the installer using no removable media, but just an "
+#| "existing hard disk, which can have a different OS on it. Download "
+#| "<filename>hd-media/initrd.gz</filename>, <filename>hd-media/vmlinuz</"
+#| "filename>, and a &debian; CD image to the top-level directory of the hard "
+#| "disk. Make sure that the CD image has a filename ending in <literal>.iso</"
+#| "literal>. Now it's just a matter of booting linux with the initrd. "
+#| "<phrase arch=\"x86\"> <xref linkend=\"boot-initrd\"/> explains one way to "
+#| "do it. </phrase>"
+msgid ""
+"It's possible to boot the installer using no removable media, but just an "
+"existing hard disk, which can have a different OS on it. Download "
+"<filename>hd-media/initrd.gz</filename>, <filename>hd-media/vmlinuz</"
+"filename>, and a &debian; CD/DVD image to the top-level directory of the "
+"hard disk. Make sure that the image has a filename ending in <literal>.iso</"
+"literal>. Now it's just a matter of booting linux with the initrd. <phrase "
+"arch=\"x86\"> <xref linkend=\"boot-initrd\"/> explains one way to do it. </"
+"phrase>"
+msgstr ""
+"Také je možné spustit instalační systém z pevného disku. Stáhněte si soubory "
+"<filename>hd-media/initrd.gz</filename>, <filename>hd-media/vmlinuz</"
+"filename> a obraz instalačního CD do kořenového adresáře pevného disku. "
+"Ujistěte se, že obraz CD má příponu <filename>.iso</filename>. Nyní již jen "
+"stačí zavést stažené jádro vmlinuz spolu s jeho ramdiskem initrd. <phrase "
+"arch=\"x86\"> Postup naleznete v kapitole <xref linkend=\"boot-initrd\"/>. </"
+"phrase>"
+
+#. Tag: title
+#: installation-howto.xml:182
+#, no-c-format
+msgid "Installation"
+msgstr "Instalace"
+
+#. Tag: para
+#: installation-howto.xml:183
+#, no-c-format
+msgid ""
+"Once the installer starts, you will be greeted with an initial screen. Press "
+"&enterkey; to boot, or read the instructions for other boot methods and "
+"parameters (see <xref linkend=\"boot-parms\"/>)."
+msgstr ""
+"Po startu instalačního programu budete uvítáni úvodní obrazovkou. Nyní si "
+"můžete buď přečíst návod pro různé způsoby zavádění (viz <xref linkend="
+"\"boot-parms\"/>), nebo jednoduše stisknout &enterkey; a zavést instalaci."
+
+#. Tag: para
+#: installation-howto.xml:189
+#, no-c-format
+msgid ""
+"After a while you will be asked to select your language. Use the arrow keys "
+"to pick a language and press &enterkey; to continue. Next you'll be asked to "
+"select your country, with the choices including countries where your "
+"language is spoken. If it's not on the short list, a list of all the "
+"countries in the world is available."
+msgstr ""
+"Za chvíli budete vyzváni k výběru jazyka, ve kterém má instalace probíhat. "
+"Po seznamu se můžete pohybovat šipkami, pro pokračování stiskněte "
+"&enterkey;. Dále budete dotázáni na výběr země. Pokud není požadovaná země v "
+"zobrazené nabídce, můžete přejít do úplného seznamu zemí světa."
+
+#. Tag: para
+#: installation-howto.xml:197
+#, no-c-format
+msgid ""
+"You may be asked to confirm your keyboard layout. Choose the default unless "
+"you know better."
+msgstr ""
+"Můžete být vyzváni na potvrzení klávesnicového rozložení. Pokud si nejste "
+"jisti, ponechte výchozí návrh."
+
+#. Tag: para
+#: installation-howto.xml:202
+#, fuzzy, no-c-format
+#| msgid ""
+#| "Now sit back while debian-installer detects some of your hardware, and "
+#| "loads the rest of itself from CD, floppy, USB, etc."
+msgid ""
+"Now sit back while debian-installer detects some of your hardware, and loads "
+"the rest of the installation image."
+msgstr ""
+"Nyní se pohodlně usaďte a nechte &d-i;, aby rozpoznal základní hardware a "
+"nahrál zbytek sebe sama z CD, disket, USB, apod."
+
+#. Tag: para
+#: installation-howto.xml:207
+#, no-c-format
+msgid ""
+"Next the installer will try to detect your network hardware and set up "
+"networking by DHCP. If you are not on a network or do not have DHCP, you "
+"will be given the opportunity to configure the network manually."
+msgstr ""
+"Instalační program se pokusí rozpoznat síťová zařízení a nastavit síťování "
+"přes DHCP. Pokud nejste připojeni k síti, nebo pokud nepoužíváte DHCP, "
+"budete mít možnost nastavit síť ručně."
+
+#. Tag: para
+#: installation-howto.xml:213
+#, fuzzy, no-c-format
+#| msgid ""
+#| "Setting up your clock and time zone is followed by the creation of user "
+#| "accounts. By default you are asked to provide a password for the "
+#| "<quote>root</quote> (administrator) account and information necessary to "
+#| "create one regular user account. If you do not specify a password for the "
+#| "<quote>root</quote> user, this account will be disabled but the "
+#| "<command>sudo</command> package will be installed later to enable "
+#| "administrative tasks to be carried out on the new system. By default, the "
+#| "first user created on the system will be allowed to use the "
+#| "<command>sudo</command> command to become root."
+msgid ""
+"Setting up the network is followed by the creation of user accounts. By "
+"default you are asked to provide a password for the <quote>root</quote> "
+"(administrator) account and information necessary to create one regular user "
+"account. If you do not specify a password for the <quote>root</quote> user, "
+"this account will be disabled but the <command>sudo</command> package will "
+"be installed later to enable administrative tasks to be carried out on the "
+"new system. By default, the first user created on the system will be allowed "
+"to use the <command>sudo</command> command to become root."
+msgstr ""
+"Následovat bude vytvoření uživatelských účtů, které po vás obvykle chce "
+"zadat heslo pro správce systému (uživatel <quote>root</quote>) a několik "
+"informací nutných pro vytvoření účtu běžného uživatele. Jestliže necháte "
+"heslo uživatele <quote>root</quote> prázdné, bude tento účet zakázán. Abyste "
+"mohli systém spravovat i bez uživatele root, nainstaluje a nastaví se balík "
+"<command>sudo</command> tak, aby měl první zadaný uživatel možnost zvýšit "
+"svá oprávnění."
+
+#. Tag: para
+#: installation-howto.xml:224
+#, no-c-format
+msgid ""
+"The next step is setting up your clock and time zone. The installer will try "
+"to contact a time server on the Internet to ensure the clock is set "
+"correctly. The time zone is based on the country selected earlier and the "
+"installer will only ask to select one if a country has multiple zones."
+msgstr ""
+"Dalším krokem je nastavení hodin a časového pásma. Instalátor se pokusí "
+"spojit s časovým serverem na Internetu a nastavit přesný čas. Časové pásmo "
+"je vybráno automaticky podle země, kterou jste zvolili dříve. Leží-li země v "
+"několika časových pásmech, dostanete na výběr."
+
+#. Tag: para
+#: installation-howto.xml:231
+#, no-c-format
+msgid ""
+"Now it is time to partition your disks. First you will be given the "
+"opportunity to automatically partition either an entire drive, or available "
+"free space on a drive (see <xref linkend=\"partman-auto\"/>). This is "
+"recommended for new users or anyone in a hurry. If you do not want to "
+"autopartition, choose <guimenuitem>Manual</guimenuitem> from the menu."
+msgstr ""
+"Nyní je správný čas pro rozdělení disků. Nejprve vám bude nabídnuta možnost "
+"automaticky rozdělit celý disk nebo dostupné volné místo na disku (viz "
+"kapitola <xref linkend=\"partman-auto\"/>). Toto je doporučený způsob "
+"rozdělení disku pro začátečníky nebo pro lidi ve spěchu. Pokud nechcete "
+"využít této možnosti, vyberte z menu <guimenuitem>Ruční</guimenuitem> "
+"rozdělení."
+
+#. Tag: para
+#: installation-howto.xml:239
+#, no-c-format
+msgid ""
+"If you have an existing DOS or Windows partition that you want to preserve, "
+"be very careful with automatic partitioning. If you choose manual "
+"partitioning, you can use the installer to resize existing FAT or NTFS "
+"partitions to create room for the &debian; install: simply select the "
+"partition and specify its new size."
+msgstr ""
+"Máte-li stávající DOSové nebo windowsové oblasti, které chcete zachovat, "
+"buďte s automatickým dělením velmi opatrní. Pokud vyberete ruční dělení, "
+"můžete přímo v instalačním programu měnit velikost stávajících NTFS a FAT "
+"oblastí a vytvořit tak místo pro &debian;; jednoduše vyberte oblast a "
+"zadejte její novou velikost."
+
+#. Tag: para
+#: installation-howto.xml:246
+#, no-c-format
+msgid ""
+"On the next screen you will see your partition table, how the partitions "
+"will be formatted, and where they will be mounted. Select a partition to "
+"modify or delete it. If you did automatic partitioning, you should just be "
+"able to choose <guimenuitem>Finish partitioning and write changes to disk</"
+"guimenuitem> from the menu to use what it set up. Remember to assign at "
+"least one partition for swap space and to mount a partition on <filename>/</"
+"filename>. For more detailed information on how to use the partitioner, "
+"please refer to <xref linkend=\"di-partition\"/>; the appendix <xref linkend="
+"\"partitioning\"/> has more general information about partitioning."
+msgstr ""
+"Na další obrazovce uvidíte svou tabulku oblastí s informacemi o tom, jak "
+"budou oblasti formátovány a kam budou připojeny. Pro změnu nastavení nebo "
+"pro smazání oblasti ji jednoduše vyberte a proveďte požadovanou akci. Pokud "
+"jste využili automatické dělení, mělo by stačit vybrat <guimenuitem>Ukončit "
+"rozdělování a zapsat změny na disk</guimenuitem>. Nezapomeňte vytvořit "
+"alespoň jednu oblast pro odkládací prostor a připojit kořenovou oblast na "
+"<filename>/</filename>. Více informací o dělení disku naleznete v kapitole "
+"<xref linkend=\"di-partition\"/>, obecnější informace se nachází v dodatku "
+"<xref linkend=\"partitioning\"/>."
+
+#. Tag: para
+#: installation-howto.xml:259
+#, no-c-format
+msgid ""
+"Now &d-i; formats your partitions and starts to install the base system, "
+"which can take a while. That is followed by installing a kernel."
+msgstr ""
+"Nyní &d-i; naformátuje oblasti a zahájí instalaci základního systému, což "
+"může chvíli trvat. Následovat bude instalace jádra."
+
+#. Tag: para
+#: installation-howto.xml:264
+#, no-c-format
+msgid ""
+"The base system that was installed earlier is a working, but very minimal "
+"installation. To make the system more functional the next step allows you to "
+"install additional packages by selecting tasks. Before packages can be "
+"installed <classname>apt</classname> needs to be configured as that defines "
+"from where the packages will be retrieved. The <quote>Standard system</"
+"quote> task will be selected by default and should normally be installed. "
+"Select the <quote>Desktop environment</quote> task if you would like to have "
+"a graphical desktop after the installation. See <xref linkend=\"pkgsel\"/> "
+"for additional information about this step."
+msgstr ""
+"Základní systém je nyní funkční, avšak značně minimalistický. Další krok vám "
+"tedy umožní doinstalovat další software pomocí předpřipravených úloh. Aby "
+"systém věděl, odkud se mají balíky se softwarem nainstalovat, musí se "
+"nejprve nastavit nástroj <classname>apt</classname>, který je za instalaci "
+"balíků zodpovědný. Ve výchozím nastavení bude k instalaci vybrána úloha "
+"<quote>Standardní systém</quote>, která doinstaluje užitečný software pro "
+"textovou konzolu. Jestliže budete chtít nainstalovat grafické prostředí, "
+"zvolte úlohu <quote>Desktopové prostředí</quote>. Více o tomto kroku "
+"naleznete v kapitole <xref linkend=\"pkgsel\"/>."
+
+#. Tag: para
+#: installation-howto.xml:276
+#, fuzzy, no-c-format
+#| msgid ""
+#| "The last step is to install a boot loader. If the installer detects other "
+#| "operating systems on your computer, it will add them to the boot menu and "
+#| "let you know. <phrase arch=\"any-x86\">By default GRUB will be installed "
+#| "to the master boot record of the first harddrive, which is generally a "
+#| "good choice. You'll be given the opportunity to override that choice and "
+#| "install it elsewhere. </phrase>"
+msgid ""
+"The last step is to install a boot loader. If the installer detects other "
+"operating systems on your computer, it will add them to the boot menu and "
+"let you know. <phrase arch=\"any-x86\">By default GRUB will be installed to "
+"the UEFI partition/boot record of the primary drive, which is generally a "
+"good choice. You'll be given the opportunity to override that choice and "
+"install it elsewhere. </phrase>"
+msgstr ""
+"Posledním krokem je instalace zavaděče. Pokud instalátor rozpozná na "
+"počítači jiné operační systémy, přidá je do zaváděcího menu. <phrase arch="
+"\"any-x86\"> Implicitně se GRUB nainstaluje do hlavního zaváděcího záznamu "
+"prvního disku. K dispozici však máte i možnost instalovat zavaděč kamkoliv "
+"jinam. </phrase>"
+
+#. Tag: para
+#: installation-howto.xml:286
+#, no-c-format
+msgid ""
+"&d-i; will now tell you that the installation has finished. Remove the cdrom "
+"or other boot media and hit &enterkey; to reboot your machine. It should "
+"boot up into the newly installed system and allow you to log in. This is "
+"explained in <xref linkend=\"boot-new\"/>."
+msgstr ""
+"&d-i; vám oznámí, že instalace skončila. Vyjměte zaváděcí média (např. CD) a "
+"restartujte počítač klávesou &enterkey;. Měl by se spustit váš nově "
+"nainstalovaný systém. Tato část je popsaná v <xref linkend=\"boot-new\"/>."
+
+#. Tag: para
+#: installation-howto.xml:293
+#, no-c-format
+msgid ""
+"If you need more information on the install process, see <xref linkend=\"d-i-"
+"intro\"/>."
+msgstr ""
+"Pokud potřebujete k instalaci více informací, přečtěte si <xref linkend=\"d-"
+"i-intro\"/>."
+
+#. Tag: title
+#: installation-howto.xml:302
+#, no-c-format
+msgid "Send us an installation report"
+msgstr "Pošlete nám zprávu o instalaci"
+
+#. Tag: para
+#: installation-howto.xml:303
+#, no-c-format
+msgid ""
+"If you successfully managed an installation with &d-i;, please take time to "
+"provide us with a report. The simplest way to do so is to install the "
+"reportbug package (<command>apt install reportbug</command>), configure "
+"<classname>reportbug</classname> as explained in <xref linkend=\"mail-"
+"outgoing\"/>, and run <command>reportbug installation-reports</command>."
+msgstr ""
+"Pokud jste zdárně dokončili instalaci &debian;u, najděte si chvilku a "
+"pošlete nám o tom krátkou zprávu. Nejjednodušší možností je nainstalovat si "
+"balík <classname>reportbug</classname> (<command>apt install reportbug</"
+"command>), nastavit jej podle <xref linkend=\"mail-outgoing\"/> a spustit "
+"příkaz <command>reportbug installation-reports</command>."
+
+#. Tag: para
+#: installation-howto.xml:313
+#, no-c-format
+msgid ""
+"If you did not complete the install, you probably found a bug in debian-"
+"installer. To improve the installer it is necessary that we know about them, "
+"so please take the time to report them. You can use an installation report "
+"to report problems; if the install completely fails, see <xref linkend="
+"\"problem-report\"/>."
+msgstr ""
+"Pokud instalaci nedokončili, pravděpodobně jste narazili na chybu v &d-i;u. "
+"Abychom mohli tuto chybu odstranit a instalátor vylepšit, potřebujeme o "
+"problémech vědět. Najděte si prosím chvilku a nalezené chyby nahlaste (viz "
+"<xref linkend=\"problem-report\"/>)."
+
+#. Tag: title
+#: installation-howto.xml:325
+#, no-c-format
+msgid "And finally&hellip;"
+msgstr "A na závěr&hellip;"
+
+#. Tag: para
+#: installation-howto.xml:326
+#, no-c-format
+msgid ""
+"We hope that your &debian; installation is pleasant and that you find "
+"&debian; useful. You might want to read <xref linkend=\"post-install\"/>."
+msgstr ""
+"Doufáme, že se vám instalace &debian;u líbí a že shledáváte &debian; "
+"užitečným. Nyní byste si možná chtěli přečíst kapitolu <xref linkend=\"post-"
+"install\"/>."
+
+#~ msgid "CDROM"
+#~ msgstr "CDROM"
+
+#~ msgid "Floppy"
+#~ msgstr "Diskety"
+
+#~ msgid ""
+#~ "If you can't boot from CD, you can download floppy images to install "
+#~ "&debian;. You need the <filename>floppy/boot.img</filename>, the "
+#~ "<filename>floppy/root.img</filename> and one or more of the driver disks."
+#~ msgstr ""
+#~ "Nemůžete-li zavádět z CD, můžete si stáhnout obrazy disket. Budete "
+#~ "potřebovat soubor <filename>floppy/boot.img</filename>, <filename>floppy/"
+#~ "root.img</filename> a některý z obrazů s ovladači."
+
+#~ msgid ""
+#~ "The boot floppy is the one with <filename>boot.img</filename> on it. This "
+#~ "floppy, when booted, will prompt you to insert a second floppy &mdash; "
+#~ "use the one with <filename>root.img</filename> on it."
+#~ msgstr ""
+#~ "Zaváděcí disketa bude ta, na kterou zapíšete <filename>boot.img</"
+#~ "filename>. Po zavedení jádra z této diskety budete požádáni o vložení "
+#~ "druhé diskety (je na ní obraz <filename>root.img</filename>)."
+
+#~ msgid ""
+#~ "If you're planning to install over the network, you will usually need the "
+#~ "<filename>floppy/net-drivers-1.img</filename>. For PCMCIA or USB "
+#~ "networking, and some less common network cards, you will also need a "
+#~ "second driver floppy, <filename>floppy/net-drivers-2.img</filename>."
+#~ msgstr ""
+#~ "Chystáte-li se instalovat ze sítě, budete potřebovat i disketu "
+#~ "<filename>floppy/net-drivers-1.img</filename>. Pro méně rozšířené síťové "
+#~ "karty nebo pro síťování přes PCMCIA nebo USB budete potřebovat i druhou "
+#~ "disketu s ovladači <filename>floppy/net-drivers-2.img</filename>."
+
+#~ msgid ""
+#~ "If you have a CD, but cannot boot from it, then boot from floppies and "
+#~ "use <filename>floppy/cd-drivers.img</filename> on a driver disk to "
+#~ "complete the install using the CD."
+#~ msgstr ""
+#~ "Máte-li CD, ale nemůžete z něj zavádět, zaveďte instalační systém z "
+#~ "disket a s pomocí ovladačů na <filename>floppy/cd-drivers.img</filename> "
+#~ "připojte instalační CD. Dále postupujte jako u běžné instalace z CD."
+
+#~ msgid ""
+#~ "Floppy disks are one of the least reliable media around, so be prepared "
+#~ "for lots of bad disks (see <xref linkend=\"unreliable-floppies\"/>). Each "
+#~ "<filename>.img</filename> file you downloaded goes on a single floppy; "
+#~ "you can use the dd command to write it to /dev/fd0 or some other means "
+#~ "(see <xref linkend=\"create-floppy\"/> for details). Since you'll have "
+#~ "more than one floppy, it's a good idea to label them."
+#~ msgstr ""
+#~ "Diskety jsou jedním z nejnespolehlivějších dostupných médií, takže buďte "
+#~ "připraveni na možné problémy (viz <xref linkend=\"unreliable-floppies\"/"
+#~ ">). Každý soubor s příponou <filename>.img</filename> zapište na jednu "
+#~ "disketu. K tomu můžete použít příkaz <command>dd</command>, nebo nějaký "
+#~ "jiný způsob - viz <xref linkend=\"create-floppy\"/>. Protože budete mít "
+#~ "nejméně dvě diskety, je dobré si je popsat."

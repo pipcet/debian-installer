@@ -1,0 +1,103 @@
+#
+# Templates for the s390-zfcp debian installer module
+#
+# They are, on purpose, not marked for translation
+
+Template: debian-installer/s390-zfcp/title
+Type: text
+Description: Activate FCP devices for installation
+
+
+Template: s390-zfcp/zfcp
+Type: string
+Description: for internal use; preseeding only
+ Enables one ore more SCSI devices for the installation.  Use the
+ comma (,) to separate multiple entries.  An entry consists of a
+ zfcp host adapter only or a zfcp host adapter followed by the WWPN
+ and LUN, separated by a colon (:).  For example,
+ 0.0.1234,0.0.5678:0x2005000e11159c32:0x1234567800000000
+
+
+Template: s390-zfcp/no_zfcp_hosts
+Type: note
+Description: No FCP adapters available for installation
+ Try to use DASDs for installation.
+
+Template: s390-zfcp/select_zfcp_host
+Type: select
+Choices: ${choices}, Finish
+Description: Available FCP devices:
+ The following FCP devices are available for installation.  Select
+ each FCP device you want to activate for accessing FC-attached
+ SCSI devices.  Depending on your FCP device configuration, you
+ will be asked further setup questions.
+ .
+ Select "Finish" when you have all FCP devices activated for your
+ installation.
+
+Template: s390-zfcp/remove_zfcp_config
+Type: boolean
+Default: false
+Description: Do you want to remove the FCP device configuration?
+ Confirm removing the FCP device configuration. If you choose this,
+ the FCP device configuration file is removed. Otherwise, you can
+ update the current FCP device configuration.
+
+
+Template: s390-zfcp/add_zfcp_luns
+Type: select
+Choices: ${LUNS}, Add LUN, Finish
+# XXX add FCP device number in description ???
+Description: Available LUNs for installation:
+ The following list displays the LUNs that are available for installation.
+ Select "Add LUN" to attach a SCSI device through its LUN.  When you have
+ added the LUNs that you need for installation, select "Finish".
+
+Template: s390-zfcp/get_lun
+Type: string
+Description: WWPN and LUN for the SCSI device:
+ Specify the worldwide port name (WWPN) of the target port and the logical unit
+ number (LUN) to attach a particular SCSI disk.  The WWPN and LUN each consists
+ of 16 hexadecimal digits.  Separate the WWPN and LUN with a colon (:).
+ For example, 0x2005000e11159c32:0x1234567800000000.
+
+Template: s390-zfcp/remove_lun
+Type: boolean
+Default: false
+Description: Do you want to remove the LUN ${LUN}?
+ Confirm removal of the specified LUN.
+
+Template: s390-zfcp/invalid_lun_fmt
+Type: error
+Description: Could not recognize the specified LUN
+ The specified LUN could not be recognized.  Specify a valid WWPN and LUN
+ value which are separated by a colon (:).
+
+Template: s390-zfcp/invalid_wwpn_or_lun
+Type: error
+Description: The specified WWPN or LUN is not valid
+ Ensure that you specify the WWPN and LUN value as hexadecimal value,
+ each consisting of up to 16 hexadecimal digits.
+
+Template: s390-zfcp/port_not_found
+Type: error
+Description: Could not found the specified target port
+ The requested SCSI device could not be attached.  The target port that was
+ specified with the WWPN could not be found.  Ensure you specified the
+ correct WWPN value.
+
+Template: s390-zfcp/lun_not_added
+Type: error
+Description: Could not add the specified LUN
+ The requested SCSI device could not be attached. The specified LUN could
+ not be added to the specified target port.  Ensure you specified the
+ correct LUN and, respectively, WWPN.
+
+Template: s390-zfcp/lun_not_removed
+Type: error
+Description: Could not remove the specified LUN
+ The requested SCSI device could not be removed.
+
+Template: s390-zfcp/udev_progress
+Type: text
+Description: Detecting SCSI devices...

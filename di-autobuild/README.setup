@@ -1,0 +1,7 @@
+Installation procedures are about:
+
+sudo -u buildd mkdir /home/buildd/di
+add buildd keys to d-i@dillon with proper arch
+(cd /home/buildd/di; sudo -u buildd git clone https://buildd.debian.org/git/di-autobuild.git di-autobuild)
+adjust ARCH (e.g. mipsel, especially important if chroot arch differs from host)
+cron the buildscript (optionally set a sane MAILTO)

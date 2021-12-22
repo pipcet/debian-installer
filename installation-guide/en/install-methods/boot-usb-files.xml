@@ -1,0 +1,208 @@
+<!-- retain these comments for translator revision tracking -->
+<!-- $Id$ -->
+
+ <sect1 condition="bootable-usb" id="boot-usb-files">
+ <title>Preparing Files for USB Memory Stick Booting</title>
+
+<para>
+
+To prepare the USB stick, we recommend to use a system where GNU/Linux is
+already running and where USB is supported. With current GNU/Linux systems
+the USB stick should be automatically recognized when you insert it. If
+it is not you should check that the usb-storage kernel module is loaded.
+When the USB stick is inserted, it will be mapped to a device named
+<filename>/dev/sdX</filename>, where the <quote>X</quote> is a letter
+in the range a-z. You should be able to see to which device the USB
+stick was mapped by running the command <command>lsblk</command> before
+and after inserting it. (The output of <command>dmesg</command> (as root) is
+another possible method for that.)
+To write to your stick, you may have to turn off its write
+protection switch.
+
+</para><warning><para>
+
+The procedures described in this section will destroy anything already
+on the device! Make very sure that you use the correct device name for
+your USB stick. If you use the wrong device the result could be that all
+information on, for example, a hard disk is lost.
+
+</para></warning>
+
+  <sect2 id="usb-copy-isohybrid" condition="isohybrid-supported">
+  <title>Preparing a USB stick using a hybrid CD/DVD image</title>
+<para>
+
+Debian installation images for this architecture are created using the
+<command>isohybrid</command> technology;
+that means they can be written directly to a USB stick,
+which is a very easy way to make an installation media. Simply choose
+an image (such as the netinst, CD or DVD-1) that will fit
+on your USB stick. See
+<xref linkend="official-cdrom"/> to get an installation image.
+
+</para><para>
+
+Alternatively, 
+for very small USB sticks, only a few megabytes in size, you can download
+the &netboot-mini-iso; image from the <filename>netboot</filename>
+directory (at the location mentioned in <xref linkend="where-files"/>).
+
+</para><para>
+
+The installation image you choose should be written directly to the USB stick,
+overwriting its current contents. For example, when using an existing
+GNU/Linux system, the image file can be written to a USB stick
+as follows, after having made sure that the stick is unmounted:
+
+<informalexample><screen>
+<prompt>#</prompt> <userinput>cp <replaceable>debian.iso</replaceable> /dev/<replaceable>sdX</replaceable></userinput>
+<prompt>#</prompt> <userinput>sync</userinput>
+</screen></informalexample>
+
+Information about how to do this on other operating systems can be found in
+the <ulink url="&url-debian-cd-faq-write-usb;">Debian CD FAQ</ulink>.
+
+</para><important><para>
+
+The image must be written to the whole-disk device and not a
+partition, e.g. /dev/sdb and not /dev/sdb1.
+Do not use tools like <command>unetbootin</command> which alter the image.
+
+</para></important><important><para>
+
+Simply writing the installation image to USB like this should work fine
+for most users. The other options below are more complex, mainly for
+people with specialised needs.
+
+</para></important>
+
+<para>
+
+The hybrid image on the stick does not occupy all the storage space, so
+it may be worth considering using the free space to hold firmware files
+or packages or any other files of your choice. This could be useful if
+you have only one stick or just want to keep everything you need on one
+device.
+
+</para><para>
+
+To do so, use cfdisk or any other partitioning tool to create an additional
+partition on the stick. Then create a (FAT) filesystem on the partition,
+mount it and copy or unpack the firmware onto it, for example with:
+
+<informalexample><screen>
+# mkdosfs -n FIRMWARE /dev/sdX3
+# mount /dev/<replaceable>sdX3</replaceable> /mnt
+# cd /mnt
+# tar zxvf <replaceable>/path/to/</replaceable>firmware.tar.gz
+# cd /
+# umount /mnt
+</screen></informalexample>
+
+Take care that you use the correct device name for your USB stick. The
+<command>mkdosfs</command> command is contained in the
+<classname>dosfstools</classname> &debian; package.
+
+</para><note><para arch="not-s390">
+
+If you have chosen the <filename>mini.iso</filename> to be written to the USB
+stick, the second partition doesn't have to be created, as -
+very nicely - it will already be present. Unplugging and replugging the
+USB stick should make the two partitions visible.
+
+</para></note>
+
+
+
+  </sect2>
+
+  <sect2 id="usb-copy-easy" condition="manual-usb-prep-supported">
+  <title>Manually copying files to the USB stick</title>
+<para>
+
+Prior to isohybrid technology being used for &debian; installation images, the
+methods documented in the chapters below were used to prepare media for
+booting from USB devices.
+These have been superseded by the technique in <xref linkend="usb-copy-isohybrid"/>,
+but have been left here for educational and historical purposes and in case they
+are useful to some user.
+
+</para><para>
+
+An alternative to the method described in
+<xref linkend="usb-copy-isohybrid"/> is to manually copy
+the installer files, and also an installation image to the stick.
+Note that the USB stick should be at least 1 GB in size (smaller
+setups are possible using the files from netboot, following
+<xref linkend="usb-copy-flexible"/>).
+
+</para><para>
+
+There is an all-in-one file &hdmedia-boot-img;
+which contains all the installer files (including the
+kernel)<phrase arch="x86"> as well as <classname>syslinux</classname> and its
+configuration file</phrase><phrase arch="powerpc"> as well as
+<classname>yaboot</classname> and its
+configuration file</phrase>.
+
+</para><note><para>
+
+Note that, although convenient, this method does have one major
+disadvantage: the logical size of the device will be limited to 1 GB,
+even if the capacity of the USB stick is larger. You will need to
+repartition the USB stick and create new file systems to get its full
+capacity back if you ever want to use it for some different purpose.
+
+</para></note><para arch="x86">
+
+Simply extract this image directly to your USB stick:
+
+<informalexample><screen>
+# zcat boot.img.gz &gt; /dev/<replaceable>sdX</replaceable>
+</screen></informalexample>
+
+</para><para arch="powerpc">
+
+Create a partition of type "Apple_Bootstrap" on your USB stick using
+<command>mac-fdisk</command>'s <userinput>C</userinput> command and
+extract the image directly to that:
+
+<informalexample><screen>
+# zcat boot.img.gz &gt; /dev/<replaceable>sdX2</replaceable>
+</screen></informalexample>
+
+</para><para>
+
+After that, mount the USB memory stick
+<phrase arch="x86">(<userinput>mount
+/dev/<replaceable>sdX</replaceable> /mnt</userinput>),</phrase>
+<phrase arch="powerpc">(<userinput>mount
+/dev/<replaceable>sdX2</replaceable> /mnt</userinput>),</phrase>
+which will now have
+<phrase arch="x86">a FAT filesystem</phrase>
+<phrase arch="powerpc">an HFS filesystem</phrase>
+on it, and copy a &debian; ISO image (netinst or full CD; see
+<xref linkend="official-cdrom"/>) to it.
+Unmount the stick (<userinput>umount /mnt</userinput>) and you are done.
+
+</para>
+  </sect2>
+
+  <sect2 id="usb-copy-flexible" condition="manual-usb-prep-supported">
+  <title>Manually copying files to the USB stick &mdash; the flexible way</title>
+<para>
+
+If you like more flexibility or just want to know what's going on, you
+should use the following method to put the files on your stick. One
+advantage of using this method is that &mdash; if the capacity of your
+USB stick is large enough &mdash; you have the option of copying any
+ISO image, even a DVD image, to it.
+
+</para>
+
+&usb-setup-x86.xml;
+&usb-setup-powerpc.xml;
+
+  </sect2>
+
+ </sect1>

@@ -1,0 +1,95 @@
+Template: partman-iscsi/text/configure_iscsi
+Type: text
+# :sl3:
+_Description: Configure iSCSI volumes
+
+Template: partman-iscsi/mainmenu
+Type: select
+Choices-C: login, finish
+# Note to translators : Please keep your translations of the choices
+# below a 65 columns limit (which means 65 characters
+# in single-byte languages)
+# :sl3:
+__Choices: Log into iSCSI targets, Finish
+# :sl3:
+_Description: iSCSI configuration actions
+ This menu allows you to configure iSCSI volumes.
+
+Template: partman-iscsi/login/address
+Type: string
+# :sl3:
+_Description: iSCSI target portal address:
+ Enter an IP address to scan for iSCSI targets. To use a port other than the
+ default of 3260, use "IP:port" notation, for example "1.2.3.4:3261".
+
+Template: partman-iscsi/login/username
+Type: string
+# :sl3:
+# Translators : do NOT translate the variable name (PORTAL)
+_Description: iSCSI initiator username for ${PORTAL}:
+ Some iSCSI targets require the initiator (client) to authenticate using a
+ username and password. If that is the case for this target, enter the
+ username here. Otherwise, leave this blank.
+
+Template: partman-iscsi/login/password
+Type: password
+# :sl3:
+# Translators : do NOT translate the variable name (PORTAL)
+_Description: iSCSI initiator password for ${PORTAL}:
+ Enter the initiator password needed to authenticate to this iSCSI target.
+
+Template: partman-iscsi/login/incoming_username
+Type: string
+# :sl3:
+# Translators : do NOT translate the variable name (PORTAL)
+_Description: iSCSI target username for ${PORTAL}:
+ In some environments, the iSCSI target needs to authenticate to the
+ initiator as well as the other way round. If that is the case here, enter
+ the incoming username which the target is expected to supply. Otherwise,
+ leave this blank.
+
+Template: partman-iscsi/login/incoming_password
+Type: password
+# :sl3:
+# Translators : do NOT translate the variable name (PORTAL)
+_Description: iSCSI target password for ${PORTAL}:
+ Enter the incoming password which the iSCSI target is expected to supply.
+
+Template: partman-iscsi/login/empty_password
+Type: error
+# :sl3:
+_Description: Empty password
+ You entered an empty password, which is not allowed.
+ Please choose a non-empty password.
+
+Template: partman-iscsi/login/no_targets
+Type: error
+# :sl3:
+#flag:comment:2
+# Translators : do NOT translate the variable name (PORTAL)
+_Description: No iSCSI targets discovered
+ No iSCSI targets were discovered on ${PORTAL}.
+
+Template: partman-iscsi/login/all_targets
+Type: boolean
+Default: false
+Description: for internal use; can be preseeded
+ If true, automatically log into all discovered targets.
+
+Template: partman-iscsi/login/targets
+Type: multiselect
+Choices: ${TARGETS}
+# :sl3:
+# Translators : do NOT translate the variable name (PORTAL)
+_Description: iSCSI targets on ${PORTAL}:
+ Select the iSCSI targets you wish to use.
+
+Template: partman-iscsi/login/failed
+Type: error
+# :sl3:
+#flag:comment:2
+# Translators : do NOT translate the variable names (PORTAL and TARGET)
+_Description: iSCSI login failed
+ Logging into the iSCSI target ${TARGET} on ${PORTAL} failed.
+ .
+ Check /var/log/syslog or see virtual console 4 for the details.
