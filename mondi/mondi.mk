@@ -93,10 +93,10 @@ $(BUILD)/debian/script.bash: | $(BUILD)/debian/
 	echo "cd /root/debian-installer/installer/build; make build_netboot-gtk"; \
 	echo "uuencode 'netboot.tar.gz' < /root/debian-installer/installer/build/dest/netboot/gtk/netboot.tar.gz > /dev/vda") > $@
 
-$(BUILD)/netboot.tar.gz: $(BUILD)/debian/script.bash $(BUILD)/qemu-kernel $(BUILD)/debian/di-debootstrap.cpio | $(BUILD)/
+$(BUILD)/netboot.tar.gz: $(BUILD)/debian/script.bash $(BUILD)/qemu-kernel $(BUILD)/debian/root1.cpio.gz | $(BUILD)/
 	dd if=/dev/zero of=tmp bs=128M count=1
 	dd conv=notrunc if=$< of=tmp
-	qemu-system-aarch64 -drive if=virtio,index=0,media=disk,driver=raw,file=tmp -machine virt -cpu max -kernel $(BUILD)/qemu-kernel -m 7g -serial stdio -initrd ./build/debian/di-debootstrap.cpio -nic user,model=virtio -monitor none -smp 8 -nographic
+	qemu-system-aarch64 -drive if=virtio,index=0,media=disk,driver=raw,file=tmp -machine virt -cpu max -kernel $(BUILD)/qemu-kernel -m 7g -serial stdio -initrd $(BUILD)/debian/root1.cpio.gz -nic user,model=virtio -monitor none -smp 8 -nographic
 	uudecode -o $@ < tmp
 	rm -f tmp
 
