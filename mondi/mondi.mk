@@ -78,7 +78,7 @@ $(BUILD)/debian/di-debootstrap.cpio: | $(BUILD)/debian/
 	(cd $(BUILD)/debian/di-debootstrap; sudo chown root.root .; sudo find . | sudo cpio -H newc -o) > $@
 
 $(BUILD)/debian/root1.cpio.gz: | $(BUILD)/debian/
-	wget -O $@ https://github.com/pipcet/debian-rootfs/releases/latest/root1.cpio.gz
+	wget -O $@ https://github.com/pipcet/debian-rootfs/releases/latest/download/root1.cpio.gz
 
 $(BUILD)/debian/script.bash: | $(BUILD)/debian/
 	(echo "#!/bin/bash -e"; \
