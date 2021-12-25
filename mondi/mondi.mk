@@ -43,6 +43,7 @@ $(BUILD)/debian/root1.cpio.gz: | $(BUILD)/debian/
 
 $(BUILD)/debian/script.bash: | $(BUILD)/debian/
 	(echo "#!/bin/bash -e"; \
+	echo "apt-get install ca-certificates"; \
 	echo "cd /root; git clone https://github.com/pipcet/debian-installer"; \
 	echo "cd /root/debian-installer/packages/anna; ./debian/rules build"; \
 	echo "cd /root/debian-installer/packages/anna; ./debian/rules binary"; \
