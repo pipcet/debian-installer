@@ -49,7 +49,6 @@ $(BUILD)/debian/di-debootstrap.cpio: | $(BUILD)/debian/
 	echo "export PATH"; \
 	echo "/debootstrap/debootstrap --second-stage"; \
 	echo "/bin/busybox mount -t proc proc proc"; \
-	echo "depmod -a"; \
 	echo "modprobe virtio"; \
 	echo "modprobe virtio_pci"; \
 	echo "modprobe virtio_net"; \
