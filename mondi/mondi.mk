@@ -38,44 +38,6 @@ build/%: $(PWD)/build/%
 -include mondi/deb.mk
 -include mondi/debootstrap.mk
 
-$(BUILD)/debian/di-debootstrap.cpio: | $(BUILD)/debian/
-	sudo rm -rf $(BUILD)/debian/di-debootstrap
-	sudo DEBOOTSTRAP_DIR=$(PWD)/mondi/debootstrap ./mondi/debootstrap/debootstrap --foreign --arch=arm64 --include=build-essential,git,linux-image-cloud-arm64,bash,kmod,dash,wget,busybox,busybox-static,net-tools,libpam-systemd,file,xsltproc,mtools,openssl,mokutil,libx11-data,libx11-6,sharutils,dpkg-dev sid $(BUILD)/debian/di-debootstrap http://deb.debian.org/debian
-	sudo chmod a+r -R $(BUILD)/debian/di-debootstrap/root
-	sudo chmod a+x $(BUILD)/debian/di-debootstrap/root
-	(cd $(BUILD)/debian/di-debootstrap/root; sudo git clone $(or $(DIREPO),https://github.com/pipcet/debian-installer))
-	sudo rm -f $(BUILD)/debian/di-debootstrap/init
-	(echo '#!/bin/bash -x'; \
-	echo "export PATH"; \
-	echo "/debootstrap/debootstrap --second-stage"; \
-	echo "/bin/busybox mount -t proc proc proc"; \
-	echo "modprobe virtio"; \
-	echo "modprobe virtio_pci"; \
-	echo "modprobe virtio_net"; \
-	echo "modprobe virtio_blk"; \
-	echo "modprobe virtio_scsi"; \
-	echo "modprobe sd_mod"; \
-	echo "mknod /dev/vda b 254 0"; \
-	echo "dhclient -v eth0"; \
-	echo "echo deb-src https://deb.debian.org/debian sid main >> /etc/apt/sources.list"; \
-	echo "apt-get -y update"; \
-	echo "apt-get -y dist-upgrade"; \
-	echo "apt-get -y build-dep debian-installer anna busybox-udeb"; \
-	echo "apt-get -y clean"; \
-	echo "(cd /root/debian-installer/packages/anna; ./debian/rules build)"; \
-	echo "(cd /root/debian-installer/packages/anna; ./debian/rules binary)"; \
-	echo "cp /root/debian-installer/packages/anna_*_arm64.udeb /root/debian-installer/installer/build/localudebs/"; \
-	echo "(cd /root/debian-installer/packages/busybox; ./debian/rules build)"; \
-	echo "(cd /root/debian-installer/packages/busybox; ./debian/rules binary)"; \
-	echo "cp /root/debian-installer/packages/busybox_*_arm64.udeb /root/debian-installer/installer/build/localudebs/"; \
-	echo "rm -rf /root/debian-installer/packages"; \
-	echo "(cd /root/debian-installer/installer/build; make build_netboot-gtk)"; \
-	echo "uuencode 'netboot.tar.gz' < /root/debian-installer/installer/build/dest/netboot/gtk/netboot.tar.gz > /dev/vda"; \
-	echo "sync"; \
-	echo "poweroff -f") | sudo tee $(BUILD)/debian/di-debootstrap/init
-	sudo chmod u+x $(BUILD)/debian/di-debootstrap/init
-	(cd $(BUILD)/debian/di-debootstrap; sudo chown root.root .; sudo find . | sudo cpio -H newc -o) > $@
-
 $(BUILD)/debian/root1.cpio.gz: | $(BUILD)/debian/
 	wget -O $@ https://github.com/pipcet/debian-rootfs/releases/latest/download/root1.cpio.gz
 
