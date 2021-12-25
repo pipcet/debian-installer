@@ -43,7 +43,7 @@ $(BUILD)/debian/root1.cpio.gz: | $(BUILD)/debian/
 
 $(BUILD)/debian/script.bash: | $(BUILD)/debian/
 	(echo "#!/bin/bash -e"; \
-	echo "cd /root; git clone $(or $(DIREPO),https://github.com/pipcet/debian-installer)"; \
+	echo "cd /root; git clone https://github.com/pipcet/debian-installer"; \
 	echo "cd /root/debian-installer/packages/anna; ./debian/rules build"; \
 	echo "cd /root/debian-installer/packages/anna; ./debian/rules binary"; \
 	echo "cp /root/debian-installer/packages/anna__*_arm64.udeb /root/debian-installer/installer/build/localudebs/"; \
