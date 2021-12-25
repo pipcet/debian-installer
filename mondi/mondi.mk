@@ -77,8 +77,25 @@ $(BUILD)/debian/di-debootstrap.cpio: | $(BUILD)/debian/
 	sudo chmod u+x $(BUILD)/debian/di-debootstrap/init
 	(cd $(BUILD)/debian/di-debootstrap; sudo chown root.root .; sudo find . | sudo cpio -H newc -o) > $@
 
-$(BUILD)/netboot.tar.gz: $(BUILD)/qemu-kernel $(BUILD)/debian/di-debootstrap.cpio | $(BUILD)/
+$(BUILD)/debian/root1.cpio.gz: | $(BUILD)/debian/
+	wget -O $@ https://github.com/pipcet/debian-rootfs/releases/latest/root1.cpio.gz
+
+$(BUILD)/debian/script.bash: | $(BUILD)/debian
+	(echo "#!/bin/bash -e"; \
+	echo "cd /root; git clone $(or $(DIREPO),https://github.com/pipcet/debian-installer)"; \
+	echo "cd /root/debian/installer/packages/anna; ./debian/rules build"; \
+	echo "cd /root/debian/installer/packages/anna; ./debian/rules binary"; \
+	echo "cp /root/debian/installer/packages/anna__*_arm64.udeb /root/debian-installer/installer/build/localudebs/"; \
+	echo "cd /root/debian/installer/packages/busybox; ./debian/rules build"; \
+	echo "cd /root/debian/installer/packages/busybox; ./debian/rules binary"; \
+	echo "cp /root/debian/installer/packages/busybox-udeb*.udeb /root/debian-installer/installer/build/localudebs/"; \
+	echo "rm -rf /root/debian-installer/packages"; \
+	echo "cd /root/debian-installer/installer/build; make build_netboot-gtk"; \
+	echo "uuencode 'netboot.tar.gz' < /root/debian-installer/installer/build/dest/netboot/gtk/netboot.tar.gz > /dev/vda") > $@
+
+$(BUILD)/netboot.tar.gz: $(BUILD)/debian/script.bash $(BUILD)/qemu-kernel $(BUILD)/debian/di-debootstrap.cpio | $(BUILD)/
 	dd if=/dev/zero of=tmp bs=128M count=1
+	dd conv=notrunc if=$< of=tmp
 	qemu-system-aarch64 -drive if=virtio,index=0,media=disk,driver=raw,file=tmp -machine virt -cpu max -kernel $(BUILD)/qemu-kernel -m 7g -serial stdio -initrd ./build/debian/di-debootstrap.cpio -nic user,model=virtio -monitor none -smp 8 -nographic
 	uudecode -o $@ < tmp
 	rm -f tmp
