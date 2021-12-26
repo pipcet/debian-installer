@@ -25,11 +25,8 @@ jobs:
     - run: sudo apt-get install libtool-bin
     - run: sudo apt-get install qemu-system-aarch64 sharutils
     - run: sudo apt-get install libtool-bin myrepos
-    - run: tar cf self.tar .
-    - run: git clone https://github.com/pipcet/pearl
     - name: Set env variables
       uses: ./pearl/g/github/env/
-    - run: (cd pearl; git submodule update --init --recursive -- debian)
     - run: echo 1 | sudo tee /proc/sys/vm/overcommit_memory
-    - run: make DIREPO=$(pwd) -C pearl -j13 build/netboot-initrd.cpio.gz
+    - run: make -j13 build/netboot-initrd.cpio.gz
     - run: make -C pearl build/netboot-initrd.cpio.gz{artifact}
