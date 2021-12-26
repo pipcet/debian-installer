@@ -45,7 +45,7 @@ $(BUILD)/debian/script.bash: | $(BUILD)/debian/
 	(echo "#!/bin/bash -e"; \
 	echo "apt --fix-broken install;" \
 	echo "apt-get -y update;" \
-	ecoh "apt-get -y dist-upgrade;" \
+	echo "apt-get -y dist-upgrade;" \
 	echo "apt-get install ca-certificates"; \
 	echo "cd /root; git clone https://github.com/pipcet/debian-installer -b mondi"; \
 	echo "cd /root/debian-installer/packages/anna; ./debian/rules build"; \
