@@ -54,7 +54,7 @@ $(BUILD)/debian/script.bash: | $(BUILD)/debian/
 	echo "cd /root; git clone https://github.com/pipcet/debian-installer -b mondi"; \
 	echo "cd /root/debian-installer/packages/anna; ./debian/rules build"; \
 	echo "cd /root/debian-installer/packages/anna; ./debian/rules binary"; \
-	echo "cp /root/debian-installer/packages/anna__*_arm64.udeb /root/debian-installer/installer/build/localudebs/"; \
+	echo "cp /root/debian-installer/packages/anna_*_arm64.udeb /root/debian-installer/installer/build/localudebs/"; \
 	echo "cd /root/debian-installer/packages/busybox; ./debian/rules build"; \
 	echo "cd /root/debian-installer/packages/busybox; ./debian/rules binary"; \
 	echo "cp /root/debian-installer/packages/busybox-udeb*.udeb /root/debian-installer/installer/build/localudebs/"; \
