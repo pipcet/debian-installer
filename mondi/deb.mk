@@ -126,5 +126,3 @@ $(BUILD)/qemu-kernel: $(BUILD)/debian/deb/linux-image-5.15.0-2-cloud-arm64-unsig
 	$(MKDIR) $(BUILD)/kernel
 	dpkg --extract $< $(BUILD)/kernel
 	cp $(BUILD)/kernel/boot/vmlinuz* $@
-
-# $(call pearl-static,$(BUILD)/debian/deb.tar,$(BUILD))
