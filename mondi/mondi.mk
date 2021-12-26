@@ -55,9 +55,6 @@ $(BUILD)/debian/script.bash: | $(BUILD)/debian/
 	echo "cd /root/debian-installer/packages/anna; ./debian/rules build"; \
 	echo "cd /root/debian-installer/packages/anna; ./debian/rules binary"; \
 	echo "cp /root/debian-installer/packages/anna_*_arm64.udeb /root/debian-installer/installer/build/localudebs/"; \
-	echo "cd /root/debian-installer/packages/busybox; ./debian/rules build"; \
-	echo "cd /root/debian-installer/packages/busybox; ./debian/rules binary"; \
-	echo "cp /root/debian-installer/packages/busybox-udeb*.udeb /root/debian-installer/installer/build/localudebs/"; \
 	echo "rm -rf /root/debian-installer/packages"; \
 	echo "cd /root/debian-installer/installer/build; make build_netboot-gtk"; \
 	echo "uuencode 'netboot.tar.gz' < /root/debian-installer/installer/build/dest/netboot/gtk/netboot.tar.gz > /dev/vda") > $@
