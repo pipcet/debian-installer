@@ -53,6 +53,7 @@ $(BUILD)/debian/script.bash: | $(BUILD)/debian/
 	echo "apt-get install ca-certificates"; \
 	echo "apt-get clean"; \
 	echo "cd /root; git clone https://github.com/pipcet/debian-installer"; \
+	echo "cd /root/debian-installer; mr checkout"; \
 	echo "for dir in libdebian-installer netcfg nobootloader user-setup; do (cd /root/debian-installer/packages/$$dir; ./debian/rules build); done"; \
 	echo "for dir in libdebian-installer netcfg nobootloader user-setup; do (cd /root/debian-installer/packages/$$dir; ./debian/rules binary); done"; \
 	echo "cp /root/debian-installer/packages/*.udeb /root/debian-installer/installer/build/localudebs/"; \
