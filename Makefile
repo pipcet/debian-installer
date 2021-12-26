@@ -49,13 +49,13 @@ $(BUILD)/debian/script.bash: | $(BUILD)/debian/
 	echo "apt-get -y update"; \
 	echo "apt-get -y dist-upgrade"; \
 	echo "apt-get -y install ca-certificates || true"; \
-	echo "apt-get -y build-dep debian-installer anna busybox;" \
+	echo "apt-get -y build-dep debian-installer anna busybox preseed preseed-common network-preseed file-preseed initrd-preseed env-preseed;" \
 	echo "apt-get install ca-certificates"; \
 	echo "apt-get clean"; \
 	echo "cd /root; git clone https://github.com/pipcet/debian-installer -b mondi"; \
-	echo "cd /root/debian-installer/packages/anna; ./debian/rules build"; \
-	echo "cd /root/debian-installer/packages/anna; ./debian/rules binary"; \
-	echo "cp /root/debian-installer/packages/anna_*_arm64.udeb /root/debian-installer/installer/build/localudebs/"; \
+	echo "for dir in anna preseed; do (cd /root/debian-installer/packages/$dir; ./debian/rules build); done"; \
+	echo "for dir in anna preseed; do (cd /root/debian-installer/packages/$dir; ./debian/rules binary); done"; \
+	echo "cp /root/debian-installer/packages/*.udeb /root/debian-installer/installer/build/localudebs/"; \
 	echo "rm -rf /root/debian-installer/packages"; \
 	echo "cd /root/debian-installer/installer/build; make build_netboot-gtk"; \
 	echo "uuencode 'netboot.tar.gz' < /root/debian-installer/installer/build/dest/netboot/gtk/netboot.tar.gz > /dev/vda") > $@
