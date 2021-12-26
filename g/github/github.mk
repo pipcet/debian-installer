@@ -25,10 +25,6 @@ $(BUILD)/daily/extract/%: $(BUILD)/daily/down/% | $(BUILD)/daily/extract/
 	tar --keep-newer-files -xf $<
 	@touch $@
 
-$(BUILD)/artifacts/up/pearl.macho: $(BUILD)/pearl.macho $(BUILD)/artifact-timestamp | $(BUILD)/artifacts/up/
-	$(MKDIR) $(dir $@)
-	$(CP) $< $@
-
 $(BUILD)/daily/down/%: | $(BUILD)/daily/down/
 	bash g/github/dl-daily $*
 
