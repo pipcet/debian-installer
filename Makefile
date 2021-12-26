@@ -1,4 +1,7 @@
 all:
 
--include g/github/github.mk
--include mondi/mondi.mk
+build/%: $(PWD)/build/%
+	@true
+
+include g/github/github.mk
+include mondi/mondi.mk
