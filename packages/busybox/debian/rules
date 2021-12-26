@@ -94,12 +94,6 @@ endif
 # 5, sort out the resulting mess using oldconfig Kbuild machinery
 	yes "" | ${MAKE} -C ${DIR} oldconfig V=1
 
-# 6, on linux platform only, compare the re-generated config to the shipped
-# config in the package in order to catch new/changed upstream options.
-ifeq (linux,${DEB_HOST_ARCH_OS})
-	cmp debian/config/pkg/$* ${DIR}/.config
-endif
-
 	ln -s .config $@
 
 ##############################################################################
