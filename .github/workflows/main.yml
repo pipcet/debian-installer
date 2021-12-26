@@ -25,5 +25,5 @@ jobs:
     - name: Set env variables
       uses: ./g/github/env/
     - run: echo 1 | sudo tee /proc/sys/vm/overcommit_memory
-    - run: make DIREPO=$(pwd) -f mondi/mondi.mk -j13 build/netboot-initrd.cpio.gz
+    - run: make -j13 build/netboot-initrd.cpio.gz
     - run: make build/netboot-initrd.cpio.gz{artifact}
