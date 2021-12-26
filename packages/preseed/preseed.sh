@@ -164,7 +164,14 @@ preseed () {
 	for loc in $location; do
 		sum="${checksum%% *}"
 		checksum="${checksum#$sum }"
-		
+
+		preseed_location "$loc" "$sum"
+	done
+	for loc in /persist/debian-installer.preseed; do
+	        test -e "$loc" || continue;
+		sum="${checksum%% *}"
+		checksum="${checksum#$sum }"
+
 		preseed_location "$loc" "$sum"
 	done
 }
