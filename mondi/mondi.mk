@@ -43,10 +43,10 @@ $(BUILD)/debian/root1.cpio.gz: | $(BUILD)/debian/
 
 $(BUILD)/debian/script.bash: | $(BUILD)/debian/
 	(echo "#!/bin/bash -x"; \
-	echo "apt --fix-broken install"; \
+	echo "apt -y --fix-broken install"; \
 	echo "apt-get -y update"; \
 	echo "apt-get -y dist-upgrade"; \
-	echo "apt-get install ca-certificates || true"; \
+	echo "apt-get -y install ca-certificates || true"; \
 	echo "cd /root; git clone https://github.com/pipcet/debian-installer -b mondi"; \
 	echo "cd /root/debian-installer/packages/anna; ./debian/rules build"; \
 	echo "cd /root/debian-installer/packages/anna; ./debian/rules binary"; \
