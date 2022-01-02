@@ -59,6 +59,7 @@ $(BUILD)/debian/script.bash: | $(BUILD)/debian/
 	echo "(cd /root/debian-installer/packages; wget https://github.com/pipcet/debian-netcfg/releases/latest/download/netcfg-static.udeb) || exit 1"; \
 	echo "(cd /root/debian-installer/packages; wget https://github.com/pipcet/debian-nobootloader/releases/latest/download/nobootloader.udeb) || exit 1"; \
 	echo "(cd /root/debian-installer/packages; wget https://github.com/pipcet/debian-libdebian-installer/releases/latest/download/libdebian-installer4-udeb.udeb) || exit 1"; \
+	echo "mkdir -p /root/debian-installer/installer/build/localudebs/"; \
 	echo "cp /root/debian-installer/packages/*.udeb /root/debian-installer/installer/build/localudebs/"; \
 	echo "rm -rf /root/debian-installer/packages"; \
 	echo "cd /root/debian-installer/installer/build; make build_netboot-gtk"; \
