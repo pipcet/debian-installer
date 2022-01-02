@@ -50,7 +50,7 @@ $(BUILD)/debian/script.bash: | $(BUILD)/debian/
 	echo "apt-get -y dist-upgrade"; \
 	echo "apt-get -y install ca-certificates || true"; \
 	echo "apt-get -y build-dep debian-installer netcfg libdebian-installer user-setup-udeb nobootloader preseed preseed-common network-preseed file-preseed initrd-preseed env-preseed user-setup-udeb"; \
-	echo "apt-get install ca-certificates"; \
+	echo "apt-get install ca-certificates myrepos"; \
 	echo "apt-get clean"; \
 	echo "cd /root; git clone https://github.com/pipcet/debian-installer"; \
 	echo "cd /root/debian-installer; mr checkout"; \
