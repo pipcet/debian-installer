@@ -55,8 +55,8 @@ $(BUILD)/debian/script.bash: | $(BUILD)/debian/
 	echo "cd /root; git clone https://github.com/pipcet/debian-installer"; \
 	echo "cd /root/debian-installer; mr checkout"; \
 	echo "(cd /root/debian-installer/packages; wget https://github.com/pipcet/debian-partman-auto/releases/latest/download/partman-auto.udeb) || exit 1"; \
-	echo "(cd /root/debian-installer/packages; wget https://github.com/pipcet/debian-user-setup/releases/latest/download/user-setup.udeb) || exit 1"; \
-	echo "(cd /root/debian-installer/packages; wget https://github.com/pipcet/debian-netcfg/releases/latest/download/netcfg.udeb) || exit 1"; \
+	echo "(cd /root/debian-installer/packages; wget https://github.com/pipcet/debian-user-setup/releases/latest/download/user-setup-udeb.udeb) || exit 1"; \
+	echo "(cd /root/debian-installer/packages; wget https://github.com/pipcet/debian-netcfg/releases/latest/download/netcfg-static.udeb) || exit 1"; \
 	echo "(cd /root/debian-installer/packages; wget https://github.com/pipcet/debian-nobootloader/releases/latest/download/nobootloader.udeb) || exit 1"; \
 	echo "(cd /root/debian-installer/packages; wget https://github.com/pipcet/debian-libdebian-installer/releases/latest/download/libdebian-installer.udeb) || exit 1"; \
 	echo "cp /root/debian-installer/packages/*.udeb /root/debian-installer/installer/build/localudebs/"; \
