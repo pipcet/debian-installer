@@ -32,7 +32,7 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-02 20:02+0000\n"
-"PO-Revision-Date: 2022-02-11 09:54+0000\n"
+"PO-Revision-Date: 2022-04-13 14:29+0000\n"
 "Last-Translator: Wenbin Lv <wenbin816@gmail.com>\n"
 "Language-Team: <debian-l10n-chinese@lists.debian.org>\n"
 "Language: zh_CN\n"
@@ -40,7 +40,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.11-dev\n"
+"X-Generator: Weblate 4.12-dev\n"
 
 #. Type: select
 #. Description
@@ -55,9 +55,8 @@ msgid ""
 "This may be a problem with your network, or with the server hosting this "
 "key. You can choose to retry the download, or ignore the problem and "
 "continue without all the packages from this repository."
-msgstr ""
-"这可能是您的网络问题，也可能是保存此密钥的服务器发生错误。您可以选择重试下"
-"载，或者忽略这一问题，不使用该镜像站的任何软件包并继续。"
+msgstr "这可能是您的网络问题，也可能是保存此密钥的服务器发生错误。您可以选择重试下载"
+"，或者忽略这一问题，不使用该镜像站点的任何软件包并继续。"
 
 #. Type: select
 #. Description
@@ -199,7 +198,7 @@ msgstr "发布版本更新 (updates)"
 #. :sl1:
 #: ../apt-setup-udeb.templates:11001
 msgid "backported software"
-msgstr "向后移植 (backported) 的软件"
+msgstr "向后移植的软件 (backports)"
 
 #. Type: multiselect
 #. Description
@@ -253,17 +252,17 @@ msgid ""
 "not cause any of them to be installed by default; it only allows you to "
 "manually select backports to use."
 msgstr ""
-"向后移植 (backport) 的软件是从开发版中向本发布版中移植的版本。虽然此软件并没"
-"有如发布版中的软件那样进行如此完整的测试，它包含了某些应用程序的新版本，可能"
-"会提供一些有用的新功能。启用 backport 并不会自动安装这些软件：只是可以让您手"
-"动选择安装。"
+"向后移植的软件 (backports) 移植自开发版本，并经过修改以适合在本发布版本中使用"
+"。虽然这些软件并没有如发布版本中的软件那样进行过如此完整的测试，但是 "
+"backports 包含了某些应用程序的新版本，可能会提供一些有用的新功能。启用 "
+"backports 并不会自动安装这些软件，只是可以让您手动选择安装。"
 
 #. Type: text
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:1001
 msgid "Scanning the installation media..."
-msgstr "正在扫描安装介质……"
+msgstr "正在扫描安装介质..."
 
 #. Type: error
 #. Description
@@ -311,8 +310,9 @@ msgid ""
 "booted from. If you do not have any additional media, this step can just be "
 "skipped."
 msgstr ""
-"现在您可以选择扫描其他介质以供软件包管理器 (apt) 使用。一般来说，这些和您引导"
-"启动的在同一套里面。如果您没有任何其他的介质，可以直接跳过这一步。"
+"现在您可以选择扫描其他介质以供软件包管理器 (apt) 使用。一般来说，这些介质和您"
+"引导时使用的介质属于同一套介质。如果您没有任何其他的介质，可以直接跳过这一步"
+"。"
 
 #. Type: boolean
 #. Description
@@ -322,28 +322,28 @@ msgstr ""
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001 ../apt-cdrom-setup.templates:4001
 msgid "If you wish to scan more media, please insert another one now."
-msgstr "如果您想要扫描更多介质，请立即插入另一个。"
+msgstr "如果您想要扫描更多介质，请现在插入另一个介质。"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:4001
 msgid "The image with the following label has been scanned:"
-msgstr "已经扫描了有下列标记的镜像："
+msgstr "已经扫描了带有下列标签的镜像："
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:5001
 msgid "The image with the following label has already been scanned:"
-msgstr "下列标记的镜像之前已经扫描过了："
+msgstr "带有下列标签的镜像之前已经扫描过了："
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:5001
 msgid "Please replace it now, if you wish to scan another."
-msgstr "如果您想要扫描其他的，现在请将其替换。"
+msgstr "如果您想要扫描其他的镜像，请现在更换它。"
 
 #. Type: boolean
 #. Description
@@ -364,7 +364,7 @@ msgstr "更换介质"
 #. :sl1:
 #: ../apt-cdrom-setup.templates:7001
 msgid "Please insert the media labeled '${LABEL}' and press enter."
-msgstr "请将标记为“${LABEL}”的介质插入，然后按下 Enter。"
+msgstr "请插入标签为 \"${LABEL}\" 的介质，然后按下 Enter。"
 
 #. Type: text
 #. Description
@@ -396,9 +396,8 @@ msgid ""
 "You are installing from a netinst CD image, which by itself only allows "
 "installation of a very minimal base system. Use a mirror to install a more "
 "complete system."
-msgstr ""
-"您正在从网络安装 (netinst) 光盘镜像进行安装，而网络安装光盘只能安装一个非常小"
-"的基本系统。您可以使用镜像来安装一个更完备的系统。"
+msgstr "您正在从网络安装 (netinst) 光盘镜像进行安装，而网络安装光盘只能安装一个非常小"
+"的基本系统。您可以使用镜像站点来安装一个更完整的系统。"
 
 #. Type: text
 #. Description
@@ -419,9 +418,8 @@ msgid ""
 "You have scanned %i images. Even though these contain a fair selection of "
 "packages, some may be missing (notably some packages needed to support "
 "languages other than English)."
-msgstr ""
-"您已经扫描了 %i 个镜像。虽然其中包含了相当多的软件包，但是仍然可能缺少一些 "
-"(特别是那些用于支持英语以外的语言的软件包)。"
+msgstr "您已经扫描了 %i 个镜像。虽然其中包含了较多的软件包，但是仍然可能有所遗漏 "
+"(特别是那些用于支持非英语语言的软件包)。"
 
 #. Type: text
 #. Description
@@ -432,9 +430,8 @@ msgstr ""
 msgid ""
 "You have scanned %i images. Even though these contain a large selection of "
 "packages, some may be missing."
-msgstr ""
-"您已经扫描了 %i 份镜像。虽然其中包含了很大一部分软件包，但是仍然可能有所遗"
-"漏。"
+msgstr "您已经扫描了 %i "
+"个镜像。虽然其中包含了很大一部分软件包，但是仍然可能有所遗漏。"
 
 #. Type: text
 #. Description
@@ -443,7 +440,7 @@ msgstr ""
 msgid ""
 "Note that using a mirror can result in a large amount of data being "
 "downloaded during the next step of the installation."
-msgstr "注意使用镜像将导致在下一步安装过程中下载大量的数据。"
+msgstr "注意，使用镜像站点将导致在下一步安装过程中下载大量的数据。"
 
 #. Type: text
 #. Description
@@ -452,9 +449,8 @@ msgstr "注意使用镜像将导致在下一步安装过程中下载大量的数
 msgid ""
 "You are installing from a DVD image. Even though it contains a large "
 "selection of packages, some may be missing."
-msgstr ""
-"您正在从 DVD 镜像进行安装。虽然它提供了很大一部分软件包，但是仍然可能有所遗"
-"漏。"
+msgstr "您正在从 DVD "
+"镜像进行安装。虽然其中包含了很大一部分软件包，但是仍然可能有所遗漏。"
 
 #. Type: text
 #. Description
@@ -464,9 +460,8 @@ msgid ""
 "Unless you don't have a good Internet connection, use of a mirror is "
 "recommended, especially if you plan to install a graphical desktop "
 "environment."
-msgstr ""
-"除非您并没有良好的互联网连接，否则建议您使用镜像，尤其是如果您计划要安装图形"
-"界面的桌面环境的话。"
+msgstr "除非您并没有良好的互联网连接，否则建议您使用镜像站点，尤其是如果您计划要安装"
+"图形界面的桌面环境的话。"
 
 #. Type: text
 #. Description
@@ -475,16 +470,15 @@ msgstr ""
 msgid ""
 "If you have a reasonably good Internet connection, use of a mirror is "
 "suggested if you plan to install a graphical desktop environment."
-msgstr ""
-"如果您有足够好的互联网连接，并且打算安装一个图形界面的桌面环境的话，建议您使"
-"用镜像。"
+msgstr "如果您有足够好的互联网连接，并且打算安装一个图形界面的桌面环境的话，建议您使"
+"用镜像站点。"
 
 #. Type: text
 #. Description
 #. :sl1:
 #: ../apt-mirror-setup.templates:1001
 msgid "Scanning the mirror..."
-msgstr "正在扫描镜像站..."
+msgstr "正在扫描镜像站点..."
 
 #. Type: boolean
 #. Description
@@ -503,9 +497,9 @@ msgid ""
 "to install it. This software has varying licenses which may prevent you from "
 "using, modifying, or sharing it."
 msgstr ""
-"有些非自由软件也能在 Debian 中使用。尽管这些软件并不是 Debian 的一部分，但标"
-"准 Debian 工具还是可以安装它们。这些软件都有其不同的使用许可权，这可能会阻止"
-"您使用、修改或共享它们。"
+"有些非自由软件也能在 Debian 中使用。尽管这些软件并不是 Debian 的一部分，"
+"但可以使用标准 Debian 工具安装它们。这些软件都有各自的许可证，其内容可能会阻"
+"止您使用、修改或共享它们。"
 
 #. Type: boolean
 #. Description
@@ -535,9 +529,9 @@ msgid ""
 "software is not a part of Debian, but standard Debian tools can be used to "
 "install it."
 msgstr ""
-"有些额外的软件可以在 Debian 中使用。尽管其本身是自由的，但它们的运行依赖于其"
-"它一些非自由的软件。这些软件也不是 Debian 的一部分，但标准 Debian 工具可以安"
-"装它们。"
+"有些额外的软件可以在 Debian "
+"中使用。尽管这些软件本身是自由的，但它们的运行依赖于其它一些非自由软件。"
+"这些软件不是 Debian 的一部分，但可以使用标准 Debian 工具安装它们。"
 
 #. Type: boolean
 #. Description
@@ -571,7 +565,7 @@ msgstr "请您选择是否想使用这些软件。"
 #. :sl1:
 #: ../apt-mirror-setup.templates:5001
 msgid "Use a network mirror?"
-msgstr "使用网络镜像吗？"
+msgstr "使用网络镜像站点吗？"
 
 #. Type: boolean
 #. Description
@@ -581,7 +575,7 @@ msgid ""
 "A network mirror can be used to supplement the software that is included on "
 "the installation media. This may also make newer versions of software "
 "available."
-msgstr "网络镜像可以用来补充安装介质所带的软件。也可以用来提供较新版本的软件。"
+msgstr "网络镜像站点可以用来提供安装介质未包含的软件，也可以用来提供较新版本的软件。"
 
 #. Type: text
 #. Description
@@ -616,7 +610,7 @@ msgstr "正在配置 APT 源..."
 #. :sl1:
 #: ../base-installer.templates:9001
 msgid "Updating the list of available packages..."
-msgstr "更新可用软件包列表..."
+msgstr "正在更新可用软件包列表..."
 
 #. Type: text
 #. Description
@@ -631,7 +625,7 @@ msgstr "正在安装额外的软件包..."
 #. :sl1:
 #: ../base-installer.templates:11001
 msgid "Installing extra packages - retrieving and installing ${SUBST0}..."
-msgstr "安装额外软件包 - 正在接收并安装 ${SUBST0}..."
+msgstr "正在安装额外的软件包 - 正在接收并安装 ${SUBST0}..."
 
 #. Type: text
 #. Description
@@ -718,14 +712,14 @@ msgstr "正在安装核心软件包"
 #. packages from the core packages depends on them
 #: ../bootstrap-base.templates:32001
 msgid "Unpacking required packages"
-msgstr "正在解包必需的软件包"
+msgstr "正在解包必需软件包"
 
 #. Type: text
 #. Description
 #. :sl1:
 #: ../bootstrap-base.templates:33001
 msgid "Configuring required packages"
-msgstr "正在配置必需的软件包"
+msgstr "正在配置必需软件包"
 
 #. Type: text
 #. Description
@@ -807,7 +801,7 @@ msgstr "正在检查 Release 签名"
 #. Release is a filename which should not be translated
 #: ../bootstrap-base.templates:43001
 msgid "Valid Release signature (key id ${SUBST0})"
-msgstr "有效的 Release 签名 (键值 ${SUBST0})"
+msgstr "有效的 Release 签名 (密钥 id ${SUBST0})"
 
 #. Type: text
 #. Description
@@ -822,7 +816,7 @@ msgstr "正在解决基本软件包的依赖关系..."
 #. SUBST0 is a list of packages
 #: ../bootstrap-base.templates:45001
 msgid "Found additional base dependencies: ${SUBST0}"
-msgstr "找到额外的基本软件包依赖关系：${SUBST0}"
+msgstr "找到额外的基本软件包的依赖关系：${SUBST0}"
 
 #. Type: text
 #. Description
@@ -830,7 +824,7 @@ msgstr "找到额外的基本软件包依赖关系：${SUBST0}"
 #. SUBST0 is a list of packages
 #: ../bootstrap-base.templates:46001
 msgid "Found additional required dependencies: ${SUBST0}"
-msgstr "找到额外的必需软件包依赖关系：${SUBST0}"
+msgstr "找到额外的必需软件包的依赖关系：${SUBST0}"
 
 #. Type: text
 #. Description
@@ -838,14 +832,14 @@ msgstr "找到额外的必需软件包依赖关系：${SUBST0}"
 #. SUBST0 is a list of packages
 #: ../bootstrap-base.templates:47001
 msgid "Found packages in base already in required: ${SUBST0}"
-msgstr "找到已存在于必需包中的基本软件包：${SUBST0}"
+msgstr "找到已存在于必需软件包中的基本软件包：${SUBST0}"
 
 #. Type: text
 #. Description
 #. :sl1:
 #: ../bootstrap-base.templates:48001
 msgid "Resolving dependencies of required packages..."
-msgstr "正在解决必需软件包依赖关系..."
+msgstr "正在解决必需软件包的依赖关系..."
 
 #. Type: text
 #. Description
@@ -854,7 +848,7 @@ msgstr "正在解决必需软件包依赖关系..."
 #. SUBST1 is a mirror
 #: ../bootstrap-base.templates:49001
 msgid "Checking component ${SUBST0} on ${SUBST1}..."
-msgstr "正在检查 ${SUBST1} 上的 ${SUBST0} 组件..."
+msgstr "正在检查 ${SUBST1} 上的 ${SUBST0} 部分..."
 
 #. Type: text
 #. Description
@@ -1073,7 +1067,7 @@ msgstr "屏幕截图已经保存为 %s"
 #. :sl1:
 #: ../choose-mirror-bin.templates-in:5001
 msgid "Checking the Debian archive mirror"
-msgstr "正在检查 Debian 仓库镜像"
+msgstr "正在检查 Debian 仓库镜像站点"
 
 #. Type: text
 #. Description
@@ -1089,7 +1083,7 @@ msgstr "正在下载 Release 文件..."
 #. :sl1:
 #: ../choose-mirror-bin.templates-in:14001
 msgid "Choose a mirror of the Debian archive"
-msgstr "选择 Debian 仓库镜像"
+msgstr "选择 Debian 仓库镜像站点"
 
 #. Type: select
 #. Choices
@@ -1132,7 +1126,7 @@ msgstr "CN"
 #: ../choose-mirror-bin.templates.http-in:2003
 #: ../choose-mirror-bin.templates.ftp.sel-in:2003
 msgid "Debian archive mirror country:"
-msgstr "Debian 仓库镜像所在的国家："
+msgstr "Debian 仓库镜像站点所在的国家："
 
 #. Type: select
 #. Description
@@ -1146,9 +1140,8 @@ msgid ""
 "The goal is to find a mirror of the Debian archive that is close to you on "
 "the network -- be aware that nearby countries, or even your own, may not be "
 "the best choice."
-msgstr ""
-"此选项的目的是找到网络上离您最近的镜像 -- 请注意，您的邻国，甚至您自己的国"
-"家，都不一定是最好的选择。"
+msgstr "此选项的目的是找到网络上离您最近的镜像站点 -- "
+"请注意，您的邻国，甚至您自己的国家，都不一定是最好的选择。"
 
 #. Type: select
 #. Description
@@ -1159,7 +1152,7 @@ msgstr ""
 #: ../choose-mirror-bin.templates.http-in:3001
 #: ../choose-mirror-bin.templates.ftp.sel-in:3001
 msgid "Debian archive mirror:"
-msgstr "Debian 仓库镜像："
+msgstr "Debian 仓库镜像站点："
 
 #. Type: select
 #. Description
@@ -1173,9 +1166,8 @@ msgid ""
 "Please select a Debian archive mirror. You should use a mirror in your "
 "country or region if you do not know which mirror has the best Internet "
 "connection to you."
-msgstr ""
-"请选择一个 Debian 仓库镜像。如果您不知道哪个镜像与您之间的网络连接最好，请使"
-"用位于您的国家或地区的镜像。"
+msgstr "请选择一个 Debian 仓库镜像站点。如果您不知道哪个镜像站点与您之间的网络连接最"
+"好，请使用位于您的国家或地区的镜像站点。"
 
 #. Type: select
 #. Description
@@ -1193,7 +1185,7 @@ msgstr "通常情况下，deb.debian.org 会是一个较好的选择。"
 #: ../choose-mirror-bin.templates.http-in:4001
 #: ../choose-mirror-bin.templates.ftp.base-in:2001
 msgid "Debian archive mirror hostname:"
-msgstr "请输入 Debian 仓库镜像的主机名："
+msgstr "请输入 Debian 仓库镜像站点的主机名："
 
 #. Type: string
 #. Description
@@ -1205,7 +1197,7 @@ msgstr "请输入 Debian 仓库镜像的主机名："
 #: ../choose-mirror-bin.templates.ftp.base-in:2001
 msgid ""
 "Please enter the hostname of the mirror from which Debian will be downloaded."
-msgstr "请输入将要使用的 Debian 镜像的主机名。"
+msgstr "请输入将用于下载 Debian 的镜像站点的主机名。"
 
 #. Type: string
 #. Description
@@ -1218,14 +1210,14 @@ msgstr "请输入将要使用的 Debian 镜像的主机名。"
 msgid ""
 "An alternate port can be specified using the standard [hostname]:[port] "
 "format."
-msgstr "可以使用标准的 [主机名]:[端口] 格式来指定替代的端口。"
+msgstr "可以使用标准的 [主机名]:[端口] 格式来指定另一个端口。"
 
 #. Type: string
 #. Description
 #. :sl1:
 #: ../choose-mirror-bin.templates.http-in:6001
 msgid "HTTP proxy information (blank for none):"
-msgstr "HTTP 代理信息 (如果没有请留空)："
+msgstr "HTTP 代理信息 (如果没有请置空)："
 
 #. Type: string
 #. Description
@@ -1234,8 +1226,7 @@ msgstr "HTTP 代理信息 (如果没有请留空)："
 msgid ""
 "If you need to use a HTTP proxy to access the outside world, enter the proxy "
 "information here. Otherwise, leave this blank."
-msgstr ""
-"如果您需要用 HTTP 代理来连接外部网络，请在此输入代理信息。否则，请置空。"
+msgstr "如果您需要用 HTTP 代理来连接外部网络，请在此输入代理信息。否则，请置空。"
 
 #. Type: string
 #. Description
@@ -1248,8 +1239,7 @@ msgstr ""
 msgid ""
 "The proxy information should be given in the standard form of \"http://"
 "[[user][:pass]@]host[:port]/\"."
-msgstr ""
-"代理信息应按照“http://[[用户名][:密码]@]主机名[:端口]/”的标准格式给出。"
+msgstr "代理信息应按照 \"http://[[用户名][:密码]@]主机名[:端口]/\" 的标准格式给出。"
 
 #. Type: text
 #. Description
@@ -1297,7 +1287,7 @@ msgstr "键盘布局："
 #. :sl1:
 #: ../keyboard-configuration.templates:6001
 msgid "Please select the layout matching the keyboard for this machine."
-msgstr "请选择匹配这台机器键盘的布局。"
+msgstr "请选择与这台机器的键盘相匹配的布局。"
 
 #. Type: select
 #. Choices
@@ -1508,9 +1498,9 @@ msgid ""
 "+Shift is also a popular combination; it will however lose its usual "
 "behavior in Emacs and other programs that use it for specific needs."
 msgstr ""
-"考虑到人体工程学，常会选用右边的 Alt 或大写锁定键 (在之后的例子中，使用 Shift"
-"+大写锁定键的组合来代替普通大写切换)。Alt+Shift 也是很流行的组合；但在 Emacs "
-"和其他将其用于特殊需要的程序中它会失去其通常的功能。"
+"考虑到人体工程学，常会选用右边的 Alt 或大写锁定键 (如选择后者，则会使用 "
+"Shift+大写锁定键的组合来进行正常的大小写切换)。Alt+Shift 也是很流行的组合键；"
+"但在 Emacs 和其他将其用于特殊用途的程序中它会失去其通常的功能。"
 
 #. Type: select
 #. Description
@@ -2135,7 +2125,7 @@ msgstr "正在扫描 ${DIR}..."
 #. :sl1:
 #: ../cdrom-detect.templates:19001
 msgid "Unmounting/ejecting installation media..."
-msgstr "正在卸载/弹出安装介质……"
+msgstr "正在卸载或弹出安装介质..."
 
 #. Type: text
 #. Description
@@ -2160,7 +2150,7 @@ msgstr "配置时钟"
 #. :sl1:
 #: ../clock-setup.templates:2001
 msgid "Is the system clock set to UTC?"
-msgstr "是否设置系统时钟为 UTC？"
+msgstr "系统时钟是否为 UTC？"
 
 #. Type: boolean
 #. Description
@@ -2173,7 +2163,7 @@ msgid ""
 "expects the clock to be set to local time."
 msgstr ""
 "系统时钟一般被设置为协调世界时 (UTC)。操作系统根据您所在时区将系统时间转换为"
-"当地时间。推荐采用这一设置，除非您还使用另外一个需要将系统时钟设为当地时间的"
+"当地时间。推荐采用这一设置，除非您还使用另外一个需要系统时钟设置为当地时间的"
 "操作系统。"
 
 #. Type: text
@@ -2263,7 +2253,7 @@ msgstr "正在设置网络..."
 #. :sl1:
 #: ../finish-install.templates:5001
 msgid "Setting up frame buffer..."
-msgstr "正在设置帧缓存 (frame buffer)..."
+msgstr "正在设置帧缓冲区 (frame buffer)..."
 
 #. Type: text
 #. Description
@@ -2337,9 +2327,10 @@ msgid ""
 "When your computer boots, you will be able to choose to load one of these "
 "operating systems or the newly installed Debian system."
 msgstr ""
-"如果以上列出了您所有的操作系统，那么您应该可以安全地将启动引导器安装到您的主"
-"驱动器（UEFI 分区/引导记录）上。当计算机启动时，您应该可以选择以上任意一种操"
-"作系统或者新安装的 Debian 系统。"
+"如果以上列出了您所有的操作系统，"
+"那么您应该可以安全地将启动引导器安装到您的主驱动器 (UEFI 分区或引导记录) "
+"上。当计算机启动时，您应该可以选择以上任意一种操作系统或者新安装的 Debian "
+"系统。"
 
 #. Type: boolean
 #. Description
@@ -2350,8 +2341,9 @@ msgid ""
 "computer. If so, it should be safe to install the GRUB boot loader to your "
 "primary drive (UEFI partition/boot record)."
 msgstr ""
-"看起来新安装的系统将是这台计算机上唯一的操作系统。如果的确如此，您应该可以安"
-"全地将 GRUB 启动引导器安装到您的主驱动器（UEFI 分区/引导记录）上。"
+"看起来新安装的系统将是这台计算机上唯一的操作系统。如果的确如此，"
+"您应该可以安全地将 GRUB 启动引导器安装到您的主驱动器 (UEFI 分区或引导记录) "
+"上。"
 
 #. Type: boolean
 #. Description
@@ -2362,7 +2354,7 @@ msgid ""
 "failed to detect, this will make that operating system temporarily "
 "unbootable, though GRUB can be manually configured later to boot it."
 msgstr ""
-"警告：您的计算机上存在其它本安装程序无法探测的操作系统的话，修改引导记录将暂"
+"警告：如果您的计算机上存在其他本安装程序无法探测的操作系统，修改引导记录将暂"
 "时使该操作系统无法启动。但是，您可以稍后再手动设置 GRUB 以启动它。"
 
 #. #-#-#-#-#  templates.pot (grub-installer)  #-#-#-#-#
@@ -2418,7 +2410,7 @@ msgstr "正在确定 GRUB 启动设备..."
 #. :sl1:
 #: ../grub-installer.templates:22001
 msgid "Running \"grub-install ${BOOTDEV}\"..."
-msgstr "运行 \"grub-install ${BOOTDEV}\"..."
+msgstr "正在运行 \"grub-install ${BOOTDEV}\"..."
 
 #. Type: text
 #. Description
@@ -2439,7 +2431,7 @@ msgstr "正在更新 /etc/kernel-img.conf..."
 #. :sl1:
 #: ../grub-installer.templates:25001
 msgid "Checking whether to force usage of the removable media path"
-msgstr "检查是否强制使用可移动介质路径"
+msgstr "正在检查是否强制使用可移动介质路径"
 
 #. Type: text
 #. Description
@@ -2453,7 +2445,7 @@ msgstr "正在挂载文件系统"
 #. :sl1:
 #: ../grub-installer.templates:27001
 msgid "Configuring grub-efi for future usage of the removable media path"
-msgstr "配置 grub-efi 以便将来使用可移动介质路径"
+msgstr "正在配置 grub-efi 以便将来使用可移动介质路径"
 
 #. Type: text
 #. Description
@@ -2482,9 +2474,9 @@ msgid ""
 "buggy!) and do not support proper configuration of boot options from system "
 "hard drives."
 msgstr ""
-"您的电脑似乎是由 EFI 引导，但是该配置可能无法从硬盘驱动器启动。一些 EFI 固件"
-"实现不符合 EFI 规范（也就是说很容易出错），并且不支持适当的从系统硬盘引导选项"
-"配置。"
+"您的电脑似乎是由 EFI 引导，但是该配置可能无法从硬盘驱动器启动。一些 EFI "
+"固件实现不符合 EFI 规范 "
+"(也就是说很容易出错)，并且即使引导选项配置正确，仍然不支持从系统硬盘启动。"
 
 #. Type: boolean
 #. Description
@@ -2495,9 +2487,9 @@ msgid ""
 "of the GRUB boot loader to a fallback location, the \"removable media path"
 "\". Almost all EFI systems, no matter how buggy, will boot GRUB that way."
 msgstr ""
-"此问题的变通方法是将 EFI 版的 GRUB 引导加载程序安装一个额外副本到备用位置，也"
-"就是“可移动介质路径”。几乎所有的 EFI 系统，无论多么糟糕，都能以这种方式启动 "
-"GRUB。"
+"此问题的变通方法是安装一份 EFI 版的 GRUB 启动引导器的副本到一个备用位置，"
+"也就是 \"可移动介质路径\"。几乎所有的 EFI 系统，无论多么糟糕，"
+"都能以这种方式启动 GRUB。"
 
 #. Type: boolean
 #. Description
@@ -2557,7 +2549,7 @@ msgstr "正在探测硬件，请稍候..."
 #. :sl1:
 #: ../hw-detect.templates:2001
 msgid "Loading module '${MODULE}' for '${CARDNAME}'..."
-msgstr "正在为“${CARDNAME}”加载“${MODULE}”模块..."
+msgstr "正在为 \"${CARDNAME}\" 加载 \"${MODULE}\"模块..."
 
 #. Type: text
 #. Description
@@ -2604,7 +2596,7 @@ msgstr "正在为安装报告收集信息 ..."
 #. :sl1:
 #: ../iso-scan.templates:1001
 msgid "Scan hard drives for an installer ISO image"
-msgstr "扫描硬盘，寻找安装程序的 ISO 映像文件"
+msgstr "扫描硬盘，寻找安装程序的 ISO 镜像文件"
 
 #. Type: text
 #. Description
@@ -2639,7 +2631,7 @@ msgstr "选择一种语言"
 #. :sl1:
 #: ../localechooser.templates-in:8001
 msgid "Select your location"
-msgstr "请选择您的区域"
+msgstr "请选择您的位置"
 
 #. Type: title
 #. Description
@@ -2647,14 +2639,14 @@ msgstr "请选择您的区域"
 #. :sl1:
 #: ../localechooser.templates-in:9001
 msgid "Configure locales"
-msgstr "配置区域"
+msgstr "配置区域设置"
 
 #. Type: note
 #. Description
 #. :sl1:
 #: ../localechooser.templates-in:12001
 msgid "Language selection no longer possible"
-msgstr "已不能选择语言"
+msgstr "已无法选择语言"
 
 #. Type: note
 #. Description
@@ -2663,7 +2655,7 @@ msgstr "已不能选择语言"
 msgid ""
 "At this point it is no longer possible to change the language for the "
 "installation, but you can still change the country or locale."
-msgstr "到这里已经无法更改安装程序使用的语言，但您仍可以更改国家或本地化设置。"
+msgstr "现在已经无法更改安装程序使用的语言，但您仍可以更改国家或区域设置。"
 
 #. Type: note
 #. Description
@@ -2672,7 +2664,7 @@ msgstr "到这里已经无法更改安装程序使用的语言，但您仍可以
 msgid ""
 "To select a different language you will need to abort this installation and "
 "reboot the installer."
-msgstr "如果要选择另外一种语言，您需要终止此安装并重启安装程序。"
+msgstr "如果要选择另外一种语言，您需要中止安装并重启安装程序。"
 
 #. Type: boolean
 #. Description
@@ -2708,7 +2700,7 @@ msgstr "所选语言的安装程序翻译尚未全部完成。"
 msgid ""
 "This means that there is a significant chance that some dialogs will be "
 "displayed in English instead."
-msgstr "这意味着可能有一些对话会以英文显示。"
+msgstr "这意味着可能有一些对话框会以英文显示。"
 
 #. Type: text
 #. Description
@@ -2717,7 +2709,7 @@ msgstr "这意味着可能有一些对话会以英文显示。"
 msgid ""
 "If you do anything other than a purely default installation, there is a real "
 "chance that some dialogs will be displayed in English instead."
-msgstr "除非您进行标准的默认安装，否则很可能会有一些对话会以英文显示。"
+msgstr "除非您进行标准的默认安装，否则很可能会有一些对话框会以英文显示。"
 
 #. Type: text
 #. Description
@@ -2752,7 +2744,7 @@ msgid ""
 "The chance that you will actually encounter a dialog that is not translated "
 "into the selected language is extremely small, but it cannot be ruled out "
 "completely."
-msgstr "您遇到未被翻译成所选语言的对话的可能性微乎其微，但也不是完全不可能。"
+msgstr "您遇到未被翻译成所选语言的对话框的可能性微乎其微，但也不是完全不可能。"
 
 #. Type: text
 #. Description
@@ -2761,7 +2753,7 @@ msgstr "您遇到未被翻译成所选语言的对话的可能性微乎其微，
 msgid ""
 "Unless you have a good understanding of the alternative language, it is "
 "recommended to either select a different language or abort the installation."
-msgstr "除非您懂得备用语言，否则推荐您选择另一种语言，或终止安装程序。"
+msgstr "除非您懂得备用语言，否则推荐您选择另一种语言，或中止安装程序。"
 
 #. Type: text
 #. Description
@@ -2770,7 +2762,7 @@ msgstr "除非您懂得备用语言，否则推荐您选择另一种语言，或
 msgid ""
 "If you choose not to continue, you will be given the option of selecting a "
 "different language, or you can abort the installation."
-msgstr "如果选择不继续，您将可以选择另一种语言，或终止安装程序。"
+msgstr "如果选择不继续，您将可以选择另一种语言，或中止安装程序。"
 
 #. Type: select
 #. Choices
@@ -2795,7 +2787,7 @@ msgstr "国家、领地或地区："
 #. :sl1:
 #: ../localechooser.templates-in:24001
 msgid "Continent or region:"
-msgstr "洲或区域："
+msgstr "洲或地区："
 
 #. Type: text
 #. Description
@@ -2805,9 +2797,8 @@ msgid ""
 "The selected location will be used to set your time zone and also for "
 "example to help select the system locale. Normally this should be the "
 "country where you live."
-msgstr ""
-"选择的区域将被用于设置您的时区以及其他例如帮助决定系统区域。通常这应该为您所"
-"居住的国家。"
+msgstr "所选的位置将用于设置您的时区、帮助决定系统的区域设置等。通常您应当选择您所居"
+"住的国家。"
 
 #. Type: text
 #. Description
@@ -2816,15 +2807,15 @@ msgstr ""
 msgid ""
 "This is a shortlist of locations based on the language you selected. Choose "
 "\"other\" if your location is not listed."
-msgstr ""
-"这是根据您所选择的语言产生的短列表。如果没有列出您的区域，请选择\"其他\"。"
+msgstr "这是根据您所选择的语言生成的简短列表。如果没有列出您所在的位置，请选择\"其他"
+"\"。"
 
 #. Type: text
 #. Description
 #. :sl1:
 #: ../localechooser.templates-in:27001
 msgid "Select the continent or region to which your location belongs."
-msgstr "选择您区域所属的洲或者地区。"
+msgstr "选择您的位置所属的洲或者地区。"
 
 #. Type: text
 #. Description
@@ -2835,16 +2826,15 @@ msgstr "选择您区域所属的洲或者地区。"
 msgid ""
 "Listed are locations for: %s. Use the <Go Back> option to select a different "
 "continent or region if your location is not listed."
-msgstr ""
-"列出的区域属于：%s。如果没有列出您的区域，请使用 <返回> 选项选择另外一个洲或"
-"者地区。"
+msgstr "以下位置属于：%s。如果没有列出您所在的位置，请使用 <返回> "
+"选项选择另外一个洲或者地区。"
 
 #. Type: select
 #. Description
 #. :sl1:
 #: ../localechooser.templates-in:29001
 msgid "Country to base default locale settings on:"
-msgstr "基于默认区域设置选择的国家："
+msgstr "默认区域设置所属的国家："
 
 #. Type: text
 #. Description
@@ -2855,9 +2845,8 @@ msgid ""
 "have selected. You can now select your preference from the locales available "
 "for the selected language. The locale that will be used is listed in the "
 "second column."
-msgstr ""
-"没有为您选择的国家和语言定义好的区域。您现在可以从对此语言可用的区域中选择最"
-"喜欢的。将在第二列中列出将使用的区域。"
+msgstr "您选择的国家和语言的组合没有已定义的区域设置。您现在可以从您选择的语言的可用"
+"的区域设置中选择最喜欢的。将在第二列中列出将使用的区域设置。"
 
 #. Type: text
 #. Description
@@ -2867,9 +2856,8 @@ msgid ""
 "There are multiple locales defined for the language you have selected. You "
 "can now select your preference from those locales. The locale that will be "
 "used is listed in the second column."
-msgstr ""
-"对于您所选择的语言，定义了多个区域。您现在可以从这些区域中选择最喜欢的。将在"
-"第二列中列出将使用的区域。"
+msgstr "您所选择的语言有多个已定义的区域设置。您现在可以从这些区域设置中选择最喜欢的"
+"。将在第二列中列出将使用的区域设置。"
 
 #. #-#-#-#-#  templates.pot (lvmcfg)  #-#-#-#-#
 #. Type: text
@@ -2934,9 +2922,9 @@ msgid ""
 "the installer is unable to get a working configuration from the network, you "
 "will be given the opportunity to configure the network manually."
 msgstr ""
-"网络可以通过手动输入全部信息或者使用 DHCP (或针对 IPv6 的变种) 来进行配置。如"
-"果您选择了自动配置，但安装程序无法从网络中获得有效的网络配置，您仍然可以手动"
-"输入。"
+"网络可以通过手动输入全部信息进行配置，也可以使用 DHCP (或者一系列 IPv6 "
+"专用的方法) 来进行配置。如果您选择了自动配置，但安装程序无法从网络中获得有效"
+"的网络配置，您仍然可以手动输入。"
 
 #. Type: string
 #. Description
@@ -2956,7 +2944,7 @@ msgid ""
 "sure you use the same domain name on all your computers."
 msgstr ""
 "域名是您的互联网地址的一部分，附加在主机名之后。它通常是以 .com、.net、.edu "
-"或 .org 结尾。如果您正在设置一个内部网络，您可以随意写一个，但是要确保您所有"
+"或 .org 结尾。如果您正在设置一个家庭网络，您可以随意写一个，但是要确保您所有"
 "计算机的域名都是一样的。"
 
 #. Type: string
@@ -2977,9 +2965,9 @@ msgid ""
 "first to be queried. If you don't want to use any name server, just leave "
 "this field blank."
 msgstr ""
-"域名服务器将被用来在网络中查询主机名称。请输入至多三个域名服务器的 IP 地址 "
-"(不是主机名)，以空格分隔，不要使用逗号。列表中的第一个服务器将首先被查询。如"
-"果您不想用任何域名服务器，请将此栏置空。"
+"域名服务器用于在网络中查找主机名。请输入至多三个域名服务器的 IP 地址 (不是主"
+"机名)，以空格分隔，不要使用逗号。将首先查询列表中的第一个域名服务器。如果您不"
+"想使用任何域名服务器，请将此栏置空。"
 
 #. Type: select
 #. Description
@@ -2996,9 +2984,8 @@ msgid ""
 "Your system has multiple network interfaces. Choose the one to use as the "
 "primary network interface during the installation. If possible, the first "
 "connected network interface found has been selected."
-msgstr ""
-"您的系统有多个网络接口，请在安装过程中选择其中之一作为主网络接口。如果可能的"
-"话，安装程序会选择第一个已连接的网络接口。"
+msgstr "您的系统有多个网络接口，请选择其中一个作为安装过程中使用的主网络接口。如果可"
+"能的话，安装程序已经选中了第一个已连接的网络接口。"
 
 #. Type: string
 #. Description
@@ -3027,7 +3014,7 @@ msgid ""
 "available network, leave this field blank."
 msgstr ""
 "${iface} 是一个无线网络接口。请输入 ${iface} 将要使用的无线网络的名称 "
-"(ESSID)。如果您希望使用任意可用的网络，请将此处置空。"
+"(ESSID)。如果您希望使用任何可用的网络，请将此处置空。"
 
 #. Type: text
 #. Description
@@ -3051,7 +3038,7 @@ msgstr "主机名："
 #. :sl1:
 #: ../netcfg-common.templates:18001
 msgid "Please enter the hostname for this system."
-msgstr "请输入系统的主机名。"
+msgstr "请输入此系统的主机名。"
 
 #. Type: string
 #. Description
@@ -3062,9 +3049,8 @@ msgid ""
 "you don't know what your hostname should be, consult your network "
 "administrator. If you are setting up your own home network, you can make "
 "something up here."
-msgstr ""
-"主机名是在网络中标示您的系统的一个单词。如果您不知道主机名是什么，请询问网络"
-"管理员。如果您正在设置内部网络，那么可以随意写个名字。"
+msgstr "主机名是在网络中识别您的系统的一个单词。如果您不知道主机名是什么，请询问网络"
+"管理员。如果您正在设置家庭网络，那么可以随意写个名字。"
 
 #. Type: text
 #. Description
@@ -3072,7 +3058,7 @@ msgstr ""
 #. :sl1:
 #: ../netcfg-common.templates:47001
 msgid "Storing network settings..."
-msgstr "正在存储网络设置..."
+msgstr "正在保存网络设置..."
 
 #. Type: text
 #. Description
@@ -3119,8 +3105,8 @@ msgstr "DHCP 主机名："
 msgid ""
 "You may need to supply a DHCP host name. If you are using a cable modem, you "
 "might need to specify an account number here."
-msgstr ""
-"您需要提供一个 DHCP 主机名。如果您用的是 cable modem，可能还得指定一个帐号。"
+msgstr "您需要提供一个 DHCP "
+"主机名。如果您使用的是同轴电缆调制解调器，可能还需要指定一个帐号。"
 
 #. Type: string
 #. Description
@@ -3134,14 +3120,14 @@ msgstr "大多数其他用户可以将此栏置空。"
 #. :sl1:
 #: ../netcfg-dhcp.templates:2001
 msgid "Configuring the network with DHCP"
-msgstr "使用 DHCP 来配置网络"
+msgstr "正在使用 DHCP 配置网络"
 
 #. Type: text
 #. Description
 #. :sl1:
 #: ../netcfg-dhcp.templates:4001
 msgid "Network autoconfiguration has succeeded"
-msgstr "网络自动设置成功"
+msgstr "网络自动配置成功"
 
 #. Type: select
 #. Choices
@@ -3151,7 +3137,7 @@ msgstr "网络自动设置成功"
 #. in single-byte languages)
 #: ../netcfg-dhcp.templates:6001
 msgid "Retry network autoconfiguration"
-msgstr "重新尝试网络自动设置"
+msgstr "重新尝试网络自动配置"
 
 #. Type: select
 #. Choices
@@ -3161,7 +3147,7 @@ msgstr "重新尝试网络自动设置"
 #. in single-byte languages)
 #: ../netcfg-dhcp.templates:6001
 msgid "Retry network autoconfiguration with a DHCP hostname"
-msgstr "使用 DHCP 主机名重试网络自动设置"
+msgstr "使用 DHCP 主机名重新尝试网络自动配置"
 
 #. Type: select
 #. Choices
@@ -3171,7 +3157,7 @@ msgstr "使用 DHCP 主机名重试网络自动设置"
 #. in single-byte languages)
 #: ../netcfg-dhcp.templates:6001
 msgid "Configure network manually"
-msgstr "手动进行网络设置"
+msgstr "手动配置网络"
 
 #. Type: select
 #. Choices
@@ -3181,7 +3167,7 @@ msgstr "手动进行网络设置"
 #. in single-byte languages)
 #: ../netcfg-dhcp.templates:6001
 msgid "Do not configure the network at this time"
-msgstr "现在不进行网络设置"
+msgstr "暂时不配置网络"
 
 #. Type: select
 #. Description
@@ -3201,17 +3187,17 @@ msgid ""
 "by the client, so you can also choose to retry DHCP network "
 "autoconfiguration with a hostname that you provide."
 msgstr ""
-"在这里，您可以选择重新尝试 DHCP 网络自动配置 (如果您的 DHCP 服务器响应延时很"
-"长，重新设置一遍可能就会成功) 或者手动配置网络。另外，某些 DHCP 服务器要求客"
-"户端发送 DHCP 主机名，因此您可以在重试 DHCP 网络自动配置时提供这样一个主机"
-"名。"
+"现在，您可以选择重新尝试 DHCP 网络自动配置 (如果您的 DHCP "
+"服务器响应延时很长，重新配置一遍可能就会成功) 或者手动配置网络。另外，某些 "
+"DHCP 服务器要求客户端发送 DHCP 主机名，因此您可以在重试 DHCP "
+"网络自动配置时提供一个主机名。"
 
 #. Type: note
 #. Description
 #. :sl1:
 #: ../netcfg-dhcp.templates:7001
 msgid "Network autoconfiguration failed"
-msgstr "网络自动设置失败"
+msgstr "网络自动配置失败"
 
 #. Type: note
 #. Description
@@ -3220,16 +3206,15 @@ msgstr "网络自动设置失败"
 msgid ""
 "Your network is probably not using the DHCP protocol. Alternatively, the "
 "DHCP server may be slow or some network hardware is not working properly."
-msgstr ""
-"您的网络可能并未使用 DHCP 协议，也有可能是 DHCP 服务器速度过于缓慢或网络设备"
-"未能正常工作。"
+msgstr "您的网络可能并未使用 DHCP 协议，也有可能是 DHCP "
+"服务器速度过于缓慢或者某些网络设备未能正常工作。"
 
 #. Type: text
 #. Description
 #. :sl1:
 #: ../netcfg-dhcp.templates:9001
 msgid "Reconfigure the wireless network"
-msgstr "重新设置无线网络"
+msgstr "重新配置无线网络"
 
 #. Type: string
 #. Description
@@ -3245,7 +3230,7 @@ msgstr "IP 地址："
 #. :sl1:
 #: ../netcfg-static.templates:1001
 msgid "The IP address is unique to your computer and may be:"
-msgstr "IP 对计算机是唯一的，其可能是："
+msgstr "IP 地址与您的计算机相关联，其可能是："
 
 #. Type: string
 #. Description
@@ -3256,7 +3241,7 @@ msgid ""
 " * four numbers separated by periods (IPv4);\n"
 " * blocks of hexadecimal characters separated by colons (IPv6)."
 msgstr ""
-" * 句号分隔的四个数字 (IPv4);\n"
+" * 句点分隔的四个数字 (IPv4);\n"
 " * 冒号分隔的十六进制字符 (IPv6)。"
 
 #. Type: string
@@ -3265,7 +3250,7 @@ msgstr ""
 #. :sl1:
 #: ../netcfg-static.templates:1001
 msgid "You can also optionally append a CIDR netmask (such as \"/24\")."
-msgstr "您也可以在后附加一个 CIDR 掩码 (如“/24”)。"
+msgstr "您也可以在后面附加一个 CIDR 网络掩码 (如 \"/24\")。"
 
 #. Type: string
 #. Description
@@ -3290,9 +3275,8 @@ msgid ""
 "The netmask is used to determine which machines are local to your network.  "
 "Consult your network administrator if you do not know the value.  The "
 "netmask should be entered as four numbers separated by periods."
-msgstr ""
-"网络掩码是用来确定哪些机器位于您的网络中。如果您不知道掩码值，请咨询网络管理"
-"员。掩码应该是由四个用句点分隔的数字组成。"
+msgstr "网络掩码用于确定哪些机器位于您的网络中。如果您不知道掩码值，请咨询网络管理员"
+"。掩码应该由用句点分隔的四个数字组成。"
 
 #. Type: string
 #. Description
@@ -3313,9 +3297,9 @@ msgid ""
 "you can leave this blank.  If you don't know the proper answer to this "
 "question, consult your network administrator."
 msgstr ""
-"网关是用以指示网关路由服务器的 IP 地址 (四个用句号分隔的数字)，也叫做默认路"
-"由。所有与局域网外的通信 (例如，对互联网的访问) 都要经过它。在某些罕见情况"
-"下，您可能并不使用路由；这时，置空就可以了。如果不知道应该回答什么，请咨询网"
+"网关是用于指示网关路由 (也叫做默认路由) 的 IP 地址 (用句点分隔的四个数字)。"
+"所有与局域网外的通信 (例如，对互联网的访问) 都要经过它。在某些罕见情况下，您"
+"可能并不使用路由；这种情况下，置空就可以了。如果不知道应该回答什么，请咨询网"
 "络管理员。"
 
 #. Type: boolean
@@ -3346,7 +3330,7 @@ msgid ""
 msgstr ""
 " 接口          = ${interface}\n"
 " IP 地址       = ${ipaddress}\n"
-" 掩码          = ${netmask}\n"
+" 网络掩码      = ${netmask}\n"
 " 网关          = ${gateway}\n"
 " 点对点        = ${pointopoint}\n"
 " 域名服务器    = ${nameservers}"
@@ -3411,9 +3395,8 @@ msgid ""
 "standard schemes) or, if you prefer, you can do it manually. With guided "
 "partitioning you will still have a chance later to review and customise the "
 "results."
-msgstr ""
-"安装程序能够指导您采用各种标准方案进行磁盘分区。如果您喜欢，也可以进行手动操"
-"作。如果选择了分区向导，稍后您还是有机会检查和修改分区设置结果。"
+msgstr "安装程序能够指导您采用各种标准方案进行磁盘分区。如果您喜欢，也可以手动进行分"
+"区。如果您选择了分区向导，稍后您还是有机会检查和修改分区结果。"
 
 #. Type: select
 #. Description
@@ -3446,7 +3429,7 @@ msgstr "分区方案："
 #. at the end of the sentence. Please keep it.
 #: ../partman-auto.templates:10001
 msgid "Selected for partitioning:"
-msgstr "选定要分区："
+msgstr "将要分区："
 
 #. Type: select
 #. Description
@@ -3455,7 +3438,7 @@ msgstr "选定要分区："
 msgid ""
 "The disk can be partitioned using one of several different schemes. If you "
 "are unsure, choose the first one."
-msgstr "该磁盘可以使用以下数种不同方式来进行分区。如果您不确定，请选择第一个。"
+msgstr "该磁盘可以使用以下几种方案中的一种来进行分区。如果您不确定，请选择第一个。"
 
 #. Type: text
 #. Description
@@ -3495,9 +3478,8 @@ msgstr "请选择要分区的磁盘："
 msgid ""
 "Note that all data on the disk you select will be erased, but not before you "
 "have confirmed that you really want to make the changes."
-msgstr ""
-"注意，所选磁盘上的全部数据都将被删除，但是您还是有确认是否真的要这么做的机"
-"会。"
+msgstr "注意，所选磁盘上的全部数据都将被删除，但是稍后还会要求您确认是否真的要这么做"
+"。"
 
 #. Type: text
 #. Description
@@ -3579,9 +3561,8 @@ msgid ""
 "etc.), a free space to create partitions, or a device to initialize its "
 "partition table."
 msgstr ""
-"这是您目前已配置的分区和挂载点的综合信息。请选择一个分区以修改其设置 (文件系"
-"统、挂载点等)，或选择一块空闲空间以创建新分区，又或选择一个设备以初始化其分区"
-"表。"
+"这是您目前已配置的分区和挂载点的概览。请选择一个分区以修改其设置 (文件系统、"
+"挂载点等)，或选择一块空闲空间以创建新分区，又或选择一个设备以初始化其分区表。"
 
 #. Type: boolean
 #. Description
@@ -3603,9 +3584,8 @@ msgstr "将改动写入磁盘吗？"
 msgid ""
 "If you continue, the changes listed below will be written to the disks. "
 "Otherwise, you will be able to make further changes manually."
-msgstr ""
-"如果您继续，以下所列出的修改内容将会写入到磁盘中。或者，您也可以手动来进行其"
-"它修改。"
+msgstr "如果您选择继续，下列改动将会被写入到磁盘中。否则，您还可以再手动进行一些调整"
+"。"
 
 #. Type: boolean
 #. Description
@@ -3614,7 +3594,7 @@ msgstr ""
 msgid ""
 "WARNING: This will destroy all data on any partitions you have removed as "
 "well as on the partitions that are going to be formatted."
-msgstr "警告：任何已删除和将要格式化的分区上的数据都将被摧毁。"
+msgstr "警告：被删除或被格式化的所有分区中的所有数据都将被摧毁。"
 
 #. Type: text
 #. Description
@@ -3635,14 +3615,14 @@ msgstr "处理中..."
 #. :sl1:
 #: ../partman-base.templates:31001
 msgid "Finish partitioning and write changes to disk"
-msgstr "结束分区设定并将修改写入磁盘"
+msgstr "完成分区操作并将修改写入磁盘"
 
 #. Type: text
 #. Description
 #. :sl1:
 #: ../partman-base.templates:32001
 msgid "Undo changes to partitions"
-msgstr "撤消对分区设置的修改"
+msgstr "撤销对磁盘分区的修改"
 
 #. Type: text
 #. Description
@@ -3666,7 +3646,7 @@ msgstr "不可用"
 #. :sl1:
 #: ../partman-base.templates:37001
 msgid "primary"
-msgstr "主"
+msgstr "主分区"
 
 #. Type: text
 #. Description
@@ -3674,7 +3654,7 @@ msgstr "主"
 #. :sl1:
 #: ../partman-base.templates:38001
 msgid "logical"
-msgstr "逻辑"
+msgstr "逻辑分区"
 
 #. Type: text
 #. Description
@@ -3695,7 +3675,7 @@ msgstr "主/逻辑"
 #: ../partman-base.templates:40001
 #, no-c-format
 msgid "#%s"
-msgstr "#%s"
+msgstr "%s"
 
 #. Type: text
 #. Description
@@ -3797,7 +3777,7 @@ msgstr "取消此菜单"
 #. :sl1:
 #: ../partman-base.templates:67001
 msgid "Partition disks"
-msgstr "磁盘分区"
+msgstr "对磁盘进行分区"
 
 #. Type: text
 #. Description
@@ -4089,9 +4069,11 @@ msgid ""
 "partition is a necessity.  \"Swap\" is scratch space for an operating "
 "system, which allows the system to use disk storage as \"virtual memory\"."
 msgstr ""
-"请选择一个分区以删除它或指明将如何使用它。您最少需要一个分区以存放文件系统的"
-"根 (其挂载点是 /)。大多数人会觉得还有必要设置一个单独的交换分区。“交换区”是一"
-"块给操作系统反复擦写的空间，可以允许系统将磁盘存储系统作为“虚拟内存”使用。"
+"请选择一个分区以删除它或指明将如何使用它。"
+"您最少需要一个分区以存放文件系统的根 (其挂载点是 "
+"/)。大多数人会觉得有必要设置一个单独的交换分区。\"交换分区\" "
+"是一块给操作系统反复擦写的空间，可以允许系统将磁盘的存储空间作为 \"虚拟内存\""
+" 使用。"
 
 #. Type: note
 #. Description
@@ -4101,9 +4083,8 @@ msgid ""
 "When the partition is already formatted you may choose to keep and use the "
 "existing data in the partition.  Partitions that will be used in this way "
 "are marked with \"${KEEP}\" in the main partitioning menu."
-msgstr ""
-"如果分区已经过格式化，您也可以保持并使用分区上已有的数据。这些分区将在主分区"
-"菜单中被标上“${KEEP}”。"
+msgstr "如果分区已经过格式化，您也可以保持并使用分区上已有的数据。在分区主菜单中，"
+"这些分区会被标记为 \"${KEEP}\"。"
 
 #. Type: note
 #. Description
@@ -4117,8 +4098,8 @@ msgid ""
 "be marked with \"${FORMAT}\"."
 msgstr ""
 "通常情况下，您会希望格式化分区并创建新文件系统。注意：分区中所有的数据都将被"
-"不可逆地删除。如果您决定对已格式化的分区重装进行格式化操作，它将在主分区菜单"
-"中标注为“${DESTROY}”。否则会标注为“${FORMAT}”。"
+"删除且无法恢复。如果您决定对已格式化的分区重新进行格式化操作，"
+"它将会在分区主菜单中被标记为 \"${DESTROY}\"。否则会被标记为 \"${FORMAT}\"。"
 
 #. Type: text
 #. Description
@@ -4131,10 +4112,11 @@ msgid ""
 "the bootable flag for it. Such a partition will be marked with "
 "\"${BOOTABLE}\" in the main partitioning menu."
 msgstr ""
-"为了能启动您的新系统，还需要使用一个启动引导器软件。它可以安装在第一块硬盘的"
-"主引导记录 (MBR) 上，或者某个分区中。如果您将启动引导器安装到一个分区中，那么"
-"您就必须为此分区设置可启动 (bootable) 标志。在主分区菜单中，此分区会标注"
-"为“${BOOTABLE}”。"
+"为了能启动您的新系统，还需要使用一个启动引导器。"
+"它可以安装在第一块硬盘的主引导记录 (MBR) "
+"上，或者某个分区中。如果您将启动引导器安装到一个分区中，"
+"那么您就必须为此分区设置可启动 (bootable) 标志。在分区主菜单中，"
+"此分区会被标记为 \"${BOOTABLE}\"。"
 
 #. Type: text
 #. Description
@@ -4227,16 +4209,15 @@ msgstr "允许以根用户 (root) 登录吗？"
 msgid ""
 "If you choose not to allow root to log in, then a user account will be "
 "created and given the power to become root using the 'sudo' command."
-msgstr ""
-"如果您选择不允许根用户登录，那么将会有一个普通用户被创建并被赋予通过“sudo”命"
-"令变身为根用户的权限。"
+msgstr "如果您选择不允许根用户登录，那么将会创建一个普通用户账户，并将赋予它通过 "
+"\"sudo\" 命令提升为根用户的权限。"
 
 #. Type: password
 #. Description
 #. :sl1:
 #: ../user-setup-udeb.templates:6001
 msgid "Root password:"
-msgstr "Root 用户密码："
+msgstr "Root 密码："
 
 #. Type: password
 #. Description
@@ -4249,10 +4230,10 @@ msgid ""
 "It should not be a word found in dictionaries, or a word that could be "
 "easily associated with you."
 msgstr ""
-"您需要为“root”用户 (即系统管理员帐号) 设置一个密码。如果恶意或无资格的用户获"
-"得了 root 权限将可能会导致灾难性的结果，因此您应该小心地选择一个不容易猜出的 "
-"root 密码。它不应该是一个能在字典中找得到的单词或者一个跟您本人有紧密关系的词"
-"语。"
+"您需要为 \"root\" 用户 (即系统管理员帐号) 设置一个密码。"
+"如果恶意或不够格的用户获得了 root 权限，则可能会导致灾难性的结果，"
+"因此您应该小心地选择一个不容易猜出的 root 密码。您不应该选择一个能在字典中找"
+"得到的单词或者一个跟您本人有紧密关系的词语。"
 
 #. Type: password
 #. Description
@@ -4264,7 +4245,7 @@ msgstr ""
 msgid ""
 "A good password will contain a mixture of letters, numbers and punctuation "
 "and should be changed at regular intervals."
-msgstr "一个安全的密码应该是由字母、数字和标点符号组合而成，而且要定期更新。"
+msgstr "一个安全的密码应该由字母、数字和标点符号组合而成，而且要定期更新。"
 
 #. Type: password
 #. Description
@@ -4274,9 +4255,8 @@ msgid ""
 "The root user should not have an empty password. If you leave this empty, "
 "the root account will be disabled and the system's initial user account will "
 "be given the power to become root using the \"sudo\" command."
-msgstr ""
-"根用户不应使用空密码。如果您将此留空，根用户账户会被禁用且系统的初始用户账户"
-"会被给予权限通过“sudo”命令获得根用户权限。"
+msgstr "根用户不应使用空密码。如果您将此栏置空，根用户账户会被禁用，"
+"且系统的初始用户账户将会被赋予通过 \"sudo\" 命令提升为根用户的权限。"
 
 #. Type: password
 #. Description
@@ -4292,7 +4272,7 @@ msgstr "请注意，您将不会看到所输入的密码内容。"
 msgid ""
 "Please enter the same root password again to verify that you have typed it "
 "correctly."
-msgstr "为了保证您的密码正确无误，请再次输入相同的 root 密码。"
+msgstr "请再次输入相同的 root 密码以保证您的输入没有出错。"
 
 #. Type: string
 #. Description
@@ -4308,7 +4288,7 @@ msgstr "请输入新用户的全名："
 msgid ""
 "A user account will be created for you to use instead of the root account "
 "for non-administrative activities."
-msgstr "程序将创建一个用来取代 root 执行非管理任务的普通用户帐号。"
+msgstr "将要创建一个用来取代 root 用户执行非管理任务的普通用户帐号。"
 
 #. Type: string
 #. Description
@@ -4320,15 +4300,15 @@ msgid ""
 "program which displays or uses the user's real name. Your full name is a "
 "reasonable choice."
 msgstr ""
-"请输入此用户的真实名称。这项信息将被用作该用户所发邮件的默认来源，同时还会被"
-"用于所有显示和使用该用户真实名称的程序中。您的全名就是一个很合适的选择。"
+"请输入此用户的真实姓名。这项信息将用于该用户所发邮件的默认发件人名字，以及所"
+"有需要显示或使用该用户真实姓名的程序，等等。您的全名就是一个很合适的选择。"
 
 #. Type: string
 #. Description
 #. :sl1:
 #: ../user-setup-udeb.templates:10001
 msgid "Username for your account:"
-msgstr "您的帐号的用户名："
+msgstr "您的账户的用户名："
 
 #. Type: string
 #. Description
@@ -4338,9 +4318,8 @@ msgid ""
 "Select a username for the new account. Your first name is a reasonable "
 "choice. The username should start with a lower-case letter, which can be "
 "followed by any combination of numbers and more lower-case letters."
-msgstr ""
-"请为新的帐号选择用户名。比如，您的名字就是一个合适的选择。用户名必须以一个小"
-"写字母开头，接着是任意数字和其他小写字母的组合。"
+msgstr "请为新的账户选择一个用户名。比如，您的名字就是一个合适的选择。用户名必须以一"
+"个小写字母开头，接着是任意数字和小写字母的组合。"
 
 #. Type: password
 #. Description
@@ -4356,7 +4335,7 @@ msgstr "请为新用户选择一个密码："
 msgid ""
 "Please enter the same user password again to verify you have typed it "
 "correctly."
-msgstr "请再次输入相同用户密码以保证您的输入不会出错。"
+msgstr "请再次输入相同的用户密码以保证您的输入没有出错。"
 
 #. Type: title
 #. Description
