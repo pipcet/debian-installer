@@ -6,6 +6,7 @@
 # Eirik U. Birkeland <eirbir@gmail.com>, 2010.
 # Allan Nordhøy <epost@anotheragency.no>, 2017.
 # Alexander Jansen <bornxlo@gmail.com>, 2018.
+# aujawindar <eivind.odegard@sogn.no>, 2022.
 #
 # Translations from iso-codes:
 #   Alastair McKinstry <mckinstry@computer.org>, 2001.
@@ -21,15 +22,15 @@ msgstr ""
 "Project-Id-Version: nn\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-02 20:02+0000\n"
-"PO-Revision-Date: 2018-01-20 21:16+0000\n"
-"Last-Translator: Petter Reinholdtsen <pere-weblate@hungry.com>\n"
+"PO-Revision-Date: 2022-04-17 17:12+0000\n"
+"Last-Translator: aujawindar <eivind.odegard@sogn.no>\n"
 "Language-Team: Norwegian Nynorsk <i18n-nn@lister.ping.uio.no>\n"
 "Language: nn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.19-dev\n"
+"X-Generator: Weblate 4.12-dev\n"
 
 #. Type: select
 #. Description
@@ -178,10 +179,8 @@ msgstr "tryggleiksoppdateringar (frå ${SEC_HOST})"
 #. including host name. In short, KEEP THIS SHORT and, yes, that's tricky
 #. :sl1:
 #: ../apt-setup-udeb.templates:11001
-#, fuzzy
-#| msgid "Erase data:"
 msgid "release updates"
-msgstr "Slett data:"
+msgstr "oppdateringar"
 
 #. Type: multiselect
 #. Choices
@@ -190,10 +189,8 @@ msgstr "Slett data:"
 #. including host name. In short, KEEP THIS SHORT and, yes, that's tricky
 #. :sl1:
 #: ../apt-setup-udeb.templates:11001
-#, fuzzy
-#| msgid "Use backported software?"
 msgid "backported software"
-msgstr "Bruk tilbakeført programvare?"
+msgstr "tilbakeført programvare"
 
 #. Type: multiselect
 #. Description
@@ -206,16 +203,12 @@ msgstr "Tenester som skal brukast:"
 #. Description
 #. :sl1:
 #: ../apt-setup-udeb.templates:11002
-#, fuzzy
-#| msgid ""
-#| "Debian has two services that provide updates to releases: security and "
-#| "volatile."
 msgid ""
 "Debian has two services that provide updates to releases: security and "
 "release updates."
 msgstr ""
 "Debian har to tenester som sørgjer for oppdaterte installasjonar: "
-"tryggleiksoppdateringar og volatile oppdateringar."
+"tryggleiksoppdateringar og utgjevingsoppdateringar."
 
 #. Type: multiselect
 #. Description
@@ -232,35 +225,21 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-setup-udeb.templates:11002
-#, fuzzy
-#| msgid ""
-#| "Volatile updates provide more current versions for software that changes "
-#| "relatively frequently and where not having the latest version could "
-#| "reduce the usability of the software. An example is the virus signatures "
-#| "for a virus scanner. This service is only available for stable and "
-#| "oldstable releases."
 msgid ""
 "Release updates provide more current versions for software that changes "
 "relatively frequently and where not having the latest version could reduce "
 "the usability of the software. It also provides regression fixes. This "
 "service is only available for stable and oldstable releases."
 msgstr ""
-"Volatile oppdateringar sørgjer for oppdaterte versjonar av programvare som "
+"Utgjevingsoppdateringar sørgjer for oppdaterte versjonar av programvare som "
 "endrar seg raskt, og der det å ikkje ha siste versjonen vil redusere "
-"nytteverdien av programmet. Eit døme er virussignaturar for ein virusfinnar. "
-"Denne tenesta er berre tilgjengeleg for versjonar som er merkte stable og "
-"oldstable."
+"nytteverdien av programmet. Her er òg tilbakeføringsrettingar. Denne tenesta "
+"er berre tilgjengeleg for versjonar som er merkte stable og oldstable."
 
 #. Type: multiselect
 #. Description
 #. :sl1:
 #: ../apt-setup-udeb.templates:11002
-#, fuzzy
-#| msgid ""
-#| "Some software has been backported from the development tree to work with "
-#| "this release. Although this software has not gone through such complete "
-#| "testing as that contained in the release, it includes newer versions of "
-#| "some applications which may provide useful features."
 msgid ""
 "Backported software are adapted from the development version to work with "
 "this release. Although this software has not gone through such complete "
@@ -269,19 +248,20 @@ msgid ""
 "not cause any of them to be installed by default; it only allows you to "
 "manually select backports to use."
 msgstr ""
-"Nokre program er tilbakeført frå utviklingstreet for å fungere med denne "
+"Tilbakeførte program kjem frå utviklingsversjonen for å fungere med denne "
 "utgåva. Sjølv om desse programma ikkje har gått gjennom slik testing som "
 "program som er med i distrubisjonen, kan det vere nyare versjonar av nokre "
-"program som kan innehalde nyttige forbetringar er tilgjengeleg."
+"program som kan innehalde nyttige forbetringar er tilgjengeleg. Viss du "
+"skrur på tilbakeførte program vil ingen av dei bli installerte automatisk, "
+"det blir berre mogleg for deg å velje manuelt kva tilbakeførte versjonar du "
+"vil bruke."
 
 #. Type: text
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:1001
-#, fuzzy
-#| msgid "Finishing the installation"
 msgid "Scanning the installation media..."
-msgstr "Fullfører installasjonen"
+msgstr "Ser gjennom installasjonsmedia..."
 
 #. Type: error
 #. Description
@@ -290,15 +270,11 @@ msgstr "Fullfører installasjonen"
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:2001 ../apt-cdrom-setup.templates:6001
-#, fuzzy
-#| msgid ""
-#| "An attempt to configure apt to install additional packages from the CD "
-#| "failed."
 msgid ""
 "An attempt to configure apt to install additional packages from the media "
 "failed."
 msgstr ""
-"Eit forsøk på å setje opp apt til å installere tilleggspakkar frå CD "
+"Eit forsøk på å setje opp apt til å installere tilleggspakkar frå mediet "
 "mislukkast."
 
 #. Type: boolean
@@ -315,10 +291,8 @@ msgstr ""
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001 ../apt-cdrom-setup.templates:4001
 #: ../apt-cdrom-setup.templates:5001 ../apt-cdrom-setup.templates:6001
-#, fuzzy
-#| msgid "SILO installation failed"
 msgid "Scan extra installation media?"
-msgstr "Installasjon av SILO feila"
+msgstr "Sjå gjennom ekstra installasjonsmedia?"
 
 #. Type: boolean
 #. Description
@@ -326,27 +300,22 @@ msgstr "Installasjon av SILO feila"
 #: ../apt-cdrom-setup.templates:3001
 msgid "Scanning your installation media finds the label:"
 msgstr ""
+"Me fann denne merkelappen då me skanna gjennom installasjonsmediet ditt:"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001
-#, fuzzy
-#| msgid ""
-#| "You now have the option to scan additional CDs or DVDs for use by the "
-#| "package manager (apt). Normally these should be from the same set as the "
-#| "installation CD/DVD. If you do not have any additional CDs or DVDs "
-#| "available, this step can just be skipped."
 msgid ""
 "You now have the option of scanning additional media for use by the package "
 "manager (apt). Normally these should be from the same set as the one you "
 "booted from. If you do not have any additional media, this step can just be "
 "skipped."
 msgstr ""
-"Du har no høve til å sjå gjennom fleire CDar eller DVDar for at "
-"pakkehandteraren (apt) skal kunne bruke dei. Vanlegvis så skal desse vere "
-"frå same settet som installasjonsCDen/DVDen. Viss du ikkje har fleire CDar "
-"eller DVDar tilgjengeleg, så kan du berre hoppe over dette steget."
+"Du har no høve til å sjå gjennom fleire lagringsmedium for at "
+"pakkehandteraren (apt) skal kunne bruke dei. Vanlegvis skal desse vere frå "
+"same settet som den du starta opp frå. Viss du ikkje har fleire "
+"lagringsmedium, så kan du berre hoppe over dette steget."
 
 #. Type: boolean
 #. Description
@@ -355,46 +324,36 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001 ../apt-cdrom-setup.templates:4001
-#, fuzzy
-#| msgid "If you wish to scan another CD or DVD, please insert it now."
 msgid "If you wish to scan more media, please insert another one now."
-msgstr "Viss du vil sjå gjennom ein CD eller DVD til, så set han inn no."
+msgstr "Viss du vil sjå gjennom fleire lagringsmedium, kan du setje inn eit no."
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:4001
-#, fuzzy
-#| msgid "The CD or DVD with the following label has been scanned:"
 msgid "The image with the following label has been scanned:"
-msgstr "CDen eller DVDen med denne merkelappen er gjennomsøkt:"
+msgstr "Biletet med denne merkelappen er gjennomsøkt:"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:5001
-#, fuzzy
-#| msgid "The CD or DVD with the following label has already been scanned:"
 msgid "The image with the following label has already been scanned:"
-msgstr "CDen eller DVDen med denne merkelappen er allereie gjennomsøkt:"
+msgstr "Biletet med denne merkelappen er allereie gjennomsøkt:"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:5001
-#, fuzzy
-#| msgid "Please replace it now if you wish to scan another CD or DVD."
 msgid "Please replace it now, if you wish to scan another."
-msgstr "Byt ut CDen eller DVDen no viss du vil sjå gjennom ein til."
+msgstr "Byt ut no viss du vil sjå gjennom ein til."
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:6001
-#, fuzzy
-#| msgid "Please check that the CD/DVD has been inserted correctly."
 msgid "Please check that the media has been inserted correctly."
-msgstr "Sjå etter at CDen/DVDen er sett inn rett."
+msgstr "Sjå etter at lagringsmediet er sett inn rett."
 
 #. Type: text
 #. Description
@@ -407,14 +366,8 @@ msgstr "Byte disk"
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:7001
-#, fuzzy
-#| msgid ""
-#| "/cdrom/: Please insert the disc labeled '${LABEL}' in the drive '/cdrom/' "
-#| "and press enter."
 msgid "Please insert the media labeled '${LABEL}' and press enter."
-msgstr ""
-"/cdrom/: Set inn disken med merkelappen «${LABEL}» i stasjonen «/cdrom/» og "
-"trykk enter."
+msgstr "Set inn mediet med merkelappen «${LABEL}» og trykk enter."
 
 #. Type: text
 #. Description
@@ -431,32 +384,23 @@ msgstr "Kommenterer ut netinst CD i sources.list ..."
 #. Description
 #. :sl2:
 #: ../apt-cdrom-setup.templates:9001 ../apt-mirror-setup.templates:6001
-#, fuzzy
-#| msgid ""
-#| "If you are installing from a netinst CD and choose not to use a mirror, "
-#| "you will end up with only a very minimal base system."
 msgid ""
 "If you are installing from a netinst CD image and choose not to use a "
 "mirror, you will end up with only a very minimal base system."
 msgstr ""
-"Viss du installerer frå ein netinst-CD og du vel å ikkje bruke eit "
+"Viss du installerer frå eit netinst-bilete og du vel å ikkje bruke eit "
 "nettarkiv, vil du ende opp med eit minimalt grunnsystem."
 
 #. Type: text
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:10001
-#, fuzzy
-#| msgid ""
-#| "You are installing from a netinst CD, which by itself only allows "
-#| "installation of a very minimal base system. Use a mirror to install a "
-#| "more complete system."
 msgid ""
 "You are installing from a netinst CD image, which by itself only allows "
 "installation of a very minimal base system. Use a mirror to install a more "
 "complete system."
 msgstr ""
-"Du installerer frå ein nettinstallasjons-CD. Denne installerer berre eit "
+"Du installerer frå eit nettinstallasjons-avtrykk. Det installerer berre eit "
 "minimalt grunnsystem. For å installere eit meir komplett system må du bruke "
 "eit nettarkiv."
 
@@ -464,49 +408,39 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:11001
-#, fuzzy
-#| msgid ""
-#| "You are installing from a CD, which contains a limited selection of "
-#| "packages."
 msgid ""
 "You are installing from an image which contains a limited selection of "
 "packages."
-msgstr "Du installerer frå ein CD, som inneheld eit avgrensa utval av pakkar."
+msgstr ""
+"Du installerer frå eit filavtrykk som inneheld eit avgrensa utval av pakkar."
 
 #. Type: text
 #. Description
 #. :sl1:
 #. The value of %i can be 2 or 3
 #: ../apt-cdrom-setup.templates:12001
-#, fuzzy, no-c-format
-#| msgid ""
-#| "You have scanned %i CDs. Even though these contain a fair selection of "
-#| "packages, some may be missing (notably some packages needed to support "
-#| "languages other than English)."
+#, no-c-format
 msgid ""
 "You have scanned %i images. Even though these contain a fair selection of "
 "packages, some may be missing (notably some packages needed to support "
 "languages other than English)."
 msgstr ""
-"Du har søkt gjennom %i CDar. Sjølv om desse inneheld eit stort utval av "
-"pakkar, så kan det mangle nokre (spesielt pakkar for støtte av andre språk "
-"enn engelsk)."
+"Du har søkt gjennom %i filavtrykk. Sjølv om desse inneheld eit stort utval "
+"av pakkar, så kan det mangle nokre (spesielt pakkar for støtte av andre "
+"språk enn engelsk)."
 
 #. Type: text
 #. Description
 #. :sl1:
 #. The value of %i can be from 4 to 8
 #: ../apt-cdrom-setup.templates:13001
-#, fuzzy, no-c-format
-#| msgid ""
-#| "You have scanned %i CDs. Even though these contain a large selection of "
-#| "packages, some may be missing."
+#, no-c-format
 msgid ""
 "You have scanned %i images. Even though these contain a large selection of "
 "packages, some may be missing."
 msgstr ""
-"Du har søkt gjennom %i CDar. Sjølv om desse inneheld eit stort utval av "
-"pakkar, så kan det mangle nokre."
+"Du har søkt gjennom %i filavtrykk. Sjølv om desse inneheld eit stort utval "
+"av pakkar, så kan det mangle nokre."
 
 #. Type: text
 #. Description
@@ -523,10 +457,6 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../apt-cdrom-setup.templates:15001
-#, fuzzy
-#| msgid ""
-#| "You are installing from a DVD. Even though the DVD contains a large "
-#| "selection of packages, some may be missing."
 msgid ""
 "You are installing from a DVD image. Even though it contains a large "
 "selection of packages, some may be missing."
@@ -657,17 +587,13 @@ msgstr "Bruk eit nettarkiv?"
 #. Description
 #. :sl1:
 #: ../apt-mirror-setup.templates:5001
-#, fuzzy
-#| msgid ""
-#| "A network mirror can be used to supplement the software that is included "
-#| "on the CD-ROM. This may also make newer versions of software available."
 msgid ""
 "A network mirror can be used to supplement the software that is included on "
 "the installation media. This may also make newer versions of software "
 "available."
 msgstr ""
 "Eit nettarkiv kan brukast for å supplere programvaren som er inkludert på "
-"CDen. Dette kan også gjere nyare versjonar av programma tilgjengelege."
+"installasjonsmediet. Dette kan også gje nyare versjonar av programma."
 
 #. Type: text
 #. Description
@@ -1114,10 +1040,8 @@ msgstr ""
 #. Appears as a checkbox in the newt and GTK interfaces.
 #. :sl1:
 #: ../cdebconf-newt-udeb.templates:8001 ../cdebconf-gtk-udeb.templates:9001
-#, fuzzy
-#| msgid "Password input error"
 msgid "Show Password in Clear"
-msgstr "Feil ved inntasting av passord"
+msgstr "Vis passordet i klartekst"
 
 #. Type: text
 #. Description
@@ -1678,7 +1602,7 @@ msgstr "Belgisk"
 #. :sl1:
 #: ../keyboard-configuration.templates:16001
 msgid "Berber (Latin)"
-msgstr ""
+msgstr "Berbersk (latin)"
 
 #. Type: select
 #. Choices
@@ -2097,8 +2021,6 @@ msgstr "Singalesisk"
 #. Choices
 #. :sl1:
 #: ../keyboard-configuration.templates:16001
-#, fuzzy
-#| msgid "Slovakian"
 msgid "Slovak"
 msgstr "Slovakisk"
 
@@ -2211,19 +2133,15 @@ msgstr "Vietnamesisk"
 #. Description
 #. :sl1:
 #: ../cdrom-detect.templates:2001
-#, fuzzy
-#| msgid "Detecting hardware to find hard drives"
 msgid "Detecting hardware to find installation media"
-msgstr "Søkjer gjennom maskinvare for å finne harddiskar"
+msgstr "Søkjer gjennom maskinvare for å finne installasjonsmedium"
 
 #. Type: text
 #. Description
 #. :sl1:
 #: ../cdrom-detect.templates:10001
-#, fuzzy
-#| msgid "SILO installation failed"
 msgid "Scanning installation media"
-msgstr "Installasjon av SILO feila"
+msgstr "Ser gjennom installasjonsmedium"
 
 #. Type: text
 #. Description
@@ -2238,7 +2156,7 @@ msgstr "Søkjer gjennom ${DIR} …"
 #. :sl1:
 #: ../cdrom-detect.templates:19001
 msgid "Unmounting/ejecting installation media..."
-msgstr ""
+msgstr "Avmonterer/løyser ut installasjonsmediet..."
 
 #. Type: text
 #. Description
@@ -2246,10 +2164,8 @@ msgstr ""
 #. Translators: keep below 55 columns
 #. :sl1:
 #: ../load-cdrom.templates:1001
-#, fuzzy
-#| msgid "Load installer components from an installer ISO"
 msgid "Load installer components from installation media"
-msgstr "Last inn installasjonskomponentar frå eit ISO-bilete"
+msgstr "Last inn installasjonskomponentar frå eit installasjonsmedium"
 
 #. Type: text
 #. Description
@@ -2398,29 +2314,22 @@ msgstr "Installasjon ferdig"
 #. Translators: translate <Continue> identical to the translation of the button!
 #. :sl1:
 #: ../finish-install.templates:8001
-#, fuzzy
-#| msgid ""
-#| "Installation is complete, so it is time to boot into your new system. "
-#| "Make sure to remove the installation media (CD-ROM, floppies), so that "
-#| "you boot into the new system rather than restarting the installation."
 msgid ""
 "Installation is complete, so it is time to boot into your new system. Make "
 "sure to remove the installation media, so that you boot into the new system "
 "rather than restarting the installation."
 msgstr ""
 "Installasjonen er ferdig. No er det tid for å starte opp det nye systemet "
-"ditt. Hugs å fjerna installasjonsmediet (CDROM, diskett), slik at du startar "
-"det nye systemet i staden for å starte opp installasjonen igjen."
+"ditt. Hugs å fjerna installasjonsmediet, slik at du startar det nye systemet "
+"i staden for å starte opp installasjonen igjen."
 
 #. Type: note
 #. Description
 #. Translators: translate <Continue> identical to the translation of the button!
 #. :sl1:
 #: ../finish-install.templates:8001
-#, fuzzy
-#| msgid "Please choose a different name."
 msgid "Please choose <Continue> to reboot."
-msgstr "Vel eit anna namn."
+msgstr "Vel <Hald fram> for å starta omatt."
 
 #. Type: boolean
 #. Description
@@ -2429,10 +2338,8 @@ msgstr "Vel eit anna namn."
 #. Description
 #. :sl1:
 #: ../grub-installer.templates:1001 ../grub-installer.templates:2001
-#, fuzzy
-#| msgid "Install the GRUB boot loader on a hard disk"
 msgid "Install the GRUB boot loader to your primary drive?"
-msgstr "Installer oppstartslastaren GRUB på ein harddisk"
+msgstr "Vil du installere oppstartslastaren GRUB på ein harddisk?"
 
 #. Type: boolean
 #. Description
@@ -2447,12 +2354,6 @@ msgstr "Desse andre operativsystema er funne på maskina: ${OS_LIST}"
 #. Description
 #. :sl1:
 #: ../grub-installer.templates:1001
-#, fuzzy
-#| msgid ""
-#| "If all of your operating systems are listed above, then it should be safe "
-#| "to install the boot loader to the master boot record of your first hard "
-#| "drive. When your computer boots, you will be able to choose to load one "
-#| "of these operating systems or your new system."
 msgid ""
 "If all of your operating systems are listed above, then it should be safe to "
 "install the boot loader to your primary drive (UEFI partition/boot record). "
@@ -2461,18 +2362,13 @@ msgid ""
 msgstr ""
 "Viss alle operativsystema dine er i lista over, så skal det vere trygt å "
 "installere oppstartslastaren på hovudoppstartssporet på den første "
-"harddisken. Når maskina di startar opp, kan du velje eit av desse "
-"operativsystema eller det nye systemet ditt."
+"harddisken (UEFI-partisjonen/oppstartssporet). Når maskina di startar opp, "
+"kan du velje eit av desse operativsystema eller det nye Debian-systemet ditt."
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../grub-installer.templates:2001
-#, fuzzy
-#| msgid ""
-#| "It seems that this new installation is the only operating system on this "
-#| "computer. If so, it should be safe to install the GRUB boot loader to the "
-#| "master boot record of your first hard drive."
 msgid ""
 "It seems that this new installation is the only operating system on this "
 "computer. If so, it should be safe to install the GRUB boot loader to your "
@@ -2480,28 +2376,22 @@ msgid ""
 msgstr ""
 "Det ser ut til at denne installasjonen er det einaste operativsystemet på "
 "denne maskina. Viss det er rett, skal det vere trygt å installere "
-"oppstartslastaren GRUB på hovudoppstartssporet på den første harddisken."
+"oppstartslastaren GRUB på hovudoppstartssporet på den første harddisken "
+"(UEFI-partisjonen eller oppstartssporet)."
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../grub-installer.templates:2001
-#, fuzzy
-#| msgid ""
-#| "Warning: If the installer failed to detect another operating system that "
-#| "is present on your computer, modifying the master boot record will make "
-#| "that operating system temporarily unbootable, though GRUB can be manually "
-#| "configured later to boot it."
 msgid ""
 "Warning: If your computer has another operating system that the installer "
 "failed to detect, this will make that operating system temporarily "
 "unbootable, though GRUB can be manually configured later to boot it."
 msgstr ""
-"Åtvaring: Viss installasjonsprogrammet ikkje klarer å finne andre "
-"operativsystem som faktisk er installerte på maskina di, vil endringar på "
-"hovudoppstartsporet gjere at andre operativsystem mellombels ikkje kan "
-"startast opp. GRUB kan derimot setjast opp seinare til å starte opp andre "
-"operativsystem."
+"Åtvaring: Viss maskina di har eit anna operativsystem som "
+"installasjonsprogrammet ikkje fann, vil dette gjere at andre operativsystem "
+"mellombels ikkje kan startast opp. GRUB kan derimot setjast opp seinare til "
+"å starte opp andre operativsystem."
 
 #. #-#-#-#-#  templates.pot (grub-installer)  #-#-#-#-#
 #. Type: password
@@ -2577,23 +2467,21 @@ msgstr "Oppdaterer /etc/kernel-img.conf ..."
 #. :sl1:
 #: ../grub-installer.templates:25001
 msgid "Checking whether to force usage of the removable media path"
-msgstr ""
+msgstr "Sjekkar om me skal tvinga bruk av stien til det utløysbare mediet"
 
 #. Type: text
 #. Description
 #. :sl1:
 #: ../grub-installer.templates:26001
-#, fuzzy
-#| msgid "Unmounting file systems..."
 msgid "Mounting filesystems"
-msgstr "Avmonterer filsystem ..."
+msgstr "Monterer filsystem"
 
 #. Type: text
 #. Description
 #. :sl1:
 #: ../grub-installer.templates:27001
 msgid "Configuring grub-efi for future usage of the removable media path"
-msgstr ""
+msgstr "Set opp grub-efi for framtidig bruk av stien til det utløysbare mediet"
 
 #. Type: text
 #. Description
@@ -2601,17 +2489,15 @@ msgstr ""
 #. Translators: keep below 55 columns
 #. :sl1:
 #: ../grub-installer.templates:28001
-#, fuzzy
-#| msgid "Installing GRUB boot loader"
 msgid "Install the GRUB boot loader"
-msgstr "Installerer oppstartssystemet GRUB"
+msgstr "Installer oppstartssystemet GRUB"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../grub-installer.templates:34001
 msgid "Force GRUB installation to the EFI removable media path?"
-msgstr ""
+msgstr "Tving GRUB-installasjonen til EFI-stien til det utløysbare mediet?"
 
 #. Type: boolean
 #. Description
@@ -2624,6 +2510,10 @@ msgid ""
 "buggy!) and do not support proper configuration of boot options from system "
 "hard drives."
 msgstr ""
+"Det ser ut til at denne datamaskina er sett opp til å starte med EFI, men at "
+"det oppsettet kanskje ikkje vil fungere for oppstart frå harddisken. Nokre "
+"utgåver av EFI-fastvara er ikkje i samsvar med EFI-spesifikasjonane (dvs. "
+"dei har feil!), og støttar ikkje skikkeleg oppstart frå systemdiskar."
 
 #. Type: boolean
 #. Description
@@ -2634,17 +2524,15 @@ msgid ""
 "of the GRUB boot loader to a fallback location, the \"removable media path"
 "\". Almost all EFI systems, no matter how buggy, will boot GRUB that way."
 msgstr ""
+"Ein måte å omgå problemet på er å installere ein ekstra kopi av EFI-"
+"versjonen av GRUB-oppstartslastaren på ein annan stad, \"stien til "
+"utløysbare media\". Nesten alle EFI-system, uansett kor mange feil dei har, "
+"vil starta GRUB på den måten."
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../grub-installer.templates:34001
-#, fuzzy
-#| msgid ""
-#| "Warning: If the installer failed to detect another operating system that "
-#| "is present on your computer, modifying the master boot record will make "
-#| "that operating system temporarily unbootable, though GRUB can be manually "
-#| "configured later to boot it."
 msgid ""
 "Warning: If the installer failed to detect another operating system that is "
 "present on your computer that also depends on this fallback, installing GRUB "
@@ -2652,10 +2540,10 @@ msgid ""
 "manually configured later to boot it if necessary."
 msgstr ""
 "Åtvaring: Viss installasjonsprogrammet ikkje klarer å finne andre "
-"operativsystem som faktisk er installerte på maskina di, vil endringar på "
-"hovudoppstartsporet gjere at andre operativsystem mellombels ikkje kan "
-"startast opp. GRUB kan derimot setjast opp seinare til å starte opp andre "
-"operativsystem."
+"operativsystem som faktisk er installerte på maskina di og som òg treng "
+"denne reserveløysinga, vil dei operativsystema mellombels ikkje kunne "
+"startast opp dersom du installerer GRUB. Derimot kan du setje opp GRUB "
+"seinare til å starte opp andre operativsystem."
 
 #. Type: text
 #. Description
@@ -3088,23 +2976,14 @@ msgstr "Set opp MD-einingar"
 #. IPv6
 #. :sl1:
 #: ../netcfg-common.templates:2001
-#, fuzzy
-#| msgid "Auto-configure network with DHCP?"
 msgid "Auto-configure networking?"
-msgstr "Vil du setja opp nettverket automatisk med DHCP?"
+msgstr "Vil du setja opp nettverket automatisk?"
 
 #. Type: boolean
 #. Description
 #. IPv6
 #. :sl1:
 #: ../netcfg-common.templates:2001
-#, fuzzy
-#| msgid ""
-#| "Networking can either be configured by DHCP or by manually entering all "
-#| "the information. If you choose to use DHCP and the installer is unable to "
-#| "get a working configuration from a DHCP server on your network, you will "
-#| "be given the opportunity to configure your network manually after the "
-#| "attempt to configure it by DHCP."
 msgid ""
 "Networking can be configured either by entering all the information "
 "manually, or by using DHCP (or a variety of IPv6-specific methods) to detect "
@@ -3112,10 +2991,11 @@ msgid ""
 "the installer is unable to get a working configuration from the network, you "
 "will be given the opportunity to configure the network manually."
 msgstr ""
-"Nettverk kan ein anten setja opp ved hjelp av DHCP, eller ved å skriva inn "
-"all informasjon manuelt. Viss du vel DHCP og installasjonen ikkje klarer å "
-"henta inn eit fungerande oppsett frå ein DHCP-tenar på nettverket ditt, vil "
-"du få høve til å setja opp nettverket manuelt etterpå."
+"Nettverk kan ein anten setja opp ved å skriva inn all informasjon manuelt, "
+"eller ved hjelp av DHCP (eller ei rad IPv6-metodar) for å finna "
+"nettverksinstillingar automatisk. Viss du vel automatisk og installasjonen "
+"ikkje klarer å henta inn eit fungerande oppsett frå nettverket ditt, vil du "
+"få høve til å setja opp nettverket manuelt etterpå."
 
 #. Type: string
 #. Description
@@ -3203,11 +3083,6 @@ msgstr "Forsøket på å finna eit tilgjengeleg trådlaust nettverk var mislukka
 #. Description
 #. :sl1:
 #: ../netcfg-common.templates:7001
-#, fuzzy
-#| msgid ""
-#| "${iface} is a wireless network interface. Please enter the name (the "
-#| "ESSID) of the wireless network you would like ${iface} to use. If you "
-#| "would like to use any available network, leave this field blank."
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
 "of the wireless network you would like ${iface} to use. To connect to any "
@@ -3285,19 +3160,15 @@ msgstr "${essid_list} Oppgi ESSID manuelt"
 #. Description
 #. :sl1:
 #: ../netcfg-common.templates:52002
-#, fuzzy
-#| msgid "Type of wireless network:"
 msgid "Wireless network:"
-msgstr "Type trådlaust nettverk:"
+msgstr "Trådlaust nettverk:"
 
 #. Type: select
 #. Description
 #. :sl1:
 #: ../netcfg-common.templates:52002
-#, fuzzy
-#| msgid "Choose the next step in the install process:"
 msgid "Select the wireless network to use during the installation process."
-msgstr "Vel neste steg i installasjonen:"
+msgstr "Vel det trådlause nettverket du vil bruka seinare i installasjonen."
 
 #. Type: string
 #. Description
@@ -3454,6 +3325,8 @@ msgid ""
 " * four numbers separated by periods (IPv4);\n"
 " * blocks of hexadecimal characters separated by colons (IPv6)."
 msgstr ""
+" * fire tal med punktum mellom (IPv4);\n"
+" * blokker med heksadesimale teikn med kolon mellom (IPv6)."
 
 #. Type: string
 #. Description
@@ -3461,21 +3334,17 @@ msgstr ""
 #. :sl1:
 #: ../netcfg-static.templates:1001
 msgid "You can also optionally append a CIDR netmask (such as \"/24\")."
-msgstr ""
+msgstr "Du kan eventuelt føya til ei CIDR-nettmaske (slik som \"/24\")."
 
 #. Type: string
 #. Description
 #. IPv6
 #. :sl1:
 #: ../netcfg-static.templates:1001
-#, fuzzy
-#| msgid ""
-#| "If you don't know what to enter, consult your documentation, or leave it "
-#| "blank to not load the module."
 msgid "If you don't know what to use here, consult your network administrator."
 msgstr ""
-"Viss du ikkje veit kva du skal skrive inn, sjå etter i dokumentasjonen eller "
-"så la det stå tomt."
+"Viss du ikkje veit kva du skal skrive inn, bør du høyre med "
+"nettverksansvarleg."
 
 #. Type: string
 #. Description
@@ -4108,7 +3977,7 @@ msgstr "fat32"
 #. Short file system name (untranslatable in many languages)
 #: ../partman-basicfilesystems.templates:37001
 msgid "ntfs"
-msgstr ""
+msgstr "ntfs"
 
 #. Type: text
 #. Description
@@ -4133,7 +4002,7 @@ msgstr "vekselminne"
 #. Short file system name (untranslatable in many languages)
 #: ../partman-btrfs.templates:1001 ../partman-btrfs.templates:3001
 msgid "btrfs"
-msgstr ""
+msgstr "btrfs"
 
 #. Type: text
 #. Description
@@ -4152,7 +4021,7 @@ msgstr "EFI-systempartisjon"
 #. Up to 10 character positions
 #: ../partman-efi.templates:5001
 msgid "ESP"
-msgstr ""
+msgstr "ESP"
 
 #. Type: text
 #. Description
