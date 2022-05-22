@@ -439,7 +439,8 @@ if [ "$UPDATEPO" = "Y" ]; then
 			git diff --exit-code >$DI_COPY/l10n-sync_git-diff.log
 			GITDIFF=$?
 			if [ $GITDIFF == 0 ]; then
-				echo "Nothing to commit here" >>$COMMITLOGFILE
+				log "Nothing to commit here"
+				log ""
 			else
 				git add po/templates.pot
 				echo "Commit changed templates.pot to GIT - $i" >>$COMMITLOGFILE
@@ -447,6 +448,7 @@ if [ "$UPDATEPO" = "Y" ]; then
 				echo "" >>$COMMITLOGFILE
 				git commit -uno -m "$COMMIT_MARKER Update templates.pot (from l10n-sync run at dillon)"
 				git push
+				log ""
 			fi
 		fi
 	done
@@ -663,7 +665,8 @@ if [ "$COMMIT" = "Y" ] ; then
 	git diff --exit-code >$DI_COPY/l10n-sync_git-diff.log
 	GITDIFF=$?
 	if [ $GITDIFF == 0 ]; then
-		echo "No changes in master po|pot files to commit" >>$COMMITLOGFILE
+		log ""
+		log "No changes in master po|pot files to commit"
 	else
 	log_cmd -p "Commit all master PO/POT files to GIT..." \
 		git add $DI_COPY/*/*.po
@@ -746,7 +749,8 @@ EOF
 			git diff --exit-code >$DI_COPY/l10n-sync_git-diff.log
 			GITDIFF=$?
 			if [ $GITDIFF == 0 ]; then
-				echo "No changed po|pot files to commit here" >>$COMMITLOGFILE
+				log "No changed po|pot files to commit here"
+				log ""
 			else
 				git add *.po
 				echo "Commit changed/added po files to GIT - $package:" >>$COMMITLOGFILE
@@ -754,6 +758,7 @@ EOF
 				echo "" >>$COMMITLOGFILE
 				git commit -uno -m "$COMMIT_MARKER Commit changed/added po files (from l10n-sync run at dillon)"
 				git push
+				log ""
 			fi
 		fi
 	done
@@ -761,6 +766,7 @@ else
 	log "- Not syncing D-I packages as requested"
 fi
 
+log ""
 log "Run successfully completed - $(date -u)"
 
 # Clean-up some left-over files
