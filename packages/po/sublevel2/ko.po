@@ -2,14 +2,14 @@
 # Copyright (C) 2003,2004,2005,2008 Software in the Public Interest, Inc.
 # This file is distributed under the same license as debian-installer.
 #
-# Changwoo Ryu <cwryu@debian.org>, 2010-2012, 2014-2015, 2017, 2020.
+# Changwoo Ryu <cwryu@debian.org>, 2010-2012, 2014-2015, 2017, 2020-2021.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: bugs.debian.org\n"
-"POT-Creation-Date: 2021-11-30 20:02+0000\n"
-"PO-Revision-Date: 2020-04-21 05:16+0900\n"
+"POT-Creation-Date: 2021-12-19 20:01+0000\n"
+"PO-Revision-Date: 2021-12-26 21:06+0900\n"
 "Last-Translator: Changwoo Ryu <cwryu@debian.org>\n"
 "Language-Team:  Korean <debian-l10n-korean@lists.debian.org>\n"
 "Language: ko \n"
@@ -86,14 +86,14 @@ msgid "Loading ${PACKAGE} failed for unknown reasons. Aborting."
 msgstr ""
 "알 수 없는 이유로 ${PACKAGE} 패키지를 읽어들이는데 실패했습니다. 중지합니다."
 
-#. Type: error
+#. Type: boolean
 #. Description
 #. :sl2:
 #: ../anna.templates:8001
-msgid "No kernel modules found"
-msgstr "커널 모듈이 없습니다"
+msgid "Continue the install without loading kernel modules?"
+msgstr "커널 모듈을 읽어들이지 않고 계속 설치하시겠습니까?"
 
-#. Type: error
+#. Type: boolean
 #. Description
 #. :sl2:
 #: ../anna.templates:8001
@@ -105,7 +105,7 @@ msgstr ""
 "커널 모듈이 없습니다. 설치 프로그램의 버전과 아카이브의 커널 버전이 맞지 않아"
 "서 그럴 것입니다."
 
-#. Type: error
+#. Type: boolean
 #. Description
 #. :sl2:
 #: ../anna.templates:8001
@@ -115,6 +115,15 @@ msgid ""
 msgstr ""
 "최신 버전의 설치 이미지를 사용해야 합니다. 최신의 설치 이미지에서도 문제가 생"
 "길 경우, 다른 미러 사이트를 (deb.debian.org 추천) 사용해 보십시오."
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../anna.templates:8001
+msgid ""
+"The installation will probably fail to work if you continue without kernel "
+"modules."
+msgstr "커널 모듈 없이 계속하신다면 아마도 설치가 실패할 것입니다."
 
 #. Type: text
 #. Description
@@ -2112,10 +2121,8 @@ msgstr "없는 펌웨어 파일은: ${FILES}"
 #. Possible locations for debug logs to be saved
 #. :sl2:
 #: ../save-logs.templates:2001
-#, fuzzy
-#| msgid "Wireless network:"
 msgid "serve over network"
-msgstr "무선 네트워크:"
+msgstr "네트워크를 통해 보기"
 
 #. Type: select
 #. Choices
@@ -2144,18 +2151,16 @@ msgstr "디버깅 로그를 어떻게 저장 혹은 전송하시겠습니까?"
 #. Description
 #. :sl2:
 #: ../save-logs.templates:2002
-#, fuzzy
-#| msgid ""
-#| "Debugging log files for the installer can be saved to floppy, served up "
-#| "over the web, or saved to a mounted file system."
 msgid ""
 "Debugging log files for the installer are accessible in /var/log/. They can "
 "be served up over the network (a small webserver is started on this machine, "
 "to achieve that), saved to some mounted file system (like the one on a USB "
 "stick), or to a floppy."
 msgstr ""
-"설치 프로그램의 디버깅 로그 파일은 플로피에 저장할 수도 있고, 웹을 통해 가져"
-"갈 수도 있고, 마운트한 파일 시스템에 저장할 수도 있습니다."
+"설치 프로그램의 디버깅 로그 파일은 /var/log/ 위치에서 볼 수 있습니다. 로그 파"
+"일은 네트워크를 통해 볼 수도 있고 (이 기능을 하려고 작은 웹 서버를 이 컴퓨터"
+"에서 시작합니다), 마운트한 파일시스템에 (예를 들어 USB 메모리) 저장할 수도 있"
+"고, 플로피 디스크에 저장할 수도 있습니다."
 
 #. Type: string
 #. Description

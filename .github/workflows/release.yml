@@ -30,8 +30,8 @@ jobs:
       uses: ./pearl/g/github/env/
     - run: (cd pearl; git submodule update --init --recursive -- debian)
     - run: echo 1 | sudo tee /proc/sys/vm/overcommit_memory
-    - run: make DIREPO=$(pwd) -C pearl -j13 build/netboot-initrd.cpio.gz
-    - run: make -C pearl build/netboot-initrd.cpio.gz{release}
-    - run: make -C pearl {release}
+    - run: make -j13 build/netboot-initrd.cpio.gz
+    - run: make build/netboot-initrd.cpio.gz{release}
+    - run: make {release}
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
