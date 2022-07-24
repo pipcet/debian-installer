@@ -2,7 +2,7 @@
 # Danish messages for debian-installer.
 # This file is distributed under the same license as debian-installer.
 #
-# Joe Hansen <joedalton2@yahoo.dk>, 2011, 2012, 2013, 2014, 2015, 2016, 2017.
+# Joe Hansen <joedalton2@yahoo.dk>, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2021.
 # Jacob Sparre Andersen <jacob@jacob-sparre.dk>, 2008, 2010.
 # Mads Bille Lundby <lundbymads@gmail.com>, 2009.
 # Jesper Dahl Nyerup <debian@jespernyerup.dk>, 2008.
@@ -14,8 +14,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer_packages_po_sublevel2_da\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-19 20:01+0000\n"
-"PO-Revision-Date: 2018-12-28 22:08+0000\n"
+"POT-Creation-Date: 2022-03-24 08:13+0100\n"
+"PO-Revision-Date: 2021-12-28 22:08+0000\n"
 "Last-Translator: Joe Hansen <joedalton2@yahoo.dk>\n"
 "Language-Team: Danish <debian-l10n-danish@lists.debian.org>\n"
 "Language: da\n"
@@ -123,6 +123,8 @@ msgid ""
 "You should make sure that your installation image is up-to-date, or - if "
 "that's the case - try a different mirror, preferably deb.debian.org."
 msgstr ""
+"Du skal sikre dig, at dit installationsaftryk er opdateret, eller - hvis det "
+"er tilfældet - prøvet et andet spejl, gerne deb.debian.org."
 
 #. Type: boolean
 #. Description
@@ -382,7 +384,7 @@ msgid ""
 "repository. This software is not part of Ubuntu, but is offered by Canonical "
 "and the respective vendors as a service to Ubuntu users."
 msgstr ""
-"En mængde supplerende programmer er tilgængelige fra Canonicals \"partner\"-"
+"En mængde supplerende programmer er tilgængelige fra Canonicals »partner«-"
 "programarkiv. Denne software er ikke en del af Ubuntu, men bliver tilbudt af "
 "Canonical og de forskellige leverandører som en service til Ubuntu-brugere."
 
@@ -482,17 +484,13 @@ msgstr "Kan ikke installere basissystemet"
 #. See http://www.debian.org/doc/debian-policy/ch-binary.html#s3.7
 #. :sl2:
 #: ../bootstrap-base.templates:2001
-#, fuzzy
-#| msgid ""
-#| "The installer cannot figure out how to install the base system. No "
-#| "installable CD-ROM was found and no valid mirror was configured."
 msgid ""
 "The installer cannot figure out how to install the base system. It found no "
 "installable image, and no valid mirror was configured."
 msgstr ""
-"Installationsprogrammet kan ikke finde ud af hvordan det skal installere "
-"basissystemet. Der blev ikke fundet nogen installerbar cd, og der blev ikke "
-"angivet noget gyldigt arkivspejl."
+"Installationsprogrammet kan ikke finde ud af, hvordan det skal installere "
+"basissystemet. Der blev ikke fundet et installerbart aftryk, og intet spejl "
+"var konfigureret."
 
 #. Type: error
 #. Description
@@ -833,16 +831,12 @@ msgstr "Ugyldig Release-fil; ingen forekomst af ${SUBST0}."
 #. SUBST0 is a filename or package name
 #. Debootstrap is a program name: should not be translated
 #: ../bootstrap-base.templates:22001
-#, fuzzy
-#| msgid ""
-#| "Couldn't retrieve ${SUBST0}. This may be due to a network problem or a "
-#| "bad CD, depending on your installation method."
 msgid ""
 "Couldn't retrieve ${SUBST0}. This may be due to a network problem or bad "
 "media, depending on your installation method."
 msgstr ""
-"Kunne ikke hente ${SUBST0}. Dette kan skyldes et netværksproblem eller en "
-"dårlig cd, alt afhængig af din installationsmetode."
+"Kunne ikke hente ${SUBST0}. Dette kan skyldes et netværksproblem eller et "
+"ugyldigt medie, alt afhængig af din installationsmetode."
 
 #. Type: error
 #. Description
@@ -914,7 +908,7 @@ msgstr "lav"
 #. :sl2:
 #: ../cdebconf-udeb.templates:2002
 msgid "Ignore questions with a priority less than:"
-msgstr "Ignorér spørgsmål med lavere prioritet end:"
+msgstr "Ignorer spørgsmål med lavere prioritet end:"
 
 #. Type: select
 #. Description
@@ -1340,37 +1334,27 @@ msgstr ""
 #. Translators: keep it under 65 columns
 #. :sl2:
 #: ../cdrom-checker.templates:12001
-#, fuzzy
-#| msgid "Check the integrity of another CD-ROM?"
 msgid "Check the integrity of installation media"
-msgstr "Tjek integriteten af en anden cd?"
+msgstr "Tjek integriteten på installationsmediet"
 
 #. Type: boolean
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:1001
-#, fuzzy
-#| msgid "Load drivers from removable media"
 msgid "Load drivers from removable media?"
-msgstr "Indlæs drivere fra et flytbart medie"
+msgstr "Indlæs drivere fra et flytbart medie?"
 
 #. Type: boolean
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:1001
 msgid "No device for installation media was detected."
-msgstr ""
+msgstr "Ingen enhed for installationsmedier blev registreret."
 
 #. Type: boolean
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:1001
-#, fuzzy
-#| msgid ""
-#| "You may need to load additional CD-ROM drivers from removable media, such "
-#| "as a driver floppy. If you have such media available now, insert it, and "
-#| "continue. Otherwise, you will be given the option to manually select CD-"
-#| "ROM modules."
 msgid ""
 "You may need to load additional drivers from removable media, such as a "
 "driver floppy or a USB stick. If you have these available now, insert the "
@@ -1378,128 +1362,101 @@ msgid ""
 "select some modules."
 msgstr ""
 "Du kan have brug for at indlæse yderligere cd-rom-drivere fra et flytbart "
-"medie, f.eks. en driverdiskette. Hvis du har sådan et liggende, så indsæt "
-"det og fortsæt. Ellers vil du få mulighed for selv at vælge cd-rom-moduler."
+"medie, f.eks. en driverdiskette eller et USB-drev. Hvis du har sådan et "
+"liggende, så indsæt mediet og fortsæt. Ellers vil du få mulighed for selv at "
+"vælge nogle moduler."
 
 #. Type: boolean
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:3001
-#, fuzzy
-#| msgid "Manually select a CD-ROM module and device?"
 msgid "Manually select a module and device for installation media?"
-msgstr "Vælg cd-rom modul og enhed manuelt?"
+msgstr "Vælg manuelt et modul og enhed for installationsmediet?"
 
 #. Type: boolean
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:3001
-#, fuzzy
-#| msgid "No common CD-ROM drive was detected."
 msgid "No device for installation media (like a CD-ROM device) was detected."
-msgstr "Fandt ingen almindelige cd-rom drev."
+msgstr ""
+"Ingen enhed for installationsmediet (som en cd-rom-enhed) blev registreret."
 
 #. Type: boolean
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:3001
-#, fuzzy
-#| msgid ""
-#| "Your CD-ROM drive may be an old Mitsumi or another non-IDE, non-SCSI CD-"
-#| "ROM drive. In that case you should choose which module to load and the "
-#| "device to use. If you don't know which module and device are needed, look "
-#| "for some documentation or try a network installation instead of a CD-ROM "
-#| "installation."
 msgid ""
 "If your CD-ROM drive is an old Mitsumi or another non-IDE, non-SCSI CD-ROM "
 "drive, you should choose which module to load and the device to use. If you "
 "don't know which module and device are needed, look for some documentation "
 "or try a network installation."
 msgstr ""
-"Dit cd-rom drev kan være et gammelt Mitsumi eller andet ikke-IDE eller -SCSI "
-"cd-rom drev. I så fald skal du angive hvilket modul, du vil indlæse og "
+"Hvis dit cd-rom-drev er et gammelt Mitsumi eller et andet ikke-IDE eller "
+"ikke-SCSI cd-rom-drev, så skal du vælge hvilket modul, du vil indlæse og "
 "hvilken enhed, du vil bruge. Hvis du ikke ved, hvilket modul og hvilken "
-"enhed, du skal bruge, må du lede efter noget dokumentation eller prøve at "
-"gennemføre installationen over nettet i stedet for fra cd."
+"enhed, du skal bruge, må du lede efter noget dokumentation eller prøve en "
+"netværksinstallation."
 
 #. Type: boolean
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:4001
-#, fuzzy
-#| msgid "Remote installation password:"
 msgid "Retry mounting installation media?"
-msgstr "Fjerninstallations-adgangskode:"
+msgstr "Prøv at montere installationsmediet igen?"
 
 #. Type: boolean
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:4001
-#, fuzzy
-#| msgid ""
-#| "Your installation CD-ROM couldn't be mounted. This probably means that "
-#| "the CD-ROM was not in the drive. If so you can insert it and try again."
 msgid ""
 "Your installation media couldn't be mounted. When installing from CD-ROM, "
 "this probably means that the disk was not in the drive. If so you can insert "
 "it and try again."
 msgstr ""
-"Din installations-cd kunne ikke monteres. Det betyder sikkert, at den ikke "
-"er i drevet. Hvis det er tilfældet, kan du lægge den i og prøve igen."
+"Dit installationsmedie kunne ikke monteres. Hvis du installerer fra cd-rom, "
+"så betyder dette sikkert, at disken ikke er i drevet. Hvis det er tilfældet, "
+"kan du lægge den i og prøve igen."
 
 #. Type: select
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:5001
-#, fuzzy
-#| msgid "Module needed for accessing the CD-ROM:"
 msgid "Module needed for accessing the installation media:"
-msgstr "Modul, der kræves for at tilgå cd'en:"
+msgstr "Modul krævet for at tilgå installationsmediet:"
 
 #. Type: select
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:5001
-#, fuzzy
-#| msgid ""
-#| "The automatic detection didn't find a CD-ROM drive. You can try to load a "
-#| "specific module if you have an unusual CD-ROM drive (that is neither IDE "
-#| "nor SCSI)."
 msgid ""
 "The automatic detection didn't find a drive for installation media. When "
 "installing from CD-ROM and you have an unusual CD-ROM drive (that is neither "
 "IDE nor SCSI), you can try to load a specific module."
 msgstr ""
-"Den automatiske søgning fandt intet cd-rom drev. Du kan prøve at indlæse et "
-"bestemt modul, hvis du har et andet cd-rom drev (dvs. hverken er IDE eller "
-"SCSI)."
+"Den automatiske søgning fandt intet drev for installationsmediet. Hvis du "
+"installerer fra et cd-rom-drev, så kan du have et sjældent cd-rom-drev (det "
+"vil sige hverken IDE eller SCSI). Du kan forsøge at indlæse et specifikt "
+"modul."
 
 #. Type: string
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:6001
-#, fuzzy
-#| msgid "Device file for accessing the CD-ROM:"
 msgid "Device file for accessing the installation media:"
-msgstr "Enhedsfil for tilgang til cd-rom drevet:"
+msgstr "Enhedsfil for tilgang til installationsmediet:"
 
 #. Type: string
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:6001
-#, fuzzy
-#| msgid ""
-#| "In order to access your CD-ROM drive, please enter the device file that "
-#| "should be used. Non-standard CD-ROM drives use non-standard device files "
-#| "(such as /dev/mcdx)."
 msgid ""
 "In order to access your installation media (like your CD-ROM), please enter "
 "the device file that should be used. Non-standard CD-ROM drives use non-"
 "standard device files (such as /dev/mcdx)."
 msgstr ""
-"For at kunne tilgå dit cd-rom drev, bedes du angive hvilken enhedsfil, der "
-"skal bruges. Ikke-standard cd-rom drev benytter ikke-standard enhedsfiler "
-"(såsom /dev/mcdx)."
+"For at kunne tilgå dit installationsmedie (som en cd-rom), bedes du angive "
+"hvilken enhedsfil, der skal bruges. Ikke-standard cd-rom-drev benytter ikke-"
+"standardenhedsfiler (såsom /dev/mcdx)."
 
 #. Type: string
 #. Description
@@ -1511,60 +1468,46 @@ msgid ""
 "pressing ALT+F1."
 msgstr ""
 "Du kan skifte til skallen på den anden terminal (ALT+F2) for at se de "
-"tilgængelige enheder i /dev med \"ls /dev\". Kom tilbage hertil med ALT+F1."
+"tilgængelige enheder i /dev med »ls /dev«. Kom tilbage hertil med ALT+F1."
 
 #. Type: note
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:12001
-#, fuzzy
-#| msgid "UNetbootin media detected"
 msgid "Installation media detected"
-msgstr "UNetbootin-medie detekteret"
+msgstr "Installationsmedie registreret"
 
 #. Type: note
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:12001
-#, fuzzy
-#| msgid ""
-#| "The CD-ROM autodetection was successful. A CD-ROM drive has been found "
-#| "and it currently contains the CD ${cdname}. The installation will now "
-#| "continue."
 msgid ""
 "Autodetection of the installation media was successful. A drive has been "
 "found that contains '${cdname}'. The installation will now continue."
 msgstr ""
-"Det lykkedes at finde cd-rom drevet automatisk. Der blev fundet et cd-rom "
-"drev, og det indeholder cd'en ${cdname}. Installationen vil nu fortsætte."
+"Det lykkedes at finde installationsmediet automatisk. Et drev er blevet "
+"fundet, der indeholder »${cdname}«. Installationen vil nu fortsætte."
 
 #. Type: error
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:14001
-#, fuzzy
-#| msgid "UNetbootin media detected"
 msgid "Incorrect installation media detected"
-msgstr "UNetbootin-medie detekteret"
+msgstr "Ukorrekt installationsmedie registreret"
 
 #. Type: error
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:14001
-#, fuzzy
-#| msgid ""
-#| "The CD-ROM drive contains a CD which cannot be used for installation."
 msgid "The detected media cannot be used for installation."
-msgstr "Cd-rom drevet indeholder en cd, der ikke kan bruges til installation."
+msgstr "Det registrerede medie kan ikke bruges til installationen."
 
 #. Type: error
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:14001
-#, fuzzy
-#| msgid "Please insert a suitable CD to continue with the installation."
 msgid "Please provide suitable media to continue with the installation."
-msgstr "Indsæt en passende cd for at fortsætte installationen."
+msgstr "Indsæt venligst et egnet medie for at fortsætte installationen."
 
 #. Type: error
 #. Description
@@ -1572,39 +1515,31 @@ msgstr "Indsæt en passende cd for at fortsætte installationen."
 #. :sl2:
 #: ../cdrom-detect.templates:15001
 msgid "Error reading Release file"
-msgstr "Fejl ved læsning af filen \"Release\""
+msgstr "Fejl ved læsning af filen »Release«"
 
 #. Type: error
 #. Description
 #. Translators: DO NOT TRANSLATE "Release". This is the name of a file.
 #. :sl2:
 #: ../cdrom-detect.templates:15001
-#, fuzzy
-#| msgid ""
-#| "The CD-ROM does not seem to contain a valid 'Release' file, or that file "
-#| "could not be read correctly."
 msgid ""
 "The installation media do not seem to contain a valid 'Release' file, or "
 "that file could not be read correctly."
 msgstr ""
-"Cd'en lader ikke til at indeholde en gyldig \"Release\"-fil, eller også kan "
-"filen ikke læses korrekt."
+"Installationsmediet ser ikke til at indeholde en gyldig »Release«-fil, eller "
+"også kan filen ikke læses korrekt."
 
 #. Type: error
 #. Description
 #. Translators: DO NOT TRANSLATE "Release". This is the name of a file.
 #. :sl2:
 #: ../cdrom-detect.templates:15001
-#, fuzzy
-#| msgid ""
-#| "You may try to repeat CD-ROM detection but, even if it does succeed the "
-#| "second time, you may experience problems later in the installation."
 msgid ""
 "You may try to repeat the media detection, but even if it does succeed the "
 "second time, you may experience problems later in the installation."
 msgstr ""
-"Du kan prøve at gentage cd-rom søgningen, men selvom den bliver fundet i "
-"andet forsøg, kan du få problemer senere i installationen."
+"Du kan prøve at gentage søgningen efter mediet, men selvom det bliver fundet "
+"i andet forsøg, kan du få problemer senere i installationen."
 
 #. Type: text
 #. Description
@@ -1612,37 +1547,30 @@ msgstr ""
 #. Translators: keep below 55 columns.
 #. :sl2:
 #: ../cdrom-detect.templates:20001
-#, fuzzy
-#| msgid "Use the \"exit\" command to return to the installation menu."
 msgid "Detect and mount installation media"
-msgstr "Brug kommandoen »exit« for at komme tilbage til installationsmenuen."
+msgstr "Registrer og monter installationsmedie"
 
 #. Type: boolean
 #. Description
 #. :sl2:
 #: ../cdrom-retriever.templates:1001
-#, fuzzy
-#| msgid "Failed to copy file from CD-ROM. Retry?"
 msgid "Failed to copy file from installation media. Retry?"
-msgstr "Kunne ikke kopiere fil fra cd. Prøv igen?"
+msgstr "Kunne ikke kopiere fil fra installationsmedie. Prøv igen?"
 
 #. Type: boolean
 #. Description
 #. :sl2:
 #: ../cdrom-retriever.templates:1001
-#, fuzzy
-#| msgid ""
-#| "There was a problem reading data from the CD-ROM. Please make sure it is "
-#| "in the drive. If retrying does not work, you should check the integrity "
-#| "of your CD-ROM."
 msgid ""
 "There was a problem reading data. Please make sure you have inserted the "
 "installation media correctly. If retrying does not work, you should check "
 "the integrity of your installation media (there is an associated entry in "
 "the main menu for that)."
 msgstr ""
-"Der var problemer med at læse data fra cd. Sørg for at den er i drevet. Hvis "
-"det ikke hjælper at prøve igen, bør du tjekke cd'ens tilstand."
+"Der var problemer med at læse data. Sørg for at du har indsat "
+"installationsmediet korrekt. Hvis det ikke hjælper at prøve igen, bør du "
+"installationsmediets tilstand (der er et associeret punkt i hovedmenuen til "
+"dette)."
 
 #. Type: boolean
 #. Description
@@ -1655,16 +1583,12 @@ msgstr "Stil uret med NTP?"
 #. Description
 #. :sl2:
 #: ../clock-setup.templates:5001
-#, fuzzy
-#| msgid ""
-#| "The Network Time Protocol (NTP) can be used to set the system's clock. "
-#| "The installation process works best with a correctly set clock."
 msgid ""
 "The Network Time Protocol (NTP) can be used to set the system's clock. Your "
 "system works best with a correctly set clock."
 msgstr ""
-"Network Time Protocol (NTP) kan bruges til at stille systemets ur. "
-"Installationsprocessen fungerer bedst med et korrekt indstillet ur."
+"Network Time Protocol (NTP) kan bruges til at stille systemets ur. Dit "
+"system fungerer bedst med et korrekt indstillet ur."
 
 #. Type: string
 #. Description
@@ -1743,7 +1667,7 @@ msgid ""
 msgstr ""
 "Rodfilsystemet er en ramdisk. Harddisk-filsystemerne er monteret på »/"
 "target«. Den tilgængelige tekstbehandler hedder nano. Den er meget lille og "
-"nem at finde ud af. For at få en idé om, hvilke Unix-værktøjer, du har til "
+"nem at finde ud af. For at få en ide om, hvilke Unix-værktøjer, du har til "
 "rådighed, kan du bruge kommandoen »help«."
 
 #. Type: note
@@ -1852,13 +1776,6 @@ msgstr "Enhed hvorpå opstartsindlæseren skal installeres:"
 #. Description
 #. :sl2:
 #: ../grub-installer.templates:7001 ../grub-installer.templates:8002
-#, fuzzy
-#| msgid ""
-#| "You need to make the newly installed system bootable, by installing the "
-#| "GRUB boot loader on a bootable device. The usual way to do this is to "
-#| "install GRUB on the master boot record of your first hard drive. If you "
-#| "prefer, you can install GRUB elsewhere on the drive, or to another drive, "
-#| "or even to a floppy."
 msgid ""
 "You need to make the newly installed system bootable, by installing the GRUB "
 "boot loader on a bootable device. The usual way to do this is to install "
@@ -1867,27 +1784,14 @@ msgid ""
 msgstr ""
 "Du skal sætte dit nyinstallerede system i stand til at starte op, ved at "
 "installere opstartsindlæseren GRUB på en enhed som computeren kan starte op "
-"fra. Det gøres normalt ved at installere GRUB på din første harddisks "
-"opstartsspor (»master boot record«). Hvis du foretrækker det, kan du "
-"installere GRUB andre steder på drevet, på et andet drev eller sågar på en "
-"diskette."
+"fra. Det gøres normalt ved at installere GRUB på dit primære drev (UEFI "
+"partition/boot-post). Hvis du foretrækker det, kan du installere GRUB på et "
+"andet drev (eller partition) eller på et eksternt medie."
 
 #. Type: string
 #. Description
 #. :sl2:
 #: ../grub-installer.templates:7001
-#, fuzzy
-#| msgid ""
-#| "The device should be specified as a device in /dev. Below are some "
-#| "examples:\n"
-#| " - \"/dev/sda\" will install GRUB to the master boot record of your "
-#| "first\n"
-#| "   hard drive;\n"
-#| " - \"/dev/sda2\" will use the second partition of your first hard drive;\n"
-#| " - \"/dev/sdc5\" will use the first extended partition of your third "
-#| "hard\n"
-#| "   drive;\n"
-#| " - \"/dev/fd0\" will install GRUB to a floppy."
 msgid ""
 "The device notation should be specified as a device in /dev. Below are some "
 "examples:\n"
@@ -1900,11 +1804,10 @@ msgid ""
 " - \"/dev/fd0\" will install GRUB to a floppy."
 msgstr ""
 "Enheden skal angives som en enhed i /dev. Herunder vises nogle eksempler:\n"
-" - »/dev/sda« installerer GRUB i master boot record på din første\n"
-"   harddisk;\n"
-" - »/dev/sda2« benytter den anden partition på din første harddisk;\n"
-" - »/dev/sdc5« benytter den første udvidede partition på din tredje\n"
-"   harddisk;\n"
+" - »/dev/sda« installerer GRUB i dit primære drev (UEFI partition/boot-"
+"post)\n"
+" - »/dev/sdb« installerer GRUB i et sekundært drev (som f.eks. kan være et\n"
+"   USB-drev)\n"
 " - »/dev/fd0« installerer GRUB på en diskette."
 
 #. Type: password
@@ -2266,10 +2169,8 @@ msgstr "De manglende firmware-filer er: ${FILES}"
 #. Possible locations for debug logs to be saved
 #. :sl2:
 #: ../save-logs.templates:2001
-#, fuzzy
-#| msgid "Wireless network:"
 msgid "serve over network"
-msgstr "Trådløst netværk:"
+msgstr "tilgå over netværk"
 
 #. Type: select
 #. Choices
@@ -2292,24 +2193,22 @@ msgstr "diskette"
 #. :sl2:
 #: ../save-logs.templates:2002
 msgid "How should the debug logs be saved or transferred?"
-msgstr "Hvordan skal fejlsporings-logfilerne gemmes eller overføres?"
+msgstr "Hvordan skal logfilerne til fejlsporing gemmes eller overføres?"
 
 #. Type: select
 #. Description
 #. :sl2:
 #: ../save-logs.templates:2002
-#, fuzzy
-#| msgid ""
-#| "Debugging log files for the installer can be saved to floppy, served up "
-#| "over the web, or saved to a mounted file system."
 msgid ""
 "Debugging log files for the installer are accessible in /var/log/. They can "
 "be served up over the network (a small webserver is started on this machine, "
 "to achieve that), saved to some mounted file system (like the one on a USB "
 "stick), or to a floppy."
 msgstr ""
-"Installationsprogrammets fejlsporingslogfiler kan gemmes på en diskette, "
-"sendes via webbet eller gemmes til et monteret filsystem."
+"Installationsprogrammets fejlsporingslogfiler er tilgængelige i /var/log/. "
+"De kan tilgås over netværket (en lille internetserver startes på denne "
+"maskine, for at opnå dette), gemmes på et monteret filsystem (som det på et "
+"USB-drev), eller på en diskette."
 
 #. Type: string
 #. Description
@@ -3092,6 +2991,8 @@ msgid ""
 "No DHCP client was found. Please make sure, that a DHCP installer component "
 "is installed."
 msgstr ""
+"Ingen DHCP-klient blev fundet. Sikr dig venligst, at en DHCP-"
+"installationskomponent er installeret."
 
 #. Type: error
 #. Description
@@ -3111,13 +3012,6 @@ msgstr "Fortsæt uden en standardrute?"
 #. Description
 #. :sl2:
 #: ../netcfg-dhcp.templates:8001
-#, fuzzy
-#| msgid ""
-#| "The network autoconfiguration was successful. However, no default route "
-#| "was set: the system does not know how to communicate with hosts on the "
-#| "Internet. This will make it impossible to continue with the installation "
-#| "unless you have the first installation CD-ROM, a 'Netinst' CD-ROM, or "
-#| "packages available on the local network."
 msgid ""
 "The network autoconfiguration was successful. However, no default route was "
 "set: the system does not know how to communicate with hosts on the Internet. "
@@ -3126,10 +3020,11 @@ msgid ""
 "packages available on the local network."
 msgstr ""
 "Den automatiske netværksopsætning lykkedes. Der blev dog ikke angivet nogen "
-"standardrute (\"default route\"), så dit system ved ikke, hvordan det skal "
-"kommunikere med andre maskiner på internettet. Dette vil gøre det umuligt at "
-"fortsætte installationen, medmindre du har den første installations-cd, en "
-"\"Netinst\"-cd eller har de nødvendige pakker liggende på det lokale netværk."
+"standardrute: Systemet ved ikke, hvordan det skal kommunikere med værter på "
+"internettet. Dette vil gøre det umuligt at fortsætte installationen, "
+"medmindre du har det første aftryk fra et sæt af installationsmedier, et "
+"»Netinst«-aftryk eller har de nødvendige pakker liggende på det lokale "
+"netværk."
 
 #. Type: boolean
 #. Description
@@ -3139,8 +3034,8 @@ msgid ""
 "If you are unsure, you should not continue without a default route: contact "
 "your local network administrator about this problem."
 msgstr ""
-"Hvis du er usikker, bør du ikke fortsætte uden en standardrute (\"default "
-"route\"). Kontakt din lokale netværksadministrator om problemet."
+"Hvis du er usikker, bør du ikke fortsætte uden en standardrute (»default "
+"route«). Kontakt din lokale netværksadministrator om problemet."
 
 #. Type: text
 #. Description
@@ -3186,6 +3081,8 @@ msgid ""
 "The value you provided is not a usable IPv4 or IPv6 address. Please consult "
 "your network administrator and try again."
 msgstr ""
+"Værdien du angav er ikke en brugbar IPv4- eller IPv6-adresse. Kontakt "
+"venligst din netværksadministrator og prøv igen."
 
 #. Type: string
 #. Description
@@ -3607,14 +3504,14 @@ msgstr "benyt ikke partitionen"
 #. :sl2:
 #: ../partman-basicmethods.templates:3001
 msgid "Format the partition:"
-msgstr "Formatér partitionen:"
+msgstr "Formater partitionen:"
 
 #. Type: text
 #. Description
 #. :sl2:
 #: ../partman-basicmethods.templates:4001
 msgid "yes, format it"
-msgstr "ja, formatér den"
+msgstr "ja, formater den"
 
 #. Type: text
 #. Description
@@ -3635,7 +3532,7 @@ msgstr "brug ikke"
 #. :sl2:
 #: ../partman-basicmethods.templates:8001
 msgid "format the partition"
-msgstr "formatér partitionen"
+msgstr "formater partitionen"
 
 #. Type: text
 #. Description
@@ -3703,8 +3600,13 @@ msgstr ""
 #. Type: boolean
 #. Description
 #. :sl2:
+#. #-#-#-#-#  templates.pot (partman-hfs)  #-#-#-#-#
+#. Type: boolean
+#. Description
+#. :sl2:
 #: ../partman-basicfilesystems.templates:8001
 #: ../partman-basicfilesystems.templates:11001 ../partman-ext3.templates:10001
+#: ../partman-hfs.templates:8001
 msgid "Do you want to return to the partitioning menu?"
 msgstr "Vil du tilbage til partitioneringsmenuen?"
 
@@ -3929,7 +3831,7 @@ msgstr "Angiv manuelt"
 #: ../partman-basicfilesystems.templates:13001
 #: ../partman-basicfilesystems.templates:14001
 msgid "Do not mount it"
-msgstr "Montér den ikke"
+msgstr "Monter den ikke"
 
 #. Type: select
 #. Description
@@ -3991,7 +3893,7 @@ msgstr "Mærkat for filsystemet på denne partition:"
 #. :sl2:
 #: ../partman-basicfilesystems.templates:18001
 msgid "Format the swap area:"
-msgstr "Formatér swapområdet:"
+msgstr "Formater swapområdet:"
 
 #. #-#-#-#-#  templates.pot (partman-basicfilesystems)  #-#-#-#-#
 #. Type: text
@@ -4106,8 +4008,8 @@ msgid ""
 "standard = standard parameters, news = one inode per 4KB block, largefile = "
 "one inode per megabyte, largefile4 = one inode per 4 megabytes."
 msgstr ""
-"standard = standardparametre, news = én inode per 4KB-blok, largefile = én "
-"inode per megabyte, largefile4 = én inode per 4 megabyte."
+"standard = standardparametre, news = en inode per 4KB-blok, largefile = en "
+"inode per megabyte, largefile4 = en inode per 4 megabyte."
 
 #. Type: text
 #. Description
@@ -4245,7 +4147,7 @@ msgstr "noexec - tillad ikke eksekvering af programfiler"
 #. a 65 columns limit (which means 65 characters in single-byte languages)
 #: ../partman-basicfilesystems.templates:50001
 msgid "ro - mount the file system read-only"
-msgstr "ro - montér filsystemet skrivebeskyttet"
+msgstr "ro - monter filsystemet skrivebeskyttet"
 
 #. Type: text
 #. Description
@@ -4324,9 +4226,13 @@ msgstr "discard - trim frigjorte blokke fra underliggende blokenhed"
 #. Type: boolean
 #. Description
 #. :sl2:
+#. #-#-#-#-#  templates.pot (partman-hfs)  #-#-#-#-#
+#. Type: boolean
+#. Description
+#. :sl2:
 #: ../partman-basicfilesystems.templates:60001
 #: ../partman-basicfilesystems.templates:61001 ../partman-ext3.templates:7001
-#: ../partman-ext3.templates:8001
+#: ../partman-ext3.templates:8001 ../partman-hfs.templates:7001
 msgid "Go back to the menu and correct this problem?"
 msgstr "Gå tilbage til menuen for at ordne dette problem?"
 
@@ -4344,9 +4250,13 @@ msgstr "Gå tilbage til menuen for at ordne dette problem?"
 #. Type: boolean
 #. Description
 #. :sl2:
+#. #-#-#-#-#  templates.pot (partman-hfs)  #-#-#-#-#
+#. Type: boolean
+#. Description
+#. :sl2:
 #: ../partman-basicfilesystems.templates:60001
 #: ../partman-basicfilesystems.templates:61001 ../partman-ext3.templates:7001
-#: ../partman-ext3.templates:8001
+#: ../partman-ext3.templates:8001 ../partman-hfs.templates:7001
 msgid ""
 "If you do not go back to the partitioning menu and correct this error, the "
 "partition will be used as is. This means that you may not be able to boot "
@@ -4436,10 +4346,8 @@ msgstr "Fandt ingen EFI-partition."
 #. Description
 #. :sl2:
 #: ../partman-efi.templates:8001
-#, fuzzy
-#| msgid "Partitions to assemble:"
 msgid "EFI partition too small"
-msgstr "Partitioner at samle:"
+msgstr "EFI-partition er for lille"
 
 #. Type: error
 #. Description
@@ -4568,7 +4476,7 @@ msgstr ""
 #. Type: boolean
 #. Description
 #. :sl2:
-#: ../partman-ext3.templates:10001
+#: ../partman-ext3.templates:10001 ../partman-hfs.templates:8001
 msgid ""
 "The partition ${PARTITION} assigned to ${MOUNTPOINT} starts at an offset of "
 "${OFFSET} bytes from the minimum alignment for this disk, which may lead to "
@@ -4581,7 +4489,7 @@ msgstr ""
 #. Type: boolean
 #. Description
 #. :sl2:
-#: ../partman-ext3.templates:10001
+#: ../partman-ext3.templates:10001 ../partman-hfs.templates:8001
 msgid ""
 "Since you are formatting this partition, you should correct this problem now "
 "by realigning the partition, as it will be difficult to change later. To do "
@@ -4597,66 +4505,45 @@ msgstr ""
 
 #. Type: text
 #. Description
+#. :sl2:
+#. File system name
+#: ../partman-hfs.templates:2001
+msgid "Hierarchical File System"
+msgstr ""
+
+#. Type: text
+#. Description
+#. :sl2:
+#. File system name
+#: ../partman-hfs.templates:5001
+msgid "Hierarchical File System Plus"
+msgstr ""
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../partman-hfs.templates:7001
+#, fuzzy
+#| msgid ""
+#| "Your boot partition is not located on the first partition of your hard "
+#| "disk. This is needed by your machine in order to boot.  Please go back "
+#| "and use your first partition as a boot partition."
+msgid ""
+"You have not configured an HFS partition that is mounted to /boot/grub. This "
+"is needed by your machine in order to be able to boot. Please go back and "
+"create an HFS partition that is mounted to /boot/grub."
+msgstr ""
+"Din opstartspartition ligger ikke på den første partition på din harddisk. "
+"Dette er nødvendigt for, at din maskine skal kunne startes op. Gå tilbage og "
+"brug den første primære partition som opstartspartition."
+
+#. Type: text
+#. Description
 #. File system name
 #. :sl2:
 #: ../partman-jfs.templates:2001
 msgid "JFS journaling file system"
 msgstr "JFS-journalfilsystem"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../partman-jfs.templates:4001
-msgid "Use unrecommended JFS root file system?"
-msgstr "Brug ikke-anbefalet JFS-rodfilsystem?"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../partman-jfs.templates:4001
-msgid ""
-"Your root file system is a JFS file system. This can cause problems with the "
-"boot loader used by default by this installer."
-msgstr ""
-"Dit rodfilsystem er et JFS-filsystem. Dette kan give problemer med den "
-"opstartsindlæser, der som udgangspunkt bruges af dette installationsprogram."
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../partman-jfs.templates:4001
-msgid ""
-"You should use a small /boot partition with another file system, such as "
-"ext3."
-msgstr ""
-"Du bør bruge en lille /boot-partition med et andet filsystem, såsom ext3."
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../partman-jfs.templates:5001
-msgid "Use unrecommended JFS /boot file system?"
-msgstr "Brug ikke-anbefalet JFS-filsystem til /boot?"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../partman-jfs.templates:5001
-msgid ""
-"You have mounted a JFS file system as /boot. This is likely to cause "
-"problems with the boot loader used by default by this installer."
-msgstr ""
-"Dit rodfilsystem er et JFS-filsystem som /boot. Dette kan give problemer med "
-"den opstartsindlæser, der som udgangspunkt bruges af dette "
-"installationsprogram."
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../partman-jfs.templates:5001
-msgid ""
-"You should use another file system, such as ext3, for the /boot partition."
-msgstr "Du bør benytte et andet filsystem, såsom ext3, til /boot-partitionen."
 
 #. #-#-#-#-#  templates.pot (partman-md)  #-#-#-#-#
 #. Type: error
@@ -4763,8 +4650,8 @@ msgid ""
 "unit of measure is the megabyte."
 msgstr ""
 "Den størrelse du indtastede blev ikke forstået. Indtast venligst størrelsen "
-"som et positivt heltal efterfulgt af en valgfri måleenhed (f.eks. \"200 GB"
-"\"). Standard-måleenheden er megabyte."
+"som et positivt heltal efterfulgt af en valgfri måleenhed (f.eks. »200 GB«). "
+"Standardmåleenheden er megabyte."
 
 #. Type: error
 #. Description
@@ -5008,7 +4895,7 @@ msgstr ""
 "Du forsøger at sætte »bootable«-flaget på en logisk partition. Det er "
 "generelt kun nyttigt på primære partitioner, så det frarådes normalt at "
 "sætte det på logiske partitioner. Nogle BIOS-udgaver kan ikke starte "
-"maskinen, hvis der ikke er en primær partition med \"bootable\"-flaget sat."
+"maskinen, hvis der ikke er en primær partition med »bootable«-flaget sat."
 
 #. Type: boolean
 #. Description
@@ -5395,7 +5282,7 @@ msgid ""
 "result in disaster. You should create a normal user account to use for those "
 "day-to-day tasks."
 msgstr ""
-"Det er en dårlig idé, at bruge root-kontoen til almindelige dagligdags "
+"Det er en dårlig ide, at bruge root-kontoen til almindelige dagligdags "
 "gøremål, som f.eks. at læse e-post, da selv en lille fejltagelse kan få "
 "katastrofale følger. Du kan nu oprette en normal brugerkonto, som kan "
 "benyttes til disse almindelige arbejdsopgaver."

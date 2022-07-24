@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-19 20:01+0000\n"
+"POT-Creation-Date: 2022-03-24 08:13+0100\n"
 "PO-Revision-Date: 2020-10-26 09:04+0100\n"
 "Last-Translator: Milo Casagrande <milo@milo.name>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
@@ -3638,8 +3638,13 @@ msgstr ""
 #. Type: boolean
 #. Description
 #. :sl2:
+#. #-#-#-#-#  templates.pot (partman-hfs)  #-#-#-#-#
+#. Type: boolean
+#. Description
+#. :sl2:
 #: ../partman-basicfilesystems.templates:8001
 #: ../partman-basicfilesystems.templates:11001 ../partman-ext3.templates:10001
+#: ../partman-hfs.templates:8001
 msgid "Do you want to return to the partitioning menu?"
 msgstr "Tornare al menù di partizionamento?"
 
@@ -4259,9 +4264,13 @@ msgstr "discard - rimuove i blocchi liberi dal device a blocchi"
 #. Type: boolean
 #. Description
 #. :sl2:
+#. #-#-#-#-#  templates.pot (partman-hfs)  #-#-#-#-#
+#. Type: boolean
+#. Description
+#. :sl2:
 #: ../partman-basicfilesystems.templates:60001
 #: ../partman-basicfilesystems.templates:61001 ../partman-ext3.templates:7001
-#: ../partman-ext3.templates:8001
+#: ../partman-ext3.templates:8001 ../partman-hfs.templates:7001
 msgid "Go back to the menu and correct this problem?"
 msgstr "Tornare al menù e correggere questo problema?"
 
@@ -4279,9 +4288,13 @@ msgstr "Tornare al menù e correggere questo problema?"
 #. Type: boolean
 #. Description
 #. :sl2:
+#. #-#-#-#-#  templates.pot (partman-hfs)  #-#-#-#-#
+#. Type: boolean
+#. Description
+#. :sl2:
 #: ../partman-basicfilesystems.templates:60001
 #: ../partman-basicfilesystems.templates:61001 ../partman-ext3.templates:7001
-#: ../partman-ext3.templates:8001
+#: ../partman-ext3.templates:8001 ../partman-hfs.templates:7001
 msgid ""
 "If you do not go back to the partitioning menu and correct this error, the "
 "partition will be used as is. This means that you may not be able to boot "
@@ -4504,7 +4517,7 @@ msgstr ""
 #. Type: boolean
 #. Description
 #. :sl2:
-#: ../partman-ext3.templates:10001
+#: ../partman-ext3.templates:10001 ../partman-hfs.templates:8001
 msgid ""
 "The partition ${PARTITION} assigned to ${MOUNTPOINT} starts at an offset of "
 "${OFFSET} bytes from the minimum alignment for this disk, which may lead to "
@@ -4517,7 +4530,7 @@ msgstr ""
 #. Type: boolean
 #. Description
 #. :sl2:
-#: ../partman-ext3.templates:10001
+#: ../partman-ext3.templates:10001 ../partman-hfs.templates:8001
 msgid ""
 "Since you are formatting this partition, you should correct this problem now "
 "by realigning the partition, as it will be difficult to change later. To do "
@@ -4534,68 +4547,45 @@ msgstr ""
 
 #. Type: text
 #. Description
+#. :sl2:
+#. File system name
+#: ../partman-hfs.templates:2001
+msgid "Hierarchical File System"
+msgstr ""
+
+#. Type: text
+#. Description
+#. :sl2:
+#. File system name
+#: ../partman-hfs.templates:5001
+msgid "Hierarchical File System Plus"
+msgstr ""
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../partman-hfs.templates:7001
+#, fuzzy
+#| msgid ""
+#| "Your boot partition is not located on the first partition of your hard "
+#| "disk. This is needed by your machine in order to boot.  Please go back "
+#| "and use your first partition as a boot partition."
+msgid ""
+"You have not configured an HFS partition that is mounted to /boot/grub. This "
+"is needed by your machine in order to be able to boot. Please go back and "
+"create an HFS partition that is mounted to /boot/grub."
+msgstr ""
+"La partizione di avvio non è posizionata nella prima partizione del disco "
+"fisso. Questo è necessario affinché il computer si avvii. Tornare indietro e "
+"usare la prima partizione come partizione di avvio."
+
+#. Type: text
+#. Description
 #. File system name
 #. :sl2:
 #: ../partman-jfs.templates:2001
 msgid "JFS journaling file system"
 msgstr "File system JFS con journaling"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../partman-jfs.templates:4001
-msgid "Use unrecommended JFS root file system?"
-msgstr "Usare JFS come file system di root (sconsigliato)?"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../partman-jfs.templates:4001
-msgid ""
-"Your root file system is a JFS file system. This can cause problems with the "
-"boot loader used by default by this installer."
-msgstr ""
-"Il file system di root è JFS. Questo potrebbe causare problemi con il boot "
-"loader usato in modo predefinito da questo programma d'installazione."
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../partman-jfs.templates:4001
-msgid ""
-"You should use a small /boot partition with another file system, such as "
-"ext3."
-msgstr ""
-"Si dovrebbe usare una piccola partizione di /boot con un altro file system "
-"come ext3."
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../partman-jfs.templates:5001
-msgid "Use unrecommended JFS /boot file system?"
-msgstr "Usare JFS come file system di /boot (sconsigliato)?"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../partman-jfs.templates:5001
-msgid ""
-"You have mounted a JFS file system as /boot. This is likely to cause "
-"problems with the boot loader used by default by this installer."
-msgstr ""
-"Il file system /boot è JFS. Questo potrebbe causare problemi con il boot "
-"loader usato in modo predefinito da questo programma d'installazione."
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../partman-jfs.templates:5001
-msgid ""
-"You should use another file system, such as ext3, for the /boot partition."
-msgstr ""
-"È consigliato usare un altro file system come ext3 per la partizione di /"
-"boot."
 
 #. #-#-#-#-#  templates.pot (partman-md)  #-#-#-#-#
 #. Type: error

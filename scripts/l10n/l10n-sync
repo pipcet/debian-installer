@@ -436,14 +436,20 @@ if [ "$UPDATEPO" = "Y" ]; then
 		log_cmd -p "  - Run debconf-updatepo..." \
 			$debconfupdatepo
 		if [ "$COMMIT" = "Y" ] ; then
-#			if ! git status >/dev/null 2>&1; then
+			git diff --exit-code >$DI_COPY/l10n-sync_git-diff.log
+			GITDIFF=$?
+			if [ $GITDIFF == 0 ]; then
+				log "Nothing to commit here"
+				log ""
+			else
 				git add po/templates.pot
 				echo "Commit changed templates.pot to GIT - $i" >>$COMMITLOGFILE
 				git status >>$COMMITLOGFILE
 				echo "" >>$COMMITLOGFILE
 				git commit -uno -m "$COMMIT_MARKER Update templates.pot (from l10n-sync run at dillon)"
 				git push
-#			fi
+				log ""
+			fi
 		fi
 	done
 else
@@ -656,15 +662,21 @@ for po in sublevel1/*.po ; do
 done
 
 if [ "$COMMIT" = "Y" ] ; then
-	log_cmd -p "Commit all general PO/POT files to GIT..." \
+	git diff --exit-code >$DI_COPY/l10n-sync_git-diff.log
+	GITDIFF=$?
+	if [ $GITDIFF == 0 ]; then
+		log ""
+		log "No changes in master po|pot files to commit"
+	else
+	log_cmd -p "Commit all master PO/POT files to GIT..." \
 		git add $DI_COPY/*/*.po
 		git add $DI_COPY/*/*.pot
-		echo "Commit general PO/POT files to GIT:" >>$COMMITLOGFILE
+		echo "Commit master PO/POT files to GIT:" >>$COMMITLOGFILE
 		git status >>$COMMITLOGFILE
 		echo "" >>$COMMITLOGFILE
 		git commit -uno -m "$COMMIT_MARKER Updated packages/po/* against package templates (from l10n-sync run at dillon)"
-###		git push ### Do not push here; when executing l10n-sync from cron job, this does not work anyway, because of
-###                      ### lacking authentication. So pushing needs to be done afterwards by hand.
+		git push
+	fi
 fi
 log ""
 
@@ -734,20 +746,27 @@ EOF
 		done
 		log ""
 		if [ "$COMMIT" = "Y" ] ; then
-#			if ! git status >/dev/null 2>&1; then
+			git diff --exit-code >$DI_COPY/l10n-sync_git-diff.log
+			GITDIFF=$?
+			if [ $GITDIFF == 0 ]; then
+				log "No changed po|pot files to commit here"
+				log ""
+			else
 				git add *.po
 				echo "Commit changed/added po files to GIT - $package:" >>$COMMITLOGFILE
 				git status >>$COMMITLOGFILE
 				echo "" >>$COMMITLOGFILE
 				git commit -uno -m "$COMMIT_MARKER Commit changed/added po files (from l10n-sync run at dillon)"
 				git push
-#			fi
+				log ""
+			fi
 		fi
 	done
 else
 	log "- Not syncing D-I packages as requested"
 fi
 
+log ""
 log "Run successfully completed - $(date -u)"
 
 # Clean-up some left-over files

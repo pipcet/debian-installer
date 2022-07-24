@@ -5,6 +5,7 @@
 #
 # Safir Secerovic <sapphire@linux.org.ba>, 2006.
 # Armin Besirovic <armin@linux.org.ba>, 2008.
+# Amar Tufo <bhllinux@gmail.com>, 2022.
 #
 # Translations from iso-codes:
 #   Alastair McKinstry <mckinstry@computer.org>, 2001,2002.
@@ -20,16 +21,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer_packages_po_sublevel1_bs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-02 20:02+0000\n"
-"PO-Revision-Date: 2014-05-21 11:20+0100\n"
-"Last-Translator: Amila Valjevčić <valjevcic.amila@gmail.com>\n"
+"POT-Creation-Date: 2022-03-24 08:13+0100\n"
+"PO-Revision-Date: 2022-04-28 20:08+0000\n"
+"Last-Translator: Amar Tufo <bhllinux@gmail.com>\n"
 "Language-Team: Bosnian <lokal@linux.org.ba>\n"
 "Language: bs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.4\n"
-"Plural-Forms: 3;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.12.1-dev\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
 #. Type: select
@@ -130,7 +132,7 @@ msgstr "Konfigurišem ${PACKAGE}"
 #. :sl1:
 #: ../apt-setup-udeb.templates:1001
 msgid "Configure the package manager"
-msgstr "Podesite upravitelj paketa"
+msgstr "Podesite menadžer paketa"
 
 #. Type: text
 #. Description
@@ -304,7 +306,7 @@ msgstr "Instalacija SILO-a nije uspjela"
 #. :sl1:
 #: ../apt-cdrom-setup.templates:3001
 msgid "Scanning your installation media finds the label:"
-msgstr ""
+msgstr "Skeniranjem instalacijske medije pronalazi oznaku:"
 
 #. Type: boolean
 #. Description
@@ -2217,7 +2219,7 @@ msgstr "Pretražujem ${DIR}..."
 #. :sl1:
 #: ../cdrom-detect.templates:19001
 msgid "Unmounting/ejecting installation media..."
-msgstr ""
+msgstr "Unmontovanje/izbacivanje instalacijskog medija. . ."
 
 #. Type: text
 #. Description
@@ -4153,6 +4155,32 @@ msgstr "ext4"
 #. File system name (untranslatable in many languages)
 #. Type: text
 #. Description
+#. :sl1:
+#. Short file system name (untranslatable in many languages)
+#: ../partman-hfs.templates:1001 ../partman-hfs.templates:3001
+#, fuzzy
+#| msgid "ZFS"
+msgid "HFS"
+msgstr "ZFS"
+
+#. Type: text
+#. Description
+#. :sl1:
+#. File system name (untranslatable in many languages)
+#. Type: text
+#. Description
+#. :sl1:
+#. Short file system name (untranslatable in many languages)
+#: ../partman-hfs.templates:4001 ../partman-hfs.templates:6001
+msgid "HFS+"
+msgstr ""
+
+#. Type: text
+#. Description
+#. :sl1:
+#. File system name (untranslatable in many languages)
+#. Type: text
+#. Description
 #. Short file system name (untranslatable in many languages)
 #. :sl1:
 #: ../partman-jfs.templates:1001 ../partman-jfs.templates:3001
@@ -4576,6 +4604,40 @@ msgstr "Postavite korisnike i šifre"
 #: ../user-setup-udeb.templates:19001
 msgid "Setting users and passwords..."
 msgstr "Postavljanje korisnika i šifri..."
+
+#~ msgid "Use unrecommended JFS root file system?"
+#~ msgstr "Poništiti nepreporučeni JFS root datotečni sistem?"
+
+#~ msgid ""
+#~ "Your root file system is a JFS file system. This can cause problems with "
+#~ "the boot loader used by default by this installer."
+#~ msgstr ""
+#~ "Vaš root datotečni sistem je JFS datotečni sistem. Ovo može uzrokovati "
+#~ "probleme sa boot loaderom koji po defaltu koristi ovaj instaler."
+
+#~ msgid ""
+#~ "You should use a small /boot partition with another file system, such as "
+#~ "ext3."
+#~ msgstr ""
+#~ "Trebali biste koristiti malu /boot particiju s drugim datotečnim "
+#~ "sistemom, poput ext3."
+
+#~ msgid "Use unrecommended JFS /boot file system?"
+#~ msgstr "Poništiti nepreporučeni JFS /boot datotečni sistem?"
+
+#~ msgid ""
+#~ "You have mounted a JFS file system as /boot. This is likely to cause "
+#~ "problems with the boot loader used by default by this installer."
+#~ msgstr ""
+#~ "Montirali ste JFS datotečni sistem na /boot. Ovo može uzrokovati probleme "
+#~ "sa boot loaderom koji se koristi kao podrazumjevani od strane ovog "
+#~ "instalatera."
+
+#~ msgid ""
+#~ "You should use another file system, such as ext3, for the /boot partition."
+#~ msgstr ""
+#~ "Trebali biste koristiti drugi datotečni sistem, poput ext3, za /boot "
+#~ "particiju."
 
 #, fuzzy
 #~| msgid "No disk found"
@@ -5333,9 +5395,6 @@ msgstr "Postavljanje korisnika i šifri..."
 
 #~ msgid "ZFS pool(s): ${VGTARGETS}"
 #~ msgstr "ZFS pool(ovi): ${VGTARGETS}"
-
-#~ msgid "ZFS"
-#~ msgstr "ZFS"
 
 #~ msgid ""
 #~ "A common situation for system administrators is to find that some disk "

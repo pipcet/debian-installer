@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bn\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-19 20:01+0000\n"
+"POT-Creation-Date: 2022-03-24 08:13+0100\n"
 "PO-Revision-Date: 2019-08-28 18:10+0000\n"
 "Last-Translator: leela <53352@protonmail.com>\n"
 "Language-Team: Bengali\n"
@@ -3702,8 +3702,13 @@ msgstr ""
 #. Type: boolean
 #. Description
 #. :sl2:
+#. #-#-#-#-#  templates.pot (partman-hfs)  #-#-#-#-#
+#. Type: boolean
+#. Description
+#. :sl2:
 #: ../partman-basicfilesystems.templates:8001
 #: ../partman-basicfilesystems.templates:11001 ../partman-ext3.templates:10001
+#: ../partman-hfs.templates:8001
 msgid "Do you want to return to the partitioning menu?"
 msgstr "আপনি কি পার্টিশনকারী মেনুতে ফিরে আসতে চান?"
 
@@ -4325,9 +4330,13 @@ msgstr ""
 #. Type: boolean
 #. Description
 #. :sl2:
+#. #-#-#-#-#  templates.pot (partman-hfs)  #-#-#-#-#
+#. Type: boolean
+#. Description
+#. :sl2:
 #: ../partman-basicfilesystems.templates:60001
 #: ../partman-basicfilesystems.templates:61001 ../partman-ext3.templates:7001
-#: ../partman-ext3.templates:8001
+#: ../partman-ext3.templates:8001 ../partman-hfs.templates:7001
 msgid "Go back to the menu and correct this problem?"
 msgstr "মেনুতে পেছনে গিয়ে এই সমস্যাটি দূর করবেন কি?"
 
@@ -4345,9 +4354,13 @@ msgstr "মেনুতে পেছনে গিয়ে এই সমস্য�
 #. Type: boolean
 #. Description
 #. :sl2:
+#. #-#-#-#-#  templates.pot (partman-hfs)  #-#-#-#-#
+#. Type: boolean
+#. Description
+#. :sl2:
 #: ../partman-basicfilesystems.templates:60001
 #: ../partman-basicfilesystems.templates:61001 ../partman-ext3.templates:7001
-#: ../partman-ext3.templates:8001
+#: ../partman-ext3.templates:8001 ../partman-hfs.templates:7001
 msgid ""
 "If you do not go back to the partitioning menu and correct this error, the "
 "partition will be used as is. This means that you may not be able to boot "
@@ -4576,7 +4589,7 @@ msgstr ""
 #. Type: boolean
 #. Description
 #. :sl2:
-#: ../partman-ext3.templates:10001
+#: ../partman-ext3.templates:10001 ../partman-hfs.templates:8001
 msgid ""
 "The partition ${PARTITION} assigned to ${MOUNTPOINT} starts at an offset of "
 "${OFFSET} bytes from the minimum alignment for this disk, which may lead to "
@@ -4589,7 +4602,7 @@ msgstr ""
 #. Type: boolean
 #. Description
 #. :sl2:
-#: ../partman-ext3.templates:10001
+#: ../partman-ext3.templates:10001 ../partman-hfs.templates:8001
 msgid ""
 "Since you are formatting this partition, you should correct this problem now "
 "by realigning the partition, as it will be difficult to change later. To do "
@@ -4605,67 +4618,45 @@ msgstr ""
 
 #. Type: text
 #. Description
+#. :sl2:
+#. File system name
+#: ../partman-hfs.templates:2001
+msgid "Hierarchical File System"
+msgstr ""
+
+#. Type: text
+#. Description
+#. :sl2:
+#. File system name
+#: ../partman-hfs.templates:5001
+msgid "Hierarchical File System Plus"
+msgstr ""
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../partman-hfs.templates:7001
+#, fuzzy
+#| msgid ""
+#| "Your boot partition is not located on the first primary partition of your "
+#| "hard disk. This is needed by your machine in order to boot.  Please go "
+#| "back and use your first primary partition as a boot partition."
+msgid ""
+"You have not configured an HFS partition that is mounted to /boot/grub. This "
+"is needed by your machine in order to be able to boot. Please go back and "
+"create an HFS partition that is mounted to /boot/grub."
+msgstr ""
+"আপনার কম্পিউটারের বুট পার্টিশনটি হার্ড ডিস্কের প্রথম প্রাইমারি পার্টিশনে অবস্থিত নয়। "
+"আপনার কম্পিউটারকে বুট করার জন্য এটি প্রয়োজন। অনুগ্রহপূর্বক পেছনে ফিরে গিয়ে প্রথম "
+"প্রাইমারি পার্টিশনকে বুট পার্টিশন হিসেবে বেছে নিন।"
+
+#. Type: text
+#. Description
 #. File system name
 #. :sl2:
 #: ../partman-jfs.templates:2001
 msgid "JFS journaling file system"
 msgstr "jfs জার্নালিং ফাইল সিস্টেম"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../partman-jfs.templates:4001
-msgid "Use unrecommended JFS root file system?"
-msgstr "অসুপারিশকৃত JFS রুট ফাইল সিস্টেম ব্যবহার করবো কি?"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../partman-jfs.templates:4001
-msgid ""
-"Your root file system is a JFS file system. This can cause problems with the "
-"boot loader used by default by this installer."
-msgstr ""
-"আপনার রুট ফাইল সিস্টেমটি একটি JFS ফাইল সিস্টেম। এই ইনস্টলারটি স্বাভাবিক অবস্থায় যে "
-"বুট লোডার ব্যবহার করে, তা এ কারণে সমস্যায় পড়তে পারে।"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../partman-jfs.templates:4001
-msgid ""
-"You should use a small /boot partition with another file system, such as "
-"ext3."
-msgstr ""
-"আপনার উচিৎ অন্য কোন ফাইল সিস্টেম, যেমন ext3, বিশিষ্ট ছোট একটি /boot পার্টিশন "
-"ব্যবহার করা।"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../partman-jfs.templates:5001
-msgid "Use unrecommended JFS /boot file system?"
-msgstr "অসুপারিশকৃত JFS  /boot ফাইল সিস্টেম ব্যবহার করবো কি?"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../partman-jfs.templates:5001
-msgid ""
-"You have mounted a JFS file system as /boot. This is likely to cause "
-"problems with the boot loader used by default by this installer."
-msgstr ""
-"আপনি /boot হিসেবে একটি JFS ফাইল সিস্টেম মাউন্ট করেছেন। এই ইনস্টলারটি স্বাভাবিক "
-"অবস্থায় যে বুট লোডার ব্যবহার করে, তা এ কারণে সমস্যায় পড়তে পারে।"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../partman-jfs.templates:5001
-msgid ""
-"You should use another file system, such as ext3, for the /boot partition."
-msgstr ""
-"আপনার উচিৎ /boot পার্টিশনের জন্য অন্য কোন ফাইল সিস্টেম, যেমন ext3, ব্যবহার করা।"
 
 #. #-#-#-#-#  templates.pot (partman-md)  #-#-#-#-#
 #. Type: error

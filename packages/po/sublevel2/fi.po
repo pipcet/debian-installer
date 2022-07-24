@@ -10,22 +10,22 @@
 # Timo Jyrinki <timo.jyrinki@iki.fi>, 2012.
 # Juhani Numminen <juhaninumminen0@gmail.com>, 2018.
 # Arto Keiski <arto.keiski@iki.fi>, 2018.
-# Kimmo Kujansuu <mrkujansuu@gmail.com>, 2021.
+# Kimmo Kujansuu <mrkujansuu@gmail.com>, 2021, 2022.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-19 20:01+0000\n"
-"PO-Revision-Date: 2021-07-17 08:34+0000\n"
-"Last-Translator: Kimmo Kujansuu <mrkujansuu@gmail.com>\n"
+"POT-Creation-Date: 2022-03-24 08:13+0100\n"
+"PO-Revision-Date: 2022-06-02 19:19+0000\n"
+"Last-Translator: Jiri Nakola <github@nakola.fi>\n"
 "Language-Team: Finnish <debian-l10n-finnish@lists.debian.org>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.7.2-dev\n"
+"X-Generator: Weblate 4.13-dev\n"
 
 #. Type: multiselect
 #. Description
@@ -2174,10 +2174,8 @@ msgstr "Puuttuvat laiteohjelmistotiedostot ovat: ${FILES}"
 #. Possible locations for debug logs to be saved
 #. :sl2:
 #: ../save-logs.templates:2001
-#, fuzzy
-#| msgid "Wireless network:"
 msgid "serve over network"
-msgstr "Langaton verkko:"
+msgstr "palvelu verkon kautta"
 
 #. Type: select
 #. Choices
@@ -2206,18 +2204,16 @@ msgstr "Vianjäljityksen lokien tallennustapa:"
 #. Description
 #. :sl2:
 #: ../save-logs.templates:2002
-#, fuzzy
-#| msgid ""
-#| "Debugging log files for the installer can be saved to floppy, served up "
-#| "over the web, or saved to a mounted file system."
 msgid ""
 "Debugging log files for the installer are accessible in /var/log/. They can "
 "be served up over the network (a small webserver is started on this machine, "
 "to achieve that), saved to some mounted file system (like the one on a USB "
 "stick), or to a floppy."
 msgstr ""
-"Asentimen vianjäljityksen lokit voidaan tallentaa levykkeelle, saattaa "
-"luettaviksi webin kautta tai tallentaa liitetylle tiedostojärjestelmälle."
+"Asennusohjelman lokitiedostot ovat käytettävissä hakemistossa /var/log/. Ne "
+"voidaan hoitaa myös verkon kautta (koneelle käynnistetään pieni "
+"verkkopalvelin), tallennetaan liitettyyn asemaan (kuten USB-tikulle) tai "
+"levykkeelle."
 
 #. Type: string
 #. Description
@@ -3604,8 +3600,13 @@ msgstr ""
 #. Type: boolean
 #. Description
 #. :sl2:
+#. #-#-#-#-#  templates.pot (partman-hfs)  #-#-#-#-#
+#. Type: boolean
+#. Description
+#. :sl2:
 #: ../partman-basicfilesystems.templates:8001
 #: ../partman-basicfilesystems.templates:11001 ../partman-ext3.templates:10001
+#: ../partman-hfs.templates:8001
 msgid "Do you want to return to the partitioning menu?"
 msgstr "Haluatko palata osiointivalikkoon?"
 
@@ -4225,9 +4226,13 @@ msgstr "discard - trimmaa vapautetut lohkot lohkolaitteelta"
 #. Type: boolean
 #. Description
 #. :sl2:
+#. #-#-#-#-#  templates.pot (partman-hfs)  #-#-#-#-#
+#. Type: boolean
+#. Description
+#. :sl2:
 #: ../partman-basicfilesystems.templates:60001
 #: ../partman-basicfilesystems.templates:61001 ../partman-ext3.templates:7001
-#: ../partman-ext3.templates:8001
+#: ../partman-ext3.templates:8001 ../partman-hfs.templates:7001
 msgid "Go back to the menu and correct this problem?"
 msgstr "Palataanko valikkoon korjaamaan tämä ongelma?"
 
@@ -4245,9 +4250,13 @@ msgstr "Palataanko valikkoon korjaamaan tämä ongelma?"
 #. Type: boolean
 #. Description
 #. :sl2:
+#. #-#-#-#-#  templates.pot (partman-hfs)  #-#-#-#-#
+#. Type: boolean
+#. Description
+#. :sl2:
 #: ../partman-basicfilesystems.templates:60001
 #: ../partman-basicfilesystems.templates:61001 ../partman-ext3.templates:7001
-#: ../partman-ext3.templates:8001
+#: ../partman-ext3.templates:8001 ../partman-hfs.templates:7001
 msgid ""
 "If you do not go back to the partitioning menu and correct this error, the "
 "partition will be used as is. This means that you may not be able to boot "
@@ -4468,7 +4477,7 @@ msgstr ""
 #. Type: boolean
 #. Description
 #. :sl2:
-#: ../partman-ext3.templates:10001
+#: ../partman-ext3.templates:10001 ../partman-hfs.templates:8001
 msgid ""
 "The partition ${PARTITION} assigned to ${MOUNTPOINT} starts at an offset of "
 "${OFFSET} bytes from the minimum alignment for this disk, which may lead to "
@@ -4481,7 +4490,7 @@ msgstr ""
 #. Type: boolean
 #. Description
 #. :sl2:
-#: ../partman-ext3.templates:10001
+#: ../partman-ext3.templates:10001 ../partman-hfs.templates:8001
 msgid ""
 "Since you are formatting this partition, you should correct this problem now "
 "by realigning the partition, as it will be difficult to change later. To do "
@@ -4497,70 +4506,45 @@ msgstr ""
 
 #. Type: text
 #. Description
+#. :sl2:
+#. File system name
+#: ../partman-hfs.templates:2001
+msgid "Hierarchical File System"
+msgstr "Hierarchical File System"
+
+#. Type: text
+#. Description
+#. :sl2:
+#. File system name
+#: ../partman-hfs.templates:5001
+msgid "Hierarchical File System Plus"
+msgstr "Hierarchical File System Plus"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../partman-hfs.templates:7001
+#, fuzzy
+#| msgid ""
+#| "Your boot partition is not located on the first partition of your hard "
+#| "disk. This is needed by your machine in order to boot.  Please go back "
+#| "and use your first partition as a boot partition."
+msgid ""
+"You have not configured an HFS partition that is mounted to /boot/grub. This "
+"is needed by your machine in order to be able to boot. Please go back and "
+"create an HFS partition that is mounted to /boot/grub."
+msgstr ""
+"Käynnistysosio ei ole kiintolevyn ensimmäisellä levyosiolla. Tämä tarvitaan "
+"koneellasi jotta käynnistys onnistuu. Palaa takaisin ja käytä ensimmäistä "
+"levyosiota käynnistysosiona."
+
+#. Type: text
+#. Description
 #. File system name
 #. :sl2:
 #: ../partman-jfs.templates:2001
 msgid "JFS journaling file system"
 msgstr "JFS tapahtumakirjanpidon sisältävä tiedostojärjestelmä"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../partman-jfs.templates:4001
-msgid "Use unrecommended JFS root file system?"
-msgstr "Käytetäänkö ei-suositeltua JFS-juuritiedostojärjestelmää?"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../partman-jfs.templates:4001
-msgid ""
-"Your root file system is a JFS file system. This can cause problems with the "
-"boot loader used by default by this installer."
-msgstr ""
-"Juuriosion tiedostojärjestelmä on JFS. Tämä aiheuttaa luultavasti ongelmia "
-"tämän asennusohjelman oletuksena käyttämän alkulatausohjelman kanssa."
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../partman-jfs.templates:4001
-msgid ""
-"You should use a small /boot partition with another file system, such as "
-"ext3."
-msgstr ""
-"Olisi käytettävä pientä /boot-levyosiota, jossa on joku muu "
-"tiedostojärjestelmä, esimerkiksi ext3."
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../partman-jfs.templates:5001
-msgid "Use unrecommended JFS /boot file system?"
-msgstr ""
-"Käytetäänkö ei-suositeltua JFS-tiedostojärjestelmää hakemistolle /boot?"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../partman-jfs.templates:5001
-msgid ""
-"You have mounted a JFS file system as /boot. This is likely to cause "
-"problems with the boot loader used by default by this installer."
-msgstr ""
-"Liitoskohtaan /boot on liitetty JFS-tiedostojärjestelmä. Tämä aiheuttaa "
-"luultavasti ongelmia tämän asennusohjelman oletuksena käyttämä "
-"alkulatausohjelman kanssa."
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../partman-jfs.templates:5001
-msgid ""
-"You should use another file system, such as ext3, for the /boot partition."
-msgstr ""
-"Käytä /boot-osiolla jotain muuta tiedostojärjestelmää, esimerkiksi ext3 on "
-"sopiva."
 
 #. #-#-#-#-#  templates.pot (partman-md)  #-#-#-#-#
 #. Type: error

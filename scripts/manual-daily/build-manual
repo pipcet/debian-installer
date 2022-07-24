@@ -303,10 +303,6 @@ architectures=$(egrep -v "^[[:space:]]*(|#.*)$" $ROOT/bin/archlist | cut -f 1)
 ## Clean old files
 rm -R $destination/* &>/dev/null
 
-# Extract release codename for example-preseed from entity file
-export manual_release="`grep "releasename " $source/build/entities/common.ent | awk '{print $3}' | cut -d'"' -f2`"
-export manual_target="for_dillon"
-
 if [ "$DI_BUILDING_FROM_MAIN" ] && [ "$DI_BUILD_MANUAL" = 0 ]; then
     echo "Not building D-I installation-guide (as per configuration settings)" >$mainlog
     rm -f $ROOT/lockfile
@@ -347,6 +343,10 @@ if is_updated en || [ ! -d "$source/integrated/en" ] || global_build_options_cha
     update_templates >>$mainlog 2>&1
 #####    checkfatal "$?" "updating templates"
     echo >>$mainlog
+
+# Extract release codename for example-preseed from entity file
+export manual_release="`grep "releasename " $source/build/entities/common.ent | awk '{print $3}' | cut -d'"' -f2`"
+export manual_target="for_dillon"
 
     # Extract preconfiguration example from the installation-guide
     cd $source/build

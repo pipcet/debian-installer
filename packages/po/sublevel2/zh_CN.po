@@ -11,21 +11,22 @@
 # Boyuan Yang <073plan@gmail.com>, 2018, 2019, 2020.
 # 玉堂白鹤 <yjwork@qq.com>, 2020.
 # 吕文彬 <wenbin816@gmail.com>, 2021.
+# Wenbin Lv <wenbin816@gmail.com>, 2022.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-19 20:01+0000\n"
-"PO-Revision-Date: 2021-09-10 08:34+0000\n"
-"Last-Translator: 吕文彬 <wenbin816@gmail.com>\n"
+"POT-Creation-Date: 2022-03-24 08:13+0100\n"
+"PO-Revision-Date: 2022-04-16 10:10+0000\n"
+"Last-Translator: Wenbin Lv <wenbin816@gmail.com>\n"
 "Language-Team: <debian-l10n-chinese@lists.debian.org>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.8.1-dev\n"
+"X-Generator: Weblate 4.12-dev\n"
 
 #. Type: multiselect
 #. Description
@@ -47,8 +48,8 @@ msgid ""
 "installer components are shown below. They are probably not necessary, but "
 "may be interesting to some users."
 msgstr ""
-"所有完成安装所必需的组件都将被自动加载，也不会列在这里。其他一些可选的安装程"
-"序组件列在了下边。它们很可能不是必需的，但是部分用户可能会对其感兴趣。"
+"所有完成安装所必需的组件都将被自动加载，也不会在此列出。下面列出了其他一些可"
+"选的安装程序组件。您也许并不需要它们，但是部分用户可能会对它们感兴趣。"
 
 #. Type: multiselect
 #. Description
@@ -60,7 +61,7 @@ msgstr ""
 msgid ""
 "Note that if you select a component that requires others, those components "
 "will also be loaded."
-msgstr "注意，如果您的选择依赖于其他组件，那么这些组件也将被加载。"
+msgstr "注意，如果您选择的组件依赖于其他组件，那么被依赖的组件也将被加载。"
 
 #. Type: multiselect
 #. Description
@@ -73,9 +74,9 @@ msgid ""
 "kernel modules, so look through the list carefully and select the components "
 "you need."
 msgstr ""
-"为了节省内存，仅有那些对安装来说确实需要的组件才会被默认选定。其他安装程序组"
-"件对于基本安装并非必需，但是您可能会需要其中的一部分，特别是某些内核模块。请"
-"仔细检查这一列表并选择您需要的组件。"
+"为了节省内存，默认情况下仅会选择那些对安装来说确实必需的组件。其他安装程序组"
+"件并不全是基本安装所必需的，但是您可能会需要其中的某些组件，特别是某些内核模"
+"块。请仔细检查这一列表并选择您需要的组件。"
 
 #. Type: error
 #. Description
@@ -107,8 +108,8 @@ msgid ""
 "kernel used by this version of the installer and the kernel version "
 "available in the archive."
 msgstr ""
-"未找到内核模块。这可能是由于本安装程序所使用的内核版本与网络存档中的内核版本"
-"不同造成的。"
+"未找到内核模块。这可能是由于此版本的安装程序所使用的内核版本与仓库中可用的内"
+"核版本不同造成的。"
 
 #. Type: boolean
 #. Description
@@ -118,8 +119,8 @@ msgid ""
 "You should make sure that your installation image is up-to-date, or - if "
 "that's the case - try a different mirror, preferably deb.debian.org."
 msgstr ""
-"您应该确保您的安装映像是最新的，或者 - 这样的话 - 请尝试使用其他镜像，最好是"
-"使用 deb.debian.org。"
+"请确认您的安装镜像是最新的。如果您的安装镜像确实没有问题，请尝试使用其他镜像"
+"站点，最好是使用 deb.debian.org。"
 
 #. Type: boolean
 #. Description
@@ -156,7 +157,7 @@ msgstr "正在扫描发布版本的 updates 软件源..."
 #. :sl2:
 #: ../apt-setup-udeb.templates:7001
 msgid "Scanning the backports repository..."
-msgstr "正在扫描 backport 软件源..."
+msgstr "正在扫描 backports 软件源..."
 
 #. #-#-#-#-#  templates.pot (apt-setup)  #-#-#-#-#
 #. Type: select
@@ -193,7 +194,7 @@ msgstr "忽略"
 msgid ""
 "The installer failed to download the public key used to sign the local "
 "repository at ${MIRROR}:"
-msgstr "安装程序从 ${MIRROR} 下载用于签署本地仓库的公钥失败："
+msgstr "安装程序从 ${MIRROR} 下载用于签署本地软件源的公钥失败："
 
 #. Type: error
 #. Description
@@ -210,8 +211,8 @@ msgid ""
 "The repository on ${HOST} couldn't be accessed, so its updates will not be "
 "made available to you at this time. You should investigate this later."
 msgstr ""
-"无法访问位于 ${HOST} 的软件源，因此您现在还无法使用那里的软件更新。您应随后调"
-"查这一问题。"
+"无法访问位于 ${HOST} 的软件源，因此您暂时无法使用此软件源进行更新。您应当随后"
+"调查这一问题。"
 
 #. Type: error
 #. Description
@@ -227,7 +228,7 @@ msgstr "被注释掉的有关 ${HOST} 的条目已被加入到 /etc/apt/sources.
 #. :sl2:
 #: ../apt-cdrom-setup.templates:2001
 msgid "apt configuration problem"
-msgstr "Apt 设置问题"
+msgstr "apt 设置问题"
 
 #. #-#-#-#-#  templates.pot (apt-setup)  #-#-#-#-#
 #. Type: select
@@ -243,7 +244,7 @@ msgstr "Apt 设置问题"
 #. :sl2:
 #: ../apt-mirror-setup.templates:4001 ../net-retriever.templates:1001
 msgid "Change mirror"
-msgstr "更换镜像"
+msgstr "更换镜像站点"
 
 #. Type: select
 #. Description
@@ -262,23 +263,23 @@ msgid ""
 "different mirror, or ignore the problem and continue without all the "
 "packages from this mirror."
 msgstr ""
-"安装程序无法访问镜像站。这可能是您的网络问题，也可能是保存此密钥的服务器发生"
-"错误。您可以选择重试下载，选择另一个镜像站，或者忽略这一问题，不使用该镜像站"
-"的任何软件包并继续。"
+"安装程序无法访问镜像站点。这可能是您的网络问题，也可能是保存此密钥的服务器发"
+"生错误。您可以选择重试下载，选择另一个镜像站，或者忽略这一问题，不使用该镜像"
+"站点的任何软件包并继续。"
 
 #. Type: boolean
 #. Description
 #. :sl2:
 #: ../apt-mirror-setup.templates:6001
 msgid "Continue without a network mirror?"
-msgstr "没有网络镜像，继续安装吗？"
+msgstr "不使用网络镜像站点，继续安装吗？"
 
 #. Type: boolean
 #. Description
 #. :sl2:
 #: ../apt-mirror-setup.templates:6001
 msgid "No network mirror was selected."
-msgstr "没有选择网络镜像。"
+msgstr "没有选择网络镜像站点。"
 
 #. Type: boolean
 #. Description
@@ -299,9 +300,9 @@ msgid ""
 "can be used to install it. This software has varying licenses which may "
 "prevent you from using, modifying, or sharing it."
 msgstr ""
-"某些非自由软件也有可用的软件包。虽然这些软件不是主要发布 (main distribution) "
-"的一部分，您仍可用标准的软件包管理工具来安装它们。这些软件有各种不同的授权许"
-"可，可能会禁止您使用、修改、或分享该软件。"
+"某些非自由软件也有可用的软件包。虽然这些软件不是 \"main\" 发布版本的一部分，"
+"您仍然可以使用标准的软件包管理工具来安装它们。这些软件有各种不同的许可证，可"
+"能会禁止您使用、修改、或分享它们。"
 
 #. Type: boolean
 #. Description
@@ -309,7 +310,7 @@ msgstr ""
 #. :sl2:
 #: ../apt-mirror-setup.templates-ubuntu:2001
 msgid "Use software from the \"universe\" component?"
-msgstr "使用“universe”部分的软件吗？"
+msgstr "使用 \"universe\" 中的软件吗？"
 
 #. Type: boolean
 #. Description
@@ -321,8 +322,8 @@ msgid ""
 "free and, though it is not a part of the main distribution, standard package "
 "management tools can be used to install it."
 msgstr ""
-"某些附加的软件也有可用的软件包。这些软件是自由软件，尽管它们不是主要发布 "
-"(main distribution) 的一部分，您一样可以使用标准的软件包管理工具来安装它们。"
+"某些额外的软件也有可用的软件包。这些软件是自由软件，尽管它们不是 \"main\" 发"
+"布版本的一部分，您仍然可以使用标准的软件包管理工具来安装它们。"
 
 #. Type: boolean
 #. Description
@@ -330,7 +331,7 @@ msgstr ""
 #. :sl2:
 #: ../apt-mirror-setup.templates-ubuntu:3001
 msgid "Use software from the \"multiverse\" component?"
-msgstr "使用“multiverse”源中的软件吗？"
+msgstr "使用 \"multiverse\" 中的软件吗？"
 
 #. Type: boolean
 #. Description
@@ -344,9 +345,9 @@ msgid ""
 "cases) patent restrictions which may prevent you from using, modifying, or "
 "sharing it."
 msgstr ""
-"某些非自由软件也有可用的软件包。虽然这些软件不是主要发布 (main distribution) "
-"的一部分，您仍可用标准的软件包管理工具来安装它们。这些软件有各种不同的授权许"
-"可和 (在某些情况下有) 专利限制，这可能会禁止您使用、修改、或分享该软件。"
+"某些非自由软件也有可用的软件包。虽然这些软件不是 \"main\" 发布版本的一部分，"
+"您仍然可以使用标准的软件包管理工具来安装它们。这些软件有各种不同的许可证，有"
+"些还有专利上的限制，可能会禁止您使用、修改、或分享它们。"
 
 #. Type: boolean
 #. Description
@@ -354,7 +355,7 @@ msgstr ""
 #. :sl2:
 #: ../apt-mirror-setup.templates-ubuntu:4001
 msgid "Use software from the \"partner\" repository?"
-msgstr "使用“partner”仓库的软件吗？"
+msgstr "使用 \"partner\" 仓库的软件吗？"
 
 #. Type: boolean
 #. Description
@@ -366,8 +367,8 @@ msgid ""
 "repository. This software is not part of Ubuntu, but is offered by Canonical "
 "and the respective vendors as a service to Ubuntu users."
 msgstr ""
-"Canonical 的“partner”仓库中有额外的软件。这些软件不是 Ubuntu 的组成部分，但是"
-"是由 Canonical 以及各个供应商作为 Ubuntu 用户的服务而提供的。"
+"Canonical 的 \"partner\" 仓库中有额外的软件。这些软件不是 Ubuntu 的组成部分，"
+"但是 Canonical 以及各软件的供应商将其作为一种服务提供给 Ubuntu 用户。"
 
 #. Type: boolean
 #. Description
@@ -388,9 +389,9 @@ msgid ""
 "testing as that contained in the release, it includes newer versions of some "
 "applications which may provide useful features."
 msgstr ""
-"有些软件由开发中的版本向后移植到这个发行版中。虽然这些软件不象正式发布中包含"
-"的软件一样经过了详尽的测试，但是它们包括一些应用程序的新版本，因而可能会提供"
-"一些有用的功能。"
+"一些软件是从开发版本的源码树中向后移植 (backport) 过来的，并经过修改以适合在"
+"本发布版本中使用。虽然这些软件并没有如发布版本中的软件那样进行过如此完整的测"
+"试，但是 backports 包含了某些应用程序的新版本，可能会提供一些有用的新功能。"
 
 #. Type: boolean
 #. Description
@@ -408,8 +409,8 @@ msgid ""
 "could cause problems with the installation process, and if you proceed, some "
 "of the existing files may be overwritten."
 msgstr ""
-"目标文件系统中尚包含有以前安装所残留的文件。这些文件可能会在安装过程中导致一"
-"些问题。如果您执行安装的话，一些已存在的文件可能会被覆盖。"
+"目标文件系统中包含有以前的安装所残留的文件。这些文件可能会在安装过程中导致一"
+"些问题，并且如果您继续安装的话，一些已存在的文件可能会被覆盖。"
 
 #. Type: error
 #. Description
@@ -427,7 +428,7 @@ msgid ""
 "target. The partitioner and formatter should have done this for you."
 msgstr ""
 "要开始进行安装，在 /target 上必须挂载一个根文件系统。磁盘分区程序和格式化程序"
-"应该已经帮您完成了这些。"
+"应该已经帮您完成了这些工作。"
 
 #. Type: error
 #. Description
@@ -445,7 +446,7 @@ msgid ""
 "back and erase or format the target file system before proceeding with the "
 "install."
 msgstr ""
-"在目标文件系统上的安装进程已被取消，您应当返回上一步，并删除或格式化目标文件"
+"在目标文件系统上的安装进程已被取消。您应当返回上一步，并删除或格式化目标文件"
 "系统，然后再开始重新安装。"
 
 #. Type: error
@@ -627,7 +628,7 @@ msgstr "请检查 /var/log/syslog 或查看第四虚拟控制台以获得详细�
 #. :sl2:
 #: ../bootstrap-base.templates:5001 ../bootstrap-base.templates:6001
 msgid "Base system installation error"
-msgstr "基本系统安装出错"
+msgstr "安装基本系统出错"
 
 #. Type: error
 #. Description
@@ -672,7 +673,7 @@ msgstr "向目标系统中安装内核时发生错误。"
 #. :sl2:
 #: ../bootstrap-base.templates:11001
 msgid "Kernel package: '${KERNEL}'."
-msgstr "内核软件包：“${KERNEL}”。"
+msgstr "内核软件包：\"${KERNEL}\"。"
 
 #. Type: select
 #. Choices
@@ -705,14 +706,14 @@ msgstr "这里列出了可供选择的内核。请选择其中之一，以使系
 #. :sl2:
 #: ../bootstrap-base.templates:14001
 msgid "Continue without installing a kernel?"
-msgstr "不安装内核而继续吗？"
+msgstr "不安装内核并继续吗？"
 
 #. Type: boolean
 #. Description
 #. :sl2:
 #: ../bootstrap-base.templates:14001
 msgid "No installable kernel was found in the defined APT sources."
-msgstr "在指定的 APT 源没有找到可以安装的内核。"
+msgstr "在指定的 APT 源里没有找到可以安装的内核。"
 
 #. Type: boolean
 #. Description
@@ -724,7 +725,7 @@ msgid ""
 "likely end up with a machine that doesn't boot."
 msgstr ""
 "您可以尝试不安装内核并继续，然后再手动安装您自己的内核。这一方法只推荐专家使"
-"用，否则您将很可能最终得到计算机无法启动的结果。"
+"用，否则安装结束后您的计算机将可能无法启动。"
 
 #. Type: error
 #. Description
@@ -738,7 +739,7 @@ msgstr "无法安装内核"
 #. :sl2:
 #: ../bootstrap-base.templates:15001
 msgid "The installer cannot find a suitable kernel package to install."
-msgstr "安装程序无法找到一个合适的内核软件包来安装。"
+msgstr "安装程序无法找到合适的内核软件包进行安装。"
 
 #. Type: error
 #. Description
@@ -754,7 +755,7 @@ msgstr "无法安装 ${PACKAGE}"
 msgid ""
 "An error was returned while trying to install the ${PACKAGE} package onto "
 "the target system."
-msgstr "向目标系统中安装 ${PACKAGE} 软件包时出现一个错误。"
+msgstr "向目标系统中安装 ${PACKAGE} 软件包时发生错误。"
 
 #. Type: error
 #. Description
@@ -805,7 +806,7 @@ msgid ""
 "Couldn't retrieve ${SUBST0}. This may be due to a network problem or bad "
 "media, depending on your installation method."
 msgstr ""
-"无法获取 ${SUBST0}。根据您所使用的安装方式，造成此问题的原因可能是网络故障或"
+"无法接收 ${SUBST0}。根据您所使用的安装方式，造成此问题的原因可能是网络故障或"
 "介质受损。"
 
 #. Type: error
@@ -818,8 +819,8 @@ msgid ""
 "If you are installing from CD-R or CD-RW, burning the CD at a lower speed "
 "may help."
 msgstr ""
-"如果您是用 CD-R 或 CD-RW 进行安装，请尝试使用较低的速度来刻录光盘，这可能会对"
-"您有所帮助。"
+"如果您是用 CD-R 或 CD-RW 进行安装，使用更低的速度来刻录光盘有可能会解决此问"
+"题。"
 
 #. Type: error
 #. Description
@@ -889,8 +890,8 @@ msgid ""
 "might ask you. Only questions with a certain priority or higher are actually "
 "shown to you; all less important questions are skipped."
 msgstr ""
-"用 debconf 进行设置的软件包将按照优先级次序来安排问题。只有等于或高于指定优先"
-"级的问题才会被提出；其他不太重要的问题将被忽略。"
+"使用 debconf 进行配置的软件包给可能要询问的问题定义了优先级。只有等于或高于指"
+"定优先级的问题才会被提出；其他不太重要的问题将被忽略。"
 
 #. Type: select
 #. Description
@@ -905,11 +906,13 @@ msgid ""
 " - 'low' is for trivial items that have defaults that will work in\n"
 "   the vast majority of cases."
 msgstr ""
-"您可以选择您想回答的问题的最低级别：\n"
-" - “关键”  是指如果没有用户的介入，将可能会破坏系统的项目。\n"
-" - “高”    是指默认值不太合理的项目。\n"
-" - “中”    是指默认值较合理的普通项目。\n"
-" - “低”    是那些在绝大多数情况下都可以使用默认值的琐碎项目。"
+"您可以选择您想回答的问题的最低优先级：\n"
+" - \"关键\"  是指如果没有用户的介入，将可能会破坏系统\n"
+"   的项目。\n"
+" - \"高\"    是指默认值不太合理的项目。\n"
+" - \"中\"    是指默认值较合理的普通项目。\n"
+" - \"低\"    是那些在绝大多数情况下都可以使用默认值的\n"
+"   琐碎项目。"
 
 #. Type: select
 #. Description
@@ -919,8 +922,8 @@ msgid ""
 "For example, this question is of medium priority, and if your priority were "
 "already 'high' or 'critical', you wouldn't see this question."
 msgstr ""
-"例如，如果您目前的优先级已经是“高”或者“关键”，而这个问题的级别是“中”，那么您"
-"就不会看到这个问题。"
+"例如，这个问题的优先级是 \"中\"，如果您目前的优先级已经是 \"高\" 或者 \"关键"
+"\"，那么您就不会看到这个问题。"
 
 #. Type: text
 #. Description
@@ -946,7 +949,7 @@ msgid ""
 "that receives many of the new versions from unstable if they are not too "
 "buggy."
 msgstr ""
-"Debian 同时存在多个版本。稳定版 (stable) 是经过大量测试，很少更动的版本。不稳"
+"Debian 同时存在多个版本。稳定版 (stable) 是经过大量测试，很少变动的版本。不稳"
 "定版 (unstable) 是未经测试，变动非常频繁的版本。测试版 (testing) 则是介于两者"
 "之间的版本，它通常会从不稳定版中接收一些没太多问题的新版软件。"
 
@@ -955,14 +958,14 @@ msgstr ""
 #. :sl2:
 #: ../choose-mirror-bin.templates-in:3001
 msgid "Only flavors available on the selected mirror are listed."
-msgstr "只列出选中的镜像上可用的版本。"
+msgstr "只会列出选择的镜像站点上可用的版本。"
 
 #. Type: boolean
 #. Description
 #. :sl2:
 #: ../choose-mirror-bin.templates-in:7001
 msgid "Go back and try a different mirror?"
-msgstr "返回并尝试另一个镜像？"
+msgstr "返回并尝试另一个镜像站点？"
 
 #. Type: boolean
 #. Description
@@ -974,15 +977,16 @@ msgid ""
 "release for your installation, but normally you should go back and select a "
 "different mirror that does support the correct version."
 msgstr ""
-"选择的镜像上，指定的 (默认的) Debian 版本 (${RELEASE}) 不可用。可以继续并为您"
-"的安装选择另一个版本，但通常您应当返回，并选择另一个支持正确的版本的镜像。"
+"指定的 (默认的) Debian 版本 (${RELEASE}) 在选择的镜像站点上不可用。可以继续并"
+"选择另一个版本进行安装，但通常您应当返回，并选择另一个支持正确的版本的镜像站"
+"点。"
 
 #. Type: error
 #. Description
 #. :sl2:
 #: ../choose-mirror-bin.templates-in:8001
 msgid "Bad archive mirror"
-msgstr "无效的仓库镜像"
+msgstr "无效的仓库镜像站点"
 
 #. Type: error
 #. Description
@@ -991,7 +995,7 @@ msgstr "无效的仓库镜像"
 msgid ""
 "An error has been detected while trying to use the specified Debian archive "
 "mirror."
-msgstr "尝试使用指定的 Debian 仓库镜像时探测到错误。"
+msgstr "尝试使用指定的 Debian 仓库镜像站点时探测到错误。"
 
 #. Type: error
 #. Description
@@ -1003,9 +1007,9 @@ msgid ""
 "broken (for example because an invalid Release file was found); mirror does "
 "not support the correct Debian version."
 msgstr ""
-"此错误可能的原因是：指定了错误的镜像；镜像不可用 (可能是因为不可靠的网络连"
-"接)；镜像损坏 (例如，因为找到了无效的 Release 文件)；镜像不支持当前的 Debian "
-"版本。"
+"此错误可能的原因是：指定了错误的镜像站点；镜像站点不可用 (可能是因为不可靠的"
+"网络连接)；镜像站点损坏 (例如，因为找到了无效的 Release 文件)；镜像站点不支持"
+"正确的 Debian 版本。"
 
 #. Type: error
 #. Description
@@ -1021,7 +1025,7 @@ msgstr "更多的细节可以在 /var/log/syslog 或第 4 虚拟控制台找到�
 #. :sl2:
 #: ../choose-mirror-bin.templates-in:8001
 msgid "Please check the specified mirror or try a different one."
-msgstr "请检查指定的镜像，或者换一个试试。"
+msgstr "请检查您指定的镜像站点，或者换一个试试。"
 
 #. Type: text
 #. Description
@@ -1057,7 +1061,7 @@ msgstr "不稳定版"
 #: ../choose-mirror-bin.templates.http-in:5001
 #: ../choose-mirror-bin.templates.ftp.base-in:3001
 msgid "Debian archive mirror directory:"
-msgstr "Debian 仓库镜像目录："
+msgstr "Debian 仓库镜像站点目录："
 
 #. Type: string
 #. Description
@@ -1067,7 +1071,7 @@ msgstr "Debian 仓库镜像目录："
 msgid ""
 "Please enter the directory in which the mirror of the Debian archive is "
 "located."
-msgstr "请输入 Debian 仓库镜像所在的目录。"
+msgstr "请输入 Debian 仓库镜像站点所在的目录。"
 
 #. Type: string
 #. Description
@@ -1129,15 +1133,15 @@ msgid ""
 "Please select the protocol to be used for downloading files. If unsure, "
 "select \"http\"; it is less prone to problems involving firewalls."
 msgstr ""
-"请选择下载文件时使用的协议。如果不确定，请选择“http”。即使有防火墙，它一般也"
-"不会出错。"
+"请选择下载文件时使用的协议。如果不确定，请选择 \"http\"。即使有防火墙，它一般"
+"也不会出错。"
 
 #. Type: select
 #. Description
 #. :sl2:
 #: ../keyboard-configuration.templates:4001
 msgid "Keyboard model:"
-msgstr "键盘类型："
+msgstr "键盘型号："
 
 #. Type: select
 #. Description
@@ -1183,15 +1187,15 @@ msgid ""
 "Latin mode."
 msgstr ""
 "当键盘在国家模式下且您就想输入几个拉丁字母时，可能临时转换为拉丁模式会比较方"
-"便。只要按着所选择的切换键，键盘会保持在该模式下。该键在键盘处于拉丁模式下时"
-"也可用来输入国家字符。"
+"便。只要按着所选择的切换键，键盘就会保持在该模式下。该键也可以在键盘处于拉丁"
+"模式下时用于输入国家字符。"
 
 #. Type: select
 #. Description
 #. :sl2:
 #: ../keyboard-configuration.templates:12002
 msgid "You can disable this feature by choosing \"No temporary switch\"."
-msgstr "您可以选择“无临时切换键”来禁用此功能。"
+msgstr "您可以选择 \"无临时切换键\" 来禁用此功能。"
 
 #. Type: select
 #. Choices
@@ -1238,9 +1242,9 @@ msgid ""
 "layout, such as foreign currency symbols and accented letters. These are "
 "often printed as an extra symbol on keys."
 msgstr ""
-"在一些键盘布局中，AltGr 是用来输入某些字符的转换键，主要用来输入当前键盘布局"
-"很少使用到的字符，比如外语中的货币符号和口音字母。这些字符通常会作为额外符号"
-"印在键上。"
+"在一些键盘布局中，AltGr 是用来输入某些字符的修饰键，主要用来输入当前键盘布局"
+"的语言中很少使用到的字符，比如外国的货币符号和重音字母。这些字符通常会作为额"
+"外符号印在按键上。"
 
 #. Type: select
 #. Choices
@@ -1301,7 +1305,7 @@ msgstr "从可移动介质中加载驱动程序？"
 #. :sl2:
 #: ../cdrom-detect.templates:1001
 msgid "No device for installation media was detected."
-msgstr "没有探测到安装媒体对应的设备。"
+msgstr "没有探测到安装介质对应的设备。"
 
 #. Type: boolean
 #. Description
@@ -1313,23 +1317,23 @@ msgid ""
 "media, and continue. Otherwise, you will be given the option to manually "
 "select some modules."
 msgstr ""
-"您可能需要从可移动介质中加载额外的驱动模块，例如驱动软盘或者 U 盘。如果您已经"
-"拥有这样的介质，请将其插入，然后继续安装进程。否则，将给您一个选项用以手动选"
-"择某些模块。"
+"您可能需要从可移动介质 (例如驱动软盘或者 U 盘) 中加载额外的驱动模块。如果您已"
+"经拥有这样的介质，请将其插入，然后继续安装进程。否则，您可以手动选择某些模"
+"块。"
 
 #. Type: boolean
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:3001
 msgid "Manually select a module and device for installation media?"
-msgstr "手动选择用于安装媒体的模块和设备吗？"
+msgstr "手动选择安装介质所需的模块和对应的设备吗？"
 
 #. Type: boolean
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:3001
 msgid "No device for installation media (like a CD-ROM device) was detected."
-msgstr "没有探测到用于安装媒体的设备（例如光盘驱动器）。"
+msgstr "没有探测到含有安装介质的设备（例如光盘驱动器）。"
 
 #. Type: boolean
 #. Description
@@ -1341,9 +1345,9 @@ msgid ""
 "don't know which module and device are needed, look for some documentation "
 "or try a network installation."
 msgstr ""
-"您的光盘驱动器是老式的三菱或者其他非 IDE、非 SCSI 的型号。请您手动选择将要使"
-"用的设备及其驱动模块。如果您不知道应该用哪一个，请查找相关文档资料，或者使用"
-"网络安装。"
+"如果您的光盘驱动器是老式的三菱或者其他非 IDE、非 SCSI 的型号，请您手动选择将"
+"要使用的设备及其驱动模块。如果您不知道应该使用哪一个，请查找相关文档资料，或"
+"者尝试使用网络安装。"
 
 #. Type: boolean
 #. Description
@@ -1361,8 +1365,8 @@ msgid ""
 "this probably means that the disk was not in the drive. If so you can insert "
 "it and try again."
 msgstr ""
-"无法挂载安装介质。从 CD-ROM 安装时，这可能意味着光盘不在驱动器中。如果是这样"
-"请您插入并重试。"
+"无法挂载安装介质。如果您是从 CD-ROM 安装的，这可能意味着光盘不在驱动器中。如"
+"果确实如此，请您插入光盘并重试。"
 
 #. Type: select
 #. Description
@@ -1380,8 +1384,8 @@ msgid ""
 "installing from CD-ROM and you have an unusual CD-ROM drive (that is neither "
 "IDE nor SCSI), you can try to load a specific module."
 msgstr ""
-"自动检测找不到用于安装介质的驱动器。如果使用 CD-ROM 安装且您的光盘驱动器十分"
-"特殊 (既非 IDE 也非 SCSI)，请尝试加载特定的驱动模块。"
+"自动检测无法找到含有安装介质的驱动器。如果您使用 CD-ROM 安装，且您的光盘驱动"
+"器十分特殊 (既非 IDE 也非 SCSI)，请尝试加载特定的驱动模块。"
 
 #. Type: string
 #. Description
@@ -1400,7 +1404,7 @@ msgid ""
 "standard device files (such as /dev/mcdx)."
 msgstr ""
 "为了能使用您的安装介质 (比如 CD-ROM)，请输入相应的设备文件名。非标准的光盘驱"
-"动器会使用非标准的设备名 (例如 /dev/mcdx)。"
+"动器会使用非标准的设备文件名 (例如 /dev/mcdx)。"
 
 #. Type: string
 #. Description
@@ -1411,8 +1415,8 @@ msgid ""
 "available devices in /dev with \"ls /dev\". You can return to this screen by "
 "pressing ALT+F1."
 msgstr ""
-"您可以通过切换到第二个终端 (ALT+F2) 的 shell 中并使用“ls /dev”命令来查看 /"
-"dev 目录下所有可用的设备文件名。按 ALT+F1 可返回本屏。"
+"您可以切换到第二个终端 (ALT+F2) 的 shell 并使用 \"ls /dev\" 命令来查看 /dev "
+"目录下所有可用的设备文件名。按 ALT+F1 可返回本屏。"
 
 #. Type: note
 #. Description
@@ -1428,21 +1432,22 @@ msgstr "探测到安装介质"
 msgid ""
 "Autodetection of the installation media was successful. A drive has been "
 "found that contains '${cdname}'. The installation will now continue."
-msgstr "安装介质探测成功。发现了一个包含 ${cdname} 驱动器。安装进程将继续。"
+msgstr ""
+"自动探测安装介质成功。发现了一个包含 \"${cdname}\" 的驱动器。安装进程将继续。"
 
 #. Type: error
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:14001
 msgid "Incorrect installation media detected"
-msgstr "检测到不正确的安装介质"
+msgstr "探测到不正确的安装介质"
 
 #. Type: error
 #. Description
 #. :sl2:
 #: ../cdrom-detect.templates:14001
 msgid "The detected media cannot be used for installation."
-msgstr "检测到的介质无法用于安装。"
+msgstr "探测到的介质无法用于安装。"
 
 #. Type: error
 #. Description
@@ -1467,7 +1472,7 @@ msgstr "读取 Release 文件出错"
 msgid ""
 "The installation media do not seem to contain a valid 'Release' file, or "
 "that file could not be read correctly."
-msgstr "此安装介质并未包括有效的“Release”文件，或者该文件无法被正确地读取。"
+msgstr "此安装介质未包含有效的 \"Release\" 文件，或者该文件无法正确读取。"
 
 #. Type: error
 #. Description
@@ -1478,8 +1483,8 @@ msgid ""
 "You may try to repeat the media detection, but even if it does succeed the "
 "second time, you may experience problems later in the installation."
 msgstr ""
-"您可以再次尝试探测安装介质，但是即使能够成功探测到安装介质，依然可能在稍后的"
-"安装过程中遇到问题。"
+"您可以再次尝试探测安装介质，但是即使能够成功探测到安装介质，您仍然可能在稍后"
+"的安装过程中遇到问题。"
 
 #. Type: text
 #. Description
@@ -1488,14 +1493,14 @@ msgstr ""
 #. :sl2:
 #: ../cdrom-detect.templates:20001
 msgid "Detect and mount installation media"
-msgstr "检测并挂载安装介质"
+msgstr "探测并挂载安装介质"
 
 #. Type: boolean
 #. Description
 #. :sl2:
 #: ../cdrom-retriever.templates:1001
 msgid "Failed to copy file from installation media. Retry?"
-msgstr "无法从安装介质上拷贝文件。要重试吗？"
+msgstr "无法从安装介质中复制文件。要重试吗？"
 
 #. Type: boolean
 #. Description
@@ -1507,8 +1512,8 @@ msgid ""
 "the integrity of your installation media (there is an associated entry in "
 "the main menu for that)."
 msgstr ""
-"读取数据出错。请确认您已经插入了正确的安装介质。如果重试以后还是无法工作，请"
-"检查安装介质的完整性 (在主菜单中有一个相关的条目)。"
+"读取数据出错。请确认您已经插入了正确的安装介质。如果重试之后仍然失败，请检查"
+"安装介质的完整性 (在主菜单中有一个相关的条目)。"
 
 #. Type: boolean
 #. Description
@@ -1525,8 +1530,8 @@ msgid ""
 "The Network Time Protocol (NTP) can be used to set the system's clock. Your "
 "system works best with a correctly set clock."
 msgstr ""
-"您可以通过网络时间协议 (NTP) 来设置系统时钟。您的系统在正确设置时钟的情况下将"
-"工作得最好。"
+"您可以通过网络时间协议 (NTP) 来设置系统时钟。正确设置时钟能让您的系统处于最佳"
+"工作状态。"
 
 #. Type: string
 #. Description
@@ -1543,8 +1548,8 @@ msgid ""
 "The default NTP server is almost always a good choice, but if you prefer to "
 "use another NTP server, you can enter it here."
 msgstr ""
-"默认的 NTP 服务器一般来说总是个不错的选择，但是如果您愿意使用另外的 NTP 服务"
-"器，可以在这里输入。"
+"默认的 NTP 服务器在绝大多数情况下都是个不错的选择，但是如果您愿意使用另外的 "
+"NTP 服务器，可以在这里输入。"
 
 #. Type: boolean
 #. Description
@@ -1562,8 +1567,8 @@ msgid ""
 "program used to set the clock may have problems talking to the hardware "
 "clock."
 msgstr ""
-"设置硬件时钟所用时已超出预计的时间。用来设定时钟的“hwclock”程序可能和硬件时钟"
-"对话有问题。"
+"设置硬件时钟所用的时间比预计的要长。用来设定时钟的 \"hwclock\" 程序和硬件时钟"
+"之间的通信可能存在问题。"
 
 #. Type: boolean
 #. Description
@@ -1573,8 +1578,7 @@ msgid ""
 "If you choose to not wait for hwclock to finish setting the clock, this "
 "system's clock may not be set correctly."
 msgstr ""
-"如果您选择不等待 hwclock 完成设置时钟的任务，这个系统的时钟可能被设成错误的时"
-"间。"
+"如果您选择不等待 hwclock 完成设置时钟的任务，这个系统的时钟设置可能会不正确。"
 
 #. Type: note
 #. Description
@@ -1591,7 +1595,7 @@ msgstr "交互式 shell"
 #. :sl2:
 #: ../di-utils-shell.templates:1001
 msgid "After this message, you will be running \"ash\", a Bourne-shell clone."
-msgstr "在这条信息之后，您将进入“ash”，它是一个 Bourne-shell 的克隆。"
+msgstr "在这条信息之后，您将进入 \"ash\"，它是一个 Bourne-shell 的克隆。"
 
 #. Type: note
 #. Description
@@ -1603,15 +1607,16 @@ msgid ""
 "easy to figure out. To get an idea of what Unix utilities are available to "
 "you, use the \"help\" command."
 msgstr ""
-"根文件系统是一个 RAM 盘。硬盘文件系统被挂载到“/target”上。可用的编辑器是 "
-"nano。它小巧而且易用。如需要了解其他的 Unix 实用工具，请使用“help”命令。"
+"根文件系统是一个内存盘 (RAM disk)。硬盘文件系统被挂载到 \"/target\" 上。可用"
+"的编辑器是 nano。它小巧而且易用。如需要了解有哪些 Unix 实用工具可用，请使用 "
+"\"help\" 命令。"
 
 #. Type: note
 #. Description
 #. :sl2:
 #: ../di-utils-shell.templates:1001
 msgid "Use the \"exit\" command to return to the installation menu."
-msgstr "使用“exit”命令返回到安装菜单。"
+msgstr "使用 \"exit\" 命令返回到安装菜单。"
 
 #. Type: text
 #. Description
@@ -1664,7 +1669,7 @@ msgstr ""
 msgid ""
 "It should be available after reaching the \"Loading additional components\" "
 "installation step."
-msgstr "它应该会在安装步骤到达“加载附加组件”后可用。"
+msgstr "它应该会在安装步骤到达 \"加载额外组件\" 后可用。"
 
 #. Type: text
 #. Description
@@ -1673,8 +1678,7 @@ msgstr "它应该会在安装步骤到达“加载附加组件”后可用。"
 msgid ""
 "Alternatively, you can open a shell by pressing Ctrl+Alt+F2. Use Alt+F5 to "
 "get back to the installer."
-msgstr ""
-"或者，您可以同时按下 Ctrl+Alt+F2 打开 shell。使用 Alt+F5 以回到安装程序。"
+msgstr "或者，您可以按下 Ctrl+Alt+F2 打开 shell。使用 Alt+F5 以回到安装程序。"
 
 #. Type: error
 #. Description
@@ -1713,9 +1717,9 @@ msgid ""
 "GRUB to your primary drive (UEFI partition/boot record). You may instead "
 "install GRUB to a different drive (or partition), or to removable media."
 msgstr ""
-"您需要通过将 GRUB 启动引导器安装到可启动设备上以使新安装的系统能够启动。通常"
-"的做法是将 GRUB 安装到您的主驱动器上（UEFI 分区/引导记录）。您也可以将 GRUB "
-"安装到其它驱动器（或分区）上，也可以安装到可移除介质上。"
+"您需要将 GRUB 启动引导器安装到可启动的设备上，以使新安装的系统能够启动。通常"
+"的做法是将 GRUB 安装到您的主驱动器 (UEFI 分区或引导记录) 上。您也可以将 GRUB "
+"安装到其它驱动器（或分区）上，也可以安装到可移动介质上。"
 
 #. Type: string
 #. Description
@@ -1732,12 +1736,12 @@ msgid ""
 "   be a thumbdrive);\n"
 " - \"/dev/fd0\" will install GRUB to a floppy."
 msgstr ""
-"设备应该以 /dev 目录下的设备名称的方式指定。举例如下：\n"
-" - “/dev/sda”将会把 GRUB 安装到您的主驱动器上\n"
-"   UEFI 分区/引导记录）；\n"
-" - “/dev/sdb”将会把 GRUB 安装到某个次要驱动器上（例如，可能是\n"
-"   U 盘等存储设备）；\n"
-" - “/dev/fd0”将会把 GRUB 安装到软盘上。"
+"设备应该用 /dev 目录下的设备文件名进行表示。举例如下：\n"
+" - \"/dev/sda\" 将会把 GRUB 安装到您的主驱动器 (UEFI 分区\n"
+"   或引导记录) 上；\n"
+" - \"/dev/sdb\" 将会把 GRUB 安装到某个次要驱动器 (如\n"
+"   U 盘) 上；\n"
+" - \"/dev/fd0\" 将会把 GRUB 安装到软盘上。"
 
 #. Type: password
 #. Description
@@ -1758,10 +1762,10 @@ msgid ""
 "GRUB command-line interface. By default, any user will still be able to "
 "start any menu entry without entering the password."
 msgstr ""
-"GRUB 启动引导器提供了很多强大的交互特性。如果未被授权的用户在其启动过程中对机"
-"器进行操作，该引导器也可被用来入侵您的系统。为了防止这种攻击，您可以为编辑菜"
-"单项和 GRUB 命令行界面输入功能设定一个密码。默认情况下，所有用户依然能够启动"
-"任意菜单项，而无需输入该密码。"
+"GRUB 启动引导器提供了很多强大的交互特性。如果某个未授权的用户在机器启动过程中"
+"可以接触机器，则他可以使用该引导器入侵您的系统。为了防止这种攻击，您可以指定"
+"一个密码，在编辑菜单项或进入 GRUB 命令行界面之前，需要输入该密码。默认情况"
+"下，所有用户依然能够启动任意菜单项，而无需输入该密码。"
 
 #. Type: password
 #. Description
@@ -1808,8 +1812,8 @@ msgid ""
 "The '${GRUB}' package failed to install into /target/. Without the GRUB boot "
 "loader, the installed system will not boot."
 msgstr ""
-"无法将 ${GRUB} 软件包安装到 /target/ 中。如果没有 GRUB 启动引导器，所安装的系"
-"统将无法启动。"
+"无法将 \"${GRUB}\" 软件包安装到 /target/ 中。如果没有 GRUB 启动引导器，所安装"
+"的系统将无法启动。"
 
 #. Type: error
 #. Description
@@ -1823,7 +1827,7 @@ msgstr "无法将 GRUB 安装到 ${BOOTDEV}"
 #. :sl2:
 #: ../grub-installer.templates:14001
 msgid "Executing 'grub-install ${BOOTDEV}' failed."
-msgstr "执行 'grub-install ${BOOTDEV}' 失败。"
+msgstr "执行 \"grub-install ${BOOTDEV}\" 失败。"
 
 #. Type: error
 #. Description
@@ -1840,7 +1844,7 @@ msgstr "这是一个致命错误。"
 #. :sl2:
 #: ../grub-installer.templates:15001
 msgid "Executing 'update-grub' failed."
-msgstr "执行 'update-grub' 失败。"
+msgstr "执行 \"update-grub\" 失败。"
 
 #. Type: text
 #. Description
@@ -1878,7 +1882,7 @@ msgstr "以上都不是"
 #. :sl2:
 #: ../ethdetect.templates:1002
 msgid "Driver needed by your Ethernet card:"
-msgstr "您的以太网卡所需的驱动模块："
+msgstr "您的以太网卡所需的驱动程序："
 
 #. Type: select
 #. Description
@@ -1909,7 +1913,7 @@ msgstr "未在系统中找到以太网卡。"
 #. :sl2:
 #: ../disk-detect.templates:3001
 msgid "continue with no disk drive"
-msgstr "在无磁盘驱动器情况下继续"
+msgstr "在无磁盘驱动器的情况下继续"
 
 #. Type: select
 #. Description
@@ -1954,7 +1958,7 @@ msgstr "请您检查这台计算机是否接有硬盘。"
 #. :sl2:
 #: ../hw-detect.templates:5001
 msgid "Modules to load:"
-msgstr "要装载的模块："
+msgstr "要加载的模块："
 
 #. Type: multiselect
 #. Description
@@ -1965,8 +1969,8 @@ msgid ""
 "If you know some are unnecessary, or cause problems, you can choose not to "
 "load them. If you're unsure, you should leave them all selected."
 msgstr ""
-"探测到以下和您的硬件相匹配的 Linux 内核模块。如果您知道其中一些是不必要的，或"
-"者会导致问题，您可以选择不装载它们。如果您不确定，请保留选择所有模块。"
+"探测到以下和您的硬件相匹配的 Linux 内核模块。如果您知道其中一些是不需要的，或"
+"者会导致问题，您可以选择不加载它们。如果您不确定，请保持所有模块为选中状态。"
 
 #. Type: boolean
 #. Description
@@ -2006,24 +2010,24 @@ msgid ""
 "options will be added to /etc/pcmciautils/config.opts. See the installation "
 "manual or the PCMCIA HOWTO for more information."
 msgstr ""
-"某些 PCMCIA 硬件需要使用特殊的资源配置选项以正常工作，否则会导致计算机冻结。"
-"例如，部分 Dell 笔记本就需要在这里设定“exclude port 0x800-0x8ff”。这些选项将"
-"会被添加到 /etc/pcmciautils/config.opts 中。请阅读安装手册或 PCMCIA HOWTO 以"
-"获得更多相关信息。"
+"某些 PCMCIA 硬件需要使用特殊的资源配置选项才能正常工作，否则可能导致计算机死"
+"机。例如，部分 Dell 笔记本就需要在这里设置 \"exclude port 0x800-0x8ff\"。这些"
+"选项将会被添加到 /etc/pcmciautils/config.opts 中。请阅读安装手册或 PCMCIA "
+"HOWTO 以获得更多相关信息。"
 
 #. Type: string
 #. Description
 #. :sl2:
 #: ../hw-detect.templates:7001
 msgid "For most hardware, you do not need to specify anything here."
-msgstr "对于大多数硬件，您并不需要在此设定任何数值。"
+msgstr "对于大多数硬件，您并不需要在这里设置任何内容。"
 
 #. Type: error
 #. Description
 #. :sl2:
 #: ../hw-detect.templates:9001
 msgid "Error while running '${CMD_LINE_PARAM}'"
-msgstr "运行“${CMD_LINE_PARAM}”过程中发生错误"
+msgstr "运行 \"${CMD_LINE_PARAM}\" 时发生错误"
 
 #. Type: boolean
 #. Description
@@ -2040,8 +2044,8 @@ msgid ""
 "A driver for your hardware is not available. You may need to load drivers "
 "from removable media, such as a USB stick, or driver floppy."
 msgstr ""
-"没有适合您的硬件的驱动程序。您可能需要从可移动介质加载驱动程序，比如 U 盘，或"
-"者驱动软盘。"
+"您的硬件需要的某个驱动程序不可用。您可能需要从可移动介质加载驱动程序，比如 U "
+"盘，或者驱动软盘。"
 
 #. Type: boolean
 #. Description
@@ -2068,8 +2072,8 @@ msgid ""
 "Some of your hardware needs non-free firmware files to operate. The firmware "
 "can be loaded from removable media, such as a USB stick or floppy."
 msgstr ""
-"您的一些硬件需要非自由固件文件才能运转。固件可以从可移动介质加载，比如 U 盘或"
-"者软盘。"
+"您的一些硬件需要非自由固件文件才能正常运行。固件可以从可移动介质加载，比如 U "
+"盘或者软盘。"
 
 #. Type: boolean
 #. Description
@@ -2083,10 +2087,8 @@ msgstr "缺失的固件文件是：${FILES}"
 #. Possible locations for debug logs to be saved
 #. :sl2:
 #: ../save-logs.templates:2001
-#, fuzzy
-#| msgid "Wireless network:"
 msgid "serve over network"
-msgstr "无线网络："
+msgstr "通过网络服务提供"
 
 #. Type: select
 #. Choices
@@ -2109,24 +2111,21 @@ msgstr "软盘"
 #. :sl2:
 #: ../save-logs.templates:2002
 msgid "How should the debug logs be saved or transferred?"
-msgstr "如何保存或传送调试日志？"
+msgstr "您想要如何保存或发送调试日志？"
 
 #. Type: select
 #. Description
 #. :sl2:
 #: ../save-logs.templates:2002
-#, fuzzy
-#| msgid ""
-#| "Debugging log files for the installer can be saved to floppy, served up "
-#| "over the web, or saved to a mounted file system."
 msgid ""
 "Debugging log files for the installer are accessible in /var/log/. They can "
 "be served up over the network (a small webserver is started on this machine, "
 "to achieve that), saved to some mounted file system (like the one on a USB "
 "stick), or to a floppy."
 msgstr ""
-"安装程序的调试日志文件可以存储于软盘或者 web 服务器上，也可以保存在已挂载的文"
-"件系统中。"
+"安装程序的调试日志文件可以在 /var/log 中访问，也可以通过网络服务提供（通过在"
+"此机器上启动一个小型的 Web 服务器来实现）、保存到已挂载的文件系统中（比如 U "
+"盘），或者保存到软盘上。"
 
 #. Type: string
 #. Description
@@ -2142,7 +2141,7 @@ msgstr "要保存调试日志的目录："
 msgid ""
 "Please make sure the file system you want to save debug logs on is mounted "
 "before you continue."
-msgstr "请确保在继续之前您想要用于保存调试日志的文件系统已经被挂载。"
+msgstr "请确认您想要用于保存调试日志的文件系统已经被挂载，然后再继续。"
 
 #. Type: error
 #. Description
@@ -2156,7 +2155,7 @@ msgstr "无法保存日志"
 #. :sl2:
 #: ../save-logs.templates:4001
 msgid "The directory \"${DIR}\" does not exist."
-msgstr "目录“${DIR}”不存在。"
+msgstr "目录 \"${DIR}\" 不存在。"
 
 #. Type: note
 #. Description
@@ -2179,7 +2178,7 @@ msgstr "日志文件和调试信息将被复制到这张软盘上。"
 msgid ""
 "The information will also be stored in /var/log/installer/ on the installed "
 "system."
-msgstr "这些信息也将被存储到系统的 /var/log/installer/ 目录中。"
+msgstr "这些信息也将被存储到已安装的系统的 /var/log/installer/ 目录中。"
 
 #. Type: text
 #. Description
@@ -2195,21 +2194,21 @@ msgstr "从安装程序 ISO 中加载安装程序的组件"
 #. :sl2:
 #: ../localechooser.templates-in:4001
 msgid "System locale:"
-msgstr "系统区域 (locale)："
+msgstr "系统区域设置："
 
 #. Type: select
 #. Description
 #. :sl2:
 #: ../localechooser.templates-in:4001
 msgid "Select the default locale for the installed system."
-msgstr "为已安装的系统选择默认区域。"
+msgstr "为将要安装的系统选择默认区域设置。"
 
 #. Type: multiselect
 #. Description
 #. :sl2:
 #: ../localechooser.templates-in:32001
 msgid "Additional locales:"
-msgstr "附加区域："
+msgstr "额外的区域设置："
 
 #. Type: multiselect
 #. Description
@@ -2218,7 +2217,8 @@ msgstr "附加区域："
 msgid ""
 "Based on your previous choices, the default locale currently selected for "
 "the installed system is '${LOCALE}'."
-msgstr "根据前面的选择，在系统安装完成后，它的默认区域将为“${LOCALE}”。"
+msgstr ""
+"根据您之前的选择，在系统安装完成后，它的默认区域设置将为 \"${LOCALE}\"。"
 
 #. Type: multiselect
 #. Description
@@ -2229,15 +2229,15 @@ msgid ""
 "available, you may choose additional locales to be installed. If you are "
 "unsure it is best to just use the selected default."
 msgstr ""
-"如果您希望使用一个其他默认区域或者也想使其他某些区域可用，您可以选择要安装的"
-"附加区域。如果有疑问，最好就使用选中的默认值。"
+"如果您希望使用另一个默认区域设置，或者想使其他一些区域设置可用，您可以选择要"
+"安装的额外的区域设置。如果您不确定，最好就使用选中的默认值。"
 
 #. Type: note
 #. Description
 #. :sl2:
 #: ../localechooser.templates-in:34001
 msgid "locale"
-msgstr "区域和语言"
+msgstr "区域设置"
 
 #. Type: note
 #. Description
@@ -2246,7 +2246,7 @@ msgstr "区域和语言"
 msgid ""
 "A locale determines character encoding and contains information on for "
 "example currency, date format and alphabetical sort order."
-msgstr "区域决定字符编码还包含，比如货币、数据格式和字符排序顺序等的信息。"
+msgstr "区域设置决定字符编码，还包含如货币、日期格式和字母排序顺序等信息。"
 
 #. Type: error
 #. Description
@@ -2280,7 +2280,7 @@ msgstr "请选择一个安装步骤："
 msgid ""
 "This installation step depends on one or more other steps that have not yet "
 "been performed."
-msgstr "此安装步骤依赖于另外的一个或多个尚未进行的步骤。"
+msgstr "此安装步骤依赖于一个或多个尚未进行的步骤。"
 
 #. Type: text
 #. Description
@@ -2305,7 +2305,7 @@ msgid ""
 "that the right media is present. If you continue to have trouble, your "
 "removable media might be bad."
 msgstr ""
-"从可移动介质上读取数据出错。请确定存在正确的介质。如果您持续遇到错误，也许是"
+"从可移动介质上读取数据出错。请确定存在正确的介质。如果您反复遇到错误，也许是"
 "您的可移动介质已经损坏。"
 
 #. Type: boolean
@@ -2324,8 +2324,8 @@ msgid ""
 "with the installation. If you know that the install will work without extra "
 "drivers, you can skip this step."
 msgstr ""
-"在继续安装之前，您可能需要从可移动介质中加载一些驱动程序。如果安装过程不需要"
-"其他驱动程序，可以跳过这一步。"
+"在继续安装之前，您可能需要从可移动介质中加载一些驱动程序。如果您确定安装过程"
+"中不需要其他驱动程序，可以跳过这一步。"
 
 #. Type: boolean
 #. Description
@@ -2336,7 +2336,7 @@ msgid ""
 "as a driver floppy or USB stick before continuing."
 msgstr ""
 "如果您确实需要加载驱动程序，请在选择继续之前插入相应的可移动介质，比如驱动软"
-"盘或者 USB 棒。"
+"盘或者 U 盘。"
 
 #. Type: text
 #. Description
@@ -2352,7 +2352,7 @@ msgstr "从可移动介质中加载驱动程序"
 #. :sl2:
 #: ../load-media.templates:3001
 msgid "Unknown removable media. Try to load anyway?"
-msgstr "未知的可移动介质。仍然试图加载吗？"
+msgstr "未知的可移动介质。仍然尝试加载吗？"
 
 #. Type: boolean
 #. Description
@@ -2363,15 +2363,15 @@ msgid ""
 "that the correct media is inserted. You can still continue if you have an "
 "unofficial removable media you want to use."
 msgstr ""
-"检测到的可移动介质不是已知的驱动介质。请确定驱动器中所插入的是正确的介质。如"
-"果您是要使用非官方的可移动介质，那么您仍可以继续。"
+"检测到的可移动介质不是已知的驱动程序介质。请确认已经插入了正确的介质。如果您"
+"打算使用非官方的可移动介质，那么您可以继续安装。"
 
 #. Type: text
 #. Description
 #. :sl2:
 #: ../load-media.templates:4001
 msgid "Please insert ${DISK_LABEL} ('${DISK_NAME}') first."
-msgstr "请首先插入 ${DISK_LABEL} (“${DISK_NAME}”)。"
+msgstr "请首先插入 ${DISK_LABEL} (\"${DISK_NAME}\")。"
 
 #. Type: text
 #. Description
@@ -2398,8 +2398,8 @@ msgid ""
 "appropriate removable media, such as a driver floppy or USB stick before "
 "continuing."
 msgstr ""
-"如果您要从另一张可移动介质里加载其他驱动程序，请在选择继续之前插入相应的可移"
-"动介质，比如驱动软盘或者 USB 棒。"
+"如果您想要从另一个可移动介质里加载额外的驱动程序，请在选择继续之前插入相应的"
+"可移动介质，比如驱动软盘或者 U 盘。"
 
 #. Type: string
 #. Description
@@ -2442,8 +2442,8 @@ msgid ""
 "Choose WEP/Open if the network is open or secured with WEP. Choose WPA/WPA2 "
 "if the network is protected with WPA/WPA2 PSK (Pre-Shared Key)."
 msgstr ""
-"如果网络是开放的或者使用 WEP 加密，请选择 WEP/Open。如果是由 WPA/WPA2 PSK (预"
-"共享密钥) 保护，选择 WPA/WPA2。"
+"如果网络是开放的或者使用 WEP 加密，请选择 WEP/开放。如果是由 WPA/WPA2 PSK (预"
+"共享密钥) 保护，请选择 WPA/WPA2。"
 
 #. Type: string
 #. Description
@@ -2471,8 +2471,8 @@ msgid ""
 "If your WEP key is in the format 'nnnn-nnnn-nn', 'nn:nn:nn:nn:nn:nn:nn:nn', "
 "or 'nnnnnnnn', where n is a number, just enter it as it is into this field."
 msgstr ""
-"如果您的 WEP 密钥的格式是“nnnn-nnnn-nn”、“nn:nn:nn:nn:nn:nn:nn:"
-"nn”或“nnnnnnnn”(其中的 n 是数字)，请将它直接填写到输入框中。"
+"如果您的 WEP 密钥的格式是 \"nnnn-nnnn-nn\"、\"nn:nn:nn:nn:nn:nn:nn:nn\" 或 "
+"\"nnnnnnnn\" (其中的 n 是数字)，请将它直接填写到输入框中。"
 
 #. Type: string
 #. Description
@@ -2482,7 +2482,7 @@ msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
 msgstr ""
-"如果您的 WEP 密钥的格式是一个密码字符串，请在前面加上“s:”(不包括引号)。"
+"如果您的 WEP 密钥的格式是一个密码字符串，请在前面加上 \"s:\" (不包括引号)。"
 
 #. Type: string
 #. Description
@@ -2508,8 +2508,8 @@ msgid ""
 "The WEP key '${wepkey}' is invalid. Please refer to the instructions on the "
 "next screen carefully on how to enter your WEP key correctly, and try again."
 msgstr ""
-"此 WEP 密钥“${wepkey}”是无效的。请仔细阅读下一屏的指导信息，以了解如何正确地"
-"输入您的 WEP 密钥，并重试。"
+"此 WEP 密钥 \"${wepkey}\" 是无效的。请仔细阅读下一屏的指导信息，以了解如何正"
+"确地输入您的 WEP 密钥，并重试。"
 
 #. Type: error
 #. Description
@@ -2542,7 +2542,7 @@ msgid ""
 "Enter the passphrase for WPA/WPA2 PSK authentication. This should be the "
 "passphrase defined for the wireless network you are trying to use."
 msgstr ""
-"输入用于 WPA/WPA2 PSK 认证的密码。这应该是尝试连接到的无线网络中设置的密码。"
+"输入用于 WPA/WPA2 PSK 认证的密码。这应该是您尝试连接的无线网络中设置的密码。"
 
 #. Type: error
 #. Description
@@ -2559,7 +2559,7 @@ msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to ${max_essid_len} "
 "characters, but may contain all kinds of characters."
 msgstr ""
-"此 ESSID“${essid}”无效。ESSID 最大长度仅能为 ${max_essid_len} 个字符，但可以"
+"此 ESSID \"${essid}\" 无效。ESSID 最大长度为 ${max_essid_len} 个字符，但可以"
 "包含所有类型的字符。"
 
 #. Type: text
@@ -2590,7 +2590,7 @@ msgstr "密钥交换与协商失败"
 msgid ""
 "The exchange of keys and association with the access point failed. Please "
 "check the WPA/WPA2 parameters you provided."
-msgstr "和接入点交换密钥与协商失败。请检查 WPA/WPA2 参数。"
+msgstr "和接入点交换密钥与协商失败。请检查您提供的 WPA/WPA2 参数。"
 
 #. Type: error
 #. Description
@@ -2604,7 +2604,7 @@ msgstr "无效的主机名"
 #. :sl2:
 #: ../netcfg-common.templates:20001
 msgid "The name \"${hostname}\" is invalid."
-msgstr "名称“${hostname}”无效。"
+msgstr "名称 \"${hostname}\" 无效。"
 
 #. Type: error
 #. Description
@@ -2617,7 +2617,7 @@ msgid ""
 "sign."
 msgstr ""
 "正确的主机名应当只包含数字 0-9、大小写字母 (A-Z 和 a-z) 和减号，最长不能超过 "
-"${maxhostnamelen}，且不能以减号开始或结束。"
+"${maxhostnamelen} 个字符，且不能以减号开始或结束。"
 
 #. Type: error
 #. Description
@@ -2633,7 +2633,7 @@ msgstr "错误"
 msgid ""
 "An error occurred and the network configuration process has been aborted. "
 "You may retry it from the installation main menu."
-msgstr "发生错误，网络配置过程已被中止。您可以从安装程序主菜单中重试。"
+msgstr "发生错误，网络配置过程已中止。您可以从安装程序主菜单中重试。"
 
 #. Type: error
 #. Description
@@ -2659,8 +2659,8 @@ msgid ""
 "You may need to load a specific module for your network card, if you have "
 "one. For this, go back to the network hardware detection step."
 msgstr ""
-"如果您的网卡使用其特有的模块，您可能还需要加载它。要完成此任务，请返回到网络"
-"硬件探测步骤。"
+"如果您的网卡使用特定的模块，您可能还需要加载它。要完成此任务，请返回到网络硬"
+"件探测步骤。"
 
 #. Type: note
 #. Description
@@ -2682,8 +2682,8 @@ msgid ""
 "\". If you intend to use this interface, please switch it on before "
 "continuing."
 msgstr ""
-"${iface} 似乎被物理的“禁用开关”所禁用。如果您想要使用此接口，请在继续安装前开"
-"启之。"
+"${iface} 似乎被物理的 \"禁用开关\" 所禁用。如果您想要使用此接口，请在继续安装"
+"前开启它。"
 
 #. Type: select
 #. Choices
@@ -2695,7 +2695,7 @@ msgstr ""
 #. You MUST NOT use commas inside choices
 #: ../netcfg-common.templates:24001
 msgid "Infrastructure (Managed) network"
-msgstr "共用 (Managed) 网络"
+msgstr "Infrastructure (Managed) 网络"
 
 #. Type: select
 #. Choices
@@ -2725,9 +2725,9 @@ msgid ""
 "point of some sort, your network is Managed. If another computer is your "
 "'access point', then your network may be Ad-hoc."
 msgstr ""
-"无线网络可以是客户端 (managed) 或对等式 (ad-hoc) 两种类型。如果您使用了某种实"
+"无线网络可以是受管理 (managed) 或自组织 (ad-hoc) 两种类型。如果您使用了某种实"
 "体装置作为接入点 (access point)，您的网络就是 Managed。如果是以另一台计算机作"
-"为您的“接入点”，那么您的网络就应该是 Ad-hoc。"
+"为您的 \"接入点\"，那么您的网络就应该是 Ad-hoc。"
 
 #. Type: text
 #. Description
@@ -2869,7 +2869,7 @@ msgstr "没有找到 DHCP 客户端程序"
 msgid ""
 "No DHCP client was found. Please make sure, that a DHCP installer component "
 "is installed."
-msgstr "未找到 DHCP 客户端。请再次确认安装器的 DHCP 组件是否存在。"
+msgstr "未找到 DHCP 客户端。请再次确认安装程序的 DHCP 组件是否存在。"
 
 #. Type: error
 #. Description
@@ -2897,7 +2897,7 @@ msgid ""
 "packages available on the local network."
 msgstr ""
 "网络自动配置成功。但是由于未设置默认路由，系统将无法连接互联网上的主机。除非"
-"您拥有一组安装介质中的第一个镜像、“Netinst” 镜像或在本地局域网上存有所需的软"
+"您拥有一组安装介质中的第一个镜像、\"Netinst\" 镜像或在本地网络上存有所需的软"
 "件包，否则将无法继续进行安装。"
 
 #. Type: boolean
@@ -2908,8 +2908,8 @@ msgid ""
 "If you are unsure, you should not continue without a default route: contact "
 "your local network administrator about this problem."
 msgstr ""
-"如果您不确定原因，请不要在未设定默认路由的情况下继续安装：请向网络管理员咨询"
-"相关问题。"
+"如果您有疑问，请不要在未设定默认路由的情况下继续安装：请向网络管理员咨询相关"
+"问题。"
 
 #. Type: text
 #. Description
@@ -2944,7 +2944,7 @@ msgstr "使用 DHCPv6 来配置网络"
 #. :sl2:
 #: ../netcfg-static.templates:2001
 msgid "Malformed IP address"
-msgstr "格式错误的 IP 地址"
+msgstr "IP 地址格式有误"
 
 #. Type: error
 #. Description
@@ -2981,7 +2981,7 @@ msgstr ""
 #. :sl2:
 #: ../netcfg-static.templates:6001
 msgid "Unreachable gateway"
-msgstr "不可到达的网关"
+msgstr "网关不可达"
 
 #. Type: error
 #. Description
@@ -3017,9 +3017,9 @@ msgid ""
 "download, select a different mirror, or cancel and choose another "
 "installation method."
 msgstr ""
-"安装程序无法从镜像站下载文件。这可能是您的网络问题，也可能是镜像网站的错误。"
-"您可以选择重新下载，或者使用别的镜像网站，也可以选择取消并改用其他的安装方"
-"式。"
+"安装程序无法从镜像站点下载文件。这可能是您的网络问题，也可能是镜像站点有问"
+"题。您可以选择重新下载，或者使用别的镜像站点，也可以选择取消并改用其他的安装"
+"方式。"
 
 #. #-#-#-#-#  templates.pot (network-console)  #-#-#-#-#
 #. Type: error
@@ -3055,7 +3055,7 @@ msgstr "空密码"
 msgid ""
 "You entered an empty password, which is not allowed. Please choose a non-"
 "empty password."
-msgstr "您输入的是空密码，这不被系统所接受。请选择一个非空的密码。"
+msgstr "您输入的是空密码，这是不允许的。请选择一个非空的密码。"
 
 #. #-#-#-#-#  templates.pot (partman-auto)  #-#-#-#-#
 #. Type: error
@@ -3071,7 +3071,7 @@ msgstr "您输入的是空密码，这不被系统所接受。请选择一个非
 #: ../partman-auto.templates:3001 ../partman-auto.templates:4001
 #: ../partman-auto-lvm.templates:4001
 msgid "Failed to partition the selected disk"
-msgstr "对所选磁盘分区失败"
+msgstr "对所选磁盘进行分区失败"
 
 #. Type: error
 #. Description
@@ -3080,7 +3080,7 @@ msgstr "对所选磁盘分区失败"
 msgid ""
 "This probably happened because the selected disk or free space is too small "
 "to be automatically partitioned."
-msgstr "可能是因为被选的驱动器或空闲空间太小，以至于无法进行自动分区。"
+msgstr "可能是因为所选的磁盘或其空闲空间太小，以至于无法进行自动分区。"
 
 #. Type: error
 #. Description
@@ -3106,7 +3106,7 @@ msgid ""
 "Partitioning failed because the chosen free space may not be used. There are "
 "probably too many (primary) partitions in the partition table."
 msgstr ""
-"分区失败的原因是无法使用所选的空闲空间。分区表中可能存在过多 (主) 分区。"
+"分区失败，原因是无法使用所选的空闲空间。分区表中可能存在过多 (主) 分区。"
 
 #. Type: text
 #. Description
@@ -3134,15 +3134,15 @@ msgid ""
 "Hint: \"max\" can be used as a shortcut to specify the maximum size, or "
 "enter a percentage (e.g. \"20%\") to use that percentage of the maximum size."
 msgstr ""
-"提示：“max”可以用来指定最大空间，或输入一个百分比 (比如“20%”) 来表示使用最大"
-"空间的百分之多少。"
+"提示：可以使用 \"max\" 表示最大的大小，或使用百分比 (比如 \"20%\") 来表示使用"
+"最大大小的百分之多少。"
 
 #. Type: error
 #. Description
 #. :sl2:
 #: ../partman-base.templates:5001
 msgid "Device in use"
-msgstr "使用中的设备"
+msgstr "设备正被使用"
 
 #. Type: error
 #. Description
@@ -3158,7 +3158,7 @@ msgstr "由于以下原因，无法对设备 ${DEVICE} 进行任何修改："
 #. :sl2:
 #: ../partman-base.templates:6001
 msgid "Partition in use"
-msgstr "使用中的分区"
+msgstr "分区正被使用"
 
 #. Type: error
 #. Description
@@ -3186,7 +3186,7 @@ msgstr "继续进行安装吗？"
 #: ../partman-base.templates:10001
 msgid ""
 "No partition table changes and no creation of file systems have been planned."
-msgstr "没有安排任何分区表的改动或是文件系统的创建。"
+msgstr "未计划修改任何分区表或创建任何文件系统。"
 
 #. Type: boolean
 #. Description
@@ -3212,7 +3212,7 @@ msgstr "以下分区将被格式化："
 #. for example: "partition #6 of IDE0 master as ext3 journaling file system"
 #: ../partman-base.templates:14001
 msgid "partition #${PARTITION} of ${DEVICE} as ${TYPE}"
-msgstr "${DEVICE} 设备上的第 ${PARTITION} 分区将设为 ${TYPE}"
+msgstr "${DEVICE} 设备上的第 ${PARTITION} 分区将被格式化为 ${TYPE}"
 
 #. Type: text
 #. Description
@@ -3221,14 +3221,14 @@ msgstr "${DEVICE} 设备上的第 ${PARTITION} 分区将设为 ${TYPE}"
 #. for example: "LVM VG Debian, LV Root as ext3 journaling file system"
 #: ../partman-base.templates:15001
 msgid "${DEVICE} as ${TYPE}"
-msgstr "${DEVICE} 设备将设为 ${TYPE}"
+msgstr "${DEVICE} 设备将被格式化为 ${TYPE}"
 
 #. Type: text
 #. Description
 #. :sl2:
 #: ../partman-base.templates:16001
 msgid "The partition tables of the following devices are changed:"
-msgstr "以下设备的分区表已改变："
+msgstr "以下设备的分区表将被改变："
 
 #. Type: select
 #. Description
@@ -3273,7 +3273,7 @@ msgstr "此分区已格式化为 ${FILESYSTEM}。"
 #. :sl2:
 #: ../partman-base.templates:21001
 msgid "No existing file system was detected in this partition."
-msgstr "未在此分区上发现任何已存在的文件系统。"
+msgstr "未在此分区上探测到任何已存在的文件系统。"
 
 #. Type: text
 #. Description
@@ -3342,7 +3342,7 @@ msgstr "您没有为 ${DEVICE} 设备的第 ${PARTITION} 分区指定文件系�
 msgid ""
 "If you do not go back to the partitioning menu and assign a file system to "
 "this partition, it won't be used at all."
-msgstr "如果您不返回分区菜单为此分区设置一个文件系统，将不使用此分区。"
+msgstr "如果您不返回分区菜单并为此分区设置一个文件系统，将不使用此分区。"
 
 #. Type: text
 #. Description
@@ -3427,7 +3427,7 @@ msgstr ""
 msgid ""
 "If you do not go back to the partitioning menu and correct these errors, the "
 "partition will be used as is."
-msgstr "如果您不返回分区菜单并更正这些错误，将以现状使用此分区。"
+msgstr "如果您不返回分区菜单并更正这些错误，此分区将会以目前的状态被使用。"
 
 #. Type: boolean
 #. Description
@@ -3451,8 +3451,13 @@ msgstr ""
 #. Type: boolean
 #. Description
 #. :sl2:
+#. #-#-#-#-#  templates.pot (partman-hfs)  #-#-#-#-#
+#. Type: boolean
+#. Description
+#. :sl2:
 #: ../partman-basicfilesystems.templates:8001
 #: ../partman-basicfilesystems.templates:11001 ../partman-ext3.templates:10001
+#: ../partman-hfs.templates:8001
 msgid "Do you want to return to the partitioning menu?"
 msgstr "您是否想返回分区菜单？"
 
@@ -3467,9 +3472,9 @@ msgid ""
 "scarce. You may experience installation problems if you do not have enough "
 "physical memory."
 msgstr ""
-"您尚未选择任何分区用作交换空间。我们推荐您启用交换空间，以使系统能更好的利用"
-"现有物理内存，这样当物理内存不够用时它还可以改善系统的运行效能。如果没有足够"
-"的物理内存，您可以会遇到安装问题。"
+"您尚未选择任何分区用作交换空间。我们推荐您启用交换空间，以使系统能更好地利用"
+"可用的物理内存，并在物理内存不足时改善系统的性能。如果没有足够的物理内存，您"
+"在安装过程中可能会遇到问题。"
 
 #. Type: boolean
 #. Description
@@ -3479,8 +3484,7 @@ msgid ""
 "If you do not go back to the partitioning menu and assign a swap partition, "
 "the installation will continue without swap space."
 msgstr ""
-"如果您不返回分区菜单并分配一个交换空间，安装将在不使用无交换空间的情况下继"
-"续。"
+"如果您不返回分区菜单并分配一个交换空间，安装将在不使用交换空间的情况下继续。"
 
 #. Type: error
 #. Description
@@ -3511,7 +3515,7 @@ msgstr "创建交换空间失败"
 #: ../partman-basicfilesystems.templates:10001
 msgid ""
 "The creation of swap space in partition #${PARTITION} of ${DEVICE} failed."
-msgstr "在 ${DEVICE} 设备上第 ${PARTITION} 分区创建交换空间失败。"
+msgstr "在 ${DEVICE} 设备的第 ${PARTITION} 分区上创建交换空间失败。"
 
 #. Type: boolean
 #. Description
@@ -3521,7 +3525,7 @@ msgid ""
 "No mount point is assigned for the ${FILESYSTEM} file system in partition #"
 "${PARTITION} of ${DEVICE}."
 msgstr ""
-"您没有为 ${DEVICE} 设备上的 #${PARTITION} 分区的 ${FILESYSTEM} 文件系统设定挂"
+"您没有为 ${DEVICE} 设备的第 ${PARTITION} 分区的 ${FILESYSTEM} 文件系统设定挂"
 "载点。"
 
 #. Type: boolean
@@ -3531,14 +3535,14 @@ msgstr ""
 msgid ""
 "If you do not go back to the partitioning menu and assign a mount point from "
 "there, this partition will not be used at all."
-msgstr "如果您不返回分区菜单并分配一个挂载点，就不会使用此分区。"
+msgstr "如果您不返回分区菜单并分配一个挂载点，将不会使用此分区。"
 
 #. Type: error
 #. Description
 #. :sl2:
 #: ../partman-basicfilesystems.templates:12001
 msgid "Invalid file system for this mount point"
-msgstr "不适用于此挂载点的文件系统"
+msgstr "文件系统不适用于此挂载点"
 
 #. Type: error
 #. Description
@@ -3716,14 +3720,14 @@ msgstr "您所输入的挂载点是无效的。"
 #. :sl2:
 #: ../partman-basicfilesystems.templates:16001
 msgid "Mount points must start with \"/\". They cannot contain spaces."
-msgstr "挂载点必须以“/”开头，并且不能包含空格。"
+msgstr "挂载点必须以 \"/\" 开头，并且不能包含空格。"
 
 #. Type: string
 #. Description
 #. :sl2:
 #: ../partman-basicfilesystems.templates:17001
 msgid "Label for the file system in this partition:"
-msgstr "此分区文件系统的标识："
+msgstr "此分区上的文件系统的标签："
 
 #. Type: text
 #. Description
@@ -3766,7 +3770,7 @@ msgstr "否"
 #. :sl2:
 #: ../partman-basicfilesystems.templates:21001
 msgid "Label:"
-msgstr "标识："
+msgstr "标签："
 
 #. Type: text
 #. Description
@@ -3792,7 +3796,7 @@ msgstr "保留块："
 #. :sl2:
 #: ../partman-basicfilesystems.templates:24001
 msgid "Percentage of the file system blocks reserved for the super-user:"
-msgstr "文件系统被保留给超级用户的百分比："
+msgstr "保留给超级用户的文件系统块所占的百分比："
 
 #. Type: text
 #. Description
@@ -3818,7 +3822,7 @@ msgstr "标准"
 #. translate "news", "largefile" and "largefile4".
 #: ../partman-basicfilesystems.templates:27001
 msgid "Typical usage of this partition:"
-msgstr "此分区的一般用途："
+msgstr "此分区的典型用途："
 
 #. Type: select
 #. Description
@@ -3830,8 +3834,7 @@ msgstr "此分区的一般用途："
 msgid ""
 "Please specify how the file system is going to be used, so that optimal file "
 "system parameters can be chosen for that use."
-msgstr ""
-"请指定文件系统将作何使用，安装程序可为相应的用途指定优化的文件系统参数。"
+msgstr "请指定文件系统将如何使用，安装程序可为相应的用途优化文件系统的参数。"
 
 #. Type: select
 #. Description
@@ -3844,8 +3847,8 @@ msgid ""
 "standard = standard parameters, news = one inode per 4KB block, largefile = "
 "one inode per megabyte, largefile4 = one inode per 4 megabytes."
 msgstr ""
-"standard = 标准参数，news = 每 4KB 区块分配一个 inode，largefile = 每 1M 分配"
-"一个 inode，largefile4 = 每 4M 分配一个 inode。"
+"standard = 标准参数，news = 每 4KB 块分配一个 inode，largefile = 每 1M 分配一"
+"个 inode，largefile4 = 每 4M 分配一个 inode。"
 
 #. Type: text
 #. Description
@@ -3928,7 +3931,7 @@ msgstr "挂载选项可以调节文件系统的行为。"
 #. a 65 columns limit (which means 65 characters in single-byte languages)
 #: ../partman-basicfilesystems.templates:44001
 msgid "noatime - do not update inode access times at each access"
-msgstr "noatime - 在每次对数据进行访问时不更新 inode 的访问时间"
+msgstr "noatime - 访问时不要更新 inode 的访问时间"
 
 #. Type: text
 #. Description
@@ -3937,7 +3940,7 @@ msgstr "noatime - 在每次对数据进行访问时不更新 inode 的访问时�
 #. a 65 columns limit (which means 65 characters in single-byte languages)
 #: ../partman-basicfilesystems.templates:45001
 msgid "nodiratime - do not update directory inode access times"
-msgstr "nodiratime - 不要更新目录 inode 访问时间"
+msgstr "nodiratime - 不要更新目录 inode 的访问时间"
 
 #. Type: text
 #. Description
@@ -3946,7 +3949,7 @@ msgstr "nodiratime - 不要更新目录 inode 访问时间"
 #. a 65 columns limit (which means 65 characters in single-byte languages)
 #: ../partman-basicfilesystems.templates:46001
 msgid "relatime - update inode access times relative to modify time"
-msgstr "relatime - 只在更新 inode 修改时间时更新访问时间"
+msgstr "relatime - 相对于修改时间更新 inode 的访问时间"
 
 #. Type: text
 #. Description
@@ -4045,7 +4048,7 @@ msgstr "notail - 禁止将文件归置到文件系统树"
 #. a 65 columns limit (which means 65 characters in single-byte languages)
 #: ../partman-basicfilesystems.templates:57001
 msgid "discard - trim freed blocks from underlying block device"
-msgstr "discard - 在底层块设备上擦除释放的块"
+msgstr "discard - 在底层块设备上擦除被释放的块"
 
 #. #-#-#-#-#  templates.pot (partman-basicfilesystems)  #-#-#-#-#
 #. Type: boolean
@@ -4061,9 +4064,13 @@ msgstr "discard - 在底层块设备上擦除释放的块"
 #. Type: boolean
 #. Description
 #. :sl2:
+#. #-#-#-#-#  templates.pot (partman-hfs)  #-#-#-#-#
+#. Type: boolean
+#. Description
+#. :sl2:
 #: ../partman-basicfilesystems.templates:60001
 #: ../partman-basicfilesystems.templates:61001 ../partman-ext3.templates:7001
-#: ../partman-ext3.templates:8001
+#: ../partman-ext3.templates:8001 ../partman-hfs.templates:7001
 msgid "Go back to the menu and correct this problem?"
 msgstr "返回菜单并更正此问题吗？"
 
@@ -4081,9 +4088,13 @@ msgstr "返回菜单并更正此问题吗？"
 #. Type: boolean
 #. Description
 #. :sl2:
+#. #-#-#-#-#  templates.pot (partman-hfs)  #-#-#-#-#
+#. Type: boolean
+#. Description
+#. :sl2:
 #: ../partman-basicfilesystems.templates:60001
 #: ../partman-basicfilesystems.templates:61001 ../partman-ext3.templates:7001
-#: ../partman-ext3.templates:8001
+#: ../partman-ext3.templates:8001 ../partman-hfs.templates:7001
 msgid ""
 "If you do not go back to the partitioning menu and correct this error, the "
 "partition will be used as is. This means that you may not be able to boot "
@@ -4115,7 +4126,8 @@ msgid ""
 "Your root file system is a btrfs file system. This is not supported by the "
 "boot loader used by default by this installer."
 msgstr ""
-"您的根文件系统是 btrfs 文件系统。这可能与安装程序默认使用的启动引导器冲突。"
+"您的根文件系统是 btrfs 文件系统。安装程序默认使用的启动引导器不支持此文件系"
+"统。"
 
 #. Type: error
 #. Description
@@ -4124,7 +4136,8 @@ msgstr ""
 msgid ""
 "You should use a small /boot partition with another file system, such as "
 "ext4."
-msgstr "您应该使用一个配以其他文件系统的较小的 /boot 分区，例如 ext4。"
+msgstr ""
+"您应该分配一个较小的 /boot 分区，并将其格式化为其他文件系统，例如 ext4。"
 
 #. Type: error
 #. Description
@@ -4141,8 +4154,8 @@ msgid ""
 "You have mounted a btrfs file system as /boot. This is not supported by the "
 "boot loader used by default by this installer."
 msgstr ""
-"您已将一个 btrfs 文件系统挂载为 /boot。这可能与安装程序默认使用的启动引导器冲"
-"突。"
+"您已将一个 btrfs 文件系统挂载为 /boot。安装程序默认使用的启动引导器不支持此文"
+"件系统。"
 
 #. Type: error
 #. Description
@@ -4157,14 +4170,14 @@ msgstr "您应该为 /boot 分区配置其他的文件系统，例如 ext4。"
 #. :sl2:
 #: ../partman-efi.templates:3001
 msgid "Go back to the menu and resume partitioning?"
-msgstr "返回菜单并恢复分区进程吗？"
+msgstr "返回菜单并继续分区吗？"
 
 #. Type: boolean
 #. Description
 #. :sl2:
 #: ../partman-efi.templates:3001
 msgid "No EFI partition was found."
-msgstr "未找到 EFI 启动分区。"
+msgstr "未找到 EFI 分区。"
 
 #. Type: error
 #. Description
@@ -4200,8 +4213,9 @@ msgid ""
 "might be difficult to reboot the machine into any BIOS-mode operating "
 "systems later."
 msgstr ""
-"机器以 UEFI 模式启动了安装器，但是似乎已经存在使用 BIOS 兼容模式安装的系统。"
-"如果继续以 UEFI 模式安装 Debian，可能非常难以重启进入其他 BIOS 模式的系统。"
+"此计算机的固件使用 UEFI 模式启动了本安装程序，但是此计算机上似乎已经存在使用 "
+"\"BIOS 兼容模式\" 安装的操作系统。如果继续以 UEFI 模式安装 Debian，以后可能很"
+"难重启进入其他 BIOS 模式的操作系统。"
 
 #. Type: boolean
 #. Description
@@ -4213,8 +4227,8 @@ msgid ""
 "If you wish to keep the option to boot an existing operating system, you "
 "should choose NOT to force UEFI installation here."
 msgstr ""
-"如果希望以 UEFI 模式安装且无意再启动现有的系统，此处有强制选项。如果要保持现"
-"有系统可启动，不要选择强制 UEFI 安装。"
+"如果您希望以 UEFI 模式安装且不介意无法启动现有的操作系统，您可在此选择强制进"
+"行安装。如果您希望保持现有的操作系统可以启动，请不要选择强制 UEFI 安装。"
 
 #. Type: text
 #. Description
@@ -4241,8 +4255,8 @@ msgid ""
 "system. This is needed by your machine in order to boot. Please go back and "
 "use either the ext2 or ext3 file system."
 msgstr ""
-"您的启动分区并未被设置成 ext2 或 ext3 文件系统。为了启动您的计算机这是必须"
-"的。请退回此前的界面并选择使用 ext2 或 ext3 文件系统。"
+"您的启动分区并未被设置成 ext2 或 ext3 文件系统。这是启动您的计算机所必需的。"
+"请返回并选择使用 ext2 或 ext3 文件系统。"
 
 #. Type: boolean
 #. Description
@@ -4253,15 +4267,15 @@ msgid ""
 "hard disk. This is needed by your machine in order to boot.  Please go back "
 "and use your first primary partition as a boot partition."
 msgstr ""
-"您的启动分区并非位于硬盘的第一主分区上。这是启动您的机器所需要的。请退回并使"
-"用第一主分区作为启动分区。"
+"您的启动分区并非位于硬盘的第一个主分区上。这是启动您的计算机所必需的。请返回"
+"并使用第一个主分区作为启动分区。"
 
 #. Type: boolean
 #. Description
 #. :sl2:
 #: ../partman-ext3.templates:9001
 msgid "Return to the menu to set the bootable flag?"
-msgstr "返回到菜单设置可启动标识吗？"
+msgstr "返回菜单并设置可启动标志吗？"
 
 #. Type: boolean
 #. Description
@@ -4272,8 +4286,8 @@ msgid ""
 "this is required by your machine in order to boot. You should go back and "
 "set the bootable flag for the boot partition."
 msgstr ""
-"即使这是您的机器要启动所需要的，boot 分区未标记为可启动分区。您应该返回并且"
-"为 boot 分区设置可启动选项。"
+"boot 分区未标记为可启动分区。这是启动您的计算机所必需的。您应当返回并为 boot "
+"分区设置可启动标志。"
 
 #. Type: boolean
 #. Description
@@ -4283,25 +4297,25 @@ msgid ""
 "If you don't correct this, the partition will be used as is and it is likely "
 "that the machine cannot boot from its hard disk."
 msgstr ""
-"如果您不更正此项，此分区将会以目前的状态被使用并且很可能机器不能从它的硬盘启"
-"动。"
+"如果您不修正此问题，此分区将会以目前的状态被使用，并且您的计算机可能不能从硬"
+"盘启动。"
 
 #. Type: boolean
 #. Description
 #. :sl2:
-#: ../partman-ext3.templates:10001
+#: ../partman-ext3.templates:10001 ../partman-hfs.templates:8001
 msgid ""
 "The partition ${PARTITION} assigned to ${MOUNTPOINT} starts at an offset of "
 "${OFFSET} bytes from the minimum alignment for this disk, which may lead to "
 "very poor performance."
 msgstr ""
-"分配到 ${MOUNTPOINT} 的分区 ${PARTITION} 从最小对齐点偏移了 ${OFFSET} 字节，"
-"这可能会造成非常差的性能。"
+"分配到 ${MOUNTPOINT} 的分区 ${PARTITION} 相对于此磁盘的最小对齐要求偏移了 "
+"${OFFSET} 字节，这可能会严重影响性能。"
 
 #. Type: boolean
 #. Description
 #. :sl2:
-#: ../partman-ext3.templates:10001
+#: ../partman-ext3.templates:10001 ../partman-hfs.templates:8001
 msgid ""
 "Since you are formatting this partition, you should correct this problem now "
 "by realigning the partition, as it will be difficult to change later. To do "
@@ -4309,9 +4323,42 @@ msgid ""
 "recreate it in the same position with the same settings. This will cause the "
 "partition to start at a point best suited for this disk."
 msgstr ""
-"既然想要重新格式化此分区，现在就应该通过重新对齐分区来修正此错误，因为以后更"
-"改会非常麻烦。要这么做，请返回主分区菜单，删除此分区，再于同样位置使用同样设"
-"置重新创建。这将使此分区从最适合此磁盘的位置开始。"
+"既然您想要重新格式化此分区，您应当现在就通过重新对齐分区来修正此问题，因为以"
+"后更改会非常麻烦。要这么做，请返回分区主菜单，删除此分区，并在相同的位置使用"
+"相同的设置重新创建该分区。这将使此分区从最适合此磁盘的位置开始。"
+
+#. Type: text
+#. Description
+#. :sl2:
+#. File system name
+#: ../partman-hfs.templates:2001
+msgid "Hierarchical File System"
+msgstr ""
+
+#. Type: text
+#. Description
+#. :sl2:
+#. File system name
+#: ../partman-hfs.templates:5001
+msgid "Hierarchical File System Plus"
+msgstr ""
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../partman-hfs.templates:7001
+#, fuzzy
+#| msgid ""
+#| "Your boot partition is not located on the first partition of your hard "
+#| "disk. This is needed by your machine in order to boot.  Please go back "
+#| "and use your first partition as a boot partition."
+msgid ""
+"You have not configured an HFS partition that is mounted to /boot/grub. This "
+"is needed by your machine in order to be able to boot. Please go back and "
+"create an HFS partition that is mounted to /boot/grub."
+msgstr ""
+"您的启动分区并非位于硬盘的第一分区上。为了启动您的计算机，这是必需的。请返回"
+"并使用第一个主分区作为启动分区。"
 
 #. Type: text
 #. Description
@@ -4320,58 +4367,6 @@ msgstr ""
 #: ../partman-jfs.templates:2001
 msgid "JFS journaling file system"
 msgstr "JFS 日志文件系统"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../partman-jfs.templates:4001
-msgid "Use unrecommended JFS root file system?"
-msgstr "使用不受推荐的 JFS 根文件系统吗？"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../partman-jfs.templates:4001
-msgid ""
-"Your root file system is a JFS file system. This can cause problems with the "
-"boot loader used by default by this installer."
-msgstr ""
-"您的根文件系统是 JFS 文件系统。这可能与安装程序默认使用的启动引导器冲突。"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../partman-jfs.templates:4001
-msgid ""
-"You should use a small /boot partition with another file system, such as "
-"ext3."
-msgstr "您应该使用一个配以其他文件系统的较小的 /boot 分区，例如 ext3。"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../partman-jfs.templates:5001
-msgid "Use unrecommended JFS /boot file system?"
-msgstr "在 /boot 上使用不受推荐的 JFS 文件系统吗？"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../partman-jfs.templates:5001
-msgid ""
-"You have mounted a JFS file system as /boot. This is likely to cause "
-"problems with the boot loader used by default by this installer."
-msgstr ""
-"您已将一个 JFS 文件系统挂载为 /boot。这可能与安装程序默认使用的启动引导器冲"
-"突。"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../partman-jfs.templates:5001
-msgid ""
-"You should use another file system, such as ext3, for the /boot partition."
-msgstr "您应该为 /boot 分区配置其他的文件系统，例如 ext3。"
 
 #. #-#-#-#-#  templates.pot (partman-md)  #-#-#-#-#
 #. Type: error
@@ -4383,7 +4378,7 @@ msgstr "您应该为 /boot 分区配置其他的文件系统，例如 ext3。"
 #. :sl2:
 #: ../partman-md.templates:21001 ../partman-partitioning.templates:9001
 msgid "An error occurred while writing the changes to the storage devices."
-msgstr "将修改内容写入存储设备时发生错误。"
+msgstr "将更改内容写入存储设备时发生错误。"
 
 #. Type: text
 #. Description
@@ -4420,21 +4415,21 @@ msgstr "将之前的修改写入磁盘并继续吗？"
 msgid ""
 "Before you can select a new partition size, any previous changes have to be "
 "written to disk."
-msgstr "在选择新分区大小之前，必须把之前的修改内容都写入磁盘。"
+msgstr "在选择新的分区大小之前，必须将之前的修改内容都写入磁盘。"
 
 #. Type: boolean
 #. Description
 #. :sl2:
 #: ../partman-partitioning.templates:4001
 msgid "You cannot undo this operation."
-msgstr "无法撤消此操作。"
+msgstr "此操作无法撤销。"
 
 #. Type: boolean
 #. Description
 #. :sl2:
 #: ../partman-partitioning.templates:4001
 msgid "Please note that the resize operation may take a long time."
-msgstr "请注意，调整容量操作可能需要很长时间。"
+msgstr "请注意，改变大小操作可能需要很长时间。"
 
 #. Type: string
 #. Description
@@ -4461,7 +4456,7 @@ msgstr "此分区最小为 ${MINSIZE} (或 ${PERCENT})，最大为 ${MAXSIZE}。
 #. :sl2:
 #: ../partman-partitioning.templates:6001
 msgid "The size entered is invalid"
-msgstr "所输大小无效"
+msgstr "输入的大小无效"
 
 #. Type: error
 #. Description
@@ -4472,15 +4467,15 @@ msgid ""
 "size followed by an optional unit of measure (e.g. \"200 GB\"). The default "
 "unit of measure is the megabyte."
 msgstr ""
-"不能理解所输入的大小。请您输入一个正整数，其后可以加上一个可选的度量单位 (比"
-"如“200 GB”)。默认的度量单位是兆字节 (MB)。"
+"不能理解所输入的大小。请您输入一个正整数，后面可以跟一个可选的单位 (比如 "
+"\"200 GB\")。默认的单位是兆字节 (MB)。"
 
 #. Type: error
 #. Description
 #. :sl2:
 #: ../partman-partitioning.templates:7001
 msgid "The size entered is too large"
-msgstr "输入的值过大"
+msgstr "输入的大小过大"
 
 #. Type: error
 #. Description
@@ -4496,7 +4491,7 @@ msgstr "您所输入的值大于分区的最大容量。请输入较小一些的
 #. :sl2:
 #: ../partman-partitioning.templates:8001
 msgid "The size entered is too small"
-msgstr "输入的值过小"
+msgstr "输入的大小过小"
 
 #. Type: error
 #. Description
@@ -4519,21 +4514,21 @@ msgstr "改变分区大小失败"
 #. :sl2:
 #: ../partman-partitioning.templates:9001
 msgid "The resize operation has been aborted."
-msgstr "调整分区大小的操作已被中止。"
+msgstr "改变分区大小的操作已被中止。"
 
 #. Type: string
 #. Description
 #. :sl2:
 #: ../partman-partitioning.templates:10001
 msgid "The maximum size for this partition is ${MAXSIZE}."
-msgstr "此分区的最大容量为 ${MAXSIZE}。"
+msgstr "此分区的最大大小为 ${MAXSIZE}。"
 
 #. Type: error
 #. Description
 #. :sl2:
 #: ../partman-partitioning.templates:11001
 msgid "Invalid size"
-msgstr "无效的容量"
+msgstr "无效的大小"
 
 #. Type: multiselect
 #. Description
@@ -4569,8 +4564,8 @@ msgid ""
 "partition tables on your architecture.  Please send an e-mail message to "
 "debian-boot@lists.debian.org with information."
 msgstr ""
-"磁盘分区工具未找到您的硬件架构上的分区表的默认类型。请将相关信息用电子邮件发"
-"送到 debian-boot@lists.debian.org。"
+"磁盘分区工具没有关于您的硬件架构的分区表的默认类型的信息。请将相关信息用电子"
+"邮件发送到 debian-boot@lists.debian.org。"
 
 #. Type: boolean
 #. Description
@@ -4580,8 +4575,8 @@ msgid ""
 "Please note that if the type of the partition table is unsupported by "
 "libparted, then this partitioner will not work properly."
 msgstr ""
-"请注意，如果该分区表的类型并不受 libparted 库所支持，那么磁盘分区工具将不能正"
-"常工作。"
+"请注意，如果 libparted 库不支持此类型的分区表，那么磁盘分区工具将无法正常工"
+"作。"
 
 #. Type: boolean
 #. Description
@@ -4592,8 +4587,8 @@ msgid ""
 "support for the partition tables used on your architecture.  It is strongly "
 "recommended that you exit this partitioner."
 msgstr ""
-"磁盘分区工具是基于 libparted 库构建的，但该库不支持您目前使用的硬件架构上的分"
-"区表。因此强烈推荐您退出磁盘分区工具。"
+"磁盘分区工具是基于 libparted 库构建的，但该库不支持您的硬件架构所使用的分区"
+"表。因此强烈建议您退出磁盘分区工具。"
 
 #. Type: boolean
 #. Description
@@ -4616,7 +4611,7 @@ msgstr "分区表类型："
 #. :sl2:
 #: ../partman-partitioning.templates:19001
 msgid "Select the type of partition table to use."
-msgstr "请选择欲使用的分区表类型。"
+msgstr "请选择想要使用的分区表类型。"
 
 #. Type: boolean
 #. Description
@@ -4634,15 +4629,15 @@ msgid ""
 "creating a new partition table on the device, then all current partitions "
 "will be removed."
 msgstr ""
-"您选择了对整个设备进行分区。如果您要在此设备上创建的分区表，那么现有的所有分"
-"区都将被删除。"
+"您选择了对整个设备进行分区。如果您想要在此设备上创建新的分区表，那么现有的所"
+"有分区都将被删除。"
 
 #. Type: boolean
 #. Description
 #. :sl2:
 #: ../partman-partitioning.templates:20001
 msgid "Note that you will be able to undo this operation later if you wish."
-msgstr "注意：如果您希望的话，稍后依然可以撤消此动作。"
+msgstr "注意：如果您希望的话，稍后仍然可以撤销此动作。"
 
 #. Type: boolean
 #. Description
@@ -4670,7 +4665,7 @@ msgstr ""
 msgid ""
 "You will NOT be able to undo this operation later and all existing data on "
 "the disk will be irreversibly removed."
-msgstr "您将[无法]撤消这项操作，而且磁盘上所有现在的数据都将不可逆转地被删除。"
+msgstr "您将[无法]撤销此操作，而且磁盘上所有现存的数据都将被删除且无法恢复。"
 
 #. Type: boolean
 #. Description
@@ -4699,7 +4694,7 @@ msgid ""
 "fail to boot if there is no bootable primary partition."
 msgstr ""
 "您正在尝试给一个逻辑分区设置可启动标志。一般来说，可启动标志只对主分区有效，"
-"所以通常不应对逻辑分区设置。有些 BIOS 版本甚至会在没有可启动主分区时启动失"
+"所以通常不应对逻辑分区设置。有些 BIOS 版本甚至会在没有可启动的主分区时启动失"
 "败。"
 
 #. Type: boolean
@@ -4711,8 +4706,8 @@ msgid ""
 "you are using a custom boot manager that pays attention to bootable logical "
 "partitions, then setting this flag may make sense."
 msgstr ""
-"不过，如果您确定您的 BIOS 没有这个问题，或者是您在使用一个自己定制、能够处理"
-"可启动逻辑分区的启动管理程序，那么设置这一标志是合理的。"
+"不过，如果您确定您的 BIOS 没有这个问题，或者您在使用一个自定义的、能够处理可"
+"启动逻辑分区的启动管理程序，那么设置这一标志或许是合理的。"
 
 #. Type: text
 #. Description
@@ -4801,7 +4796,7 @@ msgstr ""
 #. :sl2:
 #: ../partman-target.templates:4001
 msgid "Please correct this by changing labels."
-msgstr "请通过改变标签来修正此错误。"
+msgstr "请修改标签以修正此错误。"
 
 #. Type: error
 #. Description
@@ -4825,7 +4820,7 @@ msgstr ""
 #. :sl2:
 #: ../partman-target.templates:5001
 msgid "Please correct this by changing mount points."
-msgstr "请通过改变挂载点来修正此错误。"
+msgstr "请修改挂载点以修正此错误。"
 
 #. Type: error
 #. Description
@@ -4874,7 +4869,7 @@ msgstr ""
 #. :sl2:
 #: ../partman-target.templates:8001
 msgid "Do you want to resume partitioning?"
-msgstr "您是否希望重新分区？"
+msgstr "您是否想要继续分区？"
 
 #. Type: boolean
 #. Description
@@ -4884,14 +4879,14 @@ msgid ""
 "The attempt to mount a file system with type ${TYPE} in ${DEVICE} at "
 "${MOUNTPOINT} failed."
 msgstr ""
-"尝试将 ${DEVICE} 设备的一个 ${TYPE} 文件系统挂载到 ${MOUNTPOINT} 上失败。"
+"尝试将 ${DEVICE} 设备上的 ${TYPE} 文件系统挂载到 ${MOUNTPOINT} 上时失败。"
 
 #. Type: boolean
 #. Description
 #. :sl2:
 #: ../partman-target.templates:8001
 msgid "You may resume partitioning from the partitioning menu."
-msgstr "您可以返回分区菜单重新进行分区。"
+msgstr "您可以返回分区菜单继续进行分区。"
 
 #. Type: select
 #. Description
@@ -4954,7 +4949,7 @@ msgid ""
 "advisories should be reviewed before manual installation of the updates "
 "using standard package management tools."
 msgstr ""
-"默认情况下，安全更新将不会自动安装；这是因为在使用标准软件包管理工具安装更新"
+"默认情况下，安全更新将不会自动安装。这是因为在使用标准软件包管理工具安装更新"
 "前，管理员应当对发布的安全通告进行检查。"
 
 #. Type: select
@@ -4980,7 +4975,7 @@ msgstr ""
 #. :sl2:
 #: ../preseed-common.templates:1001
 msgid "Checksum error"
-msgstr "校验码错误"
+msgstr "校验和错误"
 
 #. Type: error
 #. Description
@@ -4993,15 +4988,15 @@ msgid ""
 "match the expected value of \"${CHECKSUM}\".  The file may be corrupt, or "
 "the provided checksums may be out of date."
 msgstr ""
-"从 <${LOCATION}> 下载的文件 ${ALGORITHM} 校验码不符合预期，预期的值"
-"为“${CHECKSUM}”。文件可能已经损毁，或所提供的校验码可能已经过期。"
+"从 <${LOCATION}> 下载的文件 ${ALGORITHM} 校验和不符合预期，预期的值为 "
+"\"${CHECKSUM}\"。文件可能已经损坏，或所提供的校验和可能已经过期。"
 
 #. Type: error
 #. Description
 #. :sl2:
 #: ../preseed-common.templates:2001
 msgid "Failed to retrieve the preconfiguration file"
-msgstr "读取预配置文件失败"
+msgstr "接收预配置文件失败"
 
 #. Type: error
 #. Description
@@ -5011,7 +5006,7 @@ msgid ""
 "The file needed for preconfiguration could not be retrieved from "
 "${LOCATION}. The installation will proceed in non-automated mode."
 msgstr ""
-"无法从 ${LOCATION} 获得预配置所需要的文件。安装程序将会使用非自动安装模式。"
+"无法从 ${LOCATION} 接收预配置所需要的文件。安装程序将会使用非自动安装模式。"
 
 #. Type: error
 #. Description
@@ -5027,7 +5022,7 @@ msgstr "处理预配置文件失败"
 msgid ""
 "The installer failed to process the preconfiguration file from ${LOCATION}. "
 "The file may be corrupt."
-msgstr "安装程序无法处理 ${LOCATION} 上预配置文件。文件可能已被损坏。"
+msgstr "安装程序无法处理位于 ${LOCATION} 的预配置文件。文件可能已经损坏。"
 
 #. Type: error
 #. Description
@@ -5042,7 +5037,7 @@ msgstr "无法运行预置的命令"
 #: ../preseed-common.templates:12001
 msgid ""
 "Execution of preseeded command \"${COMMAND}\" failed with exit code ${CODE}."
-msgstr "执行预置命令 (“${COMMAND}”) 失败，退出代码为 ${CODE}。"
+msgstr "执行预置命令 \"${COMMAND}\" 失败，退出代码为 ${CODE}。"
 
 #. Type: title
 #. Description
@@ -5057,7 +5052,7 @@ msgstr "急救模式"
 #. :sl2:
 #: ../user-setup-udeb.templates:8001
 msgid "Create a normal user account now?"
-msgstr "现在就创建一个普通用户帐号吗？"
+msgstr "现在就创建一个普通用户账户吗？"
 
 #. Type: boolean
 #. Description
@@ -5069,9 +5064,9 @@ msgid ""
 "result in disaster. You should create a normal user account to use for those "
 "day-to-day tasks."
 msgstr ""
-"以 root 帐户进行诸如阅读电子邮件这类普通的日常操作是一个糟糕的主意。因为在 "
+"以 root 账户进行诸如阅读电子邮件这类普通的日常操作是一个糟糕的主意。因为在 "
 "root 权限下，哪怕犯一个极小的错误，其结果也可能会是灾难性的。您现在就可以创建"
-"一个普通用户帐号来进行那些日常任务。"
+"一个普通用户账户来进行那些日常任务。"
 
 #. Type: boolean
 #. Description
@@ -5082,9 +5077,9 @@ msgid ""
 "typing 'adduser <username>' as root, where <username> is an username, like "
 "'imurdock' or 'rms'."
 msgstr ""
-"请注意，您也可以稍后再创建此帐户 (也包括任何其他帐户)。方法是以 root 身份执"
-"行“adduser <username>”，此处的 <username> 就是一个用户名，例"
-"如“imurdock”或“rms”。"
+"请注意，您也可以稍后再创建此账户 (也包括任何其他账户)。方法是以 root 身份执"
+"行 \"adduser <username>\"，此处的 <username> 是一个用户名，例如 \"imurdock\" "
+"或 \"rms\"。"
 
 #. Type: error
 #. Description
@@ -5103,7 +5098,7 @@ msgid ""
 "more lower-case letters, and must be no more than 32 characters long."
 msgstr ""
 "您所输入的用户名是无效的。请注意，用户名必须以一个小写字母开头，接着是数字和"
-"其他小写字母的任意组合，且不得多于 32 个字符。"
+"小写字母的任意组合，且不得多于 32 个字符。"
 
 #. Type: error
 #. Description
@@ -5127,7 +5122,7 @@ msgstr ""
 #. :sl2:
 #: ../user-setup-udeb.templates:17001
 msgid "Enable shadow passwords?"
-msgstr "启用影子口令吗？"
+msgstr "启用影子密码吗？"
 
 #. Type: boolean
 #. Description
@@ -5139,6 +5134,6 @@ msgid ""
 "can only be read by special programs. The use of shadow passwords is "
 "strongly recommended, except in a few cases such as NIS environments."
 msgstr ""
-"使用影子口令后没人能看到哪怕是已加密过的口令内容，所以它将使系统更加安全。口"
-"令将被保存在一个单独的文件中，而且只能被特定程序读取。除了极少数情况外，例如 "
-"NIS 环境，我们强烈推荐您使用影子口令。"
+"使用影子密码后，即使是已经经过加密的密码，也没有人可以查看，因此可以使系统更"
+"加安全。密码将被保存在一个单独的文件中，而且只能被特定程序读取。除了极少数情"
+"况 (例如 NIS 环境) 以外，我们强烈推荐您使用影子密码。"

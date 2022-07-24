@@ -3,15 +3,15 @@
 # This file is distributed under the same license as the debian-installer package.
 # Yannig MARCHEGAY <yannick.marchegay@lokanova.com>, 2006.
 # Cédric VALMARY <cvalmary@yahoo.fr>, 2016.
-# Quentin PAGÈS <quentinantonin@free.fr>, 2020, 2021.
+# Quentin PAGÈS <quentinantonin@free.fr>, 2020, 2021, 2022.
 #
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer sublevel2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-19 20:01+0000\n"
-"PO-Revision-Date: 2021-02-12 18:39+0000\n"
+"POT-Creation-Date: 2022-03-24 08:13+0100\n"
+"PO-Revision-Date: 2022-06-19 12:21+0000\n"
 "Last-Translator: Quentin PAGÈS <quentinantonin@free.fr>\n"
 "Language-Team: Occitan (post 1500) <ubuntu-l10n-oci@lists.ubuntu.com>\n"
 "Language: oc\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.5-dev\n"
+"X-Generator: Weblate 4.13.1-dev\n"
 
 #. Type: multiselect
 #. Description
@@ -131,6 +131,8 @@ msgid ""
 "The installation will probably fail to work if you continue without kernel "
 "modules."
 msgstr ""
+"Es probable que l’installacion foncione pas se contunhatz sens los module "
+"del nucli."
 
 #. Type: text
 #. Description
@@ -2193,10 +2195,8 @@ msgstr "Los fichièrs de microcòdi mancants son : ${FILES}"
 #. Possible locations for debug logs to be saved
 #. :sl2:
 #: ../save-logs.templates:2001
-#, fuzzy
-#| msgid "Wireless network:"
 msgid "serve over network"
-msgstr "Ret sens fial :"
+msgstr "servidor sus ret"
 
 #. Type: select
 #. Choices
@@ -2225,19 +2225,16 @@ msgstr "Los jornals de desbugatge devon èsser salvats o transferits ?"
 #. Description
 #. :sl2:
 #: ../save-logs.templates:2002
-#, fuzzy
-#| msgid ""
-#| "Debugging log files for the installer can be saved to floppy, served up "
-#| "over the web, or saved to a mounted file system."
 msgid ""
 "Debugging log files for the installer are accessible in /var/log/. They can "
 "be served up over the network (a small webserver is started on this machine, "
 "to achieve that), saved to some mounted file system (like the one on a USB "
 "stick), or to a floppy."
 msgstr ""
-"Los jornals de desbugatge de l'installador pòdon èsser salvats sus una "
-"disqueta, èsser accessibles sus un servidor web o salvats sus un sistèma de "
-"fichièrs creat (montat) dins l'arborescéncia locala."
+"Los jornals de desbugatge de l'installador son accessiblas dins /var/log/. "
+"Se pòdon enviar via lo ret (un servidor web pichon es lançat sus aquesta "
+"maquina per aquò far)o salvats sus un sistèma de fichièrs montat (coma una "
+"clau USB), o una disqueta."
 
 #. Type: string
 #. Description
@@ -3632,8 +3629,13 @@ msgstr ""
 #. Type: boolean
 #. Description
 #. :sl2:
+#. #-#-#-#-#  templates.pot (partman-hfs)  #-#-#-#-#
+#. Type: boolean
+#. Description
+#. :sl2:
 #: ../partman-basicfilesystems.templates:8001
 #: ../partman-basicfilesystems.templates:11001 ../partman-ext3.templates:10001
+#: ../partman-hfs.templates:8001
 msgid "Do you want to return to the partitioning menu?"
 msgstr "Volètz tornar al menú de particionament ?"
 
@@ -4260,9 +4262,13 @@ msgstr "discard - redutz los blòts liberats del periferic supòrt"
 #. Type: boolean
 #. Description
 #. :sl2:
+#. #-#-#-#-#  templates.pot (partman-hfs)  #-#-#-#-#
+#. Type: boolean
+#. Description
+#. :sl2:
 #: ../partman-basicfilesystems.templates:60001
 #: ../partman-basicfilesystems.templates:61001 ../partman-ext3.templates:7001
-#: ../partman-ext3.templates:8001
+#: ../partman-ext3.templates:8001 ../partman-hfs.templates:7001
 msgid "Go back to the menu and correct this problem?"
 msgstr "Tornar al menú e corregir aqueste defaut ?"
 
@@ -4280,9 +4286,13 @@ msgstr "Tornar al menú e corregir aqueste defaut ?"
 #. Type: boolean
 #. Description
 #. :sl2:
+#. #-#-#-#-#  templates.pot (partman-hfs)  #-#-#-#-#
+#. Type: boolean
+#. Description
+#. :sl2:
 #: ../partman-basicfilesystems.templates:60001
 #: ../partman-basicfilesystems.templates:61001 ../partman-ext3.templates:7001
-#: ../partman-ext3.templates:8001
+#: ../partman-ext3.templates:8001 ../partman-hfs.templates:7001
 msgid ""
 "If you do not go back to the partitioning menu and correct this error, the "
 "partition will be used as is. This means that you may not be able to boot "
@@ -4506,7 +4516,7 @@ msgstr ""
 #. Type: boolean
 #. Description
 #. :sl2:
-#: ../partman-ext3.templates:10001
+#: ../partman-ext3.templates:10001 ../partman-hfs.templates:8001
 msgid ""
 "The partition ${PARTITION} assigned to ${MOUNTPOINT} starts at an offset of "
 "${OFFSET} bytes from the minimum alignment for this disk, which may lead to "
@@ -4519,7 +4529,7 @@ msgstr ""
 #. Type: boolean
 #. Description
 #. :sl2:
-#: ../partman-ext3.templates:10001
+#: ../partman-ext3.templates:10001 ../partman-hfs.templates:8001
 msgid ""
 "Since you are formatting this partition, you should correct this problem now "
 "by realigning the partition, as it will be difficult to change later. To do "
@@ -4535,72 +4545,40 @@ msgstr ""
 
 #. Type: text
 #. Description
+#. :sl2:
+#. File system name
+#: ../partman-hfs.templates:2001
+msgid "Hierarchical File System"
+msgstr "Sistèma de fichièrs ierarquic"
+
+#. Type: text
+#. Description
+#. :sl2:
+#. File system name
+#: ../partman-hfs.templates:5001
+msgid "Hierarchical File System Plus"
+msgstr "Sistèma de fichièrs ierarquic Plus"
+
+#. Type: boolean
+#. Description
+#. :sl2:
+#: ../partman-hfs.templates:7001
+msgid ""
+"You have not configured an HFS partition that is mounted to /boot/grub. This "
+"is needed by your machine in order to be able to boot. Please go back and "
+"create an HFS partition that is mounted to /boot/grub."
+msgstr ""
+"Avètz pas configurada una particion HFS montada dins /boot/grub. Aquò's "
+"necessari per que pòsca aviar la maquina. Tornatz en arrièr e creatz una "
+"particion HFS montada dins /boot/grub."
+
+#. Type: text
+#. Description
 #. File system name
 #. :sl2:
 #: ../partman-jfs.templates:2001
 msgid "JFS journaling file system"
 msgstr "Sistèma de fichièrs jornalizat JFS"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../partman-jfs.templates:4001
-msgid "Use unrecommended JFS root file system?"
-msgstr ""
-"Es pas conselhat d'emplegar un sistèma de fichièrs JFS per la raiç ? Lo "
-"volètz emplegar çaquelà ?"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../partman-jfs.templates:4001
-msgid ""
-"Your root file system is a JFS file system. This can cause problems with the "
-"boot loader used by default by this installer."
-msgstr ""
-"Lo vòstre sistèma de fichièrs per la particion raiç es un sistèma JFS. Pòt "
-"èsser la causa de dificultats amb lo programa d'aviada qu'es utilizat per "
-"defaut pel programa d'installacion."
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../partman-jfs.templates:4001
-msgid ""
-"You should use a small /boot partition with another file system, such as "
-"ext3."
-msgstr ""
-"Vos caldriá utilizar una particion pichona /boot amb un sistèma de fichièrs "
-"diferent, per exemple ext3."
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../partman-jfs.templates:5001
-msgid "Use unrecommended JFS /boot file system?"
-msgstr "Utilizar un sistèma de fichièrs JFS pas conselhat per /boot ?"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../partman-jfs.templates:5001
-msgid ""
-"You have mounted a JFS file system as /boot. This is likely to cause "
-"problems with the boot loader used by default by this installer."
-msgstr ""
-"Lo vòstre sistèma de fichièrs per la particion /boot es un sistèma JFS. "
-"Aquesta causida pòt provocar de dificultats amb lo programa d'aviada qu'es "
-"utilizat per defaut pel programa d'installacion."
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../partman-jfs.templates:5001
-msgid ""
-"You should use another file system, such as ext3, for the /boot partition."
-msgstr ""
-"Vos caldriá utilizar un sistèma de fichièrs diferent, per exemple ext3, per "
-"la particion /boot."
 
 #. #-#-#-#-#  templates.pot (partman-md)  #-#-#-#-#
 #. Type: error
